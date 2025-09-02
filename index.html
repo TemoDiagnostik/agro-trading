@@ -144,7 +144,31 @@
   color: #fff;
   font-weight: 600;
 }
+/* ===== Fix hero buttons contrast ===== */
+.hero .cta .btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.7rem 1rem;border-radius:12px;font-weight:700;
+}
 
+/* زر Request واضح وممتلئ */
+.hero .btn-primary{
+  background:#10b981;      /* أخضر واضح */
+  color:#052e2b;           /* نص داكن لقراءة أفضل */
+  border:0;
+  box-shadow:0 8px 26px rgba(16,185,129,.35);
+}
+.hero .btn-primary:hover{ filter:brightness(1.05); transform:translateY(-1px); }
+
+/* زر View COA بخلفية فاتحة */
+.hero .btn-outline{
+  background:rgba(255,255,255,.88);  /* خلفية شبه بيضاء */
+  color:#0b132b;                     /* نص غامق */
+  border:1px solid #ffffff;
+}
+.hero .btn-outline:hover{ background:#ffffff; }
+
+/* عنوان الهيرو يبان أكتر فوق الصورة */
+.hero h1{ text-shadow:0 2px 10px rgba(0,0,0,.35); }
     
     
     /* sections */
