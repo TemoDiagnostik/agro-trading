@@ -40,7 +40,7 @@ nav a:hover{background:#e2e8f033}
 /* hero */
 .hero{
   position:relative;
-  background:#08342a url("hero-port.jpg") center/cover no-repeat;
+  background:#08342a url("hero-port.png") center/cover no-repeat;
   color:#fff;
 }
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
