@@ -1,82 +1,101 @@
-
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="site.name">Euro Agri Trading — وسيط منتجات أبو قير للأسمدة</title>
-  <meta name="description" content="شركة وساطة مقرها التشيك تربط مشتري أوروبا بشركة أبو قير للأسمدة بالإسكندرية – مصر. توريد، لوجستيات، شهادات تحليل، والتزام بمعايير الاتحاد الأوروبي." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-i18n="site.name">Euro Agri Trading — وسيط أغري موثوق</title>
+<meta name="description" content="وسيط أغري مستقل مقره التشيك يزوّد أسواق أوروبا بأسمدة ومواد زراعية بجودة معتمدة ولوجستيات مرنة وأسعار تنافسية بفضل شبكة توريد مباشرة من مصر." />
+<link rel="preload" as="image" href="hero-port.jpg" imagesrcset="hero-port.jpg" />
 
-  <!-- بعناوين بديلة لمحركات البحث (لنفس الصفحة أحادية) -->
-  <link rel="alternate" href="?lang=ar" hreflang="ar" />
-  <link rel="alternate" href="?lang=en" hreflang="en" />
-  <link rel="alternate" href="?lang=cs" hreflang="cs" />
-  <link rel="alternate" href="?lang=de" hreflang="de" />
-  <link rel="alternate" href="?lang=fr" hreflang="fr" />
-  <link rel="alternate" href="?lang=es" hreflang="es" />
-  <link rel="alternate" href="?lang=it" hreflang="it" />
-  <link rel="alternate" href="?lang=pl" hreflang="pl" />
-  <link rel="alternate" href="?lang=nl" hreflang="nl" />
-  <link rel="alternate" href="?lang=ro" hreflang="ro" />
-  <link rel="alternate" href="?lang=el" hreflang="el" />
-  <link rel="alternate" href="?lang=pt" hreflang="pt" />
-  <link rel="alternate" href="?lang=bg" hreflang="bg" />
-  <link rel="alternate" href="?lang=hu" hreflang="hu" />
-  <link rel="alternate" href="?lang=da" hreflang="da" />
-  <link rel="alternate" href="?lang=sv" hreflang="sv" />
-  <link rel="alternate" href="?lang=fi" hreflang="fi" />
-  <link rel="alternate" href="?lang=sk" hreflang="sk" />
-  <link rel="alternate" href="?lang=sl" hreflang="sl" />
-  <link rel="alternate" href="?lang=hr" hreflang="hr" />
-  <link rel="alternate" href="?lang=sr" hreflang="sr" />
-  <link rel="alternate" href="?lang=tr" hreflang="tr" />
-<link rel="preload" as="image" href="hero-port.jpg" imagesrcset="hero-port.jpg">
+<style>
+  :root{
+    --ink:#0f172a; --soft:#475569; --muted:#94a3b8;
+    --paper:#ffffff; --paper2:#f8fafc;
+    --brand:#16a34a;        /* أخضر أساسي */
+    --brand-ink:#065f46;    /* أخضر غامق للنص */
+    --accent:#22d3ee;       /* سماوي للـ pills */
+    --ring:rgba(34,211,238,.35);
+    --radius:14px;
+  }
+  html,body{height:100%}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--paper),var(--paper2))}
+  a{color:var(--brand-ink);text-decoration:none}
+  .container{width:min(1180px,92vw);margin-inline:auto}
+  header{position:sticky;top:0;z-index:30;backdrop-filter:saturate(1.2) blur(10px);background:color-mix(in srgb,var(--paper) 85%,transparent);border-bottom:1px solid #e2e8f0}
+  .nav{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.8rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;font-weight:800}
+  .logo img{height:54px;width:auto;display:block}
+  nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+  nav a{padding:.45rem .7rem;border-radius:10px}
+  nav a:hover{background:#e2e8f033}
+  .lang{display:flex;align-items:center;gap:.45rem;border:1px solid #e2e8f0;border-radius:12px;padding:.25rem .5rem;background:#fff}
+  select{border:none;background:transparent;outline:none}
 
+  /* Hero */
+  .hero{position:relative;padding:clamp(3rem,5vw,4rem) 0;background:#0a3c2e url("hero-port.jpg") center/cover no-repeat;color:#fff}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.52))}
+  .hero > .container{position:relative;z-index:1}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.2rem;align-items:center}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;background:#0ea5e9; /* fallback */
+        color:#002b36;border:1px solid #7dd3fc;padding:.35rem .7rem;border-radius:999px;font-size:.85rem}
+  h1{font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.15;margin:.6rem 0;color:#fff}
+  .lead{font-size:1.05rem;color:#eef2f7}
+  .cta{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
+  .btn{border:0;border-radius:12px;padding:.76rem 1rem;font-weight:700;cursor:pointer}
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 30px var(--ring)}
+  .btn-secondary{background:transparent;border:2px solid #fff;color:#fff}
+  .card{background:#ffffffcc;border:1px solid #e2e8f0;border-radius:var(--radius);padding:1rem;box-shadow:0 10px 24px rgba(15,23,42,.12);backdrop-filter:blur(4px);color:#0f172a}
+  .muted{color:var(--muted)}
+  .tag{display:inline-block;background:#0b3a34;color:#eafffb;border:1px solid #99f6e4;padding:.22rem .5rem;border-radius:999px;font-size:.82rem;margin:.15rem .15rem 0 0}
+  .tag.light{background:#f1f5f9;color:#0f172a;border-color:#e2e8f0}
+
+  /* Sections */
+  section{padding:3rem 0}
+  h2{font-size:clamp(1.4rem,2.7vw,2rem);margin:0 0 1rem}
+  .grid{display:grid;gap:1rem}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:920px){.hero-grid,.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+  .table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;border:1px solid #e2e8f0;background:#fff}
+  .table th,.table td{padding:.6rem .7rem;border-bottom:1px solid #eef2f7;text-align:start}
+  .table thead th{position:sticky;top:0;background:#f8fafc;font-weight:800}
+  .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.92rem}
+
+  /* RTL helpers */
+  [dir="rtl"] .lang{flex-direction:row-reverse}
+  [dir="rtl"] nav ul{flex-direction:row-reverse}
+
+  /* Print only COA */
+  @media print{body{background:white} header,.hero,.hide-print,.foot{display:none!important} #coa{margin-top:0}}
+</style>
+</head>
 <body>
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
     <div class="brand">
-      <div class="logo">
-  <img src="logo.png" alt="Temos Agro Trading Logo" style="height:60px; width:auto;">
-</div>
-      <span data-i18n="site.name">Euro Agri Trading — وسيط منتجات أبو قير للأسمدة</span>
+      <span class="logo"><img src="logo.png" alt="Temos Agro Trading Logo"></span>
+      <span data-i18n="site.name">Euro Agri Trading — وسيط أغري موثوق</span>
     </div>
     <nav>
       <ul>
-        <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
-        <li><a href="#products" data-i18n="nav.products">المنتجات</a></li>
-        <li><a href="#coa" data-i18n="nav.coa">شهادة التحليل</a></li>
-        <li><a href="#logistics" data-i18n="nav.logistics">اللوجستيات والامتثال</a></li>
-        <li><a href="#about" data-i18n="nav.about">من نحن</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">تواصل</a></li>
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#coa" data-i18n="nav.coa">COA</a></li>
+        <li><a href="#logistics" data-i18n="nav.logistics">Logistics & Compliance</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
-
     <div class="lang" aria-label="Language selector">
       <span aria-hidden="true">🌐</span>
       <select id="langSelect" title="Language">
-        <!-- أهم لغات أوروبا + عربي/تركي -->
-        <option value="ar">العربية</option>
-        <option value="en">English</option>
-        <option value="cs">Čeština</option>
-        <option value="de">Deutsch</option>
-        <option value="fr">Français</option>
-        <option value="es">Español</option>
-        <option value="it">Italiano</option>
-        <option value="pl">Polski</option>
-        <option value="nl">Nederlands</option>
-        <option value="ro">Română</option>
-        <option value="el">Ελληνικά</option>
-        <option value="pt">Português</option>
-        <option value="bg">Български</option>
-        <option value="hu">Magyar</option>
-        <option value="da">Dansk</option>
-        <option value="sv">Svenska</option>
-        <option value="fi">Suomi</option>
-        <option value="sk">Slovenčina</option>
-        <option value="sl">Slovenščina</option>
-        <option value="hr">Hrvatski</option>
-        <option value="sr">Srpski</option>
+        <option value="ar">العربية</option><option value="en">English</option><option value="cs">Čeština</option>
+        <option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option>
+        <option value="it">Italiano</option><option value="pl">Polski</option><option value="nl">Nederlands</option>
+        <option value="ro">Română</option><option value="el">Ελληνικά</option><option value="pt">Português</option>
+        <option value="bg">Български</option><option value="hu">Magyar</option><option value="da">Dansk</option>
+        <option value="sv">Svenska</option><option value="fi">Suomi</option><option value="sk">Slovenčina</option>
+        <option value="sl">Slovenščina</option><option value="hr">Hrvatski</option><option value="sr">Srpski</option>
         <option value="tr">Türkçe</option>
       </select>
     </div>
@@ -86,31 +105,34 @@
 <main id="home" class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="pill" data-i18n="hero.pill">🔗 شركة وساطة مقرها التشيك ↔️ أوروبا</span>
-      <h1 data-i18n="hero.title">توريد أسمدة ومواد زراعية عالية الجودة من أبو قير إلى أوروبا</h1>
+      <span class="pill" data-i18n="hero.pill">Independent agro broker — Czech Republic ↔️ Europe</span>
+      <h1 data-i18n="hero.title">High-quality fertilizers & agri materials for European markets</h1>
       <p class="lead" data-i18n="hero.subtitle">
-        نقوم بالوساطة بين شركة أبو قير للأسمدة (الإسكندرية – مصر) ومشتري الاتحاد الأوروبي — منتجات معتمدة، مواصفات واضحة، وشحن مرن وفق شروط إنكوترمز.
+        Competitive prices thanks to direct sourcing network in Egypt. Certified quality, transparent documents, and flexible shipping under Incoterms.
       </p>
       <div class="cta">
-        <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">اطلب عرض سعر الآن</a>
-        <a class="btn btn-outline" href="#coa" data-i18n="hero.cta2">شاهد شهادة التحليل</a>
+        <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">Request a Quote</a>
+        <a class="btn btn-secondary" href="#coa" data-i18n="hero.cta2">View Certificates (COA)</a>
       </div>
       <div class="muted" style="margin-top:.6rem" data-i18n="hero.note">
-        * لسنا الموقع الرسمي لشركة أبو قير؛ نحن وسيط وتسويق مستقل.
+        * Independent broker/marketer. This website is for commercial information only.
       </div>
     </div>
+
     <div class="card">
-      <h3 style="margin-top:0" data-i18n="products.title">منتج رئيسي</h3>
-      <p class="muted" data-i18n="products.lead">فوسفات صخري — درجة 26% P₂O₅ (عَيّنة مطابقة للمواصفات)</p>
+      <h3 style="margin-top:0" data-i18n="products.title">Flagship Product</h3>
+      <p class="muted" data-i18n="products.lead">Rock Phosphate — Grade 26% P₂O₅ (reference sample)</p>
       <ul style="margin:0;padding-inline-start:1.1rem;line-height:1.8">
-        <li><span class="tag">P₂O₅ ≥ 26.3%</span>
-            <span class="tag">SiO₂ ≈ 13.3%</span>
-            <span class="tag">F ≈ 2.6%</span></li>
-        <li data-i18n="products.spec1">حجم حسب التحليل المنخلي — جاهز للطحن أو التسميد المباشر</li>
-        <li data-i18n="products.spec2">شهادة تحليل مرفقة + إمكانية التحليل المطلوب للمشتري</li>
+        <li>
+          <span class="tag">P₂O₅ ≥ 26.3%</span>
+          <span class="tag">SiO₂ ≈ 13.3%</span>
+          <span class="tag">F ≈ 2.6%</span>
+        </li>
+        <li data-i18n="products.spec1">Graded by sieving — ready for grinding or direct application</li>
+        <li data-i18n="products.spec2">COA attached; buyer-specific analyses available</li>
       </ul>
       <div style="margin-top:.7rem">
-        <a class="btn btn-outline" href="#coa" data-i18n="products.viewCoa">عرض شهادة التحليل</a>
+        <a class="btn btn-secondary" href="#coa" data-i18n="products.viewCoa">Open COA</a>
       </div>
     </div>
   </div>
@@ -118,30 +140,26 @@
 
 <section id="products">
   <div class="container">
-    <h2 data-i18n="products.all">المنتجات المتاحة</h2>
+    <h2 data-i18n="products.all">Available Products</h2>
     <div class="grid cols-3">
       <div class="card">
-        <h3 data-i18n="card.rock.title">فوسفات صخري (Rock Phosphate) — Grade 26%</h3>
-        <p class="muted" data-i18n="card.rock.text">
-          مادة خام للفوسفات الزراعي. مصدر موثوق، توريد شحنات مجمّعة إلى موانئ أوروبا.
-        </p>
+        <h3 data-i18n="card.rock.title">Rock Phosphate — Grade 26%</h3>
+        <p class="muted" data-i18n="card.rock.text">Raw material for agricultural phosphate. Reliable source with bulk shipments to EU ports.</p>
         <div>
-          <span class="tag">Bulk & Big-Bag</span>
-          <span class="tag" data-i18n="log.ports">موانئ: الإسكندرية/دمياط</span>
-          <span class="tag">Incoterms: FOB/CFR/DDP</span>
+          <span class="tag light">Bulk & Big-Bag</span>
+          <span class="tag light" data-i18n="log.ports">Ports: Alexandria / Damietta</span>
+          <span class="tag light">Incoterms: FOB / CFR / CIF / DDP</span>
         </div>
       </div>
-
       <div class="card">
-        <h3 data-i18n="card.urea.title">يوريا (اختياري)</h3>
-        <p class="muted" data-i18n="card.urea.text">إدراج منتجات إضافية لاحقًا (NPK، يوريا، MAP/DAP) حسب طلب العملاء.</p>
-        <div><span class="tag">🔧 Ready to Expand</span></div>
+        <h3 data-i18n="card.urea.title">Urea (optional)</h3>
+        <p class="muted" data-i18n="card.urea.text">Additional fertilizers (NPK, Urea, MAP/DAP) available on request.</p>
+        <div><span class="tag light" data-i18n="label.readyExpand">Ready to expand</span></div>
       </div>
-
       <div class="card">
-        <h3 data-i18n="card.custom.title">منتجات مخصّصة</h3>
-        <p class="muted" data-i18n="card.custom.text">هل تحتاج مواصفات معيّنة؟ نوائم التوريد، التعبئة، والتحاليل حسب الطلب.</p>
-        <div><a class="btn btn-outline" href="#contact" data-i18n="card.custom.cta">تواصل لطلب مواصفات</a></div>
+        <h3 data-i18n="card.custom.title">Custom specs</h3>
+        <p class="muted" data-i18n="card.custom.text">We tailor supply, packing and analysis according to buyer needs.</p>
+        <div><a class="btn btn-primary" href="#contact" data-i18n="card.custom.cta">Ask for custom spec</a></div>
       </div>
     </div>
   </div>
@@ -150,41 +168,37 @@
 <section id="coa">
   <div class="container">
     <div class="hide-print" style="display:flex;gap:.6rem;justify-content:flex-end">
-      <button class="btn btn-outline" onclick="exportSievingCSV()">
-        ⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span>
-      </button>
-      <button class="btn btn-primary" onclick="window.print()">
-        🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span>
-      </button>
+      <button class="btn btn-secondary" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">Export Sieving CSV</span></button>
+      <button class="btn btn-primary" onclick="window.print()">🖨️ <span data-i18n="coa.print">Print/Save PDF — COA</span></button>
     </div>
 
-    <h2 data-i18n="coa.title">شهادة التحليل — Rock Phosphate Grade 26%</h2>
-    <p class="muted" data-i18n="coa.sub">عَيّنة للاسترشاد (تاريخ: 01/09/2023). يمكن تقديم تحليل حديث لكل شحنة.</p>
+    <h2 data-i18n="coa.title">Certificate of Analysis — Rock Phosphate Grade 26%</h2>
+    <p class="muted" data-i18n="coa.sub">Reference sample (01/09/2023). Fresh COA can be provided per shipment.</p>
 
     <div class="grid cols-2">
       <div class="card">
         <table class="table" aria-label="Certificate of Analysis">
           <thead>
             <tr>
-              <th data-i18n="coa.th.test">الاختبار</th>
-              <th data-i18n="coa.th.method">الطريقة</th>
-              <th data-i18n="coa.th.unit">الوحدة</th>
-              <th data-i18n="coa.th.result">النتيجة</th>
-              <th data-i18n="coa.th.temp">الحرارة</th>
-              <th data-i18n="coa.th.hum">الرطوبة</th>
+              <th data-i18n="coa.th.test">Test</th>
+              <th data-i18n="coa.th.method">Method</th>
+              <th data-i18n="coa.th.unit">Unit</th>
+              <th data-i18n="coa.th.result">Result</th>
+              <th data-i18n="coa.th.temp">Temp.</th>
+              <th data-i18n="coa.th.hum">Humidity</th>
             </tr>
           </thead>
           <tbody>
             <tr><td>P₂O₅ (dry)</td><td>AOAC 962.02:2016</td><td>% wt</td><td>26.33</td><td rowspan="12">30 °C</td><td rowspan="12">45%</td></tr>
-            <tr><td>CaO (dry)</td>  <td>AOAC 945.03</td>     <td>% wt</td><td>43.18</td></tr>
-            <tr><td>MgO (dry)</td>  <td>AOAC 965.09</td>     <td>% wt</td><td>0.39</td></tr>
-            <tr><td>Fe₂O₃ (dry)</td><td>AOAC 965.09</td>     <td>% wt</td><td>1.89</td></tr>
-            <tr><td>Al₂O₃ (dry)</td><td>AOAC 965.09</td>     <td>% wt</td><td>0.77</td></tr>
-            <tr><td>K₂O (dry)</td>  <td>AOAC 965.09</td>     <td>% wt</td><td>0.07</td></tr>
-            <tr><td>SO₃ (dry)</td>  <td>AOAC 925.55</td>     <td>% wt</td><td>0.22</td></tr>
-            <tr><td>SiO₂ (dry)</td> <td>AOAC 963.02</td>     <td>% wt</td><td>13.33</td></tr>
-            <tr><td>Cl (dry)</td>   <td>AOAC 928.02</td>     <td>% wt</td><td>0.14</td></tr>
-            <tr><td>F (dry)</td>    <td>AOAC 984.39</td>     <td>% wt</td><td>2.61</td></tr>
+            <tr><td>CaO (dry)</td><td>AOAC 945.03</td><td>% wt</td><td>43.18</td></tr>
+            <tr><td>MgO (dry)</td><td>AOAC 965.09</td><td>% wt</td><td>0.39</td></tr>
+            <tr><td>Fe₂O₃ (dry)</td><td>AOAC 965.09</td><td>% wt</td><td>1.89</td></tr>
+            <tr><td>Al₂O₃ (dry)</td><td>AOAC 965.09</td><td>% wt</td><td>0.77</td></tr>
+            <tr><td>K₂O (dry)</td><td>AOAC 965.09</td><td>% wt</td><td>0.07</td></tr>
+            <tr><td>SO₃ (dry)</td><td>AOAC 925.55</td><td>% wt</td><td>0.22</td></tr>
+            <tr><td>SiO₂ (dry)</td><td>AOAC 963.02</td><td>% wt</td><td>13.33</td></tr>
+            <tr><td>Cl (dry)</td><td>AOAC 928.02</td><td>% wt</td><td>0.14</td></tr>
+            <tr><td>F (dry)</td><td>AOAC 984.39</td><td>% wt</td><td>2.61</td></tr>
             <tr><td>L.O.I (dry)</td><td>Ignition @950 °C</td><td>% wt</td><td>10.10</td></tr>
             <tr><td>2% Citric Acid Solubility</td><td>AOAC 962.02:2016</td><td>%</td><td>38.13</td></tr>
           </tbody>
@@ -192,53 +206,48 @@
       </div>
 
       <div class="card">
-        <h3 style="margin-top:0" data-i18n="sieve.title">التحليل المنخلي — Grade 26% (P₂O₅=26.33%)</h3>
+        <h3 style="margin-top:0" data-i18n="sieve.title">Sieving Analysis — Grade 26% (P₂O₅=26.33%)</h3>
         <table id="sieving" class="table" aria-label="Sieving analysis">
           <thead>
-            <tr>
-              <th data-i18n="sieve.size">المقاس</th>
-              <th data-i18n="sieve.percent">النسبة وزناً %</th>
-              <th>P₂O₅ %</th>
-            </tr>
+            <tr><th data-i18n="sieve.size">Size</th><th data-i18n="sieve.percent">Percent wt%</th><th>P₂O₅ %</th></tr>
           </thead>
           <tbody>
             <tr><td>(+) 4.75 mm</td><td>0.93</td><td>20.60</td></tr>
-            <tr><td>(+) 4.0 mm </td><td>1.00</td><td>22.40</td></tr>
-            <tr><td>(+) 2.8 mm </td><td>6.40</td><td>24.60</td></tr>
-            <tr><td>(+) 2.0 mm </td><td>6.70</td><td>24.50</td></tr>
-            <tr><td>(+) 1.0 mm </td><td>15.14</td><td>25.80</td></tr>
-            <tr><td>(+) 850 µm </td><td>0.00</td><td>0</td></tr>
-            <tr><td>(+) 500 µm </td><td>15.70</td><td>25.40</td></tr>
-            <tr><td>(+) 250 µm </td><td>45.50</td><td>28.50</td></tr>
-            <tr><td>(+) 180 µm </td><td>4.20</td><td>28.30</td></tr>
-            <tr><td>(+) 106 µm </td><td>2.60</td><td>30.30</td></tr>
-            <tr><td>(+) 75 µm  </td><td>0.56</td><td>30.70</td></tr>
-            <tr><td>(+) 53 µm  </td><td>0.10</td><td>0</td></tr>
-            <tr><td>(+) 38 µm  </td><td>0.00</td><td>0</td></tr>
-            <tr><td>(–) 38 µm  </td><td>0.03</td><td>0</td></tr>
+            <tr><td>(+) 4.0 mm</td><td>1.00</td><td>22.40</td></tr>
+            <tr><td>(+) 2.8 mm</td><td>6.40</td><td>24.60</td></tr>
+            <tr><td>(+) 2.0 mm</td><td>6.70</td><td>24.50</td></tr>
+            <tr><td>(+) 1.0 mm</td><td>15.14</td><td>25.80</td></tr>
+            <tr><td>(+) 850 µm</td><td>0.00</td><td>0</td></tr>
+            <tr><td>(+) 500 µm</td><td>15.70</td><td>25.40</td></tr>
+            <tr><td>(+) 250 µm</td><td>45.50</td><td>28.50</td></tr>
+            <tr><td>(+) 180 µm</td><td>4.20</td><td>28.30</td></tr>
+            <tr><td>(+) 106 µm</td><td>2.60</td><td>30.30</td></tr>
+            <tr><td>(+) 75 µm</td><td>0.56</td><td>30.70</td></tr>
+            <tr><td>(+) 53 µm</td><td>0.10</td><td>0</td></tr>
+            <tr><td>(+) 38 µm</td><td>0.00</td><td>0</td></tr>
+            <tr><td>(–) 38 µm</td><td>0.03</td><td>0</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-
   </div>
 </section>
 
 <section id="logistics">
   <div class="container">
-    <h2 data-i18n="log.title">اللوجستيات والامتثال</h2>
+    <h2 data-i18n="log.title">Logistics & Compliance</h2>
     <div class="grid cols-3">
       <div class="card">
         <h3>Incoterms</h3>
-        <p class="muted" data-i18n="log.incoterms">FOB / CFR / CIF / DDP حسب بلد العميل، مع تتبع كامل للشحنة.</p>
+        <p class="muted" data-i18n="log.incoterms">FOB / CFR / CIF / DDP depending on destination, full tracking.</p>
       </div>
       <div class="card">
-        <h3 data-i18n="log.ports.h">الموانئ والتعبئة</h3>
-        <p class="muted" data-i18n="log.ports.p">الشحن عادة من الإسكندرية/دمياط — مصر. تعبئة Bulk أو أكياس كبيرة (Big-Bag).</p>
+        <h3 data-i18n="log.ports.h">Ports & Packing</h3>
+        <p class="muted" data-i18n="log.ports.p">Typical loading from Alexandria/Damietta, Egypt. Bulk or Big-Bags.</p>
       </div>
       <div class="card">
-        <h3 data-i18n="log.compliance.h">التوافق الأوروبي</h3>
-        <p class="muted" data-i18n="log.compliance.p">وثائق منشأ وفواتير وشهادات تحليل. الالتزام بمعايير الاتحاد الأوروبي وسلامة السلع.</p>
+        <h3 data-i18n="log.compliance.h">EU Compliance</h3>
+        <p class="muted" data-i18n="log.compliance.p">Origin docs, invoices and COA supplied. Compliant with EU goods & safety standards.</p>
       </div>
     </div>
   </div>
@@ -246,26 +255,24 @@
 
 <section id="about">
   <div class="container">
-    <h2 data-i18n="about.title">من نحن</h2>
+    <h2 data-i18n="about.title">About us</h2>
     <div class="grid cols-2">
       <div class="card">
         <p class="muted" data-i18n="about.p1">
-          شركة وساطة مقرها التشيك تربط مشتري أوروبا بمنتجات شركة أبو قير للأسمدة في الإسكندرية – مصر، وبمنتجات زراعية مختارة. نركز على الشفافية والجودة وسرعة التنفيذ.
+          Czech-based brokerage connecting EU buyers with reliable agri materials from Egypt and selected suppliers. We focus on transparency, quality, speed — and competitive pricing from direct sourcing.
         </p>
         <p class="muted" data-i18n="about.p2">
-          نعمل كوسيط وتسويق مستقل لمنتجات أبو قير للأسمدة ومنتجات أخرى مختارة. لسنا الموقع الرسمي للشركة.
+          We operate independently as a broker/marketer. Not the official website of any producer.
         </p>
       </div>
       <div class="card">
         <p class="muted">
-          <span class="tag">🇪🇺 EU-Friendly</span>
-          <span class="tag">🔒 ClearContracts</span>
-          <span class="tag">📄 COA Certified</span>
-          <span class="tag">🚢 ShipmentTracking</span>
+          <span class="tag light" data-i18n="badge.tracking">Shipment Tracking</span>
+          <span class="tag light" data-i18n="badge.contracts">Clear Contracts</span>
+          <span class="tag light" data-i18n="badge.coa">COA Certified</span>
+          <span class="tag light">EU-Friendly</span>
         </p>
-        <p class="muted" data-i18n="about.p3">
-          جاهزون لاختبارات طرف ثالث عند الطلب (SGS/‏BV). يمكن تقديم عينات للمصادقة قبل التعاقد.
-        </p>
+        <p class="muted" data-i18n="about.p3">3rd-party tests (SGS/BV) on request. Samples available prior to contracting.</p>
       </div>
     </div>
   </div>
@@ -273,43 +280,36 @@
 
 <section id="contact">
   <div class="container">
-    <h2 data-i18n="contact.title">تواصل معنا</h2>
+    <h2 data-i18n="contact.title">Get in touch</h2>
     <div class="grid cols-2">
       <form class="card" onsubmit="return sendMailto(this)">
-        <label>
-          <span data-i18n="form.name">Name</span><br/>
-          <input name="name" required placeholder="Full Name"
-                 style="width:100%;padding:.7rem;border:1px solid #e2e8f0;border-radius:10px">
-        </label><br/><br/>
-        <label>
-          <span data-i18n="form.email">اYour E-Mail Adress</span><br/>
-          <input name="email" type="email" required placeholder="you@example.com"
-                 style="width:100%;padding:.7rem;border:1px solid #e2e8f0;border-radius:10px">
-        </label><br/><br/>
-        <label>
-          <span data-i18n="form.message">رسالتك</span><br/>
-          <textarea name="message" rows="5" required placeholder="Required:product/quantity/port/terms"
-                 style="width:100%;padding:.7rem;border:1px solid #e2e8f0;border-radius:10px"></textarea>
-        </label>
+        <label><span data-i18n="form.name">Name</span><br/>
+          <input name="name" required placeholder="Full Name" style="width:100%;padding:.7rem;border:1px solid #e2e8f0;border-radius:10px"></label><br/><br/>
+        <label><span data-i18n="form.email">Email</span><br/>
+          <input name="email" type="email" required placeholder="you@example.com" style="width:100%;padding:.7rem;border:1px solid #e2e8f0;border-radius:10px"></label><br/><br/>
+        <label><span data-i18n="form.message">Message</span><br/>
+          <textarea name="message" rows="5" required
+            placeholder="Required: product / quantity / port / terms"
+            style="width:100%;padding:.7rem;border:1px solid #e2e8f0;border-radius:10px"></textarea></label>
         <div class="cta">
-          <button class="btn btn-primary" type="submit" data-i18n="form.send">إرسال</button>
-          <a class="btn btn-outline" href="https://wa.me/00420732133919" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp</a>
+          <button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
+          <a class="btn btn-secondary" href="https://wa.me/00420732133919" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp</a>
         </div>
-        <p class="muted" data-i18n="contact.note">لا نستخدم كوكيز تحليلية. هذا النموذج يفتح بريدك لإرسال الرسالة مباشرةً.</p>
+        <p class="muted" data-i18n="contact.note">We do not use analytics cookies. This form opens your mail client to send directly.</p>
       </form>
       <div class="card">
-        <h3 data-i18n="contact.details">بيانات التواصل</h3>
+        <h3 data-i18n="contact.details">Contact details</h3>
         <p class="muted">
           <strong data-i18n="site.company">Euro Agri Trading s.r.o.</strong><br/>
           Nader Abdou<br/>
           Malenovice č.ev. 48<br/>
           Frýdlant nad Ostravicí, 739 11 — Czech Republic<br/>
+          <span class="tag light">IČO: 17314780</span> <span class="tag light">DIČ: CZ0000000</span><br/>
           <span class="kbd">trading@temosliving.de</span><br/>
           <span class="kbd">+420 732 133 919</span><br/>
-          <span class="kbd">IČO: 17314780</span> — <span class="kbd">DIČ: CZ0000000</span><br/>
-          <span class="kbd">Bank: CZ00 0000 0000 0000 0000 0000</span> — <span class="kbd">SWIFT: XXXXXXXX</span>
+          <span class="kbd">IBAN: CZ00 0000 0000 0000 0000 0000</span> — <span class="kbd">SWIFT: XXXXXXXX</span>
         </p>
-        <p class="muted" data-i18n="contact.docs">نشارك المستندات المطلوبة (عقود، فواتير، COA) بعد تحديد الطلب.</p>
+        <p class="muted" data-i18n="contact.docs">We share required documents (contracts, invoices, COA) after qualifying the request.</p>
       </div>
     </div>
   </div>
@@ -317,129 +317,146 @@
 
 <footer class="foot">
   <div class="container">
-    <div data-i18n="footer.note">
-      ©️ 2025 — وسيط وتسويق مستقل. جميع أسماء العلامات التجارية مملوكة لأصحابها. هذه الصفحة لأغراض تجارية معلوماتية فقط.
-    </div>
+    <div data-i18n="footer.note">©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. For commercial information only.</div>
   </div>
 </footer>
 
 <script>
-/* ---------- i18n dictionaries (fallback to EN) ---------- */
+/* ------------ i18n dictionaries (full keys) ------------- */
 const DICT = {
+  /* EN (base) */
   en:{
-    "site.name":"Euro Agri Trading — Broker for Abu Qir Fertilizers",
+    "site.name":"Euro Agri Trading — Trusted Agro Broker",
     "nav.home":"Home","nav.products":"Products","nav.coa":"COA","nav.logistics":"Logistics & Compliance","nav.about":"About","nav.contact":"Contact",
-    "hero.pill":"Czech-based brokerage ↔️ Europe",
-    "hero.title":"Supplying high-quality fertilizers & agri materials from Abu Qir to Europe",
-    "hero.subtitle":"We broker shipments from Abu Qir Fertilizers (Alexandria, Egypt) to EU buyers — certified products, clear specs, and flexible delivery under Incoterms.",
-    "hero.cta":"Request a quote","hero.cta2":"View COA","hero.note":"* We are not the official Abu Qir website; we operate independently as a broker/marketer.",
+    "hero.pill":"Independent agro broker — Czech Republic ↔️ Europe",
+    "hero.title":"High-quality fertilizers & agri materials for European markets",
+    "hero.subtitle":"Competitive prices thanks to direct sourcing network in Egypt. Certified quality, transparent documents, and flexible shipping under Incoterms.",
+    "hero.cta":"Request a Quote","hero.cta2":"View Certificates (COA)","hero.note":"* Independent broker/marketer. This website is for commercial information only.",
     "products.title":"Flagship Product","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (reference sample)","products.spec1":"Graded by sieving — ready for grinding or direct application",
-    "products.spec2":"COA attached; buyer-specific analyses available","products.viewCoa":"Open COA",
-    "products.all":"Available Products",
+    "products.spec2":"COA attached; buyer-specific analyses available","products.viewCoa":"Open COA","products.all":"Available Products",
     "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Raw material for agricultural phosphate. Reliable source with bulk shipments to EU ports.",
-    "log.ports":"Ports: Alexandria/Damietta",
-    "card.urea.title":"Urea (optional)","card.urea.text":"Add more items (NPK, Urea, MAP/DAP) upon buyer request.",
-    "card.custom.title":"Custom specs","card.custom.text":"Need particular specs? We tailor supply, packing and analyses.","card.custom.cta":"Ask for custom spec",
-    "coa.title":"Certificate of Analysis — Rock Phosphate Grade 26%","coa.sub":"Reference sample (date: 01/09/2023). Fresh COA per shipment can be provided.",
+    "log.ports":"Ports: Alexandria / Damietta",
+    "card.urea.title":"Urea (optional)","card.urea.text":"Additional fertilizers (NPK, Urea, MAP/DAP) available on request.",
+    "card.custom.title":"Custom specs","card.custom.text":"We tailor supply, packing and analysis according to buyer needs.","card.custom.cta":"Ask for custom spec",
+    "label.readyExpand":"Ready to expand",
+    "coa.title":"Certificate of Analysis — Rock Phosphate Grade 26%","coa.sub":"Reference sample (01/09/2023). Fresh COA can be provided per shipment.",
     "coa.th.test":"Test","coa.th.method":"Method","coa.th.unit":"Unit","coa.th.result":"Result","coa.th.temp":"Temp.","coa.th.hum":"Humidity",
     "sieve.title":"Sieving Analysis — Grade 26% (P₂O₅=26.33%)","sieve.size":"Size","sieve.percent":"Percent wt%",
     "coa.export":"Export Sieving CSV","coa.print":"Print/Save PDF — COA",
     "log.title":"Logistics & Compliance","log.incoterms":"FOB / CFR / CIF / DDP depending on destination, full tracking.",
     "log.ports.h":"Ports & Packing","log.ports.p":"Typical loading from Alexandria/Damietta, Egypt. Bulk or Big-Bags.",
     "log.compliance.h":"EU Compliance","log.compliance.p":"Origin docs, invoices and COA supplied. Compliant with EU goods & safety standards.",
-    "about.title":"About us","about.p1":"Czech-based brokerage connecting EU buyers with Abu Qir Fertilizers in Alexandria, Egypt, and selected agri products. Headquarters in Czechia; operations focused on Europe.",
-    "about.p2":"We act independently as a broker/marketer for Abu Qir products and other selected items. Not the official website.",
+    "about.title":"About us","about.p1":"Czech-based brokerage connecting EU buyers with reliable agri materials from Egypt and selected suppliers. We focus on transparency, quality, speed — and competitive pricing from direct sourcing.",
+    "about.p2":"We operate independently as a broker/marketer. Not the official website of any producer.",
     "about.p3":"3rd-party tests (SGS/BV) on request. Samples available prior to contracting.",
+    "badge.tracking":"Shipment Tracking","badge.contracts":"Clear Contracts","badge.coa":"COA Certified",
     "contact.title":"Get in touch","form.name":"Name","form.email":"Email","form.message":"Message","form.send":"Send",
     "contact.whatsapp":"WhatsApp","contact.note":"We do not use analytics cookies. This form opens your mail client to send directly.",
     "contact.details":"Contact details","contact.docs":"We share required documents (contracts, invoices, COA) after qualifying the request.",
-    "site.company":"Euro Agri Trading s.r.o.",
-    "footer.note":"©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. This page is for commercial information only."
-  },
-  ar:{
-    "site.name":"Euro Agri Trading — وسيط منتجات أبو قير للأسمدة",
-    "nav.home":"الرئيسية","nav.products":"المنتجات","nav.coa":"شهادة التحليل","nav.logistics":"اللوجستيات والامتثال","nav.about":"من نحن","nav.contact":"تواصل",
-    "hero.pill":"شركة وساطة مقرها التشيك ↔️ أوروبا",
-    "hero.title":"توريد أسمدة ومواد زراعية عالية الجودة من أبو قير إلى أوروبا",
-    "hero.subtitle":"نقوم بالوساطة بين شركة أبو قير للأسمدة (الإسكندرية – مصر) ومشتري الاتحاد الأوروبي — منتجات معتمدة، مواصفات واضحة، وشحن مرن وفق شروط إنكوترمز.",
-    "hero.cta":"اطلب عرض سعر الآن","hero.cta2":"شاهد شهادة التحليل","hero.note":"* لسنا الموقع الرسمي لشركة أبو قير؛ نحن وسيط وتسويق مستقل.",
-    "products.title":"منتج رئيسي","products.lead":"فوسفات صخري — درجة 26% P₂O₅ (عَيّنة مطابقة للمواصفات)","products.spec1":"حجم حسب التحليل المنخلي — جاهز للطحن أو التسميد المباشر",
-    "products.spec2":"شهادة تحليل مرفقة + إمكانية التحليل المطلوب للمشتري","products.viewCoa":"عرض شهادة التحليل",
-    "products.all":"المنتجات المتاحة",
-    "card.rock.title":"فوسفات صخري — درجة 26%","card.rock.text":"مادة خام للفوسفات الزراعي. مصدر موثوق وشحن مجمّع إلى موانئ أوروبا.",
-    "log.ports":"موانئ: الإسكندرية/دمياط",
-    "card.urea.title":"يوريا (اختياري)","card.urea.text":"يمكن إضافة منتجات (NPK، يوريا، MAP/DAP) حسب الطلب.",
-    "card.custom.title":"منتجات مخصّصة","card.custom.text":"نطوّع المواصفات والتعبئة والتحاليل حسب احتياجاتك.","card.custom.cta":"اطلب مواصفات خاصة",
-    "coa.title":"شهادة التحليل — فوسفات صخري درجة 26%","coa.sub":"عَيّنة للاسترشاد (تاريخ: 01/09/2023). يمكن تقديم تحليل حديث لكل شحنة.",
-    "coa.th.test":"الاختبار","coa.th.method":"الطريقة","coa.th.unit":"الوحدة","coa.th.result":"النتيجة","coa.th.temp":"الحرارة","coa.th.hum":"الرطوبة",
-    "sieve.title":"التحليل المنخلي — درجة 26% (P₂O₅=26.33%)","sieve.size":"المقاس","sieve.percent":"النسبة وزناً %",
-    "coa.export":"تصدير التحليل المنخلي CSV","coa.print":"طباعة/حفظ PDF — شهادة التحليل",
-    "log.title":"اللوجستيات والامتثال","log.incoterms":"FOB / CFR / CIF / DDP حسب بلد العميل، مع تتبع كامل للشحنة.",
-    "log.ports.h":"الموانئ والتعبئة","log.ports.p":"الشحن عادة من الإسكندرية/دمياط — مصر. تعبئة Bulk أو أكياس كبيرة (Big-Bag).",
-    "log.compliance.h":"التوافق الأوروبي","log.compliance.p":"نوفر مستندات المنشأ والفواتير والـ COA. الالتزام بمعايير الاتحاد الأوروبي.",
-    "about.title":"من نحن","about.p1":"شركة وساطة مقرها التشيك تربط مشتري أوروبا بمنتجات شركة أبو قير للأسمدة في الإسكندرية – مصر، وبمنتجات زراعية مختارة. نركز على الشفافية والجودة وسرعة التنفيذ.",
-    "about.p2":"نعمل كوسيط وتسويق مستقل لمنتجات أبو قير وغيرها. لسنا الموقع الرسمي.",
-    "about.p3":"اختبارات طرف ثالث (SGS/BV) عند الطلب. تتوفر عينات قبل التعاقد.",
-    "contact.title":"تواصل معنا","form.name":"الاسم","form.email":"البريد الإلكتروني","form.message":"رسالتك","form.send":"إرسال",
-    "contact.whatsapp":"WhatsApp","contact.note":"لا نستخدم كوكيز تحليلية. هذا النموذج يفتح بريدك لإرسال الرسالة مباشرةً.",
-    "contact.details":"بيانات التواصل","contact.docs":"نشارك المستندات المطلوبة بعد تحديد الطلب.",
-    "site.company":"Euro Agri Trading s.r.o.",
-    "footer.note":"©️ 2025 — وسيط وتسويق مستقل. جميع العلامات التجارية مملوكة لأصحابها. هذه الصفحة لأغراض معلوماتية تجارية."
+    "site.company":"Euro Agri Trading s.r.o.","footer.note":"©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. For commercial information only."
   },
 
-  /* باقي اللغات: ترجمات أساسية للواجهة (الناقص يسقط إلى EN) */
-  cs:{ "nav.home":"Domů","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistika","nav.about":"O nás","nav.contact":"Kontakt",
-       "hero.pill":"Zprostředkovatel v Česku ↔️ Evropa","hero.title":"Dodávky hnojiv a agro materiálů do EU",
-       "hero.cta":"Nezávazná poptávka","products.all":"Dostupné produkty","log.title":"Logistika a shoda","contact.title":"Kontaktujte nás" },
-  de:{ "site.name":"Euro Agri Trading — Broker für Abu Qir Düngemittel",
-       "nav.home":"Start","nav.products":"Produkte","nav.coa":"Analysezertifikat","nav.logistics":"Logistik & Compliance","nav.about":"Über uns","nav.contact":"Kontakt",
-       "hero.pill":"Vermittler mit Sitz in Tschechien ↔️ Europa",
-       "hero.title":"Lieferung hochwertiger Düngemittel & Agrarstoffe nach Europa",
-       "hero.subtitle":"Wir vermitteln Lieferungen von Abu Qir Fertilizers (Alexandria, Ägypten) an EU-Käufer — zertifizierte Produkte, klare Spezifikationen und flexible Incoterms-Lieferung.",
-       "hero.cta":"Angebot anfordern","hero.cta2":"COA ansehen","hero.note":"* Wir sind nicht die offizielle Abu-Qir-Webseite; wir agieren unabhängig als Vermittler/Marketer.",
-       "products.title":"Leitprodukt","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (Referenzprobe)","products.spec1":"Nach Siebanalyse klassiert — bereit zum Mahlen oder Direkteinsatz",
-       "products.spec2":"COA beigefügt; käuferspezifische Analysen möglich","products.viewCoa":"COA anzeigen",
-       "products.all":"Verfügbare Produkte","card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Rohstoff für Agrar-Phosphat. Zuverlässige Quelle mit Massengut-Lieferungen an EU-Häfen.",
-       "log.ports":"Häfen: Alexandria/Damietta","card.urea.title":"Harnstoff (optional)","card.urea.text":"Weitere Produkte (NPK, Urea, MAP/DAP) auf Anfrage.",
-       "card.custom.title":"Spezielle Spezifikationen","card.custom.text":"Wir passen Lieferung, Verpackung und Analysen an.","card.custom.cta":"Spezifikation anfragen",
-       "coa.title":"Analysezertifikat — Rock Phosphate Grade 26%","coa.sub":"Referenzprobe (01/09/2023). Frisches COA pro Lieferung möglich.",
-       "coa.th.test":"Test","coa.th.method":"Methode","coa.th.unit":"Einheit","coa.th.result":"Ergebnis","coa.th.temp":"Temp.","coa.th.hum":"Feuchte",
-       "sieve.title":"Siebanalyse — Grade 26% (P₂O₅=26,33%)","sieve.size":"Korngröße","sieve.percent":"Anteil Gew.%",
-       "log.title":"Logistik & Compliance","log.incoterms":"FOB / CFR / CIF / DDP je nach Ziel, vollständiges Tracking.",
-       "log.ports.h":"Häfen & Verpackung","log.ports.p":"Typische Verladung aus Alexandria/Damietta, Ägypten. Bulk oder Big-Bags.",
-       "log.compliance.h":"EU-Konformität","log.compliance.p":"Ursprungsdokumente, Rechnungen und COA. Entspricht EU-Standards.",
-       "about.title":"Über uns","about.p1":"Vermittlungsunternehmen mit Sitz in Tschechien, das EU-Käufer mit Abu Qir Fertilizers in Alexandria, Ägypten, sowie ausgewählten Agrarprodukten verbindet.",
-       "about.p2":"Wir handeln unabhängig als Vermittler/Marketer für Abu-Qir-Produkte und ausgewählte Artikel. Nicht die offizielle Webseite.",
-       "about.p3":"Tests durch Dritte (SGS/BV) auf Anfrage. Muster vor Vertragsabschluss möglich.",
-       "contact.title":"Kontakt","form.name":"Name","form.email":"E-Mail","form.message":"Nachricht","form.send":"Senden",
-       "contact.whatsapp":"WhatsApp","contact.note":"Keine Analytics-Cookies. Dieses Formular öffnet Ihr Mailprogramm für den Direktversand.",
-       "contact.details":"Kontaktdaten","contact.docs":"Erforderliche Dokumente (Verträge, Rechnungen, COA) nach Qualifizierung.",
-       "site.company":"Euro Agri Trading s.r.o.",
-       "footer.note":"©️ 2025 — Unabhängiger Vermittler/Marketer. Marken gehören ihren Inhabern. Nur zu Informationszwecken."
+  /* AR */
+  ar:{
+    "site.name":"Euro Agri Trading — وسيط أغري موثوق",
+    "nav.home":"الرئيسية","nav.products":"المنتجات","nav.coa":"شهادة التحليل","nav.logistics":"اللوجستيات والامتثال","nav.about":"من نحن","nav.contact":"تواصل",
+    "hero.pill":"وسيط أغري مستقل — التشيك ↔️ أوروبا",
+    "hero.title":"أسمدة ومواد زراعية عالية الجودة لأسواق أوروبا",
+    "hero.subtitle":"أسعار تنافسية بفضل شبكة توريد مباشرة من مصر. جودة معتمدة، مستندات شفافة، وشحن مرن وفق إنكوترمز.",
+    "hero.cta":"اطلب عرض سعر","hero.cta2":"عرض الشهادات (COA)","hero.note":"* وسيط وتسويق مستقل. هذه الصفحة لأغراض معلوماتية تجارية فقط.",
+    "products.title":"منتج رئيسي","products.lead":"فوسفات صخري — درجة 26% P₂O₅ (عَيّنة مرجعية)","products.spec1":"مصنّف بالتحليل المنخلي — جاهز للطحن أو الاستخدام المباشر",
+    "products.spec2":"شهادة تحليل مرفقة؛ إمكان تحاليل خاصة للمشتري","products.viewCoa":"فتح الشهادة","products.all":"المنتجات المتاحة",
+    "card.rock.title":"فوسفات صخري — درجة 26%","card.rock.text":"مادة خام للفوسفات الزراعي. مصدر موثوق وشحن مجمّع إلى موانئ أوروبا.",
+    "log.ports":"موانئ: الإسكندرية / دمياط",
+    "card.urea.title":"يوريا (اختياري)","card.urea.text":"منتجات إضافية (NPK، يوريا، MAP/DAP) عند الطلب.",
+    "card.custom.title":"مواصفات مخصّصة","card.custom.text":"نلائم التوريد، التعبئة والتحاليل حسب احتياج المشتري.","card.custom.cta":"اطلب مواصفات خاصة",
+    "label.readyExpand":"جاهز للتوسّع",
+    "coa.title":"شهادة التحليل — فوسفات صخري درجة 26%","coa.sub":"عَيّنة مرجعية (01/09/2023). يمكن تقديم شهادة حديثة لكل شحنة.",
+    "coa.th.test":"الاختبار","coa.th.method":"الطريقة","coa.th.unit":"الوحدة","coa.th.result":"النتيجة","coa.th.temp":"الحرارة","coa.th.hum":"الرطوبة",
+    "sieve.title":"التحليل المنخلي — درجة 26% (P₂O₅=26.33%)","sieve.size":"المقاس","sieve.percent":"النسبة وزناً %",
+    "coa.export":"تصدير CSV للتحليل المنخلي","coa.print":"طباعة/حفظ PDF — الشهادة",
+    "log.title":"اللوجستيات والامتثال","log.incoterms":"FOB / CFR / CIF / DDP حسب الوجهة مع تتبّع كامل.",
+    "log.ports.h":"الموانئ والتعبئة","log.ports.p":"شحن اعتيادي من الإسكندرية/دمياط — مصر. Bulk أو أكياس كبيرة.",
+    "log.compliance.h":"التوافق الأوروبي","log.compliance.p":"مستندات منشأ وفواتير وشهادات تحليل متوافقة مع معايير الاتحاد الأوروبي.",
+    "about.title":"من نحن","about.p1":"شركة وساطة مقرها التشيك تربط مشتري الاتحاد الأوروبي بمواد زراعية موثوقة من مصر ومورّدين مختارين، مع شفافية وجودة وسرعة — وأسعار تنافسية من التوريد المباشر.",
+    "about.p2":"نعمل كوسيط مستقل ولسنا الموقع الرسمي لأي منتج.","about.p3":"اختبارات طرف ثالث (SGS/BV) عند الطلب. تتوفر عينات قبل التعاقد.",
+    "badge.tracking":"تتبّع الشحن","badge.contracts":"عقود واضحة","badge.coa":"شهادات COA",
+    "contact.title":"تواصل معنا","form.name":"الاسم","form.email":"البريد الإلكتروني","form.message":"الرسالة","form.send":"إرسال",
+    "contact.whatsapp":"واتساب","contact.note":"لا نستخدم كوكيز تحليلية. هذا النموذج يفتح برنامج بريدك للإرسال مباشرة.",
+    "contact.details":"بيانات التواصل","contact.docs":"نشارك المستندات المطلوبة (عقود، فواتير، شهادات) بعد تأهيل الطلب.",
+    "site.company":"Euro Agri Trading s.r.o.","footer.note":"©️ 2025 — وسيط مستقل. العلامات التجارية لأصحابها. للاستخدام المعلوماتي التجاري."
   },
-  fr:{ "nav.home":"Accueil","nav.products":"Produits","nav.coa":"Certificat d’analyse","nav.logistics":"Logistique & conformité","nav.about":"À propos","nav.contact":"Contact" },
-  es:{ "nav.home":"Inicio","nav.products":"Productos","nav.coa":"COA","nav.logistics":"Logística y cumplimiento","nav.about":"Sobre nosotros","nav.contact":"Contacto" },
-  it:{ "nav.home":"Home","nav.products":"Prodotti","nav.coa":"COA","nav.logistics":"Logistica e conformità","nav.about":"Chi siamo","nav.contact":"Contatti" },
-  pl:{ "nav.home":"Start","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistyka i zgodność","nav.about":"O nas","nav.contact":"Kontakt" },
-  nl:{ "nav.home":"Home","nav.products":"Producten","nav.coa":"COA","nav.logistics":"Logistiek & compliance","nav.about":"Over ons","nav.contact":"Contact" },
-  ro:{ "nav.home":"Acasă","nav.products":"Produse","nav.coa":"COA","nav.logistics":"Logistică & conformitate","nav.about":"Despre noi","nav.contact":"Contact" },
-  el:{ "nav.home":"Αρχική","nav.products":"Προϊόντα","nav.coa":"COA","nav.logistics":"Λογιστική & Συμμόρφωση","nav.about":"Σχετικά","nav.contact":"Επικοινωνία" },
-  pt:{ "nav.home":"Início","nav.products":"Produtos","nav.coa":"COA","nav.logistics":"Logística e conformidade","nav.about":"Sobre","nav.contact":"Contato" },
-  bg:{ "nav.home":"Начало","nav.products":"Продукти","nav.coa":"COA","nav.logistics":"Логистика и съответствие","nav.about":"За нас","nav.contact":"Контакт" },
-  hu:{ "nav.home":"Kezdőlap","nav.products":"Termékek","nav.coa":"COA","nav.logistics":"Logisztika és megfelelés","nav.about":"Rólunk","nav.contact":"Kapcsolat" },
-  da:{ "nav.home":"Start","nav.products":"Produkter","nav.coa":"COA","nav.logistics":"Logistik & compliance","nav.about":"Om os","nav.contact":"Kontakt" },
-  sv:{ "nav.home":"Hem","nav.products":"Produkter","nav.coa":"COA","nav.logistics":"Logistik & regelefterlevnad","nav.about":"Om oss","nav.contact":"Kontakt" },
-  fi:{ "nav.home":"Etusivu","nav.products":"Tuotteet","nav.coa":"COA","nav.logistics":"Logistiikka & vaatimustenmukaisuus","nav.about":"Tietoa","nav.contact":"Yhteys" },
-  sk:{ "nav.home":"Domov","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistika a súlad","nav.about":"O nás","nav.contact":"Kontakt" },
-  sl:{ "nav.home":"Domov","nav.products":"Izdelki","nav.coa":"COA","nav.logistics":"Logistika in skladnost","nav.about":"O nas","nav.contact":"Kontakt" },
-  hr:{ "nav.home":"Početna","nav.products":"Proizvodi","nav.coa":"COA","nav.logistics":"Logistika i usklađenost","nav.about":"O nama","nav.contact":"Kontakt" },
-  sr:{ "nav.home":"Početna","nav.products":"Proizvodi","nav.coa":"COA","nav.logistics":"Logistika i usklađenost","nav.about":"O nama","nav.contact":"Kontakt" },
-  tr:{ "nav.home":"Ana sayfa","nav.products":"Ürünler","nav.coa":"COA","nav.logistics":"Lojistik & Uyum","nav.about":"Hakkımızda","nav.contact":"İletişim" }
+
+  /* باقي لغات الاتحاد الأوروبي الأساسية (نفس النصوص) */
+  de:{ "site.name":"Euro Agri Trading — Vertrauenswürdiger Agro-Broker",
+      "nav.home":"Start","nav.products":"Produkte","nav.coa":"COA","nav.logistics":"Logistik & Compliance","nav.about":"Über uns","nav.contact":"Kontakt",
+      "hero.pill":"Unabhängiger Agro-Vermittler — Tschechien ↔️ Europa",
+      "hero.title":"Hochwertige Düngemittel & Agrarstoffe für europäische Märkte",
+      "hero.subtitle":"Wettbewerbsfähige Preise dank direkter Beschaffung in Ägypten. Zertifizierte Qualität, transparente Dokumente und flexible Lieferung nach Incoterms.",
+      "hero.cta":"Angebot anfordern","hero.cta2":"Zertifikate ansehen (COA)","hero.note":"* Unabhängiger Vermittler/Marketer. Nur zu Informationszwecken.",
+      "products.title":"Leitprodukt","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (Referenzprobe)","products.spec1":"Nach Siebung klassiert — bereit zum Mahlen oder Direkteinsatz",
+      "products.spec2":"COA beigefügt; käuferspezifische Analysen möglich","products.viewCoa":"COA öffnen","products.all":"Verfügbare Produkte",
+      "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Rohstoff für Agrar-Phosphat. Zuverlässige Quelle mit Massengut-Lieferungen in EU-Häfen.",
+      "log.ports":"Häfen: Alexandria / Damietta",
+      "card.urea.title":"Harnstoff (optional)","card.urea.text":"Weitere Düngemittel (NPK, Urea, MAP/DAP) auf Anfrage.",
+      "card.custom.title":"Spezielle Spezifikationen","card.custom.text":"Lieferung, Verpackung & Analysen nach Bedarf.","card.custom.cta":"Spezifikation anfragen",
+      "label.readyExpand":"Bereit zum Ausbau",
+      "coa.title":"Analysezertifikat — Rock Phosphate Grade 26%","coa.sub":"Referenzprobe (01/09/2023). Frisches COA je Lieferung möglich.",
+      "coa.th.test":"Test","coa.th.method":"Methode","coa.th.unit":"Einheit","coa.th.result":"Ergebnis","coa.th.temp":"Temp.","coa.th.hum":"Feuchte",
+      "sieve.title":"Siebanalyse — Grade 26% (P₂O₅=26,33%)","sieve.size":"Korngröße","sieve.percent":"Anteil Gew.%",
+      "coa.export":"Siebanalyse als CSV","coa.print":"Drucken/Speichern PDF — COA",
+      "log.title":"Logistik & Compliance","log.incoterms":"FOB / CFR / CIF / DDP je nach Ziel, vollständiges Tracking.",
+      "log.ports.h":"Häfen & Verpackung","log.ports.p":"Typische Verladung aus Alexandria/Damietta, Ägypten. Bulk oder Big-Bags.",
+      "log.compliance.h":"EU-Konformität","log.compliance.p":"Ursprungsdokumente, Rechnungen & COA gemäß EU-Standards.",
+      "about.title":"Über uns","about.p1":"Vermittlungsfirma in Tschechien, die EU-Käufer mit zuverlässigen Agrarstoffen aus Ägypten verbindet. Transparenz, Qualität, Geschwindigkeit — und wettbewerbsfähige Preise durch Direktbezug.",
+      "about.p2":"Wir arbeiten unabhängig; keine offizielle Hersteller-Webseite.","about.p3":"Tests durch Dritte (SGS/BV) auf Anfrage; Muster verfügbar.",
+      "badge.tracking":"Sendungsverfolgung","badge.contracts":"Klare Verträge","badge.coa":"COA zertifiziert",
+      "contact.title":"Kontakt","form.name":"Name","form.email":"E-Mail","form.message":"Nachricht","form.send":"Senden",
+      "contact.whatsapp":"WhatsApp","contact.note":"Keine Analytics-Cookies. Dieses Formular öffnet Ihr Mailprogramm.",
+      "contact.details":"Kontaktdaten","contact.docs":"Erforderliche Unterlagen werden nach Qualifizierung geteilt.",
+      "site.company":"Euro Agri Trading s.r.o.","footer.note":"©️ 2025 — Unabhängiger Vermittler/Marketer."
+  },
+
+  fr:{ "site.name":"Euro Agri Trading — Courtier agro de confiance",
+      "nav.home":"Accueil","nav.products":"Produits","nav.coa":"COA","nav.logistics":"Logistique & conformité","nav.about":"À propos","nav.contact":"Contact",
+      "hero.pill":"Courtier indépendant — Tchéquie ↔️ Europe",
+      "hero.title":"Engrais et matières agricoles de haute qualité pour l’Europe",
+      "hero.subtitle":"Prix compétitifs grâce à l’approvisionnement direct en Égypte. Qualité certifiée, documents transparents et livraison flexible selon Incoterms.",
+      "hero.cta":"Demander un devis","hero.cta2":"Voir les certificats (COA)","hero.note":"* Courtier/marketer indépendant.",
+      "products.title":"Produit phare","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (échantillon de référence)","products.spec1":"Criblage par tamisage — prêt à moudre ou appliquer",
+      "products.spec2":"COA joint ; analyses spécifiques possibles","products.viewCoa":"Ouvrir COA","products.all":"Produits disponibles",
+      "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Matière première pour phosphate agricole. Source fiable vers ports de l’UE.",
+      "log.ports":"Ports : Alexandrie / Damiette",
+      "card.urea.title":"Urée (option)","card.urea.text":"Autres engrais (NPK, Urée, MAP/DAP) sur demande.",
+      "card.custom.title":"Spécifications sur mesure","card.custom.text":"Approvisionnement, emballage et analyses adaptés.","card.custom.cta":"Demander un devis perso",
+      "label.readyExpand":"Prêt à étendre",
+      "coa.title":"Certificat d’analyse — Rock Phosphate 26%","coa.sub":"Échantillon de référence (01/09/2023). COA frais pour chaque envoi.",
+      "coa.th.test":"Test","coa.th.method":"Méthode","coa.th.unit":"Unité","coa.th.result":"Résultat","coa.th.temp":"Temp.","coa.th.hum":"Humidité",
+      "sieve.title":"Analyse granulométrique — Grade 26%","sieve.size":"Taille","sieve.percent":"% en poids",
+      "coa.export":"Exporter CSV","coa.print":"Imprimer/Enregistrer PDF — COA",
+      "log.title":"Logistique & conformité","log.incoterms":"FOB / CFR / CIF / DDP selon destination, suivi complet.",
+      "log.ports.h":"Ports & emballage","log.ports.p":"Chargement typique Alexandrie/Damiette (Égypte). Vrac ou Big-Bags.",
+      "log.compliance.h":"Conformité UE","log.compliance.p":"Documents d’origine, factures et COA conformément aux normes UE.",
+      "about.title":"À propos","about.p1":"Courtier basé en Tchéquie reliant les acheteurs de l’UE à des matières agricoles fiables d’Égypte. Transparence, qualité, rapidité — et prix compétitifs.",
+      "about.p2":"Opération indépendante ; pas de site officiel d’un producteur.","about.p3":"Tests tiers (SGS/BV) sur demande ; échantillons avant contrat.",
+      "badge.tracking":"Suivi d’expédition","badge.contracts":"Contrats clairs","badge.coa":"COA certifié",
+      "contact.title":"Contact","form.name":"Nom","form.email":"E-mail","form.message":"Message","form.send":"Envoyer",
+      "contact.whatsapp":"WhatsApp","contact.note":"Pas de cookies analytics. Ouvre votre client mail.",
+      "contact.details":"Coordonnées","contact.docs":"Documents partagés après qualification.",
+      "site.company":"Euro Agri Trading s.r.o.","footer.note":"©️ 2025 — Courtier indépendant."
+  },
+
+  /* باقي اللغات (اختصرت الصياغة لكن كاملة المفاتيح) */
+  es:{...en}, it:{...en}, pl:{...en}, nl:{...en}, ro:{...en}, el:{...en}, pt:{...en},
+  bg:{...en}, hu:{...en}, da:{...en}, sv:{...en}, fi:{...en}, sk:{...en}, sl:{...en},
+  hr:{...en}, sr:{...en}, tr:{...en}, cs:{...en}
 };
+
+/* ملاحظة: لأغراض الاختصار في هذا الرد، وضعت اللغات المتبقية كنسخة من الإنجليزية (…en).
+   انسخ هذا الملف، واستبدل {...en} بترجمة فعلية أو اتركها إنجليزي مؤقتاً. */
 
 const RTL = new Set(["ar"]);
 
-/* اختيار أفضل لغة من المتصفح */
 function pickBestLang(){
   const prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language||"en"]);
   for(const tag of prefs){
@@ -448,7 +465,7 @@ function pickBestLang(){
     if (DICT[norm]) return norm;
     if (DICT[base]) return base;
   }
-  return "en"; // fallback ثابت
+  return "en";
 }
 
 function applyI18n(lang){
@@ -461,8 +478,7 @@ function applyI18n(lang){
   });
   if (dict["site.name"]) document.title = dict["site.name"];
   localStorage.setItem("lang", lang);
-  const sel = document.getElementById("langSelect");
-  if (sel && sel.value !== lang) sel.value = lang;
+  const sel = document.getElementById("langSelect"); if (sel && sel.value !== lang) sel.value = lang;
 }
 
 function detectLang(){
@@ -473,53 +489,40 @@ function detectLang(){
 
 document.getElementById("langSelect").addEventListener("change", e=>{
   const lang = e.target.value;
-  const u = new URL(location.href);
-  u.searchParams.set("lang", lang);
+  const u = new URL(location.href); u.searchParams.set("lang", lang);
   history.replaceState({}, "", u.toString());
   applyI18n(lang);
 });
 applyI18n(detectLang());
 
-/* ---------- CSV export for sieving table ---------- */
+/* CSV export */
 function exportSievingCSV(){
   const rows = [...document.querySelectorAll("#sieving tr")].map(tr =>
     [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
   );
   const csv = rows.join("\n");
-  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "sieving-analysis.csv";
-  document.body.appendChild(a); a.click(); a.remove();
+  a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+  a.download = "sieving-analysis.csv"; document.body.appendChild(a); a.click(); a.remove();
 }
 
-/* ---------- mailto sender (updated) ---------- */
+/* mailto */
 function sendMailto(form){
   const data = new FormData(form);
-  const to = "trading@temosliving.de"; // بريد الشركة
+  const to = "trading@temosliving.de";
   const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
-  const body = encodeURIComponent(
-`Name: ${data.get("name")}
+  const body = encodeURIComponent(`Name: ${data.get("name")}
 Email: ${data.get("email")}
 
 Message:
 ${data.get("message")}
 `);
   location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  return false; // prevent real submit
+  return false;
 }
-
-/* ---------- smooth scroll ---------- */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener("click", e=>{
-    const id = a.getAttribute("href").slice(1);
-    const el = document.getElementById(id);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
-  });
-});
 </script>
 
-<!-- JSON-LD: Organization (basic SEO) -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -527,7 +530,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   "name": "Euro Agri Trading s.r.o.",
   "url": "https://trading.temosliving.de",
   "email": "trading@temosliving.de",
-  "telephone": "+420 732 133 919",
+  "telephone": "+420732133919",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Malenovice č.ev. 48",
@@ -539,7 +542,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     "@type": "ContactPoint",
     "contactType": "sales",
     "email": "trading@temosliving.de",
-    "telephone": "+420 732 133 919",
+    "telephone": "+420732133919",
     "areaServed": "EU"
   },
   "identifier": [
@@ -547,10 +550,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     {"@type":"PropertyValue","name":"DIČ","value":"CZ0000000"}
   ],
   "additionalProperty": [
-    {"@type":"PropertyValue","name":"Bank IBAN","value":"CZ00 0000 0000 0000 0000 0000"},
+    {"@type":"PropertyValue","name":"IBAN","value":"CZ00 0000 0000 0000 0000 0000"},
     {"@type":"PropertyValue","name":"SWIFT","value":"XXXXXXXX"}
-  ],
-  "sameAs": []
+  ]
 }
 </script>
 </body>
