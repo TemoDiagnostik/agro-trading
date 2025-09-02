@@ -1,4 +1,3 @@
-<style>
     :root{
       --bg:#0b132b;
       --ink:#0f172a;
@@ -166,5 +165,5 @@
       header,.hero,.hide-print,.foot{display:none !important}
       #coa{margin-top:0}
     }
-  </style>
+ 
 </head>
