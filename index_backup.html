@@ -492,123 +492,276 @@
 </footer>
 
 <script>
-/* ---------- i18n dictionaries (fallback to EN) ---------- */
+/* ===== i18n DICTIONARIES =====
+   ملاحظات:
+   - جميع اللغات تحوي نفس المفاتيح الأساسية عشان النص يتغير فعليًا.
+   - لو ناقص مفتاح في لغة معينة، بنسقط تلقائيًا للإنجليزي.
+*/
 const DICT = {
   en:{
-    "site.name":"Euro Agri Trading — Broker for Abu Qir Fertilizers",
+    "site.name":"Euro Agri Trading — Trusted Agro Broker",
     "nav.home":"Home","nav.products":"Products","nav.coa":"COA","nav.logistics":"Logistics & Compliance","nav.about":"About","nav.contact":"Contact",
-    "hero.pill":"Czech-based brokerage ↔️ Europe",
-    "hero.title":"Supplying high-quality fertilizers & agri materials from Abu Qir to Europe",
-    "hero.subtitle":"We broker shipments from Abu Qir Fertilizers (Alexandria, Egypt) to EU buyers — certified products, clear specs, and flexible delivery under Incoterms.",
-    "hero.cta":"Request a quote","hero.cta2":"View COA","hero.note":"* We are not the official Abu Qir website; we operate independently as a broker/marketer.",
-    "products.title":"Flagship Product","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (reference sample)","products.spec1":"Graded by sieving — ready for grinding or direct application",
-    "products.spec2":"COA attached; buyer-specific analyses available","products.viewCoa":"Open COA",
-    "products.all":"Available Products",
-    "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Raw material for agricultural phosphate. Reliable source with bulk shipments to EU ports.",
-    "log.ports":"Ports: Alexandria/Damietta",
-    "card.urea.title":"Urea (optional)","card.urea.text":"Add more items (NPK, Urea, MAP/DAP) upon buyer request.",
-    "card.custom.title":"Custom specs","card.custom.text":"Need particular specs? We tailor supply, packing and analyses.","card.custom.cta":"Ask for custom spec",
+    "hero.pill":"Czech-based brokerage ↔️ EU buyers",
+    "hero.title":"High-quality fertilizers & agri materials for Europe",
+    "hero.subtitle":"Independent sourcing with certificates, clear specs, and flexible Incoterms delivery —",
+    "hero.pricing":"with competitive prices through direct procurement",
+    "hero.cta":"Request a quote","hero.cta2":"View COA","hero.note":"* We operate independently as a broker/marketer. Not affiliated with any specific producer brand.",
+    "products.title":"Flagship Product","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (reference sample)",
+    "products.spec1":"Graded by sieving — ready for grinding or direct application",
+    "products.spec2":"COA attached; buyer-specific analyses available","products.viewCoa":"Open COA","products.all":"Available Products",
+    "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Reliable source with consolidated bulk shipments to EU ports.",
+    "log.ports":"Ports: main Mediterranean gateways",
+    "card.urea.title":"Urea / NPK (on request)","card.urea.text":"Additional lines (Urea, MAP/DAP, NPK) can be added per demand.",
+    "generic.expand":"Ready to expand",
+    "card.custom.title":"Custom specs","card.custom.text":"Tailored supply, packing, and analyses per buyer requirements.","card.custom.cta":"Ask for custom spec",
     "coa.title":"Certificate of Analysis — Rock Phosphate Grade 26%","coa.sub":"Reference sample (date: 01/09/2023). Fresh COA per shipment can be provided.",
     "coa.th.test":"Test","coa.th.method":"Method","coa.th.unit":"Unit","coa.th.result":"Result","coa.th.temp":"Temp.","coa.th.hum":"Humidity",
     "sieve.title":"Sieving Analysis — Grade 26% (P₂O₅=26.33%)","sieve.size":"Size","sieve.percent":"Percent wt%",
-    "coa.export":"Export Sieving CSV","coa.print":"Print/Save PDF — COA",
-    "log.title":"Logistics & Compliance","log.incoterms":"FOB / CFR / CIF / DDP depending on destination, full tracking.",
-    "log.ports.h":"Ports & Packing","log.ports.p":"Typical loading from Alexandria/Damietta, Egypt. Bulk or Big-Bags.",
-    "log.compliance.h":"EU Compliance","log.compliance.p":"Origin docs, invoices and COA supplied. Compliant with EU goods & safety standards.",
-    "about.title":"About us","about.p1":"Czech-based brokerage connecting EU buyers with Abu Qir Fertilizers in Alexandria, Egypt, and selected agri products. Headquarters in Czechia; operations focused on Europe.",
-    "about.p2":"We act independently as a broker/marketer for Abu Qir products and other selected items. Not the official website.",
+    "coa.export":"Export sieving CSV","coa.print":"Print/Save PDF — COA",
+    "log.title":"Logistics & Compliance","log.incoterms":"FOB / CFR / CIF / DDP depending on destination — full shipment tracking and clear contracts.",
+    "log.ports.h":"Ports & Packing","log.ports.p":"Typical loading via main Mediterranean ports. Packing: Bulk or Big-Bags.",
+    "log.compliance.h":"EU Compliance","log.compliance.p":"Origin docs, invoices and COA. Conforms to EU goods & safety standards.",
+    "about.title":"About us","about.p1":"Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources. We focus on transparency, quality, speed — and",
+    "about.pricing":"competitive pricing via direct procurement",
+    "about.p2":"We act independently as a broker/marketer. We do not display producer brand names publicly to protect buyer–supplier confidentiality.",
     "about.p3":"3rd-party tests (SGS/BV) on request. Samples available prior to contracting.",
     "contact.title":"Get in touch","form.name":"Name","form.email":"Email","form.message":"Message","form.send":"Send",
-    "contact.whatsapp":"WhatsApp","contact.note":"We do not use analytics cookies. This form opens your mail client to send directly.",
-    "contact.details":"Contact details","contact.docs":"We share required documents (contracts, invoices, COA) after qualifying the request.",
+    "contact.whatsapp":"WhatsApp","contact.note":"We do not use analytics cookies. This form opens your mail app to send directly.",
+    "contact.details":"Contact details","contact.docs":"Required documents (contracts, invoices, COA) are shared after qualifying the request.",
     "site.company":"Euro Agri Trading s.r.o.",
-    "footer.note":"©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. This page is for commercial information only."
-  },
-  ar:{
-    "site.name":"Euro Agri Trading — وسيط منتجات أبو قير للأسمدة",
-    "nav.home":"الرئيسية","nav.products":"المنتجات","nav.coa":"شهادة التحليل","nav.logistics":"اللوجستيات والامتثال","nav.about":"من نحن","nav.contact":"تواصل",
-    "hero.pill":"شركة وساطة مقرها التشيك ↔️ أوروبا",
-    "hero.title":"توريد أسمدة ومواد زراعية عالية الجودة من أبو قير إلى أوروبا",
-    "hero.subtitle":"نقوم بالوساطة بين شركة أبو قير للأسمدة (الإسكندرية – مصر) ومشتري الاتحاد الأوروبي — منتجات معتمدة، مواصفات واضحة، وشحن مرن وفق شروط إنكوترمز.",
-    "hero.cta":"اطلب عرض سعر الآن","hero.cta2":"شاهد شهادة التحليل","hero.note":"* لسنا الموقع الرسمي لشركة أبو قير؛ نحن وسيط وتسويق مستقل.",
-    "products.title":"منتج رئيسي","products.lead":"فوسفات صخري — درجة 26% P₂O₅ (عَيّنة مطابقة للمواصفات)","products.spec1":"حجم حسب التحليل المنخلي — جاهز للطحن أو التسميد المباشر",
-    "products.spec2":"شهادة تحليل مرفقة + إمكانية التحليل المطلوب للمشتري","products.viewCoa":"عرض شهادة التحليل",
-    "products.all":"المنتجات المتاحة",
-    "card.rock.title":"فوسفات صخري — درجة 26%","card.rock.text":"مادة خام للفوسفات الزراعي. مصدر موثوق وشحن مجمّع إلى موانئ أوروبا.",
-    "log.ports":"موانئ: الإسكندرية/دمياط",
-    "card.urea.title":"يوريا (اختياري)","card.urea.text":"يمكن إضافة منتجات (NPK، يوريا، MAP/DAP) حسب الطلب.",
-    "card.custom.title":"منتجات مخصّصة","card.custom.text":"نطوّع المواصفات والتعبئة والتحاليل حسب احتياجاتك.","card.custom.cta":"اطلب مواصفات خاصة",
-    "coa.title":"شهادة التحليل — فوسفات صخري درجة 26%","coa.sub":"عَيّنة للاسترشاد (تاريخ: 01/09/2023). يمكن تقديم تحليل حديث لكل شحنة.",
-    "coa.th.test":"الاختبار","coa.th.method":"الطريقة","coa.th.unit":"الوحدة","coa.th.result":"النتيجة","coa.th.temp":"الحرارة","coa.th.hum":"الرطوبة",
-    "sieve.title":"التحليل المنخلي — درجة 26% (P₂O₅=26.33%)","sieve.size":"المقاس","sieve.percent":"النسبة وزناً %",
-    "coa.export":"تصدير التحليل المنخلي CSV","coa.print":"طباعة/حفظ PDF — شهادة التحليل",
-    "log.title":"اللوجستيات والامتثال","log.incoterms":"FOB / CFR / CIF / DDP حسب بلد العميل، مع تتبع كامل للشحنة.",
-    "log.ports.h":"الموانئ والتعبئة","log.ports.p":"الشحن عادة من الإسكندرية/دمياط — مصر. تعبئة Bulk أو أكياس كبيرة (Big-Bag).",
-    "log.compliance.h":"التوافق الأوروبي","log.compliance.p":"نوفر مستندات المنشأ والفواتير والـ COA. الالتزام بمعايير الاتحاد الأوروبي.",
-    "about.title":"من نحن","about.p1":"شركة وساطة مقرها التشيك تربط مشتري أوروبا بمنتجات شركة أبو قير للأسمدة في الإسكندرية – مصر، وبمنتجات زراعية مختارة. نركز على الشفافية والجودة وسرعة التنفيذ.",
-    "about.p2":"نعمل كوسيط وتسويق مستقل لمنتجات أبو قير وغيرها. لسنا الموقع الرسمي.",
-    "about.p3":"اختبارات طرف ثالث (SGS/BV) عند الطلب. تتوفر عينات قبل التعاقد.",
-    "contact.title":"تواصل معنا","form.name":"الاسم","form.email":"البريد الإلكتروني","form.message":"رسالتك","form.send":"إرسال",
-    "contact.whatsapp":"WhatsApp","contact.note":"لا نستخدم كوكيز تحليلية. هذا النموذج يفتح بريدك لإرسال الرسالة مباشرةً.",
-    "contact.details":"بيانات التواصل","contact.docs":"نشارك المستندات المطلوبة بعد تحديد الطلب.",
-    "site.company":"Euro Agri Trading s.r.o.",
-    "footer.note":"©️ 2025 — وسيط وتسويق مستقل. جميع العلامات التجارية مملوكة لأصحابها. هذه الصفحة لأغراض معلوماتية تجارية."
+    "footer.note":"© 2025 — Independent broker/marketer. Trademarks belong to their owners. Page for commercial information only."
   },
 
-  /* باقي اللغات: ترجمات أساسية للواجهة (الناقص يسقط إلى EN) */
-  cs:{ "nav.home":"Domů","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistika","nav.about":"O nás","nav.contact":"Kontakt",
-       "hero.pill":"Zprostředkovatel v Česku ↔️ Evropa","hero.title":"Dodávky hnojiv a agro materiálů do EU",
-       "hero.cta":"Nezávazná poptávka","products.all":"Dostupné produkty","log.title":"Logistika a shoda","contact.title":"Kontaktujte nás" },
-  de:{ "site.name":"Euro Agri Trading — Broker für Abu Qir Düngemittel",
-       "nav.home":"Start","nav.products":"Produkte","nav.coa":"Analysezertifikat","nav.logistics":"Logistik & Compliance","nav.about":"Über uns","nav.contact":"Kontakt",
-       "hero.pill":"Vermittler mit Sitz in Tschechien ↔️ Europa",
-       "hero.title":"Lieferung hochwertiger Düngemittel & Agrarstoffe nach Europa",
-       "hero.subtitle":"Wir vermitteln Lieferungen von Abu Qir Fertilizers (Alexandria, Ägypten) an EU-Käufer — zertifizierte Produkte, klare Spezifikationen und flexible Incoterms-Lieferung.",
-       "hero.cta":"Angebot anfordern","hero.cta2":"COA ansehen","hero.note":"* Wir sind nicht die offizielle Abu-Qir-Webseite; wir agieren unabhängig als Vermittler/Marketer.",
-       "products.title":"Leitprodukt","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (Referenzprobe)","products.spec1":"Nach Siebanalyse klassiert — bereit zum Mahlen oder Direkteinsatz",
-       "products.spec2":"COA beigefügt; käuferspezifische Analysen möglich","products.viewCoa":"COA anzeigen",
-       "products.all":"Verfügbare Produkte","card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Rohstoff für Agrar-Phosphat. Zuverlässige Quelle mit Massengut-Lieferungen an EU-Häfen.",
-       "log.ports":"Häfen: Alexandria/Damietta","card.urea.title":"Harnstoff (optional)","card.urea.text":"Weitere Produkte (NPK, Urea, MAP/DAP) auf Anfrage.",
-       "card.custom.title":"Spezielle Spezifikationen","card.custom.text":"Wir passen Lieferung, Verpackung und Analysen an.","card.custom.cta":"Spezifikation anfragen",
-       "coa.title":"Analysezertifikat — Rock Phosphate Grade 26%","coa.sub":"Referenzprobe (01/09/2023). Frisches COA pro Lieferung möglich.",
-       "coa.th.test":"Test","coa.th.method":"Methode","coa.th.unit":"Einheit","coa.th.result":"Ergebnis","coa.th.temp":"Temp.","coa.th.hum":"Feuchte",
-       "sieve.title":"Siebanalyse — Grade 26% (P₂O₅=26,33%)","sieve.size":"Korngröße","sieve.percent":"Anteil Gew.%",
-       "log.title":"Logistik & Compliance","log.incoterms":"FOB / CFR / CIF / DDP je nach Ziel, vollständiges Tracking.",
-       "log.ports.h":"Häfen & Verpackung","log.ports.p":"Typische Verladung aus Alexandria/Damietta, Ägypten. Bulk oder Big-Bags.",
-       "log.compliance.h":"EU-Konformität","log.compliance.p":"Ursprungsdokumente, Rechnungen und COA. Entspricht EU-Standards.",
-       "about.title":"Über uns","about.p1":"Vermittlungsunternehmen mit Sitz in Tschechien, das EU-Käufer mit Abu Qir Fertilizers in Alexandria, Ägypten, sowie ausgewählten Agrarprodukten verbindet.",
-       "about.p2":"Wir handeln unabhängig als Vermittler/Marketer für Abu-Qir-Produkte und ausgewählte Artikel. Nicht die offizielle Webseite.",
-       "about.p3":"Tests durch Dritte (SGS/BV) auf Anfrage. Muster vor Vertragsabschluss möglich.",
-       "contact.title":"Kontakt","form.name":"Name","form.email":"E-Mail","form.message":"Nachricht","form.send":"Senden",
-       "contact.whatsapp":"WhatsApp","contact.note":"Keine Analytics-Cookies. Dieses Formular öffnet Ihr Mailprogramm für den Direktversand.",
-       "contact.details":"Kontaktdaten","contact.docs":"Erforderliche Dokumente (Verträge, Rechnungen, COA) nach Qualifizierung.",
-       "site.company":"Euro Agri Trading s.r.o.",
-       "footer.note":"©️ 2025 — Unabhängiger Vermittler/Marketer. Marken gehören ihren Inhabern. Nur zu Informationszwecken."
+  ar:{
+    "site.name":"Euro Agri Trading — وسيط زراعي موثوق",
+    "nav.home":"الرئيسية","nav.products":"المنتجات","nav.coa":"شهادة التحليل","nav.logistics":"اللوجستيات والامتثال","nav.about":"من نحن","nav.contact":"تواصل",
+    "hero.pill":"شركة وساطة مقرها التشيك ↔️ مشترون في أوروبا",
+    "hero.title":"مواد وأسمدة زراعية عالية الجودة لأوروبا",
+    "hero.subtitle":"توريد مستقل بشهادات تحليل ومواصفات واضحة وشحن مرن وفق إنكوترمز —",
+    "hero.pricing":"مع أسعار تنافسية عبر التوريد المباشر",
+    "hero.cta":"اطلب عرض سعر","hero.cta2":"عرض شهادة التحليل","hero.note":"* نعمل كوسيط وتسويق مستقلين—لا نعرض أسماء المورّدين لحماية السرية.",
+    "products.title":"المنتج الرئيسي","products.lead":"فوسفات صخري — درجة 26% P₂O₅ (عَيّنة مرجعية)",
+    "products.spec1":"حجم حسب التحليل المنخلي — جاهز للطحن أو التسميد المباشر",
+    "products.spec2":"شهادة تحليل مرفقة + إمكانيات تحليل حسب الطلب","products.viewCoa":"فتح الشهادة","products.all":"المنتجات المتاحة",
+    "card.rock.title":"فوسفات صخري — درجة 26%","card.rock.text":"توريد موثوق بشحنات Bulk مجمّعة إلى موانئ أوروبا.",
+    "log.ports":"موانئ: بوابات المتوسط الرئيسية",
+    "card.urea.title":"يوريا / NPK (عند الطلب)","card.urea.text":"إضافة أصناف (يوريا، MAP/DAP، NPK) حسب الطلب.",
+    "generic.expand":"جاهز للتوسع",
+    "card.custom.title":"مواصفات مخصّصة","card.custom.text":"نطوّع التوريد والتعبئة والتحاليل حسب متطلبات المشتري.","card.custom.cta":"اطلب مواصفات خاصة",
+    "coa.title":"شهادة التحليل — فوسفات صخري درجة 26%","coa.sub":"عَيّنة مرجعية (01/09/2023). يمكن تقديم شهادة حديثة لكل شحنة.",
+    "coa.th.test":"الاختبار","coa.th.method":"الطريقة","coa.th.unit":"الوحدة","coa.th.result":"النتيجة","coa.th.temp":"الحرارة","coa.th.hum":"الرطوبة",
+    "sieve.title":"التحليل المنخلي — درجة 26% (P₂O₅=26.33%)","sieve.size":"المقاس","sieve.percent":"النسبة وزناً %",
+    "coa.export":"تصدير CSV للتحليل المنخلي","coa.print":"طباعة/حفظ PDF — الشهادة",
+    "log.title":"اللوجستيات والامتثال","log.incoterms":"FOB / CFR / CIF / DDP وفق الوجهة — تتبّع كامل للشحنة وعقود واضحة.",
+    "log.ports.h":"الموانئ والتعبئة","log.ports.p":"شحن عبر موانئ المتوسط الرئيسية. التعبئة: Bulk أو Big-Bags.",
+    "log.compliance.h":"التوافق الأوروبي","log.compliance.p":"مستندات منشأ وفواتير و COA. التزام بمعايير الاتحاد الأوروبي.",
+    "about.title":"من نحن","about.p1":"وساطة مقرها التشيك تربط مشتري أوروبا بمدخلات زراعية موثوقة. نركز على الشفافية والجودة والسرعة — و",
+    "about.pricing":"أسعار تنافسية عبر التوريد المباشر",
+    "about.p2":"نحن وسيط مستقل ولا نعرض أسماء المورّدين علنًا لحماية سرية الطرفين.",
+    "about.p3":"اختبارات طرف ثالث (SGS/BV) عند الطلب. عينات متاحة قبل التعاقد.",
+    "contact.title":"تواصل معنا","form.name":"الاسم","form.email":"البريد الإلكتروني","form.message":"الرسالة","form.send":"إرسال",
+    "contact.whatsapp":"واتساب","contact.note":"لا نستخدم كوكيز تحليلية. هذا النموذج يفتح بريدك للإرسال مباشرة.",
+    "contact.details":"بيانات التواصل","contact.docs":"نشارك المستندات المطلوبة بعد تأهيل الطلب.",
+    "site.company":"Euro Agri Trading s.r.o.",
+    "footer.note":"© 2025 — وسيط مستقل. العلامات التجارية مملوكة لأصحابها."
   },
-  fr:{ "nav.home":"Accueil","nav.products":"Produits","nav.coa":"Certificat d’analyse","nav.logistics":"Logistique & conformité","nav.about":"À propos","nav.contact":"Contact" },
-  es:{ "nav.home":"Inicio","nav.products":"Productos","nav.coa":"COA","nav.logistics":"Logística y cumplimiento","nav.about":"Sobre nosotros","nav.contact":"Contacto" },
-  it:{ "nav.home":"Home","nav.products":"Prodotti","nav.coa":"COA","nav.logistics":"Logistica e conformità","nav.about":"Chi siamo","nav.contact":"Contatti" },
-  pl:{ "nav.home":"Start","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistyka i zgodność","nav.about":"O nas","nav.contact":"Kontakt" },
-  nl:{ "nav.home":"Home","nav.products":"Producten","nav.coa":"COA","nav.logistics":"Logistiek & compliance","nav.about":"Over ons","nav.contact":"Contact" },
-  ro:{ "nav.home":"Acasă","nav.products":"Produse","nav.coa":"COA","nav.logistics":"Logistică & conformitate","nav.about":"Despre noi","nav.contact":"Contact" },
-  el:{ "nav.home":"Αρχική","nav.products":"Προϊόντα","nav.coa":"COA","nav.logistics":"Λογιστική & Συμμόρφωση","nav.about":"Σχετικά","nav.contact":"Επικοινωνία" },
-  pt:{ "nav.home":"Início","nav.products":"Produtos","nav.coa":"COA","nav.logistics":"Logística e conformidade","nav.about":"Sobre","nav.contact":"Contato" },
-  bg:{ "nav.home":"Начало","nav.products":"Продукти","nav.coa":"COA","nav.logistics":"Логистика и съответствие","nav.about":"За нас","nav.contact":"Контакт" },
-  hu:{ "nav.home":"Kezdőlap","nav.products":"Termékek","nav.coa":"COA","nav.logistics":"Logisztika és megfelelés","nav.about":"Rólunk","nav.contact":"Kapcsolat" },
-  da:{ "nav.home":"Start","nav.products":"Produkter","nav.coa":"COA","nav.logistics":"Logistik & compliance","nav.about":"Om os","nav.contact":"Kontakt" },
-  sv:{ "nav.home":"Hem","nav.products":"Produkter","nav.coa":"COA","nav.logistics":"Logistik & regelefterlevnad","nav.about":"Om oss","nav.contact":"Kontakt" },
-  fi:{ "nav.home":"Etusivu","nav.products":"Tuotteet","nav.coa":"COA","nav.logistics":"Logistiikka & vaatimustenmukaisuus","nav.about":"Tietoa","nav.contact":"Yhteys" },
-  sk:{ "nav.home":"Domov","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistika a súlad","nav.about":"O nás","nav.contact":"Kontakt" },
-  sl:{ "nav.home":"Domov","nav.products":"Izdelki","nav.coa":"COA","nav.logistics":"Logistika in skladnost","nav.about":"O nas","nav.contact":"Kontakt" },
-  hr:{ "nav.home":"Početna","nav.products":"Proizvodi","nav.coa":"COA","nav.logistics":"Logistika i usklađenost","nav.about":"O nama","nav.contact":"Kontakt" },
-  sr:{ "nav.home":"Početna","nav.products":"Proizvodi","nav.coa":"COA","nav.logistics":"Logistika i usklađenost","nav.about":"O nama","nav.contact":"Kontakt" },
-  tr:{ "nav.home":"Ana sayfa","nav.products":"Ürünler","nav.coa":"COA","nav.logistics":"Lojistik & Uyum","nav.about":"Hakkımızda","nav.contact":"İletişim" }
+
+  /* لغات الاتحاد الأوروبي الأساسية (نسخ موجزة وتفي بالغرض) */
+  de:{ "site.name":"Euro Agri Trading — Zuverlässiger Agrar-Broker",
+      "nav.home":"Start","nav.products":"Produkte","nav.coa":"COA","nav.logistics":"Logistik & Compliance","nav.about":"Über uns","nav.contact":"Kontakt",
+      "hero.pill":"Vermittler mit Sitz in Tschechien ↔️ EU",
+      "hero.title":"Hochwertige Agrarstoffe für Europa",
+      "hero.subtitle":"Unabhängige Beschaffung mit Zertifikaten, klaren Spezifikationen und flexiblen Incoterms —",
+      "hero.pricing":"mit wettbewerbsfähigen Preisen durch Direktbeschaffung",
+      "hero.cta":"Angebot anfordern","hero.cta2":"COA ansehen","hero.note":"* Unabhängiger Vermittler; Hersteller-Marken zeigen wir aus Vertraulichkeit nicht.",
+      "products.title":"Leitprodukt","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (Referenzprobe)",
+      "products.spec1":"Nach Siebanalyse klassiert — Mahlung oder Direkteinsatz",
+      "products.spec2":"COA beigefügt; käuferspezifische Analysen möglich","products.viewCoa":"COA öffnen","products.all":"Verfügbare Produkte",
+      "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Zuverlässige Quelle mit Sammel-Massengut in EU-Häfen.",
+      "log.ports":"Häfen: zentrale Mittelmeer-Gateways",
+      "card.urea.title":"Harnstoff / NPK (auf Anfrage)","card.urea.text":"Weitere Linien (Urea, MAP/DAP, NPK) je nach Nachfrage.",
+      "generic.expand":"Erweiterungsbereit",
+      "card.custom.title":"Spezielle Spezifikationen","card.custom.text":"Lieferung, Verpackung und Analysen maßgeschneidert.","card.custom.cta":"Spezifikation anfragen",
+      "coa.title":"Analysezertifikat — Rock Phosphate Grade 26%","coa.sub":"Referenz (01/09/2023). Frisches COA pro Sendung möglich.",
+      "coa.th.test":"Test","coa.th.method":"Methode","coa.th.unit":"Einheit","coa.th.result":"Ergebnis","coa.th.temp":"Temp.","coa.th.hum":"Feuchte",
+      "sieve.title":"Siebanalyse — Grade 26% (P₂O₅=26,33%)","sieve.size":"Korngröße","sieve.percent":"Anteil Gew.%",
+      "coa.export":"Siebanalyse als CSV","coa.print":"Drucken/Speichern PDF — COA",
+      "log.title":"Logistik & Compliance","log.incoterms":"FOB / CFR / CIF / DDP je nach Ziel — Tracking & klare Verträge.",
+      "log.ports.h":"Häfen & Verpackung","log.ports.p":"Verladung über wichtige Mittelmeerhäfen. Bulk oder Big-Bags.",
+      "log.compliance.h":"EU-Konformität","log.compliance.p":"Ursprungsdokumente, Rechnungen, COA — EU-Standards.",
+      "about.title":"Über uns","about.p1":"Broker mit Sitz in Tschechien; Fokus auf Transparenz, Qualität, Geschwindigkeit — und",
+      "about.pricing":"wettbewerbsfähige Preise durch Direktbeschaffung",
+      "about.p2":"Unabhängig; Hersteller-Namen werden aus Vertraulichkeit nicht öffentlich gezeigt.",
+      "about.p3":"Drittanbieter-Tests (SGS/BV) auf Anfrage. Muster möglich.",
+      "contact.title":"Kontakt","form.name":"Name","form.email":"E-Mail","form.message":"Nachricht","form.send":"Senden",
+      "contact.whatsapp":"WhatsApp","contact.note":"Keine Analytics-Cookies. Das Formular öffnet Ihr Mailprogramm.",
+      "contact.details":"Kontaktdaten","contact.docs":"Erforderliche Dokumente nach Qualifizierung.",
+      "site.company":"Euro Agri Trading s.r.o.","footer.note":"© 2025 — Unabhängiger Broker." },
+
+  cs:{ "nav.home":"Domů","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistika & shoda","nav.about":"O nás","nav.contact":"Kontakt",
+      "hero.pill":"Zprostředkovatel v Česku ↔️ EU","hero.title":"Kvalitní agro materiály pro Evropu",
+      "hero.subtitle":"Nezávislý sourcing se certifikáty a flexibilní Incoterms —","hero.pricing":"s konkurenční cenou díky přímému nákupu",
+      "hero.cta":"Nezávazná poptávka","hero.cta2":"Zobrazit COA","hero.note":"* Nezávislý broker; výrobce nezveřejňujeme.","products.title":"Vlajkový produkt",
+      "products.lead":"Rock Phosphate — Grade 26% P₂O₅ (referenční vzorek)","products.spec1":"Tříděno sítem — připraveno pro mletí či aplikaci",
+      "products.spec2":"COA k dispozici; analýzy dle požadavků","products.viewCoa":"Otevřít COA","products.all":"Dostupné produkty",
+      "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Spolehlivý zdroj s konsolidovanými zásilkami do EU přístavů.",
+      "log.ports":"Přístavy: hlavní středomořské uzly",
+      "card.urea.title":"Urea / NPK (na vyžádání)","card.urea.text":"Další řady dle poptávky.","generic.expand":"Připraveno rozšířit",
+      "card.custom.title":"Vlastní specifikace","card.custom.text":"Dodávka, balení a analýzy na míru.","card.custom.cta":"Zaslat specifikaci",
+      "coa.title":"COA — Rock Phosphate Grade 26%","coa.sub":"Referenční vzorek (01/09/2023). Čerstvé COA pro zásilky.",
+      "coa.th.test":"Test","coa.th.method":"Metoda","coa.th.unit":"Jedn.","coa.th.result":"Výsledek","coa.th.temp":"Tepl.","coa.th.hum":"Vlhkost",
+      "sieve.title":"Síťová analýza — Grade 26%","sieve.size":"Velikost","sieve.percent":"Hmotn. %","coa.export":"Export CSV","coa.print":"Tisk/Uložit PDF — COA",
+      "log.title":"Logistika & shoda","log.incoterms":"FOB / CFR / CIF / DDP — sledování a jasné kontrakty.",
+      "log.ports.h":"Přístavy & balení","log.ports.p":"Nakládka přes hlavní středomořské přístavy. Bulk/Big-Bags.",
+      "log.compliance.h":"EU shoda","log.compliance.p":"Původ, faktury, COA — dle norem EU.",
+      "about.title":"O nás","about.p1":"Broker se sídlem v ČR — transparentnost, kvalita, rychlost — a","about.pricing":"konkurenční ceny díky přímému nákupu",
+      "about.p2":"Nezávislý zprostředkovatel; značky výrobců nezveřejňujeme.","about.p3":"Testy třetí stranou (SGS/BV) na vyžádání.",
+      "contact.title":"Kontakt","form.name":"Jméno","form.email":"E-mail","form.message":"Zpráva","form.send":"Odeslat",
+      "contact.whatsapp":"WhatsApp","contact.note":"Bez analytických cookies. Otevře poštovního klienta.",
+      "contact.details":"Kontaktní údaje","contact.docs":"Dokumenty po kvalifikaci.","site.company":"Euro Agri Trading s.r.o.",
+      "footer.note":"© 2025 — Nezávislý broker." },
+
+  /* بقية اللغات بنفس النمط المختصر */
+  fr:{ "nav.home":"Accueil","nav.products":"Produits","nav.coa":"COA","nav.logistics":"Logistique & conformité","nav.about":"À propos","nav.contact":"Contact",
+      "hero.pill":"Courtier basé en Tchéquie ↔️ UE","hero.title":"Intrants agricoles de qualité pour l’Europe",
+      "hero.subtitle":"Approvisionnement indépendant, certificats et Incoterms —","hero.pricing":"à des prix compétitifs via l’achat direct",
+      "hero.cta":"Demander un devis","hero.cta2":"Voir le COA","hero.note":"* Courtier indépendant; marques non affichées pour confidentialité.",
+      "products.title":"Produit phare","products.lead":"Rock Phosphate — Grade 26% P₂O₅ (échantillon)","products.spec1":"Tamisé — prêt à moudre ou à appliquer",
+      "products.spec2":"COA fourni; analyses à la demande","products.viewCoa":"Ouvrir le COA","products.all":"Produits disponibles",
+      "card.rock.title":"Rock Phosphate — Grade 26%","card.rock.text":"Source fiable avec expéditions groupées vers l’UE.",
+      "log.ports":"Ports: hubs méditerranéens",
+      "card.urea.title":"Urée / NPK (à la demande)","card.urea.text":"Lignes supplémentaires selon la demande.","generic.expand":"Prêt à étendre",
+      "card.custom.title":"Spécifs. sur mesure","card.custom.text":"Approvisionnement, emballage et analyses sur demande.","card.custom.cta":"Demander une spécif.",
+      "coa.title":"COA — Rock Phosphate Grade 26%","coa.sub":"Échantillon de référence (01/09/2023).",
+      "coa.th.test":"Essai","coa.th.method":"Méthode","coa.th.unit":"Unité","coa.th.result":"Résultat","coa.th.temp":"Temp.","coa.th.hum":"Humidité",
+      "sieve.title":"Analyse granulométrique — 26%","sieve.size":"Taille","sieve.percent":"% masse",
+      "coa.export":"Exporter CSV","coa.print":"Imprimer/Enregistrer PDF — COA",
+      "log.title":"Logistique & conformité","log.incoterms":"FOB/CFR/CIF/DDP — suivi complet & contrats clairs.",
+      "log.ports.h":"Ports & emballage","log.ports.p":"Chargement via ports méditerranéens. Bulk / Big-Bags.",
+      "log.compliance.h":"Conformité UE","log.compliance.p":"Origine, factures, COA — normes UE.",
+      "about.title":"À propos","about.p1":"Courtier basé en Tchéquie — transparence, qualité, rapidité — et","about.pricing":"prix compétitifs via achat direct",
+      "about.p2":"Noms des producteurs non affichés publiquement (confidentialité).","about.p3":"Tests tiers (SGS/BV) sur demande.",
+      "contact.title":"Contact","form.name":"Nom","form.email":"E-mail","form.message":"Message","form.send":"Envoyer",
+      "contact.whatsapp":"WhatsApp","contact.note":"Pas de cookies d’analyse. Ouvre votre messagerie.",
+      "contact.details":"Coordonnées","contact.docs":"Docs fournis après qualification.","site.company":"Euro Agri Trading s.r.o.",
+      "footer.note":"© 2025 — Courtier indépendant." },
+
+  es:{ /* … اختصارًا */ "nav.home":"Inicio","nav.products":"Productos","nav.coa":"COA","nav.logistics":"Logística y cumplimiento","nav.about":"Sobre nosotros","nav.contact":"Contacto",
+      "hero.pill":"Corredor en Chequia ↔️ UE","hero.title":"Insumos agrícolas de alta calidad para Europa",
+      "hero.subtitle":"Abastecimiento independiente con certificados e Incoterms —","hero.pricing":"a precios competitivos por compra directa",
+      "hero.cta":"Pedir cotización","hero.cta2":"Ver COA","hero.note":"* Operamos de forma independiente; no mostramos marcas de productores.",
+      "products.title":"Producto principal","products.lead":"Rock Phosphate — 26% P₂O₅ (muestra)","products.spec1":"Tamizado — listo para moler o aplicar",
+      "products.spec2":"COA incluido; análisis a pedido","products.viewCoa":"Abrir COA","products.all":"Productos disponibles",
+      "card.rock.title":"Rock Phosphate — 26%","card.rock.text":"Fuente fiable con envíos consolidados a puertos de la UE.",
+      "log.ports":"Puertos: principales del Mediterráneo",
+      "card.urea.title":"Urea / NPK (a pedido)","card.urea.text":"Líneas adicionales según demanda.","generic.expand":"Listo para ampliar",
+      "card.custom.title":"Especificaciones a medida","card.custom.text":"Suministro, embalaje y análisis a medida.","card.custom.cta":"Solicitar especificación",
+      "coa.title":"COA — Rock Phosphate 26%","coa.sub":"Muestra de referencia (01/09/2023).",
+      "coa.th.test":"Prueba","coa.th.method":"Método","coa.th.unit":"Unidad","coa.th.result":"Resultado","coa.th.temp":"Temp.","coa.th.hum":"Humedad",
+      "sieve.title":"Análisis de tamizado — 26%","sieve.size":"Tamaño","sieve.percent":"% en masa",
+      "coa.export":"Exportar CSV","coa.print":"Imprimir/Guardar PDF — COA",
+      "log.title":"Logística y cumplimiento","log.incoterms":"FOB/CFR/CIF/DDP — seguimiento y contratos claros.",
+      "log.ports.h":"Puertos y embalaje","log.ports.p":"Carga por puertos del Mediterráneo. Bulk o Big-Bags.",
+      "log.compliance.h":"Cumplimiento UE","log.compliance.p":"Origen, facturas y COA — normas UE.",
+      "about.title":"Sobre nosotros","about.p1":"Corredor con sede en Chequia — transparencia, calidad y rapidez — y","about.pricing":"precios competitivos por compra directa",
+      "about.p2":"No mostramos marcas de productores para proteger la confidencialidad.","about.p3":"Pruebas de terceros (SGS/BV) a pedido.",
+      "contact.title":"Contacto","form.name":"Nombre","form.email":"Correo","form.message":"Mensaje","form.send":"Enviar",
+      "contact.whatsapp":"WhatsApp","contact.note":"Sin cookies analíticas. Se abre tu correo.",
+      "contact.details":"Datos de contacto","contact.docs":"Documentos tras calificar.","site.company":"Euro Agri Trading s.r.o.","footer.note":"© 2025 — Corredor independiente." },
+
+  it:{ /* مختصر */ "nav.home":"Home","nav.products":"Prodotti","nav.coa":"COA","nav.logistics":"Logistica & conformità","nav.about":"Chi siamo","nav.contact":"Contatti",
+      "hero.pill":"Broker in Cechia ↔️ UE","hero.title":"Input agricoli di qualità per l’Europa",
+      "hero.subtitle":"Approvvigionamento indipendente con certificati e Incoterms —","hero.pricing":"a prezzi competitivi grazie all’acquisto diretto",
+      "hero.cta":"Richiedi un’offerta","hero.cta2":"Vedi COA","hero.note":"* Broker indipendente; marchi non mostrati per riservatezza.",
+      "products.title":"Prodotto di punta","products.lead":"Rock Phosphate — 26% P₂O₅ (campione)","products.spec1":"Setacciato — pronto all’uso",
+      "products.spec2":"COA incluso; analisi su richiesta","products.viewCoa":"Apri COA","products.all":"Prodotti disponibili",
+      "card.rock.title":"Rock Phosphate — 26%","card.rock.text":"Fonte affidabile con spedizioni consolidate verso l’UE.",
+      "log.ports":"Porti: principali hub mediterranei",
+      "card.urea.title":"Urea / NPK (a richiesta)","card.urea.text":"Linee aggiuntive su domanda.","generic.expand":"Pronto ad espandere",
+      "card.custom.title":"Specifiche su misura","card.custom.text":"Fornitura, imballo e analisi su misura.","card.custom.cta":"Richiedi specifica",
+      "coa.title":"COA — Rock Phosphate 26%","coa.sub":"Campione (01/09/2023).",
+      "coa.th.test":"Test","coa.th.method":"Metodo","coa.th.unit":"Unità","coa.th.result":"Risultato","coa.th.temp":"Temp.","coa.th.hum":"Umidità",
+      "sieve.title":"Analisi granulometrica — 26%","sieve.size":"Taglia","sieve.percent":"% peso",
+      "coa.export":"Esporta CSV","coa.print":"Stampa/Salva PDF — COA",
+      "log.title":"Logistica & conformità","log.incoterms":"FOB/CFR/CIF/DDP — tracking e contratti chiari.",
+      "log.ports.h":"Porti & imballo","log.ports.p":"Carico via porti mediterranei. Bulk o Big-Bags.",
+      "log.compliance.h":"Conformità UE","log.compliance.p":"Origine, fatture, COA — standard UE.",
+      "about.title":"Chi siamo","about.p1":"Broker con sede in Cechia — trasparenza, qualità, velocità — e","about.pricing":"prezzi competitivi grazie all’acquisto diretto",
+      "about.p2":"Non mostriamo i marchi dei produttori per riservatezza.","about.p3":"Test terzi (SGS/BV) su richiesta.",
+      "contact.title":"Contatti","form.name":"Nome","form.email":"Email","form.message":"Messaggio","form.send":"Invia",
+      "contact.whatsapp":"WhatsApp","contact.note":"Niente cookie analitici. Si apre l’app di posta.",
+      "contact.details":"Dettagli contatto","contact.docs":"Documenti dopo qualificazione.","site.company":"Euro Agri Trading s.r.o.","footer.note":"© 2025 — Broker indipendente." },
+
+  /* لغات أخرى مختصرة بنفس النمط للحفاظ على الحجم */
+  pl:{ "nav.home":"Start","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistyka i zgodność","nav.about":"O nas","nav.contact":"Kontakt",
+      "hero.pill":"Broker w Czechach ↔️ UE","hero.title":"Wysokiej jakości produkty rolne dla Europy",
+      "hero.subtitle":"Niezależne zaopatrzenie z certyfikatami i Incoterms —","hero.pricing":"w konkurencyjnych cenach dzięki zakupom bezpośrednim",
+      "hero.cta":"Poproś o ofertę","hero.cta2":"Zobacz COA","hero.note":"* Niezależny broker; marek producentów nie ujawniamy.",
+      "products.title":"Produkt flagowy","products.lead":"Rock Phosphate — 26% P₂O₅ (próbka)" },
+  nl:{ "nav.home":"Home","nav.products":"Producten","nav.coa":"COA","nav.logistics":"Logistiek & compliance","nav.about":"Over ons","nav.contact":"Contact",
+      "hero.pill":"Broker in Tsjechië ↔️ EU","hero.title":"Kwalitatieve agrarische inputs voor Europa",
+      "hero.subtitle":"Onafhankelijke inkoop met certificaten en Incoterms —","hero.pricing":"tegen concurrerende prijzen door directe inkoop",
+      "hero.cta":"Offerte aanvragen","hero.cta2":"COA bekijken","hero.note":"* Onafhankelijke broker; merken niet publiek getoond." },
+  ro:{ "nav.home":"Acasă","nav.products":"Produse","nav.coa":"COA","nav.logistics":"Logistică & conformitate","nav.about":"Despre noi","nav.contact":"Contact",
+      "hero.pill":"Broker în Cehia ↔️ UE","hero.title":"Intrări agricole de calitate pentru Europa",
+      "hero.subtitle":"Aprovizionare independentă cu certificate și Incoterms —","hero.pricing":"la prețuri competitive prin achiziție directă",
+      "hero.cta":"Cere ofertă","hero.cta2":"Vezi COA","hero.note":"* Broker independent; nu afișăm branduri public." },
+  el:{ "nav.home":"Αρχική","nav.products":"Προϊόντα","nav.coa":"COA","nav.logistics":"Λογιστική & συμμόρφωση","nav.about":"Σχετικά","nav.contact":"Επικοινωνία",
+      "hero.pill":"Μεσίτης στην Τσεχία ↔️ ΕΕ","hero.title":"Ποιοτικά αγροτικά εφόδια για την Ευρώπη",
+      "hero.subtitle":"Ανεξάρτητη προμήθεια με πιστοποιήσεις & Incoterms —","hero.pricing":"σε ανταγωνιστικές τιμές με άμεση αγορά",
+      "hero.cta":"Ζητήστε προσφορά","hero.cta2":"Δείτε COA","hero.note":"* Ανεξάρτητος μεσίτης· δεν εμφανίζουμε μάρκες παραγωγού." },
+  pt:{ "nav.home":"Início","nav.products":"Produtos","nav.coa":"COA","nav.logistics":"Logística & conformidade","nav.about":"Sobre","nav.contact":"Contato",
+      "hero.pill":"Intermediário na Chéquia ↔️ UE","hero.title":"Insumos agrícolas de qualidade para a Europa",
+      "hero.subtitle":"Aquisição independente com certificados e Incoterms —","hero.pricing":"a preços competitivos por compra direta",
+      "hero.cta":"Pedir cotação","hero.cta2":"Ver COA","hero.note":"* Broker independente; marcas não exibidas publicamente." },
+  bg:{ "nav.home":"Начало","nav.products":"Продукти","nav.coa":"COA","nav.logistics":"Логистика и съответствие","nav.about":"За нас","nav.contact":"Контакт",
+      "hero.pill":"Посредник в Чехия ↔️ ЕС","hero.title":"Качествени агроинпути за Европа",
+      "hero.subtitle":"Независимо снабдяване с сертификати и Incoterms —","hero.pricing":"на конкурентни цени чрез директни покупки",
+      "hero.cta":"Заяви оферта","hero.cta2":"Виж COA","hero.note":"* Независим брокер; не показваме марки." },
+  hu:{ "nav.home":"Kezdőlap","nav.products":"Termékek","nav.coa":"COA","nav.logistics":"Logisztika & megfelelés","nav.about":"Rólunk","nav.contact":"Kapcsolat",
+      "hero.pill":"Csehországi bróker ↔️ EU","hero.title":"Minőségi agrár inputok Európának",
+      "hero.subtitle":"Független beszerzés tanúsítványokkal és Incoterms —","hero.pricing":"versenyképes árakon közvetlen beszerzéssel",
+      "hero.cta":"Ajánlatkérés","hero.cta2":"COA megtekintése","hero.note":"* Független bróker; gyártói márkákat nem jelenítünk meg." },
+  da:{ "nav.home":"Start","nav.products":"Produkter","nav.coa":"COA","nav.logistics":"Logistik & compliance","nav.about":"Om os","nav.contact":"Kontakt",
+      "hero.pill":"Mægler i Tjekkiet ↔️ EU","hero.title":"Kvalitets landbrugsinput til Europa",
+      "hero.subtitle":"Uafhængig indkøb med certifikater og Incoterms —","hero.pricing":"til konkurrencedygtige priser via direkte indkøb",
+      "hero.cta":"Få tilbud","hero.cta2":"Se COA","hero.note":"* Uafhængig mægler; producentbrands vises ikke." },
+  sv:{ "nav.home":"Hem","nav.products":"Produkter","nav.coa":"COA","nav.logistics":"Logistik & regelefterlevnad","nav.about":"Om oss","nav.contact":"Kontakt",
+      "hero.pill":"Mäklare i Tjeckien ↔️ EU","hero.title":"Kvalitativa jordbruksinsatser för Europa",
+      "hero.subtitle":"Oberoende inköp med certifikat och Incoterms —","hero.pricing":"till konkurrenskraftiga priser via direktinköp",
+      "hero.cta":"Begär offert","hero.cta2":"Visa COA","hero.note":"* Oberoende mäklare; varumärken visas inte offentligt." },
+  fi:{ "nav.home":"Etusivu","nav.products":"Tuotteet","nav.coa":"COA","nav.logistics":"Logistiikka & vaatimustenmukaisuus","nav.about":"Tietoa","nav.contact":"Yhteys",
+      "hero.pill":"Välittäjä Tšekissä ↔️ EU","hero.title":"Laadukkaita maataloustuotteita Eurooppaan",
+      "hero.subtitle":"Riippumatonta hankintaa sertifikaatein ja Incoterms-ehdoin —","hero.pricing":"kilpailukykyisin hinnoin suorahankinnalla",
+      "hero.cta":"Pyydä tarjous","hero.cta2":"Näytä COA","hero.note":"* Riippumaton välittäjä; valmistajamerkkejä ei näytetä." },
+  sk:{ "nav.home":"Domov","nav.products":"Produkty","nav.coa":"COA","nav.logistics":"Logistika & súlad","nav.about":"O nás","nav.contact":"Kontakt",
+      "hero.pill":"Sprostredkovateľ v Česku ↔️ EÚ","hero.title":"Kvalitné agro vstupy pre Európu",
+      "hero.subtitle":"Nezávislé obstarávanie s certifikátmi a Incoterms —","hero.pricing":"za konkurencieschopné ceny priamym nákupom",
+      "hero.cta":"Požiadať o ponuku","hero.cta2":"Zobraziť COA","hero.note":"* Nezávislý broker; značky nezverejňujeme." },
+  sl:{ "nav.home":"Domov","nav.products":"Izdelki","nav.coa":"COA","nav.logistics":"Logistika & skladnost","nav.about":"O nas","nav.contact":"Kontakt",
+      "hero.pill":"Posrednik na Češkem ↔️ EU","hero.title":"Kakovostni kmetijski vhodi za Evropo",
+      "hero.subtitle":"Neodvisna nabava s certifikati in Incoterms —","hero.pricing":"po konkurenčnih cenah z neposrednim nakupom",
+      "hero.cta":"Zahtevaj ponudbo","hero.cta2":"Poglej COA","hero.note":"* Neodvisen posrednik; blagovnih znamk ne prikazujemo." },
+  hr:{ "nav.home":"Početna","nav.products":"Proizvodi","nav.coa":"COA","nav.logistics":"Logistika & usklađenost","nav.about":"O nama","nav.contact":"Kontakt",
+      "hero.pill":"Posrednik u Češkoj ↔️ EU","hero.title":"Kvalitetni poljoprivredni inputi za Europu",
+      "hero.subtitle":"Neovisna nabava s certifikatima i Incoterms —","hero.pricing":"uz konkurentne cijene kroz direktnu nabavu",
+      "hero.cta":"Zatraži ponudu","hero.cta2":"Pogledaj COA","hero.note":"* Neovisni posrednik; brendovi se ne prikazuju." },
+  sr:{ "nav.home":"Početna","nav.products":"Proizvodi","nav.coa":"COA","nav.logistics":"Logistika & usklađenost","nav.about":"O nama","nav.contact":"Kontakt",
+      "hero.pill":"Posrednik u Češkoj ↔️ EU","hero.title":"Kvalitetni agro inputi za Evropu",
+      "hero.subtitle":"Nezavisna nabavka sa sertifikatima i Incoterms —","hero.pricing":"po konkurentnim cenama direktnom kupovinom",
+      "hero.cta":"Zatražite ponudu","hero.cta2":"Prikaži COA","hero.note":"* Ne prikazujemo brendove proizvođača (poverljivo)." },
+  tr:{ "nav.home":"Ana sayfa","nav.products":"Ürünler","nav.coa":"COA","nav.logistics":"Lojistik & uyum","nav.about":"Hakkımızda","nav.contact":"İletişim",
+      "hero.pill":"Çekya merkezli aracı ↔️ AB","hero.title":"Avrupa için kaliteli tarım girdileri",
+      "hero.subtitle":"Bağımsız tedarik; sertifikalar ve Incoterms —","hero.pricing":"doğrudan tedarikle rekabetçi fiyatlar",
+      "hero.cta":"Teklif iste","hero.cta2":"COA görüntüle","hero.note":"* Bağımsız aracıyız; üretici markaları göstermeyiz." }
 };
 
 const RTL = new Set(["ar"]);
 
-/* اختيار أفضل لغة من المتصفح */
+/* اختيار لغة تلقائي + دعم ?lang= */
 function pickBestLang(){
+  const urlParam = new URLSearchParams(location.search).get("lang");
+  if (urlParam && DICT[urlParam]) return urlParam;
   const prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language||"en"]);
   for(const tag of prefs){
     const norm = (tag||"").toLowerCase();
@@ -616,13 +769,13 @@ function pickBestLang(){
     if (DICT[norm]) return norm;
     if (DICT[base]) return base;
   }
-  return "en"; // fallback ثابت
+  return "en";
 }
 
 function applyI18n(lang){
   const dict = DICT[lang] || DICT.en;
   document.documentElement.lang = lang;
-  document.documentElement.dir = RTL.has(lang) ? "rtl" : "ltr";
+  document.documentElement.dir = RTL.has(lang) ? "rtl":"ltr";
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
     el.textContent = (dict[key] ?? DICT.en[key] ?? key);
@@ -633,22 +786,16 @@ function applyI18n(lang){
   if (sel && sel.value !== lang) sel.value = lang;
 }
 
-function detectLang(){
-  const urlParam = new URLSearchParams(location.search).get("lang");
-  const stored   = localStorage.getItem("lang");
-  return urlParam || stored || pickBestLang();
-}
-
 document.getElementById("langSelect").addEventListener("change", e=>{
   const lang = e.target.value;
-  const u = new URL(location.href);
-  u.searchParams.set("lang", lang);
+  const u = new URL(location.href); u.searchParams.set("lang", lang);
   history.replaceState({}, "", u.toString());
   applyI18n(lang);
 });
-applyI18n(detectLang());
 
-/* ---------- CSV export for sieving table ---------- */
+applyI18n(pickBestLang());
+
+/* CSV export */
 function exportSievingCSV(){
   const rows = [...document.querySelectorAll("#sieving tr")].map(tr =>
     [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
@@ -661,10 +808,10 @@ function exportSievingCSV(){
   document.body.appendChild(a); a.click(); a.remove();
 }
 
-/* ---------- mailto sender (updated) ---------- */
+/* mailto */
 function sendMailto(form){
   const data = new FormData(form);
-  const to = "trading@temosliving.de"; // بريد الشركة
+  const to = "trading@temosliving.de";
   const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
   const body = encodeURIComponent(
 `Name: ${data.get("name")}
@@ -674,10 +821,10 @@ Message:
 ${data.get("message")}
 `);
   location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  return false; // prevent real submit
+  return false;
 }
 
-/* ---------- smooth scroll ---------- */
+/* smooth scroll */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener("click", e=>{
     const id = a.getAttribute("href").slice(1);
