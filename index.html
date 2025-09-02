@@ -94,12 +94,38 @@
     }
     select{border:none;background:transparent;outline: none}
     /* hero */
-    .hero{padding:clamp(2rem, 4vw, 3rem) 0}
-    .hero-grid{display:grid;grid-template-columns: 1.1fr .9fr;gap:2rem;align-items:center}
-    .pill{
-      display:inline-flex;align-items:center;gap:.5rem;background:#ecfeff;color:#0e7490;
-      padding:.35rem .7rem;border-radius:999px;font-size:.85rem;border:1px solid #a5f3fc
-    }
+    /* HERO with image background + overlay */
+.hero{
+  position:relative;
+  padding:clamp(2rem, 4vw, 3.2rem) 0;
+  background:#0b3d2e url("hero-port.jpg") center/cover no-repeat; /* ارفع الصورة باسم hero-port.jpg */
+  color:var(--ink);
+}
+
+/* طبقة تدرّج لضمان وضوح النص */
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(
+    to right,
+    rgba(12,18,35,.62) 0%,
+    rgba(12,18,35,.38) 45%,
+    rgba(12,18,35,.18) 70%,
+    rgba(12,18,35,0)   100%
+  );
+}
+[dir="rtl"] .hero::before{
+  background: linear-gradient(
+    to left,
+    rgba(12,18,35,.62) 0%,
+    rgba(12,18,35,.38) 45%,
+    rgba(12,18,35,.18) 70%,
+    rgba(12,18,35,0)   100%
+  );
+}
+
+/* نخلي محتوى الهيرو فوق الـ overlay */
+.hero > .container{ position:relative; z-index:1; }
     h1{font-size:clamp(1.6rem, 3.6vw, 2.4rem);line-height:1.15;margin:.6rem 0}
     .lead{font-size:1.05rem;color:var(--soft)}
     .cta{ margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap }
