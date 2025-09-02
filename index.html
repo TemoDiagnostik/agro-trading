@@ -112,6 +112,49 @@
 }
 
 .hero > .container{ position:relative; z-index:1; }
+
+/* === Buttons (base + colors on hero) === */
+.btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  border:0;border-radius:12px;
+  padding:.75rem 1rem;
+  font-weight:700;line-height:1;
+  cursor:pointer;text-decoration:none;
+}
+
+/* كل الأزرار جوه الهيرو نصها أبيض */
+.hero .btn{ color:#ffffff !important; }
+
+/* الأساسي */
+.btn-primary{
+  background:var(--brand);
+  border:1px solid var(--brand);
+  color:#ffffff !important;
+  box-shadow:0 10px 30px var(--ring);
+}
+.btn-primary:hover{ filter:brightness(.95); }
+
+/* الإطار */
+.btn-outline{
+  background:transparent;
+  border:1px solid #ffffff;
+  color:#ffffff !important;
+}
+.btn-outline:hover{ background:rgba(255,255,255,.10); }
+
+/* شارة الهيرو */
+.hero .pill{
+  color:#ffffff;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.35);
+}
+
+/* تأكيد أن الروابط داخل الهيرو بيضا */
+.hero a{ color:#ffffff; }
+
+
+    
+    
     /* sections */
     section{padding:3rem 0}
     h2{font-size:clamp(1.4rem, 2.8vw, 2rem);margin:0 0 1rem}
