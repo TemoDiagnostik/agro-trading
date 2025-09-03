@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Pouzdan agro posrednik",
+
+  "nav.home": "Početna",
+  "nav.products": "Proizvodi",
+  "nav.coa": "COA",
+  "nav.logistics": "Logistika i usklađenost",
+  "nav.about": "O nama",
+  "nav.contact": "Kontakt",
+
+  "hero.pill": "Posredništvo sa sedištem u Češkoj ↔️ Kupci u EU",
+  "hero.cta": "Zatraži ponudu",
+  "hero.cta2": "Pogledaj COA",
+  "hero.note": "* Delujemo nezavisno kao posrednik/marketinška firma. Nismo povezani ni sa jednim proizvođačem.",
+
+  "products.title": "Glavni proizvod",
+  "products.lead": "Kameni fosfat — Klasa 26% P₂O₅ (referentni uzorak)",
+  "products.spec1": "Razvrstano prosejavanjem — spremno za mlevenje ili direktnu primenu",
+  "products.spec2": "Priložen COA; analize po zahtevu kupca",
+  "products.viewCoa": "Otvori COA",
+  "products.all": "Dostupni proizvodi",
+
+  "card.rock.title": "Kameni fosfat — Klasa 26%",
+  "card.rock.text": "Pouzdan izvor sa konsolidovanim pošiljkama u EU luke.",
+  "card.rock.cta": "Zatraži ponudu",
+  "card.rock.coa": "Pogledaj COA",
+
+  "log.ports": "Luke: Aleksandrija/Damietta",
+  "card.urea.title": "Urea / NPK (na zahtev)",
+  "card.urea.text": "Dodatne linije (Urea, MAP/DAP, NPK) mogu se dodati prema potražnji.",
+  "card.urea.cta": "Upitaj za Ureu",
+
+  "generic.expand": "Spremno za proširenje",
+
+  "card.custom.title": "Prilagođene specifikacije",
+  "card.custom.text": "Prilagođena nabavka, pakovanje i analize po zahtevima kupca.",
+  "card.custom.cta": "Zatraži specifikacije",
+
+  "coa.title": "Sertifikat analize — Kameni fosfat Klasa 26%",
+  "coa.sub": "Referentni uzorak (datum: 01/09/2023). Sveža COA dostupna za svaku pošiljku.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Metod",
+  "coa.th.unit": "Jedinica",
+  "coa.th.result": "Rezultat",
+  "coa.th.temp": "Temperatura",
+  "coa.th.hum": "Vlažnost",
+
+  "sieve.title": "Analiza prosejavanja — Klasa 26% (P₂O₅=26.33%)",
+  "sieve.size": "Veličina",
+  "sieve.percent": "Procenat mase %",
+
+  "coa.export": "Izvoz CSV prosejavanja",
+  "coa.print": "Štampaj/Sačuvaj PDF — COA",
+
+  "log.title": "Logistika i usklađenost",
+  "log.incoterms": "FOB / CFR / CIF / DDP zavisno od destinacije — potpuno praćenje pošiljki i jasni ugovori.",
+  "log.ports.h": "Luke i pakovanje",
+  "log.ports.p": "Uobičajeno ukrcavanje preko Aleksandrije/Damiette — Egipat. Pakovanje: rasuto ili Big-Bags.",
+  "log.compliance.h": "Usklađenost sa EU",
+  "log.compliance.p": "Dokumenti o poreklu, fakture i COA. U skladu sa EU standardima za robu i bezbednost.",
+
+  "about.title": "O nama",
+  "about.p1": "Posredništvo sa sedištem u Češkoj koje povezuje evropske kupce sa pouzdanim poljoprivrednim izvorima. Fokusiramo se na transparentnost, kvalitet, brzinu — i",
+  "about.pricing": "konkurentne cene putem direktne nabavke",
+  "about.p2": "Delujemo nezavisno kao posrednik/marketinška firma. Ne objavljujemo imena proizvođača radi zaštite poverljivosti kupaca i dobavljača.",
+  "about.p3": "Testovi trećih strana (SGS/BV) na zahtev. Uzorci dostupni pre sklapanja ugovora.",
+
+  "contact.title": "Kontaktirajte nas",
+  "form.name": "Ime",
+  "form.email": "E-mail",
+  "form.message": "Poruka",
+  "form.send": "Pošalji",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Ne koristimo analitičke kolačiće. Ovaj obrazac otvara vašu e-mail aplikaciju za direktno slanje.",
+  "contact.details": "Kontakt podaci",
+  "contact.docs": "Potrebni dokumenti (ugovori, fakture, COA) dostavljaju se nakon kvalifikacije zahteva.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Nezavisni posrednik/marketinška firma. Zaštitni znaci pripadaju svojim vlasnicima. Stranica je samo za komercijalne informacije."
+}
