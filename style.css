@@ -101,22 +101,22 @@ nav a:hover{background:rgba(255,255,255,.15)}
 
 .hero-bleed {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100vw;                                
+  margin-left: calc(50% - 50vw);  /* يكسر الكونتينر */
   margin-right: calc(50% - 50vw);
-  min-height: 75vh; /* ممكن تزودها 90vh لو عايز الصورة تملأ الشاشة أكتر */
-  background: url("hero-port.png") center/cover no-repeat;
+  min-height: 85vh;                /* الطول قدامك تتحكم فيه */
+  
+  /* الخلفية صورة فقط، بدون أي ألوان */
+  background: url("hero-port.png") center/cover no-repeat !important;
+  
   color: #fff;
   overflow: hidden;
 }
-
 .hero-bleed::before {
   content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.45); /* طبقة التعتيم */
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.35); /* تقدر تخليها 0 لو مش عايز أي تعتيم */
 }
-
 .hero-content {
   position: relative;
   z-index: 1;
