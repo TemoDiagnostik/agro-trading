@@ -9,7 +9,7 @@
   "nav.contact": "Contact",
 
   "hero.pill": "Czech-based brokerage ↔️ EU buyers",
-  "hero.cta": "Request a quote",
+  "hero.cta": "Request a Quote",
   "hero.cta2": "View COA",
   "hero.note": "* We operate independently as a broker/marketer. Not affiliated with any specific producer brand.",
 
@@ -21,20 +21,19 @@
   "products.all": "Available Products",
 
   "card.rock.title": "Rock Phosphate — Grade 26%",
-  "card.rock.text": "Reliable source with consolidated bulk shipments to EU ports.",
+  "card.rock.text": "Reliable source with consolidated bulk shipments to EU ports, with competitive pricing directly from the factory.",
   "card.rock.cta": "Request a Quote",
   "card.rock.coa": "View COA",
 
-  "log.ports": "Ports: Alexandria/Damietta",
   "card.urea.title": "Urea / NPK (on request)",
-  "card.urea.text": "Additional lines (Urea, MAP/DAP, NPK) can be added per demand.",
+  "card.urea.text": "Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.",
   "card.urea.cta": "Ask about Urea",
 
-  "generic.expand": "Ready to expand",
-
   "card.custom.title": "Custom specs",
-  "card.custom.text": "Tailored supply, packing, and analyses per buyer requirements.",
+  "card.custom.text": "Tailored supply, packing, and analyses per buyer requirements, with official documentation support.",
   "card.custom.cta": "Request Custom Specs",
+
+  "generic.expand": "Ready to expand",
 
   "coa.title": "Certificate of Analysis — Rock Phosphate Grade 26%",
   "coa.sub": "Reference sample (date: 01/09/2023). Fresh COA per shipment can be provided.",
@@ -55,6 +54,7 @@
 
   "log.title": "Logistics & Compliance",
   "log.incoterms": "FOB / CFR / CIF / DDP depending on destination — full shipment tracking and clear contracts.",
+  "log.ports": "Ports: Alexandria / Damietta",
   "log.ports.h": "Ports & Packing",
   "log.ports.p": "Typical loading via Alexandria/Damietta — Egypt. Packing: Bulk or Big-Bags.",
   "log.compliance.h": "EU Compliance",
@@ -75,6 +75,7 @@
   "contact.note": "We do not use analytics cookies. This form opens your mail app to send directly.",
   "contact.details": "Contact details",
   "contact.docs": "Required documents (contracts, invoices, COA) are shared after qualifying the request.",
+
   "site.company": "Euro Agri Trading s.r.o.",
 
   "footer.note": "©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. Page for commercial information only."
