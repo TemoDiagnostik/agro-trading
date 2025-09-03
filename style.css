@@ -81,9 +81,21 @@ h2{font-size:clamp(1.4rem, 2.8vw, 2rem);margin:0 0 1rem}
   color: #fff !important; /* النص أبيض فوق صورة الهيرو */
 }
 
+/* أزرار الكارت داخل الـ hero */
 .hero .card .btn {
-  font-size: 0.75rem;
-  padding: 0.45rem 0.7rem;
+  background: transparent !important;   /* شفافة */
+  border: 1px solid #fff !important;    /* حدود بيضاء */
+  color: #fff !important;               /* خط أبيض */
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.2s ease;
+}
+
+/* تأثير hover */
+.hero .card .btn:hover {
+  background: #fff !important;          /* خلفية بيضاء */
+  color: #0b132b !important;            /* خط غامق */
 }
 
 .hero-grid{
