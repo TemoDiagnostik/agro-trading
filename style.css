@@ -173,3 +173,4 @@ html, body, main, .page, .wrapper, .content, section {
 /* الهيدر أرفع شوية */
 header{ padding:.3rem 0 !important; }
 header .logo-img{ height:42px !important; }
+main, .page, .wrapper, .content { transform: none !important; }
