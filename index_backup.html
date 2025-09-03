@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="site.name">Euro Agri Trading — وسيط منتجات أبو قير للأسمدة</title>
-  <meta name="description" content="شركة وساطة مقرها التشيك تربط مشتري أوروبا بشركة أبو قير للأسمدة بالإسكندرية – مصر. توريد، لوجستيات، شهادات تحليل، والتزام بمعايير الاتحاد الأوروبي." />
-
+   <title data-i18n="site.name">Euro Agri Trading — خدمات زراعية موثوقة</title>
+  <meta name="description" content="وساطة زراعية مقرها التشيك تربط مشتري أوروبا بمصادر موثوقة. توريد مباشر، لوجستيات مرنة، وشهادات تحليل — لدينا أسعار تنافسية." />
   <!-- بعناوين بديلة لمحركات البحث (لنفس الصفحة أحادية) -->
   <link rel="alternate" href="?lang=ar" hreflang="ar" />
   <link rel="alternate" href="?lang=en" hreflang="en" />
@@ -29,176 +28,8 @@
   <link rel="alternate" href="?lang=hr" hreflang="hr" />
   <link rel="alternate" href="?lang=sr" hreflang="sr" />
   <link rel="alternate" href="?lang=tr" hreflang="tr" />
-<link rel="preload" as="image" href="hero-port.jpg" imagesrcset="hero-port.jpg">
-  <style>
-    :root{
-      --bg:#0b132b;
-      --ink:#0f172a;
-      --soft:#475569;
-      --muted:#94a3b8;
-      --brand:#2dd4bf;
-      --brand-ink:#0f766e;
-      --paper:#ffffff;
-      --paper-2:#f8fafc;
-      --ring:rgba(45,212,191,.4);
-      --radius:14px;
-    }
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-        "Noto Sans", "Liberation Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol", "Noto Color Emoji";
-      color:var(--ink);
-      background:linear-gradient(180deg,var(--paper),var(--paper-2));
-    }
-    a{color:var(--brand-ink);text-decoration: none}
-    .container{width:min(1180px, 92vw);margin-inline:auto;}
-    header{
-      position:sticky;top:0;z-index:30;
-      backdrop-filter:saturate(1.2) blur(10px);
-      background:color-mix(in srgb, var(--paper) 82%, transparent);
-      border-bottom:1px solid #e2e8f0;
-    }
-    .nav{
-      display:flex;align-items:center;gap:1rem;justify-content:space-between;
-      padding:.8rem 0;
-    }
-   .brand{
-  display:flex;
-  align-items:center;
-  gap:.55rem;
-  font-weight:800;
-  font-size:1rem;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:auto;
-  height:auto;
-}
-
-.logo img{
-  height:50px;   /* تقدر تغيّرها لـ 45 أو 60 حسب ذوقك */
-  width:auto;
-  display:block;
-}
-    nav ul{display:flex;gap:.9rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
-    nav a{padding:.45rem .7rem;border-radius:10px}
-    nav a:hover{background:#e2e8f033}
-    .lang{
-      display:flex;align-items:center;gap:.45rem;
-      border:1px solid #e2e8f0;border-radius:12px;padding:.25rem .5rem;background:#fff
-    }
-    select{border:none;background:transparent;outline: none}
-    /* hero */
-  .hero{
-  position:relative;
-  padding:clamp(3rem, 5vw, 4rem) 0; /* زوّد شوية padding علشان النص ما يضغطش */
-  background:#0b3d2e url("hero-port.jpg") center/cover no-repeat;
-  color:#ffffff; /* خلي النص أبيض علشان يبقى contrast */
-}
-
-
-
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  background: rgba(0,0,0,.45); /* طبقة غامقة بسيطة فوق الصورة */
-}
-
-.hero > .container{ position:relative; z-index:1; }
-
-/* === Buttons (base + colors on hero) === */
-.btn{
-  display:inline-flex;align-items:center;gap:.4rem;
-  border:0;border-radius:12px;
-  padding:.75rem 1rem;
-  font-weight:700;line-height:1;
-  cursor:pointer;text-decoration:none;
-}
-
-/* كل الأزرار جوه الهيرو نصها أبيض */
-.hero .btn{ color:#ffffff !important; }
-
-/* الأساسي */
-.hero h1, .hero .lead, .hero .pill, .hero .btn {
-  color:#ffffff; /* كل النصوص جوة الهيرو أبيض */
-}
-/* شارة الهيرو */
-.hero .pill{
-  color:#ffffff;
-  background:rgba(255,255,255,.18);
-  border:1px solid rgba(255,255,255,.35);
-}
-
-/* تأكيد أن الروابط داخل الهيرو بيضا */
-.hero a{ color:#ffffff; }  
-    
-/* Tags inside hero → white background */
-.hero .tag {
-  background: rgba(255,255,255,0.2); /* خلفية شفافة فاتحة */
-  border: 1px solid #fff;
-  color: #fff;
-  font-weight: 600;
-}
-/* ===== Fix hero buttons contrast ===== */
-.hero .cta .btn{
-  display:inline-flex;align-items:center;gap:.4rem;
-  padding:.7rem 1rem;border-radius:12px;font-weight:700;
-}
-
-/* زر Request واضح وممتلئ */
-.hero .btn-primary{
-  background:#10b981;      /* أخضر واضح */
-  color:#052e2b;           /* نص داكن لقراءة أفضل */
-  border:0;
-  box-shadow:0 8px 26px rgba(16,185,129,.35);
-}
-.hero .btn-primary:hover{ filter:brightness(1.05); transform:translateY(-1px); }
-
-/* زر View COA بخلفية فاتحة */
-.hero .btn-outline{
-  background:rgba(255,255,255,.88);  /* خلفية شبه بيضاء */
-  color:#0b132b;                     /* نص غامق */
-  border:1px solid #ffffff;
-}
-.hero .btn-outline:hover{ background:#ffffff; }
-
-/* عنوان الهيرو يبان أكتر فوق الصورة */
-.hero h1{ text-shadow:0 2px 10px rgba(0,0,0,.35); }
-    
-    
-    /* sections */
-    section{padding:3rem 0}
-    h2{font-size:clamp(1.4rem, 2.8vw, 2rem);margin:0 0 1rem}
-    .grid{display:grid;gap:1rem}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-   @media (max-width: 640px){
-  .hero::before{ background: rgba(0,0,0,.55); }
-}
-    .table{
-      width:100%;border-collapse:separate;border-spacing:0;overflow:auto;border-radius:12px;border:1px solid #e2e8f0;background:#fff
-    }
-    .table th,.table td{padding:.6rem .7rem;border-bottom:1px solid #eef2f7;text-align:start}
-    .table thead th{position:sticky;top:0;background:#f8fafc;font-weight:800}
-    .muted{color:var(--muted)}
-    .tag{display:inline-block;background:#f1f5f9;border:1px solid #e2e8f0;padding:.25rem .5rem;border-radius:999px;font-size:.85rem;margin:.15rem .15rem 0 0}
-    .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
-    /* RTL helpers */
-    [dir="rtl"] .lang{flex-direction:row-reverse}
-    [dir="rtl"] nav ul{flex-direction:row-reverse}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#0b132b;color:#e2e8f0;border-radius:8px;padding:.12rem .35rem}
-    /* print only COA */
-    @media print{
-      body{background:white}
-      header,.hero,.hide-print,.foot{display:none !important}
-      #coa{margin-top:0}
-    }
-  </style>
+<link rel="preload" as="image" href="hero-port.png" imagesrcset="hero-port.jpg">
+ 
 </head>
 <body>
 <header>
@@ -207,7 +38,7 @@
       <div class="logo">
   <img src="logo.png" alt="Temos Agro Trading Logo" style="height:60px; width:auto;">
 </div>
-      <span data-i18n="site.name">Euro Agri Trading — وسيط منتجات أبو قير للأسمدة</span>
+       <span class="brand-text" data-i18n="site.name">Euro Agri Trading — خدمات زراعية موثوقة</span>
     </div>
     <nav>
       <ul>
@@ -255,17 +86,18 @@
   <div class="container hero-grid">
     <div>
       <span class="pill" data-i18n="hero.pill">🔗 شركة وساطة مقرها التشيك ↔️ أوروبا</span>
-      <h1 data-i18n="hero.title">توريد أسمدة ومواد زراعية عالية الجودة من أبو قير إلى أوروبا</h1>
-      <p class="lead" data-i18n="hero.subtitle">
-        نقوم بالوساطة بين شركة أبو قير للأسمدة (الإسكندرية – مصر) ومشتري الاتحاد الأوروبي — منتجات معتمدة، مواصفات واضحة، وشحن مرن وفق شروط إنكوترمز.
-      </p>
+       <h1>AGRO SERVICES</h1>
+    <p class="lead">
+      نساعد المزارعين بوساطة توريد موثوقة، مواصفات واضحة، وشحن مرن وفق إنكوترمز —
+      <strong>لدينا أسعار تنافسية</strong>.
+    </p>
       <div class="cta">
         <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">اطلب عرض سعر الآن</a>
         <a class="btn btn-outline" href="#coa" data-i18n="hero.cta2">شاهد شهادة التحليل</a>
       </div>
-      <div class="muted" style="margin-top:.6rem" data-i18n="hero.note">
-        * لسنا الموقع الرسمي لشركة أبو قير؛ نحن وسيط وتسويق مستقل.
-      </div>
+       <div class="muted note" data-i18n="hero.note">
+      * نحن وسيط وتسويق مستقل ولسنا الموقع الرسمي لأي مُنتِج.
+    </div>
     </div>
     <div class="card">
       <h3 style="margin-top:0" data-i18n="products.title">منتج رئيسي</h3>
@@ -417,11 +249,12 @@
     <h2 data-i18n="about.title">من نحن</h2>
     <div class="grid cols-2">
       <div class="card">
-        <p class="muted" data-i18n="about.p1">
-          شركة وساطة مقرها التشيك تربط مشتري أوروبا بمنتجات شركة أبو قير للأسمدة في الإسكندرية – مصر، وبمنتجات زراعية مختارة. نركز على الشفافية والجودة وسرعة التنفيذ.
+       <p class="muted" data-i18n="about.p1">
+          شركة وساطة مقرها التشيك تربط مشتري أوروبا بمدخلات زراعية موثوقة. نركز على الشفافية والجودة والسرعة —
+          <strong data-i18n="about.pricing">وأسعار تنافسية عبر التوريد المباشر</strong>.
         </p>
         <p class="muted" data-i18n="about.p2">
-          نعمل كوسيط وتسويق مستقل لمنتجات أبو قير للأسمدة ومنتجات أخرى مختارة. لسنا الموقع الرسمي للشركة.
+          نعمل كوسيط وتسويق مستقل لمنتجات مختارة. لسنا الموقع الرسمي لأي مُنتِج.
         </p>
       </div>
       <div class="card">
