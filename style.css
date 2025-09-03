@@ -66,29 +66,31 @@ h2{font-size:clamp(1.4rem, 2.8vw, 2rem);margin:0 0 1rem}
 }
 /* بطاقات الهيرو أصغر */
 /* الكارت داخل الهيرو يكون طولي تحت النص */
-.hero .card{
-  max-width: 100%;          /* ياخد عرض الحاوية */
-  margin-top: 1.5rem;       /* مسافة فوقه */
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(4px);
-  border-radius: 12px;
+/* === HERO compact card === */
+.hero .card {
+  max-width: 500px;              /* عرض أصغر */
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;          /* حواف داخلية أقل */
+  font-size: 0.85rem;            /* خط أصغر */
+  background: rgba(255,255,255,0.6); /* خلفية شفافة */
+  backdrop-filter: blur(6px);    /* بلور بسيط */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* ظل خفيف */
 }
 
-.hero .card h3{
+.hero .card h3 {
   font-size: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.4rem;
 }
 
-.hero .card .tag{
+.hero .card .tag {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+}
+
+.hero .card .btn {
   font-size: 0.75rem;
-  padding: .2rem .45rem;
-}
-
-.hero .card .btn{
-  font-size: 0.8rem;
-  padding: .5rem .75rem;
+  padding: 0.45rem 0.7rem;
 }
 
 .hero-grid{
