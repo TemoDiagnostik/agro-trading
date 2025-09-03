@@ -11,45 +11,34 @@ body{
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
   color:var(--ink);
   background:linear-gradient(180deg,var(--paper),var(--paper-2));
+  overflow-x:hidden; /* مهم عشان الـ full-bleed */
 }
 a{text-decoration:none;color:var(--brand-ink)}
 a:hover{text-decoration:underline}
 .container{width:min(1180px,92vw);margin-inline:auto}
 
-/* === Header (شفاف تماماً) === */
-/* ===== Header (شبه شفاف فوق) ===== */
-header {
-  position:sticky; 
-  top:0; 
-  z-index:50;
-  background:rgba(255,255,255,0.85); /* أبيض لكن بشفافية */
+/* === Header: شبه شفاف بزجاجية === */
+header{
+  position:sticky; top:0; left:0; right:0; z-index:50;
+  background:rgba(255,255,255,.28);
   backdrop-filter:saturate(1.2) blur(6px);
-  border-bottom:1px solid rgba(226,232,240,0.6);
-}
-
-/* روابط الهيدر باللون الغامق */
-header nav a {
-  color:#0f172a !important; /* أسود/غامق */
-}
-
-/* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
-.hero .note {
-  color:#fff !important;   /* أبيض */
-  font-size:0.85rem;
-  opacity:0.9;
+  border-bottom:1px solid rgba(226,232,240,.35);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
 nav ul{display:flex;gap:.9rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
-nav a{padding:.45rem .7rem;border-radius:10px;color:#fff !important}
-nav a:hover{background:rgba(255,255,255,.15)}
+header nav a{padding:.45rem .7rem;border-radius:10px;color:#0f172a}
+header nav a:hover{background:rgba(15,23,42,.06)}
 
-/* === Hero (صورة بعرض الشاشة) === */
+/* === HERO: صورة بعرض الصفحة (full-bleed) === */
 .hero{
   position:relative;
-  min-height:100vh;
+  min-height:62vh; /* زي الموقع المرجعي؛ زوّدها لو عايز */
   padding:clamp(3rem,5vw,4rem) 0;
-  background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
+  /* خد العرض كله حتى لو جوّه layout ضيّق */
+  width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
+  background:#0b3d2e url("hero-port.png") center/cover no-repeat;
   color:#fff;
+  overflow:hidden;
 }
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
 .hero > .container{position:relative;z-index:1}
@@ -62,176 +51,42 @@ nav a:hover{background:rgba(255,255,255,.15)}
   background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
   font-weight:700;color:#fff
 }
+.hero .note{color:#fff;opacity:.9;font-size:.85rem}
 
 /* === Buttons === */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
   border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
 .hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
 
-/* زر رئيسي (أخضر) */
-.hero .cta .btn-primary{
-  background:#10b981;color:#fff;border:1px solid #10b981;
+.hero .btn-primary{
+  background:#10b981;border:1px solid #10b981;color:#fff;
   box-shadow:0 4px 14px rgba(16,185,129,.35);
 }
-.hero .cta .btn-primary:hover{background:#059669;border-color:#059669}
+.hero .btn-primary:hover{background:#059669;border-color:#059669}
 
-/* باقي الأزرار (شفافة بحد أبيض) */
-.hero .cta .btn-outline,
+.hero .btn-outline,
 .hero .card .btn{
   background:transparent;border:1px solid #fff;color:#fff;
 }
-.hero .cta .btn-outline:hover,
+.hero .btn-outline:hover,
 .hero .card .btn:hover{background:#fff;color:#0b132b}
 
-/* === Hero card (شفاف تماماً) === */
-.hero .card{
-  background:transparent;border:0;box-shadow:none;padding:.5rem 0;
-}
+/* === Card/Tags داخل الهيرو === */
+.hero .card{background:transparent;border:0;box-shadow:none;padding:.5rem 0}
 .hero .card h3,.hero .card p,.hero .card li,.hero .card a{color:#fff}
-
-/* Tags داخل الهيرو */
 .hero .tag{
-  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
-  color:#fff;
+  background:transparent;border:1px solid rgba(255,255,255,.8);color:#fff
 }
+.hero ul{list-style:disc;padding-inline-start:1.2rem}
+.hero ul li::marker{color:#fff}
 
-/* Footer */
+/* === Footer === */
 .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
 
-/* Print: hide hero/header */
+/* Print */
 @media print{header,.hero,.foot{display:none !important}}
 
-
-/* === Header: شفاف خفيف بزجاجية === */
-header{
-  position: sticky;
-  top: 0; left: 0; right: 0;
-  z-index: 50;
-  background: rgba(255,255,255,.28);     /* شفافية أخف */
-  backdrop-filter: saturate(1.2) blur(6px);
-  border-bottom: 1px solid rgba(226,232,240,.35);
-}
-
-/* === HERO: صورة بعرض الشاشة (full-bleed) === */
-.hero{
-  background: #0b3d2e url("hero-port.png") center/cover no-repeat !important;
-  min-height: 62vh;
-  /* خد الحافة لليمين/الشمال لحد أطراف الشاشة */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-.hero::before{ content:""; position:absolute; inset:0; background: rgba(0,0,0,.45); }
-.hero > .container{ position:relative; z-index:1; }
-
-/* === كتابة الهيرو أبيض بالكامل === */
-.hero h1,
-.hero .lead,
-.hero .pill,
-.hero .note,
-.hero p,
-.hero li{ color:#fff !important; }
-
-/* === أزرار الهيرو === */
-.hero .cta .btn.btn-primary{
-  background:#10b981 !important;
-  border:1px solid #10b981 !important;
-  color:#fff !important;
-  box-shadow:0 4px 14px rgba(16,185,129,.35);
-}
-.hero .cta .btn.btn-outline,
-.hero .card .btn{
-  background:transparent !important;
-  color:#fff !important;
-  border:1px solid #fff !important;
-  border-radius:8px;
-}
-.hero .cta .btn.btn-outline:hover,
-.hero .card .btn:hover{
-  background:#fff !important; color:#0b132b !important;
-}
-
-/* === التاجات/الشرائط اللي فيها P2O5… جوّه الهيرو === */
-.hero .tag,
-.hero .card .tag{
-  background: transparent !important;
-  color:#fff !important;
-  border:1px solid rgba(255,255,255,.8) !important;
-}
-
-/* نقط الليست تبان على الخلفية الغامقة */
-.hero ul{ list-style: disc; padding-inline-start:1.2rem; }
-.hero ul li::marker{ color:#fff; }
-
-/* --- شفاف للهيدر بلمسة زجاجية --- */
-header{
-  position:sticky; top:0; left:0; right:0; z-index:50;
-  background:rgba(255,255,255,.22) !important;       /* أخفّ */
-  border-bottom:1px solid rgba(226,232,240,.35) !important;
-  backdrop-filter:saturate(1.1) blur(6px) !important;
-}
-
-/* --- hero Full-bleed فعليًا مهما كان الcontainer --- */
-body{ overflow-x:hidden; }                            /* امنع سكرول أفقي */
-
-main.hero{
-  /* كسّر أي حدود/هوامش قديمة */
-  margin:0 !important;
-  padding:clamp(3rem,5vw,4rem) 0 !important;
-  border:0 !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-
-  /* اخطف عرض الشاشة كليًا */
-  position:relative;
-  width:100vw !important;
-  left:50% !important; right:50% !important;
-  margin-left:-50vw !important; margin-right:-50vw !important;
-
-  /* الخلفية والصورة */
-  background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
-  min-height:62vh;
-  overflow:hidden;
-}
-main.hero::before{ content:""; position:absolute; inset:0; background:rgba(0,0,0,.45) }
-main.hero > .container{ position:relative; z-index:1 }
-
-/* لو في أي radius على الcontainer داخل الهيرو */
-main.hero .container{ border-radius:0 !important; }
-
-/* نصوص/تاجات/أزرار داخل الهيرو = أبيض وحدود بيضاء */
-main.hero h1,
-main.hero .lead,
-main.hero .pill,
-main.hero .note,
-main.hero p,
-main.hero li,
-main.hero .muted{ color:#fff !important; }
-
-main.hero .tag{
-  background:transparent !important;
-  color:#fff !important;
-  border:1px solid rgba(255,255,255,.9) !important;
-}
-
-/* الأزرار داخل الهيرو */
-main.hero .cta .btn.btn-primary{
-  background:#10b981 !important; border:1px solid #10b981 !important; color:#fff !important;
-  box-shadow:0 4px 14px rgba(16,185,129,.35);
-}
-main.hero .cta .btn.btn-outline,
-main.hero .card .btn{
-  background:transparent !important;
-  border:1px solid #fff !important;
-  color:#fff !important;
-  border-radius:8px; padding:.45rem .9rem;
-}
-main.hero .cta .btn.btn-outline:hover,
-main.hero .card .btn:hover{
-  background:#fff !important; color:#0b132b !important;
-}
-
-/* موبايل: زوّد التعتيم */
+/* موبايل: تعتيم أعلى للصورة */
 @media (max-width:640px){
-  main.hero::before{ background:rgba(0,0,0,.55) }
+  .hero::before{background:rgba(0,0,0,.55)}
 }
