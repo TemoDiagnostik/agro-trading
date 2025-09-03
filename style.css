@@ -276,3 +276,40 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
 }
 .trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155; }
 .trust-banner strong{ color:#0f766e; }
+
+
+/* ===== توحيد أزرار المنتجات ===== */
+#products .btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.4rem;
+  padding:.5rem 1rem;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+/* زرار رئيسي — أخضر */
+#products .btn-primary {
+  background:#10b981;
+  border:1px solid #10b981;
+  color:#fff;
+  box-shadow:0 4px 14px rgba(16,185,129,.35);
+}
+#products .btn-primary:hover {
+  background:#059669;
+  border-color:#059669;
+}
+
+/* زرار Outline (هيبقى برضه أخضر موحّد) */
+#products .btn-outline {
+  background:transparent;
+  border:1px solid #10b981;
+  color:#10b981;
+}
+#products .btn-outline:hover {
+  background:#10b981;
+  color:#fff;
+}
