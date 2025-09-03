@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Megbízható mezőgazdasági bróker",
+
+  "nav.home": "Főoldal",
+  "nav.products": "Termékek",
+  "nav.coa": "Elemzési tanúsítvány",
+  "nav.logistics": "Logisztika és megfelelőség",
+  "nav.about": "Rólunk",
+  "nav.contact": "Kapcsolat",
+
+  "hero.pill": "Csehországi központú bróker ↔️ EU vásárlók",
+  "hero.cta": "Ajánlatot kérek",
+  "hero.cta2": "Tanúsítvány megtekintése",
+  "hero.note": "* Függetlenül működünk bróker/kereskedőként. Nem kapcsolódunk egyetlen gyártóhoz sem.",
+
+  "products.title": "Fő termék",
+  "products.lead": "Kőfoszfát — 26% P₂O₅ (referenciaminta)",
+  "products.spec1": "Szitálással osztályozva — őrléshez vagy közvetlen alkalmazáshoz kész",
+  "products.spec2": "Tanúsítvány mellékelve; vásárlóspecifikus elemzések elérhetők",
+  "products.viewCoa": "Tanúsítvány megnyitása",
+  "products.all": "Elérhető termékek",
+
+  "card.rock.title": "Kőfoszfát — 26%",
+  "card.rock.text": "Megbízható forrás, konszolidált szállítmányokkal EU kikötőkbe.",
+  "card.rock.cta": "Ajánlatot kérek",
+  "card.rock.coa": "Tanúsítvány megtekintése",
+
+  "log.ports": "Kikötők: Alexandria/Damietta",
+  "card.urea.title": "Karbamid / NPK (igény szerint)",
+  "card.urea.text": "További termékek (karbamid, MAP/DAP, NPK) kérésre elérhetők.",
+  "card.urea.cta": "Érdeklődj a karbamidról",
+
+  "generic.expand": "Bővítésre kész",
+
+  "card.custom.title": "Egyedi specifikációk",
+  "card.custom.text": "Szállítás, csomagolás és elemzések a vevő igényei szerint.",
+  "card.custom.cta": "Kérj egyedi specifikációkat",
+
+  "coa.title": "Elemzési tanúsítvány — Kőfoszfát 26%",
+  "coa.sub": "Referenciaminta (dátum: 2023.09.01). Minden szállítmányhoz friss tanúsítvány biztosítható.",
+
+  "coa.th.test": "Teszt",
+  "coa.th.method": "Módszer",
+  "coa.th.unit": "Egység",
+  "coa.th.result": "Eredmény",
+  "coa.th.temp": "Hőmérséklet",
+  "coa.th.hum": "Páratartalom",
+
+  "sieve.title": "Szitálási elemzés — 26% (P₂O₅=26.33%)",
+  "sieve.size": "Méret",
+  "sieve.percent": "Súlyszázalék %",
+
+  "coa.export": "Szitálási adatok exportálása CSV-be",
+  "coa.print": "PDF nyomtatása/mentése — Tanúsítvány",
+
+  "log.title": "Logisztika és megfelelőség",
+  "log.incoterms": "FOB / CFR / CIF / DDP rendeltetéstől függően — teljes nyomonkövetés és átlátható szerződések.",
+  "log.ports.h": "Kikötők és csomagolás",
+  "log.ports.p": "Tipikus rakodás Alexandria/Damietta kikötőkben — Egyiptom. Csomagolás: ömlesztve vagy Big-Bags.",
+  "log.compliance.h": "EU megfelelőség",
+  "log.compliance.p": "Származási dokumentumok, számlák és tanúsítvány. Megfelel az EU előírásainak.",
+
+  "about.title": "Rólunk",
+  "about.p1": "Csehországi központú bróker, amely összeköti az európai vásárlókat megbízható mezőgazdasági forrásokkal. Fókuszunk az átláthatóság, minőség, gyorsaság — és",
+  "about.pricing": "versenyképes árak közvetlen beszerzéssel",
+  "about.p2": "Függetlenül működünk bróker/kereskedőként. A gyártói neveket nem tesszük közzé a vevő–szállító bizalmának védelmében.",
+  "about.p3": "Harmadik fél által végzett vizsgálatok (SGS/BV) kérésre. Minták elérhetők a szerződés előtt.",
+
+  "contact.title": "Lépjen kapcsolatba velünk",
+  "form.name": "Név",
+  "form.email": "E-mail",
+  "form.message": "Üzenet",
+  "form.send": "Küldés",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Nem használunk analitikai sütiket. Ez az űrlap közvetlenül megnyitja az e-mail alkalmazást.",
+  "contact.details": "Kapcsolati adatok",
+  "contact.docs": "A szükséges dokumentumok (szerződések, számlák, tanúsítvány) a kérés jóváhagyása után kerülnek átadásra.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Független bróker/kereskedő. A védjegyek a tulajdonosaiké. Az oldal kizárólag kereskedelmi információkat tartalmaz."
+}
