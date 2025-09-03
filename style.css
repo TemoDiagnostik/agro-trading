@@ -163,32 +163,43 @@ header{
 .hero ul{ list-style: disc; padding-inline-start:1.2rem; }
 .hero ul li::marker{ color:#fff; }
 
-/* ==== HEADER: شفاف خفيف بزجاجية ==== */
+/* --- شفاف للهيدر بلمسة زجاجية --- */
 header{
-  position: sticky;
-  top: 0; left: 0; right: 0;
-  z-index: 50;
-  background: rgba(255,255,255,.24) !important;
-  backdrop-filter: saturate(1.2) blur(6px) !important;
-  border-bottom: 1px solid rgba(226,232,240,.35) !important;
+  position:sticky; top:0; left:0; right:0; z-index:50;
+  background:rgba(255,255,255,.22) !important;       /* أخفّ */
+  border-bottom:1px solid rgba(226,232,240,.35) !important;
+  backdrop-filter:saturate(1.1) blur(6px) !important;
 }
 
-/* ==== HERO: صورة بعرض الشاشة (Full-Bleed) مهما كان الcontainer ==== */
+/* --- hero Full-bleed فعليًا مهما كان الcontainer --- */
+body{ overflow-x:hidden; }                            /* امنع سكرول أفقي */
+
 main.hero{
-  position: relative;
-  width: 100vw !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  overflow: hidden;
-  background: #0b3d2e url("hero-port.png") center/cover no-repeat !important;
-  min-height: 62vh;
-}
-main.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
-main.hero > .container{position:relative;z-index:1}
+  /* كسّر أي حدود/هوامش قديمة */
+  margin:0 !important;
+  padding:clamp(3rem,5vw,4rem) 0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
 
-/* نصوص داخل الهيرو تكون أبيض — بما فيها .muted */
+  /* اخطف عرض الشاشة كليًا */
+  position:relative;
+  width:100vw !important;
+  left:50% !important; right:50% !important;
+  margin-left:-50vw !important; margin-right:-50vw !important;
+
+  /* الخلفية والصورة */
+  background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
+  min-height:62vh;
+  overflow:hidden;
+}
+main.hero::before{ content:""; position:absolute; inset:0; background:rgba(0,0,0,.45) }
+main.hero > .container{ position:relative; z-index:1 }
+
+/* لو في أي radius على الcontainer داخل الهيرو */
+main.hero .container{ border-radius:0 !important; }
+
+/* نصوص/تاجات/أزرار داخل الهيرو = أبيض وحدود بيضاء */
 main.hero h1,
 main.hero .lead,
 main.hero .pill,
@@ -197,18 +208,15 @@ main.hero p,
 main.hero li,
 main.hero .muted{ color:#fff !important; }
 
-/* التاجات داخل الهيرو (P2O5 …) */
 main.hero .tag{
-  background: transparent !important;
+  background:transparent !important;
   color:#fff !important;
-  border:1px solid rgba(255,255,255,.85) !important;
+  border:1px solid rgba(255,255,255,.9) !important;
 }
 
 /* الأزرار داخل الهيرو */
 main.hero .cta .btn.btn-primary{
-  background:#10b981 !important;
-  border:1px solid #10b981 !important;
-  color:#fff !important;
+  background:#10b981 !important; border:1px solid #10b981 !important; color:#fff !important;
   box-shadow:0 4px 14px rgba(16,185,129,.35);
 }
 main.hero .cta .btn.btn-outline,
@@ -216,14 +224,14 @@ main.hero .card .btn{
   background:transparent !important;
   border:1px solid #fff !important;
   color:#fff !important;
-  border-radius:8px;
+  border-radius:8px; padding:.45rem .9rem;
 }
 main.hero .cta .btn.btn-outline:hover,
 main.hero .card .btn:hover{
   background:#fff !important; color:#0b132b !important;
 }
 
-/* على الشاشات الصغيرة زوّد التعتيم شوية */
-@media (max-width: 640px){
-  main.hero::before{ background: rgba(0,0,0,.55) }
+/* موبايل: زوّد التعتيم */
+@media (max-width:640px){
+  main.hero::before{ background:rgba(0,0,0,.55) }
 }
