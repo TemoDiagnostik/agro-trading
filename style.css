@@ -194,7 +194,7 @@ header .logo-img{ height:88px !important; width:auto; display:block; }
   position:relative;
   width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
   min-height:85vh; padding:clamp(3rem,5vw,4rem) 0; overflow:hidden; color:#fff;
-  background:url("images/hero-port.png") center/cover no-repeat !important;
+  background:url("hero-port.png") center/cover no-repeat !important;
 }
 .hero-bleed > .container{ position:relative; z-index:1 }
 body{ overflow-x:hidden; }
