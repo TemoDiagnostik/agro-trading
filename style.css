@@ -90,3 +90,66 @@ header nav a:hover{background:rgba(15,23,42,.06)}
 @media (max-width:640px){
   .hero::before{background:rgba(0,0,0,.55)}
 }
+
+/* ===== FORCE TRUE FULL-BLEED HERO ===== */
+body{overflow-x:hidden !important;} /* امنع سحب أفقي لو فيه حسابات vw */
+
+main.hero{
+  position:relative !important;
+  z-index:0 !important;
+
+  /* اسحب الهيرو لعرض الشاشة بالكامل حتى لو جوا layout ضيق */
+  width:100vw !important;
+  margin-left:calc(50% - 50vw) !important;
+  margin-right:calc(50% - 50vw) !important;
+
+  /* إلغاء أي ستايل قديم محوّلها لكارت */
+  max-width:none !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  padding:clamp(3rem,5vw,4rem) 0 !important;
+
+  /* الخلفية */
+  background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
+  min-height:62vh !important;
+  overflow:visible !important;
+}
+
+/* طبقة تعتيم ثابتة */
+main.hero::before{
+  content:"" !important;
+  position:absolute !important; inset:0 !important;
+  background:rgba(0,0,0,.45) !important;
+}
+
+/* محتوى الهيرو يظل محدود داخل الـcontainer بدون تأثير على الخلفية */
+main.hero > .container{
+  position:relative !important; z-index:1 !important;
+  border-radius:0 !important; background:transparent !important; box-shadow:none !important;
+}
+
+/* نصوص وأزرار داخل الهيرو = أبيض */
+main.hero h1,
+main.hero .lead,
+main.hero .pill,
+main.hero .note,
+main.hero p,
+main.hero li{ color:#fff !important; }
+
+main.hero .btn-primary{
+  background:#10b981 !important; border:1px solid #10b981 !important; color:#fff !important;
+}
+main.hero .btn-outline,
+main.hero .card .btn{
+  background:transparent !important; color:#fff !important; border:1px solid #fff !important;
+}
+
+/* الهيدر شبه شفاف */
+header{
+  position:sticky !important; top:0; z-index:50;
+  background:rgba(255,255,255,.28) !important;
+  backdrop-filter:saturate(1.2) blur(6px) !important;
+  border-bottom:1px solid rgba(226,232,240,.35) !important;
+}
+header nav a{color:#0f172a !important;}
