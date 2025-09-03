@@ -383,12 +383,19 @@
   }
 
   async function loadDict(lang){
-    const tryCode = SUPPORTED.includes(lang) ? lang : 'en';
-    // ملاحظة مهمة: استخدم مسار نسبي عشان GitHub Pages ما يضيعش
-    const res = await fetch(`i18n/${tryCode}.json`, { cache: 'no-store' });
-    if (!res.ok) throw new Error('i18n fetch failed: '+res.status);
-    return await res.json();
+  // دايمًا حمِّل الإنجليزي كقاعدة
+  const base = await fetch('i18n/en.json', {cache:'no-store'}).then(r=>r.json());
+  if (lang === 'en') return base;
+
+  try {
+    const loc = await fetch(`i18n/${lang}.json`, {cache:'no-store'}).then(r=>r.json());
+    // ادمج: اللغة المختارة تغطي فوق الإنجليزي
+    return { ...base, ...loc };
+  } catch {
+    // لو الملف مش موجود/فيه خطأ، رجّع الإنجليزي
+    return base;
   }
+
 
   function applyI18n(dict, lang){
     // اضبط لغة/اتجاه الصفحة
