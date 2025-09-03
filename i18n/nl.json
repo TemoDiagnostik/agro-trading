@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Betrouwbare landbouwmakelaar",
+
+  "nav.home": "Home",
+  "nav.products": "Producten",
+  "nav.coa": "Analysecertificaat",
+  "nav.logistics": "Logistiek & Naleving",
+  "nav.about": "Over ons",
+  "nav.contact": "Contact",
+
+  "hero.pill": "Makelaarskantoor gevestigd in Tsjechië ↔️ Europese kopers",
+  "hero.cta": "Vraag een offerte aan",
+  "hero.cta2": "Bekijk certificaat",
+  "hero.note": "* Wij werken onafhankelijk als makelaar/marketeer. Niet verbonden aan een specifieke producent.",
+
+  "products.title": "Hoofdproduct",
+  "products.lead": "Ruwe fosfaat — Grade 26% P₂O₅ (referentiemonster)",
+  "products.spec1": "Gezeefd — klaar voor malen of directe toepassing",
+  "products.spec2": "Certificaat bijgevoegd; analyses op verzoek beschikbaar",
+  "products.viewCoa": "Open certificaat",
+  "products.all": "Beschikbare producten",
+
+  "card.rock.title": "Ruwe fosfaat — Grade 26%",
+  "card.rock.text": "Betrouwbare bron met geconsolideerde bulkleveringen naar EU-havens.",
+  "card.rock.cta": "Vraag een offerte aan",
+  "card.rock.coa": "Bekijk certificaat",
+
+  "log.ports": "Havens: Alexandrië / Damietta",
+  "card.urea.title": "Ureum / NPK (op aanvraag)",
+  "card.urea.text": "Extra producten (ureum, MAP/DAP, NPK) kunnen op aanvraag worden toegevoegd.",
+  "card.urea.cta": "Vraag naar ureum",
+
+  "generic.expand": "Klaar om uit te breiden",
+
+  "card.custom.title": "Aangepaste specificaties",
+  "card.custom.text": "Aangepaste levering, verpakking en analyses volgens de eisen van de klant.",
+  "card.custom.cta": "Vraag aangepaste specificatie",
+
+  "coa.title": "Analysecertificaat — Ruwe fosfaat Grade 26%",
+  "coa.sub": "Referentiemonster (datum: 01/09/2023). Een actueel certificaat kan per levering worden verstrekt.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Methode",
+  "coa.th.unit": "Eenheid",
+  "coa.th.result": "Resultaat",
+  "coa.th.temp": "Temp.",
+  "coa.th.hum": "Vochtigheid",
+
+  "sieve.title": "Zeefanalyse — Grade 26% (P₂O₅=26.33%)",
+  "sieve.size": "Maat",
+  "sieve.percent": "Gewichtspercentage",
+
+  "coa.export": "Exporteer zeefanalyse CSV",
+  "coa.print": "Print/Save PDF — Certificaat",
+
+  "log.title": "Logistiek & Naleving",
+  "log.incoterms": "FOB / CFR / CIF / DDP afhankelijk van bestemming — volledige zendingstracking en duidelijke contracten.",
+  "log.ports.h": "Havens & Verpakking",
+  "log.ports.p": "Typische verzending via Alexandrië/Damietta — Egypte. Verpakking: Bulk of Big-Bags.",
+  "log.compliance.h": "EU-naleving",
+  "log.compliance.p": "Oorsprongsdocumenten, facturen en certificaten. Voldoet aan EU-normen.",
+
+  "about.title": "Over ons",
+  "about.p1": "Makelaarskantoor gevestigd in Tsjechië dat Europese kopers verbindt met betrouwbare landbouwbronnen. Wij focussen op transparantie, kwaliteit en snelheid — en",
+  "about.pricing": "concurrerende prijzen via directe inkoop",
+  "about.p2": "Wij werken onafhankelijk als makelaar/marketeer. We tonen geen merknamen van leveranciers om vertrouwelijkheid te waarborgen.",
+  "about.p3": "Derdepartijtests (SGS/BV) op aanvraag. Monsters beschikbaar vóór contractering.",
+
+  "contact.title": "Neem contact op",
+  "form.name": "Naam",
+  "form.email": "E-mail",
+  "form.message": "Bericht",
+  "form.send": "Versturen",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Wij gebruiken geen analytische cookies. Dit formulier opent je e-mailapp direct.",
+  "contact.details": "Contactgegevens",
+  "contact.docs": "Benodigde documenten (contracten, facturen, certificaten) worden gedeeld na kwalificatie van het verzoek.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Onafhankelijke makelaar/marketeer. Handelsmerken behoren toe aan hun eigenaars. Pagina alleen voor commerciële informatie."
+}
