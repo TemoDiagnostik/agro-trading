@@ -102,3 +102,5 @@ main.hero > .container{position:relative;z-index:1;background:transparent}
 @media (max-width:640px){
   main.hero::before{background:rgba(0,0,0,.55)}
 }
+body{ background: #ccc !important; }
+main.hero{ outline: 3px solid red !important; }
