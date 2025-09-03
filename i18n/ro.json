@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Broker agricol de încredere",
+
+  "nav.home": "Acasă",
+  "nav.products": "Produse",
+  "nav.coa": "Certificat de analiză",
+  "nav.logistics": "Logistică & Conformitate",
+  "nav.about": "Despre noi",
+  "nav.contact": "Contact",
+
+  "hero.pill": "Brokeraj cu sediul în Cehia ↔️ Cumpărători europeni",
+  "hero.cta": "Cere o ofertă",
+  "hero.cta2": "Vezi certificatul",
+  "hero.note": "* Operăm independent ca broker/market-er. Nu suntem afiliați cu niciun producător anume.",
+
+  "products.title": "Produs principal",
+  "products.lead": "Fosfat natural — Grad 26% P₂O₅ (probă de referință)",
+  "products.spec1": "Sortat prin cernere — gata de măcinare sau aplicare directă",
+  "products.spec2": "Certificat atașat; analize suplimentare la cererea clientului",
+  "products.viewCoa": "Deschide certificatul",
+  "products.all": "Produse disponibile",
+
+  "card.rock.title": "Fosfat natural — Grad 26%",
+  "card.rock.text": "Sursă de încredere cu livrări bulk consolidate către porturile UE.",
+  "card.rock.cta": "Cere o ofertă",
+  "card.rock.coa": "Vezi certificatul",
+
+  "log.ports": "Porturi: Alexandria / Damietta",
+  "card.urea.title": "Uree / NPK (la cerere)",
+  "card.urea.text": "Linii suplimentare (Uree, MAP/DAP, NPK) pot fi adăugate la cerere.",
+  "card.urea.cta": "Întreabă despre uree",
+
+  "generic.expand": "Pregătit pentru extindere",
+
+  "card.custom.title": "Specificații personalizate",
+  "card.custom.text": "Livrare, ambalare și analize adaptate cerințelor clientului.",
+  "card.custom.cta": "Solicită specificații personalizate",
+
+  "coa.title": "Certificat de analiză — Fosfat natural Grad 26%",
+  "coa.sub": "Probă de referință (data: 01/09/2023). Un certificat actualizat poate fi furnizat pentru fiecare livrare.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Metodă",
+  "coa.th.unit": "Unitate",
+  "coa.th.result": "Rezultat",
+  "coa.th.temp": "Temp.",
+  "coa.th.hum": "Umiditate",
+
+  "sieve.title": "Analiză granulometrică — Grad 26% (P₂O₅=26.33%)",
+  "sieve.size": "Dimensiune",
+  "sieve.percent": "Procent în greutate",
+
+  "coa.export": "Exportă granulometria CSV",
+  "coa.print": "Printează/Salvează PDF — Certificat",
+
+  "log.title": "Logistică & Conformitate",
+  "log.incoterms": "FOB / CFR / CIF / DDP în funcție de destinație — urmărire completă a livrării și contracte clare.",
+  "log.ports.h": "Porturi & Ambalare",
+  "log.ports.p": "Încărcare tipică prin Alexandria/Damietta — Egipt. Ambalare: Bulk sau Big-Bags.",
+  "log.compliance.h": "Conformitate UE",
+  "log.compliance.p": "Documente de origine, facturi și certificate. Conform standardelor UE.",
+
+  "about.title": "Despre noi",
+  "about.p1": "Brokeraj cu sediul în Cehia care conectează cumpărătorii europeni cu surse agricole de încredere. Ne concentrăm pe transparență, calitate și viteză — și",
+  "about.pricing": "prețuri competitive prin achiziție directă",
+  "about.p2": "Acționăm independent ca broker/market-er. Nu afișăm public numele furnizorilor pentru a proteja confidențialitatea.",
+  "about.p3": "Teste de terță parte (SGS/BV) la cerere. Mostre disponibile înainte de contractare.",
+
+  "contact.title": "Contactează-ne",
+  "form.name": "Nume",
+  "form.email": "Email",
+  "form.message": "Mesaj",
+  "form.send": "Trimite",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Nu folosim cookie-uri analitice. Acest formular îți deschide direct aplicația de email.",
+  "contact.details": "Detalii de contact",
+  "contact.docs": "Documentele necesare (contracte, facturi, certificate) sunt partajate după calificarea cererii.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Broker/market-er independent. Mărcile comerciale aparțin proprietarilor. Pagina este doar pentru informare comercială."
+}
