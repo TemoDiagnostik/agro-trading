@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Luotettava maatalouden välittäjä",
+
+  "nav.home": "Etusivu",
+  "nav.products": "Tuotteet",
+  "nav.coa": "Analyysitodistus",
+  "nav.logistics": "Logistiikka & vaatimustenmukaisuus",
+  "nav.about": "Tietoa meistä",
+  "nav.contact": "Yhteystiedot",
+
+  "hero.pill": "Tšekissä toimiva välittäjä ↔️ EU-ostajat",
+  "hero.cta": "Pyydä tarjous",
+  "hero.cta2": "Näytä todistus",
+  "hero.note": "* Toimimme itsenäisesti välittäjänä/markkinoijana. Ei sidoksissa tiettyihin tuottajiin.",
+
+  "products.title": "Lipputuote",
+  "products.lead": "Kivifosfaatti — Grade 26% P₂O₅ (vertailunäyte)",
+  "products.spec1": "Seulottu — valmis jauhettavaksi tai suoraan käytettäväksi",
+  "products.spec2": "Analyysitodistus mukana; ostajakohtaiset analyysit mahdollisia",
+  "products.viewCoa": "Avaa todistus",
+  "products.all": "Saatavilla olevat tuotteet",
+
+  "card.rock.title": "Kivifosfaatti — 26%",
+  "card.rock.text": "Luotettava lähde EU-satamien bulk-toimituksiin.",
+  "card.rock.cta": "Pyydä tarjous",
+  "card.rock.coa": "Näytä todistus",
+
+  "log.ports": "Satamat: Aleksandria/Damietta",
+  "card.urea.title": "Urea / NPK (pyynnöstä)",
+  "card.urea.text": "Lisätuotteita (urea, MAP/DAP, NPK) voidaan lisätä tarpeen mukaan.",
+  "card.urea.cta": "Kysy ureasta",
+
+  "generic.expand": "Valmis laajentumaan",
+
+  "card.custom.title": "Mukautetut erittelyt",
+  "card.custom.text": "Räätälöity toimitus, pakkaus ja analyysit ostajan vaatimusten mukaan.",
+  "card.custom.cta": "Pyydä mukautettuja erittelyjä",
+
+  "coa.title": "Analyysitodistus — Kivifosfaatti 26%",
+  "coa.sub": "Vertailunäyte (päiväys: 01/09/2023). Uusi todistus voidaan toimittaa jokaiselle lähetykselle.",
+
+  "coa.th.test": "Testi",
+  "coa.th.method": "Menetelmä",
+  "coa.th.unit": "Yksikkö",
+  "coa.th.result": "Tulos",
+  "coa.th.temp": "Lämpötila",
+  "coa.th.hum": "Kosteus",
+
+  "sieve.title": "Seula-analyysi — Grade 26% (P₂O₅=26.33%)",
+  "sieve.size": "Koko",
+  "sieve.percent": "Painoprosentti %",
+
+  "coa.export": "Vie seula-analyysi CSV:nä",
+  "coa.print": "Tulosta/tallenna PDF — Todistus",
+
+  "log.title": "Logistiikka & vaatimustenmukaisuus",
+  "log.incoterms": "FOB / CFR / CIF / DDP määränpään mukaan — täydellinen seuranta ja selkeät sopimukset.",
+  "log.ports.h": "Satamat & pakkaus",
+  "log.ports.p": "Tyypillinen lastaus Aleksandria/Damietta — Egypti. Pakkaus: bulkki tai suursäkit.",
+  "log.compliance.h": "EU-vaatimustenmukaisuus",
+  "log.compliance.p": "Alkuperäasiakirjat, laskut ja todistukset. EU-standardien mukainen.",
+
+  "about.title": "Tietoa meistä",
+  "about.p1": "Tšekissä pääkonttoriaan pitävä välittäjä, joka yhdistää EU-ostajat luotettaviin maatalouden lähteisiin. Keskitymme läpinäkyvyyteen, laatuun, nopeuteen — ja",
+  "about.pricing": "kilpailukykyisiin hintoihin suoran hankinnan kautta",
+  "about.p2": "Toimimme itsenäisesti välittäjinä/markkinoijina. Emme julkaise tuottajien nimiä luottamuksellisuuden säilyttämiseksi.",
+  "about.p3": "Kolmannen osapuolen testit (SGS/BV) pyynnöstä. Näytteitä saatavilla ennen sopimusta.",
+
+  "contact.title": "Ota yhteyttä",
+  "form.name": "Nimi",
+  "form.email": "Sähköposti",
+  "form.message": "Viesti",
+  "form.send": "Lähetä",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Emme käytä analyyttisiä evästeitä. Tämä lomake avaa sähköpostisovelluksesi suoraan.",
+  "contact.details": "Yhteystiedot",
+  "contact.docs": "Vaadittavat asiakirjat (sopimukset, laskut, todistukset) jaetaan, kun pyyntö on hyväksytty.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Itsenäinen välittäjä/markkinoija. Tavaramerkit kuuluvat omistajilleen. Sivusto vain kaupalliseen tiedotukseen."
+}
