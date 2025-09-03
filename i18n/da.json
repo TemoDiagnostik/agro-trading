@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Pålidelig landbrugsbroker",
+
+  "nav.home": "Hjem",
+  "nav.products": "Produkter",
+  "nav.coa": "Analysecertifikat",
+  "nav.logistics": "Logistik & overholdelse",
+  "nav.about": "Om os",
+  "nav.contact": "Kontakt",
+
+  "hero.pill": "Broker baseret i Tjekkiet ↔️ EU-købere",
+  "hero.cta": "Anmod om tilbud",
+  "hero.cta2": "Se certifikat",
+  "hero.note": "* Vi opererer uafhængigt som broker/markedsfører. Ikke tilknyttet nogen specifik producent.",
+
+  "products.title": "Hovedprodukt",
+  "products.lead": "Rokfosfat — Grade 26% P₂O₅ (referenseprøve)",
+  "products.spec1": "Sorterede fraktioner — klar til formaling eller direkte anvendelse",
+  "products.spec2": "Certifikat vedlagt; kunde-specifikke analyser tilgængelige",
+  "products.viewCoa": "Åbn certifikat",
+  "products.all": "Tilgængelige produkter",
+
+  "card.rock.title": "Rokfosfat — 26%",
+  "card.rock.text": "Pålidelig kilde med konsoliderede bulkforsendelser til EU-havne.",
+  "card.rock.cta": "Anmod om tilbud",
+  "card.rock.coa": "Se certifikat",
+
+  "log.ports": "Havne: Alexandria/Damietta",
+  "card.urea.title": "Urea / NPK (efter anmodning)",
+  "card.urea.text": "Yderligere linjer (Urea, MAP/DAP, NPK) kan tilføjes efter behov.",
+  "card.urea.cta": "Forespørg om urea",
+
+  "generic.expand": "Klar til udvidelse",
+
+  "card.custom.title": "Tilpassede specifikationer",
+  "card.custom.text": "Skræddersyet levering, pakning og analyser efter køberens behov.",
+  "card.custom.cta": "Anmod om tilpassede specifikationer",
+
+  "coa.title": "Analysecertifikat — Rokfosfat 26%",
+  "coa.sub": "Referenceprøve (dato: 01/09/2023). Frisk certifikat kan leveres for hver forsendelse.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Metode",
+  "coa.th.unit": "Enhed",
+  "coa.th.result": "Resultat",
+  "coa.th.temp": "Temp.",
+  "coa.th.hum": "Fugtighed",
+
+  "sieve.title": "Sigtanalyse — Grade 26% (P₂O₅=26.33%)",
+  "sieve.size": "Størrelse",
+  "sieve.percent": "Procent vægt %",
+
+  "coa.export": "Eksporter sigtanalyse som CSV",
+  "coa.print": "Print/gem PDF — Certifikat",
+
+  "log.title": "Logistik & overholdelse",
+  "log.incoterms": "FOB / CFR / CIF / DDP afhængig af destination — fuld sporing og klare kontrakter.",
+  "log.ports.h": "Havne & pakning",
+  "log.ports.p": "Typisk lastning via Alexandria/Damietta — Egypten. Pakning: bulk eller Big-Bags.",
+  "log.compliance.h": "EU-overholdelse",
+  "log.compliance.p": "Oprindelsesdokumenter, fakturaer og certifikater. Overholder EU-standarder.",
+
+  "about.title": "Om os",
+  "about.p1": "Broker med hovedsæde i Tjekkiet, der forbinder europæiske købere med pålidelige landbrugskilder. Vi fokuserer på gennemsigtighed, kvalitet, hastighed — og",
+  "about.pricing": "konkurrencedygtige priser gennem direkte indkøb",
+  "about.p2": "Vi opererer uafhængigt som broker/markedsfører. Producentnavne offentliggøres ikke for at beskytte fortrolighed.",
+  "about.p3": "Tredjepartstests (SGS/BV) efter anmodning. Prøver tilgængelige inden kontrakt.",
+
+  "contact.title": "Kontakt os",
+  "form.name": "Navn",
+  "form.email": "E-mail",
+  "form.message": "Besked",
+  "form.send": "Send",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Vi bruger ikke analytiske cookies. Denne formular åbner din mail-app direkte.",
+  "contact.details": "Kontaktoplysninger",
+  "contact.docs": "Påkrævede dokumenter (kontrakter, fakturaer, certifikat) deles efter godkendelse af forespørgsel.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Uafhængig broker/markedsfører. Varemærker tilhører deres ejere. Side kun til kommerciel information."
+}
