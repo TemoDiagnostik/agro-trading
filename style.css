@@ -35,7 +35,7 @@ a{color:var(--brand-ink);text-decoration:none}
   height:64px;display:flex;align-items:center;gap:1rem;justify-content:space-between;
 }
 .brand{display:flex;align-items:center;gap:.6rem}
-.logo{height:40px;width:auto}
+.logo{height:60px;width:auto}
 .brand-text{font-weight:800;letter-spacing:.06em}
 .menu{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
 .menu a{padding:.5rem .7rem;border-radius:10px}
