@@ -1,4 +1,3 @@
-
 :root{
   --bg:#0b132b; --ink:#0f172a; --soft:#475569; --muted:#64748b;
   --brand:#2dd4bf; --brand-ink:#0f766e; --paper:#ffffff; --paper-2:#f8fafc;
@@ -16,7 +15,8 @@ body{
 a{text-decoration:none;color:var(--brand-ink)}
 a:hover{text-decoration:underline}
 .container{width:min(1180px,92vw);margin-inline:auto}
-
+.brand-text{ user-select:none; }
+header a, header .brand{ cursor:pointer; }
 /* === Header (شفاف تماماً) === */
 /* ===== Header (شبه شفاف فوق) ===== */
 header {
@@ -27,7 +27,8 @@ header {
   backdrop-filter:saturate(1.2) blur(6px);
   border-bottom:1px solid rgba(226,232,240,0.6);
 }
-
+header{ padding:.3rem 0; }
+header .logo-img{ height:42px; }
 /* روابط الهيدر باللون الغامق */
 header nav a {
   color:#0f172a !important; /* أسود/غامق */
@@ -45,24 +46,35 @@ nav a{padding:.45rem .7rem;border-radius:10px;color:#fff !important}
 nav a:hover{background:rgba(255,255,255,.15)}
 
 /* === Hero (صورة بعرض الشاشة) === */
-.hero{
-  position:relative;
-  min-height:100vh;
-  padding:clamp(3rem,5vw,4rem) 0;
-  background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
-  color:#fff;
-}
-.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
-.hero > .container{position:relative;z-index:1}
+/* === HERO: Full-bleed فعلياً === */
+.hero,
+.hero-bleed{
+  position: relative;
+  min-height: 85vh;                         /* زوّدها 90/100vh لو عايز */
+  padding: clamp(3rem,5vw,4rem) 0;
 
-.hero-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
-.hero h1{margin:.7rem 0 0;font-size:clamp(1.8rem,4vw,2.6rem);text-shadow:0 2px 10px rgba(0,0,0,.35)}
-.hero .lead{font-size:1.05rem;margin:.7rem 0 1.2rem;max-width:55ch}
-.hero .pill{
-  display:inline-block;padding:.35rem .65rem;border-radius:999px;
-  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
-  font-weight:700;color:#fff
+  /* خُد عرض الشاشة بالكامل */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background: url("images/hero-port.png") center/cover no-repeat !important;
+  color: #fff;
+  overflow: hidden;
 }
+
+.hero::before,
+.hero-bleed::before{
+  content: ""; position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);              /* شيلها لو مش عايز تعتيم */
+}
+
+.hero > .container,
+.hero-bleed > .container{
+  position: relative; z-index: 1;
+}
+
+body{ overflow-x: hidden; }                  /* امنع سكرول أفقي لو فيه فرق شريط التمرير */
 
 /* === Buttons === */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
@@ -99,5 +111,152 @@ nav a:hover{background:rgba(255,255,255,.15)}
 /* Footer */
 .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
 
-/* Print: hide hero/header */
-@media print{header,.hero,.foot{display:none !important}}
+
+.hero-bleed {
+  position: relative;
+  width: 100vw;                                
+  margin-left: calc(50% - 50vw);  /* يكسر الكونتينر */
+  margin-right: calc(50% - 50vw);
+  min-height: 85vh;                /* الطول قدامك تتحكم فيه */
+  
+  /* الخلفية صورة فقط، بدون أي ألوان */
+  background: url("hero-port.png") center/cover no-repeat !important;
+  
+  color: #fff;
+  overflow: hidden;
+}
+.hero-bleed::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.35); /* تقدر تخليها 0 لو مش عايز أي تعتيم */
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(3rem, 5vw, 4rem) 0;
+}
+/* ===== 1) وضوح النص فوق الصورة ===== */
+/* خيار A: خلّي النصوص/الروابط بيضاء */
+.hero-bleed h1,
+.hero-bleed .lead,
+.hero-bleed p,
+.hero-bleed li,
+.hero-bleed a{ color:#fff !important; }
+
+/* خلّي الشارات/التاجات والـpill واضحة بخلفية داكنة خفيفة */
+.hero-bleed .pill,
+.hero-bleed .tag{
+  background: rgba(0,0,0,.35) !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.55) !important;
+}
+
+/* الأزرار */
+.hero-bleed .btn-primary{
+  background:#10b981; border:1px solid #10b981; color:#fff;
+}
+.hero-bleed .btn-outline{
+  background:rgba(0,0,0,.28); border:1px solid #fff; color:#fff;
+}
+.hero-bleed .btn-outline:hover{ background:#fff; color:#0b132b }
+
+/* لو لسه الخلفية مزعجة، زوّد التعتيم العام للصورة */
+.hero-bleed::before{ background:rgba(0,0,0,.50) !important; }  /* غيّر .50 إلى .35 أو .6 حسب ما تحب */
+
+
+/* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
+header{
+  padding:.30rem 0 !important;     /* قلل الـpadding = بار أرفع */
+  background:rgba(255,255,255,.28);
+  backdrop-filter:saturate(1.2) blur(6px);
+  border-bottom:1px solid rgba(226,232,240,.35);
+}
+
+/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
+header .nav{ 
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; min-height:56px;        /* ارتفاع منطقي للبار */
+  padding:0 .2rem !important;
+}
+header .brand{ display:flex; align-items:center; gap:.6rem; }
+header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
+header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
+
+/* ===== 4) حجم اللوجو ===== */
+/* عندك في HTML height=100، لكن لو اللوجو طالع صغير فده لأن CSS تاني كان مصغّره.
+   اختار المقاس المطلوب هنا (اقترح 48–64) */
+header .logo-img{ height:88px !important; width:auto; display:block; }
+/* لو عايز فعلاً 100px كبّر الهيدر كمان:
+   header .nav{ min-height:92px; } header{ padding:.5rem 0; } */
+
+/* ===== Hero full-bleed ثابت (للتأكد) ===== */
+.hero-bleed{
+  position:relative;
+  width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
+  min-height:85vh; padding:clamp(3rem,5vw,4rem) 0; overflow:hidden; color:#fff;
+  background:url("hero-port.png") center/cover no-repeat !important;
+}
+.hero-bleed > .container{ position:relative; z-index:1 }
+body{ overflow-x:hidden; }
+/* 1) خلي View COA + Open COA نفس لون Request */
+.hero-bleed .btn-outline,
+.hero .btn-outline{
+  background:#10b981 !important;
+  border:1px solid #10b981 !important;
+  color:#fff !important;
+}
+.hero-bleed .btn-outline:hover,
+.hero .btn-outline:hover{
+  background:#059669 !important;
+  border-color:#059669 !important;
+  color:#fff !important;
+}
+
+/* 2) ارفع النصوص داخل الهيرو لأعلى */
+.hero-bleed{ 
+  min-height:85vh; /* عندك بالفعل؛ زوّد/قلل حسب ذوقك */
+  padding-top: 1.2rem !important;           /* كان كبير، قللناه */
+  padding-bottom: clamp(2.5rem,6vw,4rem) !important;
+}
+.hero-bleed .hero-content{ 
+  margin-top: 0 !important;
+  text-align: left;                          /* لليسار مناسب للإنجليزي */
+}
+
+/* لو عايز دعم قراءة أقوى فوق الصورة */
+.hero-bleed::before{ background: rgba(0,0,0,.50) !important; } /* عدّل .50 حسب الحاجة */
+
+/* 3) البار (الهيدر) أرفع وشفاف خفيف */
+header{
+  padding: .28rem 0 !important;
+  background: rgba(255,255,255,.18) !important;       /* شفافية أخف */
+  border-bottom: 1px solid rgba(226,232,240,.25) !important;
+  backdrop-filter: saturate(1.1) blur(6px) !important;
+}
+header .nav{ min-height: 54px !important; align-items:center !important; }
+header nav a{ padding:.45rem .7rem; line-height:1; }
+header .brand{ display:flex; align-items:center; gap:.6rem; }
+
+/* 4) حجم اللوجو الحقيقي */
+header .logo-img{ height:88px !important; width:auto !important; display:block; }
+
+/* تأكيد الـ full-bleed (لو فيه تعارض) */
+.hero-bleed,.hero{
+  width:100vw !important;
+  margin-left:calc(50% - 50vw) !important;
+  margin-right:calc(50% - 50vw) !important;
+  background: url("hero-port.png") center/cover no-repeat !important;
+  color:#fff !important;
+}
+
+@media (max-width:640px){
+  .hero-bleed .hero-content{ text-align:left; } /* يفضل يظل يسار */
+}
+
+
+.hero-bleed .hero-content{
+  background: rgba(0,0,0,.22);
+  padding: .9rem 1.1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
