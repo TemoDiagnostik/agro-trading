@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Corretor Agrícola de Confiança",
+
+  "nav.home": "Início",
+  "nav.products": "Produtos",
+  "nav.coa": "Certificado de Análise",
+  "nav.logistics": "Logística & Conformidade",
+  "nav.about": "Sobre nós",
+  "nav.contact": "Contato",
+
+  "hero.pill": "Corretagem com sede na Chéquia ↔️ Compradores da UE",
+  "hero.cta": "Solicitar cotação",
+  "hero.cta2": "Ver COA",
+  "hero.note": "* Atuamos de forma independente como corretor/distribuidor. Não estamos afiliados a nenhum produtor específico.",
+
+  "products.title": "Produto Principal",
+  "products.lead": "Fosfato de Rocha — Grau 26% P₂O₅ (amostra de referência)",
+  "products.spec1": "Classificado por peneiramento — pronto para moagem ou aplicação direta",
+  "products.spec2": "Acompanhado por COA; análises específicas sob demanda",
+  "products.viewCoa": "Abrir COA",
+  "products.all": "Produtos Disponíveis",
+
+  "card.rock.title": "Fosfato de Rocha — Grau 26%",
+  "card.rock.text": "Fonte confiável com remessas consolidadas a portos da UE.",
+  "card.rock.cta": "Solicitar cotação",
+  "card.rock.coa": "Ver COA",
+
+  "log.ports": "Portos: Alexandria/Damietta",
+  "card.urea.title": "Ureia / NPK (sob demanda)",
+  "card.urea.text": "Linhas adicionais (Ureia, MAP/DAP, NPK) podem ser adicionadas sob demanda.",
+  "card.urea.cta": "Perguntar sobre Ureia",
+
+  "generic.expand": "Pronto para expandir",
+
+  "card.custom.title": "Especificações Personalizadas",
+  "card.custom.text": "Fornecimento, embalagem e análises sob medida conforme os requisitos do comprador.",
+  "card.custom.cta": "Solicitar especificações personalizadas",
+
+  "coa.title": "Certificado de Análise — Fosfato de Rocha Grau 26%",
+  "coa.sub": "Amostra de referência (data: 01/09/2023). Novo COA pode ser fornecido por envio.",
+
+  "coa.th.test": "Teste",
+  "coa.th.method": "Método",
+  "coa.th.unit": "Unidade",
+  "coa.th.result": "Resultado",
+  "coa.th.temp": "Temp.",
+  "coa.th.hum": "Umidade",
+
+  "sieve.title": "Análise de Peneiramento — Grau 26% (P₂O₅=26.33%)",
+  "sieve.size": "Tamanho",
+  "sieve.percent": "Percentual %",
+
+  "coa.export": "Exportar peneiramento CSV",
+  "coa.print": "Imprimir/Salvar PDF — COA",
+
+  "log.title": "Logística & Conformidade",
+  "log.incoterms": "FOB / CFR / CIF / DDP dependendo do destino — rastreamento completo do envio e contratos claros.",
+  "log.ports.h": "Portos & Embalagem",
+  "log.ports.p": "Carregamento típico via Alexandria/Damietta — Egito. Embalagem: Granel ou Big-Bags.",
+  "log.compliance.h": "Conformidade UE",
+  "log.compliance.p": "Documentos de origem, faturas e COA. Em conformidade com os padrões da UE de bens e segurança.",
+
+  "about.title": "Sobre nós",
+  "about.p1": "Corretagem sediada na Chéquia conectando compradores europeus a insumos agrícolas confiáveis de fontes de confiança. Focamos em transparência, qualidade, velocidade — e",
+  "about.pricing": "preços competitivos por meio de fornecimento direto",
+  "about.p2": "Atuamos de forma independente como corretor/distribuidor. Não exibimos publicamente marcas de produtores para proteger a confidencialidade comprador-fornecedor.",
+  "about.p3": "Testes de terceiros (SGS/BV) sob demanda. Amostras disponíveis antes do contrato.",
+
+  "contact.title": "Entre em contato",
+  "form.name": "Nome",
+  "form.email": "Email",
+  "form.message": "Mensagem",
+  "form.send": "Enviar",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Não usamos cookies de análise. Este formulário abre seu aplicativo de email para envio direto.",
+  "contact.details": "Detalhes de contato",
+  "contact.docs": "Documentos necessários (contratos, faturas, COA) são compartilhados após a qualificação do pedido.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Corretor/distribuidor independente. As marcas comerciais pertencem aos seus proprietários. Página apenas para informações comerciais."
+}
