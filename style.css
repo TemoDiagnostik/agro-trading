@@ -90,6 +90,20 @@ h2{font-size:clamp(1.4rem, 2.8vw, 2rem);margin:0 0 1rem}
   font-size: 0.8rem;
   padding: .5rem .75rem;
 }
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1fr; /* عمود واحد بس */
+  gap: 1.5rem;
+}
+
+.hero-card{
+  max-width: 600px;       /* عرض مناسب */
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(4px);
+}
 /* ===== Hero ===== */
 .hero{
   position:relative;
