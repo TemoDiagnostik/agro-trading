@@ -1,106 +1,87 @@
-/* ========== Vars & base ========== */
 :root{
-  --bg:#0b132b; --ink:#0f172a; --muted:#64748b;
-  --brand:#10b981; --brand-ink:#0f766e;
-  --paper:#fff; --paper-2:#f8fafc; --ring:rgba(16,185,129,.35);
-  --radius:14px;
+  --bg:#0b132b; --ink:#0f172a; --soft:#475569; --muted:#64748b;
+  --brand:#2dd4bf; --brand-ink:#0f766e; --paper:#ffffff; --paper-2:#f8fafc;
+  --ring:rgba(45,212,191,.4); --radius:14px;
 }
+
+/* === Reset + Base === */
 *{box-sizing:border-box}
-html,body{height:100%}
+html,body{height:100%;margin:0}
 body{
-  margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-  color:var(--ink); background:linear-gradient(180deg,var(--paper),var(--paper-2));
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color:var(--ink);
+  background:linear-gradient(180deg,var(--paper),var(--paper-2));
 }
-a{color:var(--brand-ink); text-decoration:none}
-.container{width:min(1180px,92vw); margin-inline:auto}
+a{text-decoration:none;color:var(--brand-ink)}
+a:hover{text-decoration:underline}
+.container{width:min(1180px,92vw);margin-inline:auto}
 
-/* ========== Header (شفاف بالكامل) ========== */
+/* === Header (شفاف تماماً) === */
 header{
-  position:sticky; top:0; z-index:30;
-  background:transparent !important; border-bottom:0 !important; backdrop-filter:none !important;
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  background:transparent !important;
+  border:0 !important;
+  backdrop-filter:none !important;
 }
-.nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0}
-.brand{display:flex; align-items:center; gap:.55rem; font-weight:800; font-size:1rem}
-.logo img{height:44px; width:auto; display:block}
-nav ul{display:flex; gap:.9rem; list-style:none; margin:0; padding:0}
-nav a{padding:.45rem .7rem; border-radius:10px}
-nav a:hover{background:rgba(255,255,255,.10)}
-.lang{display:flex; align-items:center; gap:.45rem; border:1px solid #e2e8f0; border-radius:12px; padding:.25rem .5rem; background:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+nav ul{display:flex;gap:.9rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+nav a{padding:.45rem .7rem;border-radius:10px;color:#fff !important}
+nav a:hover{background:rgba(255,255,255,.15)}
 
-/* ========== Buttons (نظام واحد) ========== */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
-  padding:.55rem 1rem; border-radius:8px; border:1px solid transparent;
-  font-weight:700; line-height:1; cursor:pointer; transition:.2s ease;
-}
-.btn-primary{ background:var(--brand); color:#fff; border-color:var(--brand); box-shadow:0 4px 14px var(--ring) }
-.btn-primary:hover{ filter:brightness(1.05); transform:translateY(-1px) }
-.btn-outline{ background:#fff; color:#0b132b; border-color:#e2e8f0 }
-.btn-outline:hover{ background:#f8fafc }
-
-/* ========== Hero ========== */
+/* === Hero (صورة بعرض الشاشة) === */
 .hero{
-  position:relative; padding:clamp(3rem,5vw,4rem) 0;
+  position:relative;
+  min-height:100vh;
+  padding:clamp(3rem,5vw,4rem) 0;
   background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
   color:#fff;
 }
-.hero::before{content:""; position:absolute; inset:0; background:rgba(0,0,0,.45)}
-.hero > .container{ position:relative; z-index:1 }
+.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.hero > .container{position:relative;z-index:1}
 
-.hero-grid{ display:grid; gap:1.2rem; grid-template-columns:1.35fr .9fr; align-items:start }
-.hero h1{ margin:.7rem 0 0; font-size:clamp(1.8rem,4vw,2.6rem); letter-spacing:.02em; text-shadow:0 2px 10px rgba(0,0,0,.35) }
-.hero .lead{ font-size:1.05rem; margin:.7rem 0 1.2rem; max-width:55ch }
+.hero-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
+.hero h1{margin:.7rem 0 0;font-size:clamp(1.8rem,4vw,2.6rem);text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.hero .lead{font-size:1.05rem;margin:.7rem 0 1.2rem;max-width:55ch}
 .hero .pill{
-  display:inline-block; padding:.35rem .65rem; border-radius:999px;
-  background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.35); font-weight:700; color:#fff
+  display:inline-block;padding:.35rem .65rem;border-radius:999px;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  font-weight:700;color:#fff
 }
-.hero .cta{ display:flex; gap:.6rem; flex-wrap:wrap }
 
-/* كارت/محتوى جانبي داخل الهيرو—بدون خلفية */
+/* === Buttons === */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+  border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
+.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
+
+/* زر رئيسي (أخضر) */
+.hero .cta .btn-primary{
+  background:#10b981;color:#fff;border:1px solid #10b981;
+  box-shadow:0 4px 14px rgba(16,185,129,.35);
+}
+.hero .cta .btn-primary:hover{background:#059669;border-color:#059669}
+
+/* باقي الأزرار (شفافة بحد أبيض) */
+.hero .cta .btn-outline,
+.hero .card .btn{
+  background:transparent;border:1px solid #fff;color:#fff;
+}
+.hero .cta .btn-outline:hover,
+.hero .card .btn:hover{background:#fff;color:#0b132b}
+
+/* === Hero card (شفاف تماماً) === */
 .hero .card{
-  background:transparent; border:0; box-shadow:none; backdrop-filter:none; padding:.25rem 0;
+  background:transparent;border:0;box-shadow:none;padding:.5rem 0;
 }
-.hero .card, .hero .card *{ color:#fff }          /* نصوص بيضاء */
-.hero .card .btn, .hero .cta .btn.btn-outline{    /* كل الأزرار غير الأساسية شفافة */
-  background:transparent; border:1px solid #fff; color:#fff;
-}
-.hero .card .btn:hover, .hero .cta .btn.btn-outline:hover{
-  background:#fff; color:#0b132b;
+.hero .card h3,.hero .card p,.hero .card li,.hero .card a{color:#fff}
+
+/* Tags داخل الهيرو */
+.hero .tag{
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  color:#fff;
 }
 
-/* ========== Sections / grid / cards ========== */
-section{ padding:3rem 0 }
-h2{ font-size:clamp(1.4rem,2.8vw,2rem); margin:0 0 1rem }
-.grid{ display:grid; gap:1rem }
-.grid.cols-3{ grid-template-columns:repeat(3,1fr) }
-.grid.cols-2{ grid-template-columns:repeat(2,1fr) }
-.card{ background:#fff; border:1px solid #e2e8f0; border-radius:var(--radius); padding:1rem; box-shadow:0 1px 0 rgba(0,0,0,.02) }
-.muted{ color:var(--muted) }
-.tag{ display:inline-block; background:#f1f5f9; border:1px solid #e2e8f0; padding:.25rem .5rem; border-radius:999px; font-size:.85rem; margin:.15rem .15rem 0 0 }
+/* Footer */
+.foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
 
-/* ========== Tables / forms / footer ========== */
-.table{ width:100%; border-collapse:separate; border-spacing:0; background:#fff;
-  border:1px solid #e2e8f0; border-radius:12px; overflow:auto }
-.table th,.table td{ padding:.6rem .7rem; border-bottom:1px solid #eef2f7; text-align:start }
-.table thead th{ position:sticky; top:0; background:#f8fafc; font-weight:800; z-index:1 }
-
-input,textarea,select{ width:100%; padding:.7rem .8rem; border:1px solid #e2e8f0; border-radius:10px; font:inherit; background:#fff }
-input:focus,textarea:focus,select:focus{ border-color:var(--brand); box-shadow:0 0 0 4px rgba(16,185,129,.25) }
-textarea{ resize:vertical }
-.foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
-
-/* ========== RTL helpers ========== */
-[dir="rtl"] .lang{flex-direction:row-reverse}
-[dir="rtl"] nav ul{flex-direction:row-reverse}
-.kbd{ font-family:ui-monospace,Menlo,Consolas,monospace; background:#0b132b; color:#e2e8f0; border-radius:8px; padding:.12rem .35rem }
-
-/* ========== Responsive tweaks ========== */
-@media (max-width:960px){ .hero-grid{ grid-template-columns:1fr } }
-@media (max-width:640px){
-  .hero::before{ background:rgba(0,0,0,.55) }
-}
-@media print{
-  body{ background:#fff }
-  header,.hero,.hide-print,.foot{ display:none !important }
-  #coa{ margin-top:0 }
-}
+/* Print: hide hero/header */
+@media print{header,.hero,.foot{display:none !important}}
