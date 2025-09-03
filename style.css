@@ -185,7 +185,7 @@ header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-heig
 /* ===== 4) حجم اللوجو ===== */
 /* عندك في HTML height=100، لكن لو اللوجو طالع صغير فده لأن CSS تاني كان مصغّره.
    اختار المقاس المطلوب هنا (اقترح 48–64) */
-header .logo-img{ height:56px !important; width:auto; display:block; }
+header .logo-img{ height:88px !important; width:auto; display:block; }
 /* لو عايز فعلاً 100px كبّر الهيدر كمان:
    header .nav{ min-height:92px; } header{ padding:.5rem 0; } */
 
