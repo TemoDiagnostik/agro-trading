@@ -260,3 +260,19 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
   border-radius: 12px;
   display: inline-block;
 }
+
+
+
+
+
+
+/* Trust Banner */
+.trust-banner{
+  padding:.9rem 0;
+  background:#f1f5f9;
+  border-top:3px solid #84cc16;       /* خط أخضر بسيط زي المرجع */
+  border-bottom:1px solid #e2e8f0;
+  text-align:center;
+}
+.trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155; }
+.trust-banner strong{ color:#0f766e; }
