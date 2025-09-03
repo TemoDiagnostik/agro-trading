@@ -48,7 +48,7 @@ nav a:hover{background:rgba(255,255,255,.15)}
   position:relative;
   min-height:100vh;
   padding:clamp(3rem,5vw,4rem) 0;
-  background:#0b3d2e url("hero-port.png") center/cover no-repeat !important;
+  background: url("images/hero-port.png") center/cover no-repeat !important;
   color:#fff;
 }
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
