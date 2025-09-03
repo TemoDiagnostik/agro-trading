@@ -252,3 +252,11 @@ header .logo-img{ height:56px !important; width:auto !important; display:block; 
 @media (max-width:640px){
   .hero-bleed .hero-content{ text-align:left; } /* يفضل يظل يسار */
 }
+
+
+.hero-bleed .hero-content{
+  background: rgba(0,0,0,.22);
+  padding: .9rem 1.1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
