@@ -100,3 +100,65 @@ nav a:hover{background:rgba(255,255,255,.15)}
 
 /* Print: hide hero/header */
 @media print{header,.hero,.foot{display:none !important}}
+
+
+/* === Header: شفاف خفيف بزجاجية === */
+header{
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.28);     /* شفافية أخف */
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid rgba(226,232,240,.35);
+}
+
+/* === HERO: صورة بعرض الشاشة (full-bleed) === */
+.hero{
+  background: #0b3d2e url("hero-port.png") center/cover no-repeat !important;
+  min-height: 62vh;
+  /* خد الحافة لليمين/الشمال لحد أطراف الشاشة */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.hero::before{ content:""; position:absolute; inset:0; background: rgba(0,0,0,.45); }
+.hero > .container{ position:relative; z-index:1; }
+
+/* === كتابة الهيرو أبيض بالكامل === */
+.hero h1,
+.hero .lead,
+.hero .pill,
+.hero .note,
+.hero p,
+.hero li{ color:#fff !important; }
+
+/* === أزرار الهيرو === */
+.hero .cta .btn.btn-primary{
+  background:#10b981 !important;
+  border:1px solid #10b981 !important;
+  color:#fff !important;
+  box-shadow:0 4px 14px rgba(16,185,129,.35);
+}
+.hero .cta .btn.btn-outline,
+.hero .card .btn{
+  background:transparent !important;
+  color:#fff !important;
+  border:1px solid #fff !important;
+  border-radius:8px;
+}
+.hero .cta .btn.btn-outline:hover,
+.hero .card .btn:hover{
+  background:#fff !important; color:#0b132b !important;
+}
+
+/* === التاجات/الشرائط اللي فيها P2O5… جوّه الهيرو === */
+.hero .tag,
+.hero .card .tag{
+  background: transparent !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.8) !important;
+}
+
+/* نقط الليست تبان على الخلفية الغامقة */
+.hero ul{ list-style: disc; padding-inline-start:1.2rem; }
+.hero ul li::marker{ color:#fff; }
