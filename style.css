@@ -156,7 +156,7 @@ html, body, main, .page, .wrapper, .content, section {
   padding: clamp(3rem,5vw,4rem) 0 !important;
 
   /* الخلفية = الصورة فقط */
-  background: url("images/hero-port.png") center/cover no-repeat !important;
+  background: url("hero-port.png") center/cover no-repeat !important;
   min-height: 85vh !important;
   border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
 }
