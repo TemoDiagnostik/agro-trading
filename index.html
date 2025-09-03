@@ -383,18 +383,27 @@
   }
 
   async function loadDict(lang){
-  // دايمًا حمِّل الإنجليزي كقاعدة
-  const base = await fetch('i18n/en.json', {cache:'no-store'}).then(r=>r.json());
+  // helper آمنة لتحميل JSON مع لوج للأخطاء
+  const fetchJson = async (path) => {
+    try{
+      const r = await fetch(path, { cache: 'no-store' });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return await r.json();
+    }catch(err){
+      console.error('i18n load failed:', path, err);
+      return {}; // رجّع فاضي بدل ما الصفحة تقع
+    }
+  };
+
+  // دايمًا حمّل الإنجليزي كقاعدة
+  const base = await fetchJson('i18n/en.json');
+
   if (lang === 'en') return base;
 
-  try {
-    const loc = await fetch(`i18n/${lang}.json`, {cache:'no-store'}).then(r=>r.json());
-    // ادمج: اللغة المختارة تغطي فوق الإنجليزي
-    return { ...base, ...loc };
-  } catch {
-    // لو الملف مش موجود/فيه خطأ، رجّع الإنجليزي
-    return base;
-  }
+  // لو لغة تانية: ادمج فوق الإنجليزي (fallback لأي مفاتيح ناقصة)
+  const loc = await fetchJson(`i18n/${lang}.json`);
+  return { ...base, ...loc };
+}
 
 
   function applyI18n(dict, lang){
