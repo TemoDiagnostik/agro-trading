@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Zanesljiv agro posrednik",
+
+  "nav.home": "Domov",
+  "nav.products": "Izdelki",
+  "nav.coa": "COA",
+  "nav.logistics": "Logistika in skladnost",
+  "nav.about": "O nas",
+  "nav.contact": "Kontakt",
+
+  "hero.pill": "Posredništvo s sedežem na Češkem ↔️ Kupci v EU",
+  "hero.cta": "Zahtevajte ponudbo",
+  "hero.cta2": "Poglej COA",
+  "hero.note": "* Delujemo neodvisno kot posrednik/tržnik. Nismo povezani z nobeno specifično blagovno znamko proizvajalca.",
+
+  "products.title": "Glavni izdelek",
+  "products.lead": "Kamnit fosfat — Razred 26% P₂O₅ (referenčni vzorec)",
+  "products.spec1": "Razvrščeno s sejanjem — pripravljeno za mletje ali neposredno uporabo",
+  "products.spec2": "Priložen COA; možne so analize po meri kupca",
+  "products.viewCoa": "Odpri COA",
+  "products.all": "Razpoložljivi izdelki",
+
+  "card.rock.title": "Kamnit fosfat — Razred 26%",
+  "card.rock.text": "Zanesljiv vir s konsolidiranimi pošiljkami v razsutem stanju do pristanišč EU.",
+  "card.rock.cta": "Zahtevajte ponudbo",
+  "card.rock.coa": "Poglej COA",
+
+  "log.ports": "Pristanišča: Aleksandrija/Damietta",
+  "card.urea.title": "Urea / NPK (na zahtevo)",
+  "card.urea.text": "Dodatne linije (Urea, MAP/DAP, NPK) je mogoče dodati glede na povpraševanje.",
+  "card.urea.cta": "Povprašaj o urei",
+
+  "generic.expand": "Pripravljeno za širitev",
+
+  "card.custom.title": "Prilagojene specifikacije",
+  "card.custom.text": "Prilagojena dobava, pakiranje in analize po zahtevah kupca.",
+  "card.custom.cta": "Zahtevaj prilagojene specifikacije",
+
+  "coa.title": "Certifikat analize — Kamnit fosfat Razred 26%",
+  "coa.sub": "Referenčni vzorec (datum: 01/09/2023). Za vsako pošiljko je možno pridobiti svež COA.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Metoda",
+  "coa.th.unit": "Enota",
+  "coa.th.result": "Rezultat",
+  "coa.th.temp": "Temperatura",
+  "coa.th.hum": "Vlažnost",
+
+  "sieve.title": "Analiza sejanja — Razred 26% (P₂O₅=26.33%)",
+  "sieve.size": "Velikost",
+  "sieve.percent": "Odstotek teže %",
+
+  "coa.export": "Izvozi sejalno analizo CSV",
+  "coa.print": "Natisni/Shrani PDF — COA",
+
+  "log.title": "Logistika in skladnost",
+  "log.incoterms": "FOB / CFR / CIF / DDP glede na destinacijo — popolno sledenje pošiljk in jasne pogodbe.",
+  "log.ports.h": "Pristanišča & Pakiranje",
+  "log.ports.p": "Tipičen naklad preko Aleksandrije/Damiette — Egipt. Pakiranje: razsut ali Big-Bags.",
+  "log.compliance.h": "Skladnost z EU",
+  "log.compliance.p": "Dokumenti o poreklu, računi in COA. Skladno z EU standardi o blagu in varnosti.",
+
+  "about.title": "O nas",
+  "about.p1": "Posredništvo s sedežem na Češkem, ki povezuje evropske kupce z zanesljivimi kmetijskimi viri. Osredotočamo se na preglednost, kakovost, hitrost — in",
+  "about.pricing": "konkurenčne cene prek neposredne nabave",
+  "about.p2": "Delujemo neodvisno kot posrednik/tržnik. Ne razkrivamo imen proizvajalcev, da zaščitimo zaupnost kupcev in dobaviteljev.",
+  "about.p3": "Testi tretjih oseb (SGS/BV) na zahtevo. Vzorci so na voljo pred sklenitvijo pogodbe.",
+
+  "contact.title": "Kontaktirajte nas",
+  "form.name": "Ime",
+  "form.email": "E-pošta",
+  "form.message": "Sporočilo",
+  "form.send": "Pošlji",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Ne uporabljamo analitičnih piškotkov. Ta obrazec odpre vašo e-poštno aplikacijo za neposredno pošiljanje.",
+  "contact.details": "Kontaktni podatki",
+  "contact.docs": "Zahtevani dokumenti (pogodbe, računi, COA) so posredovani po kvalifikaciji povpraševanja.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Neodvisen posrednik/tržnik. Blagovne znamke pripadajo njihovim lastnikom. Stran je samo za komercialne informacije."
+}
