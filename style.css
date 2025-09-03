@@ -104,22 +104,21 @@ nav a:hover{background:rgba(255,255,255,.15)}
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  min-height: 75vh; /* زوّدها حسب ما تحب */
+  min-height: 75vh; /* ممكن تزودها 90vh لو عايز الصورة تملأ الشاشة أكتر */
   background: url("hero-port.png") center/cover no-repeat;
   color: #fff;
   overflow: hidden;
 }
+
 .hero-bleed::before {
   content: "";
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,.45);
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45); /* طبقة التعتيم */
 }
+
 .hero-content {
   position: relative;
   z-index: 1;
   padding: clamp(3rem, 5vw, 4rem) 0;
 }
-
-
-/* Print: hide hero/header */
-@media print{header,.hero,.foot{display:none !important}}
