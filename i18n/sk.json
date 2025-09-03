@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Dôveryhodný agro broker",
+
+  "nav.home": "Domov",
+  "nav.products": "Produkty",
+  "nav.coa": "COA",
+  "nav.logistics": "Logistika & Zhoda",
+  "nav.about": "O nás",
+  "nav.contact": "Kontakt",
+
+  "hero.pill": "Český broker ↔️ Európski kupujúci",
+  "hero.cta": "Požiadať o cenovú ponuku",
+  "hero.cta2": "Zobraziť COA",
+  "hero.note": "* Pôsobíme nezávisle ako broker/marketér. Nie sme prepojení so žiadnou konkrétnou značkou producenta.",
+
+  "products.title": "Hlavný produkt",
+  "products.lead": "Kamenný fosfát — Trieda 26% P₂O₅ (referenčná vzorka)",
+  "products.spec1": "Triedené preosievaním — pripravené na mletie alebo priamu aplikáciu",
+  "products.spec2": "Priložené COA; dostupné analýzy špecifické pre kupujúceho",
+  "products.viewCoa": "Otvoriť COA",
+  "products.all": "Dostupné produkty",
+
+  "card.rock.title": "Kamenný fosfát — Trieda 26%",
+  "card.rock.text": "Spoľahlivý zdroj s konsolidovanými zásielkami vo veľkom do prístavov EÚ.",
+  "card.rock.cta": "Požiadať o cenovú ponuku",
+  "card.rock.coa": "Zobraziť COA",
+
+  "log.ports": "Prístavy: Alexandrie/Damáta",
+  "card.urea.title": "Močovina / NPK (na požiadanie)",
+  "card.urea.text": "Ďalšie produkty (Močovina, MAP/DAP, NPK) môžu byť pridané podľa požiadaviek.",
+  "card.urea.cta": "Opýtať sa na močovinu",
+
+  "generic.expand": "Pripravené na rozšírenie",
+
+  "card.custom.title": "Špeciálne špecifikácie",
+  "card.custom.text": "Prispôsobené dodávky, balenie a analýzy podľa požiadaviek kupujúceho.",
+  "card.custom.cta": "Požiadať o špecifikácie",
+
+  "coa.title": "Certifikát analýzy — Kamenný fosfát Trieda 26%",
+  "coa.sub": "Referenčná vzorka (dátum: 01/09/2023). Čerstvé COA pre každú zásielku môže byť poskytnuté.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Metóda",
+  "coa.th.unit": "Jednotka",
+  "coa.th.result": "Výsledok",
+  "coa.th.temp": "Teplota",
+  "coa.th.hum": "Vlhkosť",
+
+  "sieve.title": "Analýza preosievania — Trieda 26% (P₂O₅=26.33%)",
+  "sieve.size": "Veľkosť",
+  "sieve.percent": "Percento hmotnosti %",
+
+  "coa.export": "Exportovať CSV preosievania",
+  "coa.print": "Tlačiť/Uložiť PDF — COA",
+
+  "log.title": "Logistika & Zhoda",
+  "log.incoterms": "FOB / CFR / CIF / DDP podľa destinácie — úplné sledovanie zásielky a jasné kontrakty.",
+  "log.ports.h": "Prístavy & Balenie",
+  "log.ports.p": "Typické nakládky cez Alexandriu/Damáta — Egypt. Balenie: voľne ložené alebo Big-Bags.",
+  "log.compliance.h": "Zhoda s EÚ",
+  "log.compliance.p": "Doklady o pôvode, faktúry a COA. V súlade s normami EÚ pre tovar a bezpečnosť.",
+
+  "about.title": "O nás",
+  "about.p1": "Broker so sídlom v Česku spájajúci európskych kupujúcich so spoľahlivými poľnohospodárskymi vstupmi z dôveryhodných zdrojov. Zameriavame sa na transparentnosť, kvalitu, rýchlosť — a",
+  "about.pricing": "konkurenčné ceny cez priame obstarávanie",
+  "about.p2": "Pôsobíme nezávisle ako broker/marketér. Nezverejňujeme mená producentov, aby sme chránili dôvernosť medzi kupujúcim a dodávateľom.",
+  "about.p3": "Testy tretích strán (SGS/BV) na požiadanie. Vzorky sú dostupné pred uzatvorením zmluvy.",
+
+  "contact.title": "Kontaktujte nás",
+  "form.name": "Meno",
+  "form.email": "Email",
+  "form.message": "Správa",
+  "form.send": "Odoslať",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Nepoužívame analytické cookies. Tento formulár otvorí váš mailový program na priame odoslanie.",
+  "contact.details": "Kontaktné údaje",
+  "contact.docs": "Požadované dokumenty (zmluvy, faktúry, COA) sú poskytnuté po kvalifikácii požiadavky.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Nezávislý broker/marketér. Ochranné známky patria ich vlastníkom. Stránka je určená len na obchodné informácie."
+}
