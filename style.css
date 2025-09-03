@@ -1,63 +1,104 @@
-/* ==== HERO: replica style (full-bleed + overlay + content container) ==== */
-:root{ --edge:calc(50% - 50vw); }
+/* =======================
+   Euro Agri — CLEAN STYLE
+   ======================= */
 
-.hero-bleed{
-  position:relative;
-  /* كسر أي قيود layout */
-  width:100vw; margin-left:var(--edge); margin-right:var(--edge);
-  min-height:78vh; /* قرّب جدًا من المرجع؛ زوّدها لو عايز */
-  isolation:isolate; /* يفصل الطبقات */
-  overflow:hidden;
-  border:0; border-radius:0; box-shadow:none;
+:root{
+  --bg:#0b132b; --ink:#0f172a; --soft:#475569; --muted:#64748b;
+  --brand:#2dd4bf; --brand-ink:#0f766e; --paper:#ffffff; --paper-2:#f8fafc;
+  --ring:rgba(45,212,191,.4); --radius:14px;
 }
 
-/* طبقة الصورة الخلفية */
-.hero-bleed .hero-media{
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.45)), /* تعتيم لطيف */
-    url("hero-port.png") center/cover no-repeat;
-  z-index:-1;
+/* === Reset + Base === */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color:var(--ink);
+  background:linear-gradient(180deg,var(--paper),var(--paper-2));
+  overflow-x:hidden; /* علشان 100vw ما تعملش شريط أفقي */
 }
+a{text-decoration:none;color:var(--brand-ink)}
+a:hover{text-decoration:underline}
+.container{width:min(1180px,92vw);margin-inline:auto}
 
-/* محتوى النص */
-.hero-bleed .hero-content{
-  position:relative; z-index:1;
-  padding:clamp(3rem,5vw,4rem) 0;
-  color:#fff;
-}
-.hero-bleed h1{ 
-  margin:.5rem 0 0;
-  font-size:clamp(2.2rem,6vw,3.6rem);
-  line-height:1.05;
-  text-transform:uppercase;
-  letter-spacing:.02em;
-  text-shadow:0 2px 14px rgba(0,0,0,.35);
-}
-.hero-bleed .lead{ margin:.4rem 0 1rem; font-size:1.1rem; opacity:.95 }
-.hero-bleed .pill{
-  display:inline-block; padding:.35rem .65rem; border-radius:999px;
-  background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.38); color:#fff; font-weight:700;
-}
-
-/* أزرار */
-.hero-bleed .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.6rem 1rem; border-radius:8px; font-weight:700 }
-.hero-bleed .btn-primary{ background:#10b981; border:1px solid #10b981; color:#fff; box-shadow:0 4px 14px rgba(16,185,129,.35) }
-.hero-bleed .btn-primary:hover{ background:#059669; border-color:#059669 }
-.hero-bleed .btn-outline{ background:transparent; border:1px solid #fff; color:#fff }
-.hero-bleed .btn-outline:hover{ background:#fff; color:#0b132b }
-
-/* الهيدر فوق الصورة */
+/* === Header: شبه شفاف بزجاجية === */
 header{
-  position:sticky; top:0; z-index:50;
+  position:sticky; top:0; left:0; right:0; z-index:50;
   background:rgba(255,255,255,.28);
-  -webkit-backdrop-filter:saturate(1.2) blur(6px); backdrop-filter:saturate(1.2) blur(6px);
+  backdrop-filter:saturate(1.2) blur(6px);
   border-bottom:1px solid rgba(226,232,240,.35);
 }
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+nav ul{display:flex;gap:.9rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+header nav a{padding:.45rem .7rem;border-radius:10px;color:#0f172a}
+header nav a:hover{background:rgba(15,23,42,.06)}
 
-/* موبايل: زوّد التعتيم */
+/* === HERO (full-bleed) ===
+   مهم: HTML يحتوي <main id="home" class="hero"> */
+main.hero{
+  position:relative;
+  min-height:62vh;
+  padding:clamp(3rem,5vw,4rem) 0;
+
+  /* خُد عرض الشاشة حتى لو الأب container */
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  /* إلغاء أي شكل كارت */
+  max-width:none; border:0; border-radius:0; box-shadow:none;
+
+  /* الخلفية */
+  background:#0b3d2e url("hero-port.png") center/cover no-repeat;
+  color:#fff;
+  overflow:hidden;
+}
+main.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+main.hero > .container{position:relative;z-index:1;background:transparent}
+
+/* Grid + typography */
+.hero-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
+.hero h1{margin:.7rem 0 0;font-size:clamp(1.8rem,4vw,2.6rem);text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.hero .lead{font-size:1.05rem;margin:.7rem 0 1.2rem;max-width:55ch}
+.hero .pill{
+  display:inline-block;padding:.35rem .65rem;border-radius:999px;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  font-weight:700;color:#fff
+}
+.hero .note,.hero p,.hero li{color:#fff;opacity:.95}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+  border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
+.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
+
+.hero .btn-primary{
+  background:#10b981;border:1px solid #10b981;color:#fff;
+  box-shadow:0 4px 14px rgba(16,185,129,.35);
+}
+.hero .btn-primary:hover{background:#059669;border-color:#059669}
+
+.hero .btn-outline,
+.hero .card .btn{
+  background:transparent;border:1px solid #fff;color:#fff;
+}
+.hero .btn-outline:hover,
+.hero .card .btn:hover{background:#fff;color:#0b132b}
+
+/* Card/Tags داخل الهيرو */
+.hero .card{background:transparent;border:0;box-shadow:none;padding:.5rem 0}
+.hero .card h3,.hero .card p,.hero .card li,.hero .card a{color:#fff}
+.hero .tag{background:transparent;border:1px solid rgba(255,255,255,.8);color:#fff}
+.hero ul{list-style:disc;padding-inline-start:1.2rem}
+.hero ul li::marker{color:#fff}
+
+/* === Footer === */
+.foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
+
+/* Print */
+@media print{header,main.hero,.foot{display:none !important}}
+
+/* Mobile: تعتيم أعلى للصورة */
 @media (max-width:640px){
-  .hero-bleed .hero-media{ background:
-    linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.6)),
-    url("hero-port.png") center/cover no-repeat; }
+  main.hero::before{background:rgba(0,0,0,.55)}
 }
