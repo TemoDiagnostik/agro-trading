@@ -31,6 +31,22 @@
   <link rel="preload" as="image" href="hero-port.png" imagesrcset="hero-port.png">
   <!-- CSS الخارجي فقط -->
   <link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=14">
+
+<!-- Set early lang/dir to avoid flicker -->
+<script>
+  (function () {
+    const RTL = new Set(['ar']);
+    const urlLang = new URLSearchParams(location.search).get('lang');
+    const saved   = localStorage.getItem('lang');
+    const nav     = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    const guess   = (urlLang || saved || nav || 'en').toLowerCase().split('-')[0];
+    const lang    = (['en','ar'].includes(guess) ? guess : 'en');
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+  })();
+</script>
+  
 </head>
 <body>
 <header>
@@ -409,77 +425,114 @@ const DICT = {
   /* بقية اللغات كما هي (اختصرتها لعدم الإطالة) */
 };
 
-const RTL = new Set(["ar"]);
-function pickBestLang(){
-  const urlParam = new URLSearchParams(location.search).get("lang");
-  if (urlParam && DICT[urlParam]) return urlParam;
-  const prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language||"en"]);
-  for(const tag of prefs){
-    const norm = (tag||"").toLowerCase();
-    const base = norm.split("-")[0];
-    if (DICT[norm]) return norm;
-    if (DICT[base]) return base;
+<script type="module">
+  // ===== i18n dynamic loader =====
+  const SUPPORTED = ['en','ar'];                // زوّد اللغات لاحقًا
+  const RTL = new Set(['ar']);                  // لغات من اليمين لليسار
+
+  function detectLang(){
+    const url = new URLSearchParams(location.search).get('lang');
+    if (url) return url.toLowerCase().split('-')[0];
+    const saved = localStorage.getItem('lang');
+    if (saved) return saved.toLowerCase();
+    const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    return String(nav).toLowerCase().split('-')[0];
   }
-  return "en";
-}
-function applyI18n(lang){
-  const dict = DICT[lang] || DICT.en;
-  document.documentElement.lang = lang;
-  document.documentElement.dir = RTL.has(lang) ? "rtl" : "ltr";
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key = el.getAttribute("data-i18n");
-    el.textContent = (dict[key] ?? DICT.en[key] ?? key);
+
+  async function loadDict(lang){
+    const tryCode = SUPPORTED.includes(lang) ? lang : 'en';
+    // ملاحظة مهمة: استخدم مسار نسبي عشان GitHub Pages ما يضيعش
+    const res = await fetch(`i18n/${tryCode}.json`, { cache: 'no-store' });
+    if (!res.ok) throw new Error('i18n fetch failed: '+res.status);
+    return await res.json();
+  }
+
+  function applyI18n(dict, lang){
+    // اضبط لغة/اتجاه الصفحة
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+
+    // طبّق النصوص
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key] != null) el.textContent = dict[key];
+    });
+
+    // العنوان
+    if (dict['site.name']) document.title = dict['site.name'];
+
+    // حدّث اختيار القائمة واحفظ
+    const sel = document.getElementById('langSelect');
+    if (sel) sel.value = lang;
+    localStorage.setItem('lang', lang);
+  }
+
+  async function setLang(lang){
+    try{
+      const dict = await loadDict(lang);
+      applyI18n(dict, lang);
+    }catch(err){
+      console.error(err);
+      if (lang !== 'en'){
+        const dict = await loadDict('en');
+        applyI18n(dict, 'en');
+      }
+    }
+  }
+
+  // بداية التشغيل
+  const startLang = detectLang();
+  setLang(startLang);
+
+  // تغيير من السلكتور
+  document.addEventListener('change', async (e)=>{
+    const sel = document.getElementById('langSelect');
+    if (e.target === sel && sel){
+      const lang = sel.value;
+      const u = new URL(location.href);
+      u.searchParams.set('lang', lang);
+      history.replaceState({}, '', u.toString());
+      await setLang(lang);
+    }
   });
-  if (dict["site.name"]) document.title = dict["site.name"];
-  localStorage.setItem("lang", lang);
-  const sel = document.getElementById("langSelect");
-  if (sel && sel.value !== lang) sel.value = lang;
-}
-document.getElementById("langSelect").addEventListener("change", e=>{
-  const lang = e.target.value;
-  const u = new URL(location.href); u.searchParams.set("lang", lang);
-  history.replaceState({}, "", u.toString());
-  applyI18n(lang);
-});
-applyI18n(pickBestLang());
 
-/* CSV export */
-function exportSievingCSV(){
-  const rows = [...document.querySelectorAll("#sieving tr")].map(tr =>
-    [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
-  );
-  const csv = rows.join("\n");
-  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "sieving-analysis.csv";
-  document.body.appendChild(a); a.click(); a.remove();
-}
+  // ===== CSV export (كما هو) =====
+  window.exportSievingCSV = function(){
+    const rows = [...document.querySelectorAll("#sieving tr")].map(tr =>
+      [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
+    );
+    const csv = rows.join("\n");
+    const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "sieving-analysis.csv";
+    document.body.appendChild(a); a.click(); a.remove();
+  };
 
-/* mailto */
-function sendMailto(form){
-  const data = new FormData(form);
-  const to = "trading@temosliving.de";
-  const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
-  const body = encodeURIComponent(
+  // ===== mailto (كما هو) =====
+  window.sendMailto = function(form){
+    const data = new FormData(form);
+    const to = "trading@temosliving.de";
+    const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
+    const body = encodeURIComponent(
 `Name: ${data.get("name")}
 Email: ${data.get("email")}
 
 Message:
 ${data.get("message")}
 `);
-  location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  return false;
-}
+    location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    return false;
+  };
 
-/* smooth scroll */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener("click", e=>{
-    const id = a.getAttribute("href").slice(1);
-    const el = document.getElementById(id);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
+  // ===== smooth scroll (كما هو) =====
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener("click", e=>{
+      const id = a.getAttribute("href").slice(1);
+      const el = document.getElementById(id);
+      if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
   });
-});
 </script>
 
 <!-- JSON-LD: Organization (basic SEO) -->
