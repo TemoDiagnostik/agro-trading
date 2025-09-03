@@ -98,5 +98,28 @@ nav a:hover{background:rgba(255,255,255,.15)}
 /* Footer */
 .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
 
+
+.hero-bleed {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 75vh; /* زوّدها حسب ما تحب */
+  background: url("hero-port.png") center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+.hero-bleed::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(3rem, 5vw, 4rem) 0;
+}
+
+
 /* Print: hide hero/header */
 @media print{header,.hero,.foot{display:none !important}}
