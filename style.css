@@ -15,7 +15,8 @@ body{
 a{text-decoration:none;color:var(--brand-ink)}
 a:hover{text-decoration:underline}
 .container{width:min(1180px,92vw);margin-inline:auto}
-
+.brand-text{ user-select:none; }
+header a, header .brand{ cursor:pointer; }
 /* === Header (شفاف تماماً) === */
 /* ===== Header (شبه شفاف فوق) ===== */
 header {
@@ -26,7 +27,8 @@ header {
   backdrop-filter:saturate(1.2) blur(6px);
   border-bottom:1px solid rgba(226,232,240,0.6);
 }
-
+header{ padding:.3rem 0; }
+header .logo-img{ height:42px; }
 /* روابط الهيدر باللون الغامق */
 header nav a {
   color:#0f172a !important; /* أسود/غامق */
@@ -44,12 +46,14 @@ nav a{padding:.45rem .7rem;border-radius:10px;color:#fff !important}
 nav a:hover{background:rgba(255,255,255,.15)}
 
 /* === Hero (صورة بعرض الشاشة) === */
-.hero {
+/* === HERO: Full-bleed فعلياً === */
+.hero,
+.hero-bleed{
   position: relative;
-  min-height: 100vh;
+  min-height: 85vh;                         /* زوّدها 90/100vh لو عايز */
   padding: clamp(3rem,5vw,4rem) 0;
 
-  /* يخلي الخلفية Full-Bleed */
+  /* خُد عرض الشاشة بالكامل */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -59,17 +63,18 @@ nav a:hover{background:rgba(255,255,255,.15)}
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.45);
+.hero::before,
+.hero-bleed::before{
+  content: ""; position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);              /* شيلها لو مش عايز تعتيم */
 }
 
-.hero > .container {
-  position: relative;
-  z-index: 1;
+.hero > .container,
+.hero-bleed > .container{
+  position: relative; z-index: 1;
 }
+
+body{ overflow-x: hidden; }                  /* امنع سكرول أفقي لو فيه فرق شريط التمرير */
 
 /* === Buttons === */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
