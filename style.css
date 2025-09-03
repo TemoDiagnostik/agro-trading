@@ -245,7 +245,7 @@ header .logo-img{ height:56px !important; width:auto !important; display:block; 
   width:100vw !important;
   margin-left:calc(50% - 50vw) !important;
   margin-right:calc(50% - 50vw) !important;
-  background: url("images/hero-port.png") center/cover no-repeat !important;
+  background: url("hero-port.png") center/cover no-repeat !important;
   color:#fff !important;
 }
 
