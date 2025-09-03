@@ -238,7 +238,7 @@ header nav a{ padding:.45rem .7rem; line-height:1; }
 header .brand{ display:flex; align-items:center; gap:.6rem; }
 
 /* 4) حجم اللوجو الحقيقي */
-header .logo-img{ height:56px !important; width:auto !important; display:block; }
+header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 /* تأكيد الـ full-bleed (لو فيه تعارض) */
 .hero-bleed,.hero{
