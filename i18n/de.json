@@ -1,0 +1,81 @@
+{
+  "site.name": "Euro Agri Trading — Vertrauenswürdiger Agrar-Broker",
+
+  "nav.home": "Startseite",
+  "nav.products": "Produkte",
+  "nav.coa": "Analysezertifikat",
+  "nav.logistics": "Logistik & Compliance",
+  "nav.about": "Über uns",
+  "nav.contact": "Kontakt",
+
+  "hero.pill": "Vermittlungsfirma mit Sitz in Tschechien ↔️ Käufer in der EU",
+  "hero.cta": "Angebot anfordern",
+  "hero.cta2": "Analysezertifikat ansehen",
+  "hero.note": "* Wir arbeiten unabhängig als Broker/Marketer. Keine direkte Verbindung zu Herstellermarken.",
+
+  "products.title": "Hauptprodukt",
+  "products.lead": "Naturphosphat — Qualität 26% P₂O₅ (Referenzprobe)",
+  "products.spec1": "Gesiebt — bereit zum Mahlen oder Direkteinsatz",
+  "products.spec2": "Analysezertifikat vorhanden; zusätzliche Analysen auf Anfrage",
+  "products.viewCoa": "Zertifikat öffnen",
+  "products.all": "Verfügbare Produkte",
+
+  "card.rock.title": "Naturphosphat — Qualität 26%",
+  "card.rock.text": "Zuverlässige Quelle mit konsolidierten Bulk-Lieferungen an EU-Häfen.",
+  "card.rock.cta": "Jetzt Angebot anfordern",
+  "card.rock.coa": "Analysezertifikat ansehen",
+
+  "log.ports": "Häfen: Alexandria / Damietta",
+  "card.urea.title": "Harnstoff / NPK (auf Anfrage)",
+  "card.urea.text": "Zusätzliche Produkte (Harnstoff, MAP/DAP, NPK) auf Anfrage verfügbar.",
+  "card.urea.cta": "Jetzt anfragen",
+
+  "generic.expand": "Bereit zur Erweiterung",
+
+  "card.custom.title": "Individuelle Spezifikationen",
+  "card.custom.text": "Lieferung, Verpackung und Analysen maßgeschneidert nach Kundenwunsch.",
+  "card.custom.cta": "Individuelle Spezifikationen anfordern",
+
+  "coa.title": "Analysezertifikat — Naturphosphat Qualität 26%",
+  "coa.sub": "Referenzprobe (Datum: 01/09/2023). Frisches Zertifikat für jede Lieferung verfügbar.",
+
+  "coa.th.test": "Test",
+  "coa.th.method": "Methode",
+  "coa.th.unit": "Einheit",
+  "coa.th.result": "Ergebnis",
+  "coa.th.temp": "Temperatur",
+  "coa.th.hum": "Feuchtigkeit",
+
+  "sieve.title": "Sieb-Analyse — Qualität 26% (P₂O₅=26.33%)",
+  "sieve.size": "Korngröße",
+  "sieve.percent": "Anteil in %",
+
+  "coa.export": "Sieb-Analyse als CSV exportieren",
+  "coa.print": "Drucken/Speichern als PDF — Analysezertifikat",
+
+  "log.title": "Logistik & Compliance",
+  "log.incoterms": "FOB / CFR / CIF / DDP abhängig vom Ziel — vollständiges Tracking und klare Verträge.",
+  "log.ports.h": "Häfen & Verpackung",
+  "log.ports.p": "Verladung normalerweise über Alexandria/Damietta (Ägypten). Verpackung: Bulk oder Big-Bags.",
+  "log.compliance.h": "EU-Compliance",
+  "log.compliance.p": "Ursprungsdokumente, Rechnungen und Analysezertifikat. Entspricht EU-Normen.",
+
+  "about.title": "Über uns",
+  "about.p1": "Broker mit Sitz in Tschechien, der europäische Käufer mit zuverlässigen landwirtschaftlichen Inputs verbindet. Fokus auf Transparenz, Qualität, Geschwindigkeit — und",
+  "about.pricing": "wettbewerbsfähige Preise durch Direktbeschaffung",
+  "about.p2": "Wir handeln unabhängig als Broker/Marketer. Keine öffentlichen Herstellernamen zum Schutz der Vertraulichkeit.",
+  "about.p3": "Drittanbieter-Tests (SGS/BV) auf Anfrage. Muster vor Vertragsabschluss verfügbar.",
+
+  "contact.title": "Kontakt aufnehmen",
+  "form.name": "Name",
+  "form.email": "E-Mail",
+  "form.message": "Nachricht",
+  "form.send": "Senden",
+  "contact.whatsapp": "WhatsApp",
+  "contact.note": "Wir verwenden keine Analyse-Cookies. Dieses Formular öffnet Ihre E-Mail-App direkt.",
+  "contact.details": "Kontaktdaten",
+  "contact.docs": "Erforderliche Dokumente (Verträge, Rechnungen, COA) werden nach Anfrage bereitgestellt.",
+  "site.company": "Euro Agri Trading s.r.o.",
+
+  "footer.note": "©️ 2025 — Unabhängiger Broker/Marketer. Markenrechte gehören ihren Eigentümern. Diese Seite dient nur kommerziellen Informationszwecken."
+}
