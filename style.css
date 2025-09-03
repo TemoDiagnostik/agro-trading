@@ -135,3 +135,41 @@ body{ overflow-x: hidden; }                  /* امنع سكرول أفقي ل�
   z-index: 1;
   padding: clamp(3rem, 5vw, 4rem) 0;
 }
+/* ===== FINAL OVERRIDES — FORCE TRUE FULL-BLEED ===== */
+
+/* امنع أي قصّ من الآباء */
+html, body, main, .page, .wrapper, .content, section {
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+/* الهيرو — يكسر حدود أي container */
+#home.hero-bleed,
+#home.hero {
+  position: relative !important;
+  z-index: 0 !important;
+
+  /* خُد عرض الشاشة كامل مهما كان الأب */
+  width: 100vw !important;
+  left: 50% !important; right: 50% !important;
+  margin-left: -50vw !important; margin-right: -50vw !important;
+  padding: clamp(3rem,5vw,4rem) 0 !important;
+
+  /* الخلفية = الصورة فقط */
+  background: url("images/hero-port.png") center/cover no-repeat !important;
+  min-height: 85vh !important;
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+}
+
+#home.hero-bleed::before,
+#home.hero::before{
+  content:"" !important; position:absolute !important; inset:0 !important;
+  background: rgba(0,0,0,.45) !important; /* لو مش عايز تعتيم خليه 0 */
+}
+
+#home.hero-bleed > .container,
+#home.hero > .container{ position:relative !important; z-index:1 !important }
+
+/* الهيدر أرفع شوية */
+header{ padding:.3rem 0 !important; }
+header .logo-img{ height:42px !important; }
