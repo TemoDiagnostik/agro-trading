@@ -484,48 +484,56 @@ html[dir="rtl"] #coa .cta-row{ direction:rtl; }
 
 
 
-/* عناوين الكروت مع أيقونة */
+/* ===== COA: عناوين الكروت مع أيقونة ===== */
 #coa .title-ico{
   display:flex; align-items:center; gap:.5rem;
-  font-weight:900; margin:0 0 .6rem; text-align:inherit;
+  font-weight:900; margin:0 0 .75rem;
 }
-#coa .title-ico::before{
-  content: attr(data-ico);
-  font-size: 1.15rem; line-height:1;
+#coa .title-ico::before{ content:attr(data-ico); line-height:1 }
+
+/* ===== تخطيط القسم ===== */
+#coa .container{ text-align: center; }             /* العنوان والوصف في المنتصف */
+#coa .coa-grid{
+  display:grid; gap:24px;
+  grid-template-columns: 1fr 1fr;
+  align-items:start;
+  text-align: initial;                              /* الجداول نفسها مش وسط */
+}
+@media(max-width: 980px){
+  #coa .coa-grid{ grid-template-columns: 1fr; }
 }
 
-/* تخطيط الكروت: جدولين جنب بعض */
-#coa .grid{ display:grid; gap:24px; }
-#coa .grid.cols-2{ grid-template-columns:repeat(2,1fr); align-items:start; }
+/* ===== الكروت ===== */
 #coa .card{
-  background:#fff; border-radius:10px; padding:1rem;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-  overflow-x:auto;             /* مهم للموبايل */
+  background:#fff; border-radius:12px; padding:16px;
+  box-shadow:0 6px 18px rgba(2,6,23,.06);
+  overflow:auto;   /* في حال عرض الجدول زاد */
 }
 
-/* تنسيق الجداول */
-#coa .table{ width:100%; border-collapse:collapse; font-size:.95rem; }
-#coa .table th,#coa .table td{
-  border:1px solid #e2e8f0; padding:8px 10px; text-align:center;
+/* ===== جداول نمط Excel ===== */
+#coa .table{
+  width:100%; border-collapse:separate; border-spacing:0;
+  font-size:.95rem;
 }
-#coa .table thead{ background:#f1f5f9; font-weight:700; }
-
-/* موبايل */
-@media (max-width:900px){
-  #coa .grid.cols-2{ grid-template-columns:1fr; }
-  #coa .table{ font-size:.88rem; }
+#coa .table thead th{
+  background:#f1f5f9;
+  font-weight:800;
+  border:1px solid #e2e8f0;
+  padding:10px;
 }
-
-
-
-.coa-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* جدولين جنب بعض */
-  gap: 24px;
+#coa .table tbody td{
+  border:1px solid #e2e8f0;
+  padding:10px;
 }
+#coa .table tbody tr:nth-child(even){ background:#fafafa; }
+#coa .table th, #coa .table td{ text-align:center; }
 
-@media(max-width: 900px) {
-  .coa-grid {
-    grid-template-columns: 1fr; /* موبايل يخليهم تحت بعض */
-  }
+/* RTL دعم العربية */
+html[lang="ar"] #coa .table{ direction: rtl; }
+html[lang="ar"] #coa .title-ico{ justify-content: center; }
+
+/* طباعة أنظف */
+@media print{
+  #coa .card{ box-shadow:none; }
+  #coa .container{ width:100% !important; }
 }
