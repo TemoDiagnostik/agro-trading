@@ -405,3 +405,36 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
 .feature .icon {
   font-size: 1.2rem;
 }
+
+
+/* products: make "tag" pills look like the new badges everywhere */
+#products .card > div:first-of-type{
+  display:flex; flex-wrap:wrap; align-items:center;
+  gap:.5rem; margin:.6rem 0;        /* مسافات موحّدة */
+}
+#products .tag{
+  display:inline-flex; align-items:center; gap:.35rem;
+  background:#f9fafb; border:1px solid #e2e8f0;
+  padding:.35rem .6rem; border-radius:8px;
+  font-weight:600; font-size:.92rem; color:var(--brand-ink);
+  transition:.2s;
+}
+#products .tag:hover{
+  background:#ecfdf5; border-color:#10b981; color:#059669;
+}
+
+/* equal height cards + buttons aligned at bottom */
+#products .card{ display:flex; flex-direction:column; }
+#products .card .cta{
+  margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap;
+}
+
+/* RTL صغار: اتجاه وموازنة */
+html[dir="rtl"] #products .card h3,
+html[dir="rtl"] #products .card p{ text-align:right; }
+html[dir="rtl"] #products .tag{ direction:rtl; }
+
+/* موبايل: محاذاة أفضل */
+@media (max-width:640px){
+  #products .card .cta{ justify-content:space-between; }
+}
