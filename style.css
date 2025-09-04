@@ -375,3 +375,33 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
 #services .service h3{ margin:16px; font-weight:800 }
 #services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
 #services .service:hover{ transform:translateY(-4px) }
+
+
+
+.features {
+  display: flex;
+  gap: 1rem;
+  margin: 0.8rem 0;
+  flex-wrap: wrap;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--brand-ink);
+  transition: 0.2s;
+}
+.feature:hover {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #059669;
+}
+.feature .icon {
+  font-size: 1.2rem;
+}
