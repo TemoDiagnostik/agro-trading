@@ -481,3 +481,37 @@ html[dir="rtl"] #products .tag{ direction:rtl; }
 
 /* توافق RTL بسيط */
 html[dir="rtl"] #coa .cta-row{ direction:rtl; }
+
+
+
+/* عناوين الكروت مع أيقونة */
+#coa .title-ico{
+  display:flex; align-items:center; gap:.5rem;
+  font-weight:900; margin:0 0 .6rem; text-align:inherit;
+}
+#coa .title-ico::before{
+  content: attr(data-ico);
+  font-size: 1.15rem; line-height:1;
+}
+
+/* تخطيط الكروت: جدولين جنب بعض */
+#coa .grid{ display:grid; gap:24px; }
+#coa .grid.cols-2{ grid-template-columns:repeat(2,1fr); align-items:start; }
+#coa .card{
+  background:#fff; border-radius:10px; padding:1rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  overflow-x:auto;             /* مهم للموبايل */
+}
+
+/* تنسيق الجداول */
+#coa .table{ width:100%; border-collapse:collapse; font-size:.95rem; }
+#coa .table th,#coa .table td{
+  border:1px solid #e2e8f0; padding:8px 10px; text-align:center;
+}
+#coa .table thead{ background:#f1f5f9; font-weight:700; }
+
+/* موبايل */
+@media (max-width:900px){
+  #coa .grid.cols-2{ grid-template-columns:1fr; }
+  #coa .table{ font-size:.88rem; }
+}
