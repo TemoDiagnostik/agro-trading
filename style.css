@@ -362,7 +362,7 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
 #services { padding:60px 0; background:#f9fafb }
 #services h2 { margin-bottom:24px; font-weight:900; text-align:center }
 #services .grid { display:grid; gap:24px }
-#services .grid.cols-2 { grid-template-columns:repeat(2,1fr) }
+#services .grid.cols-2 { grid-template-columns:repeat(3,1fr) }
 @media(max-width:768px){ #services .grid.cols-2{grid-template-columns:1fr} }
 
 #services .service{
