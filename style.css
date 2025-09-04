@@ -313,3 +313,46 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
   background:#10b981;
   color:#fff;
 }
+
+
+/* === Products layout (grid + cards) === */
+#products{padding:48px 0}
+#products .grid{display:grid;gap:16px}
+#products .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1000px){ #products .grid.cols-3{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:640px){  #products .grid.cols-3{grid-template-columns:1fr} }
+
+/* Card */
+#products .card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+  padding:18px; transition:.2s ease;
+}
+#products .card:hover{ transform:translateY(-2px) }
+
+/* Typography */
+#products h2{margin:0 0 18px;font-weight:900;letter-spacing:.2px}
+#products h3{margin:0 0 10px;font-weight:800;line-height:1.25}
+#products .muted{color:var(--soft);line-height:1.7;margin:.2rem 0 1rem}
+
+/* Tags (badges) */
+#products .tag{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 10px;border-radius:999px;
+  background:#f8fafc;border:1px dashed #e5e7eb;color:var(--soft);
+  font-size:.92rem;margin:0 6px 6px 0
+}
+
+/* CTA row */
+#products .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:12px}
+
+/* === COA toolbar (اللي فوق أزرار التصدير/الطباعة) === */
+#coa .hide-print{
+  display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap;
+  margin:8px 0 16px
+}
+
+/* اطبع من غير الأزرار */
+@media print{
+  .hide-print{display:none !important}
+}
