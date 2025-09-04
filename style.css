@@ -515,3 +515,17 @@ html[dir="rtl"] #coa .cta-row{ direction:rtl; }
   #coa .grid.cols-2{ grid-template-columns:1fr; }
   #coa .table{ font-size:.88rem; }
 }
+
+
+
+.coa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* جدولين جنب بعض */
+  gap: 24px;
+}
+
+@media(max-width: 900px) {
+  .coa-grid {
+    grid-template-columns: 1fr; /* موبايل يخليهم تحت بعض */
+  }
+}
