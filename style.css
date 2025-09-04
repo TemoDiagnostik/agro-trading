@@ -370,7 +370,9 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
   box-shadow:0 6px 18px rgba(2,6,23,.06);
   overflow:hidden; transition:.2s;
 }
-#services .service img{ width:100%; height:200px; object-fit:cover; display:block }
+#services .service img{
+  width:100%; height:220px; object-fit:cover; display:block
+}
 #services .service h3{ margin:16px; font-weight:800 }
 #services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
 #services .service:hover{ transform:translateY(-4px) }
