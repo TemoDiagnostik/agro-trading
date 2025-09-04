@@ -197,9 +197,11 @@
 
 <section id="coa">
   <div class="container">
-    <div class="hide-print" style="display:flex;gap:.6rem;justify-content:flex-end">
-      <button class="btn btn-outline" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
-      <button class="btn btn-primary" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
+    <!-- شريط أزرار موحّد -->
+    <div class="hide-print cta-row">
+      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات خاصة</a>
+      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
+      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
     </div>
   </div>
 </section>
