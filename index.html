@@ -240,24 +240,17 @@
 </section>
 
   
-   <section id="coa">
+  <section id="coa">
   <div class="container">
     <h2 data-i18n="coa.title">شهادة التحليل — Rock Phosphate Grade 26%</h2>
     <p class="muted" data-i18n="coa.sub">عَيّنة للاسترشاد (تاريخ: 01/09/2023). يمكن تقديم تحليل حديث لكل شحنة.</p>
 
+    <!-- two tables side-by-side; content is IDENTICAL to the original -->
     <div class="coa-grid">
-      <!-- جدول التحليل الكيميائي -->
+
+      <!-- Chemical analysis (same original table and values) -->
       <div class="card">
-        <h3 class="title-ico" data-ico="🧪" data-i18n="coa.chem">التحليل الكيميائي</h3>
-        <table class="table table-excel" aria-label="Certificate of Analysis">
-          <colgroup>
-            <col style="width:28%">
-            <col style="width:26%">
-            <col style="width:14%">
-            <col style="width:14%">
-            <col style="width:9%">
-            <col style="width:9%">
-          </colgroup>
+        <table class="table" aria-label="Certificate of Analysis">
           <thead>
             <tr>
               <th data-i18n="coa.th.test">الاختبار</th>
@@ -285,15 +278,10 @@
         </table>
       </div>
 
-      <!-- جدول التحليل المنخلي -->
+      <!-- Sieving analysis (same original table and values) -->
       <div class="card">
-        <h3 class="title-ico" data-ico="📊" data-i18n="sieve.title">التحليل المنخلي — Grade 26% (P₂O₅=26.33%)</h3>
-        <table id="sieving" class="table table-excel" aria-label="Sieving analysis">
-          <colgroup>
-            <col style="width:40%">
-            <col style="width:30%">
-            <col style="width:30%">
-          </colgroup>
+        <h3 style="margin-top:0" data-i18n="sieve.title">التحليل المنخلي — Grade 26% (P₂O₅=26.33%)</h3>
+        <table id="sieving" class="table" aria-label="Sieving analysis">
           <thead>
             <tr>
               <th data-i18n="sieve.size">المقاس</th>
@@ -319,6 +307,7 @@
           </tbody>
         </table>
       </div>
+
     </div>
   </div>
 </section>
