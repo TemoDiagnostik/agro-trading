@@ -438,3 +438,46 @@ html[dir="rtl"] #products .tag{ direction:rtl; }
 @media (max-width:640px){
   #products .card .cta{ justify-content:space-between; }
 }
+
+
+/* ===== توسيط أزرار COA وتوحيد المسافات ===== */
+#coa .cta-row{
+  /* نلغي أي inline style سابق */
+  display:flex !important;
+  justify-content:center !important;   /* توسيط */
+  align-items:center;
+  gap:.8rem !important;                 /* مسافة متساوية */
+  flex-wrap:wrap;
+  margin:1rem 0 2rem;
+}
+
+/* ===== توحيد شكل الأزرار (كلها Primary أخضر) ===== */
+#coa .btn,
+#products .card .btn{
+  background:#10b981;
+  border:1px solid #10b981;
+  color:#fff;
+  font-weight:700;
+  border-radius:10px;
+  transition:.2s ease;
+}
+#coa .btn:hover,
+#products .card .btn:hover{
+  background:#059669;
+  border-color:#059669;
+}
+
+/* ===== مقاس موحّد للأزرار ===== */
+.btn-wide{
+  min-width:220px;           /* نفس العرض */
+  padding:.7rem 1rem;        /* نفس الارتفاع */
+  text-align:center;
+}
+
+/* (اختياري) إخفاء زر الكرت الأخير على الشاشات الكبيرة لتفادي التكرار */
+@media (min-width: 900px){
+  #products .card:last-child .cta{ display:none; }
+}
+
+/* توافق RTL بسيط */
+html[dir="rtl"] #coa .cta-row{ direction:rtl; }
