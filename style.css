@@ -17,12 +17,41 @@ a:hover{text-decoration:underline}
 .container{width:min(1180px,92vw);margin-inline:auto}
 .brand-text{ user-select:none; }
 header a, header .brand{ cursor:pointer; }
-/* === Header (شفاف تماماً) === */
 
 
-header nav a {
-  color:#0f172a !important; /* أسود/غامق */
+/* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
+header {
+  padding: 0.18rem 0 !important; /* ← قللنا الارتفاع */
+  background: rgba(255,255,255,0.10) !important; /* ← شفافية أعلى */
+  border-bottom: 1px solid rgba(226,232,240,0.15) !important;
+  backdrop-filter: saturate(1.2) blur(4px) !important; /* ← تأثير بلوري خفيف */
 }
+
+/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;                      /* ممكن تقللها كمان لو حبيت */
+  min-height: 44px !important;     /* ← قللنا الارتفاع */
+  padding: 0 .3rem !important;     /* ← مسافات جانبية أقل */
+}
+header .brand{ display:flex; align-items:center; gap:.6rem; }
+header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
+header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
+
+
+/* 3) البار (الهيدر) أرفع وشفاف خفيف */
+
+header .nav{ min-height: 54px !important; align-items:center !important; }
+header nav a{ padding:.45rem .7rem; line-height:1; }
+header .brand{ display:flex; align-items:center; gap:.6rem; }
+
+/* 4) حجم اللوجو الحقيقي */
+header .logo-img{ height:88px !important; width:auto !important; display:block; }
+
+
+
 
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
 .hero .note {
@@ -153,33 +182,6 @@ body{ overflow-x: hidden; }                  /* امنع سكرول أفقي ل�
 .hero-bleed::before{ background:rgba(0,0,0,.50) !important; }  /* غيّر .50 إلى .35 أو .6 حسب ما تحب */
 
 
-/* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
-header {
-  padding: 0.18rem 0 !important; /* ← قللنا الارتفاع */
-  background: rgba(255,255,255,0.10) !important; /* ← شفافية أعلى */
-  border-bottom: 1px solid rgba(226,232,240,0.15) !important;
-  backdrop-filter: saturate(1.2) blur(4px) !important; /* ← تأثير بلوري خفيف */
-}
-
-/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
-header .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;                      /* ممكن تقللها كمان لو حبيت */
-  min-height: 44px !important;     /* ← قللنا الارتفاع */
-  padding: 0 .3rem !important;     /* ← مسافات جانبية أقل */
-}
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
-header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
-
-/* ===== 4) حجم اللوجو ===== */
-/* عندك في HTML height=100، لكن لو اللوجو طالع صغير فده لأن CSS تاني كان مصغّره.
-   اختار المقاس المطلوب هنا (اقترح 48–64) */
-header .logo-img{ height:88px !important; width:auto; display:block; }
-/* لو عايز فعلاً 100px كبّر الهيدر كمان:
-   header .nav{ min-height:92px; } header{ padding:.5rem 0; } */
 
 /* ===== Hero full-bleed ثابت (للتأكد) ===== */
 .hero-bleed{
@@ -218,14 +220,6 @@ body{ overflow-x:hidden; }
 /* لو عايز دعم قراءة أقوى فوق الصورة */
 .hero-bleed::before{ background: rgba(0,0,0,.50) !important; } /* عدّل .50 حسب الحاجة */
 
-/* 3) البار (الهيدر) أرفع وشفاف خفيف */
-
-header .nav{ min-height: 54px !important; align-items:center !important; }
-header nav a{ padding:.45rem .7rem; line-height:1; }
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-
-/* 4) حجم اللوجو الحقيقي */
-header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 /* تأكيد الـ full-bleed (لو فيه تعارض) */
 .hero-bleed,.hero{
