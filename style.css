@@ -172,10 +172,13 @@ header {
 }
 
 /* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
-header .nav{ 
-  display:flex; align-items:center; justify-content:space-between;
-  gap:1rem; min-height:56px;        /* ارتفاع منطقي للبار */
-  padding:0 .2rem !important;
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;                      /* ممكن تقللها كمان لو حبيت */
+  min-height: 44px !important;     /* ← قللنا الارتفاع */
+  padding: 0 .3rem !important;     /* ← مسافات جانبية أقل */
 }
 header .brand{ display:flex; align-items:center; gap:.6rem; }
 header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
