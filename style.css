@@ -19,9 +19,7 @@ a:hover{text-decoration:underline}
 header a, header .brand{ cursor:pointer; }
 /* === Header (شفاف تماماً) === */
 
-header{ padding:.3rem 0; }
-header .logo-img{ height:42px; }
-/* روابط الهيدر باللون الغامق */
+
 header nav a {
   color:#0f172a !important; /* أسود/غامق */
 }
