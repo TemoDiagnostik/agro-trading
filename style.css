@@ -23,10 +23,14 @@ header a, header .brand{ cursor:pointer; }
 /* الحل القاطع لشفافية وتضييق الهيدر */
 
 header {
-  padding: 0.18rem 0 !important; /* ← قللنا الارتفاع */
-  background: rgba(255,255,255,0.10) !important; /* ← شفافية أعلى */
-  border-bottom: 1px solid rgba(226,232,240,0.15) !important;
-  backdrop-filter: saturate(1.2) blur(4px) !important; /* ← تأثير بلوري خفيف */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent !important;
+  border-bottom: none;
+  padding: 0.5rem 0;
 }
 
 /* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
