@@ -64,9 +64,8 @@ nav a:hover{background:rgba(255,255,255,.15)}
 }
 
 .hero::before,
-.hero-bleed::before{
-  content: ""; position: absolute; inset: 0;
-  background: rgba(0,0,0,.45);              /* شيلها لو مش عايز تعتيم */
+.hero-bleed::before {
+  background: transparent !important;
 }
 
 .hero > .container,
