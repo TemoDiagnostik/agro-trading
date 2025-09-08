@@ -21,40 +21,31 @@ header a, header .brand{ cursor:pointer; }
 
 /* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
 header {
-  padding: 0.18rem 0 !important; /* ← قللنا الارتفاع */
-  background: rgba(255,255,255,0.10) !important; /* ← شفافية أعلى */
-  border-bottom: 1px solid rgba(226,232,240,0.15) !important;
-  backdrop-filter: saturate(1.2) blur(4px) !important; /* ← تأثير بلوري خفيف */
+  background: rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(6px) saturate(1.2) !important;
+  padding: 0.25rem 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
 }
 
-/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
-header .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;                      /* ممكن تقللها كمان لو حبيت */
-  min-height: 44px !important;     /* ← قللنا الارتفاع */
-  padding: 0 .3rem !important;     /* ← مسافات جانبية أقل */
+/* العناصر الداخلية كلها شفافة */
+header .container,
+header .nav,
+header .brand,
+header nav,
+header nav ul {
+  background: transparent !important;
 }
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
-header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
 
-
-/* 3) البار (الهيدر) أرفع وشفاف خفيف */
-
-header .nav{ min-height: 54px !important; align-items:center !important; }
-header nav a{ padding:.45rem .7rem; line-height:1; }
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-
-/* 4) حجم اللوجو الحقيقي */
-header .logo-img{ height:88px !important; width:auto !important; display:block; }
-
+/* النصوص */
 header nav a {
-  color:#0f172a !important; /* أسود/غامق */
+  color: #0f172a !important;
 }
 
-
+/* تصغير ارتفاع البار */
+header .nav {
+  min-height: 44px !important;
+  padding: 0 .6rem !important;
+}
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
 .hero .note {
   color:#fff !important;   /* أبيض */
