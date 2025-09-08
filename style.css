@@ -59,6 +59,12 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
 header nav a {
   color:#10b981 !important; /* أسود/غامق */
 }
+
+header * {
+  font-weight: 700 !important;
+}
+
+
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
 .hero .note {
   color:#fff !important;   /* أبيض */
