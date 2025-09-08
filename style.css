@@ -223,7 +223,7 @@ body{ overflow-x:hidden; }
 }
 
 /* لو عايز دعم قراءة أقوى فوق الصورة */
-.hero-bleed::before{ background: rgba(0,0,0,.50) !important; } /* عدّل .50 حسب الحاجة */
+
 
 /* 3) البار (الهيدر) أرفع وشفاف خفيف */
 header{
