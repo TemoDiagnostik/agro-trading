@@ -164,11 +164,11 @@ body{ overflow-x: hidden; }                  /* امنع سكرول أفقي ل�
 
 
 /* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
-header{
-  padding:.30rem 0 !important;     /* قلل الـpadding = بار أرفع */
-  background:rgba(255,255,255,.28);
-  backdrop-filter:saturate(1.2) blur(6px);
-  border-bottom:1px solid rgba(226,232,240,.35);
+header {
+  padding: 0.18rem 0 !important; /* ← قللنا الارتفاع */
+  background: rgba(255,255,255,0.10) !important; /* ← شفافية أعلى */
+  border-bottom: 1px solid rgba(226,232,240,0.15) !important;
+  backdrop-filter: saturate(1.2) blur(4px) !important; /* ← تأثير بلوري خفيف */
 }
 
 /* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
@@ -226,12 +226,7 @@ body{ overflow-x:hidden; }
 .hero-bleed::before{ background: rgba(0,0,0,.50) !important; } /* عدّل .50 حسب الحاجة */
 
 /* 3) البار (الهيدر) أرفع وشفاف خفيف */
-header{
-  padding: .28rem 0 !important;
-  background: rgba(255,255,255,.18) !important;       /* شفافية أخف */
-  border-bottom: 1px solid rgba(226,232,240,.25) !important;
-  backdrop-filter: saturate(1.1) blur(6px) !important;
-}
+
 header .nav{ min-height: 54px !important; align-items:center !important; }
 header nav a{ padding:.45rem .7rem; line-height:1; }
 header .brand{ display:flex; align-items:center; gap:.6rem; }
