@@ -39,7 +39,7 @@ header .nav {
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;                      /* ممكن تقللها كمان لو حبيت */
-  min-height: 44px !important;     /* ← قللنا الارتفاع */
+  min-height: 30px !important;     /* ← قللنا الارتفاع */
   padding: 0 .3rem !important;     /* ← مسافات جانبية أقل */
 }
 header .brand{ display:flex; align-items:center; gap:.6rem; }
