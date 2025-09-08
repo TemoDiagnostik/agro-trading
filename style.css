@@ -57,11 +57,13 @@ header .brand{ display:flex; align-items:center; gap:.6rem; }
 header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 header nav a {
-  color:#10b981 !important; /* أسود/غامق */
+  color:#10b981 !important; /* أخضر */
 }
 
-header * {
-  font-weight: 700 !important;
+.brand-text {
+  color: #2dd4bf !important;     /* نفس لون الروابط الخضراء */
+  font-weight: 700 !important;   /* خط تخين */
+  font-size: 1rem;               /* ممكن تزوده لو عايز الخط أكبر */
 }
 
 
