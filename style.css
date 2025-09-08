@@ -57,7 +57,7 @@ header .brand{ display:flex; align-items:center; gap:.6rem; }
 header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 header nav a {
-  color:#0f172a !important; /* أسود/غامق */
+  color:#10b981 !important; /* أسود/غامق */
 }
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
 .hero .note {
