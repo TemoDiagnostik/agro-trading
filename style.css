@@ -50,7 +50,9 @@ header .brand{ display:flex; align-items:center; gap:.6rem; }
 /* 4) حجم اللوجو الحقيقي */
 header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
-
+header nav a {
+  color:#0f172a !important; /* أسود/غامق */
+}
 
 
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
