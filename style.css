@@ -154,16 +154,8 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
   #products{ background-attachment: scroll; } /* أفضل للموبايل/آيOS */
 }
 
-/* شبكة مربعات ناعمة فوق الخلفية */
-#products::after{
-  content:"";
-  position:absolute; inset:0;
-  background-image:
-    linear-gradient(to right, rgba(2,6,23,.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(2,6,23,.06) 1px, transparent 1px);
-  background-size: 36px 36px;      /* حجم المربعات */
-  pointer-events:none;
-}
+
+
 
 /* المحتوى فوق الطبقات */
 #products > .container{ position: relative; z-index: 1; }
