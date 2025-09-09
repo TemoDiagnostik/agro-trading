@@ -147,7 +147,7 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
   background:
     /* طبقة تفتيح خفيفة لتحسين القراءة */
     linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.82)),
-    url("leaf-pattern.jpg") center/cover no-repeat;  /* ← خلفية الأوراق */
+    url("leaf-pattern.png") center/cover no-repeat;  /* ← خلفية الأوراق */
   background-attachment: fixed;    /* عمق بسيط على الديسكتوب */
 }
 @media (max-width:1024px){
