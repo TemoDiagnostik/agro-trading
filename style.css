@@ -57,11 +57,11 @@ header .brand{ display:flex; align-items:center; gap:.6rem; }
 header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 header nav a {
-  color:#10b981 !important; /* أخضر */
+  color:#333333 !important; /* أسود */
 }
 
 .brand-text {
-  color: #10b981 !important;     /* نفس لون الروابط الخضراء */
+  color: #333333 !important;     /* نفس لون الروابط الخضراء */
   font-weight: 800 !important;   /* خط تخين */
   font-size: 1rem;               /* ممكن تزوده لو عايز الخط أكبر */
 }
@@ -144,13 +144,7 @@ body{ overflow-x: hidden; }                  /* امنع سكرول أفقي ل�
 .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
 
 
-.hero-bleed {
-  position: relative;
-  width: 100vw;                                
-  margin-left: calc(50% - 50vw);  /* يكسر الكونتينر */
-  margin-right: calc(50% - 50vw);
-  min-height: 85vh;                /* الطول قدامك تتحكم فيه */
-  
+
   /* الخلفية صورة فقط، بدون أي ألوان */
   background: url("hero-port.png") center/cover no-repeat !important;
   
