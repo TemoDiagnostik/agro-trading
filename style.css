@@ -68,9 +68,8 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
 
 /* طبقة تفتيح خفيفة فوق الصورة لتوضيح النص الأسود */
 .hero::before,
-.hero-bleed::before{
-  content:""; position:absolute; inset:0;
-  background:rgba(255,255,255,.35); /* زوّدها/قلّلها حسب الحاجة */
+.hero-bleed::before {
+  background: transparent !important;
 }
 
 /* تأكيد ترتيب المحتوى فوق طبقة التفتيح */
@@ -81,19 +80,16 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
 .hero .note{ color:#222 !important; font-size:.95rem; opacity:1 }
 
 /* CTA Buttons داخل الهيرو */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:.4rem;
-  border-radius:8px; font-weight:700; cursor:pointer; transition:.2s ease;
-  padding:.55rem 1rem;
-}
-.hero .cta{ display:flex; gap:.6rem; flex-wrap:wrap }
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+  border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
+.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
 
 /* زر أساسي أخضر */
-.btn-primary{
-  background:var(--brand); color:#fff; border:1px solid var(--brand);
-  box-shadow:0 4px 14px var(--ring);
+.hero .cta .btn-primary{
+  background:#10b981;color:#fff;border:1px solid #10b981;
+  box-shadow:0 4px 14px rgba(16,185,129,.35);
 }
-.btn-primary:hover{ background:#059669; border-color:#059669 }
+.hero .cta .btn-primary:hover{background:#059669;border-color:#059669}
 
 /* أزرار Outline موحّدة */
 .btn-outline{
