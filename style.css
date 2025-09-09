@@ -80,31 +80,36 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
 .hero .note{ color:#222 !important; font-size:.95rem; opacity:1 }
 
 /* CTA Buttons داخل الهيرو */
+/* === Buttons === */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
   border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
 .hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
 
-/* زر أساسي أخضر */
+/* زر رئيسي (أخضر) */
 .hero .cta .btn-primary{
   background:#10b981;color:#fff;border:1px solid #10b981;
   box-shadow:0 4px 14px rgba(16,185,129,.35);
 }
 .hero .cta .btn-primary:hover{background:#059669;border-color:#059669}
 
-/* أزرار Outline موحّدة */
-.btn-outline{
-  background:transparent; border:1px solid var(--brand); color:var(--brand);
+/* باقي الأزرار (شفافة بحد أبيض) */
+.hero .cta .btn-outline,
+.hero .card .btn{
+  background:transparent;border:1px solid #fff;color:#fff;
 }
-.btn-outline:hover{ background:var(--brand); color:#fff }
+.hero .cta .btn-outline:hover,
+.hero .card .btn:hover{background:#fff;color:#0b132b}
 
-/* كروت النص داخل الهيرو – بلا خلفية */
-.hero .card{ background:transparent; border:0; box-shadow:none; padding:.5rem 0 }
-.hero .card h3,.hero .card p,.hero .card li,.hero .card a{ color:#111 } /* نصوص أسود */
+/* === Hero card (شفاف تماماً) === */
+.hero .card{
+  background:transparent;border:0;box-shadow:none;padding:.5rem 0;
+}
+.hero .card h3,.hero .card p,.hero .card li,.hero .card a{color:#fff}
 
-/* شارات/tags داخل الهيرو بلون باهت ليتناسق مع الأسود */
+/* Tags داخل الهيرو */
 .hero .tag{
-  background:rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.12);
-  color:#111;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  color:#fff;
 }
 
 /* ================== Trust Banner ================== */
