@@ -222,7 +222,7 @@ body{ overflow-x:hidden; }
 
 /* 2) ارفع النصوص داخل الهيرو لأعلى */
 .hero-bleed{ 
-  min-height:85vh; /* عندك بالفعل؛ زوّد/قلل حسب ذوقك */
+  min-height:75vh; /* عندك بالفعل؛ زوّد/قلل حسب ذوقك */
   padding-top: 1.2rem !important;           /* كان كبير، قللناه */
   padding-bottom: clamp(2.5rem,6vw,4rem) !important;
 }
