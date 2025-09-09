@@ -30,7 +30,7 @@ header {
   z-index: 100;
    background: rgba(255,255,255,0.20) !important; 
   border-bottom: none;
-  padding: 0.5rem 0;
+  padding: 0.1rem 0;
 }
 
 /* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
