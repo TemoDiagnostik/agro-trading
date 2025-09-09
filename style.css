@@ -57,11 +57,11 @@ header .brand{ display:flex; align-items:center; gap:.6rem; }
 header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 header nav a {
-  color:#333333 !important; /* أسود */
+  color:#000000 !important; /* أسود */
 }
 
 .brand-text {
-  color: #333333 !important;     /* نفس لون الروابط الخضراء */
+  color: #000000 !important;     /* نفس لون الروابط أسود */
   font-weight: 800 !important;   /* خط تخين */
   font-size: 1rem;               /* ممكن تزوده لو عايز الخط أكبر */
 }
@@ -69,7 +69,7 @@ header nav a {
 
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
 .hero .note {
-  color:#fff !important;   /* أبيض */
+  color:#222222 !important;   /* أبيض */
   font-size:0.85rem;
   opacity:0.9;
 }
