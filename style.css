@@ -112,6 +112,27 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
   color:#fff;
 }
 
+/* Footer */
+.foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
+
+/* خلّي الشارات/التاجات والـpill واضحة بخلفية داكنة خفيفة */
+.hero-bleed .pill,
+.hero-bleed .tag{
+  background: rgba(0,0,0,.35) !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.55) !important;
+}
+
+/* الأزرار */
+.hero-bleed .btn-primary{
+  background:#10b981; border:1px solid #10b981; color:#fff;
+}
+.hero-bleed .btn-outline{
+  background:rgba(0,0,0,.28); border:1px solid #fff; color:#fff;
+}
+.hero-bleed .btn-outline:hover{ background:#fff; color:#0b132b }
+
+
 /* ================== Trust Banner ================== */
 .trust-banner{
   padding:.9rem 0; background:#f1f5f9;
