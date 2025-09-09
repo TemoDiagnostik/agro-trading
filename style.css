@@ -172,6 +172,55 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
 
 @media (max-width:640px){ #products .card .cta{ justify-content:space-between } }
 
+/* ===== Products: hero-like background under cards ===== */
+#products{
+  position: relative;
+  padding: 64px 0; /* شوية فراغ أكتر عن الهيرو */
+  background: url("leaf-pattern.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* عمق بسيط على الديسكتوب */
+}
+
+/* طبقة تلطيف فوق الخلفية لتحسين القراءة */
+#products::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to bottom,
+      rgba(255,255,255,.85) 0%,
+      rgba(255,255,255,.70) 25%,
+      rgba(255,255,255,.55) 55%,
+      rgba(255,255,255,.35) 80%,
+      rgba(255,255,255,.20) 100%);
+  pointer-events:none;
+}
+
+/* محتوى المنتجات فوق الـoverlay */
+#products > .container{ position: relative; z-index: 1; }
+
+/* الكروت: وضوح أعلى فوق الخلفية */
+#products .card{
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(2px);
+}
+
+/* (اختياري) شبكة مربعات خفيفة جداً لإحساس مؤسسي */
+#products::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(0deg,   rgba(2,6,23,.04) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg,  rgba(2,6,23,.04) 0 1px, transparent 1px 24px);
+  pointer-events:none;
+}
+
+/* موبايل/تابلت: ألغِ التثبيت لتفادي لاجات iOS */
+@media (max-width: 1024px){
+  #products{ background-attachment: scroll; }
+}
+
+
+
+
 /* ================== COA Toolbar ================== */
 #coa .hide-print{ display:flex; gap:.6rem; justify-content:flex-end; flex-wrap:wrap; margin:8px 0 16px }
 @media print{ .hide-print{ display:none !important } }
