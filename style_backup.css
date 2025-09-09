@@ -17,26 +17,59 @@ a:hover{text-decoration:underline}
 .container{width:min(1180px,92vw);margin-inline:auto}
 .brand-text{ user-select:none; }
 header a, header .brand{ cursor:pointer; }
-/* === Header (شفاف تماماً) === */
-/* ===== Header (شبه شفاف فوق) ===== */
+
+
+/* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
+/* الحل القاطع لشفافية وتضييق الهيدر */
+
 header {
-  position:sticky; 
-  top:0; 
-  z-index:50;
-  background:rgba(255,255,255,0.85); /* أبيض لكن بشفافية */
-  backdrop-filter:saturate(1.2) blur(6px);
-  border-bottom:1px solid rgba(226,232,240,0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+   background: rgba(255,255,255,0.20) !important; 
+  border-bottom: none;
+  padding: 0.1rem 0;
 }
-header{ padding:.3rem 0; }
-header .logo-img{ height:42px; }
-/* روابط الهيدر باللون الغامق */
+
+/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;                      /* ممكن تقللها كمان لو حبيت */
+  min-height: 2px !important;     /* ← قللنا الارتفاع */
+  padding: 0 .01rem !important;     /* ← مسافات جانبية أقل */
+}
+header .brand{ display:flex; align-items:center; gap:.6rem; }
+header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
+header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
+
+
+/* 3) البار (الهيدر) أرفع وشفاف خفيف */
+
+header .nav{ min-height: 54px !important; align-items:center !important; }
+header nav a{ padding:.45rem .7rem; line-height:1; }
+header .brand{ display:flex; align-items:center; gap:.6rem; }
+
+/* 4) حجم اللوجو الحقيقي */
+header .logo-img{ height:88px !important; width:auto !important; display:block; }
+
 header nav a {
-  color:#0f172a !important; /* أسود/غامق */
+  color:#000000 !important; /* أسود */
 }
+
+.brand-text {
+  color: #000000 !important;     /* نفس لون الروابط أسود */
+  font-weight: 800 !important;   /* خط تخين */
+  font-size: 1rem;               /* ممكن تزوده لو عايز الخط أكبر */
+}
+
 
 /* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
 .hero .note {
-  color:#fff !important;   /* أبيض */
+  color:#222222 !important;   /* أبيض */
   font-size:0.85rem;
   opacity:0.9;
 }
@@ -64,9 +97,8 @@ nav a:hover{background:rgba(255,255,255,.15)}
 }
 
 .hero::before,
-.hero-bleed::before{
-  content: ""; position: absolute; inset: 0;
-  background: rgba(0,0,0,.45);              /* شيلها لو مش عايز تعتيم */
+.hero-bleed::before {
+  background: transparent !important;
 }
 
 .hero > .container,
@@ -112,13 +144,7 @@ body{ overflow-x: hidden; }                  /* امنع سكرول أفقي ل�
 .foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
 
 
-.hero-bleed {
-  position: relative;
-  width: 100vw;                                
-  margin-left: calc(50% - 50vw);  /* يكسر الكونتينر */
-  margin-right: calc(50% - 50vw);
-  min-height: 85vh;                /* الطول قدامك تتحكم فيه */
-  
+
   /* الخلفية صورة فقط، بدون أي ألوان */
   background: url("hero-port.png") center/cover no-repeat !important;
   
@@ -164,30 +190,6 @@ body{ overflow-x: hidden; }                  /* امنع سكرول أفقي ل�
 .hero-bleed::before{ background:rgba(0,0,0,.50) !important; }  /* غيّر .50 إلى .35 أو .6 حسب ما تحب */
 
 
-/* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
-header{
-  padding:.30rem 0 !important;     /* قلل الـpadding = بار أرفع */
-  background:rgba(255,255,255,.28);
-  backdrop-filter:saturate(1.2) blur(6px);
-  border-bottom:1px solid rgba(226,232,240,.35);
-}
-
-/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
-header .nav{ 
-  display:flex; align-items:center; justify-content:space-between;
-  gap:1rem; min-height:56px;        /* ارتفاع منطقي للبار */
-  padding:0 .2rem !important;
-}
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
-header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
-
-/* ===== 4) حجم اللوجو ===== */
-/* عندك في HTML height=100، لكن لو اللوجو طالع صغير فده لأن CSS تاني كان مصغّره.
-   اختار المقاس المطلوب هنا (اقترح 48–64) */
-header .logo-img{ height:88px !important; width:auto; display:block; }
-/* لو عايز فعلاً 100px كبّر الهيدر كمان:
-   header .nav{ min-height:92px; } header{ padding:.5rem 0; } */
 
 /* ===== Hero full-bleed ثابت (للتأكد) ===== */
 .hero-bleed{
@@ -214,7 +216,7 @@ body{ overflow-x:hidden; }
 
 /* 2) ارفع النصوص داخل الهيرو لأعلى */
 .hero-bleed{ 
-  min-height:85vh; /* عندك بالفعل؛ زوّد/قلل حسب ذوقك */
+  min-height:75vh; /* عندك بالفعل؛ زوّد/قلل حسب ذوقك */
   padding-top: 1.2rem !important;           /* كان كبير، قللناه */
   padding-bottom: clamp(2.5rem,6vw,4rem) !important;
 }
@@ -226,19 +228,6 @@ body{ overflow-x:hidden; }
 /* لو عايز دعم قراءة أقوى فوق الصورة */
 .hero-bleed::before{ background: rgba(0,0,0,.50) !important; } /* عدّل .50 حسب الحاجة */
 
-/* 3) البار (الهيدر) أرفع وشفاف خفيف */
-header{
-  padding: .28rem 0 !important;
-  background: rgba(255,255,255,.18) !important;       /* شفافية أخف */
-  border-bottom: 1px solid rgba(226,232,240,.25) !important;
-  backdrop-filter: saturate(1.1) blur(6px) !important;
-}
-header .nav{ min-height: 54px !important; align-items:center !important; }
-header nav a{ padding:.45rem .7rem; line-height:1; }
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-
-/* 4) حجم اللوجو الحقيقي */
-header .logo-img{ height:88px !important; width:auto !important; display:block; }
 
 /* تأكيد الـ full-bleed (لو فيه تعارض) */
 .hero-bleed,.hero{
@@ -254,9 +243,281 @@ header .logo-img{ height:88px !important; width:auto !important; display:block; 
 }
 
 
-.hero-bleed .hero-content{
-  background: rgba(0,0,0,.22);
-  padding: .9rem 1.1rem;
-  border-radius: 12px;
-  display: inline-block;
+
+
+
+
+
+
+
+/* Trust Banner */
+.trust-banner{
+  padding:.9rem 0;
+  background:#f1f5f9;
+  border-top:3px solid #84cc16;       /* خط أخضر بسيط زي المرجع */
+  border-bottom:1px solid #e2e8f0;
+  text-align:center;
+}
+.trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155; }
+.trust-banner strong{ color:#0f766e; }
+
+
+/* ===== توحيد أزرار المنتجات ===== */
+#products .btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.4rem;
+  padding:.5rem 1rem;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+/* زرار رئيسي — أخضر */
+#products .btn-primary {
+  background:#10b981;
+  border:1px solid #10b981;
+  color:#fff;
+  box-shadow:0 4px 14px rgba(16,185,129,.35);
+}
+#products .btn-primary:hover {
+  background:#059669;
+  border-color:#059669;
+}
+
+/* زرار Outline (هيبقى برضه أخضر موحّد) */
+#products .btn-outline {
+  background:transparent;
+  border:1px solid #10b981;
+  color:#10b981;
+}
+#products .btn-outline:hover {
+  background:#10b981;
+  color:#fff;
+}
+
+
+/* === Products layout (grid + cards) === */
+#products{padding:48px 0}
+#products .grid{display:grid;gap:16px}
+#products .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1000px){ #products .grid.cols-3{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:640px){  #products .grid.cols-3{grid-template-columns:1fr} }
+
+/* Card */
+#products .card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+  padding:18px; transition:.2s ease;
+}
+#products .card:hover{ transform:translateY(-2px) }
+
+/* Typography */
+#products h2{margin:0 0 18px;font-weight:900;letter-spacing:.2px}
+#products h3{margin:0 0 10px;font-weight:800;line-height:1.25}
+#products .muted{color:var(--soft);line-height:1.7;margin:.2rem 0 1rem}
+
+/* Tags (badges) */
+#products .tag{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 10px;border-radius:999px;
+  background:#f8fafc;border:1px dashed #e5e7eb;color:var(--soft);
+  font-size:.92rem;margin:0 6px 6px 0
+}
+
+/* CTA row */
+#products .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:12px}
+
+/* === COA toolbar (اللي فوق أزرار التصدير/الطباعة) === */
+#coa .hide-print{
+  display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap;
+  margin:8px 0 16px
+}
+
+/* اطبع من غير الأزرار */
+@media print{
+  .hide-print{display:none !important}
+}
+
+
+
+#services { padding:60px 0; background:#f9fafb }
+#services h2 { margin-bottom:24px; font-weight:900; text-align:center }
+#services .grid { display:grid; gap:24px }
+#services .grid.cols-2 { grid-template-columns:repeat(3,1fr) }
+@media(max-width:768px){ #services .grid.cols-2{grid-template-columns:1fr} }
+
+#services .service{
+  background:#fff; border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(2,6,23,.06);
+  overflow:hidden; transition:.2s;
+}
+#services .service img{ width:100%; height:auto; object-fit:contain; display:block }
+}
+#services .service h3{ margin:16px; font-weight:800 }
+#services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
+#services .service:hover{ transform:translateY(-4px) }
+
+
+
+.features {
+  display: flex;
+  gap: 1rem;
+  margin: 0.8rem 0;
+  flex-wrap: wrap;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--brand-ink);
+  transition: 0.2s;
+}
+.feature:hover {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #059669;
+}
+.feature .icon {
+  font-size: 1.2rem;
+}
+
+
+/* products: make "tag" pills look like the new badges everywhere */
+#products .card > div:first-of-type{
+  display:flex; flex-wrap:wrap; align-items:center;
+  gap:.5rem; margin:.6rem 0;        /* مسافات موحّدة */
+}
+#products .tag{
+  display:inline-flex; align-items:center; gap:.35rem;
+  background:#f9fafb; border:1px solid #e2e8f0;
+  padding:.35rem .6rem; border-radius:8px;
+  font-weight:600; font-size:.92rem; color:var(--brand-ink);
+  transition:.2s;
+}
+#products .tag:hover{
+  background:#ecfdf5; border-color:#10b981; color:#059669;
+}
+
+/* equal height cards + buttons aligned at bottom */
+#products .card{ display:flex; flex-direction:column; }
+#products .card .cta{
+  margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap;
+}
+
+/* RTL صغار: اتجاه وموازنة */
+html[dir="rtl"] #products .card h3,
+html[dir="rtl"] #products .card p{ text-align:right; }
+html[dir="rtl"] #products .tag{ direction:rtl; }
+
+/* موبايل: محاذاة أفضل */
+@media (max-width:640px){
+  #products .card .cta{ justify-content:space-between; }
+}
+
+
+/* ===== توسيط أزرار COA وتوحيد المسافات ===== */
+#coa .cta-row{
+  /* نلغي أي inline style سابق */
+  display:flex !important;
+  justify-content:center !important;   /* توسيط */
+  align-items:center;
+  gap:.8rem !important;                 /* مسافة متساوية */
+  flex-wrap:wrap;
+  margin:1rem 0 2rem;
+}
+
+/* ===== توحيد شكل الأزرار (كلها Primary أخضر) ===== */
+#coa .btn,
+#products .card .btn{
+  background:#10b981;
+  border:1px solid #10b981;
+  color:#fff;
+  font-weight:700;
+  border-radius:10px;
+  transition:.2s ease;
+}
+#coa .btn:hover,
+#products .card .btn:hover{
+  background:#059669;
+  border-color:#059669;
+}
+
+/* ===== مقاس موحّد للأزرار ===== */
+.btn-wide{
+  min-width:220px;           /* نفس العرض */
+  padding:.7rem 1rem;        /* نفس الارتفاع */
+  text-align:center;
+}
+
+/* (اختياري) إخفاء زر الكرت الأخير على الشاشات الكبيرة لتفادي التكرار */
+@media (min-width: 900px){
+  #products .card:last-child .cta{ display:none; }
+}
+
+/* توافق RTL بسيط */
+html[dir="rtl"] #coa .cta-row{ direction:rtl; }
+
+
+
+/* ===== COA: عناوين الكروت مع أيقونة ===== */
+#coa .title-ico{
+  display:flex; align-items:center; gap:.5rem;
+  font-weight:900; margin:0 0 .75rem;
+}
+#coa .title-ico::before{ content:attr(data-ico); line-height:1 }
+
+/* ===== تخطيط القسم ===== */
+#coa .container{ text-align: center; }             /* العنوان والوصف في المنتصف */
+#coa .coa-grid{
+  display:grid; gap:24px;
+  grid-template-columns: 1fr 1fr;
+  align-items:start;
+  text-align: initial;                              /* الجداول نفسها مش وسط */
+}
+@media(max-width: 980px){
+  #coa .coa-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===== الكروت ===== */
+#coa .card{
+  background:#fff; border-radius:12px; padding:16px;
+  box-shadow:0 6px 18px rgba(2,6,23,.06);
+  overflow:auto;   /* في حال عرض الجدول زاد */
+}
+
+/* ===== جداول نمط Excel ===== */
+#coa .table{
+  width:100%; border-collapse:separate; border-spacing:0;
+  font-size:.95rem;
+}
+#coa .table thead th{
+  background:#f1f5f9;
+  font-weight:800;
+  border:1px solid #e2e8f0;
+  padding:10px;
+}
+#coa .table tbody td{
+  border:1px solid #e2e8f0;
+  padding:10px;
+}
+#coa .table tbody tr:nth-child(even){ background:#fafafa; }
+#coa .table th, #coa .table td{ text-align:center; }
+
+/* RTL دعم العربية */
+html[lang="ar"] #coa .table{ direction: rtl; }
+html[lang="ar"] #coa .title-ico{ justify-content: center; }
+
+/* طباعة أنظف */
+@media print{
+  #coa .card{ box-shadow:none; }
+  #coa .container{ width:100% !important; }
 }
