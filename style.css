@@ -56,7 +56,7 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
   position:relative; width:100vw;
   margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
   min-height:85vh; padding:clamp(3rem,5vw,4rem) 0;
-  background:url("images/hero-port.png") center/cover no-repeat !important; /* صورة الخلفية */
+  background:url("hero-port.png") center/cover no-repeat !important; /* صورة الخلفية */
   color:#111 !important; /* ← نص أسود فوق الصورة */
   overflow:hidden;
 }
