@@ -141,85 +141,68 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
 .trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155 }
 .trust-banner strong{ color:#0f766e }
 
-/* ================== Products ================== */
-#products{ padding:48px 0 }
+/* =============== Products (clean, single block) =============== */
+#products{
+  position: relative;
+  padding: 64px 0;                 /* مسافة مريحة تحت الهيرو */
+  background:
+    /* طبقة تفتيح خفيفة لتحسين القراءة */
+    linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.82)),
+    url("images/leaf-pattern.jpg") center/cover no-repeat;  /* ← خلفية الأوراق */
+  background-attachment: fixed;    /* عمق بسيط على الديسكتوب */
+}
+@media (max-width:1024px){
+  #products{ background-attachment: scroll; } /* أفضل للموبايل/آيOS */
+}
+
+/* شبكة مربعات ناعمة فوق الخلفية */
+#products::after{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(to right, rgba(2,6,23,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2,6,23,.06) 1px, transparent 1px);
+  background-size: 36px 36px;      /* حجم المربعات */
+  pointer-events:none;
+}
+
+/* المحتوى فوق الطبقات */
+#products > .container{ position: relative; z-index: 1; }
+
+/* تخطيط الشبكة والكروت */
 #products .grid{ display:grid; gap:16px }
 #products .grid.cols-3{ grid-template-columns:repeat(3,1fr) }
 @media (max-width:1000px){ #products .grid.cols-3{ grid-template-columns:repeat(2,1fr) } }
 @media (max-width:640px){  #products .grid.cols-3{ grid-template-columns:1fr } }
 
-#products .card{
-  background:#fff; border:1px solid #e5e7eb; border-radius:var(--radius);
-  box-shadow:0 8px 24px rgba(2,6,23,.06); padding:18px; transition:.2s ease;
-  display:flex; flex-direction:column; /* لشد الأزرار للأسفل */
-}
-#products .card:hover{ transform:translateY(-2px) }
-
 #products h2{ margin:0 0 18px; font-weight:900; letter-spacing:.2px }
 #products h3{ margin:0 0 10px; font-weight:800; line-height:1.25 }
 #products .muted{ color:var(--soft); line-height:1.7; margin:.2rem 0 1rem }
 
+/* كروت المنتجات */
+#products .card{
+  background:#fff;                 /* خلفية واضحة فوق الصورة */
+  border:1px solid #e5e7eb;
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+  padding:18px; transition:.2s ease;
+  display:flex; flex-direction:column;
+}
+#products .card:hover{ transform:translateY(-2px) }
+
+/* الوسوم */
 #products .tag{
   display:inline-flex; align-items:center; gap:.35rem;
   background:#f9fafb; border:1px solid #e2e8f0;
   padding:.35rem .6rem; border-radius:8px;
-  font-weight:600; font-size:.92rem; color:var(--brand-ink); transition:.2s;
-  margin:0 6px 6px 0;
+  font-weight:600; font-size:.92rem; color:var(--brand-ink);
+  transition:.2s; margin:0 6px 6px 0;
 }
 #products .tag:hover{ background:#ecfdf5; border-color:var(--brand); color:#059669 }
 
+/* أزرار الكرت */
 #products .card .cta{ margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap }
-
 @media (max-width:640px){ #products .card .cta{ justify-content:space-between } }
-
-/* ===== Products: hero-like background under cards ===== */
-#products{
-  position: relative;
-  padding: 64px 0; /* شوية فراغ أكتر عن الهيرو */
-  background: url("leaf-pattern.jpg") center/cover no-repeat;
-  background-attachment: fixed; /* عمق بسيط على الديسكتوب */
-}
-
-/* طبقة تلطيف فوق الخلفية لتحسين القراءة */
-#products::before{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to bottom,
-      rgba(255,255,255,.85) 0%,
-      rgba(255,255,255,.70) 25%,
-      rgba(255,255,255,.55) 55%,
-      rgba(255,255,255,.35) 80%,
-      rgba(255,255,255,.20) 100%);
-  pointer-events:none;
-}
-
-/* محتوى المنتجات فوق الـoverlay */
-#products > .container{ position: relative; z-index: 1; }
-
-/* الكروت: وضوح أعلى فوق الخلفية */
-#products .card{
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(2px);
-}
-
-/* (اختياري) شبكة مربعات خفيفة جداً لإحساس مؤسسي */
-#products::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    repeating-linear-gradient(0deg,   rgba(2,6,23,.04) 0 1px, transparent 1px 24px),
-    repeating-linear-gradient(90deg,  rgba(2,6,23,.04) 0 1px, transparent 1px 24px);
-  pointer-events:none;
-}
-
-/* موبايل/تابلت: ألغِ التثبيت لتفادي لاجات iOS */
-@media (max-width: 1024px){
-  #products{ background-attachment: scroll; }
-}
-
-
-
 
 /* ================== COA Toolbar ================== */
 #coa .hide-print{ display:flex; gap:.6rem; justify-content:flex-end; flex-wrap:wrap; margin:8px 0 16px }
