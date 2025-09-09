@@ -40,7 +40,7 @@ header .nav {
   justify-content: space-between;
   gap: 0.6rem;                      /* ممكن تقللها كمان لو حبيت */
   min-height: 10px !important;     /* ← قللنا الارتفاع */
-  padding: 0 .2rem !important;     /* ← مسافات جانبية أقل */
+  padding: 0 .1rem !important;     /* ← مسافات جانبية أقل */
 }
 header .brand{ display:flex; align-items:center; gap:.6rem; }
 header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
