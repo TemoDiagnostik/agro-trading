@@ -19,15 +19,15 @@ a:hover{ text-decoration:underline }
 .brand-text{ user-select:none }
 
 /* ================== Header ================== */
+/* الهيدر شفاف والنصوص بيضاء */
 header {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.9) 85%, rgba(255,255,255,0));
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: transparent !important; /* شفاف */
   padding: 0.5rem 0;
+  border-bottom: none;
 }
 
 header .nav {
@@ -39,35 +39,37 @@ header .nav {
   min-height: 70px;
 }
 
-/* Logo */
-header .brand { display: flex; align-items: center; gap: 0.8rem; }
-header .logo-img { height: 70px; width: auto; display: block; }
-.brand-text {
-  color: #000;
+header .brand-text {
+  color: #fff !important; /* أبيض */
   font-weight: 800;
   font-size: 1.1rem;
-  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7); /* يبان فوق الصور */
 }
 
-/* Navigation Desktop */
-.main-nav ul {
-  margin: 0; padding: 0;
-  display: flex; gap: 1rem;
-  list-style: none;
-  align-items: center;
-}
-.main-nav a {
+header nav a {
   padding: 0.6rem 1rem;
-  color: #111;
+  color: #fff !important; /* أبيض */
   font-weight: 600;
   text-decoration: none;
   border-radius: 6px;
   transition: all 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
-.main-nav a:hover {
-  background: #2e7d32; /* أخضر داكن */
-  color: #fff;
+header nav a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff !important;
+
+  /* النصوص في البانر */
+.hero-text, 
+.hero-text h1, 
+.hero-text h2, 
+.hero-text p {
+  color: #fff !important;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+
 }
+
+
 
 /* Language Selector */
 .lang select {
