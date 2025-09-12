@@ -18,103 +18,38 @@ a:hover{ text-decoration:underline }
 .container{ width:min(1180px,92vw); margin-inline:auto }
 .brand-text{ user-select:none }
 
-/* ================== Header ================== */
-/* الهيدر شفاف والنصوص بيضاء */
+/* ================== Header (الهيدر) ================== */
+/* هيدر خفيف بشفافية بيضاء + نصوص سوداء */
 header {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
-  background: transparent !important; /* شفاف */
-  padding: 0.5rem 0;
+  z-index: 100;
+   background: rgba(255,255,255,0.20) !important; 
   border-bottom: none;
+  padding: 0.1rem 0;
+}
+header .nav{
+  display:flex; align-items:center; justify-content:space-between; gap:.6rem;
+  min-height:54px; padding:0 .1rem;
+}
+header .brand{ display:flex; align-items:center; gap:.6rem }
+header .logo-img{ height:88px; width:auto; display:block } /* حجم اللوجو */
+header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; list-style:none }
+header nav a{
+  padding:.45rem .7rem; line-height:1;
+  color:#000 !important; /* ← نصوص الهيدر أسود */
+  border-radius:10px; font-weight:600;
+}
+.brand-text{
+  color:#000 !important; font-weight:800 !important; font-size:1rem;
 }
 
-header .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0 2rem;
-  min-height: 70px;
-}
-
-header .brand-text {
-  color: #fff !important; /* أبيض */
-  font-weight: 800;
-  font-size: 1.1rem;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7); /* يبان فوق الصور */
-}
-
-header nav a {
-  padding: 0.6rem 1rem;
-  color: #fff !important; /* أبيض */
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-}
-header nav a:hover {
-  background: rgba(255,255,255,0.2);
-  color: #fff !important;
-
-  /* النصوص في البانر */
-.hero-text, 
-.hero-text h1, 
-.hero-text h2, 
-.hero-text p {
-  color: #fff !important;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
-
-}
-
-
-
-/* Language Selector */
-.lang select {
-  padding: 0.4rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-/* زر القائمة للموبايل */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #111;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%; left: 0;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  .main-nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-  .main-nav a {
-    display: block;
-    width: 100%;
-    padding: 0.8rem;
-  }
-  .main-nav.active { display: block; }
-}
-
+/* ================== Navigation (عامة) ================== */
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0 }
+nav ul{ display:flex; gap:.9rem; list-style:none; padding:0; margin:0; flex-wrap:wrap }
+nav a{ padding:.45rem .7rem; border-radius:10px }
 /* ================== HERO ================== */
 /* ملاحظة مهمة:
    بناءً على رغبتك: "النص فوق الصورة أسود".
