@@ -18,38 +18,100 @@ a:hover{ text-decoration:underline }
 .container{ width:min(1180px,92vw); margin-inline:auto }
 .brand-text{ user-select:none }
 
-/* ================== Header (الهيدر) ================== */
-/* هيدر خفيف بشفافية بيضاء + نصوص سوداء */
+/* ================== Header ================== */
 header {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
-  z-index: 100;
-   background: rgba(255,255,255,0.20) !important; 
-  border-bottom: none;
-  padding: 0.1rem 0;
-}
-header .nav{
-  display:flex; align-items:center; justify-content:space-between; gap:.6rem;
-  min-height:54px; padding:0 .1rem;
-}
-header .brand{ display:flex; align-items:center; gap:.6rem }
-header .logo-img{ height:88px; width:auto; display:block } /* حجم اللوجو */
-header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; list-style:none }
-header nav a{
-  padding:.45rem .7rem; line-height:1;
-  color:#000 !important; /* ← نصوص الهيدر أسود */
-  border-radius:10px; font-weight:600;
-}
-.brand-text{
-  color:#000 !important; font-weight:800 !important; font-size:1rem;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.9) 85%, rgba(255,255,255,0));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 0.5rem 0;
 }
 
-/* ================== Navigation (عامة) ================== */
-.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0 }
-nav ul{ display:flex; gap:.9rem; list-style:none; padding:0; margin:0; flex-wrap:wrap }
-nav a{ padding:.45rem .7rem; border-radius:10px }
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 2rem;
+  min-height: 70px;
+}
+
+/* Logo */
+header .brand { display: flex; align-items: center; gap: 0.8rem; }
+header .logo-img { height: 70px; width: auto; display: block; }
+.brand-text {
+  color: #000;
+  font-weight: 800;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+/* Navigation Desktop */
+.main-nav ul {
+  margin: 0; padding: 0;
+  display: flex; gap: 1rem;
+  list-style: none;
+  align-items: center;
+}
+.main-nav a {
+  padding: 0.6rem 1rem;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.main-nav a:hover {
+  background: #2e7d32; /* أخضر داكن */
+  color: #fff;
+}
+
+/* Language Selector */
+.lang select {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* زر القائمة للموبايل */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .main-nav a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+  }
+  .main-nav.active { display: block; }
+}
 
 /* ================== HERO ================== */
 /* ملاحظة مهمة:
