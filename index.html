@@ -681,16 +681,29 @@ ${data.get("message")}
     return false;
   };
 
-  // ===== smooth scroll (كما هو) =====
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener("click", e=>{
-      const id = a.getAttribute("href").slice(1);
-      const el = document.getElementById(id);
-      if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
-    });
+ // ===== smooth scroll (كما هو) =====
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener("click", e=>{
+    const id = a.getAttribute("href").slice(1);
+    const el = document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
   });
-</script>
+});
 
+// ===== Mobile menu toggle =====
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("active");
+    });
+  }
+});
+
+
+  
 <!-- JSON-LD: Organization (basic SEO) -->
 <script type="application/ld+json">
 {
