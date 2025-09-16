@@ -257,3 +257,42 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 /* ================== Footer ================== */
 .foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
+
+
+
+.certificates-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.certificates-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.certificate-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 25px 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.download-btn {
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
