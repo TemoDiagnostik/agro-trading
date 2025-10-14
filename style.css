@@ -49,10 +49,12 @@ header .brand {
 }
 
 header .logo-img {
-  height: 100px;
+  height: 100px;   /* أكبر من 88px */
   width: auto;
   display: block;
-}
+  margin-left: 0;  /* أقصى الشمال */
+}  
+
 header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; list-style:none }
 header nav a{
   padding:.45rem .7rem; line-height:1;
