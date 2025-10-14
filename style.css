@@ -65,6 +65,14 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
   overflow:hidden;
 }
 
+/* ======== Mobile Background (Hero Section) ======== */
+@media only screen and (max-width: 768px) {
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat !important;
+  }
+}
+
 /* طبقة تفتيح خفيفة فوق الصورة لتوضيح النص الأسود */
 .hero::before,
 .hero-bleed::before {
