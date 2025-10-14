@@ -41,10 +41,10 @@ header .nav {
 
 /* لوجو */
 header .logo-img {
-  height: 150px;
+  height: 110px;  /* أكبر من 96px */
   width: auto;
   display: block;
-  margin: 0; /* تأكد من إلغاء أي مسافة */
+  margin-left: 0;
 }
 
 /* تنسيق النص بجانب اللوجو */
@@ -53,17 +53,12 @@ header .brand {
   align-items: center;
   justify-content: flex-start;
   gap: 0.8rem;
-  margin-left: 0;
-  flex-wrap: nowrap; /* ← عشان النص ما ينزلش تحت اللوجو */
 }
 
-
-header .brand-text {
+.brand-text {
   color: #000 !important;
   font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  white-space: nowrap; /* ← يمنع النص من النزول للسطر التاني */
+  font-size: 1.1rem;
 }
 
 /* القوائم */
@@ -87,33 +82,6 @@ header nav a {
 
 header nav a:hover {
   background: rgba(0, 0, 0, 0.05);
-}
-/* ====== BRAND TEXT ====== */
-.brand-text {
-  color: #000 !important;
-  font-weight: 800 !important;
-  font-size: 1rem;
-  user-select: none;
-}
-
-/* ====== NAVIGATION ====== */
-header nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-header nav a {
-  padding: 0.45rem 0.7rem;
-  line-height: 1;
-  color: #000 !important;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
 }
 header .container {
   max-width: 1280px;     /* ← تحكم في عرض البار */
