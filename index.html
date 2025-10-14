@@ -184,8 +184,7 @@
         </div>
       </div>
 
-     
-        <div class="cta">
+             <div class="cta">
           <a class="btn btn-primary" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات</a>
         </div>
       </div>
@@ -193,8 +192,6 @@
     </div>
   </div>
 </section>
-
-
     
 <section id="services">
   <div class="container">
@@ -229,9 +226,7 @@
   </div>
 </section>
 
-  
-
-        <section id="logistics">
+          <section id="logistics">
   <div class="container">
     <h2 data-i18n="log.title">Logistics & Compliance</h2>
     <div class="grid cols-3">
@@ -269,14 +264,7 @@
         </p>
         <img src="logistics3.png" alt="EU Compliance" class="log-img">
       </div>
-
-   
-
     
-
-<!-- ✅ إغلاق اللوجستيات تم هنا قبل قسم الشهادات -->
-
-
       <!-- Card 1 -->
       <div class="card">
         <h3>Incoterms</h3>
@@ -311,9 +299,18 @@
         <img src="logistics3.png" alt="EU Compliance" class="log-img">
       </div>
 
-      <!-- Optional Card 4: Shipment Tracking -->
-       <!-- Optional Card 4: Shipment Tracking -->
-    
+           
+<section id="coa">
+  <div class="container">
+    <!-- شريط أزرار موحّد -->
+    <div class="hide-print cta-row">
+      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات خاصة</a>
+      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
+      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
+    </div>
+  </div>
+</section>
+<!-- Optional Card 4: Shipment Tracking -->
       <div class="features">
   <div class="feature">
     <span class="icon">📄</span>
@@ -328,20 +325,6 @@
     <span data-i18n="card.custom.contracts">Clear Contracts</span>
   </div>
 </div>
-
-<!-- ✅ إغلاق اللوجستيات تم هنا قبل قسم الشهادات -->
-
-<section id="coa">
-  <div class="container">
-    <!-- شريط أزرار موحّد -->
-    <div class="hide-print cta-row">
-      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات خاصة</a>
-      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
-      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
-    </div>
-  </div>
-</section>
-
 <section id="about">
   <div class="container">
     <h2 data-i18n="about.title">About Us</h2>
@@ -425,6 +408,10 @@
             <span class="badge">GBP</span>
             <span class="badge">AED</span>
             <span class="badge">CZK</span>
+            <span class="badge">EGP</span>
+            <span class="badge">NZD</span>
+            <span class="badge">PLN</span>
+            <span class="badge">TRY</span>
           </div>
           <p class="muted" style="margin:8px 0 0">
             Full bank details for each currency (IBAN / SWIFT / Routing) are provided on the 
