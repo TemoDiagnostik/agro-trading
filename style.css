@@ -19,41 +19,70 @@ a:hover{ text-decoration:underline }
 .brand-text{ user-select:none }
 
 
-/* ====== HEADER ====== */
+/* ========== الهيدر المعدّل بالكامل ========== */
 header {
-  position: sticky;
+  position: relative; /* ← غير ثابت */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  padding: 0.4rem 1rem;
+  z-index: 100;
+  background: rgba(80, 80, 80, 0.15); /* رمادي شفاف */
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 1.5rem;
 }
 
 header .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 68px;
   gap: 1rem;
-  min-height: 64px;
 }
 
-/* ====== LOGO ====== */
-header .brand {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.6rem;
-}
-
+/* لوجو */
 header .logo-img {
-  height: 96px;
+  height: 110px;  /* أكبر من 96px */
   width: auto;
   display: block;
   margin-left: 0;
 }
 
+/* تنسيق النص بجانب اللوجو */
+header .brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.brand-text {
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* القوائم */
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  color: #000 !important;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+header nav a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
 /* ====== BRAND TEXT ====== */
 .brand-text {
   color: #000 !important;
