@@ -18,15 +18,15 @@ a:hover{ text-decoration:underline }
 .container{ width:min(1180px,92vw); margin-inline:auto }
 .brand-text{ user-select:none }
 
-/* ================== Header (الهيدر) ================== */
-/* هيدر خفيف بشفافية بيضاء + نصوص سوداء */
+
+/* ====== HEADER ====== */
 header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.25) !important;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   padding: 0.4rem 1rem;
 }
@@ -37,15 +37,14 @@ header .nav {
   justify-content: space-between;
   gap: 1rem;
   min-height: 64px;
-  padding: 0;
 }
 
+/* ====== LOGO ====== */
 header .brand {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.6rem;
-  margin-left: 0; /* خلي اللوجو يلزق في الشمال */
 }
 
 header .logo-img {
@@ -55,65 +54,32 @@ header .logo-img {
   margin-left: 0;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.6rem;
+/* ====== BRAND TEXT ====== */
+.brand-text {
+  color: #000 !important;
+  font-weight: 800 !important;
+  font-size: 1rem;
+  user-select: none;
 }
 
-.logo {
-  margin-left: 0; /* يلصق اللوجو في الشمال */
-}
-
-header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; list-style:none }
-header nav a{
-  padding:.45rem .7rem; line-height:1;
-  color:#000 !important; /* ← نصوص الهيدر أسود */
-  border-radius:10px; font-weight:600;
-}
-.brand-text{
-  color:#000 !important; font-weight:800 !important; font-size:1rem;
-}
-
-/* ================== Navigation (عامة) ================== */
-.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0 }
-nav ul{ display:flex; gap:.9rem; list-style:none; padding:0; margin:0; flex-wrap:wrap }
-nav a{ padding:.45rem .7rem; border-radius:10px }
-/* =============== RESET =============== */
- {
+/* ====== NAVIGATION ====== */
+header nav ul {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  background: #fff;
-  font-family: sans-serif;
-}
-
-/* =============== HEADER & LOGO =============== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(6px);
+  gap: 0.9rem;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
-.site-logo img {
-  width: 200px;
-  height: auto;
-}
-
-.site-logo-img {
-  width: 180px;
-  height: auto;
-  display: block;
-  margin-left: 0;
+header nav a {
+  padding: 0.45rem 0.7rem;
+  line-height: 1;
+  color: #000 !important;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* =============== HERO SECTION =============== */
