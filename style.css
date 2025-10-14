@@ -55,14 +55,92 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
    بناءً على رغبتك: "النص فوق الصورة أسود".
    لذلك أضفنا طبقة تفتيح بيضاء خفيفة على الصورة، والنص أسود واضح. */
 
-.hero,
-.hero-bleed{
-  position:relative; width:100vw;
-  margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
-  min-height:85vh; padding:clamp(3rem,5vw,4rem) 0;
-  background:url("hero-bg-desktop.png") center/cover no-repeat !important; /* صورة الخلفية */
-  color:#111 !important; /* ← نص أسود فوق الصورة */
-  overflow:hidden;
+/* ===== [HERO] تحسين القراءة العام ===== */
+.hero, .hero-bleed{
+  background-size: cover;
+  background-position: center;
+  color:#fff; /* نص أبيض فوق الخلفية */
+  text-shadow: 0 1px 2px rgba(0,0,0,.25);
+}
+
+/* طبقة تعتيم خفيفة فوق الخلفية (لو عندك overlay عنصر منفصل تجاهله) */
+.hero::before, .hero-bleed::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,77,0,.25); /* #004D00 @ 25% */
+  pointer-events:none;
+}
+
+/* عنوان وفقرة الهيرو – ديسكتوب */
+.hero h1{ font-size: clamp(48px,5vw,60px); line-height:1.15; font-weight:700; margin-bottom:.6rem;}
+.hero p { font-size: clamp(16px,1.6vw,18px); line-height:1.5; max-width: 720px; }
+
+/* أزرار CTA موحّدة */
+.btn-primary{
+  background:#0A7A39; color:#fff; border:0; 
+  padding:14px 22px; border-radius:12px; font-weight:700;
+}
+.btn-primary:hover{ filter:brightness(1.08); }
+.btn-outline{
+  background:transparent; color:#fff;
+  border:2px solid rgba(255,255,255,.95);
+  padding:12px 20px; border-radius:12px; font-weight:700;
+}
+
+/* كبسولات القيم (P2O5…SiO2…) */
+.badge{
+  display:inline-block; 
+  padding:6px 10px; margin:4px 6px 0 0;
+  border-radius:8px; 
+  background: rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.55);
+  backdrop-filter: blur(2px);
+  font-weight:600;
+}
+
+/* الهيدر واللوجو – ديسكتوب */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background: rgba(0,0,0,.15);
+  backdrop-filter: blur(6px);
+}
+.site-logo img{ width: 130px; }
+
+/* ===== موبايل ===== */
+@media (max-width: 768px){
+
+  /* خلفية الموبايل */
+  .hero, .hero-bleed{
+    background-image: url("images/hero-bg-mobile.jpg") !important;
+  }
+  .hero::before, .hero-bleed::before{
+    background: rgba(0,77,0,.30); /* تعتيم أقوى قليلاً للموبايل */
+  }
+
+  /* مقاسات النصوص والمسافات */
+  .hero{ padding: 16px 16px 20px; }
+  .hero h1{ font-size: 26px; line-height:1.25; }
+  .hero p { font-size: 14px; max-width: 90vw; }
+
+  /* الأزرار عمودياً مع مسافة مناسبة */
+  .hero .btn-row{ display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+  .btn-primary{ padding:12px 18px; border-radius:10px; }
+  .btn-outline{ padding:12px 18px; border-radius:10px; }
+
+  /* اللوجو والهيدر */
+  .site-header{ background: rgba(0,0,0,.25); }
+  .site-logo img{ width: 70px; }
+  .site-header .nav{ gap: 8px; } /* لو عندك ناف */
+  
+  /* الكبسولات تصطف وتسقط تلقائياً */
+  .badge{ font-size: 13px; padding:5px 8px; }
+}
+
+/* ===== ديسكتوب: تأكيد صورة الديسكتوب ===== */
+@media (min-width: 769px){
+  .hero, .hero-bleed{
+    background-image: url("images/hero-bg-desktop.jpg") !important;
+  }
 }
 
 /* ======== Mobile Background (Hero Section) ======== */
@@ -72,71 +150,6 @@ nav a{ padding:.45rem .7rem; border-radius:10px }
     background: url("hero-bg-mobile.png") center/cover no-repeat !important;
   }
 }
-
-/* طبقة تفتيح خفيفة فوق الصورة لتوضيح النص الأسود */
-.hero::before,
-.hero-bleed::before {
-  background: transparent !important;
-}
-
-/* تأكيد ترتيب المحتوى فوق طبقة التفتيح */
-.hero > .container,
-.hero-bleed > .container{ position:relative; z-index:1 }
-
-/* نص صغير داخل الهيرو (الجمل التعريفية) */
-.hero .note{ color:#222 !important; font-size:.95rem; opacity:1 }
-
-/* CTA Buttons داخل الهيرو */
-/* === Buttons === */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
-  border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
-.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
-
-/* زر رئيسي (أخضر) */
-.hero .cta .btn-primary{
-  background:#10b981;color:#fff;border:1px solid #10b981;
-  box-shadow:0 4px 14px rgba(16,185,129,.35);
-}
-.hero .cta .btn-primary:hover{background:#059669;border-color:#059669}
-
-/* باقي الأزرار (شفافة بحد أبيض) */
-.hero .cta .btn-outline,
-.hero .card .btn{
-  background:transparent;border:1px solid #fff;color:#fff;
-}
-.hero .cta .btn-outline:hover,
-.hero .card .btn:hover{background:#fff;color:#0b132b}
-
-/* === Hero card (شفاف تماماً) === */
-.hero .card{
-  background:transparent;border:0;box-shadow:none;padding:.5rem 0;
-}
-.hero .card h3,.hero .card p,.hero .card li,.hero .card a{color:#fff}
-
-/* Tags داخل الهيرو */
-.hero .tag{
-  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
-  color:#fff;
-}
-
-
-
-/* خلّي الشارات/التاجات والـpill واضحة بخلفية داكنة خفيفة */
-.hero-bleed .pill,
-.hero-bleed .tag{
-  background: rgba(0,0,0,.35) !important;
-  color:#fff !important;
-  border:1px solid rgba(255,255,255,.55) !important;
-}
-
-/* الأزرار */
-.hero-bleed .btn-primary{
-  background:#10b981; border:1px solid #10b981; color:#fff;
-}
-.hero-bleed .btn-outline{
-  background:rgba(0,0,0,.28); border:1px solid #fff; color:#fff;
-}
-.hero-bleed .btn-outline:hover{ background:#fff; color:#0b132b }
 
 
 /* ================== Trust Banner ================== */
