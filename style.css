@@ -21,73 +21,64 @@ a:hover{ text-decoration:underline }
 
 /* ========== الهيدر المعدّل بالكامل ========== */
 /* ====== HEADER CONTAINER ====== */
-header .container {
+header .container.nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* ← اجعل كل العناصر تبدأ من اليسار */
-  gap: 2rem; /* ← مسافة بين اللوجو والقائمة */
-}
-
-
-/* ====== HEADER BAR ====== */
-header {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background: rgba(80, 80, 80, 0.15);
-  backdrop-filter: blur(6px);
-  padding: 0.6rem 0;
+  justify-content: space-between; /* تباعد العناصر الرئيسية */
 }
 
 /* ====== BRAND (Logo + Name) ====== */
 header .brand {
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* ====== LOGO IMAGE ====== */
 header .logo-img {
-  height: 100px; /* ← قلل الحجم قليلاً إن أردت */
+  height: 100px;
   width: auto;
   display: block;
 }
 
+/* ====== BRAND TEXT ====== */
 header .brand-text {
-  color: #000 !important;
+  margin-left: 0.5rem;
   font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  white-space: nowrap;
+  font-size: 1.1rem;
+  color: #000;
 }
 
-/* ====== NAVIGATION LINKS ====== */
+/* ====== NAVIGATION ====== */
+header nav {
+  flex: 1; /* يجعل الـ nav يأخذ الفراغ المتاح */
+  display: flex;
+  justify-content: center; /* يوسّط الروابط أفقياً */
+}
+
 header nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
-  gap: 1rem;
   list-style: none;
+  gap: 1rem;
+  align-items: center;
 }
 
-header nav a {
-  padding: 0.5rem 0.8rem;
-  font-weight: 600;
-  color: #000 !important;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.2s ease;
+/* ====== LANGUAGE SELECTOR ====== */
+header .lang {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-header nav a:hover {
-  background: rgba(0, 0, 0, 0.05);
+header .lang select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
 }
 
 /* =============== HERO SECTION =============== */
