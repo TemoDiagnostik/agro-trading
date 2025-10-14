@@ -26,21 +26,33 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-   background: rgba(255,255,255,0.20) !important; 
-  border-bottom: none;
-  padding: 0.1rem 0;
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px);
+  padding: 0.4rem 1rem;
 }
-header .nav{
-  display:flex; align-items:center; justify-content:space-between; gap:.6rem;
-  min-height:54px; padding:0 .1rem;
+
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 0;
 }
+
 header .brand {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.4rem;
+  gap: 0.6rem;
+  margin-left: 0; /* خلي اللوجو يلزق في الشمال */
 }
-header .logo-img{ height:88px; width:auto; display:block } /* حجم اللوجو */
+
+header .logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
 header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; list-style:none }
 header nav a{
   padding:.45rem .7rem; line-height:1;
@@ -140,31 +152,39 @@ a.btn, button.btn {
   border-radius: 12px;
   transition: all 0.2s ease;
   display: inline-block;
+  font-size: 16px;
 }
 
+/* زر رئيسي */
 .btn-primary {
   background: #1A8917;
   color: #fff !important;
-  padding: 14px 22px;
+  padding: 14px 26px;
   border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
+
 .btn-primary:hover {
   background: #156c12;
   filter: brightness(1.05);
 }
+
 .btn-primary:active {
   transform: translateY(1px);
 }
 
+/* زر ثانوي (Outline) */
 .btn-outline {
   background: transparent;
-  color: #fff !important;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  padding: 12px 20px;
+  color: #1A8917 !important;
+  border: 2px solid #1A8917;
+  padding: 12px 24px;
 }
+
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: #eaf7e8;
+  color: #0e5f0c !important;
+  border-color: #0e5f0c;
 }
 
 /* Row of buttons */
