@@ -115,6 +115,15 @@ header nav a {
   font-weight: 600;
   text-decoration: none;
 }
+header .container {
+  max-width: 1280px;     /* ← تحكم في عرض البار */
+  margin: 0 auto;         /* ← توسيط المحتوى */
+  padding: 0 1.5rem;      /* ← مساحة داخلية مناسبة */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 /* =============== HERO SECTION =============== */
 .hero, .hero-bleed {
