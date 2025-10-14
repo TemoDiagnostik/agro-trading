@@ -41,24 +41,28 @@ header .nav {
 
 /* لوجو */
 header .logo-img {
-  height: 110px;  /* أكبر من 96px */
+  height: 150px;
   width: auto;
   display: block;
-  margin-left: 0;
+  margin: 0; /* تأكد من إلغاء أي مسافة */
 }
 
-/* تنسيق النص بجانب اللوجو */
+/* تنسيق الشعار والنص بجانبه */
 header .brand {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.8rem;
+  margin-left: 0;
+  flex-wrap: nowrap; /* يمنع نزول النص تحت اللوجو */
 }
 
-.brand-text {
+header .brand-text {
   color: #000 !important;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  white-space: nowrap; /* يمنع السطر الثاني */
 }
 
 /* القوائم */
