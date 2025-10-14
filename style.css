@@ -145,6 +145,21 @@ html, body {
 }
 
 /* =============== BUTTON STYLES =============== */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.muted.note {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--soft); /* أو #6b7280 */
+}
+
 a.btn, button.btn {
   cursor: pointer;
   text-decoration: none;
