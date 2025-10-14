@@ -47,22 +47,23 @@ header .logo-img {
   margin: 0; /* تأكد من إلغاء أي مسافة */
 }
 
-/* تنسيق الشعار والنص بجانبه */
+/* تنسيق النص بجانب اللوجو */
 header .brand {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.8rem;
   margin-left: 0;
-  flex-wrap: nowrap; /* يمنع نزول النص تحت اللوجو */
+  flex-wrap: nowrap; /* ← عشان النص ما ينزلش تحت اللوجو */
 }
+
 
 header .brand-text {
   color: #000 !important;
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.4;
-  white-space: nowrap; /* يمنع السطر الثاني */
+  white-space: nowrap; /* ← يمنع النص من النزول للسطر التاني */
 }
 
 /* القوائم */
