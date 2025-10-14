@@ -104,15 +104,16 @@ html, body {
   backdrop-filter: blur(6px);
 }
 
-.site-logo {
-  display: flex;
-  align-items: center;
+.site-logo img {
+  width: 200px;
+  height: auto;
 }
 
-.site-logo img {
+.site-logo-img {
   width: 180px;
   height: auto;
   display: block;
+  margin-left: 0;
 }
 
 /* =============== HERO SECTION =============== */
@@ -174,13 +175,19 @@ html, body {
 }
 
 a.btn, button.btn {
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 700;
+  background: rgba(255, 255, 255, 0.15); /* شفاف خفيف */
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 22px;
+  font-weight: 600;
   border-radius: 12px;
-  transition: all 0.2s ease;
-  display: inline-block;
-  font-size: 16px;
+  backdrop-filter: blur(4px); /* ضباب خفيف */
+  transition: all 0.3s ease;
+}
+
+a.btn:hover, button.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* زر رئيسي */
