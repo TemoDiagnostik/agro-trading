@@ -51,7 +51,9 @@ header .brand {
 
 
 header .logo-img {
-  margin-left: -8px;  /* ← يحركه شويّة للشمال */
+  height: 100px;
+  width: auto;
+  display: block;
 }
 
 header .brand-text {
