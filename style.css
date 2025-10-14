@@ -174,16 +174,13 @@ a.btn, button.btn {
 
 /* زر رئيسي */
 .btn-primary {
-  background: #1A8917;
-  color: #fff !important;
-  padding: 14px 26px;
+  background: #ffffff;
+  color: #111 !important;
   border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
 }
-
 .btn-primary:hover {
-  background: #156c12;
-  filter: brightness(1.05);
+  background: #eaeaea;
 }
 
 .btn-primary:active {
