@@ -49,14 +49,9 @@ header .brand {
   padding-left: 0;
 }
 
-header .container {
-  padding-left: 0 !important;  /* ← يمين اللوجو للداخل */
-}
 
 header .logo-img {
-  height: 100px;
-  width: auto;
-  display: block;
+  margin-left: -8px;  /* ← يحركه شويّة للشمال */
 }
 
 header .brand-text {
