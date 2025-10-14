@@ -20,65 +20,69 @@ a:hover{ text-decoration:underline }
 
 
 /* ========== الهيدر المعدّل بالكامل ========== */
-/* ====== HEADER CONTAINER ====== */
+/* ========== الهيدر المعدّل ========= */
+
+/* حاوية الهيدر */
 header .container.nav {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  height: 110px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* تباعد العناصر الرئيسية */
+  justify-content: space-between;
 }
 
-/* ====== BRAND (Logo + Name) ====== */
+/* اللوجو - أقصى الشمال */
 header .brand {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
-/* ====== LOGO IMAGE ====== */
+/* صورة اللوجو */
 header .logo-img {
   height: 100px;
   width: auto;
-  display: block;
 }
 
-/* ====== BRAND TEXT ====== */
+/* اسم الشركة - منتصف الهيدر */
 header .brand-text {
-  margin-left: 0.5rem;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #006400; /* أخضر غامق */
+  white-space: nowrap;
 }
 
-/* ====== NAVIGATION ====== */
+/* شريط التنقل */
 header nav {
-  flex: 1; /* يجعل الـ nav يأخذ الفراغ المتاح */
+  margin-left: auto;
   display: flex;
-  justify-content: center; /* يوسّط الروابط أفقياً */
+  align-items: center;
 }
 
+/* قائمة التنقل */
 header nav ul {
-  margin: 0;
-  padding: 0;
   display: flex;
+  gap: 1.2rem;
   list-style: none;
-  gap: 1rem;
-  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-/* ====== LANGUAGE SELECTOR ====== */
+/* اختيار اللغة */
 header .lang {
+  margin-left: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-}
-
-header .lang select {
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
+  gap: 0.4rem;
 }
 
 /* =============== HERO SECTION =============== */
