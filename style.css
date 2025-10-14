@@ -50,100 +50,157 @@ header nav a{
 .nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0 }
 nav ul{ display:flex; gap:.9rem; list-style:none; padding:0; margin:0; flex-wrap:wrap }
 nav a{ padding:.45rem .7rem; border-radius:10px }
-/* ================== HERO ================== */
-/* ملاحظة مهمة:
-   بناءً على رغبتك: "النص فوق الصورة أسود".
-   لذلك أضفنا طبقة تفتيح بيضاء خفيفة على الصورة، والنص أسود واضح. */
+/* ================== HERO SECTION ================== */
+/* خلفية الحقول + تنسيق النصوص والأزرار */
 
-/* ===== [HERO] تحسين القراءة العام ===== */
-.hero, .hero-bleed{
-  background-size: cover;
-  background-position: center;
-  color:#fff; /* نص أبيض فوق الخلفية */
-  text-shadow: 0 1px 2px rgba(0,0,0,.25);
+/* خلفية الديسكتوب */
+.hero,
+.hero-bleed {
+  background: url("hero-bg-desktop.png") center/cover no-repeat !important;
+  color: #fff; /* نص أبيض فوق الخلفية */
+  text-align: left;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
-/* ======== Mobile Background (Hero Section) ======== */
+
+/* طبقة تعتيم خفيفة فوق الصورة لتحسين القراءة */
+.hero::before,
+.hero-bleed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 77, 0, 0.25); /* أخضر غامق نصف شفاف */
+  pointer-events: none;
+}
+
+/* عنوان الفقرة الرئيسية */
+.hero h1 {
+  font-size: clamp(48px, 5vw, 60px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.hero p {
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+/* الأزرار الرئيسية */
+.btn-primary {
+  background: #0a7a39;
+  color: #fff;
+  border: 0;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+/* كبسولات القيم (P₂O₅ - SiO₂ - F) */
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 4px 6px 0 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+  font-weight: 600;
+}
+
+/* اللوجو والهيدر */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.site-logo img {
+  width: 130px;
+}
+
+/* ================== MOBILE ================== */
 @media only screen and (max-width: 768px) {
+  /* الخلفية المخصصة للموبايل */
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat !important;
   }
-}
 
-/* طبقة تعتيم خفيفة فوق الخلفية (لو عندك overlay عنصر منفصل تجاهله) */
-.hero::before, .hero-bleed::before{
-  content:"";
-  position:absolute; inset:0;
-  background: rgba(0,77,0,.25); /* #004D00 @ 25% */
-  pointer-events:none;
-}
-
-/* عنوان وفقرة الهيرو – ديسكتوب */
-.hero h1{ font-size: clamp(48px,5vw,60px); line-height:1.15; font-weight:700; margin-bottom:.6rem;}
-.hero p { font-size: clamp(16px,1.6vw,18px); line-height:1.5; max-width: 720px; }
-
-/* أزرار CTA موحّدة */
-.btn-primary{
-  background:#0A7A39; color:#fff; border:0; 
-  padding:14px 22px; border-radius:12px; font-weight:700;
-}
-.btn-primary:hover{ filter:brightness(1.08); }
-.btn-outline{
-  background:transparent; color:#fff;
-  border:2px solid rgba(255,255,255,.95);
-  padding:12px 20px; border-radius:12px; font-weight:700;
-}
-
-/* كبسولات القيم (P2O5…SiO2…) */
-.badge{
-  display:inline-block; 
-  padding:6px 10px; margin:4px 6px 0 0;
-  border-radius:8px; 
-  background: rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.55);
-  backdrop-filter: blur(2px);
-  font-weight:600;
-}
-
-/* الهيدر واللوجو – ديسكتوب */
-.site-header{
-  position:sticky; top:0; z-index:50;
-  background: rgba(0,0,0,.15);
-  backdrop-filter: blur(6px);
-}
-.site-logo img{ width: 130px; }
-
-
-  .hero::before, .hero-bleed::before{
-    background: rgba(0,77,0,.30); /* تعتيم أقوى قليلاً للموبايل */
+  /* تعتيم أقوى قليلًا على الموبايل لتحسين التباين */
+  .hero::before,
+  .hero-bleed::before {
+    background: rgba(0, 77, 0, 0.35);
   }
 
-  /* مقاسات النصوص والمسافات */
-  .hero{ padding: 16px 16px 20px; }
-  .hero h1{ font-size: 26px; line-height:1.25; }
-  .hero p { font-size: 14px; max-width: 90vw; }
+  /* المسافات وحجم النص */
+  .hero {
+    padding: 16px 16px 20px;
+  }
 
-  /* الأزرار عمودياً مع مسافة مناسبة */
-  .hero .btn-row{ display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
-  .btn-primary{ padding:12px 18px; border-radius:10px; }
-  .btn-outline{ padding:12px 18px; border-radius:10px; }
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
 
-  /* اللوجو والهيدر */
-  .site-header{ background: rgba(0,0,0,.25); }
-  .site-logo img{ width: 70px; }
-  .site-header .nav{ gap: 8px; } /* لو عندك ناف */
-  
-  /* الكبسولات تصطف وتسقط تلقائياً */
-  .badge{ font-size: 13px; padding:5px 8px; }
-}
+  .hero p {
+    font-size: 14px;
+    max-width: 90vw;
+  }
 
-/* ===== ديسكتوب: تأكيد صورة الديسكتوب ===== */
-@media (min-width: 769px){
-  .hero, .hero-bleed{
-    background-image: url("hero-bg-desktop.jpg") !important;
+  /* ترتيب الأزرار رأسي */
+  .hero .btn-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 18px;
+    border-radius: 10px;
+  }
+
+  /* حجم اللوجو والهيدر */
+  .site-header {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .site-logo img {
+    width: 70px;
+  }
+
+  .badge {
+    font-size: 13px;
+    padding: 5px 8px;
   }
 }
 
+/* ================== DESKTOP CONFIRM ================== */
+@media (min-width: 769px) {
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-desktop.png") center/cover no-repeat !important;
+  }
+}
 
 
 /* ================== Trust Banner ================== */
