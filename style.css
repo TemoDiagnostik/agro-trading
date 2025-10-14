@@ -44,11 +44,8 @@ header {
 
 /* ====== BRAND (Logo + Name) ====== */
 header .brand {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.8rem;
-  flex-wrap: nowrap;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 header .logo-img {
