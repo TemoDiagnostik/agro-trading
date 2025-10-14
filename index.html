@@ -208,16 +208,7 @@
   </div>
 </section>
 
-<section id="coa">
-  <div class="container">
-    <!-- شريط أزرار موحّد -->
-    <div class="hide-print cta-row">
-      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات خاصة</a>
-      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
-      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
-    </div>
-  </div>
-</section>
+
     
 <section id="services">
   <div class="container">
@@ -255,26 +246,40 @@
   
 
         <!-- قسم الشهادات -->
+<!-- ===== قسم الشهادات الكامل: العنوان + الأزرار + الشهادات ===== -->
 <section id="certificates" class="certificates-section">
-  <h2 style="text-align: center; margin-bottom: 10px;">Official Product Certificates</h2>
-  <p style="text-align: center; font-size: 16px; color: #555; margin-bottom: 40px;">
-    Below are the latest certified reports for our Rock Phosphate (Grade 26%) — verified and approved for international distribution.
-  </p>
+  <div class="container">
 
-  <div class="certificates-container">
-    
-    <!-- COA Certificate Card -->
-    <div class="certificate-card">
-      <h3>Certificate of Analysis (COA)</h3>
-      <embed src="COA_Template_EuroAgri.pdf" type="application/pdf" width="100%" height="950px" />
-      <a href="COA_Template_EuroAgri.pdf" download class="download-btn">Download COA Certificate</a>
+    <!-- العنوان -->
+    <h2 style="text-align: center; margin-bottom: 10px;">Official Product Certificates</h2>
+    <p style="text-align: center; font-size: 16px; color: #555; margin-bottom: 40px;">
+      Below are the latest certified reports for our Rock Phosphate (Grade 26%) — verified and approved for international distribution.
+    </p>
+
+    <!-- أزرار الوظائف -->
+    <div class="cta-row hide-print" style="text-align: center; margin-bottom: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات خاصة</a>
+      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
+      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
     </div>
 
-    <!-- Sieving Analysis Certificate Card -->
-    <div class="certificate-card">
-      <h3>Sieving Analysis</h3>
-      <embed src="Certificate_Sieving_Analysis.pdf" type="application/pdf" width="100%" height="950px" />
-      <a href="Certificate_Sieving_Analysis.pdf" download class="download-btn">Download Sieving Analysis</a>
+    <!-- بطاقات الشهادات -->
+    <div class="certificates-container">
+
+      <!-- COA -->
+      <div class="certificate-card">
+        <h3>Certificate of Analysis (COA)</h3>
+        <embed src="COA_Template_EuroAgri.pdf" type="application/pdf" width="100%" height="950px" />
+        <a href="COA_Template_EuroAgri.pdf" download class="download-btn">Download COA Certificate</a>
+      </div>
+
+      <!-- Sieving -->
+      <div class="certificate-card">
+        <h3>Sieving Analysis</h3>
+        <embed src="Certificate_Sieving_Analysis.pdf" type="application/pdf" width="100%" height="950px" />
+        <a href="Certificate_Sieving_Analysis.pdf" download class="download-btn">Download Sieving Analysis</a>
+      </div>
+
     </div>
 
   </div>
@@ -319,6 +324,17 @@
         <img src="logistics3.png" alt="EU Compliance" class="log-img">
       </div>
 
+<section id="coa">
+  <div class="container">
+    <!-- شريط أزرار موحّد -->
+    <div class="hide-print cta-row">
+      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">اطلب مواصفات خاصة</a>
+      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">تصدير التحليل المنخلي CSV</span></button>
+      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">طباعة/حفظ PDF — شهادة التحليل</span></button>
+    </div>
+  </div>
+</section>
+      
     </div>
   </div>
 </section>
