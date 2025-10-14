@@ -49,11 +49,22 @@ header .brand {
 }
 
 header .logo-img {
-  height: 100px;   /* أكبر من 88px */
+  height: 96px;
   width: auto;
   display: block;
-  margin-left: 0;  /* أقصى الشمال */
-}  
+  margin-left: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+.logo {
+  margin-left: 0; /* يلصق اللوجو في الشمال */
+}
 
 header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; list-style:none }
 header nav a{
@@ -190,15 +201,15 @@ a.btn, button.btn {
 /* زر ثانوي (Outline) */
 .btn-outline {
   background: transparent;
-  color: #1A8917 !important;
-  border: 2px solid #1A8917;
+  color: #fff !important;
+  border: 2px solid #fff;
   padding: 12px 24px;
 }
 
 .btn-outline:hover {
-  background: #eaf7e8;
-  color: #0e5f0c !important;
-  border-color: #0e5f0c;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+  border-color: #eee;
 }
 
 /* Row of buttons */
