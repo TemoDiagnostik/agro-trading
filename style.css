@@ -20,56 +20,59 @@ a:hover{ text-decoration:underline }
 
 
 /* ========== الهيدر المعدّل بالكامل ========== */
+/* ====== HEADER CONTAINER ====== */
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ====== HEADER BAR ====== */
 header {
-  position: relative; /* ← غير ثابت */
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(80, 80, 80, 0.15); /* رمادي شفاف */
+  background: rgba(80, 80, 80, 0.15);
   backdrop-filter: blur(6px);
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 0;
 }
 
-header .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 68px;
-  gap: 1rem;
-}
-
-/* لوجو */
-header .logo-img {
-  height: 110px;  /* أكبر من 96px */
-  width: auto;
-  display: block;
-  margin-left: 0;
-}
-
-/* تنسيق النص بجانب اللوجو */
+/* ====== BRAND (Logo + Name) ====== */
 header .brand {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.8rem;
+  flex-wrap: nowrap;
 }
 
-.brand-text {
+header .logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+header .brand-text {
   color: #000 !important;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
-/* القوائم */
+/* ====== NAVIGATION LINKS ====== */
 header nav ul {
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   list-style: none;
-  flex-wrap: wrap;
 }
 
 header nav a {
@@ -77,21 +80,13 @@ header nav a {
   font-weight: 600;
   color: #000 !important;
   border-radius: 8px;
+  text-decoration: none;
   transition: background 0.2s ease;
 }
 
 header nav a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-header .container {
-  max-width: 1280px;     /* ← تحكم في عرض البار */
-  margin: 0 auto;         /* ← توسيط المحتوى */
-  padding: 0 1.5rem;      /* ← مساحة داخلية مناسبة */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 
 /* =============== HERO SECTION =============== */
 .hero, .hero-bleed {
