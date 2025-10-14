@@ -56,7 +56,7 @@ header nav a{
 nav ul{ display:flex; gap:.9rem; list-style:none; padding:0; margin:0; flex-wrap:wrap }
 nav a{ padding:.45rem .7rem; border-radius:10px }
 /* =============== RESET =============== */
-* {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
