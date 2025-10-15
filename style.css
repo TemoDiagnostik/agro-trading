@@ -596,108 +596,109 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 
 
-/* ===== CERTIFICATES SECTION STYLES ===== */
-
+/* ========== Certificates Section ========== */
 #certificates {
   padding: 60px 20px;
-  background: var(--paper-2);
 }
 
 #certificates h2 {
+  font-size: clamp(28px, 4vw, 36px);
   text-align: center;
-  font-size: clamp(28px, 5vw, 36px);
-  margin-bottom: 12px;
+  margin-bottom: 0.5em;
 }
 
 #certificates p.muted {
+  color: var(--soft);
+  font-size: 15px;
   text-align: center;
-  color: var(--muted);
-  font-size: 16px;
   margin-bottom: 32px;
-  max-width: 720px;
+  max-width: 700px;
   margin-inline: auto;
 }
 
-/* Grid for the certificate cards */
+/* شبكة الشهادات 4 أعمدة */
 #certificates .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
-@media (max-width: 1000px) {
-  #certificates .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  #certificates .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Individual card */
+/* كارت الشهادة */
 #certificates .card {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: var(--radius);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: 0.3s ease;
 }
 
 #certificates .card:hover {
   transform: translateY(-4px);
 }
 
-/* Certificate image */
+/* صورة الشهادة */
 #certificates .card img {
   width: 100%;
   height: auto;
+  max-height: 240px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
 }
 
-/* Buttons at bottom */
+/* النص داخل الكارت */
+#certificates .card h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+#certificates .card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* الأزرار */
 #certificates .cta {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   margin-top: auto;
 }
 
-#certificates .btn {
-  padding: 10px 20px;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+/* ميديا كويري للجوال */
+@media (max-width: 1100px) {
+  #certificates .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-#certificates .btn-outline {
-  border: 2px solid var(--brand);
+@media (max-width: 600px) {
+  #certificates .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* زر View الأبيض – تحسين */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--brand);  /* نفس لون الزر الأخضر */
   color: var(--brand);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-#certificates .btn-outline:hover {
-  background: var(--brand);
+.btn-outline:hover {
+  background-color: var(--brand);
   color: white;
 }
 
-#certificates .btn-primary {
-  background: var(--brand);
-  color: white;
-  border: none;
-}
-
-#certificates .btn-primary:hover {
-  background: var(--brand-ink);
-}
 .download-btn {
   margin-top: 20px;
   padding: 10px 20px;
