@@ -311,62 +311,94 @@ section,
   
   
   
-  /* =============== Products (clean, single block) =============== */
-  #products{
-    position: relative;
-    padding: 64px 0;                 /* مسافة مريحة تحت الهيرو */
-    background:
-      /* طبقة تفتيح خفيفة لتحسين القراءة */
-      linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.10)),
-      url("leaf-pattern.png") center/cover no-repeat;  /* ← خلفية الأوراق */
-    background-attachment: fixed;    /* عمق بسيط على الديسكتوب */
-  }
-  @media (max-width:1024px){
-    #products{ background-attachment: scroll; } /* أفضل للموبايل/آيOS */
-  }
-  
-  
-  
-  
-  /* المحتوى فوق الطبقات */
-  #products > .container{ position: relative; z-index: 1; }
-
-/* تخطيط الشبكة والكروت */
-#products .grid{ display:grid; gap:16px }
-#products .grid.cols-3{ grid-template-columns:repeat(3,1fr) }
-@media (max-width:1000px){ #products .grid.cols-3{ grid-template-columns:repeat(2,1fr) } }
-@media (max-width:640px){  #products .grid.cols-3{ grid-template-columns:1fr } }
-
-#products h2{ margin:0 0 18px; font-weight:900; letter-spacing:.2px }
-#products h3{ margin:0 0 10px; font-weight:800; line-height:1.25 }
-#products .muted{ color:var(--soft); line-height:1.7; margin:.2rem 0 1rem }
-
-/* كروت المنتجات */
-#products .card{
-  background:#fff;                 /* خلفية واضحة فوق الصورة */
-  border:1px solid #e5e7eb;
-  border-radius:var(--radius);
-  box-shadow:0 8px 24px rgba(2,6,23,.06);
-  padding:18px; transition:.2s ease;
-  display:flex; flex-direction:column;
+/* كروت المنتجات - تصميم محسّن */
+#products .card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  min-height: 100%;
 }
-#products .card:hover{ transform:translateY(-2px) }
+
+#products .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+#products h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+#products .muted {
+  color: var(--soft);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
 
 /* الوسوم */
-#products .tag{
-  display:inline-flex; align-items:center; gap:.35rem;
-  background:#f9fafb; border:1px solid #e2e8f0;
-  padding:.35rem .6rem; border-radius:8px;
-  font-weight:600; font-size:.92rem; color:var(--brand-ink);
-  transition:.2s; margin:0 6px 6px 0;
+#products .tag {
+  display: inline-block;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--brand-ink);
+  margin: 4px 6px 0 0;
+  transition: 0.2s ease;
 }
-#products .tag:hover{ background:#ecfdf5; border-color:var(--brand); color:#059669 }
+
+#products .tag:hover {
+  background: #ecfdf5;
+  border-color: var(--brand);
+  color: #059669;
+}
 
 /* أزرار الكرت */
-#products .card .cta{ margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap }
-@media (max-width:640px){ #products .card .cta{ justify-content:space-between } }
+#products .card .cta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+}
 
+#products .card .btn {
+  background: var(--brand);
+  border: 1px solid var(--brand);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  text-align: center;
+}
 
+#products .card .btn:hover {
+  background: #059669;
+  border-color: #059669;
+}
+
+#products .card .btn-outline {
+  background: transparent;
+  color: var(--brand) !important;
+  border: 2px solid var(--brand);
+}
+
+#products .card .btn-outline:hover {
+  background: rgba(16, 185, 129, 0.1);
+}
 
 /* ================== COA Toolbar ================== */
 #coa .hide-print{ display:flex; gap:.6rem; justify-content:flex-end; flex-wrap:wrap; margin:8px 0 16px }
