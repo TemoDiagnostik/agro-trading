@@ -325,7 +325,7 @@ section,
 #products .grid.cols-2 {
   display: flex;
   justify-content: space-between; /* كرت شمال وكرت يمين */
-  gap: 40px;
+  gap: 100px;
   flex-wrap: wrap;
 }
 
