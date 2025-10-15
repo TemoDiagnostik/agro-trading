@@ -323,10 +323,16 @@ section,
 
 /* ✅ تنسيق خاص للكروت داخل قسم المنتجات – تصميم متجاوب لكل الشاشات */
 #products .grid.cols-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(24px, 5vw, 100px); /* مسافة مرنة ومتناسقة */
-  align-items: stretch;
+  display: flex;
+  justify-content: space-between; /* كرت شمال وكرت يمين */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+#products .grid.cols-2 > .card {
+  flex: 1 1 45%; /* عرض مرن لكل كرت */
+  max-width: 48%;
+  min-width: 280px;
 }
 
 #products h2 {
