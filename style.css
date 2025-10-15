@@ -280,11 +280,10 @@ section,
   .trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155 }
   .trust-banner strong{ color:#0f766e }
   
-  
-  
-الكود الحالي 
+   
 
-/* =============== Products (clean, single block) =============== */
+
+  /* =============== Products (clean, single block) =============== */
   #products{
     position: relative;
     padding: 64px 0;                 /* مسافة مريحة تحت الهيرو */
@@ -297,8 +296,6 @@ section,
   @media (max-width:1024px){
     #products{ background-attachment: scroll; } /* أفضل للموبايل/آيOS */
   }
-  
-  
   
   
   /* المحتوى فوق الطبقات */
@@ -338,7 +335,6 @@ section,
 /* أزرار الكرت */
 #products .card .cta{ margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap }
 @media (max-width:640px){ #products .card .cta{ justify-content:space-between } }
-
 
 
 /* ================== COA Toolbar ================== */
