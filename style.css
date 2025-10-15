@@ -112,9 +112,7 @@ header .lang select {
 .hero-bleed {
   position: relative;
   background: url("hero-bg-desktop.png") center/cover no-repeat !important;
-  color: #ffffff;
   text-align: left;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   padding: 60px 20px;
 }
 
@@ -128,11 +126,54 @@ header .lang select {
   pointer-events: none;
 }
 
-/* تأكيد الأبيض على كل النصوص داخل الهيرو */
-.hero *,
-.hero-bleed * {
+/* فرض الأبيض على النصوص داخل الهيرو */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6,
+.hero p,
+.hero span,
+.hero strong,
+.hero li,
+.hero a,
+.hero .lead,
+.hero .muted,
+.hero .note,
+.hero .badge,
+.hero .btn,
+.hero-bleed h1,
+.hero-bleed h2,
+.hero-bleed h3,
+.hero-bleed h4,
+.hero-bleed h5,
+.hero-bleed h6,
+.hero-bleed p,
+.hero-bleed span,
+.hero-bleed strong,
+.hero-bleed li,
+.hero-bleed a,
+.hero-bleed .lead,
+.hero-bleed .muted,
+.hero-bleed .note,
+.hero-bleed .badge,
+.hero-bleed .btn {
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* الجملة المطلوبة فقط */
+.hero .muted.note,
+.hero-bleed .muted.note {
+  color: #cccccc !important;
+  text-align: center !important;
+  display: block;
+  margin: 25px auto 0;
+  max-width: 800px;
+  font-size: 17px;
+  font-weight: 400;
+  text-shadow: none;
 }
 
 /* العنوان */
@@ -147,19 +188,6 @@ header .lang select {
   font-size: clamp(16px, 1.6vw, 18px);
   line-height: 1.5;
   max-width: 720px;
-}
-
-/* الجملة المطلوبة بالرصاصي والمركز */
-.hero .muted.note,
-.hero-bleed .muted.note {
-  color: #cccccc !important;
-  text-align: center !important;
-  display: block;
-  margin: 25px auto 0;
-  max-width: 800px;
-  font-size: 17px;
-  font-weight: 400;
-  text-shadow: none;
 }
 
 /* زرار CTA */
@@ -178,7 +206,6 @@ header .lang select {
   border: 1px solid rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(2px);
   font-weight: 600;
-  color: #ffffff !important;
 }
 
 /* =============== BUTTON STYLES =============== */
@@ -243,7 +270,7 @@ button.btn:hover {
   margin-top: 20px;
 }
 
-/* =============== SCROLL ADJUSTMENT (FIX HEADER OVERLAP) =============== */
+/* =============== SCROLL ADJUSTMENT =============== */
 section,
 [id] {
   scroll-margin-top: 110px;
