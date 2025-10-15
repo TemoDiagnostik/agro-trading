@@ -136,7 +136,14 @@ header .lang select {
   line-height: 1.5;
   max-width: 720px;
 }
-
+.hero h1,
+.hero p,
+.hero .muted,
+.hero .note,
+.hero .badge,
+.hero .btn {
+  color: #ffffff !important;
+}
 /* =============== BADGE VALUES =============== */
 .badge {
   display: inline-block;
