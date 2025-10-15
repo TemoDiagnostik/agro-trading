@@ -308,7 +308,7 @@ section,
 @media (max-width:640px){  #products .grid.cols-3{ grid-template-columns:1fr } }
 @media (min-width: 1024px) {
   #products .grid {
-    gap: clamp(40px, 5vw, 80px); /* مسافة مرنة على الشاشات الكبيرة */
+    gap: clamp(60px, 8vw, 160px); /* فرق أكبر بكتير على الشاشات العريضة */
   }
 }
 
