@@ -306,6 +306,12 @@ section,
 #products .grid.cols-3{ grid-template-columns:repeat(3,1fr) }
 @media (max-width:1000px){ #products .grid.cols-3{ grid-template-columns:repeat(2,1fr) } }
 @media (max-width:640px){  #products .grid.cols-3{ grid-template-columns:1fr } }
+@media (min-width: 1024px) {
+  #products .grid {
+    gap: clamp(40px, 5vw, 80px); /* مسافة مرنة على الشاشات الكبيرة */
+  }
+}
+
 
 #products h2{ margin:0 0 18px; font-weight:900; letter-spacing:.2px }
 #products h3{ margin:0 0 10px; font-weight:800; line-height:1.25 }
