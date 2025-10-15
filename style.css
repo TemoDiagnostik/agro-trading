@@ -33,19 +33,23 @@ header .container.nav {
   position: relative;
 }
 
-/* ===== اللوجو ===== */
+/* ====== LOGO IMAGE ====== */
 header .logo-img {
-  height: 100px;
+  height: 100%;         /* يشغل كامل ارتفاع الهيدر */
+  max-height: 110px;    /* لا يزيد عن ارتفاع الشريط */
   width: auto;
   display: block;
+  object-fit: contain;
+  padding-left: 0;
+  margin-left: 0;
 }
 
-/* مجموعة اللوجو */
+/* ====== BRAND ====== */
 header .brand {
   position: absolute;
-  left: 0;
   top: 0;
   bottom: 0;
+  left: 0; /* ← اقصى الشمال */
   display: flex;
   align-items: center;
   padding-left: 0;
