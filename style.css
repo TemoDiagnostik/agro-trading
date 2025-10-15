@@ -703,3 +703,9 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 .btn-primary:hover {
   background-color: var(--brand-ink);
 }
+#certificates .card .btn {
+  min-width: 120px;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 14px;
+}
