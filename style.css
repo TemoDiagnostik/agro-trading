@@ -452,6 +452,33 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 #services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
 #services .service:hover{ transform:translateY(-4px) }
 
+#logistics .card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  padding: 18px;
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#logistics .card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+#logistics .grid.cols-3 {
+  margin-top: 32px;
+}
+
+
+
+
 /* ================== Features (بادجات صغيرة) ================== */
 .features{ display:flex; gap:1rem; margin:.8rem 0; flex-wrap:wrap }
 .feature{
