@@ -145,11 +145,7 @@ header .lang select {
   color: #ffffff !important;
 }
 
-.hero-bleed,
-.hero-bleed * {
-  color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-}
+
 
 
 
@@ -174,11 +170,9 @@ header .lang select {
   flex-wrap: wrap;
 }
 
-.muted.note {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 15px;
-  color: var(--soft); /* أو #6b7280 */
+.hero-bleed .muted.note {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 a.btn, button.btn {
