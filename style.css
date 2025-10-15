@@ -452,6 +452,40 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 #services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
 #services .service:hover{ transform:translateY(-4px) }
 
+/* =============== LOGISTICS SECTION =============== */
+
+#logistics {
+  position: relative;
+  padding: 64px 0;
+  background: #f9fafb;
+}
+
+#logistics .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* شبكة الكروت 3 أعمدة */
+#logistics .grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+@media (max-width: 1000px) {
+  #logistics .grid.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #logistics .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* تصميم الكارت */
 #logistics .card {
   background: #fff;
   border: 1px solid #e5e7eb;
@@ -464,16 +498,28 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   height: 100%;
 }
 
+/* عنوان الكارت */
+#logistics .card h3 {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+/* فقرة الشرح */
+#logistics .card p {
+  color: var(--soft);
+  line-height: 1.6;
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+}
+
+/* الصور داخل الكروت */
 #logistics .card img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
   margin-top: 12px;
   border-radius: 10px;
-}
-
-#logistics .grid.cols-3 {
-  margin-top: 32px;
 }
 
 
