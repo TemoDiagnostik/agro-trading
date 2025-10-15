@@ -108,16 +108,18 @@ header .lang select {
 
 
 /* =============== HERO SECTION =============== */
-.hero, .hero-bleed {
+.hero,
+.hero-bleed {
   position: relative;
   background: url("hero-bg-desktop.png") center/cover no-repeat !important;
-  color: #fff;
+  color: #ffffff;
   text-align: left;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   padding: 60px 20px;
 }
 
-.hero::before, .hero-bleed::before {
+.hero::before,
+.hero-bleed::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -129,25 +131,29 @@ header .lang select {
   font-size: clamp(48px, 5vw, 60px);
   font-weight: 700;
   margin-bottom: 0.6rem;
+  color: #ffffff !important;
 }
 
 .hero p {
   font-size: clamp(16px, 1.6vw, 18px);
   line-height: 1.5;
   max-width: 720px;
-}
-.hero h1,
-.hero p,
-.hero .muted,
-.hero .note,
-.hero .badge,
-.hero .btn {
   color: #ffffff !important;
 }
 
+.hero .muted.note {
+  color: #cccccc !important; /* رصاصي */
+  text-align: center;
+  display: block;
+  margin: 20px auto 0;
+  max-width: 700px;
+}
 
-
-
+/* زرار CTA */
+.hero .btn,
+.hero .btn-row .btn {
+  color: #ffffff !important;
+}
 
 /* =============== BADGE VALUES =============== */
 .badge {
@@ -159,6 +165,7 @@ header .lang select {
   border: 1px solid rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(2px);
   font-weight: 600;
+  color: #ffffff !important;
 }
 
 /* =============== BUTTON STYLES =============== */
@@ -170,34 +177,31 @@ header .lang select {
   flex-wrap: wrap;
 }
 
-.hero-bleed .muted.note {
+a.btn,
+button.btn {
+  background: rgba(255, 255, 255, 0.15);
   color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-a.btn, button.btn {
-  background: rgba(255, 255, 255, 0.15); /* شفاف خفيف */
-  color: #fff !important;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 12px 22px;
   font-weight: 600;
   border-radius: 12px;
-  backdrop-filter: blur(4px); /* ضباب خفيف */
+  backdrop-filter: blur(4px);
   transition: all 0.3s ease;
 }
 
-a.btn:hover, button.btn:hover {
+a.btn:hover,
+button.btn:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
-/* زر رئيسي */
 .btn-primary {
   background: #ffffff;
-  color: #111 !important;
+  color: #111111 !important;
   border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
+
 .btn-primary:hover {
   background: #eaeaea;
 }
@@ -206,18 +210,16 @@ a.btn:hover, button.btn:hover {
   transform: translateY(1px);
 }
 
-/* زر ثانوي (Outline) */
 .btn-outline {
   background: transparent;
-  color: #fff !important;
-  border: 2px solid #fff;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
   padding: 12px 24px;
 }
 
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff !important;
-  border-color: #eee;
+  border-color: #eeeeee;
 }
 
 /* Row of buttons */
@@ -229,7 +231,8 @@ a.btn:hover, button.btn:hover {
 }
 
 /* =============== SCROLL ADJUSTMENT (FIX HEADER OVERLAP) =============== */
-section, [id] {
+section,
+[id] {
   scroll-margin-top: 110px;
 }
 
@@ -239,12 +242,14 @@ section, [id] {
     width: 120px;
   }
 
-  .hero, .hero-bleed {
+  .hero,
+  .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat !important;
     padding: 30px 16px 40px;
   }
 
-  .hero::before, .hero-bleed::before {
+  .hero::before,
+  .hero-bleed::before {
     background: rgba(0, 77, 0, 0.35);
   }
 
@@ -262,7 +267,8 @@ section, [id] {
     align-items: flex-start;
   }
 
-  .btn-primary, .btn-outline {
+  .btn-primary,
+  .btn-outline {
     padding: 12px 18px;
   }
 
@@ -270,11 +276,18 @@ section, [id] {
     font-size: 13px;
     padding: 5px 8px;
   }
+
+  .hero .muted.note {
+    text-align: center;
+    font-size: 14px;
+    max-width: 90vw;
+  }
 }
 
 /* =============== DESKTOP CONFIRM =============== */
 @media (min-width: 769px) {
-  .hero, .hero-bleed {
+  .hero,
+  .hero-bleed {
     background: url("hero-bg-desktop.png") center/cover no-repeat !important;
   }
 }
