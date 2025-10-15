@@ -19,7 +19,7 @@ a:hover{ text-decoration:underline }
 .brand-text{ user-select:none }
 
 
-/* ========== HEADER FINAL VERSION ========== */
+/* ========== HEADER FINAL VERSION ADJUSTED ========== */
 
 /* حاوية الهيدر */
 header .container.nav {
@@ -33,26 +33,30 @@ header .container.nav {
   position: relative;
 }
 
-/* اللوجو */
+/* ===== اللوجو ===== */
 header .logo-img {
   height: 100px;
   width: auto;
+  display: block;
 }
 
 /* مجموعة اللوجو */
 header .brand {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
+  padding-left: 0;
+  margin-left: 0;
 }
 
-/* اسم الشركة */
+/* اسم الشركة - يوضع في منتصف الشريط ولكن قريب من الأسفل */
 header .brand-text {
   position: absolute;
   left: 50%;
+  bottom: 10px; /* أنزل النص قليلاً للحافة السفلية */
   transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
@@ -63,21 +67,21 @@ header .brand-text {
 /* شريط التنقل */
 header nav {
   position: absolute;
-  top: 12px;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 header nav ul {
   display: flex;
-  gap: 1.1rem;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 header nav ul li a {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: #000;
 }
@@ -86,17 +90,19 @@ header nav ul li a {
 header .lang {
   position: absolute;
   right: 0;
-  top: 12px;
+  top: 8px;
   display: flex;
   align-items: center;
   gap: 0.3rem;
 }
 
 header .lang select {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   padding: 4px 8px;
   border-radius: 6px;
 }
+
+
 /* =============== HERO SECTION =============== */
 .hero, .hero-bleed {
   position: relative;
