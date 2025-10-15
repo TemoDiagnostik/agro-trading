@@ -35,7 +35,7 @@ header .container.nav {
 
 /* ====== LOGO IMAGE ====== */
 header .logo-img {
-  height: 100%;         /* يشغل كامل ارتفاع الهيدر */
+  height: 200%;         /* يشغل كامل ارتفاع الهيدر */
   max-height: 110px;    /* لا يزيد عن ارتفاع الشريط */
   width: auto;
   display: block;
