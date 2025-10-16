@@ -626,7 +626,7 @@ form label {
 
 /* ===== about ===== */
 .about-bg {
-  background-image: url('about-desktop.jpg');
+  background-image: url('about-desktop.png');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
@@ -644,9 +644,10 @@ form label {
 /* للموبايل */
 @media (max-width: 768px) {
   .about-bg {
-    background-image: url('about-mobile.jpg');
+    background-image: url('about-mobile.png');
     padding: 60px 15px;
   }
+}
   .content-box {
     padding: 25px;
   }
