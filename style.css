@@ -564,9 +564,9 @@ section, [id] {scroll-margin-top:110px;}
   font-size: 1rem;
 }
 
-.contact-layout {
-  gap: 40px;
-  align-items: flex-start;
+.form-section,
+.info-section {
+  margin-bottom: 40px;
 }
 
 .contact-heading {
