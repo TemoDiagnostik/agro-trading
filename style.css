@@ -363,6 +363,15 @@ header .lang select {
   font-weight:900;
   margin-bottom:24px;
 }
+#services,
+#services p,
+#services li,
+#services span,
+#services strong,
+#services small {
+  color: #ffffff;
+}
+
 #services .grid {
   display:grid;
   gap:24px;
