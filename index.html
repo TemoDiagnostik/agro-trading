@@ -369,6 +369,8 @@
     </div>
   </div>
 </section>
+
+    
 <!-- Optional Card 4: Shipment Tracking -->
       <div class="features">
   <div class="feature">
@@ -410,39 +412,12 @@
 </section>
 
     
-<!-- Contact Info -->
 <section id="contact">
   <div class="container">
-    <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
-
-    <!-- FORM -->
-    <div class="form-section">
-      <form onsubmit="return sendMailto(this)">
-        <label>
-          <span data-i18n="form.name">Full Name</span><br/>
-          <input name="name" required placeholder="Full Name">
-        </label><br/><br/>
-        <label>
-          <span data-i18n="form.email">Email</span><br/>
-          <input name="email" type="email" required placeholder="you@example.com">
-        </label><br/><br/>
-        <label>
-          <span data-i18n="form.message">Message</span><br/>
-          <textarea name="message" rows="5" required placeholder="Required: product / quantity / port / terms"></textarea>
-        </label>
-        <div class="cta">
-          <button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
-          <a class="btn btn-outline" href="https://wa.me/00420732133919" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
-        <p class="note" data-i18n="contact.note">
-          This form opens your email app to send directly. No analytics cookies used.
-        </p>
-      </form>
-    </div>
 
     <!-- COMPANY & BANK INFO -->
     <div class="info-section">
-      <h3 class="contact-heading" data-i18n="contact.details">Company & Bank Info</h3>
+      <h2 class="contact-heading" data-i18n="contact.details">Contact Details</h2>
       <p>
         <strong>Euro Agri Trading s.r.o.</strong><br/>
         Nader Abdou<br/>
@@ -482,6 +457,31 @@
         </a>
       </div>
     </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+      <h2 class="contact-heading" data-i18n="contact.title">Get in Touch</h2>
+      <form onsubmit="return sendMailto(this)">
+        <label>
+          <span>Name</span><br/>
+          <input name="name" required placeholder="Full Name">
+        </label><br/><br/>
+        <label>
+          <span>Email</span><br/>
+          <input name="email" type="email" required placeholder="you@example.com">
+        </label><br/><br/>
+        <label>
+          <span>Message</span><br/>
+          <textarea name="message" rows="5" required placeholder="Required: product / quantity / port / terms"></textarea>
+        </label>
+        <div class="cta">
+          <button class="btn btn-primary" type="submit">Send</button>
+          <a class="btn btn-outline" href="https://wa.me/00420732133919" target="_blank">WhatsApp</a>
+        </div>
+        <p class="note">We do not use analytics cookies. This form opens your mail app to send directly.</p>
+      </form>
+    </div>
+
   </div>
 </section>
 
