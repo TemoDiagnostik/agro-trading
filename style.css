@@ -1,31 +1,4 @@
-/* ===== Reset + Base ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--ink);
-  background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: var(--brand-ink);
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ========== Root Variables ========== */
+/* ========== ROOT VARIABLES ========== */
 :root {
   --bg: #0b132b;
   --ink: #0f172a;
@@ -39,7 +12,29 @@ a:hover {
   --radius: 14px;
 }
 
-/* ========== Global Layout ========== */
+/* ========== BASE RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--paper), var(--paper-2));
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brand-ink);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== CONTAINER ========== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -47,13 +42,8 @@ a:hover {
   width: 100%;
 }
 
-.brand-text {
-  user-select: none;
-}
-
-/* ========== Buttons ========== */
-a.btn,
-button.btn {
+/* ========== BUTTONS (موحد لكل الموقع) ========== */
+.btn {
   display: inline-block;
   padding: 10px 16px;
   font-size: 14px;
@@ -73,7 +63,6 @@ button.btn {
   color: #fff !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .btn-primary:hover {
   background-color: var(--brand-ink);
 }
@@ -83,7 +72,6 @@ button.btn {
   border: 2px solid var(--brand);
   color: var(--brand) !important;
 }
-
 .btn-outline:hover {
   background-color: var(--brand);
   color: #fff !important;
@@ -94,34 +82,102 @@ button.btn {
   padding: 0.7rem 1rem;
 }
 
-/* Responsive Button Fix */
 @media (max-width: 640px) {
-  .btn-row,
-  .cta {
+  .btn-row, .cta {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
   }
-
-  a.btn,
-  button.btn {
+  .btn {
     width: 100%;
   }
 }
 
-/* ========== CERTIFICATES Section ========== */
+/* ========== HERO SECTION ========== */
+.hero {
+  background: url("hero-bg-desktop.png") center/cover no-repeat;
+  background-color: #0f172a;
+  padding: 60px 20px;
+  text-align: left;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 77, 0, 0.25);
+  z-index: 0;
+}
+.hero * {
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.hero p {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+}
+.hero .btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hero .btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+.hero .btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* خاص بالجملة الملاحظة */
+.hero .muted.note {
+  color: #ccc !important;
+  text-shadow: none;
+  text-align: center;
+  margin-top: 25px;
+  max-width: 800px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 60px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+}
+
+/* ========== CERTIFICATES SECTION ========== */
 #certificates {
   padding-block: 40px;
   background-color: var(--paper-2);
 }
-
 #certificates .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
 }
-
 #certificates .card {
   background: #f0ede5;
   border: 1px solid #dcdcdc;
@@ -136,7 +192,6 @@ button.btn {
   width: 100%;
   max-width: 340px;
 }
-
 #certificates .card img {
   width: 100%;
   height: 200px;
@@ -145,19 +200,15 @@ button.btn {
   border-radius: 10px;
   margin-bottom: 12px;
 }
-
 #certificates .card h3 {
   font-size: 16px;
   color: var(--ink);
-  margin: 0;
 }
-
 #certificates .card p {
   font-size: 14px;
   color: var(--soft);
   margin: 10px 0 20px;
 }
-
 #certificates .cta {
   display: flex;
   flex-wrap: wrap;
@@ -165,67 +216,43 @@ button.btn {
   gap: 10px;
   margin-top: auto;
 }
-
-/* زر خاص داخل الشهادات */
-#certificates .btn {
-  all: unset;
-  display: inline-block;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
 #certificates .btn-outline {
   background-color: var(--paper-2);
   border: 2px solid var(--brand);
   color: var(--brand);
 }
-
 #certificates .btn-outline:hover {
   background-color: var(--brand);
   color: var(--paper);
 }
-
 #certificates .btn-primary {
   background-color: var(--brand);
   color: var(--paper);
-  border: none;
 }
-
 #certificates .btn-primary:hover {
   background-color: var(--brand-ink);
 }
-
 @media (max-width: 1000px) {
   #certificates .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 640px) {
   #certificates .grid {
     grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 480px) {
   #certificates .cta {
     flex-direction: column;
     align-items: stretch;
   }
-
   #certificates .btn {
     width: 100%;
   }
 }
 
-/* ========== Footer ========== */
+/* ========== FOOTER ========== */
 .foot {
   padding: 2rem 0;
   border-top: 1px solid #e2e8f0;
@@ -233,14 +260,7 @@ button.btn {
   font-size: .9rem;
 }
 
-/* ========== Section-specific Reset ========== */
-#about .card,
-#coa .card,
-.features .card {
-  all: unset;
-  background: var(--paper-2);
-  padding: 1rem;
-  border-radius: var(--radius);
-  color: var(--muted);
-  font-size: 0.95rem;
+/* ========== MISC ========== */
+section, [id] {
+  scroll-margin-top: 110px;
 }
