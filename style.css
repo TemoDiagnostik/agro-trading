@@ -47,49 +47,46 @@ a:hover {
   overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER CLEANED & FIXED ===== */
 header .container.nav {
   height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* اللوجو */
 header .logo-img {
   height: 300%;
   max-height: 180px;
   width: auto;
-  display: block;
   object-fit: contain;
 }
 
+/* اسم الشركة */
 header .brand {
-  position: absolute;
-  top: 0; bottom: 0; left: 0;
   display: flex;
   align-items: center;
 }
-
 header .brand-text {
-  position: absolute;
-  left: 50%; bottom: 10px;
-  transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
   color: #006400;
   white-space: nowrap;
+  margin-left: 1rem;
 }
 
-header nav {
-  position: absolute;
-  top: 8px; left: 50%;
-  transform: translateX(-50%);
-}
+/* روابط التنقل */
 header nav ul {
   display: flex;
   gap: 1.2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 header nav ul li a {
   font-size: 0.82rem;
@@ -97,9 +94,8 @@ header nav ul li a {
   color: #000;
 }
 
+/* اللغة */
 header .lang {
-  position: absolute;
-  right: 0; top: 8px;
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -110,15 +106,48 @@ header .lang select {
   border-radius: 6px;
 }
 
-/* Responsive Header */
-@media (max-width:768px){
-  header .container.nav{flex-direction:column;height:auto;padding:10px 20px;align-items:flex-start}
-  header .brand-text{position:static;transform:none;margin:10px 0 5px;font-size:1.1rem;text-align:center;width:100%}
-  header nav{position:static;transform:none;margin-top:10px;width:100%}
-  header nav ul{flex-direction:column;gap:0.5rem;align-items:flex-start}
-  header .lang{position:static;margin-top:10px;width:100%;justify-content:flex-end}
-  header .logo-img{height:auto;max-height:80px;width:auto;margin-bottom:10px}
+/* الهيدر في الشاشات الصغيرة */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+
+  header .brand-text {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+    text-align: center;
+    width: 100%;
+  }
+
+  header nav {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  header .lang {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  header .logo-img {
+    max-height: 80px;
+    margin-bottom: 10px;
+  }
 }
+
+
+
+
 
 /* ===== HERO SECTION ===== */
 .hero, .hero-bleed {
@@ -377,8 +406,7 @@ header .lang select {
 }
 
 
-
-
+/* ===== certificates ===== */
 #certificates {
   padding-block: 40px;
   background-color: var(--paper-2);
