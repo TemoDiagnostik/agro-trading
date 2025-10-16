@@ -1,11 +1,12 @@
 /* ===== Reset + Base ===== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   height: 100%;
-  margin: 0;
 }
 
 body {
@@ -48,18 +49,7 @@ a:hover {
   --radius: 14px;
 }
 
-/* ========== 2. GLOBAL RESET ========== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: system-ui, sans-serif;
-  background-color: var(--paper-2);
-  color: var(--ink);
-}
 
 .container {
   max-width: 1200px;
@@ -734,6 +724,18 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   background-color: var(--brand-ink);
 }
 
+#certificates a.btn,
+#certificates button.btn {
+  all: unset;
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
 /* ========== RESPONSIVE BREAKPOINTS ========== */
 @media (max-width: 1000px) {
   #certificates .grid {
