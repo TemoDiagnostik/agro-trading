@@ -47,40 +47,63 @@ a:hover {
   overflow-x: hidden;
 }
 
-/* ===== HEADER CLEANED & FIXED ===== */
+/* ========== HEADER FINAL VERSION ADJUSTED ========== */
+
+/* حاوية الهيدر */
 header .container.nav {
+  max-width: 1200px;
+  margin: 0 auto;
   height: 110px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
-/* اللوجو */
+/* ====== LOGO IMAGE ====== */
 header .logo-img {
-  height: 300%;
-  max-height: 180px;
+  height: 300%;         /* يشغل كامل ارتفاع الهيدر */
+  max-height: 180px;    /* لا يزيد عن ارتفاع الشريط */
   width: auto;
+  display: block;
   object-fit: contain;
+  padding-left: 0;
+  margin-left: 0;
 }
 
-/* اسم الشركة */
+/* ====== BRAND ====== */
 header .brand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* ← اقصى الشمال */
   display: flex;
   align-items: center;
+  padding-left: 0;
+  margin-left: 0;
 }
+
+/* اسم الشركة - يوضع في منتصف الشريط ولكن قريب من الأسفل */
 header .brand-text {
+  position: absolute;
+  left: 50%;
+  bottom: 10px; /* أنزل النص قليلاً للحافة السفلية */
+  transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
   color: #006400;
   white-space: nowrap;
-  margin-left: 1rem;
 }
 
-/* روابط التنقل */
+/* شريط التنقل */
+header nav {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 header nav ul {
   display: flex;
   gap: 1.2rem;
@@ -88,63 +111,53 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
+
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
   color: #000;
 }
 
-/* اللغة */
+/* اختيار اللغة */
 header .lang {
+  position: absolute;
+  right: 0;
+  top: 8px;
   display: flex;
   align-items: center;
   gap: 0.3rem;
 }
+
 header .lang select {
   font-size: 0.82rem;
   padding: 4px 8px;
   border-radius: 6px;
 }
-
-/* الهيدر في الشاشات الصغيرة */
-@media (max-width: 768px) {
-  header .container.nav {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-    align-items: flex-start;
-  }
-
-  header .brand-text {
-    font-size: 1.1rem;
-    margin: 10px 0 5px;
-    text-align: center;
-    width: 100%;
-  }
-
-  header nav {
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-  }
-
-  header .lang {
-    margin-top: 10px;
-    width: 100%;
-    justify-content: flex-end;
-  }
-
-  header .logo-img {
-    max-height: 80px;
-    margin-bottom: 10px;
-  }
+/* =============== HERO SECTION CLEANED =============== */
+.hero,
+.hero-bleed {
+  position: relative;
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat !important;
+  text-align: left;
+  color: #ffffff;
 }
 
+.hero::before,
+.hero-bleed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 77, 0, 0.25);
+  pointer-events: none;
+}
+
+/* فرض الأبيض على النصوص داخل الهيرو */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
 
 
 
