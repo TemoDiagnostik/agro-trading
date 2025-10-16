@@ -596,8 +596,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 
 
-
-/* ====== CERTIFICATES SECTION – FINAL VERSION ====== */
+/* ====== CERTIFICATES SECTION – FINAL CLEAN FIXED VERSION ====== */
 
 #certificates {
   padding-block: 40px;
@@ -609,23 +608,11 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   gap: 20px;
 }
 
-@media (max-width: 1000px) {
-  #certificates .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  #certificates .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 #certificates .card {
-  background: #f9f9f7; /* لون خلفية هادئ لإبراز الشهادة */
-  border: 1px solid #e0e0e0;
+  background: #f1efe7; /* بيج غامق مناسب للعرض */
+  border: 1px solid #dcdcdc;
   border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -642,12 +629,14 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   object-fit: contain;
   border-radius: 10px;
   margin-bottom: 12px;
+  background: #fff;
 }
 
 #certificates .card h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
+  color: #1f2937;
 }
 
 #certificates .card p {
@@ -666,7 +655,6 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 }
 
 /* ====== BUTTON STYLES ====== */
-
 #certificates .btn {
   min-width: 120px;
   padding: 10px 16px;
@@ -681,12 +669,11 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   text-decoration: none;
 }
 
-/* View Button (Outline with subtle background on hover) */
+/* View Button - يظهر دائمًا */
 #certificates .btn-outline {
-  background-color: rgba(255, 255, 255, 0.8); /* خلفية خفيفة */
+  background-color: #ffffff;
   border: 2px solid var(--brand);
   color: var(--brand);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 #certificates .btn-outline:hover {
@@ -694,14 +681,26 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   color: #fff;
 }
 
-/* Request Button (Solid green) */
+/* Request Button */
 #certificates .btn-primary {
   background-color: var(--brand);
   color: white;
   border: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 #certificates .btn-primary:hover {
   background-color: var(--brand-ink);
+}
+
+/* RESPONSIVE FIX: 5 كروت أو أكثر */
+@media (max-width: 1000px) {
+  #certificates .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #certificates .grid {
+    grid-template-columns: 1fr;
+  }
 }
