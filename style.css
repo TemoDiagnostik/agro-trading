@@ -518,15 +518,8 @@ header .lang select {
   font-size:.9rem;
 }
 
-/* ===== SECTION RESET ===== */
-#about .card, #coa .card, .features .card {
-  all:unset;
-  background:var(--paper-2);
-  padding:1rem;
-  border-radius:var(--radius);
-  color:var(--muted);
-  font-size:.95rem;
-}
+
+
 
 /* ===== SCROLL OFFSET ===== */
 section, [id] {scroll-margin-top:110px;}
@@ -631,10 +624,7 @@ form label {
 
 
 
-
-
-
-
+/* ===== about ===== */
 .about-bg {
   background-image: url('about-desktop.jpg');
   background-size: cover;
