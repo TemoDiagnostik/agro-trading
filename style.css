@@ -530,3 +530,21 @@ header .lang select {
 
 /* ===== SCROLL OFFSET ===== */
 section, [id] {scroll-margin-top:110px;}
+
+
+
+/* ===== TEXT COLOR FOR AGRO SERVICES SECTION ===== */
+#home,
+#home p,
+#home ul,
+#home li,
+#home span,
+#home strong,
+#home h1,
+#home h3,
+#home a,
+#home .lead,
+#home .muted,
+#home .tag {
+  color: #ffffff;
+}
