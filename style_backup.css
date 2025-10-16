@@ -1,523 +1,712 @@
 :root{
   --bg:#0b132b; --ink:#0f172a; --soft:#475569; --muted:#64748b;
-  --brand:#2dd4bf; --brand-ink:#0f766e; --paper:#ffffff; --paper-2:#f8fafc;
-  --ring:rgba(45,212,191,.4); --radius:14px;
+  --brand:#10b981; --brand-ink:#0f766e; --paper:#ffffff; --paper-2:#f8fafc;
+  --ring:rgba(16,185,129,.35); --radius:14px;
 }
 
-/* === Reset + Base === */
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
+/* ===== Reset + Base ===== */
+*{ box-sizing:border-box }
+html,body{ height:100%; margin:0 }
 body{
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
   color:var(--ink);
   background:linear-gradient(180deg,var(--paper),var(--paper-2));
+  overflow-x:hidden; /* منع سكرول أفقي */
 }
-a{text-decoration:none;color:var(--brand-ink)}
-a:hover{text-decoration:underline}
-.container{width:min(1180px,92vw);margin-inline:auto}
-.brand-text{ user-select:none; }
-header a, header .brand{ cursor:pointer; }
+a{ text-decoration:none; color:var(--brand-ink) }
+a:hover{ text-decoration:underline }
+.container{ width:min(1180px,92vw); margin-inline:auto }
+.brand-text{ user-select:none }
 
 
-/* ===== 2) تصغير ارتفاع البار الأبيض (الهيدر) ===== */
-/* الحل القاطع لشفافية وتضييق الهيدر */
+/* ========== HEADER FINAL VERSION ADJUSTED ========== */
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-   background: rgba(255,255,255,0.20) !important; 
-  border-bottom: none;
-  padding: 0.1rem 0;
-}
-
-/* ===== 3) رفع النصوص داخل البار وتوسيطها رأسياً ===== */
-header .nav {
+/* حاوية الهيدر */
+header .container.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 110px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.6rem;                      /* ممكن تقللها كمان لو حبيت */
-  min-height: 2px !important;     /* ← قللنا الارتفاع */
-  padding: 0 .01rem !important;     /* ← مسافات جانبية أقل */
-}
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-header nav ul{ margin:0; padding:0; display:flex; align-items:center; gap:.9rem; }
-header nav a{ padding:.45rem .7rem; border-radius:10px; color:#0f172a; line-height:1; }
-
-
-/* 3) البار (الهيدر) أرفع وشفاف خفيف */
-
-header .nav{ min-height: 54px !important; align-items:center !important; }
-header nav a{ padding:.45rem .7rem; line-height:1; }
-header .brand{ display:flex; align-items:center; gap:.6rem; }
-
-/* 4) حجم اللوجو الحقيقي */
-header .logo-img{ height:88px !important; width:auto !important; display:block; }
-
-header nav a {
-  color:#000000 !important; /* أسود */
-}
-
-.brand-text {
-  color: #000000 !important;     /* نفس لون الروابط أسود */
-  font-weight: 800 !important;   /* خط تخين */
-  font-size: 1rem;               /* ممكن تزوده لو عايز الخط أكبر */
-}
-
-
-/* ===== Hero note text (الجملة اللي طلعت بالأسود) ===== */
-.hero .note {
-  color:#222222 !important;   /* أبيض */
-  font-size:0.85rem;
-  opacity:0.9;
-}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
-nav ul{display:flex;gap:.9rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
-nav a{padding:.45rem .7rem;border-radius:10px;color:#fff !important}
-nav a:hover{background:rgba(255,255,255,.15)}
-
-/* === Hero (صورة بعرض الشاشة) === */
-/* === HERO: Full-bleed فعلياً === */
-.hero,
-.hero-bleed{
   position: relative;
-  min-height: 85vh;                         /* زوّدها 90/100vh لو عايز */
-  padding: clamp(3rem,5vw,4rem) 0;
+}
 
-  /* خُد عرض الشاشة بالكامل */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+/* ====== LOGO IMAGE ====== */
+header .logo-img {
+  height: 300%;         /* يشغل كامل ارتفاع الهيدر */
+  max-height: 180px;    /* لا يزيد عن ارتفاع الشريط */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  padding-left: 0;
+  margin-left: 0;
+}
 
-  background: url("images/hero-port.png") center/cover no-repeat !important;
-  color: #fff;
-  overflow: hidden;
+/* ====== BRAND ====== */
+header .brand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* ← اقصى الشمال */
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* اسم الشركة - يوضع في منتصف الشريط ولكن قريب من الأسفل */
+header .brand-text {
+  position: absolute;
+  left: 50%;
+  bottom: 10px; /* أنزل النص قليلاً للحافة السفلية */
+  transform: translateX(-50%);
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: #006400;
+  white-space: nowrap;
+}
+
+/* شريط التنقل */
+header nav {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #000;
+}
+
+/* اختيار اللغة */
+header .lang {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+header .lang select {
+  font-size: 0.82rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+/* =============== HERO SECTION CLEANED =============== */
+.hero,
+.hero-bleed {
+  position: relative;
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat !important;
+  text-align: left;
+  color: #ffffff;
 }
 
 .hero::before,
 .hero-bleed::before {
-  background: transparent !important;
-}
-
-.hero > .container,
-.hero-bleed > .container{
-  position: relative; z-index: 1;
-}
-
-body{ overflow-x: hidden; }                  /* امنع سكرول أفقي لو فيه فرق شريط التمرير */
-
-/* === Buttons === */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
-  border-radius:8px;font-weight:700;cursor:pointer;transition:.2s ease;padding:.55rem 1rem}
-.hero .cta{display:flex;gap:.6rem;flex-wrap:wrap}
-
-/* زر رئيسي (أخضر) */
-.hero .cta .btn-primary{
-  background:#10b981;color:#fff;border:1px solid #10b981;
-  box-shadow:0 4px 14px rgba(16,185,129,.35);
-}
-.hero .cta .btn-primary:hover{background:#059669;border-color:#059669}
-
-/* باقي الأزرار (شفافة بحد أبيض) */
-.hero .cta .btn-outline,
-.hero .card .btn{
-  background:transparent;border:1px solid #fff;color:#fff;
-}
-.hero .cta .btn-outline:hover,
-.hero .card .btn:hover{background:#fff;color:#0b132b}
-
-/* === Hero card (شفاف تماماً) === */
-.hero .card{
-  background:transparent;border:0;box-shadow:none;padding:.5rem 0;
-}
-.hero .card h3,.hero .card p,.hero .card li,.hero .card a{color:#fff}
-
-/* Tags داخل الهيرو */
-.hero .tag{
-  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
-  color:#fff;
-}
-
-/* Footer */
-.foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem}
-
-
-
-  /* الخلفية صورة فقط، بدون أي ألوان */
-  background: url("hero-port.png") center/cover no-repeat !important;
-  
-  color: #fff;
-  overflow: hidden;
-}
-.hero-bleed::before {
   content: "";
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,.35); /* تقدر تخليها 0 لو مش عايز أي تعتيم */
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 77, 0, 0.25);
+  pointer-events: none;
 }
-.hero-content {
+
+/* فرض الأبيض على النصوص داخل الهيرو */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* استثناء الجملة المطلوبة */
+.hero .muted.note,
+.hero-bleed .muted.note {
+  color: #cccccc !important;
+  text-align: center;
+  display: block;
+  margin: 25px auto 0;
+  max-width: 800px;
+  font-size: 17px;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+/* العنوان */
+.hero h1 {
+  font-size: clamp(48px, 5vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+/* الفقرة */
+.hero p {
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+/* صف الأزرار */
+.hero .btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* =============== BADGE =============== */
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 4px 6px 0 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* =============== BUTTON STYLES =============== */
+a.btn,
+button.btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+}
+
+a.btn:hover,
+button.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #111111 !important;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:hover {
+  background: #eaeaea;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+  padding: 12px 24px;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #eeeeee;
+}
+
+/* ================= SCROLL OFFSET ================ */
+section,
+[id] {
+  scroll-margin-top: 110px;
+}
+
+/* =============== MOBILE ONLY =============== */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 120px;
+  }
+
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat !important;
+    padding: 30px 16px 40px;
+  }
+
+  .hero::before,
+  .hero-bleed::before {
+    background: rgba(0, 77, 0, 0.35);
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    max-width: 90vw;
+  }
+
+  .hero .btn-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .badge {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .hero .muted.note {
+    font-size: 14px;
+    max-width: 90vw;
+  }
+}
+  /* ================== Trust Banner ================== */
+  .trust-banner{
+    padding:.9rem 0; background:#f1f5f9;
+    border-top:3px solid #84cc16; border-bottom:1px solid #e2e8f0; text-align:center;
+  }
+  .trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155 }
+  .trust-banner strong{ color:#0f766e }
+  
+   
+
+
+ /* =============== Products (clean, single block) =============== */
+#products {
+  position: relative;
+  padding: 64px 0; /* مسافة مريحة تحت الهيرو */
+  background:
+    linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.10)),
+    url("leaf-pattern.png") center/cover no-repeat;  /* ← خلفية الأوراق */
+  background-attachment: fixed; /* عمق بسيط على الديسكتوب */
+}
+@media (max-width: 1024px) {
+  #products { background-attachment: scroll; } /* أفضل للموبايل/آيOS */
+}
+
+/* المحتوى فوق الطبقات */
+#products > .container {
   position: relative;
   z-index: 1;
-  padding: clamp(3rem, 5vw, 4rem) 0;
-}
-/* ===== 1) وضوح النص فوق الصورة ===== */
-/* خيار A: خلّي النصوص/الروابط بيضاء */
-.hero-bleed h1,
-.hero-bleed .lead,
-.hero-bleed p,
-.hero-bleed li,
-.hero-bleed a{ color:#fff !important; }
-
-/* خلّي الشارات/التاجات والـpill واضحة بخلفية داكنة خفيفة */
-.hero-bleed .pill,
-.hero-bleed .tag{
-  background: rgba(0,0,0,.35) !important;
-  color:#fff !important;
-  border:1px solid rgba(255,255,255,.55) !important;
 }
 
-/* الأزرار */
-.hero-bleed .btn-primary{
-  background:#10b981; border:1px solid #10b981; color:#fff;
-}
-.hero-bleed .btn-outline{
-  background:rgba(0,0,0,.28); border:1px solid #fff; color:#fff;
-}
-.hero-bleed .btn-outline:hover{ background:#fff; color:#0b132b }
-
-/* لو لسه الخلفية مزعجة، زوّد التعتيم العام للصورة */
-.hero-bleed::before{ background:rgba(0,0,0,.50) !important; }  /* غيّر .50 إلى .35 أو .6 حسب ما تحب */
-
-
-
-/* ===== Hero full-bleed ثابت (للتأكد) ===== */
-.hero-bleed{
-  position:relative;
-  width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw);
-  min-height:85vh; padding:clamp(3rem,5vw,4rem) 0; overflow:hidden; color:#fff;
-  background:url("hero-port.png") center/cover no-repeat !important;
-}
-.hero-bleed > .container{ position:relative; z-index:1 }
-body{ overflow-x:hidden; }
-/* 1) خلي View COA + Open COA نفس لون Request */
-.hero-bleed .btn-outline,
-.hero .btn-outline{
-  background:#10b981 !important;
-  border:1px solid #10b981 !important;
-  color:#fff !important;
-}
-.hero-bleed .btn-outline:hover,
-.hero .btn-outline:hover{
-  background:#059669 !important;
-  border-color:#059669 !important;
-  color:#fff !important;
+/* تخطيط الشبكة والكروت */
+#products .grid {
+  display: grid;
+  gap: 16px;
 }
 
-/* 2) ارفع النصوص داخل الهيرو لأعلى */
-.hero-bleed{ 
-  min-height:75vh; /* عندك بالفعل؛ زوّد/قلل حسب ذوقك */
-  padding-top: 1.2rem !important;           /* كان كبير، قللناه */
-  padding-bottom: clamp(2.5rem,6vw,4rem) !important;
-}
-.hero-bleed .hero-content{ 
-  margin-top: 0 !important;
-  text-align: left;                          /* لليسار مناسب للإنجليزي */
+/* شبكة 3 أعمدة مرنة لأي قسم (مش بس #products) */
+.grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-/* لو عايز دعم قراءة أقوى فوق الصورة */
-.hero-bleed::before{ background: rgba(0,0,0,.50) !important; } /* عدّل .50 حسب الحاجة */
-
-
-/* تأكيد الـ full-bleed (لو فيه تعارض) */
-.hero-bleed,.hero{
-  width:100vw !important;
-  margin-left:calc(50% - 50vw) !important;
-  margin-right:calc(50% - 50vw) !important;
-  background: url("hero-port.png") center/cover no-repeat !important;
-  color:#fff !important;
+@media (max-width: 1000px) {
+  .grid.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width:640px){
-  .hero-bleed .hero-content{ text-align:left; } /* يفضل يظل يسار */
+@media (max-width: 640px) {
+  .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
-
-
-
-
-
-
-
-
-/* Trust Banner */
-.trust-banner{
-  padding:.9rem 0;
-  background:#f1f5f9;
-  border-top:3px solid #84cc16;       /* خط أخضر بسيط زي المرجع */
-  border-bottom:1px solid #e2e8f0;
-  text-align:center;
-}
-.trust-banner p{ margin:.2rem 0; font-size:1rem; color:#334155; }
-.trust-banner strong{ color:#0f766e; }
-
-
-/* ===== توحيد أزرار المنتجات ===== */
-#products .btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:.4rem;
-  padding:.5rem 1rem;
-  border-radius:8px;
-  font-weight:700;
-  cursor:pointer;
-  transition:.2s ease;
+#products .grid.cols-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0; /* مش هنحتاج gap لأن المسافة جاية من الأطراف */
+  padding: 0 5%; /* مسافة من الجانبين */
 }
 
-/* زرار رئيسي — أخضر */
-#products .btn-primary {
-  background:#10b981;
-  border:1px solid #10b981;
-  color:#fff;
-  box-shadow:0 4px 14px rgba(16,185,129,.35);
-}
-#products .btn-primary:hover {
-  background:#059669;
-  border-color:#059669;
+#products .grid.cols-2 > .card {
+  width: 48%;
+  min-width: 280px;
 }
 
-/* زرار Outline (هيبقى برضه أخضر موحّد) */
-#products .btn-outline {
-  background:transparent;
-  border:1px solid #10b981;
-  color:#10b981;
-}
-#products .btn-outline:hover {
-  background:#10b981;
-  color:#fff;
+#products h2 {
+  margin: 0 0 18px;
+  font-weight: 900;
+  letter-spacing: .2px;
 }
 
-
-/* === Products layout (grid + cards) === */
-#products{padding:48px 0}
-#products .grid{display:grid;gap:16px}
-#products .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-@media (max-width:1000px){ #products .grid.cols-3{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:640px){  #products .grid.cols-3{grid-template-columns:1fr} }
-
-/* Card */
-#products .card{
-  background:#fff; border:1px solid #e5e7eb; border-radius:var(--radius);
-  box-shadow:0 8px 24px rgba(2,6,23,.06);
-  padding:18px; transition:.2s ease;
-}
-#products .card:hover{ transform:translateY(-2px) }
-
-/* Typography */
-#products h2{margin:0 0 18px;font-weight:900;letter-spacing:.2px}
-#products h3{margin:0 0 10px;font-weight:800;line-height:1.25}
-#products .muted{color:var(--soft);line-height:1.7;margin:.2rem 0 1rem}
-
-/* Tags (badges) */
-#products .tag{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:6px 10px;border-radius:999px;
-  background:#f8fafc;border:1px dashed #e5e7eb;color:var(--soft);
-  font-size:.92rem;margin:0 6px 6px 0
+#products h3 {
+  margin: 0 0 10px;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
-/* CTA row */
-#products .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:12px}
-
-/* === COA toolbar (اللي فوق أزرار التصدير/الطباعة) === */
-#coa .hide-print{
-  display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap;
-  margin:8px 0 16px
+#products .muted {
+  color: var(--soft);
+  line-height: 1.7;
+  margin: .2rem 0 1rem;
 }
 
-/* اطبع من غير الأزرار */
-@media print{
-  .hide-print{display:none !important}
+/* كروت المنتجات */
+#products .card {
+  background: #fff; /* خلفية واضحة فوق الصورة */
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, .06);
+  padding: 18px;
+  transition: .2s ease;
+  display: flex;
+  flex-direction: column;
+}
+#products .card:hover {
+  transform: translateY(-2px);
 }
 
+/* الوسوم */
+#products .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .92rem;
+  color: var(--brand-ink);
+  transition: .2s;
+  margin: 0 6px 6px 0;
+}
+#products .tag:hover {
+  background: #ecfdf5;
+  border-color: var(--brand);
+  color: #059669;
+}
 
+/* أزرار الكرت */
+#products .card .cta {
+  margin-top: auto;
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  #products .card .cta {
+    justify-content: space-between;
+  }
+}
 
-#services { padding:60px 0; background:#f9fafb }
-#services h2 { margin-bottom:24px; font-weight:900; text-align:center }
-#services .grid { display:grid; gap:24px }
-#services .grid.cols-2 { grid-template-columns:repeat(3,1fr) }
-@media(max-width:768px){ #services .grid.cols-2{grid-template-columns:1fr} }
+/* ================== COA Toolbar ================== */
+#coa .hide-print{ display:flex; gap:.6rem; justify-content:flex-end; flex-wrap:wrap; margin:8px 0 16px }
+@media print{ .hide-print{ display:none !important } }
+
+#coa .cta-row{
+  display:flex !important; justify-content:center !important; align-items:center;
+  gap:.8rem !important; flex-wrap:wrap; margin:1rem 0 2rem;
+}
+
+/* أزرار COA موحّدة */
+#coa .btn, #products .card .btn{ background:var(--brand); border:1px solid var(--brand); color:#fff; font-weight:700; border-radius:10px; transition:.2s }
+#coa .btn:hover, #products .card .btn:hover{ background:#059669; border-color:#059669 }
+.btn-wide{ min-width:220px; padding:.7rem 1rem; text-align:center }
+
+#coa .container{ text-align:center }
+#coa .coa-grid{ display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:start; text-align:initial }
+@media(max-width:980px){ #coa .coa-grid{ grid-template-columns:1fr } }
+
+#coa .card{ background:#fff; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(2,6,23,.06); overflow:auto }
+
+#coa .table{ width:100%; border-collapse:separate; border-spacing:0; font-size:.95rem }
+#coa .table thead th{ background:#f1f5f9; font-weight:800; border:1px solid #e2e8f0; padding:10px }
+#coa .table tbody td{ border:1px solid #e2e8f0; padding:10px }
+#coa .table tbody tr:nth-child(even){ background:#fafafa }
+#coa .table th, #coa .table td{ text-align:center }
+html[lang="ar"] #coa .table{ direction:rtl }
+html[lang="ar"] #coa .title-ico{ justify-content:center }
+@media print{ #coa .card{ box-shadow:none } #coa .container{ width:100% !important } }
+
+/* ================== Services ================== */
+#services{ padding:60px 0; background:#f9fafb }
+#services h2{ margin-bottom:24px; font-weight:900; text-align:center }
+#services .grid{ display:grid; gap:24px }
+#services .grid.cols-2{ grid-template-columns:repeat(3,1fr) }
+@media(max-width:768px){ #services .grid.cols-2{ grid-template-columns:1fr } }
 
 #services .service{
   background:#fff; border-radius:var(--radius);
-  box-shadow:0 6px 18px rgba(2,6,23,.06);
-  overflow:hidden; transition:.2s;
+  box-shadow:0 6px 18px rgba(2,6,23,.06); overflow:hidden; transition:.2s;
 }
 #services .service img{ width:100%; height:auto; object-fit:contain; display:block }
-}
 #services .service h3{ margin:16px; font-weight:800 }
 #services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
 #services .service:hover{ transform:translateY(-4px) }
 
+/* =============== LOGISTICS SECTION =============== */
 
-
-.features {
-  display: flex;
-  gap: 1rem;
-  margin: 0.8rem 0;
-  flex-wrap: wrap;
-}
-.feature {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+#logistics {
+  position: relative;
+  padding: 64px 0;
   background: #f9fafb;
-  border: 1px solid #e2e8f0;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.92rem;
-  color: var(--brand-ink);
-  transition: 0.2s;
 }
-.feature:hover {
-  background: #ecfdf5;
-  border-color: #10b981;
-  color: #059669;
+
+#logistics .container {
+  position: relative;
+  z-index: 1;
 }
-.feature .icon {
-  font-size: 1.2rem;
+
+/* شبكة الكروت 3 أعمدة */
+#logistics .grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+@media (max-width: 1000px) {
+  #logistics .grid.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #logistics .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* تصميم الكارت */
+#logistics .card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  padding: 18px;
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* عنوان الكارت */
+#logistics .card h3 {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+/* فقرة الشرح */
+#logistics .card p {
+  color: var(--soft);
+  line-height: 1.6;
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+}
+
+/* الصور داخل الكروت */
+#logistics .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 12px;
+  border-radius: 10px;
 }
 
 
-/* products: make "tag" pills look like the new badges everywhere */
-#products .card > div:first-of-type{
-  display:flex; flex-wrap:wrap; align-items:center;
-  gap:.5rem; margin:.6rem 0;        /* مسافات موحّدة */
-}
-#products .tag{
-  display:inline-flex; align-items:center; gap:.35rem;
-  background:#f9fafb; border:1px solid #e2e8f0;
-  padding:.35rem .6rem; border-radius:8px;
-  font-weight:600; font-size:.92rem; color:var(--brand-ink);
-  transition:.2s;
-}
-#products .tag:hover{
-  background:#ecfdf5; border-color:#10b981; color:#059669;
-}
-
-/* equal height cards + buttons aligned at bottom */
-#products .card{ display:flex; flex-direction:column; }
-#products .card .cta{
-  margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap;
-}
-
-/* RTL صغار: اتجاه وموازنة */
-html[dir="rtl"] #products .card h3,
-html[dir="rtl"] #products .card p{ text-align:right; }
-html[dir="rtl"] #products .tag{ direction:rtl; }
-
-/* موبايل: محاذاة أفضل */
-@media (max-width:640px){
-  #products .card .cta{ justify-content:space-between; }
-}
 
 
-/* ===== توسيط أزرار COA وتوحيد المسافات ===== */
+/* ================== Features (بادجات صغيرة) ================== */
+.features{ display:flex; gap:1rem; margin:.8rem 0; flex-wrap:wrap }
+.feature{
+  display:flex; align-items:center; gap:.4rem; background:#f9fafb;
+  border:1px solid #e2e8f0; padding:.4rem .8rem; border-radius:8px;
+  font-weight:600; font-size:.92rem; color:var(--brand-ink); transition:.2s;
+}
+.feature:hover{ background:#ecfdf5; border-color:var(--brand); color:#059669 }
+.feature .icon{ font-size:1.2rem }
+/* ================== COA Toolbar ================== */
+#coa .hide-print{ display:flex; gap:.6rem; justify-content:flex-end; flex-wrap:wrap; margin:8px 0 16px }
+@media print{ .hide-print{ display:none !important } }
+
 #coa .cta-row{
-  /* نلغي أي inline style سابق */
-  display:flex !important;
-  justify-content:center !important;   /* توسيط */
-  align-items:center;
-  gap:.8rem !important;                 /* مسافة متساوية */
-  flex-wrap:wrap;
-  margin:1rem 0 2rem;
+  display:flex !important; justify-content:center !important; align-items:center;
+  gap:.8rem !important; flex-wrap:wrap; margin:1rem 0 2rem;
 }
 
-/* ===== توحيد شكل الأزرار (كلها Primary أخضر) ===== */
-#coa .btn,
-#products .card .btn{
-  background:#10b981;
-  border:1px solid #10b981;
-  color:#fff;
-  font-weight:700;
-  border-radius:10px;
-  transition:.2s ease;
+/* أزرار COA موحّدة */
+#coa .btn, #products .card .btn{ background:var(--brand); border:1px solid var(--brand); color:#fff; font-weight:700; border-radius:10px; transition:.2s }
+#coa .btn:hover, #products .card .btn:hover{ background:#059669; border-color:#059669 }
+.btn-wide{ min-width:220px; padding:.7rem 1rem; text-align:center }
+
+#coa .container{ text-align:center }
+#coa .coa-grid{ display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:start; text-align:initial }
+@media(max-width:980px){ #coa .coa-grid{ grid-template-columns:1fr } }
+
+#coa .card{ background:#fff; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(2,6,23,.06); overflow:auto }
+
+#coa .table{ width:100%; border-collapse:separate; border-spacing:0; font-size:.95rem }
+#coa .table thead th{ background:#f1f5f9; font-weight:800; border:1px solid #e2e8f0; padding:10px }
+#coa .table tbody td{ border:1px solid #e2e8f0; padding:10px }
+#coa .table tbody tr:nth-child(even){ background:#fafafa }
+#coa .table th, #coa .table td{ text-align:center }
+html[lang="ar"] #coa .table{ direction:rtl }
+html[lang="ar"] #coa .title-ico{ justify-content:center }
+@media print{ #coa .card{ box-shadow:none } #coa .container{ width:100% !important } }
+
+/* ================== Services ================== */
+#services{ padding:60px 0; background:#f9fafb }
+#services h2{ margin-bottom:24px; font-weight:900; text-align:center }
+#services .grid{ display:grid; gap:24px }
+#services .grid.cols-2{ grid-template-columns:repeat(3,1fr) }
+@media(max-width:768px){ #services .grid.cols-2{ grid-template-columns:1fr } }
+
+#services .service{
+  background:#fff; border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(2,6,23,.06); overflow:hidden; transition:.2s;
 }
-#coa .btn:hover,
-#products .card .btn:hover{
-  background:#059669;
-  border-color:#059669;
+#services .service img{ width:100%; height:auto; object-fit:contain; display:block }
+#services .service h3{ margin:16px; font-weight:800 }
+#services .service p{ margin:0 16px 20px; color:var(--soft); line-height:1.6 }
+#services .service:hover{ transform:translateY(-4px) }
+
+/* ================== Features (بادجات صغيرة) ================== */
+.features{ display:flex; gap:1rem; margin:.8rem 0; flex-wrap:wrap }
+.feature{
+  display:flex; align-items:center; gap:.4rem; background:#f9fafb;
+  border:1px solid #e2e8f0; padding:.4rem .8rem; border-radius:8px;
+  font-weight:600; font-size:.92rem; color:var(--brand-ink); transition:.2s;
+}
+.feature:hover{ background:#ecfdf5; border-color:var(--brand); color:#059669 }
+.feature .icon{ font-size:1.2rem }
+
+
+
+/* ================== Footer ================== */
+.foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
+
+
+/* ====== CERTIFICATES SECTION – FINAL FINAL FIXED REALLY REALLY ====== */
+
+#certificates {
+  padding-block: 40px;
 }
 
-/* ===== مقاس موحّد للأزرار ===== */
-.btn-wide{
-  min-width:220px;           /* نفس العرض */
-  padding:.7rem 1rem;        /* نفس الارتفاع */
-  text-align:center;
+#certificates .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* (اختياري) إخفاء زر الكرت الأخير على الشاشات الكبيرة لتفادي التكرار */
-@media (min-width: 900px){
-  #products .card:last-child .cta{ display:none; }
+#certificates .card {
+  background: #d6d0c4; /* بيج أغمق */
+  border: 1px solid #dcdcdc;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  min-height: 480px;
+  position: relative;
 }
 
-/* توافق RTL بسيط */
-html[dir="rtl"] #coa .cta-row{ direction:rtl; }
-
-
-
-/* ===== COA: عناوين الكروت مع أيقونة ===== */
-#coa .title-ico{
-  display:flex; align-items:center; gap:.5rem;
-  font-weight:900; margin:0 0 .75rem;
-}
-#coa .title-ico::before{ content:attr(data-ico); line-height:1 }
-
-/* ===== تخطيط القسم ===== */
-#coa .container{ text-align: center; }             /* العنوان والوصف في المنتصف */
-#coa .coa-grid{
-  display:grid; gap:24px;
-  grid-template-columns: 1fr 1fr;
-  align-items:start;
-  text-align: initial;                              /* الجداول نفسها مش وسط */
-}
-@media(max-width: 980px){
-  #coa .coa-grid{ grid-template-columns: 1fr; }
+#certificates .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #fff;
 }
 
-/* ===== الكروت ===== */
-#coa .card{
-  background:#fff; border-radius:12px; padding:16px;
-  box-shadow:0 6px 18px rgba(2,6,23,.06);
-  overflow:auto;   /* في حال عرض الجدول زاد */
+#certificates .card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #1f2937;
 }
 
-/* ===== جداول نمط Excel ===== */
-#coa .table{
-  width:100%; border-collapse:separate; border-spacing:0;
-  font-size:.95rem;
+#certificates .card p {
+  font-size: 14px;
+  color: var(--soft);
+  margin: 10px 0 20px;
 }
-#coa .table thead th{
-  background:#f1f5f9;
-  font-weight:800;
-  border:1px solid #e2e8f0;
-  padding:10px;
-}
-#coa .table tbody td{
-  border:1px solid #e2e8f0;
-  padding:10px;
-}
-#coa .table tbody tr:nth-child(even){ background:#fafafa; }
-#coa .table th, #coa .table td{ text-align:center; }
 
-/* RTL دعم العربية */
-html[lang="ar"] #coa .table{ direction: rtl; }
-html[lang="ar"] #coa .title-ico{ justify-content: center; }
+#certificates .cta {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: auto;
+}
 
-/* طباعة أنظف */
-@media print{
-  #coa .card{ box-shadow:none; }
-  #coa .container{ width:100% !important; }
+/* ====== BUTTON STYLES ====== */
+#certificates .btn {
+  min-width: 120px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* View Button - يظهر دائمًا */
+#certificates .btn-outline {
+  background-color: #ffffff;
+  border: 2px solid var(--brand);
+  color: var(--brand);
+}
+
+#certificates .btn-outline:hover {
+  background-color: var(--brand);
+  color: #fff;
+}
+
+/* Request Button */
+#certificates .btn-primary {
+  background-color: var(--brand);
+  color: white;
+  border: none;
+}
+
+#certificates .btn-primary:hover {
+  background-color: var(--brand-ink);
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 1000px) {
+  #certificates .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #certificates .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Optional: Force 5 columns on large screens */
+@media (min-width: 1200px) {
+  #certificates .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
