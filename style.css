@@ -836,10 +836,8 @@ html[lang="ar"] #coa .title-ico {
 }
 
 
-/* ========== Global Button Styles ========== */
-
-a.btn,
-button.btn {
+/* ========== BUTTONS (موحد لكل الموقع) ========== */
+.btn {
   display: inline-block;
   padding: 10px 16px;
   font-size: 14px;
@@ -854,52 +852,40 @@ button.btn {
   background: transparent;
 }
 
-/* زر رئيسي - أخضر */
 .btn-primary {
   background-color: var(--brand);
   color: #fff !important;
-  border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .btn-primary:hover {
   background-color: var(--brand-ink);
 }
 
-/* زر حدود فقط */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
   color: var(--brand) !important;
 }
-
 .btn-outline:hover {
   background-color: var(--brand);
   color: #fff !important;
 }
 
-/* زر واسع */
 .btn-wide {
   min-width: 220px;
   padding: 0.7rem 1rem;
-  text-align: center;
 }
 
-/* استجابة الهاتف */
 @media (max-width: 640px) {
-  .btn-row,
-  .cta {
+  .btn-row, .cta {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
   }
-
-  a.btn,
-  button.btn {
+  .btn {
     width: 100%;
   }
 }
-
 
 
 
