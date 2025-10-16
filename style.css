@@ -595,7 +595,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 .foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
 
 
-/* ====== CERTIFICATES SECTION – FINAL FINAL FIXED REALLY REALLY ====== */
+/* ====== CERTIFICATES SECTION – FINAL FINAL ACTUALLY FINAL ====== */
 
 #certificates {
   padding-block: 40px;
@@ -607,10 +607,11 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   gap: 20px;
 }
 
+/* Card Design */
 #certificates .card {
   background: #d6d0c4; /* بيج أغمق */
   border: 1px solid #dcdcdc;
-  border-radius: var(--radius);
+  border-radius: var(--radius, 10px); /* default fallback */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
   padding: 20px;
   display: flex;
@@ -640,7 +641,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 #certificates .card p {
   font-size: 14px;
-  color: var(--soft);
+  color: var(--soft, #6b7280); /* fallback */
   margin: 10px 0 20px;
 }
 
@@ -670,25 +671,25 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 /* View Button - يظهر دائمًا */
 #certificates .btn-outline {
-  background-color: #ffffff;
-  border: 2px solid var(--brand);
-  color: var(--brand);
+  background-color: #f9f9f9; /* بدل الأبيض الخالص */
+  border: 2px solid var(--brand, #1a73e8);
+  color: var(--brand, #1a73e8);
 }
 
 #certificates .btn-outline:hover {
-  background-color: var(--brand);
+  background-color: var(--brand, #1a73e8);
   color: #fff;
 }
 
 /* Request Button */
 #certificates .btn-primary {
-  background-color: var(--brand);
+  background-color: var(--brand, #1a73e8);
   color: white;
   border: none;
 }
 
 #certificates .btn-primary:hover {
-  background-color: var(--brand-ink);
+  background-color: var(--brand-ink, #0b4cb2);
 }
 
 /* RESPONSIVE FIX */
@@ -704,9 +705,10 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   }
 }
 
-/* Optional: Force 5 columns on large screens */
-@media (min-width: 1200px) {
-  #certificates .grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
+/* FIX CONTAINER WIDTH TO PREVENT OVERFLOW */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-inline: 20px;
+  box-sizing: border-box;
 }
