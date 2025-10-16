@@ -1,7 +1,14 @@
-:root{
-  --bg:#0b132b; --ink:#0f172a; --soft:#475569; --muted:#64748b;
-  --brand:#10b981; --brand-ink:#0f766e; --paper:#ffffff; --paper-2:#f8fafc;
-  --ring:rgba(16,185,129,.35); --radius:14px;
+:root {
+  --bg: #0b132b;
+  --ink: #0f172a;
+  --soft: #475569;
+  --muted: #64748b;
+  --brand: #10b981;
+  --brand-ink: #0f766e;
+  --paper: #ffffff;
+  --paper-2: #f8fafc;
+  --ring: rgba(16, 185, 129, .35);
+  --radius: 14px;
 }
 
 /* ===== Reset + Base ===== */
