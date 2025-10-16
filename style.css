@@ -595,8 +595,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 .foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
 
 
-
-/* ====== CERTIFICATES SECTION – FINAL CLEAN FIXED VERSION ====== */
+/* ====== CERTIFICATES SECTION – FINAL FINAL FIXED REALLY REALLY ====== */
 
 #certificates {
   padding-block: 40px;
@@ -609,7 +608,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 }
 
 #certificates .card {
-  background: #e3dfd1; /* بيج أغمق */
+  background: #d6d0c4; /* بيج أغمق */
   border: 1px solid #dcdcdc;
   border-radius: var(--radius);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
@@ -692,7 +691,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   background-color: var(--brand-ink);
 }
 
-/* RESPONSIVE FIX: 5 كروت أو أكثر */
+/* RESPONSIVE FIX */
 @media (max-width: 1000px) {
   #certificates .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -702,5 +701,12 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 @media (max-width: 640px) {
   #certificates .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Optional: Force 5 columns on large screens */
+@media (min-width: 1200px) {
+  #certificates .grid {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
