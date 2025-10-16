@@ -595,10 +595,11 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 .foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
 
 
-/* ====== CERTIFICATES SECTION – FINAL FINAL ACTUALLY FINAL ====== */
+/* ====== CERTIFICATES SECTION – FINAL FINAL REALLY REALLY MATCHING THEME ====== */
 
 #certificates {
   padding-block: 40px;
+  background-color: var(--paper-2); /* خلفية القسم */
 }
 
 #certificates .grid {
@@ -609,9 +610,9 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 /* Card Design */
 #certificates .card {
-  background: #d6d0c4; /* بيج أغمق */
+  background: #d6d0c4; /* بيج أغمق، يدويًا ليتماشى مع الورقي */
   border: 1px solid #dcdcdc;
-  border-radius: var(--radius, 10px); /* default fallback */
+  border-radius: var(--radius);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
   padding: 20px;
   display: flex;
@@ -629,19 +630,19 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   object-fit: contain;
   border-radius: 10px;
   margin-bottom: 12px;
-  background: #fff;
+  background: var(--paper); /* خلفية بيضاء للصورة */
 }
 
 #certificates .card h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
-  color: #1f2937;
+  color: var(--ink);
 }
 
 #certificates .card p {
   font-size: 14px;
-  color: var(--soft, #6b7280); /* fallback */
+  color: var(--soft);
   margin: 10px 0 20px;
 }
 
@@ -669,27 +670,27 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   text-decoration: none;
 }
 
-/* View Button - يظهر دائمًا */
+/* View Button - واضح حتى بدون hover */
 #certificates .btn-outline {
-  background-color: #f9f9f9; /* بدل الأبيض الخالص */
-  border: 2px solid var(--brand, #1a73e8);
-  color: var(--brand, #1a73e8);
+  background-color: var(--paper-2);
+  border: 2px solid var(--brand);
+  color: var(--brand);
 }
 
 #certificates .btn-outline:hover {
-  background-color: var(--brand, #1a73e8);
-  color: #fff;
+  background-color: var(--brand);
+  color: var(--paper);
 }
 
 /* Request Button */
 #certificates .btn-primary {
-  background-color: var(--brand, #1a73e8);
-  color: white;
+  background-color: var(--brand);
+  color: var(--paper);
   border: none;
 }
 
 #certificates .btn-primary:hover {
-  background-color: var(--brand-ink, #0b4cb2);
+  background-color: var(--brand-ink);
 }
 
 /* RESPONSIVE FIX */
@@ -705,7 +706,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   }
 }
 
-/* FIX CONTAINER WIDTH TO PREVENT OVERFLOW */
+/* CONTAINER WIDTH FIX - to prevent horizontal overflow */
 .container {
   max-width: 100%;
   overflow-x: hidden;
