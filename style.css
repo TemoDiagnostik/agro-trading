@@ -1,3 +1,4 @@
+/* ========== 1. ROOT VARIABLES ========== */
 :root {
   --bg: #0b132b;
   --ink: #0f172a;
@@ -10,6 +11,27 @@
   --ring: rgba(16, 185, 129, .35);
   --radius: 14px;
 }
+
+/* ========== 2. GLOBAL RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--paper-2);
+  color: var(--ink);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
 
 /* ===== Reset + Base ===== */
 *{ box-sizing:border-box }
@@ -598,12 +620,12 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 
 
-/* ================== Footer ================== */
-.foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
 
 
+
+/* ========== CERTIFICATES SECTION ========== */
 #certificates {
-  padding: 40px 0;
+  padding-block: 40px;
   background-color: var(--paper-2);
 }
 
@@ -620,6 +642,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   min-height: 480px;
@@ -647,45 +670,49 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 }
 
 #certificates .cta {
-  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
+  margin-top: auto;
 }
 
 #certificates .btn {
-  display: inline-block;
+  min-width: 120px;
   padding: 10px 16px;
   font-size: 14px;
   font-weight: 600;
   border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
   white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
 #certificates .btn-outline {
-  background: var(--paper-2);
+  background-color: var(--paper-2);
   border: 2px solid var(--brand);
   color: var(--brand);
 }
 
 #certificates .btn-outline:hover {
-  background: var(--brand);
-  color: #fff;
+  background-color: var(--brand);
+  color: var(--paper);
 }
 
 #certificates .btn-primary {
-  background: var(--brand);
-  color: #fff;
+  background-color: var(--brand);
+  color: var(--paper);
   border: none;
 }
 
 #certificates .btn-primary:hover {
-  background: var(--brand-ink);
+  background-color: var(--brand-ink);
 }
 
+/* ========== RESPONSIVE BREAKPOINTS ========== */
 @media (max-width: 1000px) {
   #certificates .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -698,9 +725,25 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   }
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+/* ========== FOOTER (مثال) ========== */
+.foot {
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* ========== SECTION-SPECIFIC CARD RESET ==========
+   Prevents certificates styling from leaking into #about etc.
+==================================================== */
+
+#about .card,
+#coa .card,
+.features .card {
+  all: unset;
+  background: var(--paper-2);
+  padding: 1rem;
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 0.95rem;
 }
