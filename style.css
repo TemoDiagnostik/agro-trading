@@ -622,8 +622,8 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 }
 
 #certificates .card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: #f9f9f7; /* لون خلفية هادئ لإبراز الشهادة */
+  border: 1px solid #e0e0e0;
   border-radius: var(--radius);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   padding: 20px;
@@ -665,7 +665,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   margin-top: auto;
 }
 
-/* ====== GLOBAL BUTTON STYLES (View / Request) ====== */
+/* ====== BUTTON STYLES ====== */
 
 #certificates .btn {
   min-width: 120px;
@@ -681,11 +681,12 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   text-decoration: none;
 }
 
-/* View Button (White background, green border) */
+/* View Button (Outline with subtle background on hover) */
 #certificates .btn-outline {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.8); /* خلفية خفيفة */
   border: 2px solid var(--brand);
   color: var(--brand);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 #certificates .btn-outline:hover {
@@ -698,6 +699,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   background-color: var(--brand);
   color: white;
   border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 #certificates .btn-primary:hover {
