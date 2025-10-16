@@ -605,7 +605,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 #certificates .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
