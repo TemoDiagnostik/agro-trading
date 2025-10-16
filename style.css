@@ -595,11 +595,9 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 .foot{ padding:2rem 0; border-top:1px solid #e2e8f0; color:var(--muted); font-size:.9rem }
 
 
-/* ====== CERTIFICATES SECTION – FINAL FINAL REALLY REALLY MATCHING THEME ====== */
-
 #certificates {
   padding-block: 40px;
-  background-color: var(--paper-2); /* خلفية القسم */
+  background-color: var(--paper-2);
 }
 
 #certificates .grid {
@@ -608,9 +606,8 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   gap: 20px;
 }
 
-/* Card Design */
 #certificates .card {
-  background: #d6d0c4; /* بيج أغمق، يدويًا ليتماشى مع الورقي */
+  background: #f0ede5; /* بيج ناعم ومتناسق */
   border: 1px solid #dcdcdc;
   border-radius: var(--radius);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
@@ -630,7 +627,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   object-fit: contain;
   border-radius: 10px;
   margin-bottom: 12px;
-  background: var(--paper); /* خلفية بيضاء للصورة */
+  background: var(--paper);
 }
 
 #certificates .card h3 {
@@ -655,7 +652,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   margin-top: auto;
 }
 
-/* ====== BUTTON STYLES ====== */
+/* BUTTON STYLES */
 #certificates .btn {
   min-width: 120px;
   padding: 10px 16px;
@@ -670,7 +667,6 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   text-decoration: none;
 }
 
-/* View Button - واضح حتى بدون hover */
 #certificates .btn-outline {
   background-color: var(--paper-2);
   border: 2px solid var(--brand);
@@ -679,13 +675,12 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 
 #certificates .btn-outline:hover {
   background-color: var(--brand);
-  color: var(--paper);
+  color: #fff;
 }
 
-/* Request Button */
 #certificates .btn-primary {
   background-color: var(--brand);
-  color: var(--paper);
+  color: #fff;
   border: none;
 }
 
@@ -693,7 +688,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   background-color: var(--brand-ink);
 }
 
-/* RESPONSIVE FIX */
+/* RESPONSIVE */
 @media (max-width: 1000px) {
   #certificates .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -706,10 +701,11 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
   }
 }
 
-/* CONTAINER WIDTH FIX - to prevent horizontal overflow */
+/* FIX CONTAINER */
 .container {
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
   padding-inline: 20px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
