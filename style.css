@@ -609,7 +609,7 @@ html[lang="ar"] #coa .title-ico{ justify-content:center }
 }
 
 #certificates .card {
-  background: #f1efe7; /* بيج غامق مناسب للعرض */
+  background: #e3dfd1; /* بيج أغمق */
   border: 1px solid #dcdcdc;
   border-radius: var(--radius);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
