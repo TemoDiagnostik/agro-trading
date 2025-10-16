@@ -555,3 +555,99 @@ section, [id] {scroll-margin-top:110px;}
 #home * {
   color: #ffffff !important;
 }
+
+
+/* ===== CONTACT SECTION ===== */
+#contact .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#contact form.card,
+#contact .card {
+  flex: 1 1 360px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+#contact h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #006400;
+}
+
+#contact .card p,
+#contact .card .bank-line,
+#contact .card .bank-title {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+#contact .bank-box,
+#contact .wise-box {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 20px;
+  border-left: 4px solid #006400;
+}
+
+#contact .badge {
+  background: #006400;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+}
+
+#contact .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+/* Buttons */
+#contact .btn-primary {
+  background: #006400;
+  color: #fff;
+}
+#contact .btn-outline {
+  border-color: #006400;
+  color: #006400;
+}
+#contact .btn-outline:hover {
+  background: #006400;
+  color: #fff;
+}
+
+/* Input fields */
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+#contact label {
+  font-weight: 600;
+  margin-top: 12px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #contact .container {
+    flex-direction: column;
+  }
+}
+
