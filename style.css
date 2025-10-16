@@ -533,121 +533,103 @@ section, [id] {scroll-margin-top:110px;}
 
 
 
-/* ===== TEXT COLOR FOR AGRO SERVICES SECTION ===== */
-#home,
-#home p,
-#home ul,
-#home li,
-#home span,
-#home strong,
-#home h1,
-#home h3,
-#home a,
-#home .lead,
-#home .muted,
-#home .tag {
-  color: #ffffff;
-}
-
-
-/* FORCE WHITE TEXT IN #home SECTION */
-#home,
-#home * {
-  color: #ffffff !important;
-}
-
-
-/* ===== CONTACT SECTION IMPROVED ===== */
 #contact {
   padding: 60px 0;
-  background: #f9f9f9;
+  background: #f4f8f9; /* خلفية فاتحة */
   font-size: 1rem;
 }
 
-.form-section,
-.info-section {
-  margin-bottom: 40px;
-}
-
 .contact-heading {
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  color: #005f4b;
+  border-left: 4px solid #00a87a;
+  padding-left: 10px;
 }
 
 .kbd {
   font-family: monospace;
-  background: #eee;
-  padding: 2px 6px;
+  background: #e7f2f0;
+  padding: 3px 6px;
   border-radius: 4px;
   display: inline-block;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .bank-section {
   margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #d4e6e2;
+  border-radius: 8px;
 }
 
 .badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   margin: 10px 0;
 }
 
 .badge {
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #ffffff;
+  border: 1px solid #00a87a;
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.85rem;
+  color: #005f4b;
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   border-radius: 6px;
   font-size: 1rem;
+  background: #fff;
 }
 
 form label {
   display: block;
-}
-
-.note {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 10px;
+  font-weight: 600;
+  color: #003c33;
 }
 
 .cta {
-  margin-top: 12px;
+  margin-top: 14px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .btn {
-  padding: 8px 16px;
+  padding: 10px 20px;
   border: none;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  border-radius: 6px;
 }
 
 .btn-primary {
   background: #007b4f;
   color: #fff;
-  border-radius: 6px;
 }
 
 .btn-outline {
   background: transparent;
   color: #007b4f;
   border: 2px solid #007b4f;
-  border-radius: 6px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 12px;
+}
+
+.info-section,
+.form-section {
+  margin-bottom: 40px;
 }
