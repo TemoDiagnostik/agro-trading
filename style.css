@@ -132,13 +132,10 @@ header .lang {
   align-items: center;
   gap: 0.3rem;
 }
-
 header .lang select {
   font-size: 0.82rem;
   padding: 4px 8px;
   border-radius: 6px;
-  background: rgba(255,255,255,0.9); /* خلفية شبه شفافة */
-  color: #000;
 }
 /* =============== HERO SECTION CLEANED =============== */
 .hero,
