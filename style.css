@@ -548,3 +548,10 @@ section, [id] {scroll-margin-top:110px;}
 #home .tag {
   color: #ffffff;
 }
+
+
+/* FORCE WHITE TEXT IN #home SECTION */
+#home,
+#home * {
+  color: #ffffff !important;
+}
