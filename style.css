@@ -92,7 +92,8 @@ header .brand-text {
   transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
-  color: #006400;
+  color: #ffffff; /* ← بدّلنا اللون إلى الأبيض */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25); /* تباين خفيف لزيادة الوضوح */
   white-space: nowrap;
 }
 
@@ -115,7 +116,13 @@ header nav ul {
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
-  color: #000;
+  color: #ffffff; /* ← نص أبيض */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25); /* تباين خفيف */
+  transition: color 0.2s ease;
+}
+
+header nav ul li a:hover {
+  color: #00cc66; /* أخضر فاتح عند المرور */
 }
 
 /* اختيار اللغة */
@@ -132,6 +139,8 @@ header .lang select {
   font-size: 0.82rem;
   padding: 4px 8px;
   border-radius: 6px;
+  background: rgba(255,255,255,0.9); /* خلفية شبه شفافة */
+  color: #000;
 }
 /* =============== HERO SECTION CLEANED =============== */
 .hero,
