@@ -1,4 +1,4 @@
-/* ========= RESET + ROOT ========= */
+/* ===== RESET + BASE ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,13 +7,15 @@
 html, body {
   height: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  padding-top: 110px; /* نفس ارتفاع الهيدر */
+  padding-top: 110px; /* لإفساح المجال للهيدر الثابت */
 }
+
 :root {
   --ink: #0f172a;
   --brand: #15803d;
@@ -23,12 +25,20 @@ body {
   --soft: #475569;
   --muted: #64748b;
   --radius: 14px;
-  --ring: rgba(16,185,129,.35);
+  --ring: rgba(16,185,129, .35);
 }
 
-/* ========= HEADER ========= */
+/* ===== الحاوية العامة ===== */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
 header {
-  position: relative;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
@@ -36,24 +46,18 @@ header {
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
-
 header .container.nav {
-  max-width: 1200px;
-  margin: 0 auto;
   height: 110px;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-
-/* اللوجو */
 header .brand {
   position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
-  left: 0;
   display: flex;
   align-items: center;
 }
@@ -66,8 +70,6 @@ header .logo-img {
   padding-left: 0;
   margin-left: 0;
 }
-
-/* اسم الشركة */
 header .brand-text {
   position: absolute;
   left: 50%;
@@ -75,11 +77,9 @@ header .brand-text {
   transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
-  color: #006400; /* أخضر */
+  color: #006400; /* اللون الأخضر للشركة */
   white-space: nowrap;
 }
-
-/* القائمة */
 header nav {
   position: absolute;
   top: 8px;
@@ -99,8 +99,6 @@ header nav ul li a {
   color: #000;
   text-decoration: none;
 }
-
-/* اللغة */
 header .lang {
   position: absolute;
   right: 0;
@@ -115,26 +113,23 @@ header .lang select {
   border-radius: 6px;
 }
 
-/* ====== MEDIA QUERIES للهيدر ====== */
+/* ===== Media Queries للهيدر ===== */
 @media (max-width: 768px) {
   header .brand-text {
     font-size: 1rem;
     bottom: 6px;
   }
-
+  header .logo-img {
+    max-height: 140px;
+  }
+  header .lang {
+    top: 6px;
+    right: 10px;
+  }
   header nav ul {
     gap: 0.6rem;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  header .logo-img {
-    max-height: 140px;
-  }
-
-  header .lang {
-    top: 6px;
-    right: 10px;
   }
 }
 
@@ -190,7 +185,7 @@ header .lang select {
   text-shadow:0 1px 2px rgba(0,0,0,0.25);
 }
 .hero .muted.note {
-  color:#fff !important;
+  color:#ccc !important;
   text-shadow:none;
   text-align:center;
   display:block;
@@ -226,7 +221,7 @@ header .lang select {
   display: inline-block;
   padding: 10px 16px;
   font-size: 14px;
-  font-weight: 600; /* دمج بين 600 و bold */
+  font-weight: 600;
   border-radius: 8px;
   text-align: center;
   white-space: nowrap;
@@ -267,20 +262,6 @@ header .lang select {
   text-align: center;
 }
 
-/* أزرار داخل #coa */
-#coa .btn {
-  background: var(--brand);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 10px;
-  padding: .7rem 1.2rem;
-  font-size: 14px;
-  transition: .2s ease;
-}
-#coa .btn:hover {
-  background: #059669;
-}
-
 /* للأجهزة الصغيرة */
 @media (max-width: 640px) {
   .btn-row,
@@ -296,71 +277,59 @@ header .lang select {
 
 /* ===== TRUST BANNER ===== */
 .trust-banner {
-  padding: .9rem 0;
-  background: #f1f5f9;
-  border-top: 3px solid #84cc16;
-  border-bottom: 1px solid #e2e8f0;
-  text-align: center;
+  padding:.9rem 0;
+  background:#f1f5f9;
+  border-top:3px solid #84cc16;
+  border-bottom:1px solid #e2e8f0;
+  text-align:center;
 }
-.trust-banner p {
-  margin: .2rem 0;
-  font-size: 1rem;
-  color: #ffffff; /* ← الأبيض */
-}
-.trust-banner strong {
-  color: #ffffff; /* ← الأبيض */
-}
+.trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
+.trust-banner strong {color:#0f766e;}
 
 /* ===== PRODUCTS ===== */
 #products {
-  padding: 64px 0;
+  padding:64px 0;
   background:
-    linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.10)),
+    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.10)),
     url("leaf-pattern.png") center/cover no-repeat;
-  background-attachment: fixed;
+  background-attachment:fixed;
 }
-@media(max-width:1024px) {
-  #products {
-    background-attachment: scroll;
-    padding: 40px 16px; /* تحسين للموبايل */
-  }
-}
+@media(max-width:1024px){#products{background-attachment:scroll}}
 #products .grid {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display:grid;
+  gap:32px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 }
 #products .card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(2,6,23,.06);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  transition: .2s ease;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  transition:.2s ease;
 }
-#products .card:hover {
-  transform: translateY(-2px);
-}
+#products .card:hover {transform:translateY(-2px)}
 #products .tag {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  background: #f9fafb;
-  border: 1px solid #e2e8f0;
-  padding: .35rem .6rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: .92rem;
-  color: var(--brand-ink);
-  transition: .2s;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  background:#f9fafb;
+  border:1px solid #e2e8f0;
+  padding:.35rem .6rem;
+  border-radius:8px;
+  font-weight:600;
+  font-size:.92rem;
+  color:var(--brand-ink);
+  transition:.2s;
 }
 #products .tag:hover {
-  background: #ecfdf5;
-  border-color: var(--brand);
-  color: #059669;
+  background:#ecfdf5;
+  border-color:var(--brand);
+  color:#059669;
 }
+
 
 /* ===== COA ===== */
 #coa .cta-row {
@@ -382,6 +351,7 @@ header .lang select {
 #coa .btn:hover {
   background: #059669;
 }
+
 /* ===== SERVICES ===== */
 #services {
   padding: 60px 0;
@@ -452,6 +422,7 @@ header .lang select {
     padding: 40px 16px;
   }
 }
+
 /* ===== FEATURES ===== */
 .features {
   display: flex;
@@ -539,7 +510,6 @@ header .lang select {
   gap: 10px;
   margin-top: auto;
 }
-
 
 /* ===== FOOTER ===== */
 .foot {
@@ -694,5 +664,6 @@ form label {
 .form-section {
   margin-bottom: 40px;
 }
+
 
 
