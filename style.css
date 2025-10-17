@@ -139,8 +139,36 @@ header .lang select {
   }
 }
 
-/* ========= HERO SECTION ========= */
+/* =============== HERO SECTION CLEANED =============== */
+.hero,
+.hero-bleed {
+  position: relative;
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat !important;
+  text-align: left;
+  color: #ffffff;
+}
 
+.hero::before,
+.hero-bleed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 77, 0, 0.25);
+  pointer-events: none;
+}
+
+/* فرض الأبيض على النصوص داخل الهيرو */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* ===== HERO SECTION ===== */
 .hero, .hero-bleed {
   position: relative;
   padding: 60px 20px;
@@ -187,37 +215,13 @@ header .lang select {
   gap:12px;
   margin-top:20px;
 }
-
-/* للموبايل */
 @media(max-width:768px){
-  .hero {
-    padding:40px 16px 60px;
-    background:url("hero-bg-mobile.png") center/cover no-repeat;
-  }
-  .hero h1 {
-    font-size:28px;
-  }
-  .hero p {
-    font-size:15px;
-  }
-  .hero .btn-row {
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-.hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: var(--brand-ink) !important;
-  transform: translateY(-1px) !important;
-  border: 2px solid #ffffff !important;
+  .hero{padding:40px 16px 60px;background:url("hero-bg-mobile.png") center/cover no-repeat}
+  .hero h1{font-size:28px}
+  .hero p{font-size:15px}
+  .hero .btn-row{flex-direction:column;align-items:flex-start}
 }
 
-.hero .btn-outline:hover {
-  background-color: #ffffff !important;
-  color: var(--brand-ink) !important;
-  transform: translateY(-1px) !important;
-  border: 2px solid #ffffff !important;
-}
 /* ===== GLOBAL BUTTONS ===== */
 .btn {
   display: inline-block;
@@ -231,20 +235,21 @@ header .lang select {
   text-decoration: none;
   transition: all 0.3s ease;
   border: none;
+  background: transparent;
 }
 
 /* زر أساسي */
 .btn-primary {
   background-color: var(--brand);
   color: #fff !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12); /* ظل خفيف */
 }
 .btn-primary:hover {
   background-color: var(--brand-ink);
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* حركة بسيطة */
 }
 
-/* زر بإطار فقط */
+/* زر إطار */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
@@ -253,7 +258,7 @@ header .lang select {
 .btn-outline:hover {
   background-color: var(--brand);
   color: #fff !important;
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* حركة خفيفة */
 }
 
 /* زر أعرض */
@@ -275,6 +280,7 @@ header .lang select {
     width: 100%;
   }
 }
+
 /* ===== TRUST BANNER ===== */
 .trust-banner {
   padding: .9rem 0;
