@@ -215,7 +215,7 @@ header .lang select {
 }
 
 
-/* ===== GLOBAL BUTTONS (FINAL CLEAN) ===== */
+/* ===== GLOBAL BUTTONS (FINAL) ===== */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -231,10 +231,11 @@ header .lang select {
   background: transparent;
 }
 
-/* زر أساسي */
+/* زر أساسي (أخضر ثابت) */
 .btn-primary {
   background-color: var(--brand);
   color: #fff !important;
+  border: 2px solid var(--brand);
   box-shadow: 0 4px 8px rgba(0,0,0,0.12);
 }
 .btn-primary:hover {
@@ -242,24 +243,16 @@ header .lang select {
   transform: translateY(-1px);
 }
 
-/* زر بإطار فقط */
+/* زر بإطار فقط (شفاف) */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
   color: var(--brand) !important;
-  transition: all 0.3s ease;
 }
 .btn-outline:hover {
   background-color: var(--brand);
   color: #fff !important;
   transform: translateY(-1px);
-}
-
-/* زر أعرض */
-.btn-wide {
-  min-width: 220px;
-  padding: 0.7rem 1rem;
-  text-align: center;
 }
 
 /* أزرار داخل الـHero */
@@ -284,7 +277,7 @@ header .lang select {
   transform: translateY(-1px);
 }
 
-/* تخطيط للأجهزة الصغيرة */
+/* للأجهزة الصغيرة */
 @media (max-width: 640px) {
   .btn-row,
   .cta {
