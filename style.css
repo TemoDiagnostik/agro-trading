@@ -133,7 +133,7 @@ header .lang select {
   }
 }
 
-/* =============== HERO SECTION =============== */
+/* =============== HERO SECTION (FINAL CLEAN) =============== */
 .hero,
 .hero-bleed {
   position: relative;
@@ -142,6 +142,7 @@ header .lang select {
   background-color: #0f172a;
   overflow: hidden;
   text-align: left;
+  z-index: 0;
 }
 
 /* طبقة التعتيم فوق الخلفية */
@@ -150,16 +151,18 @@ header .lang select {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 77, 0, 0.25);
+  background: rgba(0, 77, 0, 0.35);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
-/* فرض الأبيض على النصوص داخل الهيرو */
+/* فرض الأبيض على النصوص داخل الهيرو فقط */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
 }
 
 /* عناصر الهيرو */
@@ -168,30 +171,51 @@ header .lang select {
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
+
 .hero p {
   font-size: clamp(15px, 2vw, 18px);
   line-height: 1.5;
   max-width: 720px;
+  margin-bottom: 1rem;
 }
+
 .hero .btn-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 20px;
+  z-index: 2;
+  position: relative;
 }
 
-/* موبايل */
+/* معالجة اللون الرمادي داخل الهيرو */
+.hero .muted,
+.hero .note,
+.hero .lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* إعدادات للموبايل */
 @media (max-width: 768px) {
   .hero {
     padding: 40px 16px 60px;
     background: url("hero-bg-mobile.png") center/cover no-repeat;
   }
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 15px; }
-  .hero .btn-row { flex-direction: column; align-items: flex-start; }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .hero .btn-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-/* ===== GLOBAL BUTTONS ===== */
+
+/* ===== GLOBAL BUTTONS (FINAL CLEAN) ===== */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -211,23 +235,24 @@ header .lang select {
 .btn-primary {
   background-color: var(--brand);
   color: #fff !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12); /* ظل خفيف */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
 }
 .btn-primary:hover {
   background-color: var(--brand-ink);
-  transform: translateY(-1px); /* حركة بسيطة */
+  transform: translateY(-1px);
 }
 
-/* زر إطار */
+/* زر بإطار فقط */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
   color: var(--brand) !important;
+  transition: all 0.3s ease;
 }
 .btn-outline:hover {
   background-color: var(--brand);
   color: #fff !important;
-  transform: translateY(-1px); /* حركة خفيفة */
+  transform: translateY(-1px);
 }
 
 /* زر أعرض */
@@ -237,7 +262,29 @@ header .lang select {
   text-align: center;
 }
 
-/* للأجهزة الصغيرة */
+/* أزرار داخل الـHero */
+.hero .btn-primary {
+  background-color: var(--brand);
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+.hero .btn-primary:hover {
+  background-color: #007a5a !important;
+  color: #ffffff !important;
+}
+
+.hero .btn-outline {
+  background-color: transparent !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+}
+.hero .btn-outline:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+  transform: translateY(-1px);
+}
+
+/* تخطيط للأجهزة الصغيرة */
 @media (max-width: 640px) {
   .btn-row,
   .cta {
@@ -249,7 +296,6 @@ header .lang select {
     width: 100%;
   }
 }
-
 /* ===== TRUST BANNER ===== */
 .trust-banner {
   padding:.9rem 0;
