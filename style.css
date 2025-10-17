@@ -1,4 +1,4 @@
-/* RESET + BASE */
+/* ========= RESET + ROOT ========= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,13 +6,13 @@
 }
 html, body {
   height: 100%;
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  overflow-x: hidden;
+  padding-top: 110px; /* نفس ارتفاع الهيدر */
 }
 :root {
   --ink: #0f172a;
@@ -23,18 +23,10 @@ body {
   --soft: #475569;
   --muted: #64748b;
   --radius: 14px;
-  --ring: rgba(16,185,129, .35);
+  --ring: rgba(16,185,129,.35);
 }
 
-/* الحاوية العامة */
-.container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-/* === HEADER ثابت === */
+/* ========= HEADER ========= */
 header {
   position: fixed !important;
   top: 0;
@@ -43,50 +35,51 @@ header {
   z-index: 1000;
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transform: none !important;
-  transition: none !important;
-}
-body {
-  padding-top: 110px; /* ارتفاع الهيدر */
 }
 
-/* الهيكل الداخلي للهيدر */
 header .container.nav {
+  max-width: 1200px;
+  margin: 0 auto;
   height: 110px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-/* ====== LOGO IMAGE ====== */
+
+/* اللوجو */
+header .brand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
 header .logo-img {
-  height: 300%;         /* يشغل كامل ارتفاع الهيدر */
-  max-height: 180px;    /* لا يزيد عن ارتفاع الشريط */
+  height: 300%;
+  max-height: 180px;
   width: auto;
   display: block;
   object-fit: contain;
   padding-left: 0;
   margin-left: 0;
 }
-header .brand {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-}
-/* اسم الشركة - يوضع في منتصف الشريط ولكن قريب من الأسفل */
+
+/* اسم الشركة */
 header .brand-text {
   position: absolute;
   left: 50%;
-  bottom: 10px; /* أنزل النص قليلاً للحافة السفلية */
+  bottom: 10px;
   transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
-  color: #006400;
+  color: #006400; /* أخضر */
   white-space: nowrap;
 }
+
+/* القائمة */
 header nav {
   position: absolute;
   top: 8px;
@@ -97,18 +90,24 @@ header nav ul {
   display: flex;
   gap: 1.2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
   color: #000;
+  text-decoration: none;
 }
+
+/* اللغة */
 header .lang {
   position: absolute;
   right: 0;
   top: 8px;
   display: flex;
   align-items: center;
+  gap: 0.3rem;
 }
 header .lang select {
   font-size: 0.82rem;
@@ -116,41 +115,31 @@ header .lang select {
   border-radius: 6px;
 }
 
+/* ====== MEDIA QUERIES للهيدر ====== */
+@media (max-width: 768px) {
+  header .brand-text {
+    font-size: 1rem;
+    bottom: 6px;
+  }
 
-body {
-  padding-top: 110px; /* نفس ارتفاع الهيدر */
+  header nav ul {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header .logo-img {
+    max-height: 140px;
+  }
+
+  header .lang {
+    top: 6px;
+    right: 10px;
+  }
 }
 
-/* =============== HERO SECTION CLEANED =============== */
-.hero,
-.hero-bleed {
-  position: relative;
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat !important;
-  text-align: left;
-  color: #ffffff;
-}
+/* ========= HERO SECTION ========= */
 
-.hero::before,
-.hero-bleed::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 77, 0, 0.25);
-  pointer-events: none;
-}
-
-/* فرض الأبيض على النصوص داخل الهيرو */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
-  color: #ffffff !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-}
-
-
-
-
-/* ===== HERO SECTION ===== */
 .hero, .hero-bleed {
   position: relative;
   padding: 60px 20px;
@@ -173,7 +162,7 @@ body {
   text-shadow:0 1px 2px rgba(0,0,0,0.25);
 }
 .hero .muted.note {
-  color:#fff !important;
+  color:#ccc !important;
   text-shadow:none;
   text-align:center;
   display:block;
@@ -197,11 +186,23 @@ body {
   gap:12px;
   margin-top:20px;
 }
+
+/* للموبايل */
 @media(max-width:768px){
-  .hero{padding:40px 16px 60px;background:url("hero-bg-mobile.png") center/cover no-repeat}
-  .hero h1{font-size:28px}
-  .hero p{font-size:15px}
-  .hero .btn-row{flex-direction:column;align-items:flex-start}
+  .hero {
+    padding:40px 16px 60px;
+    background:url("hero-bg-mobile.png") center/cover no-repeat;
+  }
+  .hero h1 {
+    font-size:28px;
+  }
+  .hero p {
+    font-size:15px;
+  }
+  .hero .btn-row {
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
 
 /* ===== GLOBAL BUTTONS ===== */
