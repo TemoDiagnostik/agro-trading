@@ -631,31 +631,97 @@ form label {
   gap: 12px;
 }
 
+/* ===== BUTTONS CLEAN FIX ===== */
 .btn {
-  padding: 10px 20px;
-  border: none;
-  font-weight: bold;
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
-  text-align: center;
-  border-radius: 6px;
-}
-
-.btn-primary {
-  background: #007b4f;
-  color: #fff !important;
-}
-
-.btn-outline {
+  transition: all 0.3s ease;
+  border: none;
   background: transparent;
-  color: #007b4f !important;
-  border: 2px solid #007b4f;
 }
 
+/* زر أساسي (أخضر ثابت) */
+.btn-primary {
+  background-color: var(--brand);
+  color: #fff !important;
+  border: 2px solid var(--brand);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+.btn-primary:hover {
+  background-color: var(--brand-ink);
+  border-color: var(--brand-ink);
+  transform: translateY(-1px);
+}
+
+/* زر بإطار فقط */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--brand);
+  color: var(--brand) !important;
+}
+.btn-outline:hover {
+  background-color: var(--brand);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* تخصيص الأزرار داخل الـHero */
+.hero .btn-primary {
+  background-color: var(--brand);
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+  border-color: #ffffff !important;
+}
+
+.hero .btn-outline {
+  background-color: transparent !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: none;
+}
+.hero .btn-outline:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+  transform: translateY(-1px);
+}
+
+/* للأجهزة الصغيرة */
+@media (max-width: 640px) {
+  .btn-row,
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ===== NOTES & MUTED FIX ===== */
 .note {
   font-size: 0.85rem;
   color: #666;
   margin-top: 12px;
+}
+
+.hero .note,
+.hero .muted,
+.hero .lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -699,4 +765,3 @@ form label {
 .form-section {
   margin-bottom: 40px;
 }
-
