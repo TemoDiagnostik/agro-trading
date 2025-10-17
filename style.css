@@ -717,6 +717,29 @@ form label {
   background-color: var(--brand) !important;
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+}
+
+.hero .btn-outline {
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  background: transparent !important;
+}
+.hero .btn-outline:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+}
+
+/* ===== HERO BUTTONS FINAL FIX ===== */
+
+/* الزر الأخضر داخل الهيرو */
+.hero .btn-primary {
+  background-color: var(--brand) !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
   box-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
 .hero .btn-primary:hover {
@@ -725,6 +748,7 @@ form label {
   border-color: #ffffff !important;
 }
 
+/* الزر الشفاف بإطار أبيض داخل الهيرو */
 .hero .btn-outline {
   background-color: transparent !important;
   border: 2px solid #ffffff !important;
@@ -736,4 +760,3 @@ form label {
   color: var(--brand) !important;
   transform: translateY(-1px);
 }
-
