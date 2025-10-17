@@ -226,7 +226,7 @@ header .lang select {
   display: inline-block;
   padding: 10px 16px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 600; /* دمج بين 600 و bold */
   border-radius: 8px;
   text-align: center;
   white-space: nowrap;
@@ -265,6 +265,20 @@ header .lang select {
   min-width: 220px;
   padding: 0.7rem 1rem;
   text-align: center;
+}
+
+/* أزرار داخل #coa */
+#coa .btn {
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: .7rem 1.2rem;
+  font-size: 14px;
+  transition: .2s ease;
+}
+#coa .btn:hover {
+  background: #059669;
 }
 
 /* للأجهزة الصغيرة */
