@@ -686,3 +686,50 @@ form label {
 .form-section {
   margin-bottom: 40px;
 }
+
+/* ===== BUTTONS COLOR FIX (FINAL) ===== */
+
+/* أزرار الموقع العادية */
+.btn-primary {
+  background-color: var(--brand) !important;
+  color: #fff !important;
+  border: 2px solid var(--brand) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-ink) !important;
+  color: #fff !important;
+}
+
+/* أزرار بإطار أخضر */
+.btn-outline {
+  background-color: transparent !important;
+  border: 2px solid var(--brand) !important;
+  color: var(--brand) !important;
+}
+.btn-outline:hover {
+  background-color: var(--brand) !important;
+  color: #fff !important;
+}
+
+/* استثناء خاص داخل الـHero */
+.hero .btn-primary {
+  background-color: var(--brand) !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+}
+
+.hero .btn-outline {
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  background: transparent !important;
+}
+.hero .btn-outline:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+}
+
