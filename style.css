@@ -592,7 +592,11 @@ form label {
   border: 2px solid #007b4f;
 }
 
-
+.note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 12px;
+}
 
 /* ===== ABOUT SECTION ===== */
 .about-bg {
