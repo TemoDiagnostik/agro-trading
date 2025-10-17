@@ -683,3 +683,25 @@ form label {
 }
 
 
+/* ===== تحسين ألوان الأزرار داخل الهيرو ===== */
+.hero .btn-primary {
+  background-color: #00a87a !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+.hero .btn-primary:hover {
+  background-color: #007a5a !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.hero .btn-outline {
+  background-color: transparent !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+}
+.hero .btn-outline:hover {
+  background-color: #ffffff !important;
+  color: #007a5a !important;
+  transform: translateY(-1px);
+}
