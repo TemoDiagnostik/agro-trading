@@ -646,4 +646,13 @@ form label {
 .hero .lead {
   color: #ffffff !important;
 }
-
+/* ===== FORCE WHITE TEXT IN HERO (FINAL) ===== */
+#home.hero-bleed .muted,
+#home.hero-bleed .note,
+#home.hero-bleed .lead,
+#home.hero-bleed strong,
+#home.hero-bleed p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25) !important;
+}
