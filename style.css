@@ -640,5 +640,10 @@ form label {
   margin-bottom: 40px;
 }
 
-
+/* ==== FIX HERO TEXT COLORS ==== */
+.hero .muted,
+.hero .note,
+.hero .lead {
+  color: #ffffff !important;
+}
 
