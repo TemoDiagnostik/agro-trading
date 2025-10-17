@@ -1,3 +1,54 @@
+/* === Override highest priority for hero & buttons & mobile header === */
+@media (max-width: 768px) {
+  header .container.nav {
+    height: auto !important;
+    padding: 8px 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  header .logo-img {
+    max-height: 80px !important;
+    height: auto !important;
+  }
+  header .brand-text {
+    position: static !important;
+    transform: none !important;
+    font-size: 1rem !important;
+    margin: 8px 0 !important;
+    color: #006400 !important;
+  }
+  header nav {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  header nav ul {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  body {
+    padding-top: 100px !important;
+  }
+}
+
+/* White text in hero, force override */
+.hero * {
+  color: #ffffff !important;
+}
+
+/* Ensure hero buttons visible */
+.hero .btn, .hero .btn-primary, .hero .btn-outline {
+  background-color: rgba(0,128,0,0.8) !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+.hero .btn:hover, .hero .btn-primary:hover, .hero .btn-outline:hover {
+  background-color: #065f46 !important;
+  transform: translateY(-1px) !important;
+}
+
+
 /* ========= RESET + ROOT ========= */
 * {
   box-sizing: border-box;
@@ -664,60 +715,3 @@ form label {
 }
 
 
-/* ===== إصلاح الهيدر للهاتف ===== */
-@media (max-width: 768px) {
-  header .container.nav {
-    height: auto !important;
-    padding: 8px 16px !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  header .logo-img {
-    max-height: 80px !important;
-    width: auto !important;
-  }
-
-  header .brand-text {
-    position: static !important;
-    transform: none !important;
-    font-size: 1rem !important;
-    margin: 8px 0 !important;
-  }
-
-  header nav {
-    position: static !important;
-    transform: none !important;
-    width: 100% !important;
-  }
-
-  header nav ul {
-    flex-direction: column !important;
-    gap: 8px !important;
-  }
-
-  body {
-    padding-top: 100px !important; /* قلل المساحة العلوية للتعويض */
-  }
-}
-
-/* ===== فرض النص الأبيض داخل الهيرو (كل العناصر) ===== */
-.hero,
-.hero * {
-  color: #ffffff !important;
-}
-
-/* ===== تنسيق الأزرار داخل الهيرو ليكونوا مرئيين ===== */
-.hero .btn,
-.hero .btn-primary,
-.hero .btn-outline {
-  background-color: rgba(0, 100, 0, 0.8) !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
-}
-
-.hero .btn:hover {
-  background-color: #065f46 !important;
-  transform: translateY(-1px) !important;
-}
