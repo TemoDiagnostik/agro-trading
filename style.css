@@ -662,3 +662,47 @@ form label {
 .form-section {
   margin-bottom: 40px;
 }
+
+
+
+/* ===== override texts in hero to ensure white ===== */
+.hero, .hero-bleed {
+  /* تأكد أن كافة النصوص تتبع اللون الأبيض */
+  color: #fff !important;
+}
+.hero :is(.muted, .note) {
+  color: #fff !important;
+}
+
+/* ===== fixes for header on mobile ===== */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px;
+    align-items: flex-start;
+  }
+  header .brand {
+    position: static;
+    margin-bottom: 8px;
+  }
+  header .brand-text {
+    position: static;
+    transform: none;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  header nav {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  header .logo-img {
+    max-height: 100px; /* قلّل اللوجو للموبايل */
+    height: auto;
+  }
+}
