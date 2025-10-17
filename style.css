@@ -144,7 +144,7 @@ header .lang select {
 .hero-bleed {
   position: relative;
   padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat !important;
+  background: url("hero-bg-desktop.png") center/cover no-repeat;
   text-align: left;
   color: #ffffff;
 }
@@ -161,7 +161,7 @@ header .lang select {
 /* فرض الأبيض على النصوص داخل الهيرو */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
-  color: #ffffff !important;
+  color: #ffffff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -185,13 +185,13 @@ header .lang select {
   z-index:0;
 }
 .hero * {
-  color:#fff !important;
+  color:#fff;
   position:relative;
   z-index:1;
   text-shadow:0 1px 2px rgba(0,0,0,0.25);
 }
 .hero .muted.note {
-  color:#fff !important;
+  color:#fff;
   text-shadow:none;
   text-align:center;
   display:block;
@@ -241,7 +241,7 @@ header .lang select {
 /* زر أساسي */
 .btn-primary {
   background-color: var(--brand);
-  color: #fff !important;
+  color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.12); /* ظل خفيف */
 }
 .btn-primary:hover {
@@ -253,11 +253,11 @@ header .lang select {
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
-  color: var(--brand) !important;
+  color: var(--brand);
 }
 .btn-outline:hover {
   background-color: var(--brand);
-  color: #fff !important;
+  color: #fff;
   transform: translateY(-1px); /* حركة خفيفة */
 }
 
@@ -625,12 +625,12 @@ form label {
 
 .btn-primary {
   background: #007b4f;
-  color: #fff !important;
+  color: #fff;
 }
 
 .btn-outline {
   background: transparent;
-  color: #007b4f !important;
+  color: #007b4f;
   border: 2px solid #007b4f;
 }
 
@@ -683,28 +683,3 @@ form label {
 }
 
 
-/* ===== تحسين أزرار hero الشفافة (outline) لتكون أكثر وضوحًا ===== */
-.hero .btn-outline {
-  background-color: rgba(255, 255, 255, 0.2) !important; /* شفافية بيضاء خفيفة */
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-}
-
-.hero .btn-outline:hover {
-  background-color: #ffffff !important;
-  color: var(--brand-ink) !important;
-  transform: translateY(-1px);
-}
-
-/* ===== الزر الأخضر الأساسي الأفضل وضوحًا ===== */
-.hero .btn-primary {
-  background-color: var(--brand) !important;
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-}
-
-.hero .btn-primary:hover {
-  background-color: var(--brand-ink) !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
