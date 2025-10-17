@@ -1,149 +1,115 @@
-/* ===== RESET + BASE ===== */
+/* RESET + BASE */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 html, body {
   height: 100%;
+  overflow-y: auto;
 }
-
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
   overflow-x: hidden;
 }
-
-a {
-  text-decoration: none;
-  color: var(--brand-ink);
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== ROOT VARIABLES ===== */
 :root {
-  --bg: #0b132b;
   --ink: #0f172a;
-  --soft: #475569;
-  --muted: #64748b;
   --brand: #15803d;
   --brand-ink: #065f46;
   --paper: #ffffff;
   --paper-2: #f8fafc;
-  --ring: rgba(16,185,129,.35);
+  --soft: #475569;
+  --muted: #64748b;
   --radius: 14px;
+  --ring: rgba(16,185,129, .35);
 }
 
-/* ===== CONTAINERS ===== */
+/* الحاوية العامة */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   width: 100%;
-  overflow-x: hidden;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-/* ========== HEADER FINAL VERSION ADJUSTED ========== */
+/* === HEADER ثابت === */
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transform: none !important;
+  transition: none !important;
+}
+body {
+  padding-top: 110px; /* ارتفاع الهيدر */
+}
 
-/* حاوية الهيدر */
+/* الهيكل الداخلي للهيدر */
 header .container.nav {
-  max-width: 1200px;
-  margin: 0 auto;
   height: 110px;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-
-/* ====== LOGO IMAGE ====== */
 header .logo-img {
-  height: 300%;         /* يشغل كامل ارتفاع الهيدر */
-  max-height: 180px;    /* لا يزيد عن ارتفاع الشريط */
+  height: auto;
+  max-height: 80px; /* أو تناسب الجوال */
   width: auto;
-  display: block;
-  object-fit: contain;
-  padding-left: 0;
-  margin-left: 0;
 }
-
-/* ====== BRAND ====== */
 header .brand {
   position: absolute;
+  left: 0;
   top: 0;
   bottom: 0;
-  left: 0; /* ← اقصى الشمال */
   display: flex;
   align-items: center;
-  padding-left: 0;
-  margin-left: 0;
 }
-
-/* اسم الشركة - يوضع في منتصف الشريط ولكن قريب من الأسفل */
 header .brand-text {
   position: absolute;
   left: 50%;
-  bottom: 10px; /* أنزل النص قليلاً للحافة السفلية */
+  bottom: 10px;
   transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
-  color: #006400;
   white-space: nowrap;
 }
-
-/* شريط التنقل */
 header nav {
   position: absolute;
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
 }
-
 header nav ul {
   display: flex;
   gap: 1.2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
-
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
   color: #000;
 }
-
-/* اختيار اللغة */
 header .lang {
   position: absolute;
   right: 0;
   top: 8px;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
 }
-
 header .lang select {
   font-size: 0.82rem;
   padding: 4px 8px;
   border-radius: 6px;
 }
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* عشان يفضل فوق كل العناصر */
-  background-color: #ffffff; /* أو أي لون مناسب */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* ظل خفيف */
-}
 
-/* نضيف مساحة في الأعلى لتجنب تغطية المحتوى */
+
 body {
   padding-top: 110px; /* نفس ارتفاع الهيدر */
 }
