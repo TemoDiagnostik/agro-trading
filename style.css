@@ -215,7 +215,7 @@ header .lang select {
 }
 
 
-/* ===== GLOBAL BUTTONS (FINAL) ===== */
+/* ===== GLOBAL BUTTONS (CLEAN FIXED) ===== */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -240,6 +240,7 @@ header .lang select {
 }
 .btn-primary:hover {
   background-color: var(--brand-ink);
+  border-color: var(--brand-ink);
   transform: translateY(-1px);
 }
 
@@ -255,21 +256,24 @@ header .lang select {
   transform: translateY(-1px);
 }
 
-/* أزرار داخل الـHero */
+/* ===== تخصيص أزرار الهيرو ===== */
 .hero .btn-primary {
   background-color: var(--brand);
   color: #ffffff !important;
   border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
 .hero .btn-primary:hover {
-  background-color: #007a5a !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+  border-color: #ffffff !important;
 }
 
 .hero .btn-outline {
   background-color: transparent !important;
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
+  box-shadow: none;
 }
 .hero .btn-outline:hover {
   background-color: #ffffff !important;
@@ -288,6 +292,23 @@ header .lang select {
   .btn {
     width: 100%;
   }
+}
+
+/* ===== إلغاء أي تعريفات قديمة للأزرار في نهاية الملف ===== */
+.btn,
+.btn-primary,
+.btn-outline {
+  all: unset;
+}
+.btn,
+.btn-primary,
+.btn-outline {
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 /* ===== TRUST BANNER ===== */
 .trust-banner {
