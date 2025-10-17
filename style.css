@@ -215,351 +215,6 @@ header .lang select {
 }
 
 
-/* ===== GLOBAL BUTTONS (CLEAN FIXED) ===== */
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-  background: transparent;
-}
-
-/* زر أساسي (أخضر ثابت) */
-.btn-primary {
-  background-color: var(--brand);
-  color: #fff !important;
-  border: 2px solid var(--brand);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-}
-.btn-primary:hover {
-  background-color: var(--brand-ink);
-  border-color: var(--brand-ink);
-  transform: translateY(-1px);
-}
-
-/* زر بإطار فقط (شفاف) */
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--brand);
-  color: var(--brand) !important;
-}
-.btn-outline:hover {
-  background-color: var(--brand);
-  color: #fff !important;
-  transform: translateY(-1px);
-}
-
-/* ===== تخصيص أزرار الهيرو ===== */
-.hero .btn-primary {
-  background-color: var(--brand);
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
-}
-.hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-  border-color: #ffffff !important;
-}
-
-.hero .btn-outline {
-  background-color: transparent !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: none;
-}
-.hero .btn-outline:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-  transform: translateY(-1px);
-}
-
-/* للأجهزة الصغيرة */
-@media (max-width: 640px) {
-  .btn-row,
-  .cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-  .btn {
-    width: 100%;
-  }
-}
-
-/* ===== إلغاء أي تعريفات قديمة للأزرار في نهاية الملف ===== */
-.btn,
-.btn-primary,
-.btn-outline {
-  all: unset;
-}
-.btn,
-.btn-primary,
-.btn-outline {
-  display: inline-block;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-/* ===== TRUST BANNER ===== */
-.trust-banner {
-  padding:.9rem 0;
-  background:#f1f5f9;
-  border-top:3px solid #84cc16;
-  border-bottom:1px solid #e2e8f0;
-  text-align:center;
-}
-.trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
-.trust-banner strong {color:#0f766e;}
-
-/* ===== PRODUCTS ===== */
-#products {
-  padding:64px 0;
-  background:
-    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.10)),
-    url("leaf-pattern.png") center/cover no-repeat;
-  background-attachment:fixed;
-}
-@media(max-width:1024px){#products{background-attachment:scroll}}
-#products .grid {
-  display:grid;
-  gap:32px;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-}
-#products .card {
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:var(--radius);
-  box-shadow:0 8px 24px rgba(2,6,23,.06);
-  padding:18px;
-  display:flex;
-  flex-direction:column;
-  transition:.2s ease;
-}
-#products .card:hover {transform:translateY(-2px)}
-#products .tag {
-  display:inline-flex;
-  align-items:center;
-  gap:.35rem;
-  background:#f9fafb;
-  border:1px solid #e2e8f0;
-  padding:.35rem .6rem;
-  border-radius:8px;
-  font-weight:600;
-  font-size:.92rem;
-  color:var(--brand-ink);
-  transition:.2s;
-}
-#products .tag:hover {
-  background:#ecfdf5;
-  border-color:var(--brand);
-  color:#059669;
-}
-
-
-/* ===== COA ===== */
-#coa .cta-row {
-  display: flex;
-  justify-content: center;
-  gap: .8rem;
-  flex-wrap: wrap;
-  margin: 1rem 0 2rem;
-}
-#coa .btn {
-  background: var(--brand);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 10px;
-  padding: .7rem 1.2rem;
-  font-size: 14px;
-  transition: .2s ease;
-}
-#coa .btn:hover {
-  background: #059669;
-}
-
-/* ===== SERVICES ===== */
-#services {
-  padding: 60px 0;
-  background: #f9fafb;
-}
-#services h2 {
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 24px;
-  color: #0f172a;
-}
-#services .grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-#services .service {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(2,6,23,.06);
-  overflow: hidden;
-  transition: .2s;
-}
-#services .service img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-#services .service:hover {
-  transform: translateY(-4px);
-}
-
-/* ===== LOGISTICS ===== */
-#logistics {
-  padding: 64px 0;
-  background: #f9fafb;
-}
-#logistics .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-}
-#logistics .card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(2,6,23,.06);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  transition: .2s ease;
-}
-#logistics .card:hover {
-  transform: translateY(-4px);
-}
-#logistics .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-top: 12px;
-  border-radius: 10px;
-}
-
-/* دعم الشاشات الصغيرة */
-@media (max-width: 640px) {
-  #services,
-  #logistics {
-    padding: 40px 16px;
-  }
-}
-
-/* ===== FEATURES ===== */
-.features {
-  display: flex;
-  gap: 1rem;
-  margin: .8rem 0;
-  flex-wrap: wrap;
-}
-.feature {
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-  background: #f9fafb;
-  border: 1px solid #e2e8f0;
-  padding: .4rem .8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: .92rem;
-  color: var(--brand-ink);
-  transition: .2s;
-}
-.feature:hover {
-  background: #ecfdf5;
-  border-color: var(--brand);
-  color: #059669;
-}
-
-/* ===== CERTIFICATES ===== */
-#certificates {
-  padding-block: 40px;
-  background-color: var(--paper-2);
-}
-#certificates .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
-}
-@media (max-width: 1000px) {
-  #certificates .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  #certificates .grid {
-    grid-template-columns: 1fr;
-  }
-}
-#certificates .card {
-  background: #f0ede5;
-  border: 1px solid #dcdcdc;
-  border-radius: var(--radius);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  max-width: 340px;
-  min-height: 480px;
-}
-#certificates .card img {
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  object-fit: contain;
-  background: var(--paper);
-  border-radius: 10px;
-  margin-bottom: 12px;
-  aspect-ratio: 3 / 4;
-}
-#certificates .card h3 {
-  font-size: 16px;
-  color: var(--ink);
-  margin: 0;
-}
-#certificates .card p {
-  font-size: 14px;
-  color: var(--soft);
-  margin: 10px 0 20px;
-}
-#certificates .cta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: auto;
-}
-
-/* ===== FOOTER ===== */
-.foot {
-  padding: 2rem 0;
-  border-top: 1px solid #e2e8f0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* ===== SCROLL OFFSET ===== */
-section, [id] {
-  scroll-margin-top: 110px;
-}
-
 /* ===== CONTACT SECTION ===== */
 #contact {
   padding: 60px 0;
@@ -631,7 +286,7 @@ form label {
   gap: 12px;
 }
 
-/* ===== BUTTONS CLEAN FIX ===== */
+/* ===== BUTTONS CLEAN (single source of truth) ===== */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -647,7 +302,6 @@ form label {
   background: transparent;
 }
 
-/* زر أساسي (أخضر ثابت) */
 .btn-primary {
   background-color: var(--brand);
   color: #fff !important;
@@ -660,7 +314,6 @@ form label {
   transform: translateY(-1px);
 }
 
-/* زر بإطار فقط */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
@@ -672,7 +325,7 @@ form label {
   transform: translateY(-1px);
 }
 
-/* تخصيص الأزرار داخل الـHero */
+/* ===== HERO buttons (on dark photo) ===== */
 .hero .btn-primary {
   background-color: var(--brand);
   color: #ffffff !important;
@@ -697,17 +350,24 @@ form label {
   transform: translateY(-1px);
 }
 
-/* للأجهزة الصغيرة */
-@media (max-width: 640px) {
-  .btn-row,
-  .cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-  .btn {
-    width: 100%;
-  }
+/* ===== COA buttons (on light background) ===== */
+#coa .btn-primary {
+  background: var(--brand);
+  color: #fff !important;
+  border: 2px solid var(--brand);
+}
+#coa .btn-primary:hover {
+  background: var(--brand-ink);
+  border-color: var(--brand-ink);
+}
+#coa .btn-outline {
+  background: transparent;
+  color: var(--brand) !important;
+  border: 2px solid var(--brand);
+}
+#coa .btn-outline:hover {
+  background: var(--brand);
+  color: #fff !important;
 }
 
 /* ===== NOTES & MUTED FIX ===== */
@@ -716,7 +376,6 @@ form label {
   color: #666;
   margin-top: 12px;
 }
-
 .hero .note,
 .hero .muted,
 .hero .lead {
@@ -750,18 +409,15 @@ form label {
 }
 
 /* للموبايل */
+@media (max-width: 640px) {
+  .btn-row,
+  .cta { flex-direction: column; align-items: stretch; gap: 12px; }
+  .btn { width: 100%; }
+}
 @media (max-width: 768px) {
-  .about-bg {
-    background-image: url('about-mobile.png');
-    padding: 60px 15px;
-  }
-
-  .content-box {
-    padding: 25px;
-  }
+  .about-bg { background-image: url('about-mobile.png'); padding: 60px 15px; }
+  .content-box { padding: 25px; }
 }
 
 .info-section,
-.form-section {
-  margin-bottom: 40px;
-}
+.form-section { margin-bottom: 40px; }
