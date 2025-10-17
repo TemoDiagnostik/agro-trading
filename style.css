@@ -58,10 +58,15 @@ header .container.nav {
   justify-content: space-between;
   position: relative;
 }
+/* ====== LOGO IMAGE ====== */
 header .logo-img {
-  height: auto;
-  max-height: 80px; /* أو تناسب الجوال */
+  height: 300%;         /* يشغل كامل ارتفاع الهيدر */
+  max-height: 180px;    /* لا يزيد عن ارتفاع الشريط */
   width: auto;
+  display: block;
+  object-fit: contain;
+  padding-left: 0;
+  margin-left: 0;
 }
 header .brand {
   position: absolute;
@@ -71,13 +76,15 @@ header .brand {
   display: flex;
   align-items: center;
 }
+/* اسم الشركة - يوضع في منتصف الشريط ولكن قريب من الأسفل */
 header .brand-text {
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 10px; /* أنزل النص قليلاً للحافة السفلية */
   transform: translateX(-50%);
   font-weight: 900;
   font-size: 1.4rem;
+  color: #006400;
   white-space: nowrap;
 }
 header nav {
