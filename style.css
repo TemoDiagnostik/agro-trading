@@ -218,21 +218,20 @@ header .lang select {
   text-decoration: none;
   transition: all 0.3s ease;
   border: none;
-  background: transparent;
 }
 
 /* زر أساسي */
 .btn-primary {
   background-color: var(--brand);
   color: #fff !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12); /* ظل خفيف */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 .btn-primary:hover {
   background-color: var(--brand-ink);
-  transform: translateY(-1px); /* حركة بسيطة */
+  transform: translateY(-1px);
 }
 
-/* زر إطار */
+/* زر بإطار فقط */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
@@ -241,7 +240,7 @@ header .lang select {
 .btn-outline:hover {
   background-color: var(--brand);
   color: #fff !important;
-  transform: translateY(-1px); /* حركة خفيفة */
+  transform: translateY(-1px);
 }
 
 /* زر أعرض */
@@ -263,81 +262,94 @@ header .lang select {
     width: 100%;
   }
 }
-
 /* ===== TRUST BANNER ===== */
 .trust-banner {
-  padding:.9rem 0;
-  background:#f1f5f9;
-  border-top:3px solid #84cc16;
-  border-bottom:1px solid #e2e8f0;
-  text-align:center;
+  padding: .9rem 0;
+  background: #f1f5f9;
+  border-top: 3px solid #84cc16;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
 }
-.trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
-.trust-banner strong {color:#0f766e;}
+.trust-banner p {
+  margin: .2rem 0;
+  font-size: 1rem;
+  color: #ffffff; /* ← الأبيض */
+}
+.trust-banner strong {
+  color: #ffffff; /* ← الأبيض */
+}
 
 /* ===== PRODUCTS ===== */
 #products {
-  padding:64px 0;
+  padding: 64px 0;
   background:
-    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.10)),
+    linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.10)),
     url("leaf-pattern.png") center/cover no-repeat;
-  background-attachment:fixed;
+  background-attachment: fixed;
 }
-@media(max-width:1024px){#products{background-attachment:scroll}}
+@media(max-width:1024px) {
+  #products {
+    background-attachment: scroll;
+    padding: 40px 16px; /* تحسين للموبايل */
+  }
+}
 #products .grid {
-  display:grid;
-  gap:32px;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 #products .card {
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:var(--radius);
-  box-shadow:0 8px 24px rgba(2,6,23,.06);
-  padding:18px;
-  display:flex;
-  flex-direction:column;
-  transition:.2s ease;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(2,6,23,.06);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: .2s ease;
 }
-#products .card:hover {transform:translateY(-2px)}
+#products .card:hover {
+  transform: translateY(-2px);
+}
 #products .tag {
-  display:inline-flex;
-  align-items:center;
-  gap:.35rem;
-  background:#f9fafb;
-  border:1px solid #e2e8f0;
-  padding:.35rem .6rem;
-  border-radius:8px;
-  font-weight:600;
-  font-size:.92rem;
-  color:var(--brand-ink);
-  transition:.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .92rem;
+  color: var(--brand-ink);
+  transition: .2s;
 }
 #products .tag:hover {
-  background:#ecfdf5;
-  border-color:var(--brand);
-  color:#059669;
+  background: #ecfdf5;
+  border-color: var(--brand);
+  color: #059669;
 }
 
 /* ===== COA ===== */
 #coa .cta-row {
-  display:flex;
-  justify-content:center;
-  gap:.8rem;
-  flex-wrap:wrap;
-  margin:1rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem;
 }
 #coa .btn {
-  background:var(--brand);
-  color:#fff;
-  font-weight:700;
-  border-radius:10px;
-  padding:.7rem 1.2rem;
-  font-size:14px;
-  transition:.2s ease;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: .7rem 1.2rem;
+  font-size: 14px;
+  transition: .2s ease;
 }
-#coa .btn:hover {background:#059669}
-
+#coa .btn:hover {
+  background: #059669;
+}
 /* ===== SERVICES ===== */
 #services {
   padding:60px 0;
