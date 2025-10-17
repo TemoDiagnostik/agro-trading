@@ -683,67 +683,28 @@ form label {
 }
 
 
-/* ==== تحسين الهيدر على الموبايل ==== */
-@media (max-width: 768px) {
-  header .container.nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 16px;
-    height: auto;
-  }
-
-  header .brand {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  header .logo-img {
-    max-height: 80px;
-    width: auto;
-  }
-
-  header nav {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  header .lang {
-    position: static;
-    margin-top: 10px;
-  }
-
-  body {
-    padding-top: 140px !important;
-  }
+/* ===== تحسين أزرار hero الشفافة (outline) لتكون أكثر وضوحًا ===== */
+.hero .btn-outline {
+  background-color: rgba(255, 255, 255, 0.2) !important; /* شفافية بيضاء خفيفة */
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
 }
 
-/* ==== ضبط الأزرار داخل الهيرو على الموبايل ==== */
-@media (max-width: 640px) {
-  .hero .btn-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .hero .btn {
-    width: 100%;
-    font-size: 15px;
-    padding: 14px 18px;
-  }
+.hero .btn-outline:hover {
+  background-color: #ffffff !important;
+  color: var(--brand-ink) !important;
+  transform: translateY(-1px);
 }
 
-/* ==== زيادة التباعد في الهيرو ==== */
-.hero .muted.note {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  text-align: center;
-  opacity: 0.9;
+/* ===== الزر الأخضر الأساسي الأفضل وضوحًا ===== */
+.hero .btn-primary {
+  background-color: var(--brand) !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.hero .btn-primary:hover {
+  background-color: var(--brand-ink) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
 }
