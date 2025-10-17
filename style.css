@@ -717,19 +717,23 @@ form label {
   background-color: var(--brand) !important;
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
 }
 .hero .btn-primary:hover {
   background-color: #ffffff !important;
   color: var(--brand) !important;
+  border-color: #ffffff !important;
 }
 
 .hero .btn-outline {
+  background-color: transparent !important;
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
-  background: transparent !important;
+  box-shadow: none;
 }
 .hero .btn-outline:hover {
   background-color: #ffffff !important;
   color: var(--brand) !important;
+  transform: translateY(-1px);
 }
 
