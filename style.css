@@ -718,3 +718,24 @@ form label {
     gap: 8px;
   }
 }
+
+
+/* ===== HERO BUTTONS: make them visible and interactive ===== */
+.hero .btn,
+.hero .btn-primary,
+.hero .btn-outline {
+  color: #fff !important;
+  background-color: rgba(0, 128, 0, 0.6) !important; /* أخضر شفاف */
+  border: 2px solid #fff !important;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.hero .btn:hover,
+.hero .btn-primary:hover,
+.hero .btn-outline:hover {
+  background-color: #065f46 !important; /* أخضر غامق عند المرور */
+  color: #fff !important;
+  transform: translateY(-1px);
+  transition: 0.2s ease;
+}
