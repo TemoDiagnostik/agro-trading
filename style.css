@@ -775,3 +775,39 @@ form label {
     width: 100%;
   }
 }
+
+/* ===== HERO BUTTON VISIBILITY FIX ===== */
+
+/* زر View COA و Open COA يكون بخلفية خضراء ناعمة مثل Request */
+.hero .btn-outline,
+.hero a[href*="coa"],
+.hero a[href*="COA"] {
+  background-color: var(--brand) !important;
+  border: 2px solid var(--brand) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero .btn-outline:hover,
+.hero a[href*="coa"]:hover {
+  background-color: var(--brand-ink) !important;
+  border-color: var(--brand-ink) !important;
+  color: #ffffff !important;
+}
+
+/* تحسين وضوح الزر Open COA داخل النصوص السفلية */
+a[href*="Open COA"],
+a[href*="open coa"] {
+  display: inline-block;
+  background-color: var(--brand) !important;
+  color: #ffffff !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+a[href*="Open COA"]:hover {
+  background-color: var(--brand-ink) !important;
+}
