@@ -690,45 +690,25 @@ a[href*="Open COA"] {
     width: 100%;
   }
 }
-/* ===== HERO FIX: MAKE ALL HERO BUTTONS VISIBLE ===== */
-.hero .btn-outline,
-.hero a.btn-outline,
-.hero a[href*="View"],
-.hero a[href*="COA"],
-.hero a[href*="Open"] {
-  background-color: var(--brand) !important;
-  color: #ffffff !important;
-  border: 2px solid var(--brand) !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
-  text-shadow: none !important;
+
+
+
+
+
+/* ===== FIX HEADER SPACING ===== */
+header .container.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
 }
 
-.hero .btn-outline:hover,
-.hero a[href*="View"]:hover,
-.hero a[href*="COA"]:hover,
-.hero a[href*="Open"]:hover {
-  background-color: var(--brand-ink) !important;
-  border-color: var(--brand-ink) !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-
-
-
-
-/* ===== HEADER FIX: ALIGNMENT & SPACING ===== */
 header nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem; /* تباعد أكبر بين العناصر */
-}
-
-header .brand-text {
-  margin-left: 10px;
-  font-size: 1.3rem;
-  color: var(--brand);
-  font-weight: 700;
+  gap: 1.2rem; /* تباعد أفضل بين الروابط */
 }
 
 header .lang select {
@@ -738,27 +718,16 @@ header .lang select {
   font-size: 0.9rem;
 }
 
-/* للأجهزة الصغيرة */
-@media (max-width: 768px) {
-  header nav ul {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  header .brand-text {
-    font-size: 1.1rem;
-  }
-}
-
-
-/* ===== HERO BUTTON SPACING FIX ===== */
+/* ===== HERO BUTTONS SPACING FIX ===== */
 .hero .btn-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px !important; /* مسافة بين الزرين */
+  gap: 14px !important; /* مسافة واضحة بين الزرين */
   margin-top: 20px !important;
 }
 
 .hero .btn {
-  margin: 0 !important;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 600;
 }
