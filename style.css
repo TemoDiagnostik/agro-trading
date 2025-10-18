@@ -688,3 +688,23 @@ a[href*="Open COA"] {
     width: 100%;
   }
 }
+
+/* ===== FIX: FORCE HERO BUTTON COLORS ===== */
+.hero .btn-outline,
+.hero a[href*="View COA"],
+.hero a[href*="Open COA"] {
+  background-color: var(--brand) !important;
+  border: 2px solid var(--brand) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.hero .btn-outline:hover,
+.hero a[href*="View COA"]:hover,
+.hero a[href*="Open COA"]:hover {
+  background-color: var(--brand-ink) !important;
+  border-color: var(--brand-ink) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
