@@ -620,7 +620,7 @@ form label {
 
 /* زر بإطار أخضر */
 .btn-outline {
-  background-color: #005f4b;
+  background-color: #15803d;
   border: 2px solid var(--brand);
   color: var(--brand) !important;
 }
