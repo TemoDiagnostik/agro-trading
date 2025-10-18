@@ -120,7 +120,7 @@ header .lang select {
     bottom: 6px;
   }
   header .logo-img {
-    max-height: 140px;
+    max-height: 100px;
   }
   header .lang {
     top: 6px;
