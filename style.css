@@ -650,23 +650,23 @@ form label {
   color: var(--brand) !important;
 }
 
-/* زر View COA و Open COA (شفاف بإطار أبيض) */
+/* زر View COA و Open COA بخلفية خضراء واضحة */
 .hero .btn-outline,
 .hero a[href*="View COA"],
 .hero a[href*="Open COA"] {
-  background-color: transparent !important;
-  border: 2px solid #ffffff !important;
+  background-color: var(--brand) !important;
+  border: 2px solid var(--brand) !important;
   color: #ffffff !important;
-  box-shadow: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .hero .btn-outline:hover,
 .hero a[href*="View COA"]:hover,
 .hero a[href*="Open COA"]:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
+  background-color: var(--brand-ink) !important;
+  border-color: var(--brand-ink) !important;
+  color: #ffffff !important;
   transform: translateY(-1px);
 }
-
 /* ===== تحسينات عامة ===== */
 .hero p {
   margin-bottom: 18px !important;
