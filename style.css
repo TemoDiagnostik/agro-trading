@@ -544,12 +544,6 @@ form label {
   margin-top: 12px;
 }
 
-.hero .note,
-.hero .muted,
-.hero .lead {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
 
 /* ===== ABOUT SECTION ===== */
 .about-bg {
