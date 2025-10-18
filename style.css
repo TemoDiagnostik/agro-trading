@@ -688,8 +688,8 @@ form label {
 }
 
 
+/* ===== GLOBAL BUTTONS (FINAL CLEAN VERSION) ===== */
 
-/* ===== GLOBAL BUTTONS (RESTORED CLASSIC STYLE) ===== */
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -705,18 +705,20 @@ form label {
   background: transparent;
 }
 
-/* زر أساسي */
+/* زر أساسي (أخضر) */
 .btn-primary {
   background-color: var(--brand);
-  color: #fff !important;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+  color: #ffffff !important;
+  border: 2px solid var(--brand);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 .btn-primary:hover {
   background-color: var(--brand-ink);
+  border-color: var(--brand-ink);
   transform: translateY(-1px);
 }
 
-/* زر بإطار */
+/* زر بإطار أخضر */
 .btn-outline {
   background-color: transparent;
   border: 2px solid var(--brand);
@@ -724,43 +726,54 @@ form label {
 }
 .btn-outline:hover {
   background-color: var(--brand);
-  color: #fff !important;
+  color: #ffffff !important;
   transform: translateY(-1px);
 }
 
-/* تخصيص أزرار الـHero */
+/* ===== HERO SECTION SPECIAL BUTTONS ===== */
+
+/* زر Request a Quote (أخضر ثابت) */
 .hero .btn-primary {
-  background-color: var(--brand);
-  color: #ffffff !important;
+  background-color: var(--brand) !important;
   border: 2px solid #ffffff !important;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
 }
 .hero .btn-primary:hover {
   background-color: #ffffff !important;
   color: var(--brand) !important;
-  border-color: #ffffff !important;
 }
 
-.hero .btn-outline {
+/* زر View COA و Open COA (شفاف بإطار أبيض) */
+.hero .btn-outline,
+.hero a[href*="View COA"],
+.hero a[href*="Open COA"] {
   background-color: transparent !important;
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
   box-shadow: none;
 }
-.hero .btn-outline:hover {
+.hero .btn-outline:hover,
+.hero a[href*="View COA"]:hover,
+.hero a[href*="Open COA"]:hover {
   background-color: #ffffff !important;
   color: var(--brand) !important;
   transform: translateY(-1px);
 }
 
-/* تحسين المسافات بين النصوص في الهيرو */
+/* ===== تحسينات عامة ===== */
 .hero p {
   margin-bottom: 18px !important;
 }
-.hero .cta-row,
-.hero .btn-row {
-  margin-top: 14px !important;
-  gap: 10px;
+.hero .btn-row,
+.hero .cta-row {
+  margin-top: 16px !important;
+  gap: 12px;
+}
+
+a[href*="Open COA"] {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 /* للأجهزة الصغيرة */
@@ -774,40 +787,4 @@ form label {
   .btn {
     width: 100%;
   }
-}
-
-/* ===== HERO BUTTON VISIBILITY FIX ===== */
-
-/* زر View COA و Open COA يكون بخلفية خضراء ناعمة مثل Request */
-.hero .btn-outline,
-.hero a[href*="coa"],
-.hero a[href*="COA"] {
-  background-color: var(--brand) !important;
-  border: 2px solid var(--brand) !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.hero .btn-outline:hover,
-.hero a[href*="coa"]:hover {
-  background-color: var(--brand-ink) !important;
-  border-color: var(--brand-ink) !important;
-  color: #ffffff !important;
-}
-
-/* تحسين وضوح الزر Open COA داخل النصوص السفلية */
-a[href*="Open COA"],
-a[href*="open coa"] {
-  display: inline-block;
-  background-color: var(--brand) !important;
-  color: #ffffff !important;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-a[href*="Open COA"]:hover {
-  background-color: var(--brand-ink) !important;
 }
