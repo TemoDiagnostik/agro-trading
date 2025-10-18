@@ -156,9 +156,9 @@ header .lang select {
   z-index: 1;
 }
 
-/* فرض الأبيض على النصوص داخل الهيرو فقط */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge, .btn) {
+/* فرض الأبيض على النصوص داخل الهيرو فقط (بدون الأزرار) */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
   color: #ffffff !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -214,101 +214,7 @@ header .lang select {
   }
 }
 
-/* ===== GLOBAL BUTTONS (CLEAN FIXED) ===== */
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-  background: transparent;
-}
 
-/* زر أساسي (أخضر ثابت) */
-.btn-primary {
-  background-color: var(--brand);
-  color: #fff !important;
-  border: 2px solid var(--brand);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-}
-.btn-primary:hover {
-  background-color: var(--brand-ink);
-  border-color: var(--brand-ink);
-  transform: translateY(-1px);
-}
-
-/* زر بإطار فقط (شفاف) */
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--brand);
-  color: var(--brand) !important;
-}
-.btn-outline:hover {
-  background-color: var(--brand);
-  color: #fff !important;
-  transform: translateY(-1px);
-}
-
-/* ===== تخصيص أزرار الهيرو ===== */
-.hero .btn-primary {
-  background-color: var(--brand);
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
-}
-.hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-  border-color: #ffffff !important;
-}
-
-.hero .btn-outline {
-  background-color: transparent !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: none;
-}
-.hero .btn-outline:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-  transform: translateY(-1px);
-}
-
-/* للأجهزة الصغيرة */
-@media (max-width: 640px) {
-  .btn-row,
-  .cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-  .btn {
-    width: 100%;
-  }
-}
-
-/* ===== إلغاء أي تعريفات قديمة للأزرار في نهاية الملف ===== */
-.btn,
-.btn-primary,
-.btn-outline {
-  all: unset;
-}
-.btn,
-.btn-primary,
-.btn-outline {
-  display: inline-block;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.3s ease;
-}
 /* ===== TRUST BANNER ===== */
 .trust-banner {
   padding:.9rem 0;
@@ -638,12 +544,6 @@ form label {
   margin-top: 12px;
 }
 
-.hero .note,
-.hero .muted,
-.hero .lead {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
 
 /* ===== ABOUT SECTION ===== */
 .about-bg {
@@ -688,76 +588,108 @@ form label {
 }
 
 
-/* ===== BUTTONS COLOR FIX (FINAL) ===== */
+/* ===== GLOBAL BUTTONS (FINAL CLEAN VERSION) ===== */
 
-/* أزرار الموقع العادية */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
+}
+
+/* زر أساسي (أخضر) */
 .btn-primary {
-  background-color: var(--brand) !important;
-  color: #fff !important;
-  border: 2px solid var(--brand) !important;
+  background-color: var(--brand);
+  color: #ffffff !important;
+  border: 2px solid var(--brand);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
-
 .btn-primary:hover {
-  background-color: var(--brand-ink) !important;
-  color: #fff !important;
-}
-
-/* أزرار بإطار أخضر */
-.btn-outline {
-  background-color: transparent !important;
-  border: 2px solid var(--brand) !important;
-  color: var(--brand) !important;
-}
-.btn-outline:hover {
-  background-color: var(--brand) !important;
-  color: #fff !important;
-}
-
-/* استثناء خاص داخل الـHero */
-.hero .btn-primary {
-  background-color: var(--brand) !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-}
-.hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-}
-
-.hero .btn-outline {
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  background: transparent !important;
-}
-.hero .btn-outline:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-}
-
-/* ===== HERO BUTTONS FINAL FIX ===== */
-
-/* الزر الأخضر داخل الهيرو */
-.hero .btn-primary {
-  background-color: var(--brand) !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
-}
-.hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-  border-color: #ffffff !important;
-}
-
-/* الزر الشفاف بإطار أبيض داخل الهيرو */
-.hero .btn-outline {
-  background-color: transparent !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: none;
-}
-.hero .btn-outline:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
+  background-color: var(--brand-ink);
+  border-color: var(--brand-ink);
   transform: translateY(-1px);
 }
+
+.btn-outline {
+  background-color: #15803d !important; /* أخضر أساسي */
+  border: 2px solid #15803d !important; /* نفس اللون */
+  color: #ffffff !important; /* نص أبيض */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #065f46 !important; /* الأخضر الغامق عند التمرير */
+  border-color: #065f46 !important;
+  transform: translateY(-1px);
+}
+
+/* ===== HERO SECTION SPECIAL BUTTONS ===== */
+
+/* زر Request a Quote (أخضر ثابت) */
+.hero .btn-primary {
+  background-color: var(--brand) !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: var(--brand) !important;
+}
+
+/* زر View COA و Open COA بخلفية خضراء واضحة */
+.hero .btn-outline,
+.hero a[href*="View COA"],
+.hero a[href*="Open COA"] {
+  background-color: var(--brand) !important;
+  border: 2px solid var(--brand) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-outline:hover,
+.hero a[href*="View COA"]:hover,
+.hero a[href*="Open COA"]:hover {
+  background-color: var(--brand-ink) !important;
+  border-color: var(--brand-ink) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+/* ===== تحسينات عامة ===== */
+.hero p {
+  margin-bottom: 18px !important;
+}
+.hero .btn-row,
+.hero .cta-row {
+  margin-top: 16px !important;
+  gap: 12px;
+}
+
+a[href*="Open COA"] {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* للأجهزة الصغيرة */
+@media (max-width: 640px) {
+  .btn-row,
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+
+
