@@ -691,13 +691,18 @@ a[href*="Open COA"] {
 /* للأجهزة الصغيرة */
 @media (max-width: 640px) {
   .btn-row,
-  .cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+  .cta-row {                /* ✅ الاسم الصحيح */
+    flex-direction: row;    /* ✅ بجانب بعض */
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
   }
-  .btn {
-    width: 100%;
+
+  /* ✅ ألغِ عرض الزر الكامل */
+  .hero .cta-row .btn {
+    width: auto;
+    flex: 0 1 auto;
+    min-width: 140px;
   }
 }
 
