@@ -3,12 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="site.name">Euro Agri Trading s.r.o  — خدمات زراعية موثوقة</title>
-  <meta name="description" content="وساطة زراعية مقرها التشيك تربط مشتري أوروبا بمصادر موثوقة. توريد مباشر، لوجستيات مرنة، وشهادات تحليل — لدينا أسعار تنافسية" />
+
+  <title data-i18n="site.name">Euro Agri Trading s.r.o — خدمات زراعية موثوقة</title>
+  <meta name="description" content="وساطة زراعية مقرها التشيك تربط مشتري أوروبا بمصادر موثوقة. توريد مباشر، لوجستيات مرنة، وشهادات تحليل — لدينا أسعار تنافسية." />
+
+  <!-- ✅ خط Tajawal (احترافي للغة العربية) -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
 
-  
-  <!-- بعناوين بديلة لمحركات البحث (لنفس الصفحة أحادية) -->
+  <!-- ✅ ملف التنسيقات الأساسي -->
+  <link rel="stylesheet" href="style.css?v=24">
+
+  <!-- ✅ تحسين تحميل اللغة والاتجاه مبكرًا -->
+  <script>
+    (function () {
+      const RTL = new Set(['ar']);
+      const urlLang = new URLSearchParams(location.search).get('lang');
+      const saved   = localStorage.getItem('lang');
+      const nav     = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+      const guess   = (urlLang || saved || nav || 'en').toLowerCase().split('-')[0];
+      const lang    = (['en','ar'].includes(guess) ? guess : 'en');
+      document.documentElement.lang = lang;
+      document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+      if (lang === 'ar') {
+        document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', sans-serif";
+      }
+    })();
+  </script>
+
+  <!-- ✅ عناوين بديلة لمحركات البحث -->
   <link rel="alternate" href="?lang=ar" hreflang="ar" />
   <link rel="alternate" href="?lang=en" hreflang="en" />
   <link rel="alternate" href="?lang=cs" hreflang="cs" />
@@ -31,25 +53,12 @@
   <link rel="alternate" href="?lang=hr" hreflang="hr" />
   <link rel="alternate" href="?lang=sr" hreflang="sr" />
   <link rel="alternate" href="?lang=tr" hreflang="tr" />
-  <link rel="preload" as="image" href="hero-port.png" imagesrcset="hero-port.png">
-  <!-- CSS الخارجي فقط -->
-  <link rel="stylesheet" href="style.css?v=21">
 
-<!-- Set early lang/dir to avoid flicker -->
-<script>
-  (function () {
-    const RTL = new Set(['ar']);
-    const urlLang = new URLSearchParams(location.search).get('lang');
-    const saved   = localStorage.getItem('lang');
-    const nav     = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-    const guess   = (urlLang || saved || nav || 'en').toLowerCase().split('-')[0];
-    const lang    = (['en','ar'].includes(guess) ? guess : 'en');
-    document.documentElement.lang = lang;
-    document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
-  })();
-</script>
-  
+  <!-- ✅ تحميل صورة الخلفية مسبقًا -->
+  <link rel="preload" as="image" href="hero-port.png" imagesrcset="hero-port.png">
 </head>
+
+  
 <body>
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
