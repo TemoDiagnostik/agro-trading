@@ -810,3 +810,47 @@ form label {
 
 
 
+
+
+
+
+
+/* ===== Header fixes for Arabic (RTL) ===== */
+html[dir="rtl"] header .container.nav {
+  padding-left: 110px;
+  padding-right: 20px;
+}
+
+html[dir="rtl"] header .lang {
+  left: 10px;
+  right: auto;
+  top: 8px;
+}
+
+html[dir="rtl"] header .brand-text {
+  font-size: 1.05rem;
+  max-width: calc(100% - 230px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html[dir="rtl"] header nav ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+html[dir="rtl"] header nav ul li a {
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+/* المساعدة على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  html[dir="rtl"] header .brand-text {
+    font-size: 0.9rem;
+    max-width: calc(100% - 200px);
+  }
+}
+
