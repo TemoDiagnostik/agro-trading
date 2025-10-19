@@ -16,6 +16,12 @@ body {
   padding-top: 0px; /* لإفساح المجال للهيدر الثابت */
 }
 
+html[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+
+
 :root {
   --ink: #0f172a;
   --brand: #15803d;
