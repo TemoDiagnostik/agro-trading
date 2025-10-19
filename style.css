@@ -587,6 +587,11 @@ form label {
   margin-bottom: 40px;
 }
 
+
+
+
+
+
 /* ===== GLOBAL BUTTONS (FINAL CLEAN VERSION) ===== */
 
 .btn {
@@ -776,5 +781,16 @@ a[href*="Open COA"] {
 
   header nav ul li a {
     font-size: 0.9rem;
+  }
+}
+
+
+
+/* ===== مسافة إضافية بين الأزرار على الموبايل فقط ===== */
+@media (max-width: 768px) {
+  .hero .btn-row {
+    gap: 18px !important;   /* المسافة بين الزرين */
+    flex-direction: column; /* يجعلهم فوق بعض بشكل أنيق */
+    align-items: center;    /* توسيطهم في المنتصف */
   }
 }
