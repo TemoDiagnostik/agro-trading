@@ -722,4 +722,38 @@ a[href*="Open COA"] {
   }
 }
 
+/* ===== Fix overlap between Contact and language selector ===== */
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
 
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    padding-right: 90px; /* مساحة ثابتة للكرة الأرضية */
+  }
+
+  header .lang {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    z-index: 100;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav ul li a {
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+}
