@@ -757,3 +757,24 @@ a[href*="Open COA"] {
     font-size: 0.95rem;
   }
 }
+
+
+/* ===== تحسين حجم اللوجو والمسافات في الموبايل ===== */
+@media (max-width: 768px) {
+  header .logo-img {
+    max-height: 70px !important; /* تقليل الارتفاع */
+  }
+
+  header .brand-text {
+    font-size: 0.95rem;
+    bottom: 4px;
+  }
+
+  header nav ul {
+    gap: 0.4rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem;
+  }
+}
