@@ -133,7 +133,7 @@ header .lang select {
   }
 }
 
-/* =============== HERO SECTION (FINAL OPTIMIZED VERSION) =============== */
+/* =============== HERO SECTION (FINAL CLEAN — FIXED CLASS) =============== */
 .hero,
 .hero-bleed {
   position: relative;
@@ -179,21 +179,16 @@ header .lang select {
   margin-bottom: 1rem;
 }
 
-/* صف الأزرار */
-.hero .btn-row {
+/* الأزرار داخل الهيرو */
+.hero .cta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* مسافة مريحة بين الأزرار */
+  justify-content: center;   /* توسيط الأزرار */
+  align-items: center;
+  gap: 20px;                 /* مسافة بين الأزرار */
   margin-top: 20px;
   z-index: 2;
   position: relative;
-  justify-content: flex-start;
-}
-
-/* تحسين مظهر الزرين */
-.hero .btn-row .btn {
-  min-width: 160px;
-  text-align: center;
 }
 
 /* معالجة اللون الرمادي داخل الهيرو */
@@ -204,7 +199,7 @@ header .lang select {
   opacity: 1 !important;
 }
 
-/* ===== إعدادات للموبايل ===== */
+/* إعدادات للموبايل */
 @media (max-width: 768px) {
   .hero {
     padding: 40px 16px 60px;
@@ -219,17 +214,10 @@ header .lang select {
     font-size: 15px;
   }
 
-  /* الأزرار فوق بعض وبمسافة مثالية */
-  .hero .btn-row {
-    flex-direction: column;
-    align-items: center;
+  .hero .cta-row {
+    flex-direction: row;     /* بجانب بعض على الموبايل */
     justify-content: center;
-    gap: 20px;
-  }
-
-  .hero .btn-row .btn {
-    width: 90%;
-    max-width: 360px;
+    gap: 16px;
   }
 }
 /* ===== TRUST BANNER ===== */
@@ -803,11 +791,3 @@ a[href*="Open COA"] {
 
 
 
-/* ===== مسافة أكبر بين الأزرار على الموبايل فقط (بجانب بعض) ===== */
-@media (max-width: 768px) {
-  .hero .btn-row {
-    gap: 20px !important;    /* مسافة بين الأزرار */
-    flex-direction: row;     /* بجانب بعض */
-    justify-content: center; /* توسيطهم في المنتصف */
-  }
-}
