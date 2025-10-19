@@ -136,13 +136,15 @@ header .lang select {
 /* =============== HERO SECTION (FINAL CLEAN MERGED VERSION) =============== */
 .hero,
 .hero-bleed {
-position: relative;
-padding: 60px 20px;
-background: url(“hero-bg-desktop.png”) center/cover no-repeat;
-background-color: #0f172a;
-overflow: hidden;
-text-align: left;
-z-index: 0;
+  position: relative;
+  padding: 60px 20px;
+  background: 
+    linear-gradient(rgba(0, 77, 0, 0.35), rgba(0, 77, 0, 0.35)),
+    url("hero-bg-desktop.png") center/cover no-repeat; /* ✅ الصورة الأصلية */
+  background-color: #0f172a; /* فقط كاحتياط لو فشل تحميل الصورة */
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
 }
 
 /* طبقة التعتيم فوق الخلفية */
