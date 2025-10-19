@@ -133,116 +133,144 @@ header .lang select {
   }
 }
 
-/* =============== HERO SECTION (FINAL CLEAN — FIXED CLASS + FIXED BUTTON WIDTH) =============== */
+/* =============== HERO SECTION (FINAL CLEAN MERGED VERSION) =============== */
 .hero,
 .hero-bleed {
-  position: relative;
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat;
-  background-color: #0f172a;
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
+position: relative;
+padding: 60px 20px;
+background: url(“hero-bg-desktop.png”) center/cover no-repeat;
+background-color: #0f172a;
+overflow: hidden;
+text-align: left;
+z-index: 0;
 }
 
 /* طبقة التعتيم فوق الخلفية */
 .hero::before,
 .hero-bleed::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 77, 0, 0.35);
-  pointer-events: none;
-  z-index: 1;
+content: “”;
+position: absolute;
+inset: 0;
+background: rgba(0, 77, 0, 0.35);
+pointer-events: none;
+z-index: 1;
 }
 
 /* فرض الأبيض على النصوص داخل الهيرو فقط (بدون الأزرار) */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 2;
+color: #ffffff !important;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+position: relative;
+z-index: 2;
 }
 
 /* عناصر الهيرو */
 .hero h1 {
-  font-size: clamp(36px, 6vw, 60px);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
+font-size: clamp(36px, 6vw, 60px);
+font-weight: 700;
+margin-bottom: 0.6rem;
 }
 
 .hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.5;
-  max-width: 720px;
-  margin-bottom: 1rem;
+font-size: clamp(15px, 2vw, 18px);
+line-height: 1.5;
+max-width: 720px;
+margin-bottom: 1rem;
 }
 
 /* الأزرار داخل الهيرو */
 .hero .cta-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-  z-index: 2;
-  position: relative;
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+flex-wrap: wrap !important;
+gap: 14px !important;
+margin-top: 22px !important;
+position: relative;
+z-index: 2;
 }
 
-/* الأزرار نفسها بعرض ثابت */
+/* نفس الحجم تمامًا */
 .hero .cta-row .btn {
-  width: 200px;           /* عرض ثابت للأزرار */
-  text-align: center;
-  padding: 10px 18px;
-  border-radius: 8px;
+width: 200px !important;
+height: 48px !important;
+line-height: 48px !important;
+text-align: center !important;
+border-radius: 8px;
+font-weight: 600;
+}
+
+/* ألوان الأزرار (اختياري – للأناقة) */
+.hero .btn-primary {
+background-color: var(–brand) !important;
+border: 2px solid #ffffff !important;
+color: #ffffff !important;
+box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+.hero .btn-primary:hover {
+background-color: #ffffff !important;
+color: var(–brand) !important;
+}
+
+.hero .btn-outline {
+background-color: #0d9488 !important; /* لون مميز */
+border: 2px solid #0d9488 !important;
+color: #ffffff !important;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-outline:hover {
+background-color: #0a6e64 !important;
+border-color: #0a6e64 !important;
+color: #ffffff !important;
+transform: translateY(-1px);
 }
 
 /* معالجة اللون الرمادي داخل الهيرو */
 .hero .muted,
 .hero .note,
 .hero .lead {
-  color: #ffffff !important;
-  opacity: 1 !important;
+color: #ffffff !important;
+opacity: 1 !important;
 }
 
-/* إعدادات للموبايل */
+/* إعدادات للهاتف والتابلت */
 @media (max-width: 768px) {
-  .hero {
-    padding: 40px 16px 60px;
-    background: url("hero-bg-mobile.png") center/cover no-repeat;
-  }
+.hero {
+padding: 40px 16px 60px;
+background: url(“hero-bg-mobile.png”) center/cover no-repeat;
+}
 
-  .hero h1 {
-    font-size: 28px;
-  }
+.hero h1 {
+font-size: 28px;
+}
 
-  .hero p {
-    font-size: 15px;
-  }
+.hero p {
+font-size: 15px;
+}
 
-  /* الأزرار بجانب بعض حتى على الموبايل */
-  .hero .cta-row {
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
-  }
+.hero .cta-row {
+gap: 12px !important;
+}
 
-  .hero .cta-row .btn {
-    width: 200px; /* نفس العرض الثابت */
-  }
+.hero .cta-row .btn {
+width: 180px !important;
+ }
 }
 
 /* للأجهزة الصغيرة جداً */
-@media (max-width: 420px) {
-  .hero .cta-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
+@media (max-width: 380px) {
+.hero .cta-row {
+flex-direction: column !important;
+align-items: center !important;
+gap: 12px !important;
 }
+
+.hero .cta-row .btn {
+width: 220px !important;
+ }
+}
+
 
 /* ===== TRUST BANNER ===== */
 .trust-banner {
@@ -672,7 +700,7 @@ form label {
 
 
 /* ===== Fix: keep "Contact" from appearing under the globe (mobile) ===== */
-/* أضف هذا في آخر style.css */
+
 @media (max-width: 768px) {
   /* احجز مساحة داخل الحاوية حتى لا يتراكب الـ nav مع عنصر اللغة */
   header .container.nav {
@@ -764,81 +792,3 @@ form label {
 
 
 
-/* ===== HERO SECTION SPECIAL BUTTONS ===== */
-
-/* زر Request a Quote (أخضر ثابت) */
-.hero .btn-primary {
-  background-color: var(--brand) !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
-}
-.hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: var(--brand) !important;
-}
-
-/* زر View COA و Open COA بخلفية خضراء واضحة */
-.hero .btn-outline,
-.hero a[href*="View COA"],
-.hero a[href*="Open COA"] {
-  background-color: var(--brand) !important;
-  border: 2px solid var(--brand) !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-.hero .btn-outline:hover,
-.hero a[href*="View COA"]:hover,
-.hero a[href*="Open COA"]:hover {
-  background-color: var(--brand-ink) !important;
-  border-color: var(--brand-ink) !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-/* ===== تحسينات عامة ===== */
-.hero p {
-  margin-bottom: 18px !important;
-}
-.hero .btn-row,
-.hero .cta-row {
-  margin-top: 16px !important;
-  gap: 12px;
-}
-
-a[href*="Open COA"] {
-  display: inline-block;
-  margin-top: 10px;
-}
-/* ===== FINAL FIX: HERO BUTTONS — SAME SIZE, SIDE BY SIDE ===== */
-.hero .cta-row {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 12px !important;
-  margin-top: 20px !important;
-}
-
-/* أزرار بنفس العرض والارتفاع */
-.hero .cta-row .btn {
-  flex: 1 1 45% !important;   /* كل زر ياخذ نصف الصف تقريباً */
-  max-width: 180px !important; /* يمنعهم من التمدد الزائد */
-  min-width: 150px !important;
-  height: 48px !important;     /* ارتفاع ثابت */
-  line-height: 48px !important;
-  text-align: center !important;
-  border-radius: 8px;
-}
-
-/* على الشاشات الصغيرة جداً (أقل من 360px) */
-@media (max-width: 360px) {
-  .hero .cta-row {
-    flex-direction: column !important; /* فوق بعض */
-    align-items: center !important;
-  }
-
-  .hero .cta-row .btn {
-    width: 200px !important;
-    max-width: none !important;
-  }
-}
