@@ -221,6 +221,25 @@ header .lang select {
     gap: 16px;
   }
 }
+
+/* للأجهزة الصغيرة */
+@media (max-width: 640px) {
+  .btn-row,
+  .cta-row {                /* ✅ الاسم الصحيح */
+    flex-direction: row;    /* ✅ بجانب بعض */
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* ✅ ألغِ عرض الزر الكامل */
+  .hero .cta-row .btn {
+    width: auto;
+    flex: 0 1 auto;
+    min-width: 140px;
+  }
+}
+
 /* ===== TRUST BANNER ===== */
 .trust-banner {
   padding:.9rem 0;
