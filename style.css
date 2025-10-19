@@ -689,3 +689,40 @@ a[href*="Open COA"] {
     width: 100%;
   }
 }
+
+
+/* ===== Fix: keep "Contact" from appearing under the globe (mobile) ===== */
+/* أضف هذا في آخر style.css */
+@media (max-width: 768px) {
+  /* احجز مساحة داخل الحاوية حتى لا يتراكب الـ nav مع عنصر اللغة */
+  header .container.nav {
+    padding-left: 20px;   /* ثابت */
+    padding-right: 110px; /* <-- احجز مساحة كافية لعنصر اللغة */
+  }
+
+  /* قلّل أقصى عرض الـ nav حتى لا يمتد تحت عنصر اللغة */
+  header nav {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 140px); /* يضمن أن القائمة تبقى داخل المساحة المتاحة */
+    box-sizing: border-box;
+  }
+
+  /* إذا احتاج النص الان يلتف، امنع كسر الكلمات الغير مرغوب به */
+  header nav ul li a {
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+
+  /* ضع محدد اللغة فوق كل شيء (اختياري لكن مفيد) */
+  header .lang {
+    right: 10px;
+    top: 6px;
+    z-index: 1100;
+  }
+}
+
+/* اختياري: على شاشات صغيرة جداً، إخفاء الأيقونة/قائمة اللغة بدل من التداخل */
+@media (max-width: 420px) {
+  header .lang { display: none; }
+}
