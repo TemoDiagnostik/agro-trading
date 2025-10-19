@@ -817,8 +817,44 @@ form label {
 
 /* ===== Header fixes for Arabic (RTL) ===== */
 html[dir="rtl"] header .container.nav {
-  padding-left: 110px;
+  direction: rtl;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
   padding-right: 20px;
+}
+
+html[dir="rtl"] header .brand {
+  order: 3; /* اللوجو إلى اليمين */
+}
+
+html[dir="rtl"] header .brand-text {
+  order: 2;
+  text-align: right;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Tajawal', sans-serif !important;
+}
+
+html[dir="rtl"] header nav {
+  order: 1; /* القوائم إلى اليسار */
+}
+
+html[dir="rtl"] header nav ul {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+html[dir="rtl"] header nav ul li a {
+  white-space: nowrap;
+  font-size: 0.95rem;
 }
 
 html[dir="rtl"] header .lang {
@@ -827,30 +863,10 @@ html[dir="rtl"] header .lang {
   top: 8px;
 }
 
-html[dir="rtl"] header .brand-text {
-  font-size: 1.05rem;
-  max-width: calc(100% - 230px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-html[dir="rtl"] header nav ul {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-html[dir="rtl"] header nav ul li a {
-  white-space: nowrap;
-  font-size: 0.95rem;
-}
-
 /* المساعدة على الشاشات الصغيرة */
 @media (max-width: 768px) {
   html[dir="rtl"] header .brand-text {
     font-size: 0.9rem;
-    max-width: calc(100% - 200px);
+    max-width: calc(100% - 180px);
   }
 }
-
