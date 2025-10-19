@@ -19,6 +19,9 @@ body {
 html[lang="ar"] {
   direction: rtl;
   text-align: right;
+  font-family: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif !important;
+  line-height: 1.8;
+  word-spacing: 1px;
 }
 
 
