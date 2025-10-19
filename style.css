@@ -820,20 +820,36 @@ a[href*="Open COA"] {
 
 
 
-/* ===== FINAL FIX: HERO BUTTONS SIDE BY SIDE ===== */
+/* ===== FINAL FIX: HERO BUTTONS — SAME SIZE, SIDE BY SIDE ===== */
 .hero .cta-row {
   display: flex !important;
-  flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 16px !important;
+  gap: 12px !important;
   margin-top: 20px !important;
 }
 
+/* أزرار بنفس العرض والارتفاع */
 .hero .cta-row .btn {
-  width: 200px !important;        /* عرض ثابت */
+  flex: 1 1 45% !important;   /* كل زر ياخذ نصف الصف تقريباً */
+  max-width: 180px !important; /* يمنعهم من التمدد الزائد */
+  min-width: 150px !important;
+  height: 48px !important;     /* ارتفاع ثابت */
+  line-height: 48px !important;
   text-align: center !important;
-  min-height: 45px !important;    /* نفس الارتفاع */
-  line-height: 1.3 !important;
+  border-radius: 8px;
+}
+
+/* على الشاشات الصغيرة جداً (أقل من 360px) */
+@media (max-width: 360px) {
+  .hero .cta-row {
+    flex-direction: column !important; /* فوق بعض */
+    align-items: center !important;
+  }
+
+  .hero .cta-row .btn {
+    width: 200px !important;
+    max-width: none !important;
+  }
 }
