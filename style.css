@@ -809,4 +809,43 @@ form label {
 }
 
 
+/* =============== ARABIC HEADER FIX (SAFE VERSION) =============== */
+html[dir="rtl"] header .container.nav {
+  direction: rtl;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
 
+html[dir="rtl"] header .brand {
+  order: 3; /* logo to right */
+}
+
+html[dir="rtl"] header .brand-text {
+  order: 2;
+  text-align: right;
+  font-family: 'Tajawal', sans-serif !important;
+}
+
+html[dir="rtl"] header nav {
+  order: 1;
+}
+
+html[dir="rtl"] header nav ul {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] header .lang {
+  left: 10px;
+  right: auto;
+  direction: ltr;
+}
+
+/* ensure spacing on small screens */
+@media (max-width: 768px) {
+  html[dir="rtl"] header .brand-text {
+    font-size: 0.9rem;
+    max-width: calc(100% - 160px);
+  }
+}
