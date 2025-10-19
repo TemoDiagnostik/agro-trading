@@ -857,10 +857,17 @@ html[dir="rtl"] header nav ul li a {
   font-size: 0.95rem;
 }
 
+/* ===== Language selector RTL alignment ===== */
 html[dir="rtl"] header .lang {
-  left: 10px;
-  right: auto;
-  top: 8px;
+  right: auto !important;
+  left: 10px !important;
+  direction: ltr;
+}
+
+/* English or LTR mode (keep default) */
+html[dir="ltr"] header .lang {
+  right: 10px !important;
+  left: auto !important;
 }
 
 /* المساعدة على الشاشات الصغيرة */
