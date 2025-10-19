@@ -782,11 +782,3 @@ form label {
 
 
 
-/* ===== FIX FINAL: unify hero buttons width ===== */
-.hero .cta-row .btn {
-  width: 220px !important;   /* عرض ثابت لا يتغير حتى مع نص طويل */
-  min-width: 220px !important;
-  max-width: 220px !important;
-}
-
-
