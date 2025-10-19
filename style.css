@@ -849,3 +849,26 @@ html[dir="rtl"] header .lang {
     max-width: calc(100% - 160px);
   }
 }
+
+
+/* ===== تصحيح موضع قائمة اللغة في الهيدر العربي ===== */
+html[dir="rtl"] header .lang {
+  position: absolute;
+  top: 18px;      /* ارفعها قليلًا لأعلى */
+  left: 18px;     /* أبعدها قليلاً عن اللوجو */
+  right: auto;
+  z-index: 5;
+}
+
+html[dir="rtl"] header .lang select {
+  font-family: 'Tajawal', sans-serif !important;
+  font-size: 0.9rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 6px;
+}
+html[dir="rtl"] header .lang select option {
+  color: #000; /* لون النص داخل القائمة المنسدلة */
+}
