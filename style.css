@@ -133,13 +133,13 @@ header .lang select {
   }
 }
 
-/* =============== HERO SECTION (FINAL IMPROVED VERSION) =============== */
+/* =============== HERO SECTION (FINAL LIGHT VERSION - FIXED) =============== */
 .hero,
 .hero-bleed {
   position: relative;
   padding: 60px 20px;
   background:
-    linear-gradient(rgba(0, 77, 0, 0.35), rgba(0, 77, 0, 0.35)),
+    linear-gradient(rgba(0, 77, 0, 0.18), rgba(0, 77, 0, 0.18)), /* 🎨 تخفيف التعتيم */
     url("hero-bg-desktop.png") center/cover no-repeat;
   background-color: #0f172a;
   overflow: hidden;
@@ -153,7 +153,7 @@ header .lang select {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 77, 0, 0.35);
+  background: rgba(0, 77, 0, 0.18); /* 🎨 نفس درجة التعتيم الأخف */
   pointer-events: none;
   z-index: 1;
 }
@@ -219,13 +219,13 @@ header .lang select {
 
 /* زر ثانوي */
 .hero .btn-outline {
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important; /* 🌿 جعله أفتح قليلاً */
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 .hero .btn-outline:hover {
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.35) !important; /* 🌿 تباين أنعم */
   color: #0a662f !important;
   transform: translateY(-1px);
 }
@@ -238,11 +238,13 @@ header .lang select {
   opacity: 1 !important;
 }
 
-/* للأجهزة الصغيرة */
+/* 🎯 إعدادات الهواتف */
 @media (max-width: 768px) {
   .hero {
     padding: 40px 16px 60px;
-    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    background:
+      linear-gradient(rgba(0, 77, 0, 0.18), rgba(0, 77, 0, 0.18)),
+      url("hero-bg-mobile.png") center/cover no-repeat;
     text-align: center;
   }
 
@@ -257,17 +259,15 @@ header .lang select {
   .hero .cta-row {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 18px !important; /* 🟢 زيادة الفراغ بين الأزرار */
+    gap: 18px !important;
   }
 
-  .hero .cta-row .btn {
+  .hero .cta-row a.btn,
+  .hero .cta-row button.btn {
+    display: block !important;
     width: 80% !important;
     max-width: 260px !important;
-  }
-  .hero .cta-row a.btn {
-  width: 80% !important;
-  max-width: 260px !important;
-  display: block !important;
+    margin: 0 auto !important;
   }
 }
 
