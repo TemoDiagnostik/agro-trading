@@ -181,11 +181,12 @@ header .lang select {
 
 /* الأزرار داخل الهيرو */
 .hero .cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;   /* توسيط الأزرار */
-  align-items: center;
-  gap: 20px;                 /* مسافة بين الأزرار */
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
   margin-top: 20px;
   z-index: 2;
   position: relative;
