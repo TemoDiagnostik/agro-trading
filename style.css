@@ -205,29 +205,26 @@ header .lang select {
   transition: all 0.3s ease;
 }
 
-/* زر أساسي */
 .hero .btn-primary {
-  background-color: #0a662f !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-}
-.hero .btn-primary:hover {
   background-color: #ffffff !important;
   color: #0a662f !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-primary:hover {
+  background-color: #d9f99d !important; /* أخضر باهت فاتح */
+  color: #065f46 !important;
 }
 
-/* زر ثانوي */
 .hero .btn-outline {
-  background-color: rgba(255, 255, 255, 0.2) !important; /* 🌿 جعله أفتح قليلاً */
-  border: 2px solid #ffffff !important;
+  background-color: #0a662f !important;  /* أخضر غامق */
+  border: 2px solid #0a662f !important;
   color: #ffffff !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .hero .btn-outline:hover {
-  background-color: rgba(255, 255, 255, 0.35) !important; /* 🌿 تباين أنعم */
-  color: #0a662f !important;
-  transform: translateY(-1px);
+  background-color: #065f46 !important; /* أخضر أكثر عمقًا */
+  border-color: #065f46 !important;
 }
 
 /* تحسين اللون الرمادي */
