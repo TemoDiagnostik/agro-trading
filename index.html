@@ -61,13 +61,17 @@
 <body>
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
+    
     <!-- Logo -->
     <div class="brand">
       <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
     </div>
 
-    <!-- Company name in header (يُترك كما هو) -->
-    <span class="brand-text">Euro Agri Trading s.r.o — Trusted Agro Broker</span>
+    <!-- Company name -->
+    <span class="brand-text" data-i18n="site.name">
+      Euro Agri Trading s.r.o — Trusted Agro Broker
+      <span class="llc-hint" data-i18n="site.company.llc" style="display:none"></span>
+    </span>
 
     <!-- Navigation -->
     <nav>
@@ -81,7 +85,7 @@
       </ul>
     </nav>
 
-    <!-- Language selector (كما هو) -->
+    <!-- Language selector -->
     <div class="lang" aria-label="Language selector">
       <span aria-hidden="true">🌐</span>
       <select id="langSelect" title="Language">
@@ -111,6 +115,7 @@
     </div>
   </div>
 </header>
+
 
 <!-- HERO -->
 <section id="home" class="hero-bleed">
