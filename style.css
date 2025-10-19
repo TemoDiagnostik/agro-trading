@@ -193,7 +193,8 @@ header .lang select {
 }
 
 /* شكل الأزرار */
-.hero .cta-row .btn {
+.hero .cta-row a.btn,
+.hero .cta-row button.btn {
   width: 200px !important;
   height: 48px !important;
   line-height: 48px !important;
