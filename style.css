@@ -809,66 +809,37 @@ form label {
 }
 
 
-/* =============== ARABIC HEADER FIX (SAFE VERSION) =============== */
-html[dir="rtl"] header .container.nav {
-  direction: rtl;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-}
-
-html[dir="rtl"] header .brand {
-  order: 3; /* logo to right */
-}
-
-html[dir="rtl"] header .brand-text {
-  order: 2;
-  text-align: right;
-  font-family: 'Tajawal', sans-serif !important;
-}
-
-html[dir="rtl"] header nav {
-  order: 1;
-}
-
-html[dir="rtl"] header nav ul {
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-}
-
-html[dir="rtl"] header .lang {
-  left: 10px;
-  right: auto;
-  direction: ltr;
-}
-
-/* ensure spacing on small screens */
-@media (max-width: 768px) {
-  html[dir="rtl"] header .brand-text {
-    font-size: 0.9rem;
-    max-width: calc(100% - 160px);
-  }
-}
-
-
-/* ===== تصحيح موضع قائمة اللغة في الهيدر العربي ===== */
+/* ===== Arabic header language position — FINAL FIX ===== */
 html[dir="rtl"] header .lang {
   position: absolute;
-  top: 18px;      /* ارفعها قليلًا لأعلى */
-  left: 18px;     /* أبعدها قليلاً عن اللوجو */
-  right: auto;
-  z-index: 5;
+  top: 12px;
+  right: 20px;       /* ✅ انقلها لليمين */
+  left: auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  direction: rtl;
+}
+
+html[dir="rtl"] header .lang span {
+  order: 2;
+  font-size: 1rem;
 }
 
 html[dir="rtl"] header .lang select {
+  order: 1;
+  direction: rtl;
   font-family: 'Tajawal', sans-serif !important;
   font-size: 0.9rem;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.6);
-  color: #fff;
+  color: #ffffff;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 6px;
-  padding: 3px 6px;
+  padding: 2px 6px;
+  cursor: pointer;
 }
+
 html[dir="rtl"] header .lang select option {
-  color: #000; /* لون النص داخل القائمة المنسدلة */
+  color: #000;
 }
