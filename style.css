@@ -786,11 +786,11 @@ a[href*="Open COA"] {
 
 
 
-/* ===== مسافة إضافية بين الأزرار على الموبايل فقط ===== */
+/* ===== مسافة أكبر بين الأزرار على الموبايل فقط (بجانب بعض) ===== */
 @media (max-width: 768px) {
   .hero .btn-row {
-    gap: 18px !important;   /* المسافة بين الزرين */
-    flex-direction: column; /* يجعلهم فوق بعض بشكل أنيق */
-    align-items: center;    /* توسيطهم في المنتصف */
+    gap: 20px !important;    /* مسافة بين الأزرار */
+    flex-direction: row;     /* بجانب بعض */
+    justify-content: center; /* توسيطهم في المنتصف */
   }
 }
