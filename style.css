@@ -47,14 +47,27 @@ html[lang="ar"] {
   margin: 0 auto;
 }
 
-/* ===== HEADER ===== */
+
+
+/* ===== TRANSPARENT HEADER OVER HERO ===== */
 header {
   position: relative !important;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  z-index: 10;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.08); /* شبه شفاف */
+  backdrop-filter: blur(10px);            /* ضباب خفيف */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
 }
+/* عندما يبدأ المستخدم في التمرير، يصبح ثابت أبيض */
+body.scrolled header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: none;
+}
+
+
 header .container.nav {
   height: 110px;
   display: flex;
