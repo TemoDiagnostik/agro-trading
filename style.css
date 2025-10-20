@@ -985,3 +985,67 @@ header nav ul {
     margin-top: 6px !important;
   }
 }
+
+/* ===== NAV/LANG LAYOUT FIX (DESKTOP + RTL) ===== */
+
+/* توزيع الأعمدة */
+header .container.nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* شعار الشركة */
+header .brand { flex: 0 0 auto !important; }
+
+/* القائمة تتمدّد في المنتصف */
+header nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* الروابط لا تلتف على الديسكتوب */
+header nav ul {
+  display: flex !important;
+  flex-wrap: nowrap !important;   /* مهم: منع الالتفاف */
+  gap: 0.8rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* زر اللغة ثابت على الطرف ولا ينكمش */
+header .lang {
+  flex: 0 0 auto !important;
+  margin-inline-start: 16px !important;  /* LTR: مسافة قبل زر اللغة */
+}
+
+/* RTL: نعكس الاتجاه ونعدّل المسافات */
+html[dir="rtl"] header .container.nav { flex-direction: row-reverse !important; }
+html[dir="rtl"] header nav { justify-content: center !important; }
+html[dir="rtl"] header .lang {
+  margin-inline-end: 16px !important;    /* RTL: المسافة تصبح على اليمين */
+  margin-inline-start: 0 !important;
+}
+
+/* لو النصوص طويلة جدًا، صغّر المسافات قليلًا على الشاشات المتوسطة */
+@media (max-width: 1200px) {
+  header nav ul { gap: 0.6rem !important; }
+  header nav ul li a { font-size: 0.78rem !important; }
+}
+
+/* الموبايل: نرجع لترتيب عمودي مرتب */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  header nav { flex: none !important; }
+  header nav ul {
+    flex-wrap: wrap !important;          /* مسموح بالموبايل */
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  header .lang { margin-inline: 0 !important; margin-top: 6px !important; }
+}
+
