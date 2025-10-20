@@ -590,21 +590,12 @@ form label {
 
 
 
-
-
-
-
 /* ===== HERO OFFSET (لتفادي تغطية النص بالبار وضبط التوازن) ===== */
 .hero,
 .hero-bleed {
   margin-top: 100px;
   padding-top: 100px;
 }
-
-
-
-
-
 
 
 
