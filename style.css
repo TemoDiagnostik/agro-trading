@@ -1051,23 +1051,45 @@ html[dir="rtl"] header .lang {
 
 
 
-  /* ===== HEADER NAV SHIFT FIX (LTR LANGUAGES) ===== */
+ /* ===== LANGUAGE SELECT ALWAYS ON EDGE (FINAL FIX) ===== */
 
-/* نحرك القائمة شوية يسار عشان نوسع المسافة قبل زر اللغة */
-html[dir="ltr"] header nav {
-  margin-right: 40px !important; /* ابعد القائمة شوية عن زر اللغة */
+/* نحدد الحاوية الرئيسية */
+header .container.nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: relative !important;
 }
 
-/* نحافظ على التوازن في العربية والعبرية إلخ */
-html[dir="rtl"] header nav {
-  margin-right: 0 !important;
-  margin-left: 40px !important; /* بالعربية تتحرك شوية يمين */
+/* نخلي زر اللغة في أقصى اليمين دائمًا (في اللغات اللاتينية) */
+header .lang {
+  position: absolute !important;
+  right: 20px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 !important;
+  flex: none !important;
 }
 
-/* في الشاشات الصغيرة نرجع كل شيء للوسط */
+/* RTL (العربية، الفارسية...): نحركه أقصى اليسار */
+html[dir="rtl"] header .lang {
+  right: auto !important;
+  left: 20px !important;
+  transform: translateY(-50%);
+}
+
+/* نخلي القائمة تتمركز كويس بعد تحريك زر اللغة */
+header nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* الموبايل: نعيده للوضع العادي فوق أو تحت */
 @media (max-width: 768px) {
-  html[dir="ltr"] header nav,
-  html[dir="rtl"] header nav {
-    margin: 0 !important;
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
   }
 }
