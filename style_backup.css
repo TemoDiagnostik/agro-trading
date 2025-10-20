@@ -1,3 +1,4 @@
+
 /* ===== RESET + BASE ===== */
 * {
   box-sizing: border-box;
@@ -47,14 +48,27 @@ html[lang="ar"] {
   margin: 0 auto;
 }
 
-/* ===== HEADER ===== */
+
+
+/* ===== TRANSPARENT HEADER OVER HERO ===== */
 header {
   position: relative !important;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  z-index: 10;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.08); /* شبه شفاف */
+  backdrop-filter: blur(10px);            /* ضباب خفيف */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
 }
+/* عندما يبدأ المستخدم في التمرير، يصبح ثابت أبيض */
+body.scrolled header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: none;
+}
+
+
 header .container.nav {
   height: 110px;
   display: flex;
@@ -142,41 +156,36 @@ header .lang select {
   }
 }
 
-/* =============== HERO SECTION (FINAL CLEAN MERGED VERSION — FIXED) =============== */
+/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
   position: relative;
+  width: 100vw;                              /* العرض الكامل */
+  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
   padding: 60px 20px;
-  background:
-    linear-gradient(rgba(0, 77, 0, 0.35), rgba(0, 77, 0, 0.35)),
-    url("hero-bg-desktop.png") center/cover no-repeat; /* ✅ الصورة الأصلية */
-  background-color: #0f172a; /* احتياطي في حال فشل تحميل الصورة */
+  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
+  background-color: #ffffff;                 /* احتياطي بلون فاتح */
   overflow: hidden;
   text-align: left;
   z-index: 0;
 }
 
-/* طبقة التعتيم فوق الخلفية */
+/* إزالة أي طبقة تعتيم */
 .hero::before,
 .hero-bleed::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgb(163 187 163 / 0%);
-  pointer-events: none;
-  z-index: 1;
+  content: none !important;
 }
 
-/* فرض الأبيض على النصوص داخل الهيرو فقط (بدون الأزرار) */
+/* نصوص داخل الهيرو */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
   color: #ffffff !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 2;
 }
 
-/* عناصر الهيرو */
+/* العناوين والنصوص */
 .hero h1 {
   font-size: clamp(36px, 6vw, 60px);
   font-weight: 700;
@@ -190,7 +199,7 @@ header .lang select {
   margin-bottom: 1rem;
 }
 
-/* صف الأزرار داخل الهيرو */
+/* صف الأزرار */
 .hero .cta-row {
   display: flex !important;
   justify-content: center !important;
@@ -202,7 +211,7 @@ header .lang select {
   z-index: 2;
 }
 
-/* الأزرار نفسها (نفس الحجم تمامًا) */
+/* الأزرار */
 .hero .cta-row .btn {
   width: 200px !important;
   height: 48px !important;
@@ -214,33 +223,33 @@ header .lang select {
   transition: all 0.3s ease;
 }
 
-/* ===== HERO SECTION SPECIAL BUTTONS ===== */
+/* زر رئيسي */
 .hero .btn-primary {
-  background-color: #0a662f !important; /* الأخضر الأساسي */
+  background-color: #0a662f !important;
   border: 2px solid #ffffff !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .hero .btn-primary:hover {
   background-color: #ffffff !important;
   color: #0a662f !important;
 }
 
-/* الزر الثاني بلون مختلف */
+/* زر ثانوي */
 .hero .btn-outline {
-  background-color: #0d9488 !important; /* تركوازي */
+  background-color: #0d9488 !important;
   border: 2px solid #0d9488 !important;
   color: #ffffff !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .hero .btn-outline:hover {
-  background-color: #0a6e64 !important; /* أغمق عند المرور */
+  background-color: #0a6e64 !important;
   border-color: #0a6e64 !important;
   color: #ffffff !important;
   transform: translateY(-1px);
 }
 
-/* إصلاح اللون الرمادي داخل الهيرو */
+/* إصلاح اللون الرمادي */
 .hero .muted,
 .hero .note,
 .hero .lead {
@@ -248,48 +257,37 @@ header .lang select {
   opacity: 1 !important;
 }
 
-/* إعدادات للهاتف والتابلت */
+/* الهواتف */
 @media (max-width: 768px) {
-  .hero {
-    padding: 40px 16px 60px;
+  .hero,
+  .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 60px;
     text-align: center;
   }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
   .hero .cta-row {
     gap: 12px !important;
-    flex-direction: row !important; /* ✅ بجانب بعض */
+    flex-direction: row !important;
     justify-content: center !important;
   }
-
   .hero .cta-row .btn {
     width: 200px !important;
     min-width: 200px !important;
-    height: 48px !important;
   }
 }
 
-/* للأجهزة الصغيرة جداً */
 @media (max-width: 380px) {
   .hero .cta-row {
     flex-direction: column !important;
     align-items: center !important;
     gap: 12px !important;
   }
-
   .hero .cta-row .btn {
     width: 220px !important;
   }
 }
-
 
 
 
@@ -716,141 +714,61 @@ form label {
 
 
 
-
-
-
-
-/* ===== Fix: keep "Contact" from appearing under the globe (mobile) ===== */
-
-@media (max-width: 768px) {
-  /* احجز مساحة داخل الحاوية حتى لا يتراكب الـ nav مع عنصر اللغة */
-  header .container.nav {
-    padding-left: 20px;   /* ثابت */
-    padding-right: 110px; /* <-- احجز مساحة كافية لعنصر اللغة */
-  }
-
-  /* قلّل أقصى عرض الـ nav حتى لا يمتد تحت عنصر اللغة */
-  header nav {
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: calc(100% - 140px); /* يضمن أن القائمة تبقى داخل المساحة المتاحة */
-    box-sizing: border-box;
-  }
-
-  /* إذا احتاج النص الان يلتف، امنع كسر الكلمات الغير مرغوب به */
-  header nav ul li a {
-    white-space: nowrap;
-    font-size: 0.95rem;
-  }
-
-  /* ضع محدد اللغة فوق كل شيء (اختياري لكن مفيد) */
-  header .lang {
-    right: 10px;
-    top: 6px;
-    z-index: 1100;
-  }
-}
-
-/* ===== Fix overlap between Contact and language selector ===== */
-@media (max-width: 768px) {
-  header {
-    position: relative;
-  }
-
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    padding-right: 90px; /* مساحة ثابتة للكرة الأرضية */
-  }
-
-  header .lang {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    z-index: 100;
-  }
-
-  header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  header nav ul li a {
-    white-space: nowrap;
-    font-size: 0.95rem;
-  }
-}
-
-
-/* ===== تحسين حجم اللوجو والمسافات في الموبايل ===== */
-@media (max-width: 768px) {
-  header .logo-img {
-    max-height: 70px !important; /* تقليل الارتفاع */
-  }
-
-  header .brand-text {
-    font-size: 0.95rem;
-    bottom: 4px;
-  }
-
-  header nav ul {
-    gap: 0.4rem;
-  }
-
-  header nav ul li a {
-    font-size: 0.9rem;
-  }
-}
-
-
-
-
-
-
-
-
-/* ===== Header fixes for Arabic (RTL) ===== */
+/* ============ ARABIC HEADER REPAIR (with smaller logo + language selector) ============ */
 html[dir="rtl"] header .container.nav {
-  padding-left: 110px;
-  padding-right: 20px;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 10px;
 }
 
+/* 🔹 تصغير الكرة الأرضية وزر اللغة */
 html[dir="rtl"] header .lang {
-  left: 10px;
-  right: auto;
-  top: 8px;
+  position: absolute;
+  top: 10px;      /* قربها شوية للأعلى */
+  right: 12px;
+  left: auto;
+  direction: ltr;
+  z-index: 10;
+  transform: scale(0.85); /* 👈 تصغير الكل بنسبة 85% */
+  transform-origin: top right;
 }
 
+/* 🔹 تصغير اللوجو قليلاً */
+html[dir="rtl"] header .brand img.logo-img {
+  max-height: 85px !important; /* 👈 كان كبير، الآن متناسق */
+  width: auto;
+  height: auto;
+}
+
+/* 🔹 النص الأخضر (اسم الشركة) */
 html[dir="rtl"] header .brand-text {
-  font-size: 1.05rem;
-  max-width: calc(100% - 230px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-html[dir="rtl"] header nav ul {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-html[dir="rtl"] header nav ul li a {
-  white-space: nowrap;
+  order: 2;
+  color: #15803d;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif !important;
+  margin-top: 2px;
+  margin-bottom: 6px;
   font-size: 0.95rem;
 }
 
-/* المساعدة على الشاشات الصغيرة */
+/* 🔹 تحسين مظهر الموبايل */
 @media (max-width: 768px) {
-  html[dir="rtl"] header .brand-text {
-    font-size: 0.9rem;
-    max-width: calc(100% - 200px);
+  html[dir="rtl"] header .lang {
+    top: 24px !important;
+    right: 4px;
+    transform: scale(0.75); /* 👈 أصغر في الموبايل */
+  }
+
+  html[dir="rtl"] header .brand img.logo-img {
+    max-height: 70px !important; /* 👈 يقل أكثر على الموبايل */
+  }
+
+  html[dir="rtl"] header nav ul li a {
+    font-size: 0.60rem;
   }
 }
-
