@@ -713,3 +713,33 @@ form label {
 
 
 
+/* ===== TRANSPARENT HEADER OVER HERO (FINAL FIX) ===== */
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(255,255,255,0.05) !important; /* شفاف فوق الهيرو */
+  backdrop-filter: blur(10px); /* ضباب خفيف */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.4s ease !important;
+}
+
+/* عندما يمر المستخدم لأسفل */
+body.scrolled header {
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* تأكد من أن النصوص داخل الهيدر واضحة */
+header .brand-text,
+header nav ul li a {
+  color: #ffffff !important;   /* أثناء الشفافية */
+  transition: color 0.4s ease;
+}
+body.scrolled header .brand-text,
+body.scrolled header nav ul li a {
+  color: #0a662f !important;   /* بعد التمرير */
+}
