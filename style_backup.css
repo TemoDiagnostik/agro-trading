@@ -687,61 +687,51 @@ form label {
 
 
 
-/* ============ ARABIC HEADER REPAIR (with smaller logo + language selector) ============ */
+/* ===== FIX: HEADER RTL + MOBILE RESPONSIVE ===== */
+
+/* عند التحويل للغة العربية أو أي لغة RTL */
 html[dir="rtl"] header .container.nav {
-  direction: rtl;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding-top: 10px;
+  flex-direction: row-reverse !important;   /* يعكس ترتيب العناصر */
+  text-align: right !important;
 }
 
-/* 🔹 تصغير الكرة الأرضية وزر اللغة */
-html[dir="rtl"] header .lang {
-  position: absolute;
-  top: 10px;      /* قربها شوية للأعلى */
-  right: 12px;
-  left: auto;
-  direction: ltr;
-  z-index: 10;
-  transform: scale(0.85); /* 👈 تصغير الكل بنسبة 85% */
-  transform-origin: top right;
-}
-
-/* 🔹 تصغير اللوجو قليلاً */
-html[dir="rtl"] header .brand img.logo-img {
-  max-height: 85px !important; /* 👈 كان كبير، الآن متناسق */
-  width: auto;
-  height: auto;
-}
-
-/* 🔹 النص الأخضر (اسم الشركة) */
 html[dir="rtl"] header .brand-text {
-  order: 2;
-  color: #15803d;
-  font-weight: 600;
-  text-align: center;
-  font-family: 'Tajawal', sans-serif !important;
-  margin-top: 2px;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
+  margin-right: 10px !important;
+  margin-left: 0 !important;
 }
 
-/* 🔹 تحسين مظهر الموبايل */
+/* تأكد أن القائمة ما تنكسرش فوق الهيرو */
+header {
+  flex-wrap: nowrap !important;
+  overflow: visible !important;
+}
+
+/* الهواتف: ترتيب رأسي أنيق بدون تداخل */
 @media (max-width: 768px) {
-  html[dir="rtl"] header .lang {
-    top: 24px !important;
-    right: 4px;
-    transform: scale(0.75); /* 👈 أصغر في الموبايل */
+  header .container.nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
   }
 
-  html[dir="rtl"] header .brand img.logo-img {
-    max-height: 70px !important; /* 👈 يقل أكثر على الموبايل */
+  header .brand {
+    margin-bottom: 6px !important;
   }
 
-  html[dir="rtl"] header nav ul li a {
-    font-size: 0.60rem;
+  header nav ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    margin-top: 4px !important;
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem !important;
+  }
+
+  header .lang {
+    margin-top: 8px !important;
   }
 }
