@@ -683,12 +683,14 @@ form label {
 
 /* ===== HEADER — TRANSPARENT, SLIM, NON-FIXED (FINAL BALANCED VERSION) ===== */
 header {
-  position: relative !important;            /* غير ثابت */
-  width: 100%;
-  background: rgba(255, 255, 255, 0.02) !important; /* شفاف ناعم جدًا */
-  backdrop-filter: none !important;         /* بدون أي ضباب */
-  box-shadow: none !important;
-  border: none !important;
+  position: relative !important;
+  width: 50%; /* نصف العرض */
+  margin: 0 auto; /* يوسّط الـbar في منتصف الصفحة */
+  background: rgba(255, 255, 255, 0.3) !important; /* شفاف بنسبة 30% */
+  backdrop-filter: blur(6px); /* يعطي لمسة زجاجية خفيفة وجميلة */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* اختياري: زوايا ناعمة */
+  border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 100;
   transition: all 0.3s ease;
 }
