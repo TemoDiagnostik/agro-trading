@@ -714,7 +714,26 @@ form label {
   transform: translateY(-1px);
 }
 
+/* ===== تحسين مظهر النصوص في شريط القوائم العربي ===== */
+html[dir="rtl"] header nav ul li a {
+  font-size: 1rem !important; /* 🔹 أكبر قليلاً */
+  font-weight: 600 !important; /* 🔹 أكثر سماكة */
+  color: #0f172a !important;   /* 🔹 أسود داكن */
+  text-decoration: none;
+  padding: 6px 10px;
+  display: inline-block;
+  position: relative;
+  top: -2px; /* 🔹 يرفع النص قليلاً للأعلى */
+}
 
+/* للموبايل */
+@media (max-width: 768px) {
+  html[dir="rtl"] header nav ul li a {
+    font-size: 0.8rem !important;
+    padding: 5px 6px;
+    top: -1px;
+  }
+}
 
 
 
