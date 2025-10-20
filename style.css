@@ -48,86 +48,6 @@ html[lang="ar"] {
 }
 
 
-/* ===== HEADER CLEAN TRANSPARENT FINAL VERSION ===== */
-header {
-  position: relative !important;   /* غير ثابت */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: transparent !important; /* شفاف فعلاً */
-  box-shadow: none !important;
-  border: none !important;
-  backdrop-filter: none !important;
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-/* الحاوية الداخلية */
-header .container.nav {
-  height: 68px !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-/* اللوجو */
-header .logo-img {
-  max-height: 80px !important;
-  height: auto;
-}
-
-/* نص الشركة */
-header .brand-text {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #0a662f !important; /* أخضر غامق */
-  margin-left: 10px;
-  white-space: nowrap;
-}
-
-/* عناصر القائمة */
-header nav ul {
-  display: flex;
-  gap: 0.9rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li a {
-  color: #111 !important;  /* أسود واضح */
-  font-weight: 500;
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
-}
-
-/* زر اللغة */
-header .lang select {
-  background: rgba(255,255,255,0.4);
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 6px;
-  color: #111;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-}
-
-/* الشاشات الصغيرة */
-@media (max-width: 768px) {
-  header .container.nav {
-    height: 60px !important;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  header .logo-img {
-    max-height: 70px !important;
-  }
-}
 
 
 /* =============== HERO SECTION (FULL WIDTH REFINED BRIGHT VERSION) =============== */
@@ -681,45 +601,75 @@ form label {
   padding-top: 100px;
 }
 
-/* ===== HEADER FINAL FORCED VERSION (HALF WIDTH + TRANSPARENT) ===== */
-body > header {
-  position: relative !important;
-  width: 50% !important;              /* نصف عرض الصفحة */
-  margin: 0 auto !important;          /* يوسّط البار في المنتصف */
-  background: rgba(255, 255, 255, 0.25) !important; /* شفافية محسّنة */
-  backdrop-filter: blur(8px) !important; /* تأثير زجاجي ناعم */
-  border-radius: 12px !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
-  z-index: 2000 !important;
-  transition: all 0.3s ease;
-  display: flex !important;
-  justify-content: flex-start !important; /* يضع المحتوى إلى اليسار */
+
+
+
+
+
+
+
+/* ===== HEADER — HALF WIDTH, TRANSPARENT, CLEAN VERSION ===== */
+body {
+  background-color: #fff; /* ثبات لون الخلفية العامة */
 }
 
-/* نضبط الحاوية الداخلية */
-body > header .container.nav {
+header {
+  position: relative !important;
+  width: 50% !important;           /* نصف عرض الصفحة */
+  margin: 0 auto !important;       /* تمركز في المنتصف */
+  background: rgba(255, 255, 255, 0.25) !important; /* شفافية محسّنة */
+  backdrop-filter: blur(8px);      /* تأثير زجاجي ناعم */
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* داخل الـheader */
+header .container.nav {
   width: 100% !important;
   height: 70px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 0 16px !important;
-  box-sizing: border-box;
+  padding: 0 18px !important;
+  background: transparent !important; /* إزالة أي خلفية داخلية */
+  box-shadow: none !important;
+  border: none !important;
 }
 
-/* نضبط اللوجو ليكون على أقصى اليسار وبحجم متناسق */
-body > header .logo-img {
+/* اللوجو أقصى اليسار وبحجم متناسق */
+header .logo-img {
   max-height: 60px !important;
   height: auto !important;
   object-fit: contain !important;
   margin-left: 0 !important;
 }
 
-/* نضمن أن النصوص والعناصر الأخرى لا تتأثر */
-body > header nav ul li a {
+/* نص الشركة */
+header .brand-text {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0a662f !important;
+  margin-left: 8px;
+}
+
+/* عناصر القائمة */
+header nav ul li a {
   color: #111 !important;
 }
 
-body > header .brand-text {
-  color: #0a662f !important;
+/* زر اللغة */
+header .lang select {
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  color: #111;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* تأكيد إزالة أي خلفية مزدوجة */
+body.scrolled header {
+  background: rgba(255,255,255,0.25) !important;
 }
