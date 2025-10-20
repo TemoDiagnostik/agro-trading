@@ -48,21 +48,23 @@ html[lang="ar"] {
 }
 
 
-/* ===== CLEAN TRANSPARENT SLIM HEADER (FINAL FIXED VERSION) ===== */
+/* ===== HEADER CLEAN TRANSPARENT FINAL VERSION ===== */
 header {
-  position: relative !important;         /* غير ثابت */
+  position: relative !important;   /* غير ثابت */
+  top: 0;
+  left: 0;
   width: 100%;
-  background: transparent !important;    /* شفاف تمامًا */
-  backdrop-filter: none !important;      /* بدون ضباب */
+  background: transparent !important; /* شفاف فعلاً */
   box-shadow: none !important;
   border: none !important;
-  z-index: 100;
+  backdrop-filter: none !important;
+  z-index: 1000;
   transition: all 0.3s ease;
 }
 
 /* الحاوية الداخلية */
 header .container.nav {
-  height: 68px !important; /* أرفع */
+  height: 68px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,38 +73,38 @@ header .container.nav {
 
 /* اللوجو */
 header .logo-img {
-  max-height: 80px !important; /* أصغر قليلاً */
+  max-height: 80px !important;
   height: auto;
 }
 
-/* اسم الشركة */
+/* نص الشركة */
 header .brand-text {
   font-weight: 700;
-  font-size: 1.05rem;
-  color: #0a662f !important;  /* أخضر غامق */
-  margin-left: 8px;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.4);
+  font-size: 1rem;
+  color: #0a662f !important; /* أخضر غامق */
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
 /* عناصر القائمة */
 header nav ul {
   display: flex;
-  gap: 0.9rem;       /* مسافة بين العناصر */
+  gap: 0.9rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 header nav ul li a {
-  color: #111111 !important;  /* أسود واضح */
+  color: #111 !important;  /* أسود واضح */
   font-weight: 500;
-  font-size: 0.85rem;          /* أصغر */
+  font-size: 0.85rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #0a662f !important;   /* أخضر عند المرور */
+  color: #0a662f !important; /* أخضر عند المرور */
 }
 
 /* زر اللغة */
@@ -110,7 +112,7 @@ header .lang select {
   background: rgba(255,255,255,0.4);
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 6px;
-  color: #111111;
+  color: #111;
   padding: 4px 8px;
   font-size: 0.85rem;
 }
@@ -125,11 +127,7 @@ header .lang select {
   header .logo-img {
     max-height: 70px !important;
   }
-  header nav ul li a {
-    font-size: 0.8rem;
-  }
 }
-
 
 
 /* =============== HERO SECTION (FULL WIDTH REFINED BRIGHT VERSION) =============== */
@@ -765,4 +763,12 @@ header .lang select {
   header nav ul li a {
     font-size: 0.8rem;
   }
+}
+
+
+/* ===== HERO COLOR FIX (ليتناسق مع البار الشفاف) ===== */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+  color: #ffffff !important; /* يعيد اللون الأبيض للنصوص */
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
