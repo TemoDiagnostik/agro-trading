@@ -899,3 +899,52 @@ header .lang select {
   }
 }
 
+
+/* ===== FIX: RTL ALIGNMENT + MOBILE HEADER RESPONSIVENESS ===== */
+
+/* للغات من اليمين إلى اليسار (العربية مثلًا) */
+html[dir="rtl"] header .container.nav {
+  flex-direction: row-reverse !important;   /* يعكس ترتيب العناصر */
+  text-align: right !important;
+}
+
+html[dir="rtl"] header .brand-text {
+  margin-right: 10px !important;
+  margin-left: 0 !important;
+}
+
+/* تأكد أن العناصر لا تنكسر فوق الهيرو */
+header {
+  flex-wrap: nowrap !important;
+  overflow: visible !important;
+}
+
+/* في الشاشات الصغيرة: ترتيب رأسي منسق */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+  }
+
+  header .brand {
+    margin-bottom: 8px !important;
+  }
+
+  header nav ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem !important;
+  }
+
+  header .lang {
+    margin-top: 8px !important;
+  }
+}
