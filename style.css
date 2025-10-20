@@ -1085,5 +1085,24 @@ html[dir="rtl"] header .lang {
 }
 
 
+/* ===== FINAL HEADER LANGUAGE FIX (NO OVERLAP) ===== */
 
+/* الحاوية العامة */
+header .container.nav {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 80px !important; /* نسيب مساحة لزر اللغة */
+  box-sizing: border-box;
+}
+
+/* زر اللغة */
+header .lang {
+  position: absolute !important;
+  top: 50% !important;
+  right: 25px !important; /* أقصى اليمين */
+  transform: translateY(-50%);
+  display: flex !important;
+  align-items: center
 
