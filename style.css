@@ -1163,3 +1163,25 @@ html[dir="rtl"] header .lang {
     padding-bottom: 6px !important;
   }
 }
+
+
+/* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
+header nav ul li a {
+  position: relative;
+  color: #000000 !important;      /* لون النص */
+  text-decoration: none !important;
+  font-weight: 500;
+  padding-bottom: 4px !important; /* مسافة بين النص والخط */
+  border-bottom: 2px solid #0a662f !important; /* الخط الثابت */
+}
+
+/* تباعد متوازن بين العناصر */
+header nav ul {
+  gap: 1rem !important;
+}
+
+/* عند المرور نغيّر لون الخط لتفاعل أنيق */
+header nav ul li a:hover {
+  border-bottom-color: #0d9488 !important; /* أخضر تركواز */
+  color: #0a662f !important;
+}
