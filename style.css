@@ -49,112 +49,138 @@ html[lang="ar"] {
 
 
 
-/* ===== TRANSPARENT HEADER OVER HERO ===== */
-header {
-  position: relative !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.08); /* شبه شفاف */
-  backdrop-filter: blur(10px);            /* ضباب خفيف */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
-}
-/* عندما يبدأ المستخدم في التمرير، يصبح ثابت أبيض */
-body.scrolled header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: none;
-}
-
-
-header .container.nav {
-  height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
+.hero,
+.hero-bleed {
   position: relative;
-}
-header .brand {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-}
-header .logo-img {
-  height: 300%;
-  max-height: 180px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  padding-left: 0;
-  margin-left: 0;
-}
-header .brand-text {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
-  font-weight: 900;
-  font-size: 1.4rem;
-  color: #006400; /* اللون الأخضر للشركة */
-  white-space: nowrap;
-}
-header nav {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-header nav ul {
-  display: flex;
-  gap: 1.2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-header nav ul li a {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
-}
-header .lang {
-  position: absolute;
-  right: 0;
-  top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-header .lang select {
-  font-size: 0.82rem;
-  padding: 4px 8px;
-  border-radius: 6px;
+  width: 100vw;                              /* العرض الكامل */
+  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
+  background-color: #ffffff;                 /* احتياطي بلون فاتح */
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
 }
 
-/* ===== Media Queries للهيدر ===== */
+/* إزالة أي طبقة تعتيم */
+.hero::before,
+.hero-bleed::before {
+  content: none !important;
+}
+
+/* نصوص داخل الهيرو */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+  color: #ffffff !important;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+}
+
+/* العناوين والنصوص */
+.hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.hero p {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+
+/* صف الأزرار */
+.hero .cta-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  margin-top: 22px !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* الأزرار */
+.hero .cta-row .btn {
+  width: 200px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  text-align: center !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* زر رئيسي */
+.hero .btn-primary {
+  background-color: #0a662f !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: #0a662f !important;
+}
+
+/* زر ثانوي */
+.hero .btn-outline {
+  background-color: #0d9488 !important;
+  border: 2px solid #0d9488 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-outline:hover {
+  background-color: #0a6e64 !important;
+  border-color: #0a6e64 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* إصلاح اللون الرمادي */
+.hero .muted,
+.hero .note,
+.hero .lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* الهواتف */
 @media (max-width: 768px) {
-  header .brand-text {
-    font-size: 1rem;
-    bottom: 6px;
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 60px;
+    text-align: center;
   }
-  header .logo-img {
-    max-height: 100px;
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+  .hero .cta-row {
+    gap: 12px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
   }
-  header .lang {
-    top: 6px;
-    right: 10px;
-  }
-  header nav ul {
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    justify-content: center;
+  .hero .cta-row .btn {
+    width: 200px !important;
+    min-width: 200px !important;
   }
 }
 
+@media (max-width: 380px) {
+  .hero .cta-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .hero .cta-row .btn {
+    width: 220px !important;
+  }
+}
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -711,36 +737,36 @@ form label {
   transform: translateY(-1px);
 }
 
-/* ===== HERO VERTICAL OFFSET FIX ===== */
+/* ===== HERO VERTICAL OFFSET FIX (نقل النصوص للأسفل قليلاً) ===== */
 .hero,
 .hero-bleed {
-  margin-top: 120px; /* مسافة من أعلى الصفحة */
-  padding-top: 120px; /* لضمان أن النصوص تنزل تحت البار */
+  margin-top: 100px; /* مسافة مناسبة تحت البار */
+  padding-top: 100px;
 }
 
-/* في الشاشات الصغيرة يكون التباعد أقل */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
-    margin-top: 100px;
-    padding-top: 100px;
+    margin-top: 80px;
+    padding-top: 80px;
   }
 }
 
-/* ===== SIMPLE CLEAN HEADER (Transparent, Non-Fixed, Slim) ===== */
+/* ===== FINAL HEADER — TRANSPARENT, SLIM, NON-FIXED ===== */
 header {
-  position: relative !important;  /* لم يعد ثابت */
+  position: relative !important;         /* يتحرك مع الصفحة */
   width: 100%;
-  background: transparent !important; /* شفاف دائمًا */
-  box-shadow: none !important;
-  height: auto;
-  z-index: 10;
+  background: rgba(255, 255, 255, 0.03) !important; /* شفاف جداً */
+  backdrop-filter: blur(4px);            /* ضباب خفيف فقط */
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 100;
   transition: all 0.3s ease;
 }
 
 /* الحاوية الداخلية */
 header .container.nav {
-  height: 70px !important; /* أقل من السابق */
+  height: 68px !important; /* أنحف */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -749,19 +775,20 @@ header .container.nav {
 
 /* اللوجو */
 header .logo-img {
-  max-height: 100px !important; /* أصغر */
+  max-height: 80px !important; /* أصغر قليلاً */
   height: auto;
 }
 
-/* النص بجانب اللوجو */
+/* اسم الشركة */
 header .brand-text {
   font-weight: 700;
-  font-size: 1.1rem;
-  color: #ffffff !important; /* أبيض فوق الخلفية */
+  font-size: 1.05rem;
+  color: #0a662f !important; /* أخضر غامق وواضح */
   margin-left: 10px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.4);
 }
 
-/* عناصر القائمة */
+/* روابط القائمة */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -771,29 +798,35 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #ffffff !important; /* أبيض فوق الصورة */
-  font-weight: 500;
+  color: #0a662f !important; /* نفس لون الهوية */
+  font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #b7ffcf !important; /* أخضر فاتح عند المرور */
+  color: #0d9488 !important; /* تركوازي عند المرور */
 }
 
-/* زر اللغة */
+/* اختيار اللغة */
 header .lang select {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 6px;
-  color: #ffffff;
+  color: #0a662f;
   padding: 4px 8px;
   font-size: 0.85rem;
 }
 
-/* عند تمرير الصفحة لا يتغير */
-body.scrolled header {
-  background: transparent !important;
-  box-shadow: none !important;
+/* الهواتف */
+@media (max-width: 768px) {
+  header .container.nav {
+    height: 60px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .logo-img {
+    max-height: 70px !important;
+  }
 }
