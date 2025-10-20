@@ -681,29 +681,45 @@ form label {
   padding-top: 100px;
 }
 
-/* ===== HEADER CUSTOM HALF-WIDTH TRANSPARENT ===== */
-header {
+/* ===== HEADER FINAL FORCED VERSION (HALF WIDTH + TRANSPARENT) ===== */
+body > header {
   position: relative !important;
-  width: 50% !important;            /* نصف عرض الصفحة */
-  margin: 0 auto !important;        /* يوسّط الـheader */
-  background: rgba(255, 255, 255, 0.3) !important; /* شفافية جميلة */
-  backdrop-filter: blur(8px);       /* تأثير زجاجي */
-  border-radius: 12px;              /* حواف ناعمة */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  width: 50% !important;              /* نصف عرض الصفحة */
+  margin: 0 auto !important;          /* يوسّط البار في المنتصف */
+  background: rgba(255, 255, 255, 0.25) !important; /* شفافية محسّنة */
+  backdrop-filter: blur(8px) !important; /* تأثير زجاجي ناعم */
+  border-radius: 12px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+  z-index: 2000 !important;
   transition: all 0.3s ease;
+  display: flex !important;
+  justify-content: flex-start !important; /* يضع المحتوى إلى اليسار */
 }
 
-/* نخلي المحتوى الداخلي يتقلص مع الـheader */
-header .container.nav {
+/* نضبط الحاوية الداخلية */
+body > header .container.nav {
   width: 100% !important;
-  justify-content: space-between;
-  padding: 0 20px;
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 16px !important;
   box-sizing: border-box;
 }
 
-/* تأكيد التمركز حتى لو فيه أكواد تانية تتعارض */
-body > header {
-  display: flex;
-  justify-content: center;
+/* نضبط اللوجو ليكون على أقصى اليسار وبحجم متناسق */
+body > header .logo-img {
+  max-height: 60px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-left: 0 !important;
+}
+
+/* نضمن أن النصوص والعناصر الأخرى لا تتأثر */
+body > header nav ul li a {
+  color: #111 !important;
+}
+
+body > header .brand-text {
+  color: #0a662f !important;
 }
