@@ -954,6 +954,5 @@ header {
 .hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
   text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.35),   /* ظل سفلي خفيف */
-    0 0 8px rgba(0, 0, 0, 0.25);     /* توهج خفيف حول النص */
-}
+    0 2px 4px rgb(0 0 0),   /* ظل سفلي خفيف */
+    0 0 3px rgb(21 22 21);     /* توهج خفيف حول النص */
