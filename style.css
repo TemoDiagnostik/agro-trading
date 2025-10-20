@@ -771,6 +771,6 @@ html[dir="rtl"] header .brand-text {
   }
 
   html[dir="rtl"] header nav ul li a {
-    font-size: 0.75rem;
+    font-size: 0.60rem;
   }
 }
