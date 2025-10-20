@@ -1075,33 +1075,3 @@ html[dir="rtl"] header .lang {
 }
 
 
-/* ===== DESKTOP HEADER BALANCE FIX ===== */
-@media (min-width: 769px) {
-  header .container.nav {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    align-items: center !important;
-    gap: 10px !important;
-  }
-
-  html:not([dir="rtl"]) header .brand,
-  html:not([dir="rtl"]) header .brand-text {
-    justify-self: start !important;
-  }
-  html[dir="rtl"] header .brand,
-  html[dir="rtl"] header .brand-text {
-    justify-self: end !important;
-  }
-
-  header nav {
-    justify-self: center !important;
-    text-align: center !important;
-  }
-
-  html:not([dir="rtl"]) header .lang {
-    justify-self: end !important;
-  }
-  html[dir="rtl"] header .lang {
-    justify-self: start !important;
-  }
-}
