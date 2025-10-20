@@ -981,7 +981,7 @@ header {
   text-shadow:
     0 2px 4px rgb(0 0 0),   /* ظل سفلي خفيف */
     0 0 3px rgb(21 22 21);     /* توهج خفيف حول النص */
-
+}
 
 /* ===== FIX: LANGUAGE SELECT BUTTON & NAV SPACING ===== */
 
@@ -997,12 +997,6 @@ html[dir="rtl"] header .lang {
   margin-left: 0 !important;
 }
 
-/* لو النصوص طويلة جدًا، نخلي القائمة تلتف بدل ما تدخل في زر اللغة */
-header nav ul {
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 0.7rem !important;
-}
 
 /* في الشاشات الصغيرة ندي مسافة إضافية تحت */
 @media (max-width: 768px) {
@@ -1079,29 +1073,15 @@ html[dir="rtl"] header .lang {
 @media (min-width: 769px) {
   header .container.nav {
     display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
+    grid-template-columns: auto 1fr auto !important; /* شعار | قائمة | زر لغة */
     align-items: center !important;
     gap: 10px !important;
   }
 
-  html:not([dir="rtl"]) header .brand,
-  html:not([dir="rtl"]) header .brand-text {
-    justify-self: start !important;
-  }
-  html[dir="rtl"] header .brand,
-  html[dir="rtl"] header .brand-text {
-    justify-self: end !important;
-  }
+  header nav { justify-self: center !important; }
+  html:not([dir="rtl"]) header .lang { justify-self: end !important; }
+  html[dir="rtl"] header .lang       { justify-self: start !important; }
 
-  header nav {
-    justify-self: center !important;
-    text-align: center !important;
-  }
-
-  html:not([dir="rtl"]) header .lang {
-    justify-self: end !important;
-  }
-  html[dir="rtl"] header .lang {
-    justify-self: start !important;
-  }
+  /* منع لفّ الروابط على الديسكتوب */
+  header nav ul { flex-wrap: nowrap !important; gap: .8rem !important; }
 }
