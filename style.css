@@ -1049,3 +1049,25 @@ html[dir="rtl"] header .lang {
   header .lang { margin-inline: 0 !important; margin-top: 6px !important; }
 }
 
+
+
+  /* ===== HEADER NAV SHIFT FIX (LTR LANGUAGES) ===== */
+
+/* نحرك القائمة شوية يسار عشان نوسع المسافة قبل زر اللغة */
+html[dir="ltr"] header nav {
+  margin-right: 40px !important; /* ابعد القائمة شوية عن زر اللغة */
+}
+
+/* نحافظ على التوازن في العربية والعبرية إلخ */
+html[dir="rtl"] header nav {
+  margin-right: 0 !important;
+  margin-left: 40px !important; /* بالعربية تتحرك شوية يمين */
+}
+
+/* في الشاشات الصغيرة نرجع كل شيء للوسط */
+@media (max-width: 768px) {
+  html[dir="ltr"] header nav,
+  html[dir="rtl"] header nav {
+    margin: 0 !important;
+  }
+}
