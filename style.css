@@ -655,8 +655,8 @@ form label {
 }
 
 .btn-outline {
-  background-color: #08670c !important; /* أخضر أساسي */
-  border: 2px solid #23cb2a !important; /* نفس اللون */
+  background-color: #15803D !important; /* أخضر أساسي */
+  border: 2px solid #15803D !important; /* نفس اللون */
   color: #ffffff !important; /* نص أبيض */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
