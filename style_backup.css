@@ -96,15 +96,15 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #0a662f !important; /* أخضر واضح فوق الشفافية */
-  font-weight: 600;
-  font-size: 0.9rem;
+  color: #000000 !important;    /* أسود صريح */
+  font-size: 0.8rem !important; /* أصغر قليلًا */
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #0d9488 !important; /* تركوازي عند المرور */
+  color: #0a662f !important; /* أخضر عند المرور */
 }
 
 /* زر اللغة */
@@ -115,6 +115,31 @@ header .lang select {
   color: #0a662f;
   padding: 4px 8px;
   font-size: 0.85rem;
+}
+
+
+
+/* الكرة الأرضية والاختيار */
+header .lang span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* RTL (العربية) — نقلب الاتجاه */
+html[dir="rtl"] header .lang {
+  right: auto !important;
+  left: 20px !important;          /* أقصى اليسار */
+  flex-direction: row-reverse !important;
+}
+
+/* الموبايل — نرجع الوضع الطبيعي */
+@media (max-width: 768px) {
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
+  }
 }
 
 /* شاشات صغيرة */
@@ -672,8 +697,8 @@ form label {
 }
 
 .btn-outline {
-  background-color: #08670c !important; /* أخضر أساسي */
-  border: 2px solid #23cb2a !important; /* نفس اللون */
+  background-color: #15803d !important; /* أخضر أساسي */
+  border: 2px solid #15803d !important; /* نفس اللون */
   color: #ffffff !important; /* نص أبيض */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
@@ -687,9 +712,222 @@ form label {
 
 
 
-/* ===== FIX: HEADER RTL + MOBILE RESPONSIVE ===== */
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+header {
+  position: relative !important;   /* غير ثابت */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
+  backdrop-filter: blur(6px); /* ضباب خفيف */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  height: auto;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
 
-/* عند التحويل للغة العربية أو أي لغة RTL */
+/* تقليل ارتفاع البار */
+header .container.nav {
+  height: 70px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* اللوجو */
+header .logo-img {
+  max-height: 90px !important;
+  height: auto;
+}
+
+/* نص الشركة */
+header .brand-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0a662f !important; /* أخضر غامق */
+  margin-left: 10px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+
+/* روابط القائمة */
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #000000 !important;    /* أسود صريح */
+  font-size: 0.8rem !important; /* أصغر قليلًا */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #0a662f !important; /* أخضر عند المرور */
+}
+
+/* زر اللغة */
+header .lang select {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: #0a662f;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* شاشات صغيرة */
+@media (max-width: 768px) {
+  header .container.nav {
+    height: 64px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .logo-img {
+    max-height: 80px !important;
+  }
+}
+
+/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
+.hero,
+.hero-bleed {
+  position: relative;
+  width: 100vw;                              /* العرض الكامل */
+  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
+  background-color: #ffffff;                 /* احتياطي بلون فاتح */
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
+}
+
+/* إزالة أي طبقة تعتيم */
+.hero::before,
+.hero-bleed::before {
+  content: none !important;
+}
+
+/* نصوص داخل الهيرو */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+  color: #ffffff !important;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+}
+
+/* العناوين والنصوص */
+.hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.hero p {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+
+/* صف الأزرار */
+.hero .cta-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  margin-top: 22px !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* الأزرار */
+.hero .cta-row .btn {
+  width: 200px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  text-align: center !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* زر رئيسي */
+.hero .btn-primary {
+  background-color: #0a662f !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: #0a662f !important;
+}
+
+/* زر ثانوي */
+.hero .btn-outline {
+  background-color: #0d9488 !important;
+  border: 2px solid #0d9488 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-outline:hover {
+  background-color: #0a6e64 !important;
+  border-color: #0a6e64 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* إصلاح اللون الرمادي */
+.hero .muted,
+.hero .note,
+.hero .lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* الهواتف */
+@media (max-width: 768px) {
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+  .hero .cta-row {
+    gap: 12px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  .hero .cta-row .btn {
+    width: 200px !important;
+    min-width: 200px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero .cta-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .hero .cta-row .btn {
+    width: 220px !important;
+  }
+}
+
+
+/* ===== FIX: RTL ALIGNMENT + MOBILE HEADER RESPONSIVENESS ===== */
+
+/* للغات من اليمين إلى اليسار (العربية مثلًا) */
 html[dir="rtl"] header .container.nav {
   flex-direction: row-reverse !important;   /* يعكس ترتيب العناصر */
   text-align: right !important;
@@ -700,13 +938,13 @@ html[dir="rtl"] header .brand-text {
   margin-left: 0 !important;
 }
 
-/* تأكد أن القائمة ما تنكسرش فوق الهيرو */
+/* تأكد أن العناصر لا تنكسر فوق الهيرو */
 header {
   flex-wrap: nowrap !important;
   overflow: visible !important;
 }
 
-/* الهواتف: ترتيب رأسي أنيق بدون تداخل */
+/* في الشاشات الصغيرة: ترتيب رأسي منسق */
 @media (max-width: 768px) {
   header .container.nav {
     flex-direction: column !important;
@@ -717,14 +955,14 @@ header {
   }
 
   header .brand {
-    margin-bottom: 6px !important;
+    margin-bottom: 8px !important;
   }
 
   header nav ul {
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 6px !important;
-    margin-top: 4px !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
   }
 
   header nav ul li a {
@@ -733,5 +971,137 @@ header {
 
   header .lang {
     margin-top: 8px !important;
+  }
+}
+
+
+/* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
+.hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
+  text-shadow:
+    0 2px 4px rgb(0 0 0),   /* ظل سفلي خفيف */
+    0 0 3px rgb(21 22 21);     /* توهج خفيف حول النص */
+
+
+/* ===== FIX: LANGUAGE SELECT BUTTON & NAV SPACING ===== */
+
+/* تباعد ذكي بين القائمة وزر اللغة */
+header .lang {
+  margin-left: 20px !important;    /* مسافة يسار القائمة (في اللغات اللاتينية) */
+  flex-shrink: 0 !important;       /* يمنع انكماش زر اللغة عند الزحمة */
+}
+
+/* للغات من اليمين إلى اليسار (العربية وغيرها) */
+html[dir="rtl"] header .lang {
+  margin-right: 20px !important;
+  margin-left: 0 !important;
+}
+
+/* لو النصوص طويلة جدًا، نخلي القائمة تلتف بدل ما تدخل في زر اللغة */
+header nav ul {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.7rem !important;
+}
+
+/* في الشاشات الصغيرة ندي مسافة إضافية تحت */
+@media (max-width: 768px) {
+  header .lang {
+    margin-top: 6px !important;
+  }
+}
+
+/* ===== NAV/LANG LAYOUT FIX (DESKTOP + RTL) ===== */
+
+/* توزيع الأعمدة */
+header .container.nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* شعار الشركة */
+header .brand { flex: 0 0 auto !important; }
+
+/* القائمة تتمدّد في المنتصف */
+header nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* الروابط لا تلتف على الديسكتوب */
+header nav ul {
+  display: flex !important;
+  flex-wrap: nowrap !important;   /* مهم: منع الالتفاف */
+  gap: 0.8rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* زر اللغة ثابت على الطرف ولا ينكمش */
+header .lang {
+  flex: 0 0 auto !important;
+  margin-inline-start: 16px !important;  /* LTR: مسافة قبل زر اللغة */
+}
+
+/* RTL: نعكس الاتجاه ونعدّل المسافات */
+html[dir="rtl"] header .container.nav { flex-direction: row-reverse !important; }
+html[dir="rtl"] header nav { justify-content: center !important; }
+html[dir="rtl"] header .lang {
+  margin-inline-end: 16px !important;    /* RTL: المسافة تصبح على اليمين */
+  margin-inline-start: 0 !important;
+}
+
+/* لو النصوص طويلة جدًا، صغّر المسافات قليلًا على الشاشات المتوسطة */
+@media (max-width: 1200px) {
+  header nav ul { gap: 0.6rem !important; }
+  header nav ul li a { font-size: 0.78rem !important; }
+}
+
+/* الموبايل: نرجع لترتيب عمودي مرتب */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  header nav { flex: none !important; }
+  header nav ul {
+    flex-wrap: wrap !important;          /* مسموح بالموبايل */
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  header .lang { margin-inline: 0 !important; margin-top: 6px !important; }
+}
+
+
+/* ===== DESKTOP HEADER BALANCE FIX ===== */
+@media (min-width: 769px) {
+  header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  html:not([dir="rtl"]) header .brand,
+  html:not([dir="rtl"]) header .brand-text {
+    justify-self: start !important;
+  }
+  html[dir="rtl"] header .brand,
+  html[dir="rtl"] header .brand-text {
+    justify-self: end !important;
+  }
+
+  header nav {
+    justify-self: center !important;
+    text-align: center !important;
+  }
+
+  html:not([dir="rtl"]) header .lang {
+    justify-self: end !important;
+  }
+  html[dir="rtl"] header .lang {
+    justify-self: start !important;
   }
 }
