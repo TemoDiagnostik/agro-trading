@@ -1069,19 +1069,3 @@ html[dir="rtl"] header .lang {
 }
 
 
-/* ===== DESKTOP HEADER BALANCE FIX ===== */
-@media (min-width: 769px) {
-  header .container.nav {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important; /* شعار | قائمة | زر لغة */
-    align-items: center !important;
-    gap: 10px !important;
-  }
-
-  header nav { justify-self: center !important; }
-  html:not([dir="rtl"]) header .lang { justify-self: end !important; }
-  html[dir="rtl"] header .lang       { justify-self: start !important; }
-
-  /* منع لفّ الروابط على الديسكتوب */
-  header nav ul { flex-wrap: nowrap !important; gap: .8rem !important; }
-}
