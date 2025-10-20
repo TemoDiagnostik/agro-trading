@@ -745,44 +745,21 @@ html[dir="rtl"] header .brand {
 html[dir="rtl"] header .brand-text {
   order: 2;
   color: #15803d;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   font-family: 'Tajawal', sans-serif !important;
   margin-top: 4px;
   margin-bottom: 8px;
 }
 
-/* 🔹 القوائم (بالطول) */
-html[dir="rtl"] header nav {
-  order: 3;
-  width: 100%;
-}
-
-html[dir="rtl"] header nav ul {
-  display: flex;
-  flex-direction: column;  /* 🔹 يخليها بالطول */
-  align-items: center;
-  gap: 6px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-html[dir="rtl"] header nav ul li a {
-  color: #0f172a;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: block;
-}
 
 /* 🔹 في الموبايل يكون الترتيب أنيق */
 @media (max-width: 768px) {
   html[dir="rtl"] header .lang {
-    top: 60px !important;
-    right: 10px;
+    top: 40px !important;
+    right: 1px;
   }
   html[dir="rtl"] header nav ul li a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
