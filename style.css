@@ -1,3 +1,4 @@
+
 /* ===== RESET + BASE ===== */
 * {
   box-sizing: border-box;
@@ -49,22 +50,100 @@ html[lang="ar"] {
 
 
 
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+header {
+  position: relative !important;   /* غير ثابت */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
+  backdrop-filter: blur(6px); /* ضباب خفيف */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  height: auto;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
 
-/* =============== HERO SECTION (FULL WIDTH REFINED BRIGHT VERSION) =============== */
+/* تقليل ارتفاع البار */
+header .container.nav {
+  height: 70px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* اللوجو */
+header .logo-img {
+  max-height: 90px !important;
+  height: auto;
+}
+
+/* نص الشركة */
+header .brand-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0a662f !important; /* أخضر غامق */
+  margin-left: 10px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+
+/* روابط القائمة */
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #0a662f !important; /* أخضر واضح فوق الشفافية */
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #0d9488 !important; /* تركوازي عند المرور */
+}
+
+/* زر اللغة */
+header .lang select {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: #0a662f;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* شاشات صغيرة */
+@media (max-width: 768px) {
+  header .container.nav {
+    height: 64px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .logo-img {
+    max-height: 80px !important;
+  }
+}
+
+/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 100px 20px 60px; /* نزّل النصوص أكثر تحت البار */
-  background: url("hero-bg-desktop.png") center/cover no-repeat;
-  background-color: #ffffff;
+  width: 100vw;                              /* العرض الكامل */
+  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
+  background-color: #ffffff;                 /* احتياطي بلون فاتح */
   overflow: hidden;
   text-align: left;
   z-index: 0;
 }
 
-/* لا تعتيم */
+/* إزالة أي طبقة تعتيم */
 .hero::before,
 .hero-bleed::before {
   content: none !important;
@@ -73,27 +152,24 @@ html[lang="ar"] {
 /* نصوص داخل الهيرو */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff !important; /* يعيد اللون الأبيض للنصوص */
+  color: #ffffff !important;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 2;
 }
 
-/* العنوان */
+/* العناوين والنصوص */
 .hero h1 {
-  font-size: clamp(34px, 5vw, 54px);
-  font-weight: 800;
-  margin-bottom: 0.8rem;
-  color: #0a662f !important; /* أخضر رئيسي للشركة */
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
-/* الفقرة */
 .hero p {
   font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.6;
-  max-width: 760px;
-  margin-bottom: 1.2rem;
-  color: #222 !important;
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 1rem;
 }
 
 /* صف الأزرار */
@@ -103,47 +179,55 @@ html[lang="ar"] {
   align-items: center !important;
   flex-wrap: wrap !important;
   gap: 14px !important;
-  margin-top: 26px !important;
+  margin-top: 22px !important;
   position: relative;
   z-index: 2;
 }
 
 /* الأزرار */
 .hero .cta-row .btn {
-  width: 190px !important;
-  height: 46px !important;
-  line-height: 46px !important;
+  width: 200px !important;
+  height: 48px !important;
+  line-height: 48px !important;
   text-align: center !important;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 
 /* زر رئيسي */
 .hero .btn-primary {
   background-color: #0a662f !important;
-  border: 2px solid #0a662f !important;
+  border: 2px solid #ffffff !important;
   color: #ffffff !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .hero .btn-primary:hover {
   background-color: #ffffff !important;
   color: #0a662f !important;
-  border-color: #0a662f !important;
 }
 
 /* زر ثانوي */
 .hero .btn-outline {
-  background-color: transparent !important;
-  border: 2px solid #0a662f !important;
-  color: #0a662f !important;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  background-color: #0d9488 !important;
+  border: 2px solid #0d9488 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .hero .btn-outline:hover {
-  background-color: #0a662f !important;
+  background-color: #0a6e64 !important;
+  border-color: #0a6e64 !important;
   color: #ffffff !important;
   transform: translateY(-1px);
+}
+
+/* إصلاح اللون الرمادي */
+.hero .muted,
+.hero .note,
+.hero .lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 /* الهواتف */
@@ -151,20 +235,33 @@ html[lang="ar"] {
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 80px 16px 60px;
+    padding: 40px 16px 60px;
     text-align: center;
   }
   .hero h1 { font-size: 28px; }
   .hero p { font-size: 15px; }
   .hero .cta-row {
     gap: 12px !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     justify-content: center !important;
   }
   .hero .cta-row .btn {
     width: 200px !important;
+    min-width: 200px !important;
   }
 }
+
+@media (max-width: 380px) {
+  .hero .cta-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .hero .cta-row .btn {
+    width: 220px !important;
+  }
+}
+
 
 
 /* ===== TRUST BANNER ===== */
@@ -575,8 +672,8 @@ form label {
 }
 
 .btn-outline {
-  background-color: #15803D !important; /* أخضر أساسي */
-  border: 2px solid #15803D !important; /* نفس اللون */
+  background-color: #08670c !important; /* أخضر أساسي */
+  border: 2px solid #23cb2a !important; /* نفس اللون */
   color: #ffffff !important; /* نص أبيض */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
@@ -590,77 +687,61 @@ form label {
 
 
 
-/* ===== HERO OFFSET (لتفادي تغطية النص بالبار وضبط التوازن) ===== */
-.hero,
-.hero-bleed {
-  margin-top: 100px;
-  padding-top: 100px;
+/* ============ ARABIC HEADER REPAIR (with smaller logo + language selector) ============ */
+html[dir="rtl"] header .container.nav {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 10px;
 }
 
-
-
-/* ===== HEADER — HALF WIDTH, TRANSPARENT, CLEAN VERSION ===== */
-body {
-  background-color: #fff; /* ثبات لون الخلفية العامة */
+/* 🔹 تصغير الكرة الأرضية وزر اللغة */
+html[dir="rtl"] header .lang {
+  position: absolute;
+  top: 10px;      /* قربها شوية للأعلى */
+  right: 12px;
+  left: auto;
+  direction: ltr;
+  z-index: 10;
+  transform: scale(0.85); /* 👈 تصغير الكل بنسبة 85% */
+  transform-origin: top right;
 }
 
-header {
-  position: relative !important;
-  width: 50% !important;           /* نصف عرض الصفحة */
-  margin: 0 auto !important;       /* تمركز في المنتصف */
-  background: rgba(255, 255, 255, 0.25) !important; /* شفافية محسّنة */
-  backdrop-filter: blur(8px);      /* تأثير زجاجي ناعم */
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  transition: all 0.3s ease;
+/* 🔹 تصغير اللوجو قليلاً */
+html[dir="rtl"] header .brand img.logo-img {
+  max-height: 85px !important; /* 👈 كان كبير، الآن متناسق */
+  width: auto;
+  height: auto;
 }
 
-/* داخل الـheader */
-header .container.nav {
-  width: 100% !important;
-  height: 70px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 0 18px !important;
-  background: transparent !important; /* إزالة أي خلفية داخلية */
-  box-shadow: none !important;
-  border: none !important;
+/* 🔹 النص الأخضر (اسم الشركة) */
+html[dir="rtl"] header .brand-text {
+  order: 2;
+  color: #15803d;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif !important;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
 }
 
-/* اللوجو أقصى اليسار وبحجم متناسق */
-header .logo-img {
-  max-height: 60px !important;
-  height: auto !important;
-  object-fit: contain !important;
-  margin-left: 0 !important;
-}
+/* 🔹 تحسين مظهر الموبايل */
+@media (max-width: 768px) {
+  html[dir="rtl"] header .lang {
+    top: 24px !important;
+    right: 4px;
+    transform: scale(0.75); /* 👈 أصغر في الموبايل */
+  }
 
-/* نص الشركة */
-header .brand-text {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #0a662f !important;
-  margin-left: 8px;
-}
+  html[dir="rtl"] header .brand img.logo-img {
+    max-height: 70px !important; /* 👈 يقل أكثر على الموبايل */
+  }
 
-/* عناصر القائمة */
-header nav ul li a {
-  color: #111 !important;
-}
-
-/* زر اللغة */
-header .lang select {
-  background: rgba(255,255,255,0.4);
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 6px;
-  color: #111;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-}
-
-/* تأكيد إزالة أي خلفية مزدوجة */
-body.scrolled header {
-  background: rgba(255,255,255,0.25) !important;
+  html[dir="rtl"] header nav ul li a {
+    font-size: 0.60rem;
+  }
 }
