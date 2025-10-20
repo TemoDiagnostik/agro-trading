@@ -711,7 +711,21 @@ form label {
   transform: translateY(-1px);
 }
 
+/* ===== HERO VERTICAL OFFSET FIX ===== */
+.hero,
+.hero-bleed {
+  margin-top: 120px; /* مسافة من أعلى الصفحة */
+  padding-top: 120px; /* لضمان أن النصوص تنزل تحت البار */
+}
 
+/* في الشاشات الصغيرة يكون التباعد أقل */
+@media (max-width: 768px) {
+  .hero,
+  .hero-bleed {
+    margin-top: 100px;
+    padding-top: 100px;
+  }
+}
 
 /* ===== TRANSPARENT HEADER OVER HERO (FINAL FIX) ===== */
 header {
