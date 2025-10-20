@@ -1102,3 +1102,47 @@ header nav ul li a:hover {
     justify-content: center !important;
   }
 }
+
+
+/* ===== FINAL FIX: LANGUAGE SELECT POSITION ===== */
+
+/* الوضع الطبيعي (اللغات من اليسار إلى اليمين مثل الإنجليزية والتشيكية) */
+header .lang {
+  position: absolute !important;
+  right: 25px !important;      /* أقصى اليمين */
+  top: 50% !important;         /* منتصف البار */
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex-wrap: nowrap !important;
+  z-index: 999 !important;
+}
+
+/* RTL (العربية، الفارسية...): نقلب الاتجاه */
+html[dir="rtl"] header .lang {
+  right: auto !important;
+  left: 25px !important;
+  flex-direction: row-reverse !important;
+  transform: translateY(-50%) !important;
+}
+
+/* الزر نفسه */
+header .lang select {
+  background: rgba(255,255,255,0.7) !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 6px !important;
+  color: #0a662f !important;
+  padding: 4px 8px !important;
+  font-size: 0.85rem !important;
+}
+
+/* الموبايل — نعيده للوضع العادي تحت */
+@media (max-width: 768px) {
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    justify-content: center !important;
+    margin-top: 6px !important;
+  }
+}
