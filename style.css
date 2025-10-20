@@ -117,17 +117,7 @@ header .lang select {
   font-size: 0.85rem;
 }
 
-/* ===== LANGUAGE DROPDOWN FIXED POSITION ===== */
-header .lang {
-  position: absolute !important;  /* يخرج من تدفق الفليكس */
-  right: 20px !important;         /* أقصى اليمين */
-  top: 50% !important;            /* في منتصف ارتفاع الهيدر */
-  transform: translateY(-50%);    /* يوسّط الزر عموديًا */
-  display: flex !important;
-  align-items: center !important;
-  gap: 4px;
-  z-index: 10;
-}
+
 
 /* الكرة الأرضية والاختيار */
 header .lang span {
