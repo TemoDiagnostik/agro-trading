@@ -659,6 +659,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 </script>
 
+
+
+<script>
+window.addEventListener("scroll", () => {
+  document.body.classList.toggle("scrolled", window.scrollY > 60);
+});
+</script>
+  
+
+  
 <!-- JSON-LD kept exactly as provided -->
 <script type="application/ld+json">
 {
@@ -693,5 +703,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
   "sameAs": []
 }
 </script>
+
+
+  
 </body>
 </html>
