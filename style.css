@@ -756,10 +756,10 @@ html[dir="rtl"] header .brand-text {
 /* 🔹 في الموبايل يكون الترتيب أنيق */
 @media (max-width: 768px) {
   html[dir="rtl"] header .lang {
-    top: 40px !important;
+    top: 30px !important;
     right: 1px;
   }
   html[dir="rtl"] header nav ul li a {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 }
