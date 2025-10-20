@@ -1075,24 +1075,63 @@ html[dir="rtl"] header .lang {
 }
 
 
-/* ===== FINAL HEADER LANGUAGE FIX (NO OVERLAP) ===== */
+/* ===== FINAL BATTLE FIX: LANGUAGE BUTTON & NAV CLEAN ALIGNMENT ===== */
 
-/* الحاوية العامة */
 header .container.nav {
-  position: relative !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 0 80px !important; /* نسيب مساحة لزر اللغة */
-  box-sizing: border-box;
+  position: relative !important;
+  gap: 1rem !important;
+  padding: 0 100px !important; /* مساحة للزر */
+  box-sizing: border-box !important;
 }
 
-/* زر اللغة */
+/* الزر والكرة الأرضية */
 header .lang {
   position: absolute !important;
   top: 50% !important;
-  right: 25px !important; /* أقصى اليمين */
-  transform: translateY(-50%);
+  right: 40px !important;
+  transform: translateY(-50%) !important;
   display: flex !important;
-  align-items: center
+  align-items: center !important;
+  gap: 5px !important;
+  z-index: 9999 !important;
+}
 
+/* RTL (العربية) */
+html[dir="rtl"] header .lang {
+  right: auto !important;
+  left: 40px !important;
+  flex-direction: row-reverse !important;
+}
+
+/* تصغير الزر */
+header .lang select {
+  width: 90px !important;
+  font-size: 0.85rem !important;
+  padding: 4px 6px !important;
+}
+
+/* لو آخر عنصر في القائمة (Contact مثلاً) داخل في الزر */
+header nav {
+  flex: 0 1 auto !important;
+  max-width: calc(100% - 150px) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-wrap: wrap !important;
+    padding: 0 20px !important;
+    justify-content: space-between !important;
+  }
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
+  }
+}
