@@ -714,31 +714,36 @@ form label {
   transform: translateY(-1px);
 }
 
-/* ============ ARABIC HEADER REPAIR (Vertical nav + proper language icon) ============ */
+
+
+/* ============ ARABIC HEADER REPAIR (with smaller logo + language selector) ============ */
 html[dir="rtl"] header .container.nav {
   direction: rtl;
   display: flex;
-  flex-direction: column; /* 🔹 يخلي كل شيء فوق بعض (النصوص فوق) */
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   padding-top: 10px;
 }
 
-/* 🔹 الكرة الأرضية وزر اللغة */
+/* 🔹 تصغير الكرة الأرضية وزر اللغة */
 html[dir="rtl"] header .lang {
   position: absolute;
-  top: 14px;        /* محاذاة مع اللوجو */
-  right: 20px;      /* 🔹 اجعلها في نفس جهة اللوجو */
+  top: 10px;      /* قربها شوية للأعلى */
+  right: 12px;
   left: auto;
-  direction: ltr;   /* يحافظ على ترتيب القائمة */
+  direction: ltr;
   z-index: 10;
+  transform: scale(0.85); /* 👈 تصغير الكل بنسبة 85% */
+  transform-origin: top right;
 }
 
-/* 🔹 اللوجو في المنتصف */
-html[dir="rtl"] header .brand {
-  order: 1;
-  margin-bottom: 6px;
+/* 🔹 تصغير اللوجو قليلاً */
+html[dir="rtl"] header .brand img.logo-img {
+  max-height: 85px !important; /* 👈 كان كبير، الآن متناسق */
+  width: auto;
+  height: auto;
 }
 
 /* 🔹 النص الأخضر (اسم الشركة) */
@@ -748,18 +753,24 @@ html[dir="rtl"] header .brand-text {
   font-weight: 600;
   text-align: center;
   font-family: 'Tajawal', sans-serif !important;
-  margin-top: 4px;
-  margin-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
 }
 
-
-/* 🔹 في الموبايل يكون الترتيب أنيق */
+/* 🔹 تحسين مظهر الموبايل */
 @media (max-width: 768px) {
   html[dir="rtl"] header .lang {
-    top: 30px !important;
-    right: 1px;
+    top: 24px !important;
+    right: 4px;
+    transform: scale(0.75); /* 👈 أصغر في الموبايل */
   }
+
+  html[dir="rtl"] header .brand img.logo-img {
+    max-height: 70px !important; /* 👈 يقل أكثر على الموبايل */
+  }
+
   html[dir="rtl"] header nav ul li a {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
 }
