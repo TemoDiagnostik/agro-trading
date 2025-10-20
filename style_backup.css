@@ -50,109 +50,82 @@ html[lang="ar"] {
 
 
 
-/* ===== TRANSPARENT HEADER OVER HERO ===== */
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;
-  top: 0;
-  left: 0;
+  position: relative !important;   /* غير ثابت */
   width: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.08); /* شبه شفاف */
-  backdrop-filter: blur(10px);            /* ضباب خفيف */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
-}
-/* عندما يبدأ المستخدم في التمرير، يصبح ثابت أبيض */
-body.scrolled header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
+  backdrop-filter: blur(6px); /* ضباب خفيف */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  height: auto;
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
-
+/* تقليل ارتفاع البار */
 header .container.nav {
-  height: 110px;
+  height: 70px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  padding: 0 20px;
 }
-header .brand {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-}
+
+/* اللوجو */
 header .logo-img {
-  height: 300%;
-  max-height: 180px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  padding-left: 0;
-  margin-left: 0;
+  max-height: 90px !important;
+  height: auto;
 }
+
+/* نص الشركة */
 header .brand-text {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
-  font-weight: 900;
-  font-size: 1.4rem;
-  color: #006400; /* اللون الأخضر للشركة */
-  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0a662f !important; /* أخضر غامق */
+  margin-left: 10px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
-header nav {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
+/* روابط القائمة */
 header nav ul {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 header nav ul li a {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #000;
+  color: #0a662f !important; /* أخضر واضح فوق الشفافية */
+  font-weight: 600;
+  font-size: 0.9rem;
   text-decoration: none;
-}
-header .lang {
-  position: absolute;
-  right: 0;
-  top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-header .lang select {
-  font-size: 0.82rem;
-  padding: 4px 8px;
-  border-radius: 6px;
+  transition: color 0.3s ease;
 }
 
-/* ===== Media Queries للهيدر ===== */
+header nav ul li a:hover {
+  color: #0d9488 !important; /* تركوازي عند المرور */
+}
+
+/* زر اللغة */
+header .lang select {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: #0a662f;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* شاشات صغيرة */
 @media (max-width: 768px) {
-  header .brand-text {
-    font-size: 1rem;
-    bottom: 6px;
-  }
-  header .logo-img {
-    max-height: 100px;
-  }
-  header .lang {
-    top: 6px;
-    right: 10px;
-  }
-  header nav ul {
-    gap: 0.6rem;
+  header .container.nav {
+    height: 64px !important;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  header .logo-img {
+    max-height: 80px !important;
   }
 }
 
