@@ -1073,3 +1073,68 @@ html[dir="rtl"] header .lang {
     margin-right: 0.5rem !important;
   }
 }
+
+
+/* ===== MOBILE HEADER STYLING (CLEAN + CENTERED) ===== */
+@media (max-width: 768px) {
+
+  /* الحاوية الكاملة */
+  header .container.nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* اللوجو */
+  header .logo-img {
+    max-height: 70px !important;
+    height: auto !important;
+  }
+
+  /* اسم الشركة */
+  header .brand-text {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin: 4px 0 !important;
+    color: #0a662f !important;
+  }
+
+  /* القائمة */
+  header nav ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+    font-weight: 500 !important;
+  }
+
+  /* زر اللغة */
+  header .lang {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 6px !important;
+  }
+
+  header .lang select {
+    background: rgba(255,255,255,0.7) !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+    font-size: 0.85rem !important;
+    color: #0a662f !important;
+  }
+}
