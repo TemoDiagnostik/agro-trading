@@ -1068,4 +1068,8 @@ html[dir="rtl"] header .lang {
   header .lang { margin-inline: 0 !important; margin-top: 6px !important; }
 }
 
-
+@media (min-width: 769px) {
+  header nav ul li:last-child {
+    margin-right: 0.5rem !important;
+  }
+}
