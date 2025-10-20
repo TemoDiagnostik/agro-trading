@@ -950,23 +950,23 @@ header {
 }
 
 
-/* ===== HERO TEXT READABILITY FIX (LIGHT TRANSPARENT BACKGROUND) ===== */
-
+/* ===== HERO TEXT BACKDROP (BEHIND TEXT ONLY) ===== */
 .hero .hero-content,
 .hero-bleed .hero-content {
-  background: rgba(0, 0, 0, 0.25);   /* خلفية سوداء شفافة خفيفة */
-  padding: 20px 24px;                /* مسافة داخلية حول النص */
-  border-radius: 10px;               /* حواف ناعمة */
-  display: inline-block;             /* تغطي النص فقط */
-  backdrop-filter: blur(4px);        /* لمسة ضباب خفيفة */
+  display: inline-block;               /* يلتف فقط حول النص */
+  background: rgba(255, 255, 255, 0.15); /* خلفية بيضاء شفافة خفيفة جدًا */
+  backdrop-filter: blur(6px);          /* ضباب بسيط يعطي تأثير زجاجي */
+  border-radius: 10px;                 /* حواف ناعمة */
+  padding: 18px 24px;                  /* مسافة داخلية متوازنة */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ظل خفيف جدًا */
 }
 
-/* في الهواتف: الخلفية تكون أوسع قليلًا لتسهيل القراءة */
+/* الهواتف: تكبير الشفافية قليلًا لتحسين الوضوح */
 @media (max-width: 768px) {
   .hero .hero-content,
   .hero-bleed .hero-content {
-    background: rgba(0, 0, 0, 0.35);
-    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 16px 20px;
     border-radius: 8px;
   }
 }
