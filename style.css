@@ -956,3 +956,33 @@ header {
   text-shadow:
     0 2px 4px rgb(0 0 0),   /* ظل سفلي خفيف */
     0 0 3px rgb(21 22 21);     /* توهج خفيف حول النص */
+
+
+/* ===== FIX: LANGUAGE SELECT BUTTON & NAV SPACING ===== */
+
+/* تباعد ذكي بين القائمة وزر اللغة */
+header .lang {
+  margin-left: 20px !important;    /* مسافة يسار القائمة (في اللغات اللاتينية) */
+  flex-shrink: 0 !important;       /* يمنع انكماش زر اللغة عند الزحمة */
+}
+
+/* للغات من اليمين إلى اليسار (العربية وغيرها) */
+html[dir="rtl"] header .lang {
+  margin-right: 20px !important;
+  margin-left: 0 !important;
+}
+
+/* لو النصوص طويلة جدًا، نخلي القائمة تلتف بدل ما تدخل في زر اللغة */
+header nav ul {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.7rem !important;
+}
+
+/* في الشاشات الصغيرة ندي مسافة إضافية تحت */
+@media (max-width: 768px) {
+  header .lang {
+    margin-top: 6px !important;
+  }
+}
+  
