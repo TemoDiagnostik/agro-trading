@@ -714,60 +714,75 @@ form label {
   transform: translateY(-1px);
 }
 
-/* ======= الهيدر العربي فقط (بدون التأثير على الإنجليزي) ======= */
+/* ============ ARABIC HEADER REPAIR (Vertical nav + proper language icon) ============ */
 html[dir="rtl"] header .container.nav {
   direction: rtl;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column; /* 🔹 يخلي كل شيء فوق بعض (النصوص فوق) */
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 10px;
 }
 
-/* اسم الشركة */
-html[dir="rtl"] header .brand-text {
-  font-family: 'Tajawal', sans-serif !important;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #15803d; /* نفس الأخضر المستخدم في الإنجليزي */
-  line-height: 1.4;
-  text-align: center;
-  white-space: normal;
-  max-width: 70%;
-  margin: 6px auto 0;
-}
-
-/* الكرة الأرضية وزر اللغة */
+/* 🔹 الكرة الأرضية وزر اللغة */
 html[dir="rtl"] header .lang {
   position: absolute;
-  top: 48px;
-  left: 14px;
-  right: auto;
-  z-index: 5;
-  direction: ltr;
+  top: 14px;        /* محاذاة مع اللوجو */
+  right: 20px;      /* 🔹 اجعلها في نفس جهة اللوجو */
+  left: auto;
+  direction: ltr;   /* يحافظ على ترتيب القائمة */
+  z-index: 10;
 }
 
-/* النصوص في شريط القوائم */
+/* 🔹 اللوجو في المنتصف */
+html[dir="rtl"] header .brand {
+  order: 1;
+  margin-bottom: 6px;
+}
+
+/* 🔹 النص الأخضر (اسم الشركة) */
+html[dir="rtl"] header .brand-text {
+  order: 2;
+  color: #15803d;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif !important;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* 🔹 القوائم (بالطول) */
+html[dir="rtl"] header nav {
+  order: 3;
+  width: 100%;
+}
+
+html[dir="rtl"] header nav ul {
+  display: flex;
+  flex-direction: column;  /* 🔹 يخليها بالطول */
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 html[dir="rtl"] header nav ul li a {
+  color: #0f172a;
   font-size: 1rem;
   font-weight: 600;
-  color: #0f172a;
   text-decoration: none;
-  padding: 6px 10px;
+  display: block;
 }
 
-/* ======= تحسين على الموبايل ======= */
+/* 🔹 في الموبايل يكون الترتيب أنيق */
 @media (max-width: 768px) {
-  html[dir="rtl"] header .brand-text {
-    font-size: 0.9rem;
-    margin-top: 4px;
-  }
   html[dir="rtl"] header .lang {
-    top: 64px !important;
-    left: 10px;
+    top: 60px !important;
+    right: 10px;
   }
   html[dir="rtl"] header nav ul li a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
-
-
