@@ -153,8 +153,8 @@ header .lang select {
 /* نصوص داخل الهيرو */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #1a1a1a !important; /* رمادي غامق بدل الأبيض ليظهر فوق الصورة الساطعة */
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  color: #ffffff !important; /* يعيد اللون الأبيض للنصوص */
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 2;
 }
@@ -681,96 +681,29 @@ form label {
   padding-top: 100px;
 }
 
-/* ===== HEADER — TRANSPARENT, SLIM, NON-FIXED (FINAL BALANCED VERSION) ===== */
+/* ===== HEADER CUSTOM HALF-WIDTH TRANSPARENT ===== */
 header {
   position: relative !important;
-  width: 50%; /* نصف العرض */
-  margin: 0 auto; /* يوسّط الـbar في منتصف الصفحة */
-  background: rgba(255, 255, 255, 0.3) !important; /* شفاف بنسبة 30% */
-  backdrop-filter: blur(6px); /* يعطي لمسة زجاجية خفيفة وجميلة */
+  width: 50% !important;            /* نصف عرض الصفحة */
+  margin: 0 auto !important;        /* يوسّط الـheader */
+  background: rgba(255, 255, 255, 0.3) !important; /* شفافية جميلة */
+  backdrop-filter: blur(8px);       /* تأثير زجاجي */
+  border-radius: 12px;              /* حواف ناعمة */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px; /* اختياري: زوايا ناعمة */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 100;
+  z-index: 1000;
   transition: all 0.3s ease;
 }
 
-/* الحاوية الداخلية */
+/* نخلي المحتوى الداخلي يتقلص مع الـheader */
 header .container.nav {
-  height: 72px !important; /* متوازن مع الهيرو */
-  display: flex;
-  align-items: center;
+  width: 100% !important;
   justify-content: space-between;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* اللوجو */
-header .logo-img {
-  max-height: 82px !important;
-  height: auto;
-}
-
-/* نص الشركة */
-header .brand-text {
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: #0a662f !important; /* أخضر داكن واضح */
-  margin-left: 10px;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
-}
-
-/* القائمة الرئيسية */
-header nav ul {
+/* تأكيد التمركز حتى لو فيه أكواد تانية تتعارض */
+body > header {
   display: flex;
-  gap: 0.8rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li a {
-  color: #111111 !important; /* أسود واضح فوق الشفافية */
-  font-weight: 500;
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #0a662f !important; /* يتحول للأخضر عند المرور */
-  text-decoration: underline;
-}
-
-/* زر اللغة */
-header .lang select {
-  background: rgba(255,255,255,0.3);
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 6px;
-  color: #111;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-/* الشاشات الصغيرة */
-@media (max-width: 768px) {
-  header .container.nav {
-    height: 64px !important;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  header .logo-img {
-    max-height: 70px !important;
-  }
-  header nav ul li a {
-    font-size: 0.8rem;
-  }
-}
-
-
-/* ===== HERO COLOR FIX (ليتناسق مع البار الشفاف) ===== */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff !important; /* يعيد اللون الأبيض للنصوص */
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  justify-content: center;
 }
