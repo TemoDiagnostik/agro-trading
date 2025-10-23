@@ -1,4 +1,3 @@
-
 /* ===== RESET + BASE ===== */
 * {
   box-sizing: border-box;
@@ -1280,4 +1279,14 @@ header .lang select {
   html[dir="rtl"] header nav ul {
     direction: rtl !important;
   }
+}
+
+
+
+/* ===== RTL FIX for hero navigation dots ===== */
+html[dir="rtl"] .hero .swiper-pagination,
+html[dir="rtl"] .hero-slider .swiper-pagination {
+  direction: rtl;
+  left: 20px !important;
+  right: auto !important;
 }
