@@ -61,7 +61,7 @@
 
   "log.title": "اللوجستيات والامتثال",
   "log.bulk": "شحنات Bulk وأكياس كبيرة (Big-Bag)",
-  "log.incotermTag": "شروط التسليم الدولية (Incoterms)",
+  "log.incotermTag": "شروط التسليم الدولية",
   "log.incoterms": "FOB / CFR / CIF / DDP وفق الوجهة — شحنات موثقة وتتبع كامل مع عقود شفافة.",
   "log.ports.h": "الموانئ والتعبئة",
   "log.ports.p": "الشحن عادة من الإسكندرية أو دمياط — مصر. التعبئة متاحة Bulk أو في أكياس كبيرة (Big Bags).",
