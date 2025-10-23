@@ -64,7 +64,7 @@
   "about.p1": "Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources. We focus on transparency, quality, speed — and",
   "about.pricing": "competitive pricing via direct procurement",
   "about.p2": "3rd-party tests (SGS/BV) on request. Samples available prior to contracting.",
-
+"payment.details": "Full bank details for each currency (IBAN / SWIFT / Routing) are provided on the <strong>Proforma Invoice</strong> or upon request.",
   "contact.title": "Get in touch",
   "form.name": "Name",
   "form.email": "Email",
