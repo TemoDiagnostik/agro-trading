@@ -1283,10 +1283,4 @@ header .lang select {
 
 
 
-/* ===== RTL FIX for hero navigation dots ===== */
-html[dir="rtl"] .hero .swiper-pagination,
-html[dir="rtl"] .hero-slider .swiper-pagination {
-  direction: rtl;
-  left: 20px !important;
-  right: auto !important;
-}
+
