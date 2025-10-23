@@ -59,7 +59,8 @@
   "coa.print": "طباعة أو حفظ الشهادة (PDF)",
 
   "log.title": "اللوجستيات والامتثال",
-  "log.incoterms": "FOB / CFR / CIF / DDP وفق الوجهة — شحنات موثقة وتتبع كامل مع عقود شفافة.",
+ "log.bulk": "شحنات Bulk وأكياس كبيرة (Big-Bag)",
+"log.incotermTag": "شروط التسليم الدولية (Incoterms): FOB / CFR / DDP",
   "log.ports.h": "الموانئ والتعبئة",
   "log.ports.p": "الشحن عادة من الإسكندرية أو دمياط — مصر. التعبئة متاحة Bulk أو في أكياس كبيرة (Big Bags).",
   "log.compliance.h": "الامتثال الأوروبي",
