@@ -82,7 +82,7 @@
   "contact.note": "لا نستخدم ملفات تعريف الارتباط التحليلية. عند الضغط على زر الإرسال سيتم فتح تطبيق البريد الإلكتروني لديك مباشرة.",
   "contact.details": "بيانات التواصل",
   "contact.docs": "يتم مشاركة المستندات والشهادات الرسمية بعد مراجعة الطلب.",
-  "contact.official": "للاستفسارات الرسمية، يُرجى استخدام البريد الإلكتروني الخاص بالشركة: info@euroagritrading.eu (نطاق أعمال موثّق).",
+  "contact.official": "للاستفسارات الرسمية، يُرجى استخدام البريد الإلكتروني الخاص بالشركة: <a href='mailto:info@euroagritrading.eu'>info@euroagritrading.eu</a> (نطاق أعمال موثّق).",
 
   "site.company": "Euro Agri Trading s.r.o — شركة ذات مسؤولية محدودة (Limited Liability Company).",
 
