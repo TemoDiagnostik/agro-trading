@@ -86,7 +86,6 @@ header .brand-text {
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
-/* روابط القائمة */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -1077,10 +1076,13 @@ header nav ul li a:hover {
     justify-content: center !important;
     gap: 8px !important;
   }
-  header nav ul li a {
-    font-size: 0.85rem !important;
+  
+ header nav ul li a {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+    border-bottom: 2px solid #0a662f !important;
     padding-bottom: 2px !important;
-    white-space: nowrap !important;
+    font-weight: 500 !important;
   }
 
   header .lang {
@@ -1251,7 +1253,7 @@ header .lang select {
     margin: 0 !important;
   }
 
-  header nav ul li a {
+ header nav ul li a {
     font-size: 0.9rem !important;
     color: #000 !important;
     border-bottom: 2px solid #0a662f !important;
