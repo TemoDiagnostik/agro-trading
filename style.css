@@ -1,3 +1,4 @@
+
 /* ===== RESET + BASE ===== */
 * {
   box-sizing: border-box;
@@ -100,7 +101,6 @@ header nav ul li a {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
-  
 }
 
 header nav ul li a:hover {
@@ -149,20 +149,10 @@ html[dir="rtl"] header .lang {
     flex-wrap: wrap;
     justify-content: center;
   }
-}
-
-/* ===== تكبير اللوجو في الموبايل فقط ===== */
-@media (max-width: 768px) {
   header .logo-img {
-    max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
-    height: auto !important;
+    max-height: 80px !important;
   }
 }
-
-
-
-
-
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
@@ -745,7 +735,7 @@ header .container.nav {
 
 /* اللوجو */
 header .logo-img {
-  max-height: 85px !important;
+  max-height: 90px !important;
   height: auto;
 }
 
@@ -796,13 +786,11 @@ header .lang select {
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* ===== تكبير اللوجو في الموبايل فقط ===== */
-@media (max-width: 768px) {
   header .logo-img {
-    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
-    height: auto !important;
+    max-height: 80px !important;
   }
 }
+
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -1070,7 +1058,7 @@ header nav ul li a:hover {
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
-  header .logo-img { max-height: 90px !important; height: auto !important; }
+  header .logo-img { max-height: 58px !important; height: auto !important; }
 
   header .brand-text {
     font-size: 0.88rem !important;
@@ -1080,22 +1068,16 @@ header nav ul li a:hover {
     line-height: 1.3 !important;
   }
 
+  header nav { width: 100% !important; }
   header nav ul {
-    display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    gap: 8px !important;
   }
-
   header nav ul li a {
-    font-size: 0.9rem !important;
-    color: #000 !important;
-    border-bottom: 2px solid #0a662f !important;
+    font-size: 0.85rem !important;
     padding-bottom: 2px !important;
-    font-weight: 500 !important;
+    white-space: nowrap !important;
   }
 
   header .lang {
@@ -1169,22 +1151,27 @@ header .lang select {
 /* ===== FINAL POSITION FIX FOR LANGUAGE SELECT ===== */
 
 /* الوضع الطبيعي (اللغات من اليسار إلى اليمين) */
-/* إعادة الأيقونة لمكانها الطبيعي داخل التخطيط مع مسافة مناسبة */
 header .lang {
-  position: static !important;
-  margin-left: 24px !important; /* مسافة من اسم الشركة */
+  position: absolute !important;
+  right: 25px !important;          /* أقصى اليمين */
+  top: 35% !important;             /* مرفوع قليلاً للأعلى */
+  transform: translateY(-50%) !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
   gap: 6px !important;
+  flex-wrap: nowrap !important;
+  z-index: 999 !important;
 }
 
+/* RTL (العربية، الفارسية...): أقصى اليسار */
 html[dir="rtl"] header .lang {
-  margin-left: 0 !important;
-  margin-right: 24px !important; /* مسافة من الجهة اليمنى للعربية */
+  right: auto !important;
+  left: 25px !important;
+  top: 35% !important;
+  flex-direction: row-reverse !important;
+  transform: translateY(-50%) !important;
 }
 
-  
 /* شكل الزر */
 header .lang select {
   background: rgba(255,255,255,0.7) !important;
@@ -1231,12 +1218,10 @@ header .lang select {
     gap: 8px !important;
   }
 
-
   header .logo-img {
-    max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    max-height: 48px !important;
     height: auto !important;
   }
-
 
   header .brand-text {
     font-size: 0.95rem !important;
@@ -1296,4 +1281,3 @@ header .lang select {
     direction: rtl !important;
   }
 }
-
