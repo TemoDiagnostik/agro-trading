@@ -1314,3 +1314,18 @@ header .lang select {
 
 
 
+/* تحريك اللوجو واسم الشركة قليلاً حسب اتجاه اللغة */
+
+/* في الوضع الإنجليزي (من اليسار لليمين) */
+html[dir="ltr"] header .logo-img,
+html[dir="ltr"] header .brand-text {
+  position: relative;
+  left: -20px !important; /* ← حرّك لليسار (زود الرقم لو عايز أكثر) */
+}
+
+/* في الوضع العربي (من اليمين لليسار) */
+html[dir="rtl"] header .logo-img,
+html[dir="rtl"] header .brand-text {
+  position: relative;
+  right: -20px !important; /* ← حرّك لليمين (زود الرقم لو عايز أكثر) */
+}
