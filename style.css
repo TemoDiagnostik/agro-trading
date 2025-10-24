@@ -160,21 +160,6 @@ html[dir="rtl"] header .lang {
 }
 
 
-/* توسيط اللوجو دائمًا في كل الشاشات */
-header .container.nav {
-  display: flex !important;
-  align-items: center !important;   /* توسيط عمودي */
-  justify-content: center !important; /* توسيط أفقي */
-  flex-wrap: wrap;
-}
-
-header .logo-img {
-  display: block;
-  margin: 0 auto; /* يحافظ على التوسيط الأفقي */
-  position: relative;
-  top: -4px; /* يرفع اللوجو قليلاً للأعلى (اختياري، عدّل الرقم حسب الشكل) */
-}
-
 
 
 
