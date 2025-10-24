@@ -1054,6 +1054,53 @@ html[dir="rtl"] header .lang {
 
 
 
+
+
+
+
+/* ===== FINAL RTL HEADER FIX ===== */
+html[dir="rtl"] header .container.nav {
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* اللوجو واسم الشركة */
+html[dir="rtl"] header .brand {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+}
+
+/* نص الشركة */
+html[dir="rtl"] header .brand-text {
+  margin-right: 0 !important;
+  margin-left: 10px !important;
+  text-align: right !important;
+}
+
+/* زر اللغة */
+html[dir="rtl"] header .lang {
+  position: absolute !important;
+  left: 25px !important;
+  right: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important;
+}
+
+/* القائمة */
+html[dir="rtl"] header nav ul {
+  direction: rtl !important;
+  justify-content: center !important;
+}
+
+
 @media (min-width: 769px) {
   header nav {
     margin-right: 160px; /* حرّك النصوص إلى اليسار */
@@ -1062,26 +1109,100 @@ html[dir="rtl"] header .lang {
 
 
 
-/* ===== FIX: SHOW FULL HEADER ON MOBILE ===== */
+
+
+
+/* ===== MOBILE HEADER (CLEAN + SAFE FOR iPHONE) ===== */
 @media (max-width: 768px) {
   header {
+    position: relative;
     overflow: visible !important;
+    padding-top: env(safe-area-inset-top, 12px);
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
   }
 
   header .container.nav {
-    min-height: 120px !important; /* مساحة كافية للهيدر */
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 120px !important;
+    padding: 10px 0 !important;
+    gap: 6px !important;
+  }
+
+  header .brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
   }
 
   header .logo-img {
-    max-height: 90px !important; /* حجم منطقي للهاتف */
+    max-height: 90px !important;
     height: auto !important;
   }
 
   header .brand-text {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #0a662f !important;
     line-height: 1.2 !important;
     text-align: center !important;
-    white-space: normal !important;
+  }
+
+  header nav {
+    width: 100% !important;
+  }
+
+  header nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+    border-bottom: 2px solid #0a662f !important;
+    padding-bottom: 2px !important;
+    font-weight: 500 !important;
+  }
+
+  header .lang {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 4px !important;
+    position: static !important;
+  }
+
+  header .lang select {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    font-size: 0.85rem !important;
+    padding: 3px 8px !important;
+  }
+
+  /* RTL adjustment for mobile */
+  html[dir="rtl"] header .brand {
+    flex-direction: row-reverse !important;
+  }
+
+  html[dir="rtl"] header nav ul {
+    direction: rtl !important;
+  }
+
+  body {
+    padding-top: env(safe-area-inset-top, 10px);
   }
 }
