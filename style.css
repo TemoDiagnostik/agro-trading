@@ -151,7 +151,9 @@ html[dir="rtl"] header .lang {
     flex-wrap: wrap;
     justify-content: center;
   }
- /* ===== تكبير اللوجو في الموبايل فقط ===== */
+}
+
+/* ===== تكبير اللوجو في الموبايل فقط ===== */
 @media (max-width: 768px) {
   header .logo-img {
     max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
