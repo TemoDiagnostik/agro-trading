@@ -151,11 +151,13 @@ html[dir="rtl"] header .lang {
     flex-wrap: wrap;
     justify-content: center;
   }
+ /* ===== تكبير اللوجو في الموبايل فقط ===== */
+@media (max-width: 768px) {
   header .logo-img {
-    max-height: 80px !important;
+    max-height: 90px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    height: auto !important;
   }
 }
-
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -788,11 +790,13 @@ header .lang select {
     flex-wrap: wrap;
     justify-content: center;
   }
+  /* ===== تكبير اللوجو في الموبايل فقط ===== */
+@media (max-width: 768px) {
   header .logo-img {
-    max-height: 80px !important;
+    max-height: 90px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    height: auto !important;
   }
 }
-
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -1060,7 +1064,7 @@ header nav ul li a:hover {
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
-  header .logo-img { max-height: 58px !important; height: auto !important; }
+  header .logo-img { max-height: 90px !important; height: auto !important; }
 
   header .brand-text {
     font-size: 0.88rem !important;
@@ -1220,10 +1224,12 @@ header .lang select {
     gap: 8px !important;
   }
 
+
   header .logo-img {
-    max-height: 48px !important;
+    max-height: 90px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
     height: auto !important;
   }
+
 
   header .brand-text {
     font-size: 0.95rem !important;
