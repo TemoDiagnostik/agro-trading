@@ -99,6 +99,7 @@ header nav ul li a {
   font-weight: 500;
   color: #000;
   text-decoration: none;
+  }
 
 header nav ul li a:hover {
   color: #0a662f !important; /* أخضر عند المرور */
