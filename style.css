@@ -1031,3 +1031,23 @@ html[dir="rtl"] header .lang {
     width: 220px;
   }
 }
+
+
+
+
+/* ===== FIX: KEEP LANGUAGE SELECT ALIGNED RIGHT ON DESKTOP ===== */
+@media (min-width: 769px) {
+  html:not([dir="rtl"]) header .lang {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  html[dir="rtl"] header .lang {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
