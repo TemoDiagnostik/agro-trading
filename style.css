@@ -735,7 +735,7 @@ header .container.nav {
 
 /* اللوجو */
 header .logo-img {
-  max-height: 90px !important;
+  max-height: 85px !important;
   height: auto;
 }
 
@@ -786,8 +786,11 @@ header .lang select {
     flex-wrap: wrap;
     justify-content: center;
   }
+  /* ===== تكبير اللوجو في الموبايل فقط ===== */
+@media (max-width: 768px) {
   header .logo-img {
-    max-height: 80px !important;
+    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    height: auto !important;
   }
 }
 
