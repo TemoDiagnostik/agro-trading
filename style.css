@@ -1290,3 +1290,74 @@ header .lang select {
     direction: rtl !important;
   }
 }
+
+
+
+
+
+/* ===== FINAL PATCH: FIX RTL & MOBILE HEADER ===== */
+
+/* للغة العربية على الشاشات الكبيرة */
+@media (min-width: 769px) {
+  html[dir="rtl"] header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important; /* شعار | قائمة | زر لغة */
+    align-items: center !important;
+    direction: rtl !important;
+    text-align: right !important;
+    position: relative !important;
+  }
+
+  html[dir="rtl"] header .brand {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+
+  html[dir="rtl"] header .brand-text {
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+    text-align: right !important;
+  }
+
+  html[dir="rtl"] header nav {
+    justify-self: center !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    position: absolute !important;
+    left: 25px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+  html[dir="rtl"] header .container.nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+  }
+
+  html[dir="rtl"] header .brand {
+    flex-direction: row-reverse !important;
+    justify-content: center !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
+  }
+}
