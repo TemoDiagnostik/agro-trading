@@ -1103,23 +1103,28 @@ header nav ul li a:hover {
     width: 100% !important;
   }
 
-  header nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
+ 
+ 
+/* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
+header nav ul li a {
+  position: relative;
+  color: #000000 !important;      /* لون النص */
+  text-decoration: none !important;
+  font-weight: 500;
+  padding-bottom: 4px !important; /* مسافة بين النص والخط */
+  border-bottom: 2px solid #0a662f !important; /* الخط الثابت */
+}
 
-  header nav ul li a {
-    font-size: 0.9rem !important;
-    color: #000 !important;
-    border-bottom: 2px solid #0a662f !important;
-    padding-bottom: 2px !important;
-    font-weight: 500 !important;
-  }
+/* تباعد متوازن بين العناصر */
+header nav ul {
+  gap: 1rem !important;
+}
+
+/* عند المرور نغيّر لون الخط لتفاعل أنيق */
+header nav ul li a:hover {
+  border-bottom-color: #0d9488 !important; /* أخضر تركواز */
+  color: #0a662f !important;
+}
 
  /* ===== FINAL FIX: LANGUAGE SELECT POSITION ===== */
 
@@ -1313,5 +1318,45 @@ header .lang select {
     transform: none;
     justify-content: center;
     margin-top: 6px;
+  }
+}
+
+
+  /* ===== QUICK FIX: LANGUAGE BUTTON FINAL ALIGN ===== */
+
+/* لغات من اليسار إلى اليمين (مثل الإنجليزية والتشيكية) */
+html:not([dir="rtl"]) header .lang {
+  position: absolute !important;
+  right: 25px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 6px !important;
+  z-index: 999 !important;
+}
+
+/* لغات من اليمين إلى اليسار (مثل العربية) */
+html[dir="rtl"] header .lang {
+  position: absolute !important;
+  left: 25px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  z-index: 999 !important;
+}
+
+/* في الهواتف نحافظ على الوسط */
+@media (max-width: 768px) {
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    justify-content: center !important;
+    margin-top: 6px !important;
   }
 }
