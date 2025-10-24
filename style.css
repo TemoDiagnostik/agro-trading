@@ -54,6 +54,7 @@ html[lang="ar"] {
 
 /* ===== الهيدر الشفاف (Transparent Slim Header) ===== */
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
   position: relative !important;   /* غير ثابت */
   width: 100%;
@@ -65,7 +66,6 @@ header {
   transition: all 0.3s ease;
 }
 
-/* ===== تخطيط الهيدر (Header layout) ===== */
 /* تقليل ارتفاع البار */
 header .container.nav {
   height: 70px !important;
@@ -75,14 +75,12 @@ header .container.nav {
   padding: 0 20px;
 }
 
-/* ===== الشعار (Logo) ===== */
 /* اللوجو */
 header .logo-img {
   max-height: 90px !important;
   height: auto;
 }
 
-/* ===== اسم العلامة التجارية (Brand text) ===== */
 /* نص الشركة */
 header .brand-text {
   font-weight: 700;
@@ -92,7 +90,6 @@ header .brand-text {
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
-/* ===== روابط التنقل (Navigation links) ===== */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -101,8 +98,6 @@ header nav ul {
   padding: 0;
 }
 
-
-/* ===== نصوص روابط التنقل (Nav link text) ===== */
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
@@ -123,8 +118,11 @@ header nav ul li a:hover {
   border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
 }
 
-/* ===== اختيار اللغة (Language selector) ===== */
-/* زر اللغة */
+
+header nav ul li a:hover {
+  color: #0a662f !important; /* أخضر عند المرور */
+}
+
 /* زر اللغة */
 header .lang select {
   background: rgba(255,255,255,0.15);
@@ -136,12 +134,12 @@ header .lang select {
 }
 
 
+
 /* الكرة الأرضية والاختيار */
 header .lang span {
   font-size: 1rem;
   line-height: 1;
 }
-
 
 /* ===== استجابة: ثيمات الموبايل للهيدر ولغة ===== */
 /* الموبايل — نرجع الوضع الطبيعي */
