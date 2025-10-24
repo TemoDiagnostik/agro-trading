@@ -85,7 +85,6 @@ header .brand-text {
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
-/* روابط القائمة */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -95,13 +94,25 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #000000 !important;    /* أسود صريح */
-  font-size: 0.8rem !important; /* أصغر قليلًا */
+  font-size: 0.82rem;
   font-weight: 500;
+  color: #000;
   text-decoration: none;
-  transition: color 0.3s ease;
-  
+  }
+/* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
+header nav ul li a {
+  position: relative;
+  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
+  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
+  transition: all 0.3s ease;
 }
+
+/* عند المرور يتغير اللون */
+header nav ul li a:hover {
+  color: #0a662f !important; /* ← النص يصبح أخضر */
+  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
+}
+
 
 header nav ul li a:hover {
   color: #0a662f !important; /* أخضر عند المرور */
@@ -125,12 +136,7 @@ header .lang span {
   line-height: 1;
 }
 
-/* RTL (العربية) — نقلب الاتجاه */
-html[dir="rtl"] header .lang {
-  right: auto !important;
-  left: 20px !important;          /* أقصى اليسار */
-  flex-direction: row-reverse !important;
-}
+
 
 /* الموبايل — نرجع الوضع الطبيعي */
 @media (max-width: 768px) {
@@ -149,20 +155,10 @@ html[dir="rtl"] header .lang {
     flex-wrap: wrap;
     justify-content: center;
   }
-}
-
-/* ===== تكبير اللوجو في الموبايل فقط ===== */
-@media (max-width: 768px) {
   header .logo-img {
-    max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
-    height: auto !important;
+    max-height: 80px !important;
   }
 }
-
-
-
-
-
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
@@ -803,6 +799,7 @@ header .lang select {
     height: auto !important;
   }
 }
+
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -937,18 +934,7 @@ header .lang select {
 }
 
 
-/* ===== FIX: RTL ALIGNMENT + MOBILE HEADER RESPONSIVENESS ===== */
 
-/* للغات من اليمين إلى اليسار (العربية مثلًا) */
-html[dir="rtl"] header .container.nav {
-  flex-direction: row-reverse !important;   /* يعكس ترتيب العناصر */
-  text-align: right !important;
-}
-
-html[dir="rtl"] header .brand-text {
-  margin-right: 10px !important;
-  margin-left: 0 !important;
-}
 
 
 
@@ -1000,14 +986,8 @@ header nav ul li a {
   font-weight: 500;
   padding-bottom: 4px !important; /* مسافة بين النص والخط */
   border-bottom: 2px solid #0a662f !important; /* الخط الثابت */
-}
+} /* ← أضف هذا القوس هنا */
 
-/* تباعد متوازن بين العناصر */
-header nav ul {
-  gap: 1rem !important;
-}
-
-/* عند المرور نغيّر لون الخط لتفاعل أنيق */
 header nav ul li a:hover {
   border-bottom-color: #0d9488 !important; /* أخضر تركواز */
   color: #0a662f !important;
@@ -1040,14 +1020,14 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
-header nav ul li a {
+ header nav ul li a {
   position: relative;
   color: #000000 !important;
   text-decoration: none !important;
   font-weight: 500;
   padding-bottom: 4px !important;
   border-bottom: 2px solid #0a662f !important;
-}
+  
 header nav ul li a:hover {
   border-bottom-color: #0d9488 !important;
   color: #0a662f !important;
@@ -1070,7 +1050,7 @@ header nav ul li a:hover {
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
-  header .logo-img { max-height: 90px !important; height: auto !important; }
+  header .logo-img { max-height: 58px !important; height: auto !important; }
 
   header .brand-text {
     font-size: 0.88rem !important;
@@ -1086,19 +1066,15 @@ header nav ul li a:hover {
     justify-content: center !important;
     gap: 8px !important;
   }
-  header nav ul li a {
+  
+ header nav ul li a {
     font-size: 0.85rem !important;
     padding-bottom: 2px !important;
     white-space: nowrap !important;
   }
 
-  header .lang {
-    margin-top: 4px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-  }
+  
+ 
   header .lang select {
     background: rgba(255,255,255,0.7) !important;
     border: 1px solid rgba(0,0,0,0.1) !important;
@@ -1108,36 +1084,9 @@ header nav ul li a:hover {
     padding: 4px 8px !important;
   }
 
-  /* RTL على الموبايل */
-  html[dir="rtl"] header nav ul {
-    direction: rtl !important;
-    justify-content: center !important;
-  }
-}
+  
 
 
-/* ===== FINAL FIX: LANGUAGE SELECT POSITION ===== */
-
-/* الوضع الطبيعي (اللغات من اليسار إلى اليمين مثل الإنجليزية والتشيكية) */
-header .lang {
-  position: absolute !important;
-  right: 25px !important;      /* أقصى اليمين */
-  top: 50% !important;         /* منتصف البار */
-  transform: translateY(-50%) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  flex-wrap: nowrap !important;
-  z-index: 999 !important;
-}
-
-/* RTL (العربية، الفارسية...): نقلب الاتجاه */
-html[dir="rtl"] header .lang {
-  right: auto !important;
-  left: 25px !important;
-  flex-direction: row-reverse !important;
-  transform: translateY(-50%) !important;
-}
 
 /* الزر نفسه */
 header .lang select {
@@ -1160,44 +1109,8 @@ header .lang select {
 }
 
 
-/* ===== FINAL POSITION FIX FOR LANGUAGE SELECT ===== */
 
-/* الوضع الطبيعي (اللغات من اليسار إلى اليمين) */
-/* إعادة الأيقونة لمكانها الطبيعي داخل التخطيط مع مسافة مناسبة */
-header .lang {
-  position: static !important;
-  margin-left: 24px !important; /* مسافة من اسم الشركة */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 6px !important;
-}
 
-html[dir="rtl"] header .lang {
-  margin-left: 0 !important;
-  margin-right: 24px !important; /* مسافة من الجهة اليمنى للعربية */
-}
-
-  
-/* شكل الزر */
-header .lang select {
-  background: rgba(255,255,255,0.7) !important;
-  border: 1px solid rgba(0,0,0,0.15) !important;
-  border-radius: 6px !important;
-  color: #0a662f !important;
-  padding: 4px 8px !important;
-  font-size: 0.85rem !important;
-}
-
-/* في الشاشات الصغيرة نعيده للوضع العادي */
-@media (max-width: 768px) {
-  header .lang {
-    position: static !important;
-    transform: none !important;
-    justify-content: center !important;
-    margin-top: 6px !important;
-  }
-}
 
 
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
@@ -1255,7 +1168,7 @@ header .lang select {
     margin: 0 !important;
   }
 
-  header nav ul li a {
+ header nav ul li a {
     font-size: 0.9rem !important;
     color: #000 !important;
     border-bottom: 2px solid #0a662f !important;
@@ -1281,13 +1194,70 @@ header .lang select {
     padding: 3px 8px !important;
   }
 
-  /* للغات RTL (مثل العربية) */
+ 
+
+   
+/* === FIX: Separate language selector column (for all languages) === */
+@media (min-width: 769px) {
+  header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+  }
+
+  /* تأكد أن القائمة تبقى في المنتصف */
+  header nav {
+    justify-self: center !important;
+  }
+
+  /* زر اللغة يبقى في أقصى اليمين */
+  header .lang {
+    justify-self: end !important;
+    position: relative !important;
+    right: 0 !important;
+    left: auto !important;
+    margin-left: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  /* للغات RTL (العربية) — خليه ما ينعكس */
+  html[dir="rtl"] header .container.nav {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    right: 0 !important;
+    left: auto !important;
+    flex-direction: row !important;
+  }
+}
+/* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
+@media (min-width: 769px) {
+  html[dir="rtl"] header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
   html[dir="rtl"] header .brand {
-    flex-direction: row-reverse !important;
+    flex-direction: row !important;
   }
 
   html[dir="rtl"] header nav ul {
-    direction: rtl !important;
+    direction: ltr !important;
+    justify-content: center !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    right: 25px !important;
+    left: auto !important;
+    flex-direction: row !important;
+    position: relative !important;
+    transform: none !important;
   }
 }
-
