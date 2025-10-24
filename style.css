@@ -1096,13 +1096,8 @@ header nav ul li a:hover {
     white-space: nowrap !important;
   }
 
-  header .lang {
-    margin-top: 4px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-  }
+  
+ 
   header .lang select {
     background: rgba(255,255,255,0.7) !important;
     border: 1px solid rgba(0,0,0,0.1) !important;
@@ -1120,28 +1115,8 @@ header nav ul li a:hover {
 }
 
 
-/* ===== FINAL FIX: LANGUAGE SELECT POSITION ===== */
 
-/* الوضع الطبيعي (اللغات من اليسار إلى اليمين مثل الإنجليزية والتشيكية) */
-header .lang {
-  position: absolute !important;
-  right: 25px !important;      /* أقصى اليمين */
-  top: 50% !important;         /* منتصف البار */
-  transform: translateY(-50%) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  flex-wrap: nowrap !important;
-  z-index: 999 !important;
-}
 
-/* RTL (العربية، الفارسية...): نقلب الاتجاه */
-html[dir="rtl"] header .lang {
-  right: auto !important;
-  left: 25px !important;
-  flex-direction: row-reverse !important;
-  transform: translateY(-50%) !important;
-}
 
 /* الزر نفسه */
 header .lang select {
@@ -1164,49 +1139,8 @@ header .lang select {
 }
 
 
-/* ===== FINAL POSITION FIX FOR LANGUAGE SELECT ===== */
 
-/* الوضع الطبيعي (اللغات من اليسار إلى اليمين) */
-header .lang {
-  position: absolute !important;
-  right: 25px !important;          /* أقصى اليمين */
-  top: 35% !important;             /* مرفوع قليلاً للأعلى */
-  transform: translateY(-50%) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  flex-wrap: nowrap !important;
-  z-index: 999 !important;
-}
 
-/* RTL (العربية، الفارسية...): أقصى اليسار */
-html[dir="rtl"] header .lang {
-  right: auto !important;
-  left: 25px !important;
-  top: 35% !important;
-  flex-direction: row-reverse !important;
-  transform: translateY(-50%) !important;
-}
-
-/* شكل الزر */
-header .lang select {
-  background: rgba(255,255,255,0.7) !important;
-  border: 1px solid rgba(0,0,0,0.15) !important;
-  border-radius: 6px !important;
-  color: #0a662f !important;
-  padding: 4px 8px !important;
-  font-size: 0.85rem !important;
-}
-
-/* في الشاشات الصغيرة نعيده للوضع العادي */
-@media (max-width: 768px) {
-  header .lang {
-    position: static !important;
-    transform: none !important;
-    justify-content: center !important;
-    margin-top: 6px !important;
-  }
-}
 
 
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
