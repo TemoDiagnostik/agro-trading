@@ -1228,3 +1228,30 @@ header .lang select {
   }
 }
 
+/* ===== FIX LANGUAGE SELECT POSITION & LAYOUT ===== */
+@media (min-width: 769px) {
+  header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+  }
+
+  /* الوضع الطبيعي (اللغات من اليسار إلى اليمين) */
+  header .lang {
+    position: absolute !important;
+    right: 25px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    z-index: 999 !important;
+  }
+
+  /* RTL (العربية) */
+  html[dir="rtl"] header .lang {
+    right: auto !important;
+    left: 25px !important;
+    flex-direction: row-reverse !important;
+  }
+}
