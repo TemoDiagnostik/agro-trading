@@ -73,7 +73,9 @@ header .container.nav {
 /* اللوجو */
 header .logo-img {
   max-height: 90px !important;
-  height: auto;
+  height: auto !important;
+  position: relative;
+  top: -6px; /* ارفع اللوجو درجة أو درجتين */
 }
 
 /* نص الشركة */
@@ -100,6 +102,7 @@ header nav ul li a {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
+  
 }
 
 header nav ul li a:hover {
