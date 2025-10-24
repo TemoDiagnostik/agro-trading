@@ -101,6 +101,7 @@ header nav ul {
   padding: 0;
 }
 
+
 /* ===== نصوص روابط التنقل (Nav link text) ===== */
 header nav ul li a {
   font-size: 0.82rem;
@@ -122,8 +123,8 @@ header nav ul li a:hover {
   border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
 }
 
-
 /* ===== اختيار اللغة (Language selector) ===== */
+/* زر اللغة */
 /* زر اللغة */
 header .lang select {
   background: rgba(255,255,255,0.15);
