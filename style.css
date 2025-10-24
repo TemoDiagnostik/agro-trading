@@ -137,12 +137,7 @@ header .lang span {
   line-height: 1;
 }
 
-/* RTL (العربية) — نقلب الاتجاه */
-html[dir="rtl"] header .lang {
-  right: auto !important;
-  left: 20px !important;          /* أقصى اليسار */
-  flex-direction: row-reverse !important;
-}
+
 
 /* الموبايل — نرجع الوضع الطبيعي */
 @media (max-width: 768px) {
@@ -940,18 +935,7 @@ header .lang select {
 }
 
 
-/* ===== FIX: RTL ALIGNMENT + MOBILE HEADER RESPONSIVENESS ===== */
 
-/* للغات من اليمين إلى اليسار (العربية مثلًا) */
-html[dir="rtl"] header .container.nav {
-  flex-direction: row !important;  /* نحافظ على الاتجاه الأصلي */
-  text-align: left !important;     /* تبقى العناصر في مكانها */
-}
-
-html[dir="rtl"] header .brand-text {
-  margin-right: 10px !important;
-  margin-left: 0 !important;
-}
 
 
 
@@ -1101,14 +1085,7 @@ header nav ul li a:hover {
     padding: 4px 8px !important;
   }
 
-  /* RTL على الموبايل */
-  html[dir="rtl"] header nav ul {
-    direction: rtl !important;
-    justify-content: center !important;
-  }
-}
-
-
+  
 
 
 
@@ -1218,17 +1195,7 @@ header .lang select {
     padding: 3px 8px !important;
   }
 
-  /* للغات RTL (مثل العربية) */
-  html[dir="rtl"] header .brand {
-    flex-direction: row-reverse !important;
-  }
-
-  html[dir="rtl"] header nav ul {
-    direction: rtl !important;
-  }
-}
-
-
+ 
 
    
 /* === FIX: Separate language selector column (for all languages) === */
@@ -1266,5 +1233,32 @@ header .lang select {
     right: 0 !important;
     left: auto !important;
     flex-direction: row !important;
+  }
+}
+/* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
+@media (min-width: 769px) {
+  html[dir="rtl"] header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[dir="rtl"] header .brand {
+    flex-direction: row !important;
+  }
+
+  html[dir="rtl"] header nav ul {
+    direction: ltr !important;
+    justify-content: center !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    right: 25px !important;
+    left: auto !important;
+    flex-direction: row !important;
+    position: relative !important;
+    transform: none !important;
   }
 }
