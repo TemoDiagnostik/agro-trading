@@ -1218,10 +1218,12 @@ header .lang select {
     gap: 8px !important;
   }
 
+
   header .logo-img {
-    max-height: 48px !important;
+    max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
     height: auto !important;
   }
+
 
   header .brand-text {
     font-size: 0.95rem !important;
@@ -1281,3 +1283,4 @@ header .lang select {
     direction: rtl !important;
   }
 }
+
