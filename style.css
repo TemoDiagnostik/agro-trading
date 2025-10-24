@@ -1059,3 +1059,29 @@ html[dir="rtl"] header .lang {
     margin-right: 110px; /* حرّك النصوص إلى اليسار */
   }
 }
+
+
+
+/* ===== FIX: SHOW FULL HEADER ON MOBILE ===== */
+@media (max-width: 768px) {
+  header {
+    overflow: visible !important;
+  }
+
+  header .container.nav {
+    min-height: 120px !important; /* مساحة كافية للهيدر */
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  header .logo-img {
+    max-height: 90px !important; /* حجم منطقي للهاتف */
+    height: auto !important;
+  }
+
+  header .brand-text {
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
