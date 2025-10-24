@@ -26,8 +26,18 @@
   <!-- Main stylesheet (لا تغيّر النسخة إن أردت، أو زد v=… لتجاوز الكاش) -->
   <link rel="stylesheet" href="style.css?v=24">
 
+
+  <!-- ===== SITE ICON / FAVICON ===== -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#0a662f">
+
+
+  
+
   <!-- Set early lang/dir (يبقى كما هو لتجنّب فليكر) -->
-  <script>
+    <script>
     (function () {
       const RTL = new Set(['ar']);
       const urlLang = new URLSearchParams(location.search).get('lang');
