@@ -1293,4 +1293,11 @@ header .lang select {
 
 
 
+  
 
+html[dir="ltr"] header .lang {
+  position: static !important;
+  transform: none !important;
+  margin-left: 24px !important;
+  top: auto !important;
+}
