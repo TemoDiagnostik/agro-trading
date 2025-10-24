@@ -72,7 +72,7 @@ header .container.nav {
 
 /* اللوجو */
 header .logo-img {
-  max-height: 85px !important;
+  max-height: 80px !important;
   height: auto !important;
   position: relative;
   top: -8px; /* ارفع اللوجو درجة أو درجتين */
