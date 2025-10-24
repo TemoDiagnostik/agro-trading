@@ -1229,3 +1229,42 @@ header .lang select {
 }
 
 
+
+   
+/* === FIX: Separate language selector column (for all languages) === */
+@media (min-width: 769px) {
+  header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+  }
+
+  /* تأكد أن القائمة تبقى في المنتصف */
+  header nav {
+    justify-self: center !important;
+  }
+
+  /* زر اللغة يبقى في أقصى اليمين */
+  header .lang {
+    justify-self: end !important;
+    position: relative !important;
+    right: 0 !important;
+    left: auto !important;
+    margin-left: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  /* للغات RTL (العربية) — خليه ما ينعكس */
+  html[dir="rtl"] header .container.nav {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    right: 0 !important;
+    left: auto !important;
+    flex-direction: row !important;
+  }
+}
