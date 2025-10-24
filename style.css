@@ -1056,7 +1056,7 @@ html[dir="rtl"] header .lang {
 
 @media (min-width: 769px) {
   header nav {
-    margin-right: 110px; /* حرّك النصوص إلى اليسار */
+    margin-right: 160px; /* حرّك النصوص إلى اليسار */
   }
 }
 
