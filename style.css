@@ -1051,3 +1051,11 @@ html[dir="rtl"] header .lang {
     transform: translateY(-50%);
   }
 }
+
+
+
+@media (min-width: 769px) {
+  header nav {
+    margin-right: 60px; /* حرّك النصوص إلى اليسار */
+  }
+}
