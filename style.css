@@ -1035,8 +1035,9 @@ html[dir="rtl"] header .lang {
 
 
 
-/* ===== FIX: KEEP LANGUAGE SELECT ALIGNED RIGHT ON DESKTOP ===== */
+/* ===== FIX: LANGUAGE SELECT POSITION (LTR & RTL) ===== */
 @media (min-width: 769px) {
+  /* اللغات من اليسار إلى اليمين (مثل الإنجليزية والتشيكية) */
   html:not([dir="rtl"]) header .lang {
     position: absolute;
     right: 25px;
@@ -1044,6 +1045,7 @@ html[dir="rtl"] header .lang {
     transform: translateY(-50%);
   }
 
+  /* اللغات من اليمين إلى اليسار (مثل العربية) */
   html[dir="rtl"] header .lang {
     position: absolute;
     left: 25px;
@@ -1051,12 +1053,6 @@ html[dir="rtl"] header .lang {
     transform: translateY(-50%);
   }
 }
-
-
-
-
-
-
 
 /* ===== FINAL RTL HEADER FIX ===== */
 html[dir="rtl"] header .container.nav {
@@ -1083,7 +1079,7 @@ html[dir="rtl"] header .brand-text {
   text-align: right !important;
 }
 
-/* زر اللغة */
+/* زر اللغة (تأكيد تموضعه) */
 html[dir="rtl"] header .lang {
   position: absolute !important;
   left: 25px !important;
@@ -1100,13 +1096,12 @@ html[dir="rtl"] header nav ul {
   justify-content: center !important;
 }
 
-
+/* ===== DESKTOP ALIGNMENT FIX ===== */
 @media (min-width: 769px) {
   header nav {
-    margin-right: 160px; /* حرّك النصوص إلى اليسار */
+    margin-right: 160px; /* يحرك النصوص إلى اليسار عند عرض اللغة العربية */
   }
 }
-
 
 
 
