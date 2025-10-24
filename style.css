@@ -75,7 +75,7 @@ header .logo-img {
   max-height: 90px !important;
   height: auto !important;
   position: relative;
-  top: -6px; /* ارفع اللوجو درجة أو درجتين */
+  top: -8px; /* ارفع اللوجو درجة أو درجتين */
 }
 
 /* نص الشركة */
