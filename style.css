@@ -935,7 +935,10 @@ html[dir="rtl"] header .brand-text {
     font-size: 0.8rem !important;
   }
 
-
+  header .lang {
+    margin-top: 8px !important;
+  }
+}
 
 
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
@@ -960,14 +963,13 @@ header nav ul li a {
 /* تباعد متوازن بين العناصر */
 header nav ul {
   gap: 1rem !important;
-}
 
-/* عند المرور نغيّر لون الخط لتفاعل أنيق */
+  /* عند المرور نغيّر لون الخط لتفاعل أنيق */
 header nav ul li a:hover {
   border-bottom-color: #0d9488 !important; /* أخضر تركواز */
   color: #0a662f !important;
 }
-
+  
 /* ===== DESKTOP HEADER CLEAN LAYOUT (GRID) ===== */
 @media (min-width: 769px) {
   /* نستخدم Grid: شعار | قائمة | زر لغة */
@@ -1023,9 +1025,8 @@ header nav ul li a:hover {
     background: rgba(255, 255, 255, 0.45) !important;
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
-  }
 
-  header .logo-img { max-height: 90px !important; height: auto !important; }
+   header .logo-img { max-height: 90px !important; height: auto !important; }
 
   header .brand-text {
     font-size: 0.88rem !important;
@@ -1047,7 +1048,21 @@ header nav ul li a:hover {
     white-space: nowrap !important;
   }
 
- 
+  header .lang {
+    margin-top: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+  header .lang select {
+    background: rgba(255,255,255,0.7) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    font-size: 0.8rem !important;
+    padding: 4px 8px !important;
+  }
 
   /* RTL على الموبايل */
   html[dir="rtl"] header nav ul {
@@ -1055,6 +1070,8 @@ header nav ul li a:hover {
     justify-content: center !important;
   }
 }
+
+
 
 
 
@@ -1090,7 +1107,7 @@ header nav ul li a:hover {
   }
 
 
-  header .brand-text {
+ header .brand-text {
     font-size: 0.95rem !important;
     font-weight: 700 !important;
     color: #0a662f !important;
@@ -1106,25 +1123,25 @@ header nav ul li a:hover {
  
  
 /* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
-header nav ul li a {
-  position: relative;
-  color: #000000 !important;      /* لون النص */
-  text-decoration: none !important;
-  font-weight: 500;
-  padding-bottom: 4px !important; /* مسافة بين النص والخط */
-  border-bottom: 2px solid #0a662f !important; /* الخط الثابت */
-}
+ header nav ul li a {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+    border-bottom: 2px solid #0a662f !important;
+    padding-bottom: 2px !important;
+    font-weight: 500 !important;
+  }
 
-/* تباعد متوازن بين العناصر */
 header nav ul {
-  gap: 1rem !important;
-}
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 
-/* عند المرور نغيّر لون الخط لتفاعل أنيق */
-header nav ul li a:hover {
-  border-bottom-color: #0d9488 !important; /* أخضر تركواز */
-  color: #0a662f !important;
-}
+
 
  /* ===== FINAL FIX: LANGUAGE SELECT POSITION ===== */
 
