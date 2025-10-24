@@ -1003,14 +1003,8 @@ header nav ul li a {
   font-weight: 500;
   padding-bottom: 4px !important; /* مسافة بين النص والخط */
   border-bottom: 2px solid #0a662f !important; /* الخط الثابت */
-}
+} /* ← أضف هذا القوس هنا */
 
-/* تباعد متوازن بين العناصر */
-header nav ul {
-  gap: 1rem !important;
-}
-
-/* عند المرور نغيّر لون الخط لتفاعل أنيق */
 header nav ul li a:hover {
   border-bottom-color: #0d9488 !important; /* أخضر تركواز */
   color: #0a662f !important;
