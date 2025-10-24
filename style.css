@@ -100,6 +100,20 @@ header nav ul li a {
   color: #000;
   text-decoration: none;
   }
+/* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
+header nav ul li a {
+  position: relative;
+  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
+  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
+  transition: all 0.3s ease;
+}
+
+/* عند المرور يتغير اللون */
+header nav ul li a:hover {
+  color: #0a662f !important; /* ← النص يصبح أخضر */
+  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
+}
+
 
 header nav ul li a:hover {
   color: #0a662f !important; /* أخضر عند المرور */
