@@ -1,4 +1,3 @@
-/* ===== تهيئة القاعدة (Reset + Base) ===== */
 /* ===== RESET + BASE ===== */
 * {
   box-sizing: border-box;
@@ -10,16 +9,12 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
-
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  padding-top: 0px; /* لإفساح المجال للهيدر الثابت */
+  padding-top: 0px; /* ?????? ?????? ?????? ?????? */
 }
-
-/* ===== إعداد لدعم اللغة العربية (RTL) ===== */
 html[lang="ar"] {
   direction: rtl;
   text-align: right;
@@ -27,8 +22,6 @@ html[lang="ar"] {
   line-height: 1.8;
   word-spacing: 1px;
 }
-
-
 :root {
   --ink: #0f172a;
   --brand: #15803d;
@@ -40,33 +33,25 @@ html[lang="ar"] {
   --radius: 14px;
   --ring: rgba(16,185,129, .35);
 }
-
-/* ===== الحاوية العامة (Container) ===== */
-/* ===== الحاوية العامة ===== */
+/* ===== ??????? ?????? ===== */
 .container {
   max-width: 1200px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 }
-
-
-
-/* ===== الهيدر الشفاف (Transparent Slim Header) ===== */
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;   /* غير ثابت */
+  position: relative !important;   /* ??? ???? */
   width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
-  backdrop-filter: blur(6px); /* ضباب خفيف */
+  background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
+  backdrop-filter: blur(6px); /* ???? ???? */
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   height: auto;
   z-index: 100;
   transition: all 0.3s ease;
 }
-
-/* تقليل ارتفاع البار */
+/* ????? ?????? ????? */
 header .container.nav {
   height: 70px !important;
   display: flex;
@@ -74,22 +59,19 @@ header .container.nav {
   justify-content: space-between;
   padding: 0 20px;
 }
-
-/* اللوجو */
+/* ?????? */
 header .logo-img {
   max-height: 90px !important;
   height: auto;
 }
-
-/* نص الشركة */
+/* ?? ?????? */
 header .brand-text {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #0a662f !important; /* أخضر غامق */
+  color: #0a662f !important; /* ???? ???? */
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
-
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -97,7 +79,6 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
-
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
@@ -107,23 +88,19 @@ header nav ul li a {
 /* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
 header nav ul li a {
   position: relative;
-  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
-  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
+  padding-bottom: 4px; /* ????? ????? ??? ???? ????? */
+  border-bottom: 2px solid #0a662f; /* ? ???? ?????? ?????? */
   transition: all 0.3s ease;
 }
-
-/* عند المرور يتغير اللون */
+/* ??? ?????? ????? ????? */
 header nav ul li a:hover {
-  color: #0a662f !important; /* ← النص يصبح أخضر */
-  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
+  color: #0a662f !important; /* ? ???? ???? ???? */
+  border-bottom-color: #0d9488 !important; /* ? ???? ???? ?????? */
 }
-
-
 header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
+  color: #0a662f !important; /* ???? ??? ?????? */
 }
-
-/* زر اللغة */
+/* ?? ????? */
 header .lang select {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.2);
@@ -132,17 +109,12 @@ header .lang select {
   padding: 4px 8px;
   font-size: 0.85rem;
 }
-
-
-
-/* الكرة الأرضية والاختيار */
+/* ????? ??????? ????????? */
 header .lang span {
   font-size: 1rem;
   line-height: 1;
 }
-
-/* ===== استجابة: ثيمات الموبايل للهيدر ولغة ===== */
-/* الموبايل — نرجع الوضع الطبيعي */
+/* ???????? - ???? ????? ??????? */
 @media (max-width: 768px) {
   header .lang {
     position: static !important;
@@ -151,8 +123,7 @@ header .lang span {
     justify-content: center !important;
   }
 }
-
-/* شاشات صغيرة */
+/* ????? ????? */
 @media (max-width: 768px) {
   header .container.nav {
     height: 64px !important;
@@ -163,30 +134,25 @@ header .lang span {
     max-height: 80px !important;
   }
 }
-
-
-/* ===== قسم الهيرو (Hero section) ===== */
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
   position: relative;
-  width: 100vw;                              /* العرض الكامل */
-  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
+  width: 100vw;                              /* ????? ?????? */
+  margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
   padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
-  background-color: #ffffff;                 /* احتياطي بلون فاتح */
+  background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
+  background-color: #ffffff;                 /* ??????? ???? ???? */
   overflow: hidden;
   text-align: left;
   z-index: 0;
 }
-
-/* إزالة أي طبقة تعتيم */
+/* ????? ?? ???? ????? */
 .hero::before,
 .hero-bleed::before {
   content: none !important;
 }
-
-/* نصوص داخل الهيرو */
+/* ???? ???? ?????? */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
   color: #ffffff !important;
@@ -194,22 +160,19 @@ header .lang span {
   position: relative;
   z-index: 2;
 }
-
-/* العناوين والنصوص */
+/* ???????? ??????? */
 .hero h1 {
   font-size: clamp(36px, 6vw, 60px);
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
-
 .hero p {
   font-size: clamp(15px, 2vw, 18px);
   line-height: 1.5;
   max-width: 720px;
   margin-bottom: 1rem;
 }
-
-/* صف الأزرار */
+/* ?? ??????? */
 .hero .cta-row {
   display: flex !important;
   justify-content: center !important;
@@ -220,8 +183,7 @@ header .lang span {
   position: relative;
   z-index: 2;
 }
-
-/* الأزرار */
+/* ??????? */
 .hero .cta-row .btn {
   width: 200px !important;
   height: 48px !important;
@@ -232,8 +194,7 @@ header .lang span {
   font-size: 16px;
   transition: all 0.3s ease;
 }
-
-/* زر رئيسي */
+/* ?? ????? */
 .hero .btn-primary {
   background-color: #0a662f !important;
   border: 2px solid #ffffff !important;
@@ -244,8 +205,7 @@ header .lang span {
   background-color: #ffffff !important;
   color: #0a662f !important;
 }
-
-/* زر ثانوي */
+/* ?? ????? */
 .hero .btn-outline {
   background-color: #0d9488 !important;
   border: 2px solid #0d9488 !important;
@@ -258,16 +218,14 @@ header .lang span {
   color: #ffffff !important;
   transform: translateY(-1px);
 }
-
-/* إصلاح اللون الرمادي */
+/* ????? ????? ??????? */
 .hero .muted,
 .hero .note,
 .hero .lead {
   color: #ffffff !important;
   opacity: 1 !important;
 }
-
-/* الهواتف */
+/* ??????? */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
@@ -287,7 +245,6 @@ header .lang span {
     min-width: 200px !important;
   }
 }
-
 @media (max-width: 380px) {
   .hero .cta-row {
     flex-direction: column !important;
@@ -298,11 +255,7 @@ header .lang span {
     width: 220px !important;
   }
 }
-
-
-
-
-/* ===== شعار الثقة (Trust banner) ===== */
+/* ===== TRUST BANNER ===== */
 .trust-banner {
   padding:.9rem 0;
   background:#f1f5f9;
@@ -312,8 +265,7 @@ header .lang span {
 }
 .trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
 .trust-banner strong {color:#0f766e;}
-
-/* ===== المنتجات (Products) ===== */
+/* ===== PRODUCTS ===== */
 #products {
   padding:64px 0;
   background:
@@ -356,9 +308,7 @@ header .lang span {
   border-color:var(--brand);
   color:#059669;
 }
-
-
-/* ===== دعوة لاتخاذ إجراء (COA) ===== */
+/* ===== COA ===== */
 #coa .cta-row {
   display: flex;
   justify-content: center;
@@ -378,8 +328,7 @@ header .lang span {
 #coa .btn:hover {
   background: #059669;
 }
-
-/* ===== الخدمات (Services) ===== */
+/* ===== SERVICES ===== */
 #services {
   padding: 60px 0;
   background: #f9fafb;
@@ -410,8 +359,7 @@ header .lang span {
 #services .service:hover {
   transform: translateY(-4px);
 }
-
-/* ===== الخدمات اللوجستية (Logistics) ===== */
+/* ===== LOGISTICS ===== */
 #logistics {
   padding: 64px 0;
   background: #f9fafb;
@@ -441,16 +389,14 @@ header .lang span {
   margin-top: 12px;
   border-radius: 10px;
 }
-
-/* دعم الشاشات الصغيرة */
+/* ??? ??????? ??????? */
 @media (max-width: 640px) {
   #services,
   #logistics {
     padding: 40px 16px;
   }
 }
-
-/* ===== الميزات (Features) ===== */
+/* ===== FEATURES ===== */
 .features {
   display: flex;
   gap: 1rem;
@@ -475,8 +421,7 @@ header .lang span {
   border-color: var(--brand);
   color: #059669;
 }
-
-/* ===== الشهادات (Certificates) ===== */
+/* ===== CERTIFICATES ===== */
 #certificates {
   padding-block: 40px;
   background-color: var(--paper-2);
@@ -537,8 +482,7 @@ header .lang span {
   gap: 10px;
   margin-top: auto;
 }
-
-/* ===== الفوتر (Footer) ===== */
+/* ===== FOOTER ===== */
 .foot {
   padding: 2rem 0;
   border-top: 1px solid #e2e8f0;
@@ -546,19 +490,16 @@ header .lang span {
   font-size: 0.9rem;
   text-align: center;
 }
-
-/* ===== تعويض التمرير (Scroll offset) ===== */
+/* ===== SCROLL OFFSET ===== */
 section, [id] {
   scroll-margin-top: 110px;
 }
-
-/* ===== تواصل (Contact section) ===== */
+/* ===== CONTACT SECTION ===== */
 #contact {
   padding: 60px 0;
   background: #f4f8f9;
   font-size: 1rem;
 }
-
 .contact-heading {
   margin-bottom: 16px;
   font-size: 1.4rem;
@@ -566,7 +507,6 @@ section, [id] {
   border-left: 4px solid #00a87a;
   padding-left: 10px;
 }
-
 .kbd {
   font-family: monospace;
   background: #e7f2f0;
@@ -575,7 +515,6 @@ section, [id] {
   display: inline-block;
   margin-top: 3px;
 }
-
 .bank-section {
   margin-top: 20px;
   padding: 12px;
@@ -583,14 +522,12 @@ section, [id] {
   border: 1px solid #d4e6e2;
   border-radius: 8px;
 }
-
 .badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 10px 0;
 }
-
 .badge {
   background: #ffffff;
   border: 1px solid #00a87a;
@@ -599,7 +536,6 @@ section, [id] {
   font-size: 0.85rem;
   color: #005f4b;
 }
-
 form input,
 form textarea {
   width: 100%;
@@ -609,30 +545,25 @@ form textarea {
   font-size: 1rem;
   background: #fff;
 }
-
 form label {
   display: block;
   font-weight: 600;
   color: #003c33;
 }
-
 .cta {
   margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
-
-/* ===== ملاحظات ونصوص باهتة (Notes & Muted) ===== */
+/
 /* ===== NOTES & MUTED FIX ===== */
 .note {
   font-size: 0.85rem;
   color: #666;
   margin-top: 12px;
 }
-
-
-/* ===== عن الشركة (About section) ===== */
+/* ===== ABOUT SECTION ===== */
 .about-bg {
   background-image: url('about-desktop.png');
   background-size: cover;
@@ -640,7 +571,6 @@ form label {
   padding: 80px 20px;
   text-align: center;
 }
-
 .about-note {
   font-size: 0.9rem;
   color: #444;
@@ -648,7 +578,6 @@ form label {
   opacity: 0.85;
   text-align: center;
 }
-
 .content-box {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 40px;
@@ -656,31 +585,21 @@ form label {
   max-width: 900px;
   margin: auto;
 }
-
-/* للموبايل */
+/* ???????? */
 @media (max-width: 768px) {
   .about-bg {
     background-image: url('about-mobile.png');
     padding: 60px 15px;
   }
-
   .content-box {
     padding: 25px;
   }
 }
-
 .info-section,
 .form-section {
   margin-bottom: 40px;
 }
-
-
-
-
-
-/* ===== أزرار عامة (Global Buttons) ===== */
 /* ===== GLOBAL BUTTONS (FINAL CLEAN VERSION) ===== */
-
 .btn {
   display: inline-block;
   padding: 10px 16px;
@@ -695,8 +614,7 @@ form label {
   border: none;
   background: transparent;
 }
-
-/* زر أساسي (أخضر) */
+/* ?? ????? (????) */
 .btn-primary {
   background-color: var(--brand);
   color: #ffffff !important;
@@ -708,37 +626,30 @@ form label {
   border-color: var(--brand-ink);
   transform: translateY(-1px);
 }
-
 .btn-outline {
-  background-color: #15803d !important; /* أخضر أساسي */
-  border: 2px solid #15803d !important; /* نفس اللون */
-  color: #ffffff !important; /* نص أبيض */
+  background-color: #15803d !important; /* ???? ????? */
+  border: 2px solid #15803d !important; /* ??? ????? */
+  color: #ffffff !important; /* ?? ???? */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
 }
-
 .btn-outline:hover {
-  background-color: #065f46 !important; /* الأخضر الغامق عند التمرير */
+  background-color: #065f46 !important; /* ?????? ?????? ??? ??????? */
   border-color: #065f46 !important;
   transform: translateY(-1px);
 }
-
-
-
-/* ===== تهيئات إضافية للهيدر (Mobile header tweaks & redundant blocks preserved) ===== */
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;   /* غير ثابت */
+  position: relative !important;   /* ??? ???? */
   width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
-  backdrop-filter: blur(6px); /* ضباب خفيف */
+  background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
+  backdrop-filter: blur(6px); /* ???? ???? */
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   height: auto;
   z-index: 100;
   transition: all 0.3s ease;
 }
-
-/* تخطيط ثابت مكرر (محفوظ كما هو) */
+/* ????? ?????? ????? */
 header .container.nav {
   height: 70px !important;
   display: flex;
@@ -746,23 +657,20 @@ header .container.nav {
   justify-content: space-between;
   padding: 0 20px;
 }
-
-/* نسخة مكررة للشعار */
+/* ?????? */
 header .logo-img {
   max-height: 85px !important;
   height: auto;
 }
-
-/* نسخة مكررة لنص الشركة */
+/* ?? ?????? */
 header .brand-text {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #0a662f !important; /* أخضر غامق */
+  color: #0a662f !important; /* ???? ???? */
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
-
-/* روابط القائمة (مكررة، محفوظة) */
+/* ????? ??????? */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -770,20 +678,17 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
-
 header nav ul li a {
-  color: #000000 !important;    /* أسود صريح */
-  font-size: 0.8rem !important; /* أصغر قليلًا */
+  color: #000000 !important;    /* ???? ???? */
+  font-size: 0.8rem !important; /* ???? ?????? */
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
+  color: #0a662f !important; /* ???? ??? ?????? */
 }
-
-/* زر اللغة (مكرر) */
+/* ?? ????? */
 header .lang select {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.2);
@@ -792,60 +697,142 @@ header .lang select {
   padding: 4px 8px;
   font-size: 0.85rem;
 }
-
-/* شاشات صغيرة (مكرر) */
+/* ????? ????? */
 @media (max-width: 768px) {
   header .container.nav {
     height: 64px !important;
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* ===== تكبير اللوجو في الموبايل فقط (مكرر) ===== */
-}
+  /* ===== ????? ?????? ?? ???????? ??? ===== */
 @media (max-width: 768px) {
   header .logo-img {
-    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    max-height:100px !important; /* ????? ?????? - ???? 85px ?? ??? ???? */
     height: auto !important;
   }
 }
-
-/* (باقي قواعد الهيرو مكررة أيضاً للحفاظ على السلوك) */
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
   position: relative;
-  width: 100vw;                              /* العرض الكامل */
-  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
+  width: 100vw;                              /* ????? ?????? */
+  margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
   padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
-  background-color: #ffffff;                 /* احتياطي بلون فاتح */
+  background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
+  background-color: #ffffff;                 /* ??????? ???? ???? */
   overflow: hidden;
   text-align: left;
   z-index: 0;
 }
-
+/* ????? ?? ???? ????? */
 .hero::before,
-.hero-bleed::before { content: none !important; }
-
-.hero :is(h1,h2,h3,h4,h5,h6,p,span,strong,li,a,.lead,.muted,.note,.badge),
-.hero-bleed :is(h1,h2,h3,h4,h5,h6,p,span,strong,li,a,.lead,.muted,.note,.badge){
-  color:#ffffff !important;text-shadow:0 2px 3px rgba(0,0,0,.25);position:relative;z-index:2
+.hero-bleed::before {
+  content: none !important;
 }
-
-.hero h1{font-size:clamp(36px,6vw,60px);font-weight:700;margin-bottom:.6rem}
-.hero p{font-size:clamp(15px,2vw,18px);line-height:1.5;max-width:720px;margin-bottom:1rem}
-.hero .cta-row{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:14px!important;margin-top:22px!important;position:relative;z-index:2}
-.hero .cta-row .btn{width:200px!important;height:48px!important;line-height:48px!important;text-align:center!important;border-radius:8px;font-weight:600;font-size:16px;transition:all .3s ease}
-.hero .btn-primary{background-color:#0a662f!important;border:2px solid #fff!important;color:#fff!important;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-.hero .btn-primary:hover{background-color:#fff!important;color:#0a662f!important}
-.hero .btn-outline{background-color:#0d9488!important;border:2px solid #0d9488!important;color:#fff!important;box-shadow:0 4px 10px rgba(0,0,0,.15)}
-.hero .btn-outline:hover{background-color:#0a6e64!important;border-color:#0a6e64!important;color:#fff!important;transform:translateY(-1px)}
-
-@media (max-width:768px){.hero,.hero-bleed{background:url("hero-bg-mobile.png") center/cover no-repeat;padding:40px 16px 60px;text-align:center}.hero h1{font-size:28px}.hero p{font-size:15px}.hero .cta-row{gap:12px!important;flex-direction:row!important;justify-content:center!important}.hero .cta-row .btn{width:200px!important;min-width:200px!important}}
-@media (max-width:380px){.hero .cta-row{flex-direction:column!important;align-items:center!important;gap:12px!important}.hero .cta-row .btn{width:220px!important}}
-
-
-/* ===== استجابة عامة للهيدر والروابط (محفوظة) ===== */
+/* ???? ???? ?????? */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+  color: #ffffff !important;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
+}
+/* ???????? ??????? */
+.hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.hero p {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+/* ?? ??????? */
+.hero .cta-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 14px !important;
+  margin-top: 22px !important;
+  position: relative;
+  z-index: 2;
+}
+/* ??????? */
+.hero .cta-row .btn {
+  width: 200px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  text-align: center !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+/* ?? ????? */
+.hero .btn-primary {
+  background-color: #0a662f !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.hero .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: #0a662f !important;
+}
+/* ?? ????? */
+.hero .btn-outline {
+  background-color: #0d9488 !important;
+  border: 2px solid #0d9488 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-outline:hover {
+  background-color: #0a6e64 !important;
+  border-color: #0a6e64 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+/* ????? ????? ??????? */
+.hero .muted,
+.hero .note,
+.hero .lead {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* ??????? */
+@media (max-width: 768px) {
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 60px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+  .hero .cta-row {
+    gap: 12px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  .hero .cta-row .btn {
+    width: 200px !important;
+    min-width: 200px !important;
+  }
+}
+@media (max-width: 380px) {
+  .hero .cta-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .hero .cta-row .btn {
+    width: 220px !important;
+  }
+}
+/* ?? ??????? ???????: ????? ???? ???? */
 @media (max-width: 768px) {
   header .container.nav {
     flex-direction: column !important;
@@ -854,42 +841,45 @@ header .lang select {
     height: auto !important;
     padding: 10px 0 !important;
   }
-
   header .brand {
     margin-bottom: 8px !important;
   }
-
   header nav ul {
     flex-wrap: wrap !important;
     justify-content: center !important;
     gap: 8px !important;
     margin-top: 6px !important;
   }
-
   header nav ul li a {
     font-size: 0.8rem !important;
   }
-
   header .lang {
     margin-top: 8px !important;
   }
 }
-
-
-/* ===== توهج وظل نص الهيرو (Hero text glow/shadow) ===== */
-.hero :is(h1,h2,h3,h4,h5,h6,p,strong,span,li,a,.lead,.muted,.note,.badge),
-.hero-bleed :is(h1,h2,h3,h4,h5,h6,p,strong,span,li,a,.lead,.muted,.note,.badge){
-  text-shadow:0 2px 4px rgb(0 0 0),0 0 3px rgb(21 22 21);
+/* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
+.hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
+  text-shadow:
+    0 2px 4px rgb(0 0 0),   /* ?? ???? ???? */
+    0 0 3px rgb(21 22 21);     /* ???? ???? ??? ???? */
 }
-
-
-/* ===== قواعد تحت-القائمة والروابط (Nav underline preserved) ===== */
-header nav ul li a{position:relative;color:#000000 !important;text-decoration:none !important;font-weight:500;padding-bottom:4px !important;border-bottom:2px solid #0a662f !important}
-header nav ul li a:hover{border-bottom-color:#0d9488!important;color:#0a662f!important}
-
-
-/* ===== تخطيط الهيدر لسطح المكتب (Desktop header grid) ===== */
+/* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
+header nav ul li a {
+  position: relative;
+  color: #000000 !important;      /* ??? ???? */
+  text-decoration: none !important;
+  font-weight: 500;
+  padding-bottom: 4px !important; /* ????? ??? ???? ????? */
+  border-bottom: 2px solid #0a662f !important; /* ???? ?????? */
+} /* ? ??? ??? ????? ??? */
+header nav ul li a:hover {
+  border-bottom-color: #0d9488 !important; /* ???? ?????? */
+  color: #0a662f !important;
+}
+/* ===== DESKTOP HEADER CLEAN LAYOUT (GRID) ===== */
 @media (min-width: 769px) {
+  /* ?????? Grid: ???? | ????? | ?? ??? */
   header .container.nav {
     display: grid !important;
     grid-template-columns: auto 1fr auto !important;
@@ -899,19 +889,31 @@ header nav ul li a:hover{border-bottom-color:#0d9488!important;color:#0a662f!imp
     padding: 0 20px !important;
     box-sizing: border-box !important;
   }
-
+  /* ????? ??????? */
   header nav { justify-self: center !important; }
   html:not([dir="rtl"]) header .lang { justify-self: end !important; }
   html[dir="rtl"]        header .lang { justify-self: start !important; }
 }
-
-/* ===== تكرار قواعد nav (محفوظ كشرق) ===== */
-header nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
-header nav ul li a{position:relative;color:#000000!important;text-decoration:none!important;font-weight:500;padding-bottom:4px!important;border-bottom:2px solid #0a662f!important}
-header nav ul li a:hover{border-bottom-color:#0d9488!important;color:#0a662f!important}
-
-
-/* ===== هيدر موبايل نحيل (Mobile header slim) ===== */
+/* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ header nav ul li a {
+  position: relative;
+  color: #000000 !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  padding-bottom: 4px !important;
+  border-bottom: 2px solid #0a662f !important;
+header nav ul li a:hover {
+  border-bottom-color: #0d9488 !important;
+  color: #0a662f !important;
+}
+/* ===== MOBILE HEADER SLIM (ONE BLOCK ONLY) ===== */
 @media (max-width: 768px) {
   header .container.nav {
     display: flex !important;
@@ -927,9 +929,7 @@ header nav ul li a:hover{border-bottom-color:#0d9488!important;color:#0a662f!imp
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
-
   header .logo-img { max-height: 58px !important; height: auto !important; }
-
   header .brand-text {
     font-size: 0.88rem !important;
     margin: 0 !important;
@@ -937,230 +937,167 @@ header nav ul li a:hover{border-bottom-color:#0d9488!important;color:#0a662f!imp
     white-space: normal !important;
     line-height: 1.3 !important;
   }
-
   header nav { width: 100% !important; }
-  header nav ul { flex-wrap: wrap !important; justify-content: center !important; gap: 8px !important; }
-  header nav ul li a{ font-size:0.85rem!important; padding-bottom:2px!important; white-space:nowrap!important }
-
-  header .lang select { background: rgba(255,255,255,0.7) !important; border:1px solid rgba(0,0,0,0.1) !important; border-radius:6px !important; color:#0a662f !important; font-size:0.8rem !important; padding:4px 8px !important; }
+  header nav ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+ header nav ul li a {
+    font-size: 0.85rem !important;
+    padding-bottom: 2px !important;
+    white-space: nowrap !important;
+  }
+  header .lang select {
+    background: rgba(255,255,255,0.7) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    font-size: 0.8rem !important;
+    padding: 4px 8px !important;
+  }
+/* ???? ???? */
+header .lang select {
+  background: rgba(255,255,255,0.7) !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 6px !important;
+  color: #0a662f !important;
+  padding: 4px 8px !important;
+  font-size: 0.85rem !important;
 }
-
-/* زر اللغة مكرر للحفاظ على النسخ */
-header .lang select { background: rgba(255,255,255,0.7) !important; border: 1px solid rgba(0,0,0,0.15) !important; border-radius:6px !important; color:#0a662f !important; padding:4px 8px !important; font-size:0.85rem !important }
-
-@media (max-width: 768px) { header .lang { position: static !important; transform:none !important; justify-content:center !important; margin-top:6px !important } }
-
-
-
-/* ===== نسخة احترافية للهيدر على الموبايل (Professional mobile header) ===== */
+/* ???????? - ????? ????? ?????? ??? */
 @media (max-width: 768px) {
-  header .container.nav { display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;background:rgba(255,255,255,0.6)!important;backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,0.08);padding:8px 0 10px 0!important;gap:6px!important;box-sizing:border-box!important }
-  header .brand{display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
-  header .logo-img{max-height:100px!important;height:auto!important}
-  header .brand-text{font-size:.95rem!important;font-weight:700!important;color:#0a662f!important;line-height:1.2!important;text-align:center!important}
-  header nav{width:100% !important}
-  header nav ul{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:10px!important;padding:0!important;margin:0!important}
-  header nav ul li a{font-size:.9rem!important;color:#000!important;border-bottom:2px solid #0a662f!important;padding-bottom:2px!important;font-weight:500!important}
-  header .lang{display:flex!important;justify-content:center!important;align-items:center!important;gap:6px!important;margin-top:4px!important}
-  header .lang select{background:rgba(255,255,255,0.8)!important;border:1px solid rgba(0,0,0,0.15)!important;border-radius:6px!important;color:#0a662f!important;font-size:.85rem!important;padding:3px 8px!important}
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    justify-content: center !important;
+    margin-top: 6px !important;
+  }
 }
-
+/* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
+@media (max-width: 768px) {
+  /* ?????? ????? ?????? */
+  header .container.nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 8px 0 10px 0 !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
+  }
+  /* ???? ?????: ?????? ???? ?????? */
+  header .brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  header .logo-img {
+    max-height: 100px !important; /* ????? ?????? - ???? 85px ?? ??? ???? */
+    height: auto !important;
+  }
+  header .brand-text {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #0a662f !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+  /* ???? ??????: ????? ??????? */
+  header nav {
+    width: 100% !important;
+  }
+  header nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+ header nav ul li a {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+    border-bottom: 2px solid #0a662f !important;
+    padding-bottom: 2px !important;
+    font-weight: 500 !important;
+  }
+  /* ???? ??????: ?? ????? */
+  header .lang {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 4px !important;
+  }
+  header .lang select {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    font-size: 0.85rem !important;
+    padding: 3px 8px !important;
+  }
 /* === FIX: Separate language selector column (for all languages) === */
 @media (min-width: 769px) {
-  header .container.nav { display:grid!important;grid-template-columns:auto 1fr auto!important;align-items:center!important }
-  header nav{justify-self:center!important}
-  header .lang{justify-self:end!important;position:relative!important;right:0!important;left:auto!important;margin-left:20px!important;display:flex!important;align-items:center!important;gap:6px!important}
-  html[dir="rtl"] header .container.nav{direction:ltr!important;text-align:left!important}
-  html[dir="rtl"] header .lang{right:0!important;left:auto!important;flex-direction:row!important}
+  header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+  }
+  /* ???? ?? ??????? ???? ?? ??????? */
+  header nav {
+    justify-self: center !important;
+  }
+  /* ?? ????? ???? ?? ???? ?????? */
+  header .lang {
+    justify-self: end !important;
+    position: relative !important;
+    right: 0 !important;
+    left: auto !important;
+    margin-left: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+  /* ????? RTL (???????) - ???? ?? ????? */
+  html[dir="rtl"] header .container.nav {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+  html[dir="rtl"] header .lang {
+    right: 0 !important;
+    left: auto !important;
+    flex-direction: row !important;
+  }
 }
-
 /* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
 @media (min-width: 769px) {
-  html[dir="rtl"] header .container.nav { display:grid!important;grid-template-columns:auto 1fr auto!important;align-items:center!important;direction:ltr!important;text-align:left!important }
-  html[dir="rtl"] header .brand { flex-direction:row!important }
-  html[dir="rtl"] header nav ul { direction:ltr!important;justify-content:center!important }
-  html[dir="rtl"] header .lang { right:25px!important;left:auto!important;flex-direction:row!important;position:relative!important;transform:none!important }
+  html[dir="rtl"] header .container.nav {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+  html[dir="rtl"] header .brand {
+    flex-direction: row !important;
+  }
+  html[dir="rtl"] header nav ul {
+    direction: ltr !important;
+    justify-content: center !important;
+  }
+  html[dir="rtl"] header .lang {
+    right: 25px !important;
+    left: auto !important;
+    flex-direction: row !important;
+    position: relative !important;
+    transform: none !important;
+  }
 }
-/* Cleaned & responsive CSS for Trading (merged duplicates, fixed syntax, mobile-first)
-   - Preserves original colors, spacing and visual intent
-   - Removes duplicated rules and syntax errors
-   - Simplifies selectors and adds clear breakpoints
-*/
-
-/* ===== RESET + BASE ===== */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;overflow-x:hidden;overflow-y:auto}
-
-:root{
-  --ink:#0f172a;
-  --brand:#15803d;
-  --brand-ink:#065f46;
-  --paper:#ffffff;
-  --paper-2:#f8fafc;
-  --soft:#475569;
-  --muted:#64748b;
-  --radius:14px;
-  --ring:rgba(16,185,129,.35);
-}
-
-html{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:100%}
-body{color:var(--ink);background:linear-gradient(180deg,var(--paper),var(--paper-2));padding-top:0}
-
-html[lang="ar"]{direction:rtl;text-align:right;font-family:'Tajawal','Noto Sans Arabic',system-ui,sans-serif;line-height:1.8;word-spacing:1px}
-
-/* ===== LAYOUT CONTAINERS ===== */
-.container{max-width:1200px;width:100%;padding:0 20px;margin:0 auto}
-
-/* ===== HEADER (single consolidated) ===== */
-header{position:relative;width:100%;background:rgba(255,255,255,0.05);backdrop-filter:blur(6px);box-shadow:0 1px 4px rgba(0,0,0,0.05);z-index:100;transition:all .3s ease}
-
-/* header layout: grid on desktop, stacked on mobile */
-.container.nav{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:70px}
-.logo-img{max-height:90px;height:auto}
-.brand-text{font-weight:700;font-size:1.1rem;color:#0a662f;margin-left:10px;text-shadow:0 1px 1px rgba(255,255,255,0.3)}
-
-/* nav */
-header nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
-header nav ul li a{position:relative;color:#000;font-size:.82rem;font-weight:500;text-decoration:none;padding-bottom:4px;border-bottom:2px solid #0a662f;transition:color .3s ease,border-color .3s ease}
-header nav ul li a:hover{color:#0a662f;border-bottom-color:#0d9488}
-
-/* language selector */
-.lang select{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#0a662f;padding:4px 8px;font-size:.85rem}
-
-/* header grid for desktop (keeps language to the right) */
-@media(min-width:769px){
-  .container.nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;height:70px;padding:0 20px}
-  header nav{justify-self:center}
-  html:not([dir="rtl"]) .lang{justify-self:end}
-  html[dir="rtl"] .lang{justify-self:start}
-}
-
-/* mobile header: stacked, compact */
-@media(max-width:768px){
-  .container.nav{display:flex;flex-direction:column;align-items:center;justify-content:center;height:auto;padding:8px 12px;background:rgba(255,255,255,0.6);backdrop-filter:blur(8px);gap:6px}
-  .logo-img{max-height:85px}
-  .brand-text{font-size:.95rem;text-align:center;line-height:1.2;margin:0}
-  header nav{width:100%}
-  header nav ul{flex-wrap:wrap;justify-content:center;gap:8px;margin-top:6px}
-  header nav ul li a{font-size:.85rem;padding-bottom:2px}
-  .lang{margin-top:6px}
-  .lang select{background:rgba(255,255,255,0.7);border:1px solid rgba(0,0,0,0.1);font-size:.8rem}
-}
-
-/* ===== GLOBAL BUTTONS ===== */
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;font-size:14px;font-weight:600;border-radius:8px;text-align:center;white-space:nowrap;cursor:pointer;text-decoration:none;transition:all .3s ease;border:none;background:transparent}
-.btn-primary{background-color:var(--brand);color:#fff;border:2px solid var(--brand);box-shadow:0 4px 8px rgba(0,0,0,.12)}
-.btn-primary:hover{background-color:var(--brand-ink);border-color:var(--brand-ink);transform:translateY(-1px)}
-.btn-outline{background-color:#15803d;color:#fff;border:2px solid #15803d;box-shadow:0 4px 8px rgba(0,0,0,.12)}
-.btn-outline:hover{background-color:#065f46;border-color:#065f46;transform:translateY(-1px)}
-
-/* ===== HERO (full-bleed) ===== */
-.hero,.hero-bleed{position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:60px 20px;background:url("hero-bg-desktop.png") center/cover no-repeat;background-color:#fff;overflow:hidden;text-align:left;z-index:0}
-.hero::before,.hero-bleed::before{content:none}
-.hero :is(h1,h2,h3,h4,h5,h6,p,span,strong,li,a,.lead,.muted,.note,.badge),
-.hero-bleed :is(h1,h2,h3,h4,h5,h6,p,span,strong,li,a,.lead,.muted,.note,.badge){color:#fff;text-shadow:0 2px 3px rgba(0,0,0,.25);position:relative;z-index:2}
-.hero h1{font-size:clamp(2.25rem,6vw,3.75rem);font-weight:700;margin-bottom:.6rem}
-.hero p{font-size:clamp(.9375rem,2vw,1.125rem);line-height:1.5;max-width:720px;margin-bottom:1rem}
-.hero .cta-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px;margin-top:22px;z-index:2}
-.hero .cta-row .btn{width:200px;height:48px;border-radius:8px;font-weight:600;font-size:16px}
-.hero .muted,.hero .note,.hero .lead{color:#fff;opacity:1}
-
-@media(max-width:768px){
-  .hero,.hero-bleed{background:url("hero-bg-mobile.png") center/cover no-repeat;padding:40px 16px 60px;text-align:center}
-  .hero h1{font-size:1.75rem}
-  .hero p{font-size:15px}
-  .hero .cta-row{gap:12px;flex-direction:row;justify-content:center}
-  .hero .cta-row .btn{width:200px;min-width:200px}
-}
-@media(max-width:380px){
-  .hero .cta-row{flex-direction:column;align-items:center;gap:12px}
-  .hero .cta-row .btn{width:220px}
-}
-
-/* ===== TRUST BANNER ===== */
-.trust-banner{padding:.9rem 0;background:#f1f5f9;border-top:3px solid #84cc16;border-bottom:1px solid #e2e8f0;text-align:center}
-.trust-banner p{margin:.2rem 0;font-size:1rem;color:#334155}
-.trust-banner strong{color:#0f766e}
-
-/* ===== PRODUCTS ===== */
-#products{padding:64px 0;background:linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.1)),url("leaf-pattern.png") center/cover no-repeat;background-attachment:fixed}
-@media(max-width:1024px){#products{background-attachment:scroll}}
-#products .grid{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-#products .card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);box-shadow:0 8px 24px rgba(2,6,23,.06);padding:18px;display:flex;flex-direction:column;transition:transform .2s ease}
-#products .card:hover{transform:translateY(-2px)}
-#products .tag{display:inline-flex;align-items:center;gap:.35rem;background:#f9fafb;border:1px solid #e2e8f0;padding:.35rem .6rem;border-radius:8px;font-weight:600;font-size:.92rem;color:var(--brand-ink)}
-#products .tag:hover{background:#ecfdf5;border-color:var(--brand);color:#059669}
-
-/* ===== COA ===== */
-#coa .cta-row{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin:1rem 0 2rem}
-#coa .btn{background:var(--brand);color:#fff;font-weight:700;border-radius:10px;padding:.7rem 1.2rem;font-size:14px;transition:background .2s}
-#coa .btn:hover{background:#059669}
-
-/* ===== SERVICES ===== */
-#services{padding:60px 0;background:#f9fafb}
-#services h2{text-align:center;font-weight:900;margin-bottom:24px;color:var(--ink)}
-#services .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-#services .service{background:#fff;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,.06);overflow:hidden;transition:transform .2s}
-#services .service img{width:100%;height:180px;object-fit:cover}
-#services .service:hover{transform:translateY(-4px)}
-
-/* ===== LOGISTICS ===== */
-#logistics{padding:64px 0;background:#f9fafb}
-#logistics .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
-#logistics .card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);box-shadow:0 8px 24px rgba(2,6,23,.06);padding:18px;display:flex;flex-direction:column;transition:transform .2s}
-#logistics .card:hover{transform:translateY(-4px)}
-#logistics .card img{width:100%;height:200px;object-fit:cover;margin-top:12px;border-radius:10px}
-
-@media(max-width:640px){#services,#logistics{padding:40px 16px}}
-
-/* ===== FEATURES ===== */
-.features{display:flex;gap:1rem;margin:.8rem 0;flex-wrap:wrap}
-.feature{display:flex;align-items:center;gap:.4rem;background:#f9fafb;border:1px solid #e2e8f0;padding:.4rem .8rem;border-radius:8px;font-weight:600;font-size:.92rem;color:var(--brand-ink);transition:background .2s}
-.feature:hover{background:#ecfdf5;border-color:var(--brand);color:#059669}
-
-/* ===== CERTIFICATES ===== */
-#certificates{padding-block:40px;background-color:var(--paper-2)}
-#certificates .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;justify-items:center}
-@media(max-width:1000px){#certificates .grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){#certificates .grid{grid-template-columns:1fr}}
-#certificates .card{background:#f0ede5;border:1px solid #dcdcdc;border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;max-width:340px;min-height:480px}
-#certificates .card img{width:100%;height:auto;max-height:360px;object-fit:contain;background:var(--paper);border-radius:10px;margin-bottom:12px;aspect-ratio:3/4}
-#certificates .card h3{font-size:16px;color:var(--ink);margin:0}
-#certificates .card p{font-size:14px;color:var(--soft);margin:10px 0 20px}
-#certificates .cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:auto}
-
-/* ===== CONTACT ===== */
-#contact{padding:60px 0;background:#f4f8f9;font-size:1rem}
-.contact-heading{margin-bottom:16px;font-size:1.4rem;color:#005f4b;border-left:4px solid #00a87a;padding-left:10px}
-.kbd{font-family:monospace;background:#e7f2f0;padding:3px 6px;border-radius:4px;display:inline-block;margin-top:3px}
-.bank-section{margin-top:20px;padding:12px;background:#fff;border:1px solid #d4e6e2;border-radius:8px}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
-.badge{background:#fff;border:1px solid #00a87a;border-radius:999px;padding:4px 10px;font-size:.85rem;color:#005f4b}
-form input,form textarea{width:100%;padding:10px;border:1px solid #bbb;border-radius:6px;font-size:1rem;background:#fff}
-form label{display:block;font-weight:600;color:#003c33}
-.cta{margin-top:14px;display:flex;flex-wrap:wrap;gap:12px}
-
-/* notes */
-.note{font-size:.85rem;color:#666;margin-top:12px}
-
-/* ===== ABOUT ===== */
-.about-bg{background-image:url('about-desktop.png');background-size:cover;background-position:center;padding:80px 20px;text-align:center}
-.about-note{font-size:.9rem;color:#444;margin-top:20px;opacity:.85;text-align:center}
-.content-box{background-color:rgba(255,255,255,.85);padding:40px;border-radius:12px;max-width:900px;margin:auto}
-@media(max-width:768px){.about-bg{background-image:url('about-mobile.png');padding:60px 15px}.content-box{padding:25px}}
-
-/* ===== CERTAIN GLOBALS ===== */
-.foot{padding:2rem 0;border-top:1px solid #e2e8f0;color:var(--muted);font-size:.9rem;text-align:center}
-section,[id]{scroll-margin-top:110px}
-
-/* Accessibility: skip link */
-.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{position:static;width:auto;height:auto;background:#fff;padding:.5rem}
-
-/* Responsive tweaks */
-@media(max-width:768px){
-  .logo-img{max-height:100px}
-  .container{padding:0 16px}
-}
-
-/* End of cleaned CSS */
+}}}}
