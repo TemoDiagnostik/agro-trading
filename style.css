@@ -9,15 +9,12 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
-
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  padding-top: 0px; /* لإفساح المجال للهيدر الثابت */
+  padding-top: 0px; /* ?????? ?????? ?????? ?????? */
 }
-
 html[lang="ar"] {
   direction: rtl;
   text-align: right;
@@ -25,8 +22,6 @@ html[lang="ar"] {
   line-height: 1.8;
   word-spacing: 1px;
 }
-
-
 :root {
   --ink: #0f172a;
   --brand: #15803d;
@@ -38,30 +33,25 @@ html[lang="ar"] {
   --radius: 14px;
   --ring: rgba(16,185,129, .35);
 }
-
-/* ===== الحاوية العامة ===== */
+/* ===== ??????? ?????? ===== */
 .container {
   max-width: 1200px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 }
-
-
-
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;   /* غير ثابت */
+  position: relative !important;   /* ??? ???? */
   width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
-  backdrop-filter: blur(6px); /* ضباب خفيف */
+  background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
+  backdrop-filter: blur(6px); /* ???? ???? */
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   height: auto;
   z-index: 100;
   transition: all 0.3s ease;
 }
-
-/* تقليل ارتفاع البار */
+/* ????? ?????? ????? */
 header .container.nav {
   height: 70px !important;
   display: flex;
@@ -69,22 +59,19 @@ header .container.nav {
   justify-content: space-between;
   padding: 0 20px;
 }
-
-/* اللوجو */
+/* ?????? */
 header .logo-img {
   max-height: 90px !important;
   height: auto;
 }
-
-/* نص الشركة */
+/* ?? ?????? */
 header .brand-text {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #0a662f !important; /* أخضر غامق */
+  color: #0a662f !important; /* ???? ???? */
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
-
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -92,7 +79,6 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
-
 header nav ul li a {
   font-size: 0.82rem;
   font-weight: 500;
@@ -102,23 +88,19 @@ header nav ul li a {
 /* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
 header nav ul li a {
   position: relative;
-  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
-  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
+  padding-bottom: 4px; /* ????? ????? ??? ???? ????? */
+  border-bottom: 2px solid #0a662f; /* ? ???? ?????? ?????? */
   transition: all 0.3s ease;
 }
-
-/* عند المرور يتغير اللون */
+/* ??? ?????? ????? ????? */
 header nav ul li a:hover {
-  color: #0a662f !important; /* ← النص يصبح أخضر */
-  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
+  color: #0a662f !important; /* ? ???? ???? ???? */
+  border-bottom-color: #0d9488 !important; /* ? ???? ???? ?????? */
 }
-
-
 header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
+  color: #0a662f !important; /* ???? ??? ?????? */
 }
-
-/* زر اللغة */
+/* ?? ????? */
 header .lang select {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.2);
@@ -127,18 +109,12 @@ header .lang select {
   padding: 4px 8px;
   font-size: 0.85rem;
 }
-
-
-
-/* الكرة الأرضية والاختيار */
+/* ????? ??????? ????????? */
 header .lang span {
   font-size: 1rem;
   line-height: 1;
 }
-
-
-
-/* الموبايل — نرجع الوضع الطبيعي */
+/* ???????? - ???? ????? ??????? */
 @media (max-width: 768px) {
   header .lang {
     position: static !important;
@@ -147,8 +123,7 @@ header .lang span {
     justify-content: center !important;
   }
 }
-
-/* شاشات صغيرة */
+/* ????? ????? */
 @media (max-width: 768px) {
   header .container.nav {
     height: 64px !important;
