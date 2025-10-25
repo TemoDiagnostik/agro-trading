@@ -1172,19 +1172,7 @@ header .lang select {
     align-items: center !important;
     gap: 6px !important;
   }
-
-  /* للغات RTL (العربية) — خليه ما ينعكس */
-  html[dir="rtl"] header .container.nav {
-    direction: ltr !important;
-    text-align: left !important;
-  }
-
-  html[dir="rtl"] header .lang {
-    right: 0 !important;
-    left: auto !important;
-    flex-direction: row !important;
-  }
-}
+ }
 
   /* ===================================================
    إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
