@@ -1131,54 +1131,6 @@ header .lang select {
 }
 }}}}
 
-/* ===================================================
-   إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
-   =================================================== */
-
-/* شكل البار القديم (نحيف) ومسافات متوازنة */
-header .container.nav {
-  height: 68px !important;              /* ارتفاع البار القديم */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row !important;       /* ثابت دائماً - لا ينعكس */
-  padding: 0 22px !important;           /* توازن جانبي */
-  gap: 18px !important;                 /* مسافات بين العناصر */
-}
-
-/* زر اللغة والأيقونة */
-header .lang {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
-/* فصل الروابط والكلمات ومنع الالتصاق والانكسار */
-header nav a,
-header nav span,
-header nav button {
-  margin: 0 6px !important;
-  white-space: nowrap;
-}
-
-/* في العربية: نُثبت الاتجاه LTR فلا ينعكس الشريط */
-html[dir="rtl"] header .container.nav {
-  direction: ltr !important;
-  flex-direction: row !important;
-  text-align: left !important;
-}
-
-/* موضع زر اللغة في العربية */
-html[dir="rtl"] header .lang {
-  left: auto;
-  right: 20px;
-  direction: ltr;
-}
-
 
 
 
