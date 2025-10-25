@@ -870,31 +870,7 @@ header .lang select {
    width: 220px ;
  }
 }
-/* ?? ??????? ???????: ????? ???? ???? */
-@media (max-width: 768px) {
- header .container.nav {
-   flex-direction: column ;
-   align-items: center ;
-   justify-content: center ;
-   height: auto ;
-   padding: 10px 0 ;
- }
- header .brand {
-   margin-bottom: 8px ;
- }
- header nav ul {
-   flex-wrap: wrap ;
-   justify-content: center ;
-   gap: 8px ;
-   margin-top: 6px ;
- }
- header nav ul li a {
-   font-size: 0.8rem ;
- }
- header .lang {
-   margin-top: 8px ;
- }
-}
+
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
 .hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
