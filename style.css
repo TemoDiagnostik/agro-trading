@@ -951,6 +951,41 @@ header nav ul li a:hover {
  color: #0a662f ;
 }
 
+/* في الشاشات الصغيرة: ترتيب رأسي منسق */
+@media (max-width: 768px) {
+  header .container.nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
+  }
+
+  header .brand {
+    margin-bottom: 8px !important;
+  }
+
+  header nav ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem !important;
+  }
+
+  header .lang {
+    margin-top: 8px !important;
+  }
+}
+
+
+
+
+
+ 
 /* ===== MOBILE HEADER SLIM (ONE BLOCK ONLY) ===== */
 @media (max-width: 768px) {
   header .container.nav {
