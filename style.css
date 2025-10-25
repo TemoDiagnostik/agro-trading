@@ -664,39 +664,50 @@ form label {
   border-color: #065f46 ;
   transform: translateY(-1px);
 }
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+/* ===== UNIFIED TRANSPARENT SLIM HEADER (CLEAN FINAL VERSION) ===== */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* HEADER BASE */
 header {
-  position: relative ;   /* ??? ???? */
+  position: relative !important;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05) ; /* ???? ????? */
-  backdrop-filter: blur(6px); /* ???? ???? */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  height: auto;
+  background: rgba(255,255,255,0.05) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   z-index: 100;
   transition: all 0.3s ease;
 }
-/* ????? ?????? ????? */
+
+/* INNER CONTAINER */
 header .container.nav {
-  height: 70px ;
+  height: 68px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
 }
-/* ?????? */
+
+/* LOGO */
 header .logo-img {
-  max-height: 85px ;
+  max-height: 85px !important;
   height: auto;
 }
-/* ?? ?????? */
+
+/* BRAND TEXT */
 header .brand-text {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #0a662f ; /* ???? ???? */
+  color: #0a662f;
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
-/* ????? ??????? */
+
+/* NAV LINKS */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -704,17 +715,20 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
+
 header nav ul li a {
-  color: #000000 ;    /* ???? ???? */
-  font-size: 0.8rem ; /* ???? ?????? */
+  font-size: 0.82rem;
   font-weight: 500;
+  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 header nav ul li a:hover {
-  color: #0a662f ; /* ???? ??? ?????? */
+  color: #0a662f;
 }
-/* ?? ????? */
+
+/* LANGUAGE SELECT */
 header .lang select {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.2);
@@ -723,18 +737,24 @@ header .lang select {
   padding: 4px 8px;
   font-size: 0.85rem;
 }
-/* ????? ????? */
+
+/* MOBILE VIEW */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px ;
+    height: 60px !important;
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* ===== ????? ?????? ?? ???????? ??? ===== */
-@media (max-width: 768px) {
+
   header .logo-img {
-    max-height:100px ; /* ????? ?????? - ???? 85px ?? ??? ???? */
-    height: auto ;
+    max-height: 75px !important;
+  }
+
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
   }
 }
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
