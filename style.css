@@ -45,103 +45,76 @@ html[lang="ar"] {
   padding: 0 20px;
   margin: 0 auto;
 }
-/* ===== HEADER GLOBAL FIX (لمنع الشريط الأبيض المكرر) ===== */
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative;
+  position: relative !important;   /* غير ثابت */
   width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
+  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
+  backdrop-filter: blur(6px); /* ضباب خفيف */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   height: auto;
-  background: transparent !important;   /* يمنع الخلفية البيضاء */
-  box-shadow: none !important;          /* يلغي أي ظل إضافي */
-  border: none !important;
-  z-index: 1000;
+  z-index: 100;
   transition: all 0.3s ease;
 }
 
-/* تأكيد أن الهيرو يبدأ مباشرة بعد البار */
-.hero,
-.hero-bleed {
-  margin-top: 0 !important;
-  padding-top: 100px !important;       /* يترك مساحة مريحة للبار */
-}
-/* ===== شريط الرأس (Header) — النسخة النهائية المتوازنة ===== */
+/* تقليل ارتفاع البار */
 header .container.nav {
-  height: 56px;                       /* أنحف فعليًا (بدل 70px) */
+  height: 70px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 26px;                    /* توازن جانبي أفضل */
-  gap: 16px;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.04); /* شفاف خفيف وأنيق */
-  backdrop-filter: blur(6px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 0 20px;
 }
 
-/* ===== اللوجو ===== */
+/* اللوجو */
 header .logo-img {
-  max-height: 96px;                   /* تكبير محسوب */
+  max-height: 90px !important;
   height: auto;
-  transition: transform 0.3s ease;
-}
-header .logo-img:hover {
-  transform: scale(1.05);             /* حركة خفيفة عند المرور */
 }
 
-/* ===== نص اسم الشركة ===== */
+/* نص الشركة */
 header .brand-text {
   font-weight: 700;
-  font-size: 1.2rem;                  /* أكبر قليلًا */
-  color: #0a662f;
+  font-size: 1.1rem;
+  color: #0a662f !important; /* أخضر غامق */
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
-/* ===== عناصر القائمة ===== */
 header nav ul {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 header nav ul li a {
-  font-size: 0.95rem;                 /* تكبير بسيط */
+  font-size: 0.82rem;
   font-weight: 500;
   color: #000;
   text-decoration: none;
-  transition: color 0.2s ease;
-}
-header nav ul li a:hover {
-  color: #0a662f;                     /* تفاعل أنيق مع اللون الأساسي */
-}
-
-/* ===== زر اللغات ===== */
-header .lang {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-}
+  }
 /* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
 header nav ul li a {
   position: relative;
-  padding-bottom: 4px; /* ????? ????? ??? ???? ????? */
-  border-bottom: 2px solid #0a662f; /* ? ???? ?????? ?????? */
+  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
+  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
   transition: all 0.3s ease;
 }
-/* ??? ?????? ????? ????? */
+
+/* عند المرور يتغير اللون */
 header nav ul li a:hover {
-  color: #0a662f ; /* ? ???? ???? ???? */
-  border-bottom-color: #0d9488 ; /* ? ???? ???? ?????? */
+  color: #0a662f !important; /* ← النص يصبح أخضر */
+  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
 }
+
+
 header nav ul li a:hover {
-  color: #0a662f ; /* ???? ??? ?????? */
+  color: #0a662f !important; /* أخضر عند المرور */
 }
-/* ?? ????? */
+
+/* زر اللغة */
 header .lang select {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.2);
@@ -150,33 +123,36 @@ header .lang select {
   padding: 4px 8px;
   font-size: 0.85rem;
 }
-/* ????? ??????? ????????? */
+
+
+
+/* الكرة الأرضية والاختيار */
 header .lang span {
   font-size: 1rem;
   line-height: 1;
 }
-/* ===== إعدادات الموبايل ===== */
+
+
+
+/* الموبايل — نرجع الوضع الطبيعي */
+@media (max-width: 768px) {
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
+  }
+}
+
+/* شاشات صغيرة */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 60px;                    /* أصغر للموبايل */
+    height: 64px !important;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 14px;
-    gap: 8px;
   }
   header .logo-img {
-    max-height: 80px;
-  }
-  header .brand-text {
-    font-size: 1rem;
-  }
-  header nav ul li a {
-    font-size: 0.9rem;
-  }
-  header .lang {
-    position: static;
-    margin-top: 6px;
-    justify-content: center;
+    max-height: 80px !important;
   }
 }
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
