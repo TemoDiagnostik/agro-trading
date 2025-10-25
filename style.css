@@ -664,13 +664,7 @@ form label {
   border-color: #065f46 ;
   transform: translateY(-1px);
 }
-/* ===== UNIFIED TRANSPARENT SLIM HEADER (CLEAN FINAL VERSION) ===== */
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  background: transparent !important;
-}
+
 
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
