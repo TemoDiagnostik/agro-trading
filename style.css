@@ -114,26 +114,23 @@ header .lang span {
   font-size: 1rem;
   line-height: 1;
 }
-/* ???????? - ???? ????? ??????? */
+/* الموبايل — نرجع الوضع الطبيعي */
 @media (max-width: 768px) {
   header .lang {
-    position: static ;
-    transform: none ;
-    margin-top: 6px ;
-    justify-content: center ;
+    position: static !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
   }
 }
-/* ????? ????? */
+
+/* شاشات صغيرة */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px ;
+    height: 64px !important;
     flex-wrap: wrap;
     justify-content: center;
   }
-  header .logo-img {
-    max-height: 80px ;
-  }
-}
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -225,7 +222,7 @@ header .lang span {
   color: #ffffff ;
   opacity: 1 ;
 }
-/* ??????? */
+/* الهواتف */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
@@ -236,13 +233,13 @@ header .lang span {
   .hero h1 { font-size: 28px; }
   .hero p { font-size: 15px; }
   .hero .cta-row {
-    gap: 12px ;
-    flex-direction: row ;
-    justify-content: center ;
+    gap: 12px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
   }
   .hero .cta-row .btn {
-    width: 200px ;
-    min-width: 200px ;
+    width: 200px !important;
+    min-width: 200px !important;
   }
 }
 @media (max-width: 380px) {
@@ -585,12 +582,13 @@ form label {
   max-width: 900px;
   margin: auto;
 }
-/* ???????? */
+/* للموبايل */
 @media (max-width: 768px) {
   .about-bg {
     background-image: url('about-mobile.png');
     padding: 60px 15px;
   }
+
   .content-box {
     padding: 25px;
   }
@@ -699,18 +697,18 @@ header .lang select {
   padding: 4px 8px;
   font-size: 0.85rem;
 }
-/* ????? ????? */
+/* شاشات صغيرة */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px ;
+    height: 64px !important;
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* ===== ????? ?????? ?? ???????? ??? ===== */
+  /* ===== تكبير اللوجو في الموبايل فقط ===== */
 @media (max-width: 768px) {
   header .logo-img {
-    max-height:100px ; /* ????? ?????? - ???? 85px ?? ??? ???? */
-    height: auto ;
+    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    height: auto !important;
   }
 }
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
@@ -804,7 +802,7 @@ header .lang select {
   color: #ffffff ;
   opacity: 1 ;
 }
-/* ??????? */
+/* الهواتف */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
@@ -815,13 +813,13 @@ header .lang select {
   .hero h1 { font-size: 28px; }
   .hero p { font-size: 15px; }
   .hero .cta-row {
-    gap: 12px ;
-    flex-direction: row ;
-    justify-content: center ;
+    gap: 12px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
   }
   .hero .cta-row .btn {
-    width: 200px ;
-    min-width: 200px ;
+    width: 200px !important;
+    min-width: 200px !important;
   }
 }
 @media (max-width: 380px) {
@@ -834,31 +832,36 @@ header .lang select {
     width: 220px ;
   }
 }
-/* ?? ??????? ???????: ????? ???? ???? */
+/* في الشاشات الصغيرة: ترتيب رأسي منسق */
 @media (max-width: 768px) {
   header .container.nav {
-    flex-direction: column ;
-    align-items: center ;
-    justify-content: center ;
-    height: auto ;
-    padding: 10px 0 ;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    padding: 10px 0 !important;
   }
+
   header .brand {
-    margin-bottom: 8px ;
+    margin-bottom: 8px !important;
   }
+
   header nav ul {
-    flex-wrap: wrap ;
-    justify-content: center ;
-    gap: 8px ;
-    margin-top: 6px ;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
   }
+
   header nav ul li a {
-    font-size: 0.8rem ;
+    font-size: 0.8rem !important;
   }
+
   header .lang {
-    margin-top: 8px ;
+    margin-top: 8px !important;
   }
 }
+
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
 .hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
@@ -918,64 +921,64 @@ header nav ul li a:hover {
 /* ===== MOBILE HEADER SLIM (ONE BLOCK ONLY) ===== */
 @media (max-width: 768px) {
   header .container.nav {
-    display: flex ;
-    flex-direction: column ;
-    align-items: center ;
-    justify-content: center ;
-    width: 100% ;
-    gap: 4px ;
-    padding: 6px 12px ;
-    height: auto ;
-    box-sizing: border-box ;
-    background: rgba(255, 255, 255, 0.45) ;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 4px !important;
+    padding: 6px 12px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: rgba(255, 255, 255, 0.45) !important;
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
-  header .logo-img { max-height: 58px ; height: auto ; }
+
+  header .logo-img { max-height: 58px !important; height: auto !important; }
+
   header .brand-text {
-    font-size: 0.88rem ;
-    margin: 0 ;
-    text-align: center ;
-    white-space: normal ;
-    line-height: 1.3 ;
+    font-size: 0.88rem !important;
+    margin: 0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
   }
-  header nav { width: 100% ; }
+
+  header nav { width: 100% !important; }
   header nav ul {
-    flex-wrap: wrap ;
-    justify-content: center ;
-    gap: 8px ;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
   }
+  
  header nav ul li a {
-    font-size: 0.85rem ;
-    padding-bottom: 2px ;
-    white-space: nowrap ;
+    font-size: 0.85rem !important;
+    padding-bottom: 2px !important;
+    white-space: nowrap !important;
   }
+
+  
+ 
   header .lang select {
-    background: rgba(255,255,255,0.7) ;
-    border: 1px solid rgba(0,0,0,0.1) ;
-    border-radius: 6px ;
-    color: #0a662f ;
-    font-size: 0.8rem ;
-    padding: 4px 8px ;
+    background: rgba(255,255,255,0.7) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    font-size: 0.8rem !important;
+    padding: 4px 8px !important;
   }
-/* ???? ???? */
+  
+/* الزر نفسه */
 header .lang select {
-  background: rgba(255,255,255,0.7) ;
-  border: 1px solid rgba(0,0,0,0.15) ;
-  border-radius: 6px ;
-  color: #0a662f ;
-  padding: 4px 8px ;
-  font-size: 0.85rem ;
+  background: rgba(255,255,255,0.7) !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 6px !important;
+  color: #0a662f !important;
+  padding: 4px 8px !important;
+  font-size: 0.85rem !important;
 }
-/* ???????? - ????? ????? ?????? ??? */
-@media (max-width: 768px) {
-  header .lang {
-    position: static ;
-    transform: none ;
-    justify-content: center ;
-    margin-top: 6px ;
-  }
-}
+  
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
   /* ?????? ????? ?????? */
