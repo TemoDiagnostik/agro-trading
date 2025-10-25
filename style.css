@@ -127,14 +127,20 @@ header .lang span {
 /* شاشات صغيرة */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px !important;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 58px !important;            /* تقليل الارتفاع */
+    padding: 0 14px !important;         /* حواف داخلية أخف */
+    flex-wrap: nowrap !important;       /* يمنع تفكك العناصر */
+    justify-content: space-between !important;
+    align-items: center !important;
   }
+
   header .logo-img {
-    max-height: 80px !important;
-  }
+    max-height: 55px !important;        /* حجم اللوجو مضبوط */
+    height: auto !important;
+   }
 }
+
+
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -704,14 +710,15 @@ header .lang select {
 /* شاشات صغيرة */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px !important;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 58px !important;            /* تقليل الارتفاع */
+    padding: 0 14px !important;         /* حواف داخلية أخف */
+    flex-wrap: nowrap !important;       /* يمنع تفكك العناصر */
+    justify-content: space-between !important;
+    align-items: center !important;
   }
-  /* ===== تكبير اللوجو في الموبايل فقط ===== */
-@media (max-width: 768px) {
+
   header .logo-img {
-    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    max-height: 55px !important;        /* حجم اللوجو مضبوط */
     height: auto !important;
   }
 }
