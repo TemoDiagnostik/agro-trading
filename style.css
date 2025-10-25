@@ -1159,3 +1159,34 @@ html[dir="rtl"] header .lang {
 
 
 
+/* ===== MOBILE HEADER FIX (FULL HEIGHT) ===== */
+@media (max-width: 768px) {
+  header .container.nav {
+    height: auto !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px 16px !important;
+  }
+
+  header .logo-img {
+    max-height: 70px !important;
+    height: auto !important;
+    margin-bottom: 6px !important;
+  }
+
+  header .brand-text {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin: 4px 0 !important;
+  }
+
+  header .lang {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin-top: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
