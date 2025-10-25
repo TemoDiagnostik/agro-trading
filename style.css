@@ -1013,73 +1013,86 @@ header .lang select {
 }
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
+
+  /* الهيكل العام للهيدر */
   header .container.nav {
-   display: flex ;
-   flex-direction: column ;
-   align-items: center ;
-   justify-content: flex-start ;
-   background: rgba(255, 255, 255, 0.6) ;
-   backdrop-filter: blur(8px);
-   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-   padding: 8px 0 10px 0 ;
-   gap: 6px ;
-   box-sizing: border-box ;
- }
- /* ???? ?????: ?????? ???? ?????? */
- header .brand {
-   display: flex ;
-   align-items: center ;
-   justify-content: center ;
-   gap: 8px ;
- }
- header .logo-img {
-   max-height: 100px ; /* ????? ?????? - ???? 85px ?? ??? ???? */
-   height: auto ;
- }
- header .brand-text {
-   font-size: 0.95rem ;
-   font-weight: 700 ;
-   color: #0a662f ;
-   line-height: 1.2 ;
-   text-align: center ;
- }
- /* ???? ??????: ????? ??????? */
- header nav {
-   width: 100% ;
- }
- header nav ul {
-   display: flex ;
-   flex-wrap: wrap ;
-   justify-content: center ;
-   align-items: center ;
-   gap: 10px ;
-   padding: 0 ;
-   margin: 0 ;
- }
-header nav ul li a {
-   font-size: 0.9rem ;
-   color: #000 ;
-   border-bottom: 2px solid #0a662f ;
-   padding-bottom: 2px ;
-   font-weight: 500 ;
- }
- /* ???? ??????: ?? ????? */
- header .lang {
-   display: flex ;
-   justify-content: center ;
-   align-items: center ;
-   gap: 6px ;
-   margin-top: 4px ;
- }
- header .lang select {
-   background: rgba(255, 255, 255, 0.8) ;
-   border: 1px solid rgba(0, 0, 0, 0.15) ;
-   border-radius: 6px ;
-   color: #0a662f ;
-   font-size: 0.85rem ;
-   padding: 3px 8px ;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 8px 0 10px 0 !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* الصف الأول: اللوجو واسم الشركة */
+  header .brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+
+  header .logo-img {
+    max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    height: auto !important;
+  }
+
+
+  header .brand-text {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #0a662f !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  /* الصف الثاني: روابط القائمة */
+  header nav {
+    width: 100% !important;
+  }
+
+  header nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+ header nav ul li a {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+    border-bottom: 2px solid #0a662f !important;
+    padding-bottom: 2px !important;
+    font-weight: 500 !important;
+  }
+
+  /* الصف الثالث: زر اللغة */
+  header .lang {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 4px !important;
+  }
+
+  header .lang select {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    font-size: 0.85rem !important;
+    padding: 3px 8px !important;
   }
 }
+
  
 /* === FIX: Separate language selector column (for all languages) === */
 @media (min-width: 769px) {
