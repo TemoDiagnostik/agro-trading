@@ -51,40 +51,65 @@ header {
   z-index: 100;
   transition: all 0.3s ease;
 }
-/* ????? ?????? ????? */
+/* ===== شريط الرأس (Header) — النسخة النهائية المتوازنة ===== */
 header .container.nav {
-  height: 70px ;
+  height: 56px;                       /* أنحف فعليًا (بدل 70px) */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 26px;                    /* توازن جانبي أفضل */
+  gap: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.04); /* شفاف خفيف وأنيق */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
-/* ?????? */
+
+/* ===== اللوجو ===== */
 header .logo-img {
-  max-height: 90px ;
+  max-height: 96px;                   /* تكبير محسوب */
   height: auto;
+  transition: transform 0.3s ease;
 }
-/* ?? ?????? */
+header .logo-img:hover {
+  transform: scale(1.05);             /* حركة خفيفة عند المرور */
+}
+
+/* ===== نص اسم الشركة ===== */
 header .brand-text {
   font-weight: 700;
-  font-size: 1.1rem;
-  color: #0a662f ; /* ???? ???? */
+  font-size: 1.2rem;                  /* أكبر قليلًا */
+  color: #0a662f;
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
+
+/* ===== عناصر القائمة ===== */
 header nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 header nav ul li a {
-  font-size: 0.82rem;
+  font-size: 0.95rem;                 /* تكبير بسيط */
   font-weight: 500;
   color: #000;
   text-decoration: none;
-  }
+  transition: color 0.2s ease;
+}
+header nav ul li a:hover {
+  color: #0a662f;                     /* تفاعل أنيق مع اللون الأساسي */
+}
+
+/* ===== زر اللغات ===== */
+header .lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
 /* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
 header nav ul li a {
   position: relative;
@@ -114,24 +139,28 @@ header .lang span {
   font-size: 1rem;
   line-height: 1;
 }
-/* ???????? - ???? ????? ??????? */
-@media (max-width: 768px) {
-  header .lang {
-    position: static ;
-    transform: none ;
-    margin-top: 6px ;
-    justify-content: center ;
-  }
-}
-/* ????? ????? */
+/* ===== إعدادات الموبايل ===== */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px ;
+    height: 60px;                    /* أصغر للموبايل */
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 14px;
+    gap: 8px;
   }
   header .logo-img {
-    max-height: 80px ;
+    max-height: 80px;
+  }
+  header .brand-text {
+    font-size: 1rem;
+  }
+  header nav ul li a {
+    font-size: 0.9rem;
+  }
+  header .lang {
+    position: static;
+    margin-top: 6px;
+    justify-content: center;
   }
 }
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
@@ -1153,43 +1182,7 @@ html[dir="rtl"] header .lang {
 
 
 
-/* ===== تحسين حجم البار واللوجو والنصوص (نسخة نهائية) ===== */
 
-/* ✅ تقليل ارتفاع البار ليصبح أنحف */
-header .container.nav {
-  height: 60px !important;         /* كان 68px - أصبح أنحف قليلاً */
-  padding: 0 24px !important;      /* توازن جانبي مريح */
-  gap: 16px !important;            /* مسافة معتدلة بين العناصر */
-}
 
-/* ✅ تكبير اللوجو */
-header .logo-img {
-  max-height: 95px !important;     /* كان حوالي 80-85 */
-  height: auto;
-  transition: transform 0.3s ease;
-}
 
-header .logo-img:hover {
-  transform: scale(1.05);          /* تكبير بسيط عند المرور عليه */
-}
 
-/* ✅ تكبير النصوص داخل البار */
-header nav a,
-header nav span,
-header nav button {
-  font-size: 1.05rem !important;   /* تكبير خفيف للنصوص */
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-/* ✅ تحسين تناسق زر اللغة */
-header .lang {
-  font-size: 0.95rem !important;
-  gap: 8px;
-}
-
-/* ✅ الحفاظ على التوازن في جميع اللغات */
-html[dir="rtl"] header .container.nav {
-  flex-direction: row !important;
-  text-align: left !important;
-}
