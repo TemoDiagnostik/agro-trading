@@ -938,6 +938,8 @@ header nav ul li a:hover {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    flex-wrap: wrap !important;
+    overflow: hidden !important;
     width: 100% !important;
     gap: 4px !important;
     padding: 6px 12px !important;
@@ -948,7 +950,10 @@ header nav ul li a:hover {
     border-bottom: 1px solid rgba(0,0,0,0.05);
   }
 
-  header .logo-img { max-height: 58px !important; height: auto !important; }
+  header .logo-img {
+    max-height: 58px !important;
+    height: auto !important;
+  }
 
   header .brand-text {
     font-size: 0.88rem !important;
@@ -956,29 +961,41 @@ header nav ul li a:hover {
     text-align: center !important;
     white-space: normal !important;
     line-height: 1.3 !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
   }
 
-  header nav { width: 100% !important; }
+  header nav {
+    width: 100% !important;
+  }
+
   header nav ul {
     flex-wrap: wrap !important;
     justify-content: center !important;
     gap: 8px !important;
   }
-  
- header nav ul li a {
+
+  header nav ul li a {
     font-size: 0.85rem !important;
     padding-bottom: 2px !important;
     white-space: nowrap !important;
   }
 
-   header .lang select {
-  background: rgba(255,255,255,0.7) !important;
-  border: 1px solid rgba(0,0,0,0.15) !important;
-  border-radius: 6px !important;
-  color: #0a662f !important;
-  padding: 4px 8px !important;
-  font-size: 0.85rem !important;
- }
+  header .lang {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 4px;
+  }
+
+  header .lang select {
+    background: rgba(255,255,255,0.7) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    padding: 4px 8px !important;
+    font-size: 0.85rem !important;
+  }
 }
 
  
