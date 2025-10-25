@@ -1101,3 +1101,31 @@ header .lang select {
   }
 }
 }}}}
+
+
+/* ===== HEADER FIX: restore slim bar & spacing around language selector ===== */
+header .container.nav {
+  height: 70px !important;
+  padding: 0 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* إصلاح تراكب زر اللغة */
+header .lang {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem; /* زيادة المسافة بين الكرة الأرضية والنصوص */
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin-right: 60px; /* يبعد النصوص قليلاً عن زر اللغة */
+}
