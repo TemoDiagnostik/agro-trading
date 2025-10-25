@@ -149,6 +149,17 @@ header .lang span {
 }
 
 
+/* شاشات صغيرة */
+@media (max-width: 768px) {
+  header .container.nav {
+    height: 64px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .logo-img {
+    max-height: 80px !important;
+  }
+}
 
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
