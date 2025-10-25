@@ -49,94 +49,44 @@ html[lang="ar"] {
 
 
 
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
-header {
-  position: relative !important;   /* غير ثابت */
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
-  backdrop-filter: blur(6px); /* ضباب خفيف */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  height: auto;
-  z-index: 100;
-  transition: all 0.3s ease;
-}
+/* ===== MOBILE HEADER — FIXED VERSION (by Python) ===== */
 
-/* تقليل ارتفاع البار */
-header .container.nav {
-  height: 70px !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
 
-/* اللوجو */
-header .logo-img {
-  max-height: 90px !important;
-  height: auto;
-}
-
-/* نص الشركة */
-header .brand-text {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #0a662f !important; /* أخضر غامق */
-  margin-left: 10px;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
-}
-
-header nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li a {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
+  header .logo-img {
+    max-height: 65px !important;
+    height: auto !important;
   }
-/* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
-header nav ul li a {
-  position: relative;
-  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
-  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
-  transition: all 0.3s ease;
-}
 
-/* عند المرور يتغير اللون */
-header nav ul li a:hover {
-  color: #0a662f !important; /* ← النص يصبح أخضر */
-  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
-}
+  header .brand-text {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    color: #0a662f !important;
+  }
 
+  header nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 6px 0 !important;
+  }
 
-header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
-}
+  header .lang {
+    margin-top: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
 
-/* زر اللغة */
-header .lang select {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 6px;
-  color: #0a662f;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-}
-
-
-
-/* الكرة الأرضية والاختيار */
-header .lang span {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-
+  header .lang select {
+    background: rgba(255,255,255,0.8) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    padding: 4px 8px !important;
+    font-size: 0.85rem !important;
+  }
 
 /* الموبايل — نرجع الوضع الطبيعي */
 @media (max-width: 768px) {
