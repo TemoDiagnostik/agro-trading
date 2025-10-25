@@ -1013,8 +1013,7 @@ header .lang select {
 }
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
- /* ?????? ????? ?????? */
- header .container.nav {
+  header .container.nav {
    display: flex ;
    flex-direction: column ;
    align-items: center ;
@@ -1079,7 +1078,9 @@ header nav ul li a {
    color: #0a662f ;
    font-size: 0.85rem ;
    padding: 3px 8px ;
- }
+  }
+}
+ 
 /* === FIX: Separate language selector column (for all languages) === */
 @media (min-width: 769px) {
  header .container.nav {
