@@ -131,6 +131,10 @@ header .lang span {
     flex-wrap: wrap;
     justify-content: center;
   }
+  header .logo-img {
+    max-height: 80px !important;
+  }
+}
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
