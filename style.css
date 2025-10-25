@@ -1101,4 +1101,20 @@ html[dir="rtl"] header .lang {
 
 
 
+/* ===== FIX: Language selector alignment on desktop ===== */
+header .lang {
+  position: static;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
+header .lang select {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  color: #0a662f;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+}
