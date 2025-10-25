@@ -919,7 +919,6 @@ header nav ul li a:hover {
 
 /* ===== MOBILE HEADER — FIXED VERSION (by Temo) ===== */
 @media (max-width: 768px) {
-  /* ===== تثبيت الهيدر أعلى الشاشة ===== */
   header {
     position: fixed !important;
     top: 0 !important;
