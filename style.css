@@ -1158,35 +1158,71 @@ html[dir="rtl"] header .lang {
 
 
 
-
-/* ===== MOBILE HEADER FIX (FULL HEIGHT) ===== */
+/* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
+  /* ?????? ????? ?????? */
   header .container.nav {
-    height: auto !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 10px 16px !important;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: flex-start ;
+    background: rgba(255, 255, 255, 0.6) ;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 8px 0 10px 0 ;
+    gap: 6px ;
+    box-sizing: border-box ;
   }
-
+  /* ???? ?????: ?????? ???? ?????? */
+  header .brand {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    gap: 8px ;
+  }
   header .logo-img {
-    max-height: 70px !important;
-    height: auto !important;
-    margin-bottom: 6px !important;
+    max-height: 100px ; /* ????? ?????? - ???? 85px ?? ??? ???? */
+    height: auto ;
   }
-
   header .brand-text {
-    font-size: 1rem !important;
-    text-align: center !important;
-    margin: 4px 0 !important;
+    font-size: 0.95rem ;
+    font-weight: 700 ;
+    color: #0a662f ;
+    line-height: 1.2 ;
+    text-align: center ;
   }
-
+  /* ???? ??????: ????? ??????? */
+  header nav {
+    width: 100% ;
+  }
+  header nav ul {
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+    align-items: center ;
+    gap: 10px ;
+    padding: 0 ;
+    margin: 0 ;
+  }
+ header nav ul li a {
+    font-size: 0.9rem ;
+    color: #000 ;
+    border-bottom: 2px solid #0a662f ;
+    padding-bottom: 2px ;
+    font-weight: 500 ;
+  }
+  /* ???? ??????: ?? ????? */
   header .lang {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    margin-top: 8px !important;
-    display: flex !important;
-    justify-content: center !important;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    gap: 6px ;
+    margin-top: 4px ;
   }
-}
+  header .lang select {
+    background: rgba(255, 255, 255, 0.8) ;
+    border: 1px solid rgba(0, 0, 0, 0.15) ;
+    border-radius: 6px ;
+    color: #0a662f ;
+    font-size: 0.85rem ;
+    padding: 3px 8px ;
