@@ -931,9 +931,8 @@ header nav ul li a:hover {
 }
 
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
-@media (max-width: 768px) {
-
-  /* الهيكل العام للهيدر */
+ 
+ @media (max-width: 768px) {
   header .container.nav {
     display: flex !important;
     flex-direction: column !important;
