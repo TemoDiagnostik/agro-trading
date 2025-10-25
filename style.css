@@ -917,8 +917,21 @@ header nav ul li a:hover {
  color: #0a662f ;
 }
 
-/* ===== MOBILE HEADER — FIXED VERSION (by Python) ===== */
+/* ===== MOBILE HEADER — FIXED VERSION (by Temo) ===== */
 @media (max-width: 768px) {
+  /* ===== تثبيت الهيدر أعلى الشاشة ===== */
+  header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background: rgba(255,255,255,0.96) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* ===== تنسيق الحاوية داخل الهيدر ===== */
   header .container.nav {
     display: flex !important;
     flex-direction: column !important;
@@ -928,16 +941,16 @@ header nav ul li a:hover {
     padding: 6px 12px !important;
     height: auto !important;
     box-sizing: border-box !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
     gap: 4px !important;
   }
 
+  /* ===== اللوجو ===== */
   header .logo-img {
     max-height: 65px !important;
     height: auto !important;
   }
 
+  /* ===== نص الشركة ===== */
   header .brand-text {
     font-size: 0.9rem !important;
     font-weight: 700 !important;
@@ -946,6 +959,7 @@ header nav ul li a:hover {
     color: #0a662f !important;
   }
 
+  /* ===== القوائم ===== */
   header nav ul {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -954,6 +968,7 @@ header nav ul li a:hover {
     margin: 6px 0 !important;
   }
 
+  /* ===== زر اللغة ===== */
   header .lang {
     margin-top: 8px !important;
     display: flex !important;
@@ -967,6 +982,11 @@ header nav ul li a:hover {
     color: #0a662f !important;
     padding: 4px 8px !important;
     font-size: 0.85rem !important;
+  }
+
+  /* ===== إضافة مسافة للهيرو لتجنب تغطية النص بالهيدر ===== */
+  .hero, .hero-bleed {
+    margin-top: 120px !important;
   }
 }
 
