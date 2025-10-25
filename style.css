@@ -117,24 +117,23 @@ header .lang span {
 /* ???????? - ???? ????? ??????? */
 @media (max-width: 768px) {
   header .lang {
-    position: static !important;
-    transform: none !important;
-    margin-top: 6px !important;
-    justify-content: center !important;
+    position: static ;
+    transform: none ;
+    margin-top: 6px ;
+    justify-content: center ;
   }
 }
 /* ????? ????? */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 64px !important;
+    height: 64px ;
     flex-wrap: wrap;
     justify-content: center;
   }
   header .logo-img {
-    max-height: 80px !important;
+    max-height: 80px ;
   }
 }
-
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
