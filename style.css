@@ -937,13 +937,14 @@ header nav ul li a:hover {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 8px 0 10px 0 !important;
-    gap: 6px !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 6px 12px !important;
+    height: auto !important;
     box-sizing: border-box !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    gap: 4px !important;
   }
 
   /* الصف الأول: اللوجو واسم الشركة */
