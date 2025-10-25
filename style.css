@@ -1093,6 +1093,33 @@ html[dir="rtl"] header .lang {
 }
 
 
+/* ===== MOBILE HEADER NAME SHORT VERSION ===== */
+@media (max-width: 768px) {
+  header .brand-text {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 85vw !important; /* يمنع تجاوز العرض */
+  }
 
+  /* استبدال النص الطويل بنسخة مختصرة أنيقة */
+  header .brand-text::before {
+    content: "Euro Agri Trading s.r.o";
+  }
+
+  /* إخفاء النص الأصلي حتى لا يتكرر */
+  header .brand-text {
+    color: transparent !important;
+    position: relative;
+  }
+  header .brand-text::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #0a662f;
+    font-weight: 700;
+  }
+}
 
 
