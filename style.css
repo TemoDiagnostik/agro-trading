@@ -672,42 +672,43 @@ html, body {
   background: transparent !important;
 }
 
-/* HEADER BASE */
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;
+  position: relative !important;   /* غير ثابت */
   width: 100%;
-  background: rgba(255,255,255,0.05) !important;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
+  backdrop-filter: blur(6px); /* ضباب خفيف */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  height: auto;
   z-index: 100;
   transition: all 0.3s ease;
 }
 
-/* INNER CONTAINER */
+/* تقليل ارتفاع البار */
 header .container.nav {
-  height: 68px !important;
+  height: 70px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
 }
 
-/* LOGO */
+/* اللوجو */
 header .logo-img {
   max-height: 85px !important;
   height: auto;
 }
 
-/* BRAND TEXT */
+/* نص الشركة */
 header .brand-text {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #0a662f;
+  color: #0a662f !important; /* أخضر غامق */
   margin-left: 10px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
-/* NAV LINKS */
+/* روابط القائمة */
 header nav ul {
   display: flex;
   gap: 1rem;
@@ -717,18 +718,18 @@ header nav ul {
 }
 
 header nav ul li a {
-  font-size: 0.82rem;
+  color: #000000 !important;    /* أسود صريح */
+  font-size: 0.8rem !important; /* أصغر قليلًا */
   font-weight: 500;
-  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #0a662f;
+  color: #0a662f !important; /* أخضر عند المرور */
 }
 
-/* LANGUAGE SELECT */
+/* زر اللغة */
 header .lang select {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.2);
@@ -738,25 +739,21 @@ header .lang select {
   font-size: 0.85rem;
 }
 
-/* MOBILE VIEW */
+/* شاشات صغيرة */
 @media (max-width: 768px) {
   header .container.nav {
-    height: 60px !important;
+    height: 64px !important;
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  /* ===== تكبير اللوجو في الموبايل فقط ===== */
+@media (max-width: 768px) {
   header .logo-img {
-    max-height: 75px !important;
-  }
-
-  header .lang {
-    position: static !important;
-    transform: none !important;
-    margin-top: 6px !important;
-    justify-content: center !important;
+    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
+    height: auto !important;
   }
 }
+
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
