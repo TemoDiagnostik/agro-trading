@@ -138,27 +138,59 @@ header .lang span {
 
 
 
-/* ????????  ???? ????? ??????? */
+/* ===== MOBILE HEADER — FIXED VERSION (by Python) ===== */
 @media (max-width: 768px) {
- header .lang {
-   position: static !important;
-   transform: none !important;
-   margin-top: 6px !important;
-   justify-content: center !important;
- }
+  header .container.nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 6px 12px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    gap: 4px !important;
+  }
+
+  header .logo-img {
+    max-height: 65px !important;
+    height: auto !important;
+  }
+
+  header .brand-text {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    color: #0a662f !important;
+  }
+
+  header nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 6px 0 !important;
+  }
+
+  header .lang {
+    margin-top: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  header .lang select {
+    background: rgba(255,255,255,0.8) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    padding: 4px 8px !important;
+    font-size: 0.85rem !important;
+  }
 }
 
-/* ????? ????? */
-@media (max-width: 768px) {
- header .container.nav {
-   height: 64px !important;
-   flex-wrap: wrap;
-   justify-content: center;
- }
- header .logo-img {
-   max-height: 80px !important;
- }
-}
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
@@ -666,87 +698,6 @@ form label {
 }
 
 
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
-header {
- position: relative !important;   /* ??? ???? */
- width: 100%;
- background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
- backdrop-filter: blur(6px); /* ???? ???? */
- box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
- height: auto;
- z-index: 100;
- transition: all 0.3s ease;
-}
-
-/* ????? ?????? ????? */
-header .container.nav {
- height: 70px !important;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 0 20px;
-}
-
-/* ?????? */
-header .logo-img {
- max-height: 85px !important;
- height: auto;
-}
-
-/* ?? ?????? */
-header .brand-text {
- font-weight: 700;
- font-size: 1.1rem;
- color: #0a662f !important; /* ???? ???? */
- margin-left: 10px;
- text-shadow: 0 1px 1px rgba(255,255,255,0.3);
-}
-
-/* ????? ??????? */
-header nav ul {
- display: flex;
- gap: 1rem;
- list-style: none;
- margin: 0;
- padding: 0;
-}
-
-header nav ul li a {
- color: #000000 !important;    /* ???? ???? */
- font-size: 0.8rem !important; /* ???? ?????? */
- font-weight: 500;
- text-decoration: none;
- transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
- color: #0a662f !important; /* ???? ??? ?????? */
-}
-
-/* ?? ????? */
-header .lang select {
- background: rgba(255,255,255,0.15);
- border: 1px solid rgba(255,255,255,0.2);
- border-radius: 6px;
- color: #0a662f;
- padding: 4px 8px;
- font-size: 0.85rem;
-}
-
-/* ????? ????? */
-@media (max-width: 768px) {
- header .container.nav {
-   height: 64px !important;
-   flex-wrap: wrap;
-   justify-content: center;
- }
- /* ===== ????? ?????? ?? ???????? ??? ===== */
-@media (max-width: 768px) {
- header .logo-img {
-   max-height:100px !important; /* ????? ??????  ???? 85px ?? ??? ???? */
-   height: auto !important;
- }
-}
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
@@ -869,31 +820,7 @@ header .lang select {
    width: 220px ;
  }
 }
-/* ?? ??????? ???????: ????? ???? ???? */
-@media (max-width: 768px) {
- header .container.nav {
-   flex-direction: column ;
-   align-items: center ;
-   justify-content: center ;
-   height: auto ;
-   padding: 10px 0 ;
- }
- header .brand {
-   margin-bottom: 8px ;
- }
- header nav ul {
-   flex-wrap: wrap ;
-   justify-content: center ;
-   gap: 8px ;
-   margin-top: 6px ;
- }
- header nav ul li a {
-   font-size: 0.8rem ;
- }
- header .lang {
-   margin-top: 8px ;
- }
-}
+
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
 .hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
@@ -950,66 +877,57 @@ header nav ul li a:hover {
  border-bottom-color: #0d9488 ;
  color: #0a662f ;
 }
-/* ===== MOBILE HEADER SLIM (ONE BLOCK ONLY) ===== */
+/* ===== MOBILE HEADER — FIXED VERSION (by Python) ===== */
 @media (max-width: 768px) {
- header .container.nav {
-   display: flex ;
-   flex-direction: column ;
-   align-items: center ;
-   justify-content: center ;
-   width: 100% ;
-   gap: 4px ;
-   padding: 6px 12px ;
-   height: auto ;
-   box-sizing: border-box ;
-   background: rgba(255, 255, 255, 0.45) ;
-   backdrop-filter: blur(6px);
-   border-bottom: 1px solid rgba(0,0,0,0.05);
- }
- header .logo-img { max-height: 58px ; height: auto ; }
- header .brand-text {
-   font-size: 0.88rem ;
-   margin: 0 ;
-   text-align: center ;
-   white-space: normal ;
-   line-height: 1.3 ;
- }
- header nav { width: 100% ; }
- header nav ul {
-   flex-wrap: wrap ;
-   justify-content: center ;
-   gap: 8px ;
- }
-header nav ul li a {
-   font-size: 0.85rem ;
-   padding-bottom: 2px ;
-   white-space: nowrap ;
- }
- header .lang select {
-   background: rgba(255,255,255,0.7) ;
-   border: 1px solid rgba(0,0,0,0.1) ;
-   border-radius: 6px ;
-   color: #0a662f ;
-   font-size: 0.8rem ;
-   padding: 4px 8px ;
- }
-/* ???? ???? */
-header .lang select {
- background: rgba(255,255,255,0.7) ;
- border: 1px solid rgba(0,0,0,0.15) ;
- border-radius: 6px ;
- color: #0a662f ;
- padding: 4px 8px ;
- font-size: 0.85rem ;
-}
-/* ???????? - ????? ????? ?????? ??? */
-@media (max-width: 768px) {
- header .lang {
-   position: static ;
-   transform: none ;
-   justify-content: center ;
-   margin-top: 6px ;
- }
+  header .container.nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 6px 12px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    gap: 4px !important;
+  }
+
+  header .logo-img {
+    max-height: 65px !important;
+    height: auto !important;
+  }
+
+  header .brand-text {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    color: #0a662f !important;
+  }
+
+  header nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 6px 0 !important;
+  }
+
+  header .lang {
+    margin-top: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  header .lang select {
+    background: rgba(255,255,255,0.8) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 6px !important;
+    color: #0a662f !important;
+    padding: 4px 8px !important;
+    font-size: 0.85rem !important;
+  }
 }
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
