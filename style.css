@@ -38,13 +38,17 @@ html[lang="ar"] {
   --radius: 14px;
   --ring: rgba(16,185,129, .35);
 }
-/* ===== ??????? ?????? ===== */
+
+/* ===== الحاوية العامة ===== */
 .container {
   max-width: 1200px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 }
+
+
+
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
   position: relative !important;   /* غير ثابت */
@@ -155,6 +159,7 @@ header .lang span {
     max-height: 80px !important;
   }
 }
+
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
