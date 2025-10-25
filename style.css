@@ -40,16 +40,27 @@ html[lang="ar"] {
   padding: 0 20px;
   margin: 0 auto;
 }
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+/* ===== HEADER GLOBAL FIX (لمنع الشريط الأبيض المكرر) ===== */
 header {
-  position: relative ;   /* ??? ???? */
+  position: relative;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05) ; /* ???? ????? */
-  backdrop-filter: blur(6px); /* ???? ???? */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
   height: auto;
-  z-index: 100;
+  background: transparent !important;   /* يمنع الخلفية البيضاء */
+  box-shadow: none !important;          /* يلغي أي ظل إضافي */
+  border: none !important;
+  z-index: 1000;
   transition: all 0.3s ease;
+}
+
+/* تأكيد أن الهيرو يبدأ مباشرة بعد البار */
+.hero,
+.hero-bleed {
+  margin-top: 0 !important;
+  padding-top: 100px !important;       /* يترك مساحة مريحة للبار */
 }
 /* ===== شريط الرأس (Header) — النسخة النهائية المتوازنة ===== */
 header .container.nav {
