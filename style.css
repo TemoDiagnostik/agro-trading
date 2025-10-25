@@ -1149,3 +1149,47 @@ html[dir="rtl"] header .lang {
   right: 20px;
   direction: ltr;
 }
+
+
+
+
+/* ===== تحسين حجم البار واللوجو والنصوص (نسخة نهائية) ===== */
+
+/* ✅ تقليل ارتفاع البار ليصبح أنحف */
+header .container.nav {
+  height: 60px !important;         /* كان 68px - أصبح أنحف قليلاً */
+  padding: 0 24px !important;      /* توازن جانبي مريح */
+  gap: 16px !important;            /* مسافة معتدلة بين العناصر */
+}
+
+/* ✅ تكبير اللوجو */
+header .logo-img {
+  max-height: 95px !important;     /* كان حوالي 80-85 */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+header .logo-img:hover {
+  transform: scale(1.05);          /* تكبير بسيط عند المرور عليه */
+}
+
+/* ✅ تكبير النصوص داخل البار */
+header nav a,
+header nav span,
+header nav button {
+  font-size: 1.05rem !important;   /* تكبير خفيف للنصوص */
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ✅ تحسين تناسق زر اللغة */
+header .lang {
+  font-size: 0.95rem !important;
+  gap: 8px;
+}
+
+/* ✅ الحفاظ على التوازن في جميع اللغات */
+html[dir="rtl"] header .container.nav {
+  flex-direction: row !important;
+  text-align: left !important;
+}
