@@ -1011,6 +1011,30 @@ header .lang select {
    margin-top: 6px ;
  }
 }
+
+
+
+
+/* الزر نفسه */
+header .lang select {
+  background: rgba(255,255,255,0.7) !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  border-radius: 6px !important;
+  color: #0a662f !important;
+  padding: 4px 8px !important;
+  font-size: 0.85rem !important;
+}
+
+/* الموبايل — نعيده للوضع العادي تحت */
+@media (max-width: 768px) {
+  header .lang {
+    position: static !important;
+    transform: none !important;
+    justify-content: center !important;
+    margin-top: 6px !important;
+  }
+}
+ 
 /* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
 
