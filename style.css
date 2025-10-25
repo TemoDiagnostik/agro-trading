@@ -1185,34 +1185,6 @@ header .lang select {
     flex-direction: row !important;
   }
 }
-/* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
-@media (min-width: 769px) {
-  html[dir="rtl"] header .container.nav {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    align-items: center !important;
-    direction: ltr !important;
-    text-align: left !important;
-  }
-
-  html[dir="rtl"] header .brand {
-    flex-direction: row !important;
-  }
-
-  html[dir="rtl"] header nav ul {
-    direction: ltr !important;
-    justify-content: center !important;
-  }
-
-  html[dir="rtl"] header .lang {
-    right: 25px !important;
-    left: auto !important;
-    flex-direction: row !important;
-    position: relative !important;
-    transform: none !important;
-  }
-}
-
 
   /* ===================================================
    إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
