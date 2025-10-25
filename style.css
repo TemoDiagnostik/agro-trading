@@ -138,15 +138,6 @@ header .lang span {
 
 
 
-/* الموبايل — نرجع الوضع الطبيعي */
-@media (max-width: 768px) {
-  header .lang {
-    position: static !important;
-    transform: none !important;
-    margin-top: 6px !important;
-    justify-content: center !important;
-  }
-}
 
 
 
