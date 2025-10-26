@@ -243,15 +243,84 @@ header .lang span {
 /* ====================== تنسيق توزيع النصوص ======================= */
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  gap: 1.5rem;
   position: relative;
-  text-align: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 60px 20px 40px 20px;
 }
+
+.hero-title {
+  text-align: left;
+  font-size: clamp(42px, 5vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-subline.small-text {
+  text-align: left;
+  font-size: clamp(16px, 2.2vw, 20px);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-product-specs {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  transform: translateY(-45%);
+  background: rgba(0,0,0,0.35);
+  padding: 1rem 1.4rem;
+  border-radius: 10px;
+  color: #ffffff;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.hero-product-specs .tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.hero-bottom-left {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  max-width: 360px;
+  text-align: left;
+}
+
+.hero-bottom-left .small-text {
+  font-size: clamp(14px, 1.8vw, 16px);
+  opacity: 0.85;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+/* تباعد وتنسيق إضافي */
+@media (max-width: 768px) {
+  .hero-product-specs {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    left: auto;
+    top: auto;
+    background: rgba(0,0,0,0.45);
+    padding: 1rem;
+  }
+  .hero-bottom-left {
+    left: 16px;
+    bottom: 20px;
+    font-size: 14px;
+  }
 
 /* الكارد الرئيسي في المنتصف */
 .hero .center-card {
