@@ -38,6 +38,11 @@ html[lang="ar"] {
  --radius: 14px;
  --ring: rgba(16,185,129, .35);
 }
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* ===== ??????? ?????? ===== */
 .container {
