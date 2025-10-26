@@ -147,15 +147,16 @@ header .lang span {
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
- position: relative;
- width: 100vw;                              /* ????? ?????? */
- margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
- padding: 60px 20px;
- background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
- background-color: #ffffff;                 /* ??????? ???? ???? */
- overflow: hidden;
- text-align: left;
- z-index: 0;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
+  height: 100vh; /* <== أضف هذا السطر */
 }
 /* ????? ?? ???? ????? */
 .hero::before,
