@@ -1119,13 +1119,3 @@ html[dir="rtl"] header .lang {
 }
 
 
-@media screen and (max-height: 450px) and (orientation: landscape) {
-  .hero-content {
-    padding-top: 100px !important;
-  }
-
-  header .container.nav {
-    flex-wrap: wrap;
-    height: auto !important;
-  }
-}
