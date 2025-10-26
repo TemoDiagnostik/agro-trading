@@ -1273,4 +1273,21 @@ header .container.nav {
   }
 }
 
+@media (max-width: 768px) {
+  .cta-row {
+    display: flex;
+    flex-direction: column; /* يخلي الزرين فوق بعض */
+    align-items: center;
+    gap: 12px; /* مسافة رأسية بين الزرين */
+    margin-top: 14px;
+  }
+
+  .cta-row .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+
  }}}}
