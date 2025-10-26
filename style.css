@@ -144,127 +144,74 @@ header .lang span {
 
 
 
-/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
-.hero,
-.hero-bleed {
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 80px;
+  text-align: center; /* أو left/ right حسب تصميمك */
+  z-index: 2;
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat;
-  background-color: #ffffff;
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
-  height: 100vh; /* <== أضف هذا السطر */
+  color: #ffffff;
 }
-/* ????? ?? ???? ????? */
-.hero::before,
-.hero-bleed::before {
- content: none ;
+
+.hero-content h1 {
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-/* ???? ???? ?????? */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
- color: #ffffff ;
- text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
- position: relative;
- z-index: 2;
+
+.hero-content .lead {
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin-bottom: 2rem;
 }
-/* ???????? ??????? */
-.hero h1 {
- font-size: clamp(36px, 6vw, 60px);
- font-weight: 700;
- margin-bottom: 0.6rem;
+
+.hero-content strong[data-i18n="hero.highlight"] {
+  display: block;
+  font-size: clamp(20px, 2.8vw, 28px);
+  margin-bottom: 2rem;
+  background: rgba(0,0,0,0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
-.hero p {
- font-size: clamp(15px, 2vw, 18px);
- line-height: 1.5;
- max-width: 720px;
- margin-bottom: 1rem;
+
+.hero-content .hero-card {
+  background: rgba(0,0,0,0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  color: #fff;
 }
-/* ?? ??????? */
-.hero .cta-row {
- display: flex ;
- justify-content: center ;
- align-items: center ;
- flex-wrap: wrap ;
- gap: 14px ;
- margin-top: 22px ;
- position: relative;
- z-index: 2;
+
+.hero-content .hero-card h3 {
+  font-size: clamp(24px, 3.2vw, 32px);
+  margin-bottom: 0.8rem;
 }
-/* ??????? */
-.hero .cta-row .btn {
- width: 200px ;
- height: 48px ;
- line-height: 48px ;
- text-align: center ;
- border-radius: 8px;
- font-weight: 600;
- font-size: 16px;
- transition: all 0.3s ease;
+
+.hero-content .hero-card p.muted {
+  font-size: clamp(16px, 2.2vw, 20px);
+  opacity: 0.9;
+  margin-bottom: 1rem;
 }
-/* ?? ????? */
-.hero .btn-primary {
- background-color: #0a662f ;
- border: 2px solid #ffffff ;
- color: #ffffff ;
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+.hero-content .hero-card ul {
+  margin: 0;
+  padding-inline-start: 1.1rem;
+  list-style: none;
 }
-.hero .btn-primary:hover {
- background-color: #ffffff ;
- color: #0a662f ;
+
+.hero-content .hero-card ul li {
+  font-size: clamp(14px, 1.9vw, 18px);
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
 }
-/* ?? ????? */
-.hero .btn-outline {
- background-color: #0d9488 ;
- border: 2px solid #0d9488 ;
- color: #ffffff ;
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-.hero .btn-outline:hover {
- background-color: #0a6e64 ;
- border-color: #0a6e64 ;
- color: #ffffff ;
- transform: translateY(-1px);
-}
-/* ????? ????? ??????? */
-.hero .muted,
-.hero .note,
-.hero .lead {
- color: #ffffff ;
- opacity: 1 ;
-}
-/* ??????? */
-@media (max-width: 768px) {
- .hero,
- .hero-bleed {
-   background: url("hero-bg-mobile.png") center/cover no-repeat;
-   padding: 40px 16px 60px;
-   text-align: center;
- }
- .hero h1 { font-size: 28px; }
- .hero p { font-size: 15px; }
- .hero .cta-row {
-   gap: 12px ;
-   flex-direction: row ;
-   justify-content: center ;
- }
- .hero .cta-row .btn {
-   width: 200px ;
-   min-width: 200px ;
- }
-}
-@media (max-width: 380px) {
- .hero .cta-row {
-   flex-direction: column ;
-   align-items: center ;
-   gap: 12px ;
- }
- .hero .cta-row .btn {
-   width: 220px ;
- }
+
+.hero-content .hero-card .tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  font-size: 0.85em;
 }
 /* ===== TRUST BANNER ===== */
 .trust-banner {
