@@ -1110,42 +1110,26 @@ header .lang {
   flex-direction: row !important;
 }
 
-/* ✅ حتى في RTL على الموبايل */
-@media (max-width: 768px) {
-  html[dir="rtl"] header .container.nav {
-    direction: ltr !important;
-    text-align: left !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  html[dir="rtl"] header .lang {
-    right: 16px !important;
-    left: auto !important;
-  }
-}
- 
-
-
 
 
 /* ===================================================
    إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
    =================================================== */
 
-/* شكل البار القديم (نحيف) ومسافات متوازنة */
+/* ✅ اجعل الهيدر دائمًا LTR مهما كانت اللغة */
 header .container.nav {
-  height: 68px !important;              /* ارتفاع البار القديم */
+  height: 68px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row !important;       /* ثابت دائماً - لا ينعكس */
-  padding: 0 22px !important;           /* توازن جانبي */
-  gap: 18px !important;                 /* مسافات بين العناصر */
+  flex-direction: row !important;
+  padding: 0 22px !important;
+  gap: 18px !important;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
-/* زر اللغة والأيقونة */
+/* ✅ زر اللغة والأيقونة */
 header .lang {
   display: flex;
   align-items: center;
@@ -1154,9 +1138,11 @@ header .lang {
   position: relative;
   top: 0;
   right: 0;
+  direction: ltr !important;
+  flex-direction: row !important;
 }
 
-/* فصل الروابط والكلمات ومنع الالتصاق والانكسار */
+/* ✅ فصل الروابط والكلمات ومنع الالتصاق والانكسار */
 header nav a,
 header nav span,
 header nav button {
@@ -1164,23 +1150,12 @@ header nav button {
   white-space: nowrap;
 }
 
-
-
-/* موضع زر اللغة في العربية */
+/* ✅ موضع زر اللغة في العربية */
 html[dir="rtl"] header .lang {
   left: auto;
   right: 20px;
   direction: ltr;
 }
-
-/* ✅ Fix: Keep header LTR on all devices, even RTL languages */
-header .container.nav {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-
-
 
 /* === ✅ Fix: Position Language Selector in Mobile View === */
 @media (max-width: 768px) {
@@ -1191,20 +1166,25 @@ header .container.nav {
     width: auto !important;
     margin: 0 !important;
     z-index: 999 !important;
+    margin-top: 2px !important;
   }
-}
 
-/* ✅ RTL Fix for Arabic and similar */
-@media (max-width: 768px) {
+  /* ✅ RTL Fix for Arabic and similar */
   html[dir="rtl"] header .lang {
     right: auto !important;
     left: 16px !important;
   }
-}
 
+  /* ✅ منع انعكاس الهيدر حتى في RTL */
+  html[dir="rtl"] header .container.nav {
+    direction: ltr !important;
+    text-align: left !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 
-
-@media (max-width: 768px) {
+  /* ✅ تصغير ارتفاع الهيدر وتحسين تنسيقه */
   header .container.nav {
     padding-top: 4px !important;
     padding-bottom: 4px !important;
@@ -1212,56 +1192,20 @@ header .container.nav {
     min-height: 48px !important;
   }
 
+  /* ✅ اللوجو */
   header .logo-img {
     max-height: 64px !important;
     height: 64px !important;
     margin-top: -10px !important;
     margin-bottom: -6px !important;
-  }
-
-  header .brand-text {
-    font-size: 0.85rem !important;
-    line-height: 1.1 !important;
-    margin: 0 !important;
-    max-width: 100%;
-    text-align: center !important;
-  }
-
-  header .lang {
-    margin-top: 2px !important;
-  }
-}
-
-
-
-
-
-@media (max-width: 768px) {
-  /* تحسينات إضافية للهيدر */
-  header {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* ظل خفيف */
-    transition: all 0.3s ease-in-out;
-  }
-
-  header .container.nav {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    gap: 2px !important; /* تقليل المسافة */
-    min-height: 48px !important;
-  }
-
-  header .logo-img {
-    max-height: 64px !important;
-    height: 64px !important;
-    margin-top: -8px !important;
-    margin-bottom: -4px !important;
     transition: transform 0.3s ease;
   }
 
   header .logo-img:hover {
-    transform: scale(1.04); /* لمسة لطيفة عند التمرير */
+    transform: scale(1.04);
   }
 
+  /* ✅ نص اسم الشركة */
   header .brand-text {
     font-size: 0.85rem !important;
     line-height: 1.1 !important;
@@ -1271,7 +1215,9 @@ header .container.nav {
     opacity: 0.96;
   }
 
-  header .lang {
-    margin-top: 2px !important;
+  /* ✅ تحسين شكل الهيدر */
+  header {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
   }
 }
