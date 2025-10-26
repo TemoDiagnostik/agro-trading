@@ -118,16 +118,13 @@ header nav ul li a:hover {
  color: #0a662f !important; /* ???? ??? ?????? */
 }
 
-/* ?? ????? */
+/* ✅ إطار أخضر ثابت لزر اللغة */
 header .lang select {
- background: rgba(255,255,255,0.15);
- border: 1px solid rgba(255,255,255,0.2);
- border-radius: 6px;
- color: #0a662f;
- padding: 4px 8px;
- font-size: 0.85rem;
+  border: 2px solid #0A962F !important;  /* أخضر ثابت */
+  border-radius: 6px !important;         /* زوايا ناعمة */
+  padding: 4px 8px !important;           /* مسافة داخلية مريحة */
+  background-color: #ffffff !important;  /* خلفية بيضاء ثابتة */
 }
-
 
 
 /* ????? ??????? ????????? */
@@ -1169,7 +1166,7 @@ header nav button {
 
 
 html[dir="rtl"] header .lang {
-  right: -12px !important;
+  right: -15px !important;
   left: auto !important;
 }
 
