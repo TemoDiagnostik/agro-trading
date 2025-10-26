@@ -1169,7 +1169,7 @@ header nav button {
 
 
 html[dir="rtl"] header .lang {
-  right: 60px !important;
+  right: -12px !important;
   left: auto !important;
 }
 
