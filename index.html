@@ -33,11 +33,7 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <meta name="theme-color" content="#0a662f">
 
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+
   
 
   <!-- Set early lang/dir (يبقى كما هو لتجنّب فليكر) -->
@@ -144,38 +140,52 @@
 </header>
 
 		<!-- قسم الهيرو (Hero) -->
-		<section id="home" class="hero-bleed">
-			<div class="hero-media" aria-hidden="true"></div>
-			<div class="container hero-content">
-				<h1 data-i18n="hero.title">AGRO SERVICES</h1>
-				<p class="lead" data-i18n="hero.desc">We act as a trade intermediary between suppliers and buyers, ensuring transparency and mutual trust.</p>
-				<strong data-i18n="hero.highlight">We have access to preferential prices not available on the open market.</strong>
-				<div class="cta-row">
-					<a class="btn btn-primary" href="#contact" data-i18n="hero.cta">Request a Quote</a>
-					<a href="#coa" class="btn btn-outline" onclick="document.getElementById('coa').scrollIntoView({ behavior: 'smooth' }); return false;">
-  Open COA
-</a>
-				</div>
-				<div class="card hero-card">
-					<h3 style="margin-top:0" data-i18n="products.title">Main Product</h3>
-					<p class="muted" data-i18n="products.lead">Rock Phosphate — 26% P₂O₅ (reference sample)</p>
-					<ul style="margin:0; padding-inline-start:1.1rem; line-height:1.8;">
-						<li>
-							<span class="tag">P₂O₅ ≥ 26.3%</span>
-							<span class="tag">SiO₂ ≈ 13.3%</span>
-							<span class="tag">F ≈ 2.6%</span>
-						</li>
-						<li data-i18n="products.spec1">Screened granulometry — ready for milling or direct application.</li>
-						<li data-i18n="products.spec2">Attached COA + optional further analyses on request.</li>
-					</ul>
-					<div style="margin-top: 0.8rem;">
-						<a class="btn btn-outline" href="#coa" data-i18n="products.viewCoa">Open COA</a>
-						<a class="btn btn-primary" href="#contact" data-i18n="card.rock.cta">Request a Quote</a>
-					</div>
-					<p class="lead" data-i18n="hero.tradeNote" style="margin-top: 1rem;">All transactions follow international trade standards.</p>
-				</div>
-			</div>
-		</section>
+<section id="home" class="hero-bleed">
+  <div class="hero-media" aria-hidden="true"></div>
+  <div class="container hero-content">
+
+    <h1 data-i18n="hero.title">AGRO SERVICES</h1>
+    <p class="lead" data-i18n="hero.desc">
+      We act as a trade intermediary between suppliers and buyers, ensuring transparency and mutual trust.
+    </p>
+    <strong data-i18n="hero.highlight">
+      We have access to preferential prices not available on the open market.
+    </strong>
+
+    <!-- ✅ زرين فقط -->
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">Request a Quote</a>
+      <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open COA</a>
+    </div>
+
+    <div class="card hero-card">
+      <h3 style="margin-top:0" data-i18n="products.title">Main Product</h3>
+      <p class="muted" data-i18n="products.lead">
+        Rock Phosphate — 26% P₂O₅ (reference sample)
+      </p>
+      <ul style="margin:0; padding-inline-start:1.1rem; line-height:1.8;">
+        <li>
+          <span class="tag">P₂O₅ ≥ 26.3%</span>
+          <span class="tag">SiO₂ ≈ 13.3%</span>
+          <span class="tag">F ≈ 2.6%</span>
+        </li>
+        <li data-i18n="products.spec1">
+          Screened granulometry — ready for milling or direct application.
+        </li>
+        <li data-i18n="products.spec2">
+          Attached COA + optional further analyses on request.
+        </li>
+      </ul>
+
+      <!-- ❌ حذف الأزرار المكررة هنا -->
+
+      <p class="lead" data-i18n="hero.tradeNote" style="margin-top: 1rem;">
+        All transactions follow international trade standards.
+      </p>
+    </div>
+
+  </div>
+</section>
 		<!-- قسم المنتجات (Products) -->
 		<section id="products">
 			<div class="container">
