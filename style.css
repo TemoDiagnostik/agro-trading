@@ -267,25 +267,49 @@ header .lang span {
 
 
 
- /* توزيع النصوص داخل الهيرو بشكل احترافي */
+ /* تنسيق توزيع النصوص داخل الهيرو */
 .hero-content {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* توسيط رأسي */
-  align-items: flex-start; /* محاذاة لليسار */
-  height: 100%; /* ملء الهيرو بالكامل */
-  gap: 1.4rem; /* مسافة بين العناصر */
-  max-width: 720px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1.5rem;
+  position: relative;
+  text-align: center;
 }
 
-.hero .hero-card {
-  margin-top: auto; /* تدفع الكارت لأسفل الهيرو */
+.hero .center-card {
   background: rgba(0, 0, 0, 0.35);
   border-radius: 12px;
   padding: 1.2rem 1.5rem;
   backdrop-filter: blur(4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  color: #fff;
+  max-width: 720px;
+}
+
+.hero .center-card .tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin: 0 6px 6px 0;
+  font-size: 14px;
+}
+
+.hero .small-text {
+  font-size: 14px;
+  opacity: 0.9;
+  max-width: 640px;
+}
+
+.hero .left-bottom-text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 14px;
+  opacity: 0.9;
+  text-align: left;
  
  }
 }
