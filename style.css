@@ -1096,19 +1096,6 @@ header nav ul li a:hover {
 
 
 
- 
-//* ✅ اجعل الهيدر دائمًا LTR مهما كانت اللغة */
-header .container.nav {
-  direction: ltr !important;
-  text-align: left !important;
-  flex-direction: row !important;
-}
-
-/* ✅ تأكيد على ترتيب زر اللغة دائمًا */
-header .lang {
-  direction: ltr !important;
-  flex-direction: row !important;
-}
 
 
 
