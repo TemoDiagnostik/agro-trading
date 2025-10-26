@@ -156,118 +156,92 @@ header .lang span {
   overflow: hidden;
   text-align: left;
   z-index: 0;
-  height: 100vh; /* <== أضف هذا السطر */
+  height: 100vh;
 }
-/* ????? ?? ???? ????? */
+
 .hero::before,
 .hero-bleed::before {
- content: none ;
+  content: none;
 }
-/* ???? ???? ?????? */
+
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
- color: #ffffff ;
- text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
- position: relative;
- z-index: 2;
+  color: #ffffff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
 }
-/* ???????? ??????? */
+
 .hero h1 {
- font-size: clamp(36px, 6vw, 60px);
- font-weight: 700;
- margin-bottom: 0.6rem;
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
+
 .hero p {
- font-size: clamp(15px, 2vw, 18px);
- line-height: 1.5;
- max-width: 720px;
- margin-bottom: 1rem;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 1rem;
 }
-/* ?? ??????? */
+
 .hero .cta-row {
- display: flex ;
- justify-content: center ;
- align-items: center ;
- flex-wrap: wrap ;
- gap: 14px ;
- margin-top: 22px ;
- position: relative;
- z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 22px;
+  position: relative;
+  z-index: 2;
 }
-/* ??????? */
+
 .hero .cta-row .btn {
- width: 200px ;
- height: 48px ;
- line-height: 48px ;
- text-align: center ;
- border-radius: 8px;
- font-weight: 600;
- font-size: 16px;
- transition: all 0.3s ease;
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
-/* ?? ????? */
+
 .hero .btn-primary {
- background-color: #0a662f ;
- border: 2px solid #ffffff ;
- color: #ffffff ;
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  background-color: #0a662f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
 .hero .btn-primary:hover {
- background-color: #ffffff ;
- color: #0a662f ;
+  background-color: #ffffff;
+  color: #0a662f;
 }
-/* ?? ????? */
+
 .hero .btn-outline {
- background-color: #0d9488 ;
- border: 2px solid #0d9488 ;
- color: #ffffff ;
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #0d9488;
+  border: 2px solid #0d9488;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 .hero .btn-outline:hover {
- background-color: #0a6e64 ;
- border-color: #0a6e64 ;
- color: #ffffff ;
- transform: translateY(-1px);
+  background-color: #0a6e64;
+  border-color: #0a6e64;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
-/* ????? ????? ??????? */
+
 .hero .muted,
 .hero .note,
 .hero .lead {
- color: #ffffff ;
- opacity: 1 ;
+  color: #ffffff;
+  opacity: 1;
 }
-/* ??????? */
-@media (max-width: 768px) {
- .hero,
- .hero-bleed {
-   background: url("hero-bg-mobile.png") center/cover no-repeat;
-   padding: 40px 16px 60px;
-   text-align: center;
- }
- .hero h1 { font-size: 28px; }
- .hero p { font-size: 15px; }
- .hero .cta-row {
-   gap: 12px ;
-   flex-direction: row ;
-   justify-content: center ;
- }
- .hero .cta-row .btn {
-   width: 200px ;
-   min-width: 200px ;
- }
-}
-@media (max-width: 380px) {
- .hero .cta-row {
-   flex-direction: column ;
-   align-items: center ;
-   gap: 12px ;
- }
- .hero .cta-row .btn {
-   width: 220px ;
 
+/* ====================== تنسيق توزيع النصوص ======================= */
 
-
- /* تنسيق توزيع النصوص داخل الهيرو */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -279,6 +253,7 @@ header .lang span {
   text-align: center;
 }
 
+/* الكارد الرئيسي في المنتصف */
 .hero .center-card {
   background: rgba(0, 0, 0, 0.35);
   border-radius: 12px;
@@ -288,6 +263,7 @@ header .lang span {
   max-width: 720px;
 }
 
+/* تاغات المنتج */
 .hero .center-card .tag {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
@@ -297,12 +273,14 @@ header .lang span {
   font-size: 14px;
 }
 
+/* النص الصغير */
 .hero .small-text {
   font-size: 14px;
   opacity: 0.9;
   max-width: 640px;
 }
 
+/* النص أسفل الصورة على أقصى اليسار */
 .hero .left-bottom-text {
   position: absolute;
   bottom: 24px;
@@ -310,10 +288,58 @@ header .lang span {
   font-size: 14px;
   opacity: 0.9;
   text-align: left;
- 
- }
+  max-width: 380px;
+  line-height: 1.5;
 }
 
+/* ==================================================== */
+
+@media (max-width: 768px) {
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 60px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero .cta-row {
+    gap: 12px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero .cta-row .btn {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .hero .left-bottom-text {
+    left: 12px;
+    right: 12px;
+    font-size: 13px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero .cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero .cta-row .btn {
+    width: 220px;
+  }
+}
 
 
 /* ===== TRUST BANNER ===== */
