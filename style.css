@@ -264,8 +264,34 @@ header .lang span {
  }
  .hero .cta-row .btn {
    width: 220px ;
+
+
+
+ /* توزيع النصوص داخل الهيرو بشكل احترافي */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* توسيط رأسي */
+  align-items: flex-start; /* محاذاة لليسار */
+  height: 100%; /* ملء الهيرو بالكامل */
+  gap: 1.4rem; /* مسافة بين العناصر */
+  max-width: 720px;
+}
+
+.hero .hero-card {
+  margin-top: auto; /* تدفع الكارت لأسفل الهيرو */
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+ 
  }
 }
+
+
+
 /* ===== TRUST BANNER ===== */
 .trust-banner {
  padding:.9rem 0;
