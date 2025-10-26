@@ -482,6 +482,22 @@
 			// تبديل صنف عند التمرير (للهيدر الظل/التأثير)
 			window.addEventListener("scroll", () => { document.body.classList.toggle("scrolled", window.scrollY > 80); });
 		</script>
+
+
+		<script>
+  document.getElementById('langSelect').addEventListener('change', function() {
+    const selectedLang = this.value;
+    const url = new URL(window.location.href);
+
+    // غيّر أو أضف ?lang=... حسب اللغة المختارة
+    url.searchParams.set('lang', selectedLang);
+
+    // إعادة التوجيه للصفحة باللغة المختارة
+    window.location.href = url.toString();
+  });
+</script>
+
+		
 		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
 {
