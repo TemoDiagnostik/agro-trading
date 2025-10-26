@@ -1179,6 +1179,11 @@ html[dir="rtl"] header .lang {
   direction: ltr;
 }
 
+/* ✅ Fix: Keep header LTR on all devices, even RTL languages */
+header .container.nav {
+  direction: ltr !important;
+  text-align: left !important;
+}
 
 
 
@@ -1233,8 +1238,46 @@ html[dir="rtl"] header .lang {
   }
 }
 
-/* ✅ Fix: Keep header LTR on all devices, even RTL languages */
-header .container.nav {
-  direction: ltr !important;
-  text-align: left !important;
+
+
+
+
+@media (max-width: 768px) {
+  /* تحسينات إضافية للهيدر */
+  header {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* ظل خفيف */
+    transition: all 0.3s ease-in-out;
+  }
+
+  header .container.nav {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    gap: 2px !important; /* تقليل المسافة */
+    min-height: 48px !important;
+  }
+
+  header .logo-img {
+    max-height: 64px !important;
+    height: 64px !important;
+    margin-top: -8px !important;
+    margin-bottom: -4px !important;
+    transition: transform 0.3s ease;
+  }
+
+  header .logo-img:hover {
+    transform: scale(1.04); /* لمسة لطيفة عند التمرير */
+  }
+
+  header .brand-text {
+    font-size: 0.85rem !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    max-width: 100%;
+    text-align: center !important;
+    opacity: 0.96;
+  }
+
+  header .lang {
+    margin-top: 2px !important;
+  }
 }
