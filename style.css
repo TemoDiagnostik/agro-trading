@@ -144,13 +144,13 @@ header .lang span {
 
 
 
-/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
+/* ===================== HERO SECTION ===================== */
 .hero,
 .hero-bleed {
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 60px 20px;
+  padding: 0;
   background: url("hero-bg-desktop.png") center/cover no-repeat;
   background-color: #ffffff;
   overflow: hidden;
@@ -158,89 +158,6 @@ header .lang span {
   z-index: 0;
   height: 100vh;
 }
-
-.hero::before,
-.hero-bleed::before {
-  content: none;
-}
-
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: clamp(36px, 6vw, 60px);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-
-.hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.5;
-  max-width: 720px;
-  margin-bottom: 1rem;
-}
-
-.hero .cta-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 22px;
-  position: relative;
-  z-index: 2;
-}
-
-.hero .cta-row .btn {
-  width: 200px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.hero .btn-primary {
-  background-color: #0a662f;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-.hero .btn-primary:hover {
-  background-color: #ffffff;
-  color: #0a662f;
-}
-
-.hero .btn-outline {
-  background-color: #0d9488;
-  border: 2px solid #0d9488;
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.hero .btn-outline:hover {
-  background-color: #0a6e64;
-  border-color: #0a6e64;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.hero .muted,
-.hero .note,
-.hero .lead {
-  color: #ffffff;
-  opacity: 1;
-}
-
-/* ====================== تنسيق توزيع النصوص ======================= */
 
 .hero-content {
   position: relative;
@@ -251,21 +168,27 @@ header .lang span {
   padding: 60px 20px 40px 20px;
 }
 
+/* ======= العنوان ======= */
 .hero-title {
   text-align: left;
-  font-size: clamp(42px, 5vw, 60px);
+  font-size: clamp(38px, 4.8vw, 56px);
   font-weight: 700;
   margin-bottom: 0.6rem;
   text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  color: #ffffff;
 }
 
+/* ======= الجملة الترويجية ======= */
 .hero-subline.small-text {
   text-align: left;
-  font-size: clamp(16px, 2.2vw, 20px);
+  font-size: clamp(16px, 2vw, 18px);
   margin-bottom: 2rem;
   opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  color: #ffffff;
 }
 
+/* ======= بلوك مواصفات المنتج ======= */
 .hero-product-specs {
   position: absolute;
   top: 45%;
@@ -280,6 +203,17 @@ header .lang span {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
+.hero-product-specs p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-product-specs ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
 .hero-product-specs .tag {
   display: inline-block;
   background: rgba(255,255,255,0.15);
@@ -290,6 +224,7 @@ header .lang span {
   font-size: 14px;
 }
 
+/* ======= الجمل التوضيحية أسفل اليسار ======= */
 .hero-bottom-left {
   position: absolute;
   bottom: 24px;
@@ -299,117 +234,60 @@ header .lang span {
 }
 
 .hero-bottom-left .small-text {
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-size: clamp(12px, 1.5vw, 14px);
   opacity: 0.85;
   line-height: 1.4;
   margin-bottom: 0.4rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  color: #ffffff;
 }
 
-/* تباعد وتنسيق إضافي */
-@media (max-width: 768px) {
-  .hero-product-specs {
-    position: static;
-    transform: none;
-    margin-top: 2rem;
-    left: auto;
-    top: auto;
-    background: rgba(0,0,0,0.45);
-    padding: 1rem;
-  }
-  .hero-bottom-left {
-    left: 16px;
-    bottom: 20px;
-    font-size: 14px;
-  }
-
-/* الكارد الرئيسي في المنتصف */
-.hero .center-card {
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 12px;
-  padding: 1.2rem 1.5rem;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  max-width: 720px;
-}
-
-/* تاغات المنتج */
-.hero .center-card .tag {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 3px 8px;
-  border-radius: 6px;
-  margin: 0 6px 6px 0;
-  font-size: 14px;
-}
-
-/* النص الصغير */
-.hero .small-text {
-  font-size: 14px;
-  opacity: 0.9;
-  max-width: 640px;
-}
-
-/* النص أسفل الصورة على أقصى اليسار */
-.hero .left-bottom-text {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  font-size: 14px;
-  opacity: 0.9;
-  text-align: left;
-  max-width: 380px;
-  line-height: 1.5;
-}
-
-/* ==================================================== */
-
+/* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-content {
     padding: 40px 16px 60px;
+  }
+
+  .hero-title {
+    font-size: 30px;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
+  .hero-subline {
     font-size: 15px;
+    text-align: center;
   }
 
-  .hero .cta-row {
-    gap: 12px;
-    flex-direction: row;
-    justify-content: center;
+  .hero-product-specs {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    background: rgba(0,0,0,0.45);
+    padding: 1rem;
+    left: auto;
+    top: auto;
   }
 
-  .hero .cta-row .btn {
-    width: 200px;
-    min-width: 200px;
-  }
-
-  .hero .left-bottom-text {
-    left: 12px;
-    right: 12px;
-    font-size: 13px;
+  .hero-bottom-left {
+    left: 16px;
+    right: 16px;
     bottom: 20px;
+    font-size: 13px;
+    max-width: unset;
+    text-align: center;
+  }
+
+  .hero-bottom-left .small-text {
+    font-size: 13px;
   }
 }
-
-@media (max-width: 380px) {
-  .hero .cta-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hero .cta-row .btn {
-    width: 220px;
-  }
-}
-
 
 /* ===== TRUST BANNER ===== */
 .trust-banner {
