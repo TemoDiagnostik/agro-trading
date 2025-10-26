@@ -1202,3 +1202,40 @@ html[dir="rtl"] header .lang {
     left: 16px !important;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  /* تصغير ارتفاع الهيدر */
+  header .container.nav {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    gap: 4px !important;
+  }
+
+  /* تكبير اللوجو */
+  header .logo-img {
+    max-height: 80px !important;
+    height: auto !important;
+  }
+
+  /* تحسين محاذاة اسم الشركة */
+  header .brand-text {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  /* تحسين المسافات الداخلية للغة */
+  header .lang {
+    margin-top: 4px !important;
+  }
+
+  /* تأكيد أن اللوجو ما يختفيش */
+  header .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
