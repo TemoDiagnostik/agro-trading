@@ -1092,18 +1092,66 @@ header nav ul li a:hover {
    align-items: center ;
    gap: 6px ;
  }
+
+
+
+
  
+/* ===================================================
+   إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
+   =================================================== */
+
 /* ✅ اجعل الهيدر دائمًا LTR مهما كانت اللغة */
 header .container.nav {
   direction: ltr !important;
   text-align: left !important;
   flex-direction: row !important;
+  height: 68px !important;              /* ارتفاع البار القديم */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px !important;           /* توازن جانبي */
+  gap: 18px !important;                 /* مسافات بين العناصر */
 }
 
 /* ✅ تأكيد على ترتيب زر اللغة دائمًا */
 header .lang {
   direction: ltr !important;
   flex-direction: row !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+/* ✅ فصل الروابط والكلمات ومنع الالتصاق والانكسار */
+header nav a,
+header nav span,
+header nav button {
+  margin: 0 6px !important;
+  white-space: nowrap;
+}
+
+/* ✅ موضع زر اللغة في العربية */
+html[dir="rtl"] header .lang {
+  left: auto;
+  right: 20px;
+  direction: ltr;
+}
+
+/* === ✅ Fix: Position Language Selector in Mobile View === */
+@media (max-width: 768px) {
+  header .lang {
+    position: absolute !important;
+    top: 10px !important;
+    right: 16px !important;
+    width: auto !important;
+    margin: 0 !important;
+    z-index: 999 !important;
+  }
 }
 
 /* ✅ حتى في RTL على الموبايل */
@@ -1121,118 +1169,9 @@ header .lang {
     left: auto !important;
   }
 }
-}}}}
 
-
-
-/* ===================================================
-   إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
-   =================================================== */
-
-/* شكل البار القديم (نحيف) ومسافات متوازنة */
-header .container.nav {
-  height: 68px !important;              /* ارتفاع البار القديم */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row !important;       /* ثابت دائماً - لا ينعكس */
-  padding: 0 22px !important;           /* توازن جانبي */
-  gap: 18px !important;                 /* مسافات بين العناصر */
-}
-
-/* زر اللغة والأيقونة */
-header .lang {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
-/* فصل الروابط والكلمات ومنع الالتصاق والانكسار */
-header nav a,
-header nav span,
-header nav button {
-  margin: 0 6px !important;
-  white-space: nowrap;
-}
-
-
-
-/* موضع زر اللغة في العربية */
-html[dir="rtl"] header .lang {
-  left: auto;
-  right: 20px;
-  direction: ltr;
-}
-
-/* ✅ Fix: Keep header LTR on all devices, even RTL languages */
-header .container.nav {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-
-
-
-/* === ✅ Fix: Position Language Selector in Mobile View === */
+/* ✅ تحسينات عرض الموبايل */
 @media (max-width: 768px) {
-  header .lang {
-    position: absolute !important;
-    top: 10px !important;
-    right: 16px !important;
-    width: auto !important;
-    margin: 0 !important;
-    z-index: 999 !important;
-  }
-}
-
-/* ✅ RTL Fix for Arabic and similar */
-@media (max-width: 768px) {
-  html[dir="rtl"] header .lang {
-    right: auto !important;
-    left: 16px !important;
-  }
-}
-
-
-
-@media (max-width: 768px) {
-  header .container.nav {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    gap: 4px !important;
-    min-height: 48px !important;
-  }
-
-  header .logo-img {
-    max-height: 64px !important;
-    height: 64px !important;
-    margin-top: -10px !important;
-    margin-bottom: -6px !important;
-  }
-
-  header .brand-text {
-    font-size: 0.85rem !important;
-    line-height: 1.1 !important;
-    margin: 0 !important;
-    max-width: 100%;
-    text-align: center !important;
-  }
-
-  header .lang {
-    margin-top: 2px !important;
-  }
-}
-
-
-
-
-
-@media (max-width: 768px) {
-  /* تحسينات إضافية للهيدر */
   header {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* ظل خفيف */
     transition: all 0.3s ease-in-out;
