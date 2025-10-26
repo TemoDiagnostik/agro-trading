@@ -1092,40 +1092,34 @@ header nav ul li a:hover {
    align-items: center ;
    gap: 6px ;
  }
- /* ????? RTL (???????) - ???? ?? ????? */
- html[dir="rtl"] header .container.nav {
-   direction: ltr ;
-   text-align: left ;
- }
- html[dir="rtl"] header .lang {
-   right: 0 ;
-   left: auto ;
-   flex-direction: row ;
- }
+ 
+/* ✅ اجعل الهيدر دائمًا LTR مهما كانت اللغة */
+header .container.nav {
+  direction: ltr !important;
+  text-align: left !important;
+  flex-direction: row !important;
 }
-/* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
-@media (min-width: 769px) {
- html[dir="rtl"] header .container.nav {
-   display: grid ;
-   grid-template-columns: auto 1fr auto ;
-   align-items: center ;
-   direction: ltr ;
-   text-align: left ;
- }
- html[dir="rtl"] header .brand {
-   flex-direction: row ;
- }
- html[dir="rtl"] header nav ul {
-   direction: ltr ;
-   justify-content: center ;
- }
- html[dir="rtl"] header .lang {
-   right: 25px ;
-   left: auto ;
-   flex-direction: row ;
-   position: relative ;
-   transform: none ;
- }
+
+/* ✅ تأكيد على ترتيب زر اللغة دائمًا */
+header .lang {
+  direction: ltr !important;
+  flex-direction: row !important;
+}
+
+/* ✅ حتى في RTL على الموبايل */
+@media (max-width: 768px) {
+  html[dir="rtl"] header .container.nav {
+    direction: ltr !important;
+    text-align: left !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  html[dir="rtl"] header .lang {
+    right: 16px !important;
+    left: auto !important;
+  }
 }
 }}}}
 
@@ -1165,12 +1159,7 @@ header nav button {
   white-space: nowrap;
 }
 
-/* في العربية: نُثبت الاتجاه LTR فلا ينعكس الشريط */
-html[dir="rtl"] header .container.nav {
-  direction: ltr !important;
-  flex-direction: row !important;
-  text-align: left !important;
-}
+
 
 /* موضع زر اللغة في العربية */
 html[dir="rtl"] header .lang {
