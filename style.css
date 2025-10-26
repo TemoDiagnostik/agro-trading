@@ -723,7 +723,7 @@ header .lang select {
    justify-content: center;
  }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-height: 500px) {
   header .container.nav {
     height: auto !important;
     flex-direction: column;
@@ -737,6 +737,21 @@ header .lang select {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  header .container.nav {
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px !important; /* أو حسب المساحة المناسبة */
+  }
+
+  .hero-content {
+    padding-top: 80px; /* عشان ما يزحفش الهيرو فوق */
+  }
+} 
 
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
