@@ -715,13 +715,13 @@ header .lang select {
  font-size: 0.85rem;
 }
 
-@media (min-width: 769px) {
-  header .container.nav {
-    height: 64px !important;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+/* ????? ????? */
+@media (max-width: 768px) {
+ header .container.nav {
+   height: 64px !important;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
 
 @media (max-width: 768px) {
   header .container.nav {
