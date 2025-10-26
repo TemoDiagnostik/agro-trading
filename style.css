@@ -1062,38 +1062,3 @@ html[dir="rtl"] header .lang {
 }
 
 
-/* ============================= */
-/* 📱 General Mobile Adjustments */
-/* ============================= */
-@media (max-width: 768px) and (min-height: 500px) {
-  header .container.nav {
-    height: auto !important;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 16px;
-    gap: 6px;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* ===================================== */
-/* 🔄 Landscape View on Phones (e.g. Pro Max) */
-/* ===================================== */
-@media (orientation: landscape) and (max-height: 500px) {
-  header .container.nav {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 64px !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 16px;
-  }
-
-  .hero-content {
-    padding-top: 80px;
-  }
-}
