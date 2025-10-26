@@ -1159,8 +1159,8 @@ html[dir="rtl"] header .lang {
   }
 }
 
-/* ✅ Landscape Fix for Low-Height Screens (like iPhone Pro Max in landscape) */
-@media (max-width: 900px) and (orientation: landscape) and (max-height: 430px) {
+/* ✅ General Landscape Fix for All Mobiles */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
   header .container.nav {
     height: 72px !important;
     flex-direction: row;
@@ -1169,9 +1169,12 @@ html[dir="rtl"] header .lang {
     justify-content: space-between;
     padding: 8px 16px;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .hero-content {
-    padding-top: 90px !important; /* عشان الـ hero ما يطلعش تحت الهيدر */
+    padding-top: 90px !important;
   }
 }
