@@ -1,5 +1,5 @@
 {
-  "site.name": "Euro Agri Trading s.r.o — Trusted Agro Broker",
+ "site.name": "Euro Agri Trading s.r.o — Trusted Agro Broker",
 
   "nav.home": "Home",
   "nav.products": "Products",
@@ -12,7 +12,10 @@
   "hero.cta": "Request a Quote",
   "hero.cta2": "View COA",
   "hero.note": "* We operate independently as a broker/marketer. Not affiliated with any specific producer brand.",
-
+  "hero.title": "AGRO SERVICES — Trusted Agro Brokerage",
+  "hero.desc": "We serve as a trusted intermediary connecting certified suppliers with international buyers, ensuring full transparency and mutual confidence throughout the transaction process.",
+  "hero.highlight": "Benefit from factory-direct pricing and exclusive trade terms not available on the open market.",
+  
   "products.title": "Flagship Product",
   "products.lead": "Rock Phosphate — Grade 26% P₂O₅ (reference sample)",
   "products.spec1": "Graded by sieving — ready for grinding or direct application",
