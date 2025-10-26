@@ -80,9 +80,9 @@
   <!-- Preload hero image (كما هو) -->
   <link rel="preload" as="image" href="hero-port.png" imagesrcset="hero-port.png">
 </head>
-
-<body>
-<header>
+	<body>
+		<!-- قسم الرأس (الهيدر) -->
+		<header>
   <div class="container nav" role="navigation" aria-label="Primary">
     
     <!-- Logo -->
@@ -139,109 +139,98 @@
   </div>
 </header>
 
-
-<!-- HERO -->
+<!-- قسم الهيرو (Hero) -->
 <section id="home" class="hero-bleed">
   <div class="hero-media" aria-hidden="true"></div>
-
   <div class="container hero-content">
-  <h1 data-i18n="hero.title">AGRO SERVICES</h1>
 
-  <p class="lead" data-i18n="hero.desc">
-    We act as a trade intermediary between suppliers and buyers, ensuring transparency and mutual trust.
-  </p>
+    <h1 data-i18n="hero.title">AGRO SERVICES — Trusted Agro Brokerage</h1>
 
-  <strong data-i18n="hero.highlight">
-    We have access to preferential prices not available on the open market.
-  </strong>
+    <p class="lead" data-i18n="hero.desc">
+      We serve as a trusted intermediary connecting certified suppliers with international buyers, ensuring full transparency and mutual confidence throughout the transaction process.
+    </p>
 
-  <div class="cta-row">
-    <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">Request a Quote</a>
-    <a class="btn btn-outline" href="#coa" data-i18n="hero.cta2">View COA</a>
-  </div>
+    <strong data-i18n="hero.highlight">
+      Benefit from factory-direct pricing and exclusive trade terms not available on the open market.
+    </strong>
 
- 
+    <!-- ❌ تمت إزالة cta-row هنا -->
 
-   <div class="card hero-card">
-  <h3 style="margin-top:0" data-i18n="products.title">Main Product</h3>
+    <div class="card hero-card">
+      <h3 style="margin-top:0" data-i18n="products.title">Main Product</h3>
+      <p class="muted" data-i18n="products.lead">
+        Rock Phosphate — 26% P₂O₅ (reference sample)
+      </p>
+      <ul style="margin:0; padding-inline-start:1.1rem; line-height:1.8;">
+        <li>
+          <span class="tag">P₂O₅ ≥ 26.3%</span>
+          <span class="tag">SiO₂ ≈ 13.3%</span>
+          <span class="tag">F ≈ 2.6%</span>
+        </li>
+        <li data-i18n="products.spec1">
+          Screened granulometry — ready for milling or direct application.
+        </li>
+        <li data-i18n="products.spec2">
+          Attached COA + optional further analyses on request.
+        </li>
+      </ul>
 
-  <p class="muted" data-i18n="products.lead">
-    Rock Phosphate — 26% P₂O₅ (reference sample)
-  </p>
-
-  <ul style="margin:0; padding-inline-start:1.1rem; line-height:1.8;">
-    <li>
-      <span class="tag">P₂O₅ ≥ 26.3%</span>
-      <span class="tag">SiO₂ ≈ 13.3%</span>
-      <span class="tag">F ≈ 2.6%</span>
-    </li>
-    <li data-i18n="products.spec1">
-      Screened granulometry — ready for milling or direct application.
-    </li>
-    <li data-i18n="products.spec2">
-      Attached COA + optional further analyses on request.
-    </li>
-  </ul>
-
-  <div style="margin-top: 0.8rem;">
-    <a class="btn btn-outline" href="#coa" data-i18n="products.viewCoa">Open COA</a>
-    <a class="btn btn-primary" href="#contact" data-i18n="card.rock.cta">Request a Quote</a>
-  </div>
-
-  <p class="lead" data-i18n="hero.tradeNote" style="margin-top: 1rem;">
-    All transactions follow international trade standards.
-  </p>
-</div>
+      <p class="lead" data-i18n="hero.tradeNote" style="margin-top: 1rem;">
+        All transactions follow international trade standards.
+      </p>
     </div>
+
   </div>
 </section>
-
-<!-- PRODUCTS -->
+		<!-- 🌍 قسم المنتجات (Global Products Section) -->
 <section id="products">
   <div class="container">
     <h2 data-i18n="products.all">Available Products</h2>
-
+    
     <div class="grid cols-2">
-      <!-- Rock Phosphate -->
+      
+      <!-- 🌐 Rock Phosphate -->
       <div class="card">
         <h3 data-i18n="card.rock.title">Rock Phosphate — Grade 26%</h3>
         <p class="muted" data-i18n="card.rock.text">
-          Reliable supply via consolidated bulk shipments to EU ports, with competitive pricing direct from source.
+          Secure and reliable supply chain through consolidated bulk shipments to European ports. Sourced directly from certified producers.
         </p>
-        <div>
-  <span class="tag" data-i18n="log.bulk">Bulk & Big-Bag</span>
-  <span class="tag" data-i18n="log.ports">Ports: Alexandria / Damietta</span>
-  <span class="tag" data-i18n="log.incotermTag">Incoterms: FOB / CFR / DDP</span>
-</div>
+        <div class="tag-row">
+          <span class="tag" data-i18n="log.bulk">Bulk & Big-Bag</span>
+          <span class="tag" data-i18n="log.ports">Ports: Alexandria / Damietta</span>
+          <span class="tag" data-i18n="log.incotermTag">Incoterms: FOB / CFR / DDP</span>
+        </div>
         <div class="cta">
           <a class="btn btn-primary" href="#contact" data-i18n="card.rock.cta">Request Quote</a>
-          <a class="btn btn-outline" href="#coa" data-i18n="card.rock.coa">View COA</a>
+          <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open COA</a>
         </div>
       </div>
 
-      <!-- Urea -->
+      <!-- 🌐 Urea / NPK -->
       <div class="card">
-        <h3 data-i18n="card.urea.title">Urea / NPK (on request)</h3>
+        <h3 data-i18n="card.urea.title">Urea / NPK (Available Upon Request)</h3>
         <p class="muted" data-i18n="card.urea.text">
-          Additional products (Urea, MAP/DAP, NPK) are available on request to meet client needs.
+          Additional fertilizers (Urea, MAP, DAP, NPK blends) can be supplied upon client specifications and regional requirements.
         </p>
-        <div>
-          <span class="tag" data-i18n="generic.expand">Ready to expand</span>
+        <div class="tag-row">
+          <span class="tag" data-i18n="generic.expand">Flexible export terms</span>
         </div>
         <div class="cta">
-          <a class="btn btn-primary" href="#contact" data-i18n="card.urea.cta">Inquire</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="card.urea.cta">Request Specification</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-
-<!-- SERVICES -->
+	<!-- 🌟 قسم الخدمات (Services Section) -->
 <section id="services">
   <div class="container">
     <h2 data-i18n="services.title">Our Services</h2>
-
+    
     <div class="grid cols-3 services-grid">
+
+      <!-- ✅ Agricultural Services -->
       <div class="service">
         <img src="service-agro.png" alt="Agricultural Services">
         <h3 data-i18n="services.agro">Agricultural Services</h3>
@@ -250,6 +239,7 @@
         </p>
       </div>
 
+      <!-- ✅ Quality Testing -->
       <div class="service">
         <img src="service-quality.png" alt="Quality Testing">
         <h3 data-i18n="services.quality">Quality Testing</h3>
@@ -258,6 +248,7 @@
         </p>
       </div>
 
+      <!-- ✅ Laboratory Analysis -->
       <div class="service">
         <img src="service-lab.png" alt="Laboratory Analysis">
         <h3 data-i18n="services.analysis">Laboratory Analysis</h3>
@@ -265,23 +256,27 @@
           Advanced testing through specialized laboratories to verify shipments before export and delivery.
         </p>
       </div>
+
     </div>
   </div>
 </section>
-
-<!-- LOGISTICS -->
+		<!-- 🚢 قسم اللوجستيات (Logistics & Compliance) -->
 <section id="logistics">
   <div class="container">
     <h2 data-i18n="log.title">Logistics & Compliance</h2>
+
     <div class="grid cols-3">
 
-     <!-- Card 1 -->
-<div class="card">
-  <h3 data-i18n="log.incotermTag"></h3>
-  <p class="muted" data-i18n="log.incoterms"></p>
-  <img src="logistics1.png" alt="Incoterms" class="log-img">
-</div>
+      <!-- ✅ Incoterms -->
+      <div class="card">
+        <h3 data-i18n="log.incotermTag">FOB / CFR / CIF / DDP</h3>
+        <p class="muted" data-i18n="log.incoterms">
+         Shipment updates shared via email after booking confirmation.
+        </p>
+        <img src="logistics1.png" alt="Incoterms" class="log-img">
+      </div>
 
+      <!-- ✅ Ports & Packing -->
       <div class="card">
         <h3 data-i18n="log.ports.h">Ports & Packing</h3>
         <p class="muted" data-i18n="log.ports.p">
@@ -290,6 +285,7 @@
         <img src="logistics2.png" alt="Ports & Packing" class="log-img">
       </div>
 
+      <!-- ✅ EU Compliance -->
       <div class="card">
         <h3 data-i18n="log.compliance.h">EU Compliance</h3>
         <p class="muted" data-i18n="log.compliance.p">
@@ -297,11 +293,11 @@
         </p>
         <img src="logistics3.png" alt="EU Compliance" class="log-img">
       </div>
+
     </div>
   </div>
 </section>
-
-<!-- CERTIFICATES -->
+		<!-- 📄 قسم الشهادات (Certificates & Compliance Documents) -->
 <section id="certificates">
   <div class="container">
     <h2 data-i18n="cert.title">Certificates & Compliance Documents</h2>
@@ -309,63 +305,64 @@
       Note: The certificates displayed below are simplified marketing versions. Full versions can be provided upon request.
     </p>
 
-   <div class="grid">
-      <!-- Card 1 -->
+    <div class="grid">
+
+      <!-- COA Summary -->
       <div class="card">
         <img src="cert-coa-summary.png" alt="COA – Rock Phosphate 26%">
         <h3 data-i18n="coa.title">COA – Rock Phosphate 26%</h3>
         <p class="muted" data-i18n="coa.sub">Summary of lab analysis, P₂O₅ content: 26.33%</p>
         <div class="cta">
-          <a href="cert-coa-summary.png" class="btn btn-outline" target="_blank" data-i18n="coa.print">View</a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Full Version</a>
-        </div>
+  <a href="coa_rock_phosphate_grade26.pdf" class="btn btn-outline" target="_blank" download data-i18n="coa.print">Print/Save PDF — COA</a>
+  <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
+</div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Sieving Analysis -->
       <div class="card">
         <img src="cert-sieving-summary.png" alt="Sieving Analysis">
         <h3 data-i18n="sieve.title">Sieving Analysis</h3>
         <p class="muted" data-i18n="sieve.percent">Granulometry – Average particle size distribution</p>
         <div class="cta">
-          <a href="cert-sieving-summary.png" class="btn btn-outline" target="_blank" data-i18n="coa.print">View</a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Full Version</a>
-        </div>
+  <a href="sieving_analysis_grade26.pdf" class="btn btn-outline" target="_blank" download data-i18n="coa.print">Print/Save PDF — COA</a>
+  <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
+</div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- SGS Report -->
       <div class="card">
         <img src="cert-sgs-summary.png" alt="SGS Inspection Summary">
         <h3 data-i18n="services.quality">SGS Inspection Summary</h3>
         <p class="muted" data-i18n="services.quality.text">Independent QC report – Verified by SGS Egypt</p>
         <div class="cta">
-          <a href="cert-sgs-summary.png" class="btn btn-outline" target="_blank" data-i18n="coa.print">View</a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Full Version</a>
-        </div>
+  <a href="sgs_inspection_summary.pdf" class="btn btn-outline" target="_blank" download data-i18n="coa.print">Print/Save PDF — COA</a>
+  <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
+</div>
       </div>
 
-      <!-- Card 4 -->
+      <!-- EU Compliance -->
       <div class="card">
         <img src="cert-declaration.png" alt="EU Compliance Declaration">
         <h3 data-i18n="log.compliance.h">EU Compliance Declaration</h3>
         <p class="muted" data-i18n="log.compliance.p">Legal summary for EU market entry</p>
         <div class="cta">
-          <a href="cert-declaration.png" class="btn btn-outline" target="_blank" data-i18n="coa.print">View</a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Full Version</a>
-        </div>
+  <a href="eu_compliance_docs.pdf" class="btn btn-outline" target="_blank" download data-i18n="coa.print">Print/Save PDF — COA</a>
+  <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
+</div>
       </div>
 
-      <!-- Card 5 -->
+      <!-- MSDS -->
       <div class="card">
         <img src="cert-msds-summary.png" alt="MSDS Summary – EU Compliance">
         <h3 data-i18n="services.analysis">MSDS Summary – EU Compliance</h3>
         <p class="muted" data-i18n="services.analysis.text">Material safety summary for regulatory compliance (EU REACH)</p>
-        <div class="cta">
-          <a href="cert-msds-summary.png" class="btn btn-outline" target="_blank" data-i18n="coa.print">View</a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Full Version</a>
-        </div>
+       <div class="cta">
+  <a href="msds_summary_eu_reach.pdf" class="btn btn-outline" target="_blank" download data-i18n="coa.print">Print/Save PDF — COA</a>
+  <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
+</div>
       </div>
 
-      <!-- Card 6 (Soon) -->
+      <!-- Coming Soon -->
       <div class="card">
         <img src="soon-placeholder.png" alt="Coming Soon">
         <h3>Low-Cadmium Rock Phosphate</h3>
@@ -375,358 +372,215 @@
           <button class="btn btn-primary" disabled style="opacity: 0.7; cursor: wait;">Coming Soon</button>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+		<!-- ملاحظة الدفع (Payment note) -->
+		<div class="container">
+			<p class="muted" data-i18n="footer.payment">Payment: Typically via Irrevocable Letter of Credit (L/C). If required, we can coordinate with trusted trade-finance partners to provide flexible alternatives.</p>
+		</div>
+		
+		
+		<!-- قسم التعريف (About) -->
+		<section id="about">
+			<div class="about-bg">
+				<div class="content-box">
+					<div class="container">
+						<h2 data-i18n="about.title">About Us</h2>
+						<p data-i18n="about.p1">Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources.</p>
+						<p data-i18n="about.pricing">Competitive pricing through direct sourcing.</p>
+						<p data-i18n="about.p2">Third-party testing (SGS / BV) available upon request. Samples can be provided prior to contracting.</p>
+						<p data-i18n="about.p3">Our operations adhere to EU customs, trade, and agricultural import regulations. Full legal compliance is ensured through Czech registration and certification.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- قسم الاتصال (Contact) -->
+		<section id="contact">
+			<div class="container">
+				<div class="info-section">
+					<h2 class="contact-heading" data-i18n="contact.details">Contact Details</h2>
+					<p>
+						<strong data-i18n="site.company">Euro Agri Trading s.r.o — Limited Liability Company.</strong><br>
+						Nader Abdou<br>
+						Malenovice č.ev. 48<br>
+						Frýdlant nad Ostravicí, 739 11 — Czech Republic<br>
+						<span class="kbd">+420 732 133 919</span><br>
+						<span class="kbd">IČO: 17314780</span> — <span class="kbd">DIČ: CZ8005062648</span>
+					</p>
+					<div class="bank-section">
+						<h4>Local Bank — CZK (Air Bank a.s.)</h4>
+						<p><strong>IBAN:</strong> CZ75 3030 0000 0034 8056 0018<br>
+						<strong>SWIFT/BIC:</strong> AIRACZPP<br>
+						<strong>Account Holder:</strong> Nader Fathi Elsayed Abdou</p>
+					</div>
+					<div class="bank-section">
+						<h4>WISE Business — Multi-Currency Account</h4>
+						<div class="badges">
+							<span class="badge">EUR</span>
+							<span class="badge">USD</span>
+							<span class="badge">GBP</span>
+							<span class="badge">AED</span>
+							<span class="badge">CZK</span>
+							<span class="badge">EGP</span>
+							<span class="badge">NZD</span>
+							<span class="badge">PLN</span>
+							<span class="badge">TRY</span>
+						</div>
+						<p data-i18n="payment.details"></p>
+						<a class="btn btn-primary" href="mailto:info@euroagritrading.eu?subject=Request%20Proforma">Request Proforma / Wise Details</a>
+					</div>
+				</div>
+				<div class="form-section">
+					<h2 class="contact-heading" data-i18n="contact.title">Get in Touch</h2>
+					<form onsubmit="return sendMailto(this)">
+						<label>
+							<span data-i18n="form.name">Full Name</span><br>
+							<input name="name" required placeholder="Full Name">
+						</label><br><br>
+						<label>
+							<span data-i18n="form.email">Email</span><br>
+							<input name="email" type="email" required placeholder="you@example.com">
+						</label><br><br>
+						<label>
+							<span data-i18n="form.message">Message</span><br>
+							<textarea name="message" rows="5" required placeholder="Required: product / quantity / port / terms"></textarea>
+						</label>
+						<div class="cta">
+							<button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
+							<a class="btn btn-outline" href="https://wa.me/00420732133919" target="_blank" data-i18n="contact.whatsapp">WhatsApp</a>
+						</div>
+						<p class="note" data-i18n="contact.note">We do not use analytics cookies. This form opens your mail app to send directly.</p>
+					</form>
+				</div>
+				<p class="muted" data-i18n="contact.docs" style="margin-top:14px">Official documents (contracts, invoices, COA) are shared after qualifying the request.</p>
+			</div>
+		</section>
+		<!-- تنسيقات مساعدة داخلية (محفوظة كما هي) -->
+		<style>
+			/* بداية تنسيقات مساعدة صغيرة - لا تغيّر الكلاسات */
+			.bank-box,.wise-box{ border:1px solid #eaeaea; border-radius:10px; padding:12px; margin:10px 0; background:#fafafa }
+			.bank-title{ font-weight:600; margin-bottom:6px }
+			.bank-line{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace }
+			.badges{ display:flex; gap:6px; flex-wrap:wrap; margin-top:4px }
+			.badge{ border:1px solid #ddd; border-radius:999px; padding:4px 10px; font-size:.9rem; background:#fff }
+		</style>
+		<!-- تذييل الحقوق (Footer legal) -->
+		<div class="footer-legal" style="text-align:center; font-size:0.9rem; color:#ccc; margin-top:15px;">
+			© 2025 Euro Agri Trading s.r.o. — All rights reserved.<br>
+			Registered in Czech Republic | IČO: 17314780 | DIČ: CZ8005062648<br>
+			<span style="font-size:0.8rem; color:#aaa;">In compliance with EU Regulation (EC) No. 2003/2003 on fertilizers and REACH standards.</span>
+		</div>
+		<!-- i18n + utilities (scripts) -->
+		<script type="module">
+			// قائمة اللغات المدعومة
+			const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
+			const RTL = new Set(['ar']);
+			// اكتشاف اللغة (الافتراضية EN)
+			function detectLang(){
+				const url = new URLSearchParams(location.search).get('lang');
+				if (url) return url.toLowerCase().split('-')[0];
+				const saved = localStorage.getItem('lang');
+				if (saved) return saved.toLowerCase();
+				const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+				const guess = String(nav).toLowerCase().split('-')[0];
+				return SUPPORTED.includes(guess) ? guess : 'en';
+			}
+			// جلب JSON بأمان
+			async function fetchJson(path){
+				try{
+					const res = await fetch(path, {cache:'no-store'});
+					if(!res.ok) throw new Error(`HTTP ${res.status}`);
+					return await res.json();
+				}catch(err){ console.warn('i18n load failed:', path, err); return {}; }
+			}
+			// تحميل القاموس مع fallback إلى الإنجليزية
+			async function loadDict(lang){ const base = await fetchJson('i18n/en.json'); if (lang === 'en') return base; const loc = await fetchJson(`i18n/${lang}.json`); return { ...base, ...loc }; }
+			// تطبيق الترجمات
+			function applyI18n(dict, lang){
+				document.documentElement.lang = lang;
+				document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+				if (lang === 'ar') { document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif"; } else { document.documentElement.style.removeProperty('font-family'); }
+				document.querySelectorAll('[data-i18n]').forEach(el=>{ const key = el.getAttribute('data-i18n'); if (key && dict[key] != null) el.textContent = dict[key]; });
+				if (dict['site.name']) document.title = dict['site.name'];
+				const sel = document.getElementById('langSelect'); if (sel) sel.value = lang; localStorage.setItem('lang', lang);
+			}
+			async function setLang(lang){ try{ const dict = await loadDict(lang); applyI18n(dict, lang); }catch(err){ console.error(err); if (lang !== 'en'){ const dict = await loadDict('en'); applyI18n(dict, 'en'); } } }
+			const startLang = detectLang(); setLang(startLang);
+			document.addEventListener('change', async (e)=>{ const sel = document.getElementById('langSelect'); if (e.target === sel && sel){ const lang = sel.value; const u = new URL(location.href); u.searchParams.set('lang', lang); history.replaceState({}, '', u.toString()); await setLang(lang); } });
+			// CSV export helper
+			window.exportSievingCSV = function(){
+				const table = document.querySelector("#sieving"); if (!table) return;
+				const rows = [...table.querySelectorAll("tr")].map(tr => [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(","));
+				const csv = rows.join("\n");
+				const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
+				const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "sieving-analysis.csv"; document.body.appendChild(a); a.click(); a.remove();
+			};
+			// إرسال عبر mailto
+			window.sendMailto = function(form){
+				const data = new FormData(form); const to = "trading@temosliving.de"; const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
+				const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`);
+				location.href = `mailto:${to}?subject=${subject}&body=${body}`; return false;
+			};
+			// تمرير سلس للروابط الداخلية
+			document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener("click", e=>{ const id = a.getAttribute("href").slice(1); const el = document.getElementById(id); if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); } }); });
+			// mobile menu hooks (إن وُجدت الماركب)
+			document.addEventListener("DOMContentLoaded", ()=>{ const menuToggle = document.querySelector(".menu-toggle"); const mainNav = document.querySelector(".main-nav"); if (menuToggle && mainNav) { menuToggle.addEventListener("click", ()=> mainNav.classList.toggle("active")); } });
+		</script>
+		<script>
+			// تبديل صنف عند التمرير (للهيدر الظل/التأثير)
+			window.addEventListener("scroll", () => { document.body.classList.toggle("scrolled", window.scrollY > 80); });
+		</script>
 
-  
-<!-- Payment note (أبقيت فقرتين كما في نسختك) -->
-<div class="container">
-  <p class="muted" data-i18n="footer.payment">
-    Payment: Typically via Irrevocable Letter of Credit (L/C). If required, we can coordinate with trusted trade-finance partners to provide flexible alternatives. 
-  </p>
-</div>
 
-<!-- COA CTA row -->
-<section id="coa">
-  <div class="container">
-    <div class="hide-print cta-row">
-      <a class="btn btn-primary btn-wide" href="#contact" data-i18n="card.custom.cta">Request Custom Specs</a>
-      <button class="btn btn-primary btn-wide" onclick="exportSievingCSV()">⤓ <span data-i18n="coa.export">Export Sieve Analysis CSV</span></button>
-      <button class="btn btn-primary btn-wide" onclick="window.print()">🖨️ <span data-i18n="coa.print">Print/Save PDF — COA</span></button>
-    </div>
-  </div>
-</section>
+		<script>
+  document.getElementById('langSelect').addEventListener('change', function() {
+    const selectedLang = this.value;
+    const url = new URL(window.location.href);
 
-<!-- Features row (أضفت مفاتيح افتراضية؛ إن لم توجد بالعربية سيظهر الإنجليزي) -->
-<div class="features">
-  <div class="feature">
-    <span class="icon">📄</span>
-    <span data-i18n="card.custom.certified">COA Certified</span>
-  </div>
-  <div class="feature">
-    <span class="icon">🚢</span>
-    <span data-i18n="card.custom.tracking">Shipment Tracking</span>
-  </div>
-  <div class="feature">
-    <span class="icon">🔒</span>
-    <span data-i18n="card.custom.contracts">Clear Contracts</span>
-  </div>
-</div>
+    // غيّر أو أضف ?lang=... حسب اللغة المختارة
+    url.searchParams.set('lang', selectedLang);
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-bg">
-    <div class="content-box">
-      <div class="container">
-        <h2 data-i18n="about.title">About Us</h2>
-        
-        <p data-i18n="about.p1">
-          Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources.
-        </p>
-        
-        <p data-i18n="about.pricing">
-          Competitive pricing through direct sourcing.
-        </p>
-        
-        <p data-i18n="about.p2">
-          Third-party testing (SGS / BV) available upon request. Samples can be provided prior to contracting.
-        </p>
-        
-        <p data-i18n="about.p3">
-          Our operations adhere to EU customs, trade, and agricultural import regulations. Full legal compliance is ensured through Czech registration and certification.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="info-section">
-      <h2 class="contact-heading" data-i18n="contact.details">Contact Details</h2>
-      <p>
-        <strong data-i18n="site.company">Euro Agri Trading s.r.o — Limited Liability Company.</strong><br/>
-        Nader Abdou<br/>
-        Malenovice č.ev. 48<br/>
-        Frýdlant nad Ostravicí, 739 11 — Czech Republic<br/>
-        <span class="kbd">+420 732 133 919</span><br/>
-        <span class="kbd">IČO: 17314780</span> — <span class="kbd">DIČ: CZ8005062648</span>
-      </p>
-
-      <div class="bank-section">
-        <h4>Local Bank — CZK (Air Bank a.s.)</h4>
-        <p>
-          <strong>IBAN:</strong> CZ75 3030 0000 0034 8056 0018<br/>
-          <strong>SWIFT/BIC:</strong> AIRACZPP<br/>
-          <strong>Account Holder:</strong> Nader Fathi Elsayed Abdou
-        </p>
-      </div>
-
-      <div class="bank-section">
-        <h4>WISE Business — Multi-Currency Account</h4>
-        <div class="badges">
-          <span class="badge">EUR</span>
-          <span class="badge">USD</span>
-          <span class="badge">GBP</span>
-          <span class="badge">AED</span>
-          <span class="badge">CZK</span>
-          <span class="badge">EGP</span>
-          <span class="badge">NZD</span>
-          <span class="badge">PLN</span>
-          <span class="badge">TRY</span>
-        </div>
-       <p data-i18n="payment.details"></p>
-        <a class="btn btn-primary" href="mailto:info@euroagritrading.eu?subject=Request%20Proforma">
-          Request Proforma / Wise Details
-        </a>
-      </div>
-    </div>
-
-    <div class="form-section">
-      <h2 class="contact-heading" data-i18n="contact.title">Get in Touch</h2>
-      <form onsubmit="return sendMailto(this)">
-        <label>
-          <span data-i18n="form.name">Full Name</span><br/>
-          <input name="name" required placeholder="Full Name">
-        </label><br/><br/>
-        <label>
-          <span data-i18n="form.email">Email</span><br/>
-          <input name="email" type="email" required placeholder="you@example.com">
-        </label><br/><br/>
-        <label>
-          <span data-i18n="form.message">Message</span><br/>
-          <textarea name="message" rows="5" required placeholder="Required: product / quantity / port / terms"></textarea>
-        </label>
-        <div class="cta">
-          <button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
-          <a class="btn btn-outline" href="https://wa.me/00420732133919" target="_blank" data-i18n="contact.whatsapp">WhatsApp</a>
-        </div>
-        <p class="note" data-i18n="contact.note">
-          We do not use analytics cookies. This form opens your mail app to send directly.
-        </p>
-      </form>
-    </div>
-
-    <p class="muted" data-i18n="contact.docs" style="margin-top:14px">
-      We share official documents (contracts, invoices, COA) after request validation.
-    </p>
-  </div>
-</section>
-
-
-<!-- STYLE helpers kept as-is -->
-<style>
-  .bank-box,.wise-box{
-    border:1px solid #eaeaea;
-    border-radius:10px;
-    padding:12px;
-    margin:10px 0;
-    background:#fafafa
-  }
-  .bank-title{ font-weight:600; margin-bottom:6px }
-  .bank-line{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace }
-  .badges{ display:flex; gap:6px; flex-wrap:wrap; margin-top:4px }
-  .badge{ border:1px solid #ddd; border-radius:999px; padding:4px 10px; font-size:.9rem; background:#fff }
-</style>
-
-<!-- FOOTER -->
-<div class="footer-legal" style="text-align:center; font-size:0.9rem; color:#ccc; margin-top:15px;">
-  © 2025 Euro Agri Trading s.r.o. — All rights reserved.<br>
-  Registered in Czech Republic | IČO: 17314780 | DIČ: CZ8005062648<br>
-  <span style="font-size:0.8rem; color:#aaa;">
-    In compliance with EU Regulation (EC) No. 2003/2003 on fertilizers and REACH standards.
-  </span>
-</div>
-
-<!-- ===== i18n + utilities (Final Clean Version) ===== -->
-<script type="module">
-const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
-const RTL = new Set(['ar']);
-
-// detect language (default EN)
-function detectLang(){
-  const url = new URLSearchParams(location.search).get('lang');
-  if (url) return url.toLowerCase().split('-')[0];
-  const saved = localStorage.getItem('lang');
-  if (saved) return saved.toLowerCase();
-  const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-  const guess = String(nav).toLowerCase().split('-')[0];
-  return SUPPORTED.includes(guess) ? guess : 'en';
-}
-
-// safe JSON fetch
-async function fetchJson(path){
-  try{
-    const res = await fetch(path, {cache:'no-store'});
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    return await res.json();
-  }catch(err){
-    console.warn('i18n load failed:', path, err);
-    return {};
-  }
-}
-
-// load dict with EN fallback
-async function loadDict(lang){
-  const base = await fetchJson('i18n/en.json');
-  if (lang === 'en') return base;
-  const loc = await fetchJson(`i18n/${lang}.json`);
-  return { ...base, ...loc };
-}
-
-// apply translations
-function applyI18n(dict, lang){
-  document.documentElement.lang = lang;
-  document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
-  if (lang === 'ar') {
-    document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
-  } else {
-    document.documentElement.style.removeProperty('font-family');
-  }
-
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key = el.getAttribute('data-i18n');
-    if (key && dict[key] != null) {
-      el.textContent = dict[key];
-    }
+    // إعادة التوجيه للصفحة باللغة المختارة
+    window.location.href = url.toString();
   });
-
-  if (dict['site.name']) document.title = dict['site.name'];
-
-  const sel = document.getElementById('langSelect');
-  if (sel) sel.value = lang;
-  localStorage.setItem('lang', lang);
-}
-
-// set language
-async function setLang(lang){
-  try{
-    const dict = await loadDict(lang);
-    applyI18n(dict, lang);
-  }catch(err){
-    console.error(err);
-    if (lang !== 'en'){
-      const dict = await loadDict('en');
-      applyI18n(dict, 'en');
-    }
-  }
-}
-
-// init
-const startLang = detectLang();
-setLang(startLang);
-
-// selector change
-document.addEventListener('change', async (e)=>{
-  const sel = document.getElementById('langSelect');
-  if (e.target === sel && sel){
-    const lang = sel.value;
-    const u = new URL(location.href);
-    u.searchParams.set('lang', lang);
-    history.replaceState({}, '', u.toString());
-    await setLang(lang);
-  }
-});
-
-// CSV export
-window.exportSievingCSV = function(){
-  const table = document.querySelector("#sieving");
-  if (!table) return;
-  const rows = [...table.querySelectorAll("tr")].map(tr =>
-    [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
-  );
-  const csv = rows.join("\n");
-  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "sieving-analysis.csv";
-  document.body.appendChild(a); a.click(); a.remove();
-};
-
-// mailto
-window.sendMailto = function(form){
-  const data = new FormData(form);
-  const to = "trading@temosliving.de";
-  const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
-  const body = encodeURIComponent(
-`Name: ${data.get("name")}
-Email: ${data.get("email")}
-
-Message:
-${data.get("message")}
-`);
-  location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  return false;
-};
-
-// smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener("click", e=>{
-    const id = a.getAttribute("href").slice(1);
-    const el = document.getElementById(id);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); }
-  });
-});
-
-// mobile menu toggle (hooks exist if markup is present)
-document.addEventListener("DOMContentLoaded", ()=>{
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mainNav = document.querySelector(".main-nav");
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", ()=> mainNav.classList.toggle("active"));
-  }
-});
 </script>
 
-
-
-<script>
-window.addEventListener("scroll", () => {
-  document.body.classList.toggle("scrolled", window.scrollY > 80);
-});
-</script>
-  
-
-  
-<!-- JSON-LD kept exactly as provided -->
-<script type="application/ld+json">
+		
+		<!-- JSON-LD (محفوظ كما هو) -->
+		<script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Euro Agri Trading s.r.o.",
-  "url": "https://trading.temosliving.de",
-  "email": "trading@temosliving.de",
-  "telephone": "+420 732 133 919",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Malenovice č.ev. 48",
-    "addressLocality": "Frýdlant nad Ostravicí",
-    "postalCode": "739 11",
-    "addressCountry": "CZ"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "email": "trading@temosliving.de",
-    "telephone": "+420 732 133 919",
-    "areaServed": "EU"
-  },
-  "identifier": [
-    {"@type":"PropertyValue","name":"IČO","value":"17314780"},
-    {"@type":"PropertyValue","name":"DIČ","value":"CZ0000000"}
-  ],
-  "additionalProperty": [
-    {"@type":"PropertyValue","name":"Bank IBAN","value":"CZ00 0000 0000 0000 0000 0000"},
-    {"@type":"PropertyValue","name":"SWIFT","value":"XXXXXXXX"}
-  ],
-  "sameAs": []
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Euro Agri Trading s.r.o.",
+	"url": "https://trading.temosliving.de",
+	"email": "trading@temosliving.de",
+	"telephone": "+420 732 133 919",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Malenovice č.ev. 48",
+		"addressLocality": "Frýdlant nad Ostravicí",
+		"postalCode": "739 11",
+		"addressCountry": "CZ"
+	},
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"contactType": "sales",
+		"email": "trading@temosliving.de",
+		"telephone": "+420 732 133 919",
+		"areaServed": "EU"
+	},
+	"identifier": [
+		{"@type":"PropertyValue","name":"IČO","value":"17314780"},
+		{"@type":"PropertyValue","name":"DIČ","value":"CZ0000000"}
+	],
+	"additionalProperty": [
+		{"@type":"PropertyValue","name":"Bank IBAN","value":"CZ00 0000 0000 0000 0000 0000"},
+		{"@type":"PropertyValue","name":"SWIFT","value":"XXXXXXXX"}
+	],
+	"sameAs": []
 }
-</script>
-
-
-  
-</body>
+		</script>
+	</body>
 </html>
