@@ -1168,11 +1168,9 @@ header nav button {
 
 
 
-/* موضع زر اللغة في العربية */
 html[dir="rtl"] header .lang {
-  left: auto;
-  right: 20px;
-  direction: ltr;
+  right: 60px !important;
+  left: auto !important;
 }
 
 /* ✅ Fix: Keep header LTR on all devices, even RTL languages */
