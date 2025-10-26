@@ -120,7 +120,7 @@ header nav ul li a:hover {
 
 /* ✅ إطار أخضر ثابت لزر اللغة */
 header .lang select {
-  border: 2px solid #0A962F !important;  /* أخضر ثابت */
+  border: 2px solid #0a662f !important;  /* أخضر ثابت */
   border-radius: 6px !important;         /* زوايا ناعمة */
   padding: 4px 8px !important;           /* مسافة داخلية مريحة */
   background-color: #ffffff !important;  /* خلفية بيضاء ثابتة */
