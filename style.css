@@ -1,1275 +1,1093 @@
-
 /* ===== RESET + BASE ===== */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
 }
 html, body {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+ height: 100%;
+ overflow-x: hidden;
+ overflow-y: auto;
 }
 
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: var(--ink);
-  background: linear-gradient(180deg, var(--paper), var(--paper-2));
-  padding-top: 0px; /* لإفساح المجال للهيدر الثابت */
+ font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ color: var(--ink);
+ background: linear-gradient(180deg, var(--paper), var(--paper-2));
+ padding-top: 0px; /* ?????? ?????? ?????? ?????? */
 }
 
 html[lang="ar"] {
-  direction: rtl;
-  text-align: right;
-  font-family: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif !important;
-  line-height: 1.8;
-  word-spacing: 1px;
+ direction: rtl;
+ text-align: right;
+ font-family: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif !important;
+ line-height: 1.8;
+ word-spacing: 1px;
 }
 
 
 :root {
-  --ink: #0f172a;
-  --brand: #15803d;
-  --brand-ink: #065f46;
-  --paper: #ffffff;
-  --paper-2: #f8fafc;
-  --soft: #475569;
-  --muted: #64748b;
-  --radius: 14px;
-  --ring: rgba(16,185,129, .35);
+ --ink: #0f172a;
+ --brand: #15803d;
+ --brand-ink: #065f46;
+ --paper: #ffffff;
+ --paper-2: #f8fafc;
+ --soft: #475569;
+ --muted: #64748b;
+ --radius: 14px;
+ --ring: rgba(16,185,129, .35);
 }
 
-/* ===== الحاوية العامة ===== */
+/* ===== ??????? ?????? ===== */
 .container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
+ max-width: 1200px;
+ width: 100%;
+ padding: 0 20px;
+ margin: 0 auto;
 }
 
 
 
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;   /* غير ثابت */
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
-  backdrop-filter: blur(6px); /* ضباب خفيف */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  height: auto;
-  z-index: 100;
-  transition: all 0.3s ease;
+ position: relative !important;   /* ??? ???? */
+ width: 100%;
+ background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
+ backdrop-filter: blur(6px); /* ???? ???? */
+ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+ height: auto;
+ z-index: 100;
+ transition: all 0.3s ease;
 }
 
-/* تقليل ارتفاع البار */
+/* ????? ?????? ????? */
 header .container.nav {
-  height: 70px !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+ height: 70px !important;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 20px;
 }
 
-/* اللوجو */
+/* ?????? */
 header .logo-img {
-  max-height: 90px !important;
-  height: auto;
+ max-height: 90px !important;
+ height: auto;
 }
 
-/* نص الشركة */
+/* ?? ?????? */
 header .brand-text {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #0a662f !important; /* أخضر غامق */
-  margin-left: 10px;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+ font-weight: 700;
+ font-size: 1.1rem;
+ color: #0a662f !important; /* ???? ???? */
+ margin-left: 10px;
+ text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
 header nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+ display: flex;
+ gap: 1rem;
+ list-style: none;
+ margin: 0;
+ padding: 0;
 }
 
 header nav ul li a {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
-  }
+ font-size: 0.82rem;
+ font-weight: 500;
+ color: #000;
+ text-decoration: none;
+ }
 /* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
 header nav ul li a {
-  position: relative;
-  padding-bottom: 4px; /* مسافة صغيرة بين النص والخط */
-  border-bottom: 2px solid #0a662f; /* ← الخط الأخضر الدائم */
-  transition: all 0.3s ease;
+ position: relative;
+ padding-bottom: 4px; /* ????? ????? ??? ???? ????? */
+ border-bottom: 2px solid #0a662f; /* ? ???? ?????? ?????? */
+ transition: all 0.3s ease;
 }
 
-/* عند المرور يتغير اللون */
+/* ??? ?????? ????? ????? */
 header nav ul li a:hover {
-  color: #0a662f !important; /* ← النص يصبح أخضر */
-  border-bottom-color: #0d9488 !important; /* ← الخط يصير تركواز */
+ color: #0a662f !important; /* ? ???? ???? ???? */
+ border-bottom-color: #0d9488 !important; /* ? ???? ???? ?????? */
 }
 
 
 header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
+ color: #0a662f !important; /* ???? ??? ?????? */
 }
 
-/* زر اللغة */
+/* ?? ????? */
 header .lang select {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 6px;
-  color: #0a662f;
-  padding: 4px 8px;
-  font-size: 0.85rem;
+ background: rgba(255,255,255,0.15);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 6px;
+ color: #0a662f;
+ padding: 4px 8px;
+ font-size: 0.85rem;
 }
 
 
 
-/* الكرة الأرضية والاختيار */
+/* ????? ??????? ????????? */
 header .lang span {
-  font-size: 1rem;
-  line-height: 1;
+ font-size: 1rem;
+ line-height: 1;
 }
 
 
 
-/* الموبايل — نرجع الوضع الطبيعي */
-@media (max-width: 768px) {
-  header .lang {
-    position: static !important;
-    transform: none !important;
-    margin-top: 6px !important;
-    justify-content: center !important;
-  }
-}
 
-/* شاشات صغيرة */
-@media (max-width: 768px) {
-  header .container.nav {
-    height: 64px !important;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  header .logo-img {
-    max-height: 80px !important;
-  }
-}
+
+
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
-  position: relative;
-  width: 100vw;                              /* العرض الكامل */
-  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
-  background-color: #ffffff;                 /* احتياطي بلون فاتح */
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
+ position: relative;
+ width: 100vw;                              /* ????? ?????? */
+ margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
+ padding: 60px 20px;
+ background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
+ background-color: #ffffff;                 /* ??????? ???? ???? */
+ overflow: hidden;
+ text-align: left;
+ z-index: 0;
 }
-
-/* إزالة أي طبقة تعتيم */
+/* ????? ?? ???? ????? */
 .hero::before,
 .hero-bleed::before {
-  content: none !important;
+ content: none ;
 }
-
-/* نصوص داخل الهيرو */
+/* ???? ???? ?????? */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff !important;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 2;
+ color: #ffffff ;
+ text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+ position: relative;
+ z-index: 2;
 }
-
-/* العناوين والنصوص */
+/* ???????? ??????? */
 .hero h1 {
-  font-size: clamp(36px, 6vw, 60px);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
+ font-size: clamp(36px, 6vw, 60px);
+ font-weight: 700;
+ margin-bottom: 0.6rem;
 }
-
 .hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.5;
-  max-width: 720px;
-  margin-bottom: 1rem;
+ font-size: clamp(15px, 2vw, 18px);
+ line-height: 1.5;
+ max-width: 720px;
+ margin-bottom: 1rem;
 }
-
-/* صف الأزرار */
+/* ?? ??????? */
 .hero .cta-row {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 14px !important;
-  margin-top: 22px !important;
-  position: relative;
-  z-index: 2;
+ display: flex ;
+ justify-content: center ;
+ align-items: center ;
+ flex-wrap: wrap ;
+ gap: 14px ;
+ margin-top: 22px ;
+ position: relative;
+ z-index: 2;
 }
-
-/* الأزرار */
+/* ??????? */
 .hero .cta-row .btn {
-  width: 200px !important;
-  height: 48px !important;
-  line-height: 48px !important;
-  text-align: center !important;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
+ width: 200px ;
+ height: 48px ;
+ line-height: 48px ;
+ text-align: center ;
+ border-radius: 8px;
+ font-weight: 600;
+ font-size: 16px;
+ transition: all 0.3s ease;
 }
-
-/* زر رئيسي */
+/* ?? ????? */
 .hero .btn-primary {
-  background-color: #0a662f !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+ background-color: #0a662f ;
+ border: 2px solid #ffffff ;
+ color: #ffffff ;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: #0a662f !important;
+ background-color: #ffffff ;
+ color: #0a662f ;
 }
-
-/* زر ثانوي */
+/* ?? ????? */
 .hero .btn-outline {
-  background-color: #0d9488 !important;
-  border: 2px solid #0d9488 !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ background-color: #0d9488 ;
+ border: 2px solid #0d9488 ;
+ color: #ffffff ;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .hero .btn-outline:hover {
-  background-color: #0a6e64 !important;
-  border-color: #0a6e64 !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
+ background-color: #0a6e64 ;
+ border-color: #0a6e64 ;
+ color: #ffffff ;
+ transform: translateY(-1px);
 }
-
-/* إصلاح اللون الرمادي */
+/* ????? ????? ??????? */
 .hero .muted,
 .hero .note,
 .hero .lead {
-  color: #ffffff !important;
-  opacity: 1 !important;
+ color: #ffffff ;
+ opacity: 1 ;
 }
-
-/* الهواتف */
+/* ??????? */
 @media (max-width: 768px) {
-  .hero,
-  .hero-bleed {
-    background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 60px;
-    text-align: center;
-  }
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 15px; }
-  .hero .cta-row {
-    gap: 12px !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-  }
-  .hero .cta-row .btn {
-    width: 200px !important;
-    min-width: 200px !important;
-  }
+ .hero,
+ .hero-bleed {
+   background: url("hero-bg-mobile.png") center/cover no-repeat;
+   padding: 40px 16px 60px;
+   text-align: center;
+ }
+ .hero h1 { font-size: 28px; }
+ .hero p { font-size: 15px; }
+ .hero .cta-row {
+   gap: 12px ;
+   flex-direction: row ;
+   justify-content: center ;
+ }
+ .hero .cta-row .btn {
+   width: 200px ;
+   min-width: 200px ;
+ }
 }
-
 @media (max-width: 380px) {
-  .hero .cta-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-  }
-  .hero .cta-row .btn {
-    width: 220px !important;
-  }
+ .hero .cta-row {
+   flex-direction: column ;
+   align-items: center ;
+   gap: 12px ;
+ }
+ .hero .cta-row .btn {
+   width: 220px ;
+ }
 }
-
-
-
 /* ===== TRUST BANNER ===== */
 .trust-banner {
-  padding:.9rem 0;
-  background:#f1f5f9;
-  border-top:3px solid #84cc16;
-  border-bottom:1px solid #e2e8f0;
-  text-align:center;
+ padding:.9rem 0;
+ background:#f1f5f9;
+ border-top:3px solid #84cc16;
+ border-bottom:1px solid #e2e8f0;
+ text-align:center;
 }
 .trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
 .trust-banner strong {color:#0f766e;}
-
 /* ===== PRODUCTS ===== */
 #products {
-  padding:64px 0;
-  background:
-    linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.10)),
-    url("leaf-pattern.png") center/cover no-repeat;
-  background-attachment:fixed;
+ padding:64px 0;
+ background:
+   linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.10)),
+   url("leaf-pattern.png") center/cover no-repeat;
+ background-attachment:fixed;
 }
 @media(max-width:1024px){#products{background-attachment:scroll}}
 #products .grid {
-  display:grid;
-  gap:32px;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+ display:grid;
+ gap:32px;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 }
 #products .card {
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:var(--radius);
-  box-shadow:0 8px 24px rgba(2,6,23,.06);
-  padding:18px;
-  display:flex;
-  flex-direction:column;
-  transition:.2s ease;
+ background:#fff;
+ border:1px solid #e5e7eb;
+ border-radius:var(--radius);
+ box-shadow:0 8px 24px rgba(2,6,23,.06);
+ padding:18px;
+ display:flex;
+ flex-direction:column;
+ transition:.2s ease;
 }
 #products .card:hover {transform:translateY(-2px)}
 #products .tag {
-  display:inline-flex;
-  align-items:center;
-  gap:.35rem;
-  background:#f9fafb;
-  border:1px solid #e2e8f0;
-  padding:.35rem .6rem;
-  border-radius:8px;
-  font-weight:600;
-  font-size:.92rem;
-  color:var(--brand-ink);
-  transition:.2s;
+ display:inline-flex;
+ align-items:center;
+ gap:.35rem;
+ background:#f9fafb;
+ border:1px solid #e2e8f0;
+ padding:.35rem .6rem;
+ border-radius:8px;
+ font-weight:600;
+ font-size:.92rem;
+ color:var(--brand-ink);
+ transition:.2s;
 }
 #products .tag:hover {
-  background:#ecfdf5;
-  border-color:var(--brand);
-  color:#059669;
+ background:#ecfdf5;
+ border-color:var(--brand);
+ color:#059669;
 }
-
-
 /* ===== COA ===== */
 #coa .cta-row {
-  display: flex;
-  justify-content: center;
-  gap: .8rem;
-  flex-wrap: wrap;
-  margin: 1rem 0 2rem;
+ display: flex;
+ justify-content: center;
+ gap: .8rem;
+ flex-wrap: wrap;
+ margin: 1rem 0 2rem;
 }
 #coa .btn {
-  background: var(--brand);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 10px;
-  padding: .7rem 1.2rem;
-  font-size: 14px;
-  transition: .2s ease;
+ background: var(--brand);
+ color: #fff;
+ font-weight: 700;
+ border-radius: 10px;
+ padding: .7rem 1.2rem;
+ font-size: 14px;
+ transition: .2s ease;
 }
 #coa .btn:hover {
-  background: #059669;
+ background: #059669;
 }
-
 /* ===== SERVICES ===== */
 #services {
-  padding: 60px 0;
-  background: #f9fafb;
+ padding: 60px 0;
+ background: #f9fafb;
 }
 #services h2 {
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 24px;
-  color: #0f172a;
+ text-align: center;
+ font-weight: 900;
+ margin-bottom: 24px;
+ color: #0f172a;
 }
 #services .grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ display: grid;
+ gap: 24px;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 #services .service {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(2,6,23,.06);
-  overflow: hidden;
-  transition: .2s;
+ background: #fff;
+ border-radius: var(--radius);
+ box-shadow: 0 6px 18px rgba(2,6,23,.06);
+ overflow: hidden;
+ transition: .2s;
 }
 #services .service img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+ width: 100%;
+ height: 180px;
+ object-fit: cover;
 }
 #services .service:hover {
-  transform: translateY(-4px);
+ transform: translateY(-4px);
 }
-
 /* ===== LOGISTICS ===== */
 #logistics {
-  padding: 64px 0;
-  background: #f9fafb;
+ padding: 64px 0;
+ background: #f9fafb;
 }
 #logistics .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 32px;
 }
 #logistics .card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(2,6,23,.06);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  transition: .2s ease;
+ background: #fff;
+ border: 1px solid #e5e7eb;
+ border-radius: var(--radius);
+ box-shadow: 0 8px 24px rgba(2,6,23,.06);
+ padding: 18px;
+ display: flex;
+ flex-direction: column;
+ transition: .2s ease;
 }
 #logistics .card:hover {
-  transform: translateY(-4px);
+ transform: translateY(-4px);
 }
 #logistics .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-top: 12px;
-  border-radius: 10px;
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ margin-top: 12px;
+ border-radius: 10px;
 }
-
-/* دعم الشاشات الصغيرة */
+/* ??? ??????? ??????? */
 @media (max-width: 640px) {
-  #services,
-  #logistics {
-    padding: 40px 16px;
-  }
+ #services,
+ #logistics {
+   padding: 40px 16px;
+ }
 }
-
 /* ===== FEATURES ===== */
 .features {
-  display: flex;
-  gap: 1rem;
-  margin: .8rem 0;
-  flex-wrap: wrap;
+ display: flex;
+ gap: 1rem;
+ margin: .8rem 0;
+ flex-wrap: wrap;
 }
 .feature {
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-  background: #f9fafb;
-  border: 1px solid #e2e8f0;
-  padding: .4rem .8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: .92rem;
-  color: var(--brand-ink);
-  transition: .2s;
+ display: flex;
+ align-items: center;
+ gap: .4rem;
+ background: #f9fafb;
+ border: 1px solid #e2e8f0;
+ padding: .4rem .8rem;
+ border-radius: 8px;
+ font-weight: 600;
+ font-size: .92rem;
+ color: var(--brand-ink);
+ transition: .2s;
 }
 .feature:hover {
-  background: #ecfdf5;
-  border-color: var(--brand);
-  color: #059669;
+ background: #ecfdf5;
+ border-color: var(--brand);
+ color: #059669;
 }
-
 /* ===== CERTIFICATES ===== */
 #certificates {
-  padding-block: 40px;
-  background-color: var(--paper-2);
+ padding-block: 40px;
+ background-color: var(--paper-2);
 }
 #certificates .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+ justify-items: center;
 }
 @media (max-width: 1000px) {
-  #certificates .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+ #certificates .grid {
+   grid-template-columns: repeat(2, 1fr);
+ }
 }
 @media (max-width: 640px) {
-  #certificates .grid {
-    grid-template-columns: 1fr;
-  }
+ #certificates .grid {
+   grid-template-columns: 1fr;
+ }
 }
 #certificates .card {
-  background: #f0ede5;
-  border: 1px solid #dcdcdc;
-  border-radius: var(--radius);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  max-width: 340px;
-  min-height: 480px;
+ background: #f0ede5;
+ border: 1px solid #dcdcdc;
+ border-radius: var(--radius);
+ padding: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ width: 100%;
+ max-width: 340px;
+ min-height: 480px;
 }
 #certificates .card img {
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  object-fit: contain;
-  background: var(--paper);
-  border-radius: 10px;
-  margin-bottom: 12px;
-  aspect-ratio: 3 / 4;
+ width: 100%;
+ height: auto;
+ max-height: 360px;
+ object-fit: contain;
+ background: var(--paper);
+ border-radius: 10px;
+ margin-bottom: 12px;
+ aspect-ratio: 3 / 4;
 }
 #certificates .card h3 {
-  font-size: 16px;
-  color: var(--ink);
-  margin: 0;
+ font-size: 16px;
+ color: var(--ink);
+ margin: 0;
 }
 #certificates .card p {
-  font-size: 14px;
-  color: var(--soft);
-  margin: 10px 0 20px;
+ font-size: 14px;
+ color: var(--soft);
+ margin: 10px 0 20px;
 }
 #certificates .cta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: auto;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 10px;
+ margin-top: auto;
 }
-
 /* ===== FOOTER ===== */
 .foot {
-  padding: 2rem 0;
-  border-top: 1px solid #e2e8f0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: center;
+ padding: 2rem 0;
+ border-top: 1px solid #e2e8f0;
+ color: var(--muted);
+ font-size: 0.9rem;
+ text-align: center;
 }
-
 /* ===== SCROLL OFFSET ===== */
 section, [id] {
-  scroll-margin-top: 110px;
+ scroll-margin-top: 110px;
 }
-
 /* ===== CONTACT SECTION ===== */
 #contact {
-  padding: 60px 0;
-  background: #f4f8f9;
-  font-size: 1rem;
+ padding: 60px 0;
+ background: #f4f8f9;
+ font-size: 1rem;
 }
-
 .contact-heading {
-  margin-bottom: 16px;
-  font-size: 1.4rem;
-  color: #005f4b;
-  border-left: 4px solid #00a87a;
-  padding-left: 10px;
+ margin-bottom: 16px;
+ font-size: 1.4rem;
+ color: #005f4b;
+ border-left: 4px solid #00a87a;
+ padding-left: 10px;
 }
-
 .kbd {
-  font-family: monospace;
-  background: #e7f2f0;
-  padding: 3px 6px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 3px;
+ font-family: monospace;
+ background: #e7f2f0;
+ padding: 3px 6px;
+ border-radius: 4px;
+ display: inline-block;
+ margin-top: 3px;
 }
-
 .bank-section {
-  margin-top: 20px;
-  padding: 12px;
-  background: #ffffff;
-  border: 1px solid #d4e6e2;
-  border-radius: 8px;
+ margin-top: 20px;
+ padding: 12px;
+ background: #ffffff;
+ border: 1px solid #d4e6e2;
+ border-radius: 8px;
 }
-
 .badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin: 10px 0;
 }
-
 .badge {
-  background: #ffffff;
-  border: 1px solid #00a87a;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 0.85rem;
-  color: #005f4b;
+ background: #ffffff;
+ border: 1px solid #00a87a;
+ border-radius: 999px;
+ padding: 4px 10px;
+ font-size: 0.85rem;
+ color: #005f4b;
 }
-
 form input,
 form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #bbb;
-  border-radius: 6px;
-  font-size: 1rem;
-  background: #fff;
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #bbb;
+ border-radius: 6px;
+ font-size: 1rem;
+ background: #fff;
 }
-
 form label {
-  display: block;
-  font-weight: 600;
-  color: #003c33;
+ display: block;
+ font-weight: 600;
+ color: #003c33;
 }
-
 .cta {
-  margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+ margin-top: 14px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 12px;
 }
-
 /
 /* ===== NOTES & MUTED FIX ===== */
 .note {
-  font-size: 0.85rem;
-  color: #666;
-  margin-top: 12px;
+ font-size: 0.85rem;
+ color: #666;
+ margin-top: 12px;
 }
-
-
 /* ===== ABOUT SECTION ===== */
 .about-bg {
-  background-image: url('about-desktop.png');
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  text-align: center;
+ background-image: url('about-desktop.png');
+ background-size: cover;
+ background-position: center;
+ padding: 80px 20px;
+ text-align: center;
 }
-
 .about-note {
-  font-size: 0.9rem;
-  color: #444;
-  margin-top: 20px;
-  opacity: 0.85;
-  text-align: center;
+ font-size: 0.9rem;
+ color: #444;
+ margin-top: 20px;
+ opacity: 0.85;
+ text-align: center;
 }
-
 .content-box {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 900px;
-  margin: auto;
+ background-color: rgba(255, 255, 255, 0.85);
+ padding: 40px;
+ border-radius: 12px;
+ max-width: 900px;
+ margin: auto;
 }
-
-/* للموبايل */
+/* ???????? */
 @media (max-width: 768px) {
-  .about-bg {
-    background-image: url('about-mobile.png');
-    padding: 60px 15px;
-  }
-
-  .content-box {
-    padding: 25px;
-  }
+ .about-bg {
+   background-image: url('about-mobile.png');
+   padding: 60px 15px;
+ }
+ .content-box {
+   padding: 25px;
+ }
 }
-
 .info-section,
 .form-section {
-  margin-bottom: 40px;
+ margin-bottom: 40px;
 }
-
-
-
-
-
-
 /* ===== GLOBAL BUTTONS (FINAL CLEAN VERSION) ===== */
-
 .btn {
-  display: inline-block;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-  background: transparent;
+ display: inline-block;
+ padding: 10px 16px;
+ font-size: 14px;
+ font-weight: 600;
+ border-radius: 8px;
+ text-align: center;
+ white-space: nowrap;
+ cursor: pointer;
+ text-decoration: none;
+ transition: all 0.3s ease;
+ border: none;
+ background: transparent;
 }
-
-/* زر أساسي (أخضر) */
+/* ?? ????? (????) */
 .btn-primary {
-  background-color: var(--brand);
-  color: #ffffff !important;
-  border: 2px solid var(--brand);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+ background-color: var(--brand);
+ color: #ffffff ;
+ border: 2px solid var(--brand);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 .btn-primary:hover {
-  background-color: var(--brand-ink);
-  border-color: var(--brand-ink);
-  transform: translateY(-1px);
+ background-color: var(--brand-ink);
+ border-color: var(--brand-ink);
+ transform: translateY(-1px);
 }
-
 .btn-outline {
-  background-color: #15803d !important; /* أخضر أساسي */
-  border: 2px solid #15803d !important; /* نفس اللون */
-  color: #ffffff !important; /* نص أبيض */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  transition: all 0.3s ease;
+ background-color: #15803d ; /* ???? ????? */
+ border: 2px solid #15803d ; /* ??? ????? */
+ color: #ffffff ; /* ?? ???? */
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+ transition: all 0.3s ease;
 }
-
 .btn-outline:hover {
-  background-color: #065f46 !important; /* الأخضر الغامق عند التمرير */
-  border-color: #065f46 !important;
-  transform: translateY(-1px);
+ background-color: #065f46 ; /* ?????? ?????? ??? ??????? */
+ border-color: #065f46 ;
+ transform: translateY(-1px);
 }
-
 
 
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
-  position: relative !important;   /* غير ثابت */
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05) !important; /* شفاف حقيقي */
-  backdrop-filter: blur(6px); /* ضباب خفيف */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  height: auto;
-  z-index: 100;
-  transition: all 0.3s ease;
+ position: relative !important;   /* ??? ???? */
+ width: 100%;
+ background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
+ backdrop-filter: blur(6px); /* ???? ???? */
+ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+ height: auto;
+ z-index: 100;
+ transition: all 0.3s ease;
 }
 
-/* تقليل ارتفاع البار */
+/* ????? ?????? ????? */
 header .container.nav {
-  height: 70px !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+ height: 70px !important;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 20px;
 }
 
-/* اللوجو */
+/* ?????? */
 header .logo-img {
-  max-height: 85px !important;
-  height: auto;
+ max-height: 85px !important;
+ height: auto;
 }
 
-/* نص الشركة */
+/* ?? ?????? */
 header .brand-text {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #0a662f !important; /* أخضر غامق */
-  margin-left: 10px;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+ font-weight: 700;
+ font-size: 1.1rem;
+ color: #0a662f !important; /* ???? ???? */
+ margin-left: 10px;
+ text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
 
-/* روابط القائمة */
+/* ????? ??????? */
 header nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+ display: flex;
+ gap: 1rem;
+ list-style: none;
+ margin: 0;
+ padding: 0;
 }
 
 header nav ul li a {
-  color: #000000 !important;    /* أسود صريح */
-  font-size: 0.8rem !important; /* أصغر قليلًا */
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
+ color: #000000 !important;    /* ???? ???? */
+ font-size: 0.8rem !important; /* ???? ?????? */
+ font-weight: 500;
+ text-decoration: none;
+ transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #0a662f !important; /* أخضر عند المرور */
+ color: #0a662f !important; /* ???? ??? ?????? */
 }
 
-/* زر اللغة */
+/* ?? ????? */
 header .lang select {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 6px;
-  color: #0a662f;
-  padding: 4px 8px;
-  font-size: 0.85rem;
+ background: rgba(255,255,255,0.15);
+ border: 1px solid rgba(255,255,255,0.2);
+ border-radius: 6px;
+ color: #0a662f;
+ padding: 4px 8px;
+ font-size: 0.85rem;
 }
 
-/* شاشات صغيرة */
+/* ????? ????? */
 @media (max-width: 768px) {
+ header .container.nav {
+   height: 64px !important;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+
+/* ============================= */
+/* 📱 General Mobile Adjustments */
+/* ============================= */
+@media (max-width: 768px) and (min-height: 500px) {
   header .container.nav {
-    height: 64px !important;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  /* ===== تكبير اللوجو في الموبايل فقط ===== */
-@media (max-width: 768px) {
-  header .logo-img {
-    max-height:100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
     height: auto !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
+
+/* ===================================== */
+/* 🔄 Landscape View on Phones (e.g. Pro Max) */
+/* ===================================== */
+@media (max-width: 930px) and (orientation: landscape) and (max-height: 500px) {
+  header .container.nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    height: auto !important; /* خليه auto عشان يتوسع حسب المحتوى */
+    min-height: 64px;         /* ضمان الحد الأدنى للارتفاع */
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 16px !important;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    position: relative;
+    z-index: 999;
+  }
+
+  header {
+    padding-top: env(safe-area-inset-top); /* دعم لأجهزة iOS */
+  }
+
+  .hero-bleed,
+  .hero-content {
+    padding-top: 90px !important; /* المسافة من فوق عشان يبعد عن الهيدر */
+  }
+}
+
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
-  position: relative;
-  width: 100vw;                              /* العرض الكامل */
-  margin-left: calc(50% - 50vw);             /* إزالة حدود الـ container */
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat; /* الصورة فقط بدون أي تعتيم */
-  background-color: #ffffff;                 /* احتياطي بلون فاتح */
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
+ position: relative;
+ width: 100vw;                              /* ????? ?????? */
+ margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
+ padding: 60px 20px;
+ background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
+ background-color: #ffffff;                 /* ??????? ???? ???? */
+ overflow: hidden;
+ text-align: left;
+ z-index: 0;
 }
-
-/* إزالة أي طبقة تعتيم */
+/* ????? ?? ???? ????? */
 .hero::before,
 .hero-bleed::before {
-  content: none !important;
+ content: none ;
 }
-
-/* نصوص داخل الهيرو */
+/* ???? ???? ?????? */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff !important;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 2;
+ color: #ffffff ;
+ text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+ position: relative;
+ z-index: 2;
 }
-
-/* العناوين والنصوص */
+/* ???????? ??????? */
 .hero h1 {
-  font-size: clamp(36px, 6vw, 60px);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
+ font-size: clamp(36px, 6vw, 60px);
+ font-weight: 700;
+ margin-bottom: 0.6rem;
 }
-
 .hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.5;
-  max-width: 720px;
-  margin-bottom: 1rem;
+ font-size: clamp(15px, 2vw, 18px);
+ line-height: 1.5;
+ max-width: 720px;
+ margin-bottom: 1rem;
 }
-
-/* صف الأزرار */
+/* ?? ??????? */
 .hero .cta-row {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 14px !important;
-  margin-top: 22px !important;
-  position: relative;
-  z-index: 2;
+ display: flex ;
+ justify-content: center ;
+ align-items: center ;
+ flex-wrap: wrap ;
+ gap: 14px ;
+ margin-top: 22px ;
+ position: relative;
+ z-index: 2;
 }
-
-/* الأزرار */
+/* ??????? */
 .hero .cta-row .btn {
-  width: 200px !important;
-  height: 48px !important;
-  line-height: 48px !important;
-  text-align: center !important;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
+ width: 200px ;
+ height: 48px ;
+ line-height: 48px ;
+ text-align: center ;
+ border-radius: 8px;
+ font-weight: 600;
+ font-size: 16px;
+ transition: all 0.3s ease;
 }
-
-/* زر رئيسي */
+/* ?? ????? */
 .hero .btn-primary {
-  background-color: #0a662f !important;
-  border: 2px solid #ffffff !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+ background-color: #0a662f ;
+ border: 2px solid #ffffff ;
+ color: #ffffff ;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 .hero .btn-primary:hover {
-  background-color: #ffffff !important;
-  color: #0a662f !important;
+ background-color: #ffffff ;
+ color: #0a662f ;
 }
-
-/* زر ثانوي */
+/* ?? ????? */
 .hero .btn-outline {
-  background-color: #0d9488 !important;
-  border: 2px solid #0d9488 !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ background-color: #0d9488 ;
+ border: 2px solid #0d9488 ;
+ color: #ffffff ;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .hero .btn-outline:hover {
-  background-color: #0a6e64 !important;
-  border-color: #0a6e64 !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
+ background-color: #0a6e64 ;
+ border-color: #0a6e64 ;
+ color: #ffffff ;
+ transform: translateY(-1px);
 }
-
-/* إصلاح اللون الرمادي */
+/* ????? ????? ??????? */
 .hero .muted,
 .hero .note,
 .hero .lead {
-  color: #ffffff !important;
-  opacity: 1 !important;
+ color: #ffffff ;
+ opacity: 1 ;
 }
-
-/* الهواتف */
+/* ??????? */
 @media (max-width: 768px) {
-  .hero,
-  .hero-bleed {
-    background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 60px;
-    text-align: center;
-  }
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 15px; }
-  .hero .cta-row {
-    gap: 12px !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-  }
-  .hero .cta-row .btn {
-    width: 200px !important;
-    min-width: 200px !important;
-  }
+ .hero,
+ .hero-bleed {
+   background: url("hero-bg-mobile.png") center/cover no-repeat;
+   padding: 40px 16px 60px;
+   text-align: center;
+ }
+ .hero h1 { font-size: 28px; }
+ .hero p { font-size: 15px; }
+ .hero .cta-row {
+   gap: 12px ;
+   flex-direction: row ;
+   justify-content: center ;
+ }
+ .hero .cta-row .btn {
+   width: 200px ;
+   min-width: 200px ;
+ }
 }
-
 @media (max-width: 380px) {
-  .hero .cta-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-  }
-  .hero .cta-row .btn {
-    width: 220px !important;
-  }
+ .hero .cta-row {
+   flex-direction: column ;
+   align-items: center ;
+   gap: 12px ;
+ }
+ .hero .cta-row .btn {
+   width: 220px ;
+ }
 }
-
-
-
-
-
-
-/* في الشاشات الصغيرة: ترتيب رأسي منسق */
-@media (max-width: 768px) {
-  header .container.nav {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: auto !important;
-    padding: 10px 0 !important;
-  }
-
-  header .brand {
-    margin-bottom: 8px !important;
-  }
-
-  header nav ul {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    margin-top: 6px !important;
-  }
-
-  header nav ul li a {
-    font-size: 0.8rem !important;
-  }
-
-  header .lang {
-    margin-top: 8px !important;
-  }
-}
-
 
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
 .hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
-  text-shadow:
-    0 2px 4px rgb(0 0 0),   /* ظل سفلي خفيف */
-    0 0 3px rgb(21 22 21);     /* توهج خفيف حول النص */
+ text-shadow:
+   0 2px 4px rgb(0 0 0),   /* ?? ???? ???? */
+   0 0 3px rgb(21 22 21);     /* ???? ???? ??? ???? */
 }
-
-
 /* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
 header nav ul li a {
-  position: relative;
-  color: #000000 !important;      /* لون النص */
-  text-decoration: none !important;
-  font-weight: 500;
-  padding-bottom: 4px !important; /* مسافة بين النص والخط */
-  border-bottom: 2px solid #0a662f !important; /* الخط الثابت */
-} /* ← أضف هذا القوس هنا */
-
+ position: relative;
+ color: #000000 ;      /* ??? ???? */
+ text-decoration: none ;
+ font-weight: 500;
+ padding-bottom: 4px ; /* ????? ??? ???? ????? */
+ border-bottom: 2px solid #0a662f ; /* ???? ?????? */
+} /* ? ??? ??? ????? ??? */
 header nav ul li a:hover {
-  border-bottom-color: #0d9488 !important; /* أخضر تركواز */
-  color: #0a662f !important;
+ border-bottom-color: #0d9488 ; /* ???? ?????? */
+ color: #0a662f ;
 }
-
 /* ===== DESKTOP HEADER CLEAN LAYOUT (GRID) ===== */
 @media (min-width: 769px) {
-  /* نستخدم Grid: شعار | قائمة | زر لغة */
-  header .container.nav {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    align-items: center !important;
-    gap: 10px !important;
-    height: 70px !important;
-    padding: 0 20px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* تمركز العناصر */
-  header nav { justify-self: center !important; }
-  html:not([dir="rtl"]) header .lang { justify-self: end !important; }
-  html[dir="rtl"]        header .lang { justify-self: start !important; }
+ /* ?????? Grid: ???? | ????? | ?? ??? */
+ header .container.nav {
+   display: grid ;
+   grid-template-columns: auto 1fr auto ;
+   align-items: center ;
+   gap: 10px ;
+   height: 70px ;
+   padding: 0 20px ;
+   box-sizing: border-box ;
+ }
+ /* ????? ??????? */
+ header nav { justify-self: center ; }
+ html:not([dir="rtl"]) header .lang { justify-self: end ; }
+ html[dir="rtl"]        header .lang { justify-self: start ; }
 }
-
 /* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
 header nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+ display: flex;
+ gap: 1rem;
+ list-style: none;
+ margin: 0;
+ padding: 0;
 }
- header nav ul li a {
-  position: relative;
-  color: #000000 !important;
-  text-decoration: none !important;
-  font-weight: 500;
-  padding-bottom: 4px !important;
-  border-bottom: 2px solid #0a662f !important;
-  
+header nav ul li a {
+ position: relative;
+ color: #000000 ;
+ text-decoration: none ;
+ font-weight: 500;
+ padding-bottom: 4px ;
+ border-bottom: 2px solid #0a662f ;
 header nav ul li a:hover {
-  border-bottom-color: #0d9488 !important;
-  color: #0a662f !important;
+ border-bottom-color: #0d9488 ;
+ color: #0a662f ;
 }
 
-/* ===== MOBILE HEADER SLIM (ONE BLOCK ONLY) ===== */
+
+/* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
 @media (max-width: 768px) {
   header .container.nav {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;
-    gap: 4px !important;
-    padding: 6px 12px !important;
-    height: auto !important;
-    box-sizing: border-box !important;
-    background: rgba(255, 255, 255, 0.45) !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    padding: 10px 16px !important;
+    background: rgba(255, 255, 255, 0.75) !important;
     backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: auto !important;
   }
 
-  header .logo-img { max-height: 58px !important; height: auto !important; }
+  header .logo-img {
+    max-height: 64px !important;
+    height: auto !important;
+  }
 
   header .brand-text {
     font-size: 0.88rem !important;
     margin: 0 !important;
     text-align: center !important;
-    white-space: normal !important;
     line-height: 1.3 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
   }
 
-  header nav { width: 100% !important; }
-  header nav ul {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-  
- header nav ul li a {
-    font-size: 0.85rem !important;
-    padding-bottom: 2px !important;
-    white-space: nowrap !important;
-  }
-
-  
- 
-  header .lang select {
-    background: rgba(255,255,255,0.7) !important;
-    border: 1px solid rgba(0,0,0,0.1) !important;
-    border-radius: 6px !important;
-    color: #0a662f !important;
-    font-size: 0.8rem !important;
-    padding: 4px 8px !important;
-  }
-
-  
-
-
-
-/* الزر نفسه */
-header .lang select {
-  background: rgba(255,255,255,0.7) !important;
-  border: 1px solid rgba(0,0,0,0.15) !important;
-  border-radius: 6px !important;
-  color: #0a662f !important;
-  padding: 4px 8px !important;
-  font-size: 0.85rem !important;
-}
-
-/* الموبايل — نعيده للوضع العادي تحت */
-@media (max-width: 768px) {
-  header .lang {
-    position: static !important;
-    transform: none !important;
-    justify-content: center !important;
-    margin-top: 6px !important;
-  }
-}
-
-
-
-
-
-
-/* ===== PROFESSIONAL MOBILE HEADER (CLEAN VERSION) ===== */
-@media (max-width: 768px) {
-
-  /* الهيكل العام للهيدر */
-  header .container.nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 8px 0 10px 0 !important;
-    gap: 6px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* الصف الأول: اللوجو واسم الشركة */
-  header .brand {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-
-
-  header .logo-img {
-    max-height: 100px !important; /* الحجم الجديد — جرّب 85px لو تحب أكبر */
-    height: auto !important;
-  }
-
-
-  header .brand-text {
-    font-size: 0.95rem !important;
-    font-weight: 700 !important;
-    color: #0a662f !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-  }
-
-  /* الصف الثاني: روابط القائمة */
   header nav {
     width: 100% !important;
+    margin-top: 6px;
   }
 
   header nav ul {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    gap: 8px !important;
+    margin: 0;
+    padding: 0;
   }
 
- header nav ul li a {
-    font-size: 0.9rem !important;
-    color: #000 !important;
+  header nav ul li {
+    list-style: none;
+  }
+
+  header nav ul li a {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    padding-bottom: 3px !important;
+    text-decoration: none !important;
+    color: #0a662f !important;
     border-bottom: 2px solid #0a662f !important;
-    padding-bottom: 2px !important;
-    font-weight: 500 !important;
   }
 
-  /* الصف الثالث: زر اللغة */
   header .lang {
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    gap: 6px !important;
-    margin-top: 4px !important;
+    width: 100% !important;
+    margin-top: 6px !important;
   }
 
   header .lang select {
-    background: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.85) !important;
     border: 1px solid rgba(0, 0, 0, 0.15) !important;
     border-radius: 6px !important;
     color: #0a662f !important;
+    padding: 4px 8px !important;
     font-size: 0.85rem !important;
-    padding: 3px 8px !important;
   }
+}
 
  
-
-   
 /* === FIX: Separate language selector column (for all languages) === */
 @media (min-width: 769px) {
-  header .container.nav {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    align-items: center !important;
-  }
-
-  /* تأكد أن القائمة تبقى في المنتصف */
-  header nav {
-    justify-self: center !important;
-  }
-
-  /* زر اللغة يبقى في أقصى اليمين */
-  header .lang {
-    justify-self: end !important;
-    position: relative !important;
-    right: 0 !important;
-    left: auto !important;
-    margin-left: 20px !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-  }
-
-  /* للغات RTL (العربية) — خليه ما ينعكس */
-  html[dir="rtl"] header .container.nav {
-    direction: ltr !important;
-    text-align: left !important;
-  }
-
-  html[dir="rtl"] header .lang {
-    right: 0 !important;
-    left: auto !important;
-    flex-direction: row !important;
-  }
+ header .container.nav {
+   display: grid ;
+   grid-template-columns: auto 1fr auto ;
+   align-items: center ;
+ }
+ /* ???? ?? ??????? ???? ?? ??????? */
+ header nav {
+   justify-self: center ;
+ }
+ /* ?? ????? ???? ?? ???? ?????? */
+ header .lang {
+   justify-self: end ;
+   position: relative ;
+   right: 0 ;
+   left: auto ;
+   margin-left: 20px ;
+   display: flex ;
+   align-items: center ;
+   gap: 6px ;
+ }
+ /* ????? RTL (???????) - ???? ?? ????? */
+ html[dir="rtl"] header .container.nav {
+   direction: ltr ;
+   text-align: left ;
+ }
+ html[dir="rtl"] header .lang {
+   right: 0 ;
+   left: auto ;
+   flex-direction: row ;
+ }
 }
 /* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
 @media (min-width: 769px) {
-  html[dir="rtl"] header .container.nav {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    align-items: center !important;
-    direction: ltr !important;
-    text-align: left !important;
-  }
-
-  html[dir="rtl"] header .brand {
-    flex-direction: row !important;
-  }
-
-  html[dir="rtl"] header nav ul {
-    direction: ltr !important;
-    justify-content: center !important;
-  }
-
-  html[dir="rtl"] header .lang {
-    right: 25px !important;
-    left: auto !important;
-    flex-direction: row !important;
-    position: relative !important;
-    transform: none !important;
-  }
+ html[dir="rtl"] header .container.nav {
+   display: grid ;
+   grid-template-columns: auto 1fr auto ;
+   align-items: center ;
+   direction: ltr ;
+   text-align: left ;
+ }
+ html[dir="rtl"] header .brand {
+   flex-direction: row ;
+ }
+ html[dir="rtl"] header nav ul {
+   direction: ltr ;
+   justify-content: center ;
+ }
+ html[dir="rtl"] header .lang {
+   right: 25px ;
+   left: auto ;
+   flex-direction: row ;
+   position: relative ;
+   transform: none ;
+ }
 }
+}}}}
 
 
 
-
-
-
-
-  /* ===================================================
+/* ===================================================
    إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
    =================================================== */
 
@@ -1316,3 +1134,9 @@ html[dir="rtl"] header .lang {
   right: 20px;
   direction: ltr;
 }
+
+
+
+
+
+
