@@ -715,6 +715,28 @@ header .lang select {
  font-size: 0.85rem;
 }
 
+@media (min-width: 769px) {
+  header .container.nav {
+    height: 64px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container.nav {
+    height: auto !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
 
 
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
