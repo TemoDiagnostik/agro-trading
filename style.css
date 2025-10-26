@@ -1158,3 +1158,20 @@ html[dir="rtl"] header .lang {
     height: auto !important;
   }
 }
+
+/* ✅ Landscape Fix for Low-Height Screens (like iPhone Pro Max in landscape) */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 430px) {
+  header .container.nav {
+    height: 72px !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    padding-top: 90px !important; /* عشان الـ hero ما يطلعش تحت الهيدر */
+  }
+}
