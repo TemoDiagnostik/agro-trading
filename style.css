@@ -1176,4 +1176,22 @@ html[dir="rtl"] header .lang {
 
 
 
+/* === ✅ Fix: Position Language Selector in Mobile View === */
+@media (max-width: 768px) {
+  header .lang {
+    position: absolute !important;
+    top: 10px !important;
+    right: 16px !important;
+    width: auto !important;
+    margin: 0 !important;
+    z-index: 999 !important;
+  }
+}
 
+/* ✅ RTL Fix for Arabic and similar */
+@media (max-width: 768px) {
+  html[dir="rtl"] header .lang {
+    right: auto !important;
+    left: 16px !important;
+  }
+}
