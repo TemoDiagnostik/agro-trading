@@ -1092,17 +1092,7 @@ header nav ul li a:hover {
    align-items: center ;
    gap: 6px ;
  }
- /* ????? RTL (???????) - ???? ?? ????? */
- html[dir="rtl"] header .container.nav {
-   direction: ltr ;
-   text-align: left ;
- }
- html[dir="rtl"] header .lang {
-   right: 0 ;
-   left: auto ;
-   flex-direction: row ;
- }
-}
+
 /* === FINAL FIX: KEEP HEADER LTR FOR ALL LANGUAGES === */
 @media (min-width: 769px) {
  html[dir="rtl"] header .container.nav {
