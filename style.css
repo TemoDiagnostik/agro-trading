@@ -901,35 +901,136 @@ header .lang select {
   }
 }
 
-/* ===================================== */
-/* 🔄 Landscape View on Phones (e.g. Pro Max) */
-/* ===================================== */
-@media (max-width: 930px) and (orientation: landscape) and (max-height: 500px) {
-  header .container.nav {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    height: auto !important; /* خليه auto عشان يتوسع حسب المحتوى */
-    min-height: 64px;         /* ضمان الحد الأدنى للارتفاع */
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 8px 16px !important;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    position: relative;
-    z-index: 999;
-  }
 
-  header {
-    padding-top: env(safe-area-inset-top); /* دعم لأجهزة iOS */
-  }
-
-  .hero-bleed,
-  .hero-content {
-    padding-top: 90px !important; /* المسافة من فوق عشان يبعد عن الهيدر */
-  }
+/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
+.hero,
+.hero-bleed {
+ position: relative;
+ width: 100vw;                              /* ????? ?????? */
+ margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
+ padding: 60px 20px;
+ background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
+ background-color: #ffffff;                 /* ??????? ???? ???? */
+ overflow: hidden;
+ text-align: left;
+ z-index: 0;
+}
+/* ????? ?? ???? ????? */
+.hero::before,
+.hero-bleed::before {
+ content: none ;
+}
+/* ???? ???? ?????? */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+ color: #ffffff ;
+ text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+ position: relative;
+ z-index: 2;
+}
+/* ???????? ??????? */
+.hero h1 {
+ font-size: clamp(36px, 6vw, 60px);
+ font-weight: 700;
+ margin-bottom: 0.6rem;
+}
+.hero p {
+ font-size: clamp(15px, 2vw, 18px);
+ line-height: 1.5;
+ max-width: 720px;
+ margin-bottom: 1rem;
+}
+/* ?? ??????? */
+.hero .cta-row {
+ display: flex ;
+ justify-content: center ;
+ align-items: center ;
+ flex-wrap: wrap ;
+ gap: 14px ;
+ margin-top: 22px ;
+ position: relative;
+ z-index: 2;
+}
+/* ??????? */
+.hero .cta-row .btn {
+ width: 200px ;
+ height: 48px ;
+ line-height: 48px ;
+ text-align: center ;
+ border-radius: 8px;
+ font-weight: 600;
+ font-size: 16px;
+ transition: all 0.3s ease;
+}
+/* ?? ????? */
+.hero .btn-primary {
+ background-color: #0a662f ;
+ border: 2px solid #ffffff ;
+ color: #ffffff ;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.hero .btn-primary:hover {
+ background-color: #ffffff ;
+ color: #0a662f ;
+}
+/* ?? ????? */
+.hero .btn-outline {
+ background-color: #0d9488 ;
+ border: 2px solid #0d9488 ;
+ color: #ffffff ;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.hero .btn-outline:hover {
+ background-color: #0a6e64 ;
+ border-color: #0a6e64 ;
+ color: #ffffff ;
+ transform: translateY(-1px);
+}
+/* ????? ????? ??????? */
+.hero .muted,
+.hero .note,
+.hero .lead {
+ color: #ffffff ;
+ opacity: 1 ;
+}
+/* ??????? */
+@media (max-width: 768px) {
+ .hero,
+ .hero-bleed {
+   background: url("hero-bg-mobile.png") center/cover no-repeat;
+   padding: 40px 16px 60px;
+   text-align: center;
+ }
+ .hero h1 { font-size: 28px; }
+ .hero p { font-size: 15px; }
+ .hero .cta-row {
+   gap: 12px ;
+   flex-direction: row ;
+   justify-content: center ;
+ }
+ .hero .cta-row .btn {
+   width: 200px ;
+   min-width: 200px ;
+ }
+}
+@media (max-width: 380px) {
+ .hero .cta-row {
+   flex-direction: column ;
+   align-items: center ;
+   gap: 12px ;
+ }
+ .hero .cta-row .btn {
+   width: 220px ;
+ }
 }
 
-
+/* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
+.hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
+ text-shadow:
+   0 2px 4px rgb(0 0 0),   /* ?? ???? ???? */
+   0 0 3px rgb(21 22 21);     /* ???? ???? ??? ???? */
+}
 
 
  
