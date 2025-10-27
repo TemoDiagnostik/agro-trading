@@ -291,12 +291,14 @@ header .lang span {
   opacity: 1;
 }
 
+/* ========= Responsive fix for mobile ========= */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 60px;
+    padding: 40px 16px 70px;
     text-align: left;
+    position: relative;
   }
 
   .hero h1 {
