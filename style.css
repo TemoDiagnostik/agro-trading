@@ -241,14 +241,14 @@ header .lang span {
  
 .hero-product-specs {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 30%;
   transform: translate(-50%, -50%); /* ← تضعها في منتصف الشاشة تمامًا */
   color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 6px rgb(95 95 95 / 60%);
   max-width: 700px;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.7;
   text-align: center;
   z-index: 5;
 }
