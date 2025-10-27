@@ -293,82 +293,67 @@ header .lang span {
 }
 
 
-/* ========= Responsive fix for mobile ========= */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 70px;
-    text-align: left;
-    position: relative;
+    padding: 40px 16px 60px;
+    text-align: center;
   }
 
   .hero h1 {
     font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    line-height: 1.4; /* تحسين التباعد بين السطور */
+    margin-bottom: 16px; /* مسافة بعد العنوان */
+    word-break: break-word;
   }
 
   .hero p {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.6; /* تحسين التباعد بين السطور للنصوص */
+    margin-bottom: 12px;
+    word-wrap: break-word;
+    max-width: 100%;
   }
 
-  /* الحاوية العامة للنصوص */
-  .hero-text-content {
-    display: block;
-    width: 100%;
-    position: relative;
-    margin-top: 1.5rem;
-    z-index: 2;
-  }
-
-  /* مواصفات المنتج */
-  .hero-product-specs {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.4rem; /* تباعد كبير قبل الفقرة التالية */
-  }
-
-  .hero-product-specs ul {
-    margin: 0.4rem 0 0 1.2rem;
-    padding: 0;
-  }
-
-  .hero-product-specs li {
-    margin-bottom: 0.4rem;
-    list-style: disc;
-  }
-
-  /* الفقرة التوضيحية */
-  .hero-bleed .lead {
-    font-size: 13px;
-    line-height: 1.65;
-    margin-top: 1.2rem;
-    display: block;
-  }
-
-  /* الملاحظة السفلية */
-  .hero-bleed .small-text {
-    font-size: 12px;
-    line-height: 1.45;
-    margin-top: 1rem;
-    display: block;
-  }
-
-  /* الأزرار (إن وُجدت) */
   .hero .cta-row {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap; /* يسمح بتوزيع الأزرار على أكثر من سطر */
+    margin-top: 20px;
+  }
+
+  .hero .cta-row .btn {
+    width: 200px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero .cta-row {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-top: 1.5rem;
   }
 
   .hero .cta-row .btn {
     width: 220px;
   }
+
+  .hero h1 {
+    font-size: 24px; /* أصغر شوية للشاشات الصغيرة جداً */
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
 }
+
+
+
+
 /* ===== TRUST BANNER ===== */
 .trust-banner {
  padding:.9rem 0;
