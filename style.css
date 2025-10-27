@@ -917,12 +917,8 @@ header .lang select {
 
   header {
     padding-top: env(safe-area-inset-top); /* دعم لأجهزة iOS */
-  }
 
-  .hero-bleed,
-  .hero-content {
-    padding-top: 90px !important; /* المسافة من فوق عشان يبعد عن الهيدر */
-  }
+   }
 }
 
 
@@ -1015,8 +1011,8 @@ background: url("hero-bg-mobile.png") center/cover no-repeat;
 /* ??????? */
 @media (max-width: 768px) {
  .hero,
- .hero-bleed {
-   background: url("hero-bg-mobile.png") center/cover no-repeat;
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
     padding: 40px 16px 70px;
     text-align: left;
     position: relative;
@@ -1368,29 +1364,6 @@ header .container.nav {
   }
 }
 
-/* ==== FIX HERO TEXT OVERLAP ON MOBILE ==== */
-@media (max-width: 768px) {
-  .hero-content {
-    display: block !important;
-  }
 
-  .hero-text-content {
-    position: relative !important;
-    margin-top: 1.5rem !important;
-  }
-
-  .hero,
-  .hero-bleed {
-    text-align: left !important; /* أو center لو تفضل */
-  }
-
-  .hero h1,
-  .hero p,
-  .hero-product-specs {
-    position: relative !important;
-    z-index: 2 !important;
-    margin-bottom: 0.9rem !important;
-  }
-}
 
  }}}}
