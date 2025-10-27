@@ -901,6 +901,38 @@ header .lang select {
   }
 }
 
+/* ===================================== */
+/* 🔄 Landscape View on Phones (e.g. Pro Max) */
+/* ===================================== */
+@media (max-width: 930px) and (orientation: landscape) and (max-height: 500px) {
+  header .container.nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    height: auto !important; /* خليه auto عشان يتوسع حسب المحتوى */
+    min-height: 64px;         /* ضمان الحد الأدنى للارتفاع */
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 16px !important;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    position: relative;
+    z-index: 999;
+  }
+
+  header {
+    padding-top: env(safe-area-inset-top); /* دعم لأجهزة iOS */
+  }
+
+  .hero-bleed,
+  .hero-content {
+    padding-top: 90px !important; /* المسافة من فوق عشان يبعد عن الهيدر */
+  }
+}
+
+
+
+
+ 
 /* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
 header nav ul li a {
  position: relative;
