@@ -211,7 +211,22 @@ header .lang span {
   z-index: 5;
   margin: 0;
 }
+/* responsive */
+@media (max-width: 768px) {
+  .hero-bleed .lead {
+    bottom: 90px;
+    left: 20px;
+    font-size: 13px;
+    max-width: 90%;
+  }
 
+  .hero-bleed .small-text {
+    bottom: 60px;
+    left: 20px;
+    font-size: 12px;
+    max-width: 90%;
+  }
+}
  
 
 /* CTA row */
