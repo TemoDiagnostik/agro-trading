@@ -187,13 +187,13 @@ header .lang span {
 /* ✅ تخصيص فقرة we serve */
 .hero-bleed .lead {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  font-size: 14px; /* تصغير الحجم */
-  line-height: 1.6;
+  bottom: 100px;
+  left: 30px;
+  font-size: 13px; /* تصغير الحجم */
+  line-height: 1.5;
   max-width: 500px;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* ظل خفيف */
+  color: #f0fff0;
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
   z-index: 5;
   margin: 0;
 }
