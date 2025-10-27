@@ -196,7 +196,23 @@ header .lang span {
   text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
   z-index: 5;
   margin: 0;
+
+
+/* الجملة الثانية: "All transactions..." */
+.hero-bleed .small-text[data-i18n="hero.tradeNote"] {
+  position: absolute;
+  bottom: 100px; /* أقل من الجملة الأولى عشان تكون تحتها */
+  left: 30px;
+  font-size: 13px;
+  color: #f0fff0;
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
+  max-width: 500px;
+  line-height: 1.5;
+  z-index: 5;
+  margin: 0;
 }
+
+ 
 
 /* CTA row */
 .hero .cta-row {
