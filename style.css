@@ -1368,4 +1368,27 @@ header .container.nav {
   }
 }
 
+/* ==== FIX HERO TEXT OVERLAP ON MOBILE ==== */
+.hero-content {
+  display: block !important;
+}
+
+.hero-text-content {
+  position: relative !important;
+  margin-top: 1.5rem !important;
+}
+
+.hero,
+.hero-bleed {
+  text-align: left !important; /* أو center لو تحب */
+}
+
+.hero h1,
+.hero p,
+.hero-product-specs {
+  position: relative !important;
+  z-index: 2 !important;
+  margin-bottom: 0.9rem !important;
+}
+
  }}}}
