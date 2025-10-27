@@ -243,7 +243,7 @@ header .lang span {
   position: absolute;
   top: 40%;
   left: 30%;
-  transform: translate(-50%, -50%); /* ← تضعها في منتصف الشاشة تمامًا */
+  transform: translate(-44%, -50%); /* ← تضعها في منتصف الشاشة تمامًا */
   color: #ffffff;
   text-shadow: 2px 2px 6px rgb(95 95 95 / 60%);
   max-width: 700px;
