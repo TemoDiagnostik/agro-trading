@@ -156,27 +156,31 @@ header .lang span {
   overflow: hidden;
   text-align: left;
   z-index: 0;
-  height: 100vh; /* <== موجود مسبقاً */
+  height: 100vh;
 }
+
 /* إزالة العنصر الوهمي */
 .hero::before,
 .hero-bleed::before {
   content: none;
 }
+
 /* النصوص العامة داخل hero */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
   color: #ffffff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 2;
 }
+
 /* العنوان الرئيسي */
 .hero h1 {
   font-size: clamp(36px, 6vw, 60px);
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
+
 /* الفقرات العامة */
 .hero p {
   font-size: clamp(15px, 2vw, 18px);
@@ -190,69 +194,43 @@ header .lang span {
   position: absolute;
   bottom: 100px;
   left: 30px;
-  font-size: 13px; /* تصغير الحجم */
+  font-size: 13px;
   line-height: 1.5;
   max-width: 500px;
-  color: #cbcbcb;
-  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
+  color: #e0e0e0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   z-index: 5;
   margin: 0;
 }
 
-/* الجملة الثانية: "All transactions..." */
+/* الجملة الثانية */
 .hero-bleed .small-text[data-i18n="hero.tradeNote"] {
   position: absolute;
-  bottom: 80px; /* أقل من الجملة الأولى عشان تكون تحتها */
+  bottom: 80px;
   left: 30px;
   font-size: 13px;
-  color: #cbcbcb;
-  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
+  color: #e0e0e0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   max-width: 500px;
-  line-height: 0;
+  line-height: 1.4;
   z-index: 5;
   margin: 0;
 }
-@media (max-width: 768px) {
-  .hero-bleed .lead {
-    bottom: 80px; /* أو 90px لو عايزها أعلى */
-    left: 20px;
-    font-size: 13px;
-    max-width: 90%;
-  }
 
-  .hero-bleed .small-text {
-    bottom: 50px; /* أو 60px لو عايزها أقرب للأولى */
-    left: 20px;
-    font-size: 12px;
-    max-width: 90%;
-  }
-
-  .hero .cta-row {
-    gap: 12px;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .hero .cta-row .btn {
-    width: 200px;
-    min-width: 200px;
-  }
-}
- 
+/* مواصفات المنتج */
 .hero-product-specs {
   position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-66%, -50%); /* ← تضعها في منتصف الشاشة تمامًا */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffffff;
-  text-shadow: 2px 2px 6px rgb(95 95 95 / 60%);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
   max-width: 700px;
   font-size: 18px;
   line-height: 1.7;
   text-align: center;
   z-index: 5;
 }
-
 
 /* CTA row */
 .hero .cta-row {
@@ -265,6 +243,7 @@ header .lang span {
   position: relative;
   z-index: 2;
 }
+
 /* الأزرار */
 .hero .cta-row .btn {
   width: 200px;
@@ -276,6 +255,7 @@ header .lang span {
   font-size: 16px;
   transition: all 0.3s ease;
 }
+
 /* زر رئيسي */
 .hero .btn-primary {
   background-color: #0a662f;
@@ -283,10 +263,12 @@ header .lang span {
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
 .hero .btn-primary:hover {
   background-color: #ffffff;
   color: #0a662f;
 }
+
 /* زر outline */
 .hero .btn-outline {
   background-color: #0d9488;
@@ -294,12 +276,14 @@ header .lang span {
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 .hero .btn-outline:hover {
   background-color: #0a6e64;
   border-color: #0a6e64;
   color: #ffffff;
   transform: translateY(-1px);
 }
+
 /* النصوص الثانوية */
 .hero .muted,
 .hero .note,
@@ -307,7 +291,7 @@ header .lang span {
   color: #ffffff;
   opacity: 1;
 }
-/* responsive */
+
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
@@ -315,26 +299,68 @@ header .lang span {
     padding: 40px 16px 60px;
     text-align: center;
   }
+
   .hero h1 {
     font-size: 28px;
   }
+
   .hero p {
     font-size: 15px;
-   }
+  }
+
+  .hero-bleed .lead {
+    position: static;
+    margin-top: 20px;
+    font-size: 13px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-bleed .small-text[data-i18n="hero.tradeNote"] {
+    position: static;
+    margin-top: 8px;
+    font-size: 12px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-product-specs {
+    position: static;
+    transform: none;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .hero-product-specs ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .hero .cta-row {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero .cta-row .btn {
+    width: 200px;
+    min-width: 200px;
+  }
 }
 
- 
 @media (max-width: 380px) {
   .hero .cta-row {
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
+
   .hero .cta-row .btn {
     width: 220px;
   }
 }
-
 /* ===== TRUST BANNER ===== */
 .trust-banner {
  padding:.9rem 0;
