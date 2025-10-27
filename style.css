@@ -316,13 +316,13 @@ header .lang span {
     transform: none !important;
     width: 110%;
     margin: 1.rem 0;
-    padding: 0 19px;
+    padding: 0 20px;
     text-align: left;
   }
 
   .hero-product-specs {
-    margin-top: 1.6rem;
-    font-size: 15px;
+    margin-top: 1.8rem;
+    font-size: 10px;
   }
 
    .hero-bleed .lead,
@@ -355,6 +355,7 @@ header .lang span {
     width: 220px;
   }
 }
+
 
 
 
