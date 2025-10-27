@@ -292,35 +292,82 @@ header .lang span {
   opacity: 1;
 }
 
-/* ??????? */
+
+/* ========= Responsive fix for mobile ========= */
 @media (max-width: 768px) {
- .hero,
- .hero-bleed {
-   background: url("hero-bg-mobile.png") center/cover no-repeat;
-   padding: 40px 16px 60px;
-   text-align: center;
- }
- .hero h1 { font-size: 28px; }
- .hero p { font-size: 15px; }
- .hero .cta-row {
-   gap: 12px ;
-   flex-direction: row ;
-   justify-content: center ;
- }
- .hero .cta-row .btn {
-   width: 200px ;
-   min-width: 200px ;
- }
-}
-@media (max-width: 380px) {
- .hero .cta-row {
-   flex-direction: column ;
-   align-items: center ;
-   gap: 12px ;
- }
- .hero .cta-row .btn {
-   width: 220px ;
- }
+  .hero,
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 70px;
+    text-align: left;
+    position: relative;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* الحاوية العامة للنصوص */
+  .hero-text-content {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 1.5rem;
+    z-index: 2;
+  }
+
+  /* مواصفات المنتج */
+  .hero-product-specs {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.4rem; /* تباعد كبير قبل الفقرة التالية */
+  }
+
+  .hero-product-specs ul {
+    margin: 0.4rem 0 0 1.2rem;
+    padding: 0;
+  }
+
+  .hero-product-specs li {
+    margin-bottom: 0.4rem;
+    list-style: disc;
+  }
+
+  /* الفقرة التوضيحية */
+  .hero-bleed .lead {
+    font-size: 13px;
+    line-height: 1.65;
+    margin-top: 1.2rem;
+    display: block;
+  }
+
+  /* الملاحظة السفلية */
+  .hero-bleed .small-text {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-top: 1rem;
+    display: block;
+  }
+
+  /* الأزرار (إن وُجدت) */
+  .hero .cta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+
+  .hero .cta-row .btn {
+    width: 220px;
+  }
 }
 /* ===== TRUST BANNER ===== */
 .trust-banner {
@@ -882,16 +929,11 @@ header .lang select {
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
- position: relative;
- width: 100vw;                              /* ????? ?????? */
- margin-left: calc(50% - 50vw);             /* ????? ???? ??? container */
- padding: 60px 20px;
- background: url("hero-bg-desktop.png") center/cover no-repeat; /* ?????? ??? ???? ?? ????? */
- background-color: #ffffff;                 /* ??????? ???? ???? */
- overflow: hidden;
- text-align: left;
- z-index: 0;
-}
+background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 40px 16px 70px;
+    text-align: left;
+    position: relative;
+  }
 /* ????? ?? ???? ????? */
 .hero::before,
 .hero-bleed::before {
@@ -975,9 +1017,10 @@ header .lang select {
  .hero,
  .hero-bleed {
    background: url("hero-bg-mobile.png") center/cover no-repeat;
-   padding: 40px 16px 60px;
-   text-align: center;
- }
+    padding: 40px 16px 70px;
+    text-align: left;
+    position: relative;
+  }
  .hero h1 { font-size: 28px; }
  .hero p { font-size: 15px; }
  .hero .cta-row {
