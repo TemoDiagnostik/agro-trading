@@ -293,56 +293,74 @@ header .lang span {
 }
 
 
-/* ======== Responsive ======== */
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
     padding: 40px 16px 60px;
-    text-align: center;
+    text-align: left;
   }
 
   .hero h1 {
     font-size: 28px;
+    text-align: left;
   }
 
   .hero p {
     font-size: 15px;
+    text-align: left;
   }
 
-  /* إزالة الوضع المطلق وجعل التدفق عادي */
   .hero-product-specs,
   .hero-bleed .lead,
   .hero-bleed .small-text[data-i18n="hero.tradeNote"] {
     position: static;
     transform: none;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin: 1rem 0 0;
+    padding: 0;
+    text-align: left;
+    line-height: 1.6;
   }
 
   .hero-product-specs {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .hero-product-specs ul {
+    padding-left: 1.2rem;
+  }
+
+  .hero-product-specs li {
+    margin-bottom: 0.4rem;
+    font-size: 15px;
+  }
+
+  .hero-product-specs strong {
+    display: block;
+    margin-bottom: 0.5rem;
   }
 
   .hero-bleed .lead {
-    margin-top: 1.5rem;
     font-size: 13px;
+    color: #ddd;
   }
 
   .hero-bleed .small-text[data-i18n="hero.tradeNote"] {
     font-size: 12px;
-    margin-top: 0.5rem;
+    color: #ccc;
   }
 
   .hero .cta-row {
     gap: 12px;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    margin-top: 2rem;
   }
 
   .hero .cta-row .btn {
-    width: 220px;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
   }
 }
 /* ===== TRUST BANNER ===== */
