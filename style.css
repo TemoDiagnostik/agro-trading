@@ -282,12 +282,19 @@ header .lang span {
     font-size: 15px;
   }
 
-  .hero .lead[data-i18n="hero.desc"] {
-    bottom: 30px;
+  @media (max-width: 768px) {
+  .hero-bleed .lead {
+    bottom: 80px;
     left: 20px;
     font-size: 13px;
     max-width: 90%;
-    text-align: left;
+  }
+
+  .hero-bleed .small-text {
+    bottom: 50px;
+    left: 20px;
+    font-size: 12px;
+    max-width: 90%;
   }
 
   .hero .cta-row {
