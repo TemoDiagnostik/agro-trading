@@ -185,16 +185,16 @@ header .lang span {
   margin-bottom: 1rem;
 }
 /* ✅ تخصيص فقرة we serve */
-.hero .lead[data-i18n="hero.desc"] {
+.hero-bleed .lead {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   left: 40px;
-  font-size: 14px; /* أصغر بـ 4 درجات تقريبًا */
-  color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* شادو واضح */
-  max-width: 500px;
+  font-size: 14px; /* تصغير الحجم */
   line-height: 1.6;
-  z-index: 10;
+  max-width: 500px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* ظل خفيف */
+  z-index: 5;
   margin: 0;
 }
 
