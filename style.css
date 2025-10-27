@@ -1369,26 +1369,28 @@ header .container.nav {
 }
 
 /* ==== FIX HERO TEXT OVERLAP ON MOBILE ==== */
-.hero-content {
-  display: block !important;
-}
+@media (max-width: 768px) {
+  .hero-content {
+    display: block !important;
+  }
 
-.hero-text-content {
-  position: relative !important;
-  margin-top: 1.5rem !important;
-}
+  .hero-text-content {
+    position: relative !important;
+    margin-top: 1.5rem !important;
+  }
 
-.hero,
-.hero-bleed {
-  text-align: left !important; /* أو center لو تحب */
-}
+  .hero,
+  .hero-bleed {
+    text-align: left !important; /* أو center لو تفضل */
+  }
 
-.hero h1,
-.hero p,
-.hero-product-specs {
-  position: relative !important;
-  z-index: 2 !important;
-  margin-bottom: 0.9rem !important;
+  .hero h1,
+  .hero p,
+  .hero-product-specs {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-bottom: 0.9rem !important;
+  }
 }
 
  }}}}
