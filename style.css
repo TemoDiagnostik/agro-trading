@@ -196,7 +196,7 @@ header .lang span {
   text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
   z-index: 5;
   margin: 0;
-
+}
 
 /* الجملة الثانية: "All transactions..." */
 .hero-bleed .small-text[data-i18n="hero.tradeNote"] {
