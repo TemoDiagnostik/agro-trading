@@ -1349,6 +1349,72 @@ header .container.nav {
   }
 }
 
+/* 👇 Responsive Fixes for All .hero Sections */
+@media (max-width: 768px) {
+  .hero,
+  .hero-bleed {
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 40px 16px 60px !important;
+    text-align: center !important;
+  }
 
+  .hero h1,
+  .hero-bleed h1 {
+    font-size: 26px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 16px !important;
+    word-break: break-word !important;
+  }
+
+  .hero p,
+  .hero-bleed p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+    word-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .hero .cta-row,
+  .hero-bleed .cta-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    margin-top: 20px !important;
+  }
+
+  .hero .cta-row .btn,
+  .hero-bleed .cta-row .btn {
+    width: 200px !important;
+    min-width: 200px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1,
+  .hero-bleed h1 {
+    font-size: 22px !important;
+  }
+
+  .hero p,
+  .hero-bleed p {
+    font-size: 14px !important;
+  }
+
+  .hero .cta-row,
+  .hero-bleed .cta-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .hero .cta-row .btn,
+  .hero-bleed .cta-row .btn {
+    width: 220px !important;
+  }
+}
 
  }}}}
