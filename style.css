@@ -143,7 +143,6 @@ header .lang span {
 
 
 
-
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
@@ -292,62 +291,58 @@ header .lang span {
   opacity: 1;
 }
 
-
 @media (max-width: 768px) {
   .hero,
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
     padding: 40px 16px 60px;
-    text-align: center;
+    text-align: left;
   }
 
   .hero h1 {
     font-size: 28px;
-    line-height: 1.4; /* تحسين التباعد بين السطور */
-    margin-bottom: 16px; /* مسافة بعد العنوان */
-    word-break: break-word;
   }
 
   .hero p {
     font-size: 15px;
-    line-height: 1.6; /* تحسين التباعد بين السطور للنصوص */
-    margin-bottom: 12px;
-    word-wrap: break-word;
-    max-width: 100%;
+  }
+
+  .hero-product-specs,
+  .hero-bleed .lead,
+  .hero-bleed .small-text {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    margin: 1.2rem 0;
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  .hero-product-specs {
+    margin-top: 1.6rem;
+    font-size: 19px;
+  }
+
+  .hero-bleed .lead {
+    margin-top: 6rem;
+    font-size: 13px;
+    line-height: 1.;
+  }
+
+  .hero-bleed .small-text {
+    margin-top: 0.7rem;
+    font-size: 13px;
+    line-height: 1.1;
   }
 
   .hero .cta-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 12px;
-    flex-wrap: wrap; /* يسمح بتوزيع الأزرار على أكثر من سطر */
-    margin-top: 20px;
-  }
-
-  .hero .cta-row .btn {
-    width: 200px;
-    min-width: 200px;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero .cta-row {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
   }
 
   .hero .cta-row .btn {
     width: 220px;
-  }
-
-  .hero h1 {
-    font-size: 24px; /* أصغر شوية للشاشات الصغيرة جداً */
-  }
-
-  .hero p {
-    font-size: 14px;
   }
 }
 
@@ -907,142 +902,9 @@ header .lang select {
 }
 
 
-/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
-.hero,
-.hero-bleed {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat;
-  background-color: #ffffff;
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
-  height: 100vh;
-}
- 
-/* ????? ?? ???? ????? */
-.hero::before,
-.hero-bleed::before {
-  content: none;
-}
-/* ???? ???? ?????? */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
-  position: relative;
-  z-index: 2;
-}
-/* ???????? ??????? */
-/* العنوان الرئيسي */
-.hero h1 {
-  font-size: clamp(36px, 6vw, 60px);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
 
-/* الفقرات العامة */
-.hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.5;
-  max-width: 720px;
-  margin-bottom: 1rem;
-}
-/* ?? ??????? */
-.hero .cta-row {
- display: flex ;
- justify-content: center ;
- align-items: center ;
- flex-wrap: wrap ;
- gap: 14px ;
- margin-top: 22px ;
- position: relative;
- z-index: 2;
-}
-/* ??????? */
-.hero .cta-row .btn {
- width: 200px ;
- height: 48px ;
- line-height: 48px ;
- text-align: center ;
- border-radius: 8px;
- font-weight: 600;
- font-size: 16px;
- transition: all 0.3s ease;
-}
-/* ?? ????? */
-.hero .btn-primary {
- background-color: #0a662f ;
- border: 2px solid #ffffff ;
- color: #ffffff ;
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-.hero .btn-primary:hover {
- background-color: #ffffff ;
- color: #0a662f ;
-}
-/* ?? ????? */
-.hero .btn-outline {
- background-color: #0d9488 ;
- border: 2px solid #0d9488 ;
- color: #ffffff ;
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-.hero .btn-outline:hover {
- background-color: #0a6e64 ;
- border-color: #0a6e64 ;
- color: #ffffff ;
- transform: translateY(-1px);
-}
-/* ????? ????? ??????? */
-.hero .muted,
-.hero .note,
-.hero .lead {
- color: #ffffff ;
- opacity: 1 ;
-}
-/* ??????? */
-@media (max-width: 768px) {
- .hero,
-.hero-bleed {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat;
-  background-color: #ffffff;
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
-  height: 100vh;
-}
- .hero h1 { font-size: 24px; }
- .hero p { font-size: 14px; }
- .hero .cta-row {
-   display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap; /* يسمح بتوزيع الأزرار على أكثر من سطر */
-    margin-top: 20px;
- }
- .hero .cta-row .btn {
-    width: 200px;
-    min-width: 200px;
- }
-}
-@media (max-width: 380px) {
- .hero .cta-row {
-   flex-direction: column ;
-   align-items: center ;
-   gap: 12px ;
- }
- .hero .cta-row .btn {
-   width: 220px ;
- }
-}
+
+
 
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
@@ -1369,72 +1231,3 @@ header .container.nav {
   }
 }
 
-/* 👇 Responsive Fixes for All .hero Sections */
-@media (max-width: 768px) {
-  .hero,
-  .hero-bleed {
-    background-size: cover !important;
-    background-position: center !important;
-    padding: 40px 16px 60px !important;
-    text-align: center !important;
-  }
-
-  .hero h1,
-  .hero-bleed h1 {
-    font-size: 26px !important;
-    line-height: 1.4 !important;
-    margin-bottom: 16px !important;
-    word-break: break-word !important;
-  }
-
-  .hero p,
-  .hero-bleed p {
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    margin-bottom: 12px !important;
-    word-wrap: break-word !important;
-    max-width: 100% !important;
-  }
-
-  .hero .cta-row,
-  .hero-bleed .cta-row {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    flex-wrap: wrap !important;
-    margin-top: 20px !important;
-  }
-
-  .hero .cta-row .btn,
-  .hero-bleed .cta-row .btn {
-    width: 200px !important;
-    min-width: 200px !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero h1,
-  .hero-bleed h1 {
-    font-size: 22px !important;
-  }
-
-  .hero p,
-  .hero-bleed p {
-    font-size: 14px !important;
-  }
-
-  .hero .cta-row,
-  .hero-bleed .cta-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-  }
-
-  .hero .cta-row .btn,
-  .hero-bleed .cta-row .btn {
-    width: 220px !important;
-  }
-}
-
- }}}}
