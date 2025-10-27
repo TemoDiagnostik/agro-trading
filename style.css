@@ -307,18 +307,19 @@ header .lang span {
   .hero h1 {
     font-size: 28px;
     line-height: 1.3;
+    margin-bottom: 0.75rem;
   }
 
   .hero p {
     font-size: 15px;
     line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
-  /* تغليف العناصر الثلاثة داخل حاوية منسقة */
   .hero-text-content {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     padding: 0 16px;
     margin-top: 1.5rem;
     color: #fff;
@@ -327,15 +328,10 @@ header .lang span {
     z-index: 2;
   }
 
-  /* مواصفات المنتج */
   .hero-product-specs {
     font-size: 15px;
-    line-height: 1.5;
-    background-color: rgba(0, 0, 0, 0.35); /* خلفية شفافة خفيفة */
-    padding: 10px 12px;
-    border-radius: 6px;
-    position: relative;
-    z-index: 1;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .hero-product-specs ul {
@@ -348,39 +344,30 @@ header .lang span {
     list-style: disc;
   }
 
-  /* الوصف والملاحظة */
   .hero-bleed .lead {
     font-size: 13px;
     line-height: 1.6;
     word-break: break-word;
     margin-top: 1rem;
-    background-color: rgba(0, 0, 0, 0.35);
-    padding: 8px 10px;
-    border-radius: 6px;
   }
 
   .hero-bleed .small-text {
     font-size: 12px;
     line-height: 1.4;
     margin-top: 1rem;
-    background-color: rgba(0, 0, 0, 0.35);
-    padding: 6px 10px;
-    border-radius: 6px;
   }
 
-  /* أزرار الدعوة إلى الإجراء */
   .hero .cta-row {
     gap: 12px;
     flex-direction: column;
     align-items: center;
+    margin-top: 1.5rem;
   }
 
   .hero .cta-row .btn {
     width: 220px;
   }
 }
-
-
 
 /* ===== TRUST BANNER ===== */
 .trust-banner {
