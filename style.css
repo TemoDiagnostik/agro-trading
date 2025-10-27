@@ -239,6 +239,20 @@ header .lang span {
   }
 }
  
+.hero-product-specs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ← تضعها في منتصف الشاشة تمامًا */
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  z-index: 5;
+}
+
 
 /* CTA row */
 .hero .cta-row {
