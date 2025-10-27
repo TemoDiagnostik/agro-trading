@@ -304,21 +304,25 @@ header .lang span {
 
   .hero h1 {
     font-size: 28px;
+    line-height: 1.3;
   }
 
   .hero p {
     font-size: 15px;
+    line-height: 1.6;
   }
 
-  /* تغليف العناصر الثلاثة داخل حاوية */
+  /* تغليف النصوص داخل خلفية شفافة */
   .hero-text-content {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding: 0 16px;
+    padding: 16px;
     margin-top: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية شفافة سوداء */
+    border-radius: 8px;
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: none;
   }
 
   .hero-product-specs {
@@ -326,14 +330,27 @@ header .lang span {
     line-height: 1.5;
   }
 
+  .hero-product-specs ul {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .hero-product-specs li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+  }
+
   .hero-bleed .lead {
     font-size: 13px;
     line-height: 1.6;
+    word-break: break-word;
+    margin-top: 1rem;
   }
 
   .hero-bleed .small-text {
     font-size: 12px;
     line-height: 1.4;
+    margin-top: 1rem;
   }
 
   .hero .cta-row {
