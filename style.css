@@ -184,6 +184,7 @@ header .lang span {
   max-width: 720px;
   margin-bottom: 1rem;
 }
+
 /* ✅ تخصيص فقرة we serve */
 .hero-bleed .lead {
   position: absolute;
@@ -192,7 +193,7 @@ header .lang span {
   font-size: 13px; /* تصغير الحجم */
   line-height: 1.5;
   max-width: 500px;
-  color: #f0fff0;
+  color: #cbcbcb;
   text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
   z-index: 5;
   margin: 0;
@@ -201,30 +202,40 @@ header .lang span {
 /* الجملة الثانية: "All transactions..." */
 .hero-bleed .small-text[data-i18n="hero.tradeNote"] {
   position: absolute;
-  bottom: 100px; /* أقل من الجملة الأولى عشان تكون تحتها */
+  bottom: 80px; /* أقل من الجملة الأولى عشان تكون تحتها */
   left: 30px;
   font-size: 13px;
-  color: #f0fff0;
+  color: #cbcbcb;
   text-shadow: 1px 1px 3px rgb(0 0 0 / 70%); /* ظل خفيف */
   max-width: 500px;
-  line-height: 1.5;
+  line-height: 0;
   z-index: 5;
   margin: 0;
 }
-/* responsive */
 @media (max-width: 768px) {
   .hero-bleed .lead {
-    bottom: 90px;
+    bottom: 80px; /* أو 90px لو عايزها أعلى */
     left: 20px;
     font-size: 13px;
     max-width: 90%;
   }
 
   .hero-bleed .small-text {
-    bottom: 60px;
+    bottom: 50px; /* أو 60px لو عايزها أقرب للأولى */
     left: 20px;
     font-size: 12px;
     max-width: 90%;
+  }
+
+  .hero .cta-row {
+    gap: 12px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero .cta-row .btn {
+    width: 200px;
+    min-width: 200px;
   }
 }
  
@@ -297,31 +308,7 @@ header .lang span {
     font-size: 15px;
   }
 
-  @media (max-width: 768px) {
-  .hero-bleed .lead {
-    bottom: 80px;
-    left: 20px;
-    font-size: 13px;
-    max-width: 90%;
-  }
-
-  .hero-bleed .small-text {
-    bottom: 50px;
-    left: 20px;
-    font-size: 12px;
-    max-width: 90%;
-  }
-
-  .hero .cta-row {
-    gap: 12px;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .hero .cta-row .btn {
-    width: 200px;
-    min-width: 200px;
-  }
-}
+ 
 @media (max-width: 380px) {
   .hero .cta-row {
     flex-direction: column;
