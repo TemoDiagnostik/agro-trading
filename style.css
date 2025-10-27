@@ -314,28 +314,36 @@ header .lang span {
   .hero-bleed .small-text {
     position: static !important;
     transform: none !important;
-    width: 100%;
-    margin: 1.2rem 0;
-    padding: 0 15px;
+    width: 110%;
+    margin: 1.rem 0;
+    padding: 0 19px;
     text-align: left;
   }
 
   .hero-product-specs {
     margin-top: 1.6rem;
-    font-size: 19px;
+    font-size: 15px;
   }
 
-  .hero-bleed .lead {
-    margin-top: 6rem;
-    font-size: 13px;
-    line-height: 1.;
-  }
+   .hero-bleed .lead,
+.hero-bleed .small-text {
+  display: block;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: none;
+}
 
-  .hero-bleed .small-text {
-    margin-top: 0.7rem;
-    font-size: 13px;
-    line-height: 1.1;
-  }
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+}
 
   .hero .cta-row {
     gap: 12px;
@@ -347,6 +355,7 @@ header .lang span {
     width: 220px;
   }
 }
+
 
 
 
