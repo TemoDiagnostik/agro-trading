@@ -300,6 +300,8 @@ header .lang span {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
     padding: 40px 16px 60px;
     text-align: left;
+    position: relative;
+    z-index: 0;
   }
 
   .hero h1 {
@@ -312,27 +314,33 @@ header .lang span {
     line-height: 1.6;
   }
 
-  /* تغليف النصوص داخل خلفية شفافة */
+  /* تغليف العناصر الثلاثة داخل حاوية منسقة */
   .hero-text-content {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding: 16px;
+    padding: 0 16px;
     margin-top: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.5); /* خلفية شفافة سوداء */
-    border-radius: 8px;
     color: #fff;
-    text-shadow: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2;
   }
 
+  /* مواصفات المنتج */
   .hero-product-specs {
     font-size: 15px;
     line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.35); /* خلفية شفافة خفيفة */
+    padding: 10px 12px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-product-specs ul {
-    padding-left: 1.2rem;
     margin: 0;
+    padding-left: 1.2rem;
   }
 
   .hero-product-specs li {
@@ -340,19 +348,27 @@ header .lang span {
     list-style: disc;
   }
 
+  /* الوصف والملاحظة */
   .hero-bleed .lead {
     font-size: 13px;
     line-height: 1.6;
     word-break: break-word;
     margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 8px 10px;
+    border-radius: 6px;
   }
 
   .hero-bleed .small-text {
     font-size: 12px;
     line-height: 1.4;
     margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 6px 10px;
+    border-radius: 6px;
   }
 
+  /* أزرار الدعوة إلى الإجراء */
   .hero .cta-row {
     gap: 12px;
     flex-direction: column;
@@ -363,7 +379,6 @@ header .lang span {
     width: 220px;
   }
 }
-
 
 
 
