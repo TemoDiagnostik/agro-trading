@@ -910,35 +910,45 @@ header .lang select {
 /* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
 .hero,
 .hero-bleed {
-background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 70px;
-    text-align: left;
-    position: relative;
-  }
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
+  height: 100vh;
+}
+ 
 /* ????? ?? ???? ????? */
 .hero::before,
 .hero-bleed::before {
- content: none ;
+  content: none;
 }
 /* ???? ???? ?????? */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
- color: #ffffff ;
- text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
- position: relative;
- z-index: 2;
+  color: #ffffff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
 }
 /* ???????? ??????? */
+/* العنوان الرئيسي */
 .hero h1 {
- font-size: clamp(36px, 6vw, 60px);
- font-weight: 700;
- margin-bottom: 0.6rem;
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
+
+/* الفقرات العامة */
 .hero p {
- font-size: clamp(15px, 2vw, 18px);
- line-height: 1.5;
- max-width: 720px;
- margin-bottom: 1rem;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 1rem;
 }
 /* ?? ??????? */
 .hero .cta-row {
@@ -996,22 +1006,31 @@ background: url("hero-bg-mobile.png") center/cover no-repeat;
 /* ??????? */
 @media (max-width: 768px) {
  .hero,
-  .hero-bleed {
-    background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 70px;
-    text-align: left;
-    position: relative;
-  }
- .hero h1 { font-size: 28px; }
- .hero p { font-size: 15px; }
+.hero-bleed {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 60px 20px;
+  background: url("hero-bg-desktop.png") center/cover no-repeat;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: left;
+  z-index: 0;
+  height: 100vh;
+}
+ .hero h1 { font-size: 24px; }
+ .hero p { font-size: 14px; }
  .hero .cta-row {
-   gap: 12px ;
-   flex-direction: row ;
-   justify-content: center ;
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap; /* يسمح بتوزيع الأزرار على أكثر من سطر */
+    margin-top: 20px;
  }
  .hero .cta-row .btn {
-   width: 200px ;
-   min-width: 200px ;
+    width: 200px;
+    min-width: 200px;
  }
 }
 @media (max-width: 380px) {
@@ -1026,11 +1045,12 @@ background: url("hero-bg-mobile.png") center/cover no-repeat;
 }
 
 /* ===== HERO TEXT GLOW / SHADOW FOR READABILITY ===== */
-.hero :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, strong, span, li, a, .lead, .muted, .note, .badge) {
- text-shadow:
-   0 2px 4px rgb(0 0 0),   /* ?? ???? ???? */
-   0 0 3px rgb(21 22 21);     /* ???? ???? ??? ???? */
+.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
+.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+  color: #ffffff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
 }
 /* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
 header nav ul li a {
