@@ -1192,34 +1192,8 @@ header .container.nav {
 
 
 
-@media (max-width: 768px) {
-  /* ✅ الأزرار العلوية */
-  .cta-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-top: 14px;
-  }
 
-  .cta-row a {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-    border: 2px solid #007c2e !important;
-    border-radius: 6px;
-  }
-
-  /* ✅ الأزرار السفلية داخل .hero-card أو القسم المماثل */
-  .hero-card a {
-    display: block;
-    width: 100%;
-    max-width: 280px;
-    margin: 8px auto;
-    text-align: center;
-    border: 2px solid #007c2e !important;
-    border-radius: 6px;
-  }
-}
+ 
+ 
 
  }}}}
