@@ -59,7 +59,7 @@
 
   "log.title": "Logistics & Compliance",
   "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
-  "log.incoterms": "Available shipping terms include EX-WORK (Safaga Port), FOB, CFR, CIF, and DDP. Shipment updates are shared via email after booking confirmation.",
+"log.incoterms": "Available shipping terms include EX-WORK (Safaga Port), FOB, CFR, CIF, and DDP. Shipment updates are shared via email after booking confirmation.",
   "log.ports": "Ports: Alexandria / Damietta / Safaga",
   "log.ports.h": "Ports & Packing",
   "log.ports.p": "Standard loading via Alexandria / Damietta / Safaga — Egypt. Packing: Bulk or Big-Bags.",
