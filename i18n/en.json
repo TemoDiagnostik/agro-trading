@@ -1,9 +1,9 @@
 {
- "site.name": "Euro Agri Trading s.r.o — Trusted Agro Broker",
+  "site.name": "Euro Agri Trading s.r.o — Trusted Agro Broker",
 
   "nav.home": "Home",
   "nav.products": "Products",
-  "nav.coa": "COA",
+  "nav.coa": "Specifications",
   "nav.logistics": "Logistics & Compliance",
   "nav.about": "About",
   "nav.contact": "Contact",
@@ -12,22 +12,22 @@
   "hero.desc": "We serve as a trusted intermediary connecting certified suppliers with international buyers, ensuring full transparency and mutual confidence throughout the transaction process.",
   "hero.highlight": "Benefit from factory-direct pricing and exclusive trade terms not available on the open market.",
   "hero.tradeNote": "All transactions follow international trade standards.",
-  "hero.mainProduct": "Rock Phosphate — Grade 26% P₂O₅ (reference sample)",
-  "hero.specTags": "P₂O₅ ≥ 26.3% / SiO₂ ≈ 13.3% / F ≈ 2.6%",
-  "hero.spec1": "Graded by sieving — ready for grinding or direct application.",
-  "hero.spec2": "COA attached, buyer-specific analyses available.",
-  
+  "hero.mainProduct": "Rock Phosphate — Grades 20–28% P₂O₅ (reference sample: 26%)",
+  "hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13.3% / F ≈ 2.6%",
+  "hero.spec1": "Screened granulometry — ready for milling or direct application.",
+  "hero.spec2": "Specification Sheet attached; buyer-specific analyses available.",
+
   "products.title": "Flagship Product",
-  "products.lead": "Rock Phosphate — Grade 26% P₂O₅ (reference sample)",
-  "products.spec1": "Graded by sieving — ready for grinding or direct application",
-  "products.spec2": "COA attached; buyer-specific analyses available",
-  "products.viewCoa": "Open COA",
+  "products.lead": "Rock Phosphate — Grades 20–28% P₂O₅ (reference sample: 26%)",
+  "products.spec1": "Screened granulometry — ready for milling or direct application",
+  "products.spec2": "Specification Sheet attached; buyer-specific analyses available",
+  "products.viewCoa": "Open Spec",
   "products.all": "Available Products",
 
-  "card.rock.title": "Rock Phosphate — Grade 26%",
+  "card.rock.title": "Rock Phosphate — Grades 20–28% P₂O₅",
   "card.rock.text": "Reliable source with consolidated bulk shipments to EU ports, with competitive pricing directly from the factory.",
   "card.rock.cta": "Request a Quote",
-  "card.rock.coa": "View COA",
+  "card.rock.coa": "View Spec",
 
   "card.urea.title": "Urea / NPK (on request)",
   "card.urea.text": "Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.",
@@ -39,8 +39,8 @@
 
   "generic.expand": "Ready to expand",
 
-  "coa.title": "Certificate of Analysis — Rock Phosphate Grade 26%",
-  "coa.sub": "Reference sample (date: 01/09/2023). Fresh COA per shipment can be provided.",
+  "coa.title": "Specification Sheet — Rock Phosphate (Grades 20–28% P₂O₅)",
+  "coa.sub": "Summary of chemical composition — available grades 20%, 22%, 24%, 26%, and 28% P₂O₅.",
 
   "coa.th.test": "Test",
   "coa.th.method": "Method",
@@ -49,26 +49,30 @@
   "coa.th.temp": "Temp.",
   "coa.th.hum": "Humidity",
 
-  "sieve.title": "Sieving Analysis — Grade 26% (P₂O₅=26.33%)",
+  "sieve.title": "Sieving Analysis — Rock Phosphate (20–28% P₂O₅)",
   "sieve.size": "Size",
   "sieve.percent": "Percent wt%",
 
   "coa.export": "Export sieving CSV",
-  "coa.print": "Print/Save PDF — COA",
+  "coa.print": "Print/Save PDF — Spec",
+  "spec.print": "Print/Save PDF — Spec",
 
   "log.title": "Logistics & Compliance",
-  "log.incoterms": "FOB / CFR / CIF / DDP depending on destination — full shipment tracking and clear contracts.",
-  "log.ports": "Ports: Alexandria / Damietta",
+  "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
+  "log.incoterms": "Available shipping terms include EX-WORK (Safaga Port), FOB, CFR, CIF, and DDP. Shipment updates are shared via email after booking confirmation.",
+  "log.ports": "Ports: Alexandria / Damietta / Safaga",
   "log.ports.h": "Ports & Packing",
-  "log.ports.p": "Typical loading via Alexandria/Damietta — Egypt. Packing: Bulk or Big-Bags.",
+  "log.ports.p": "Standard loading via Alexandria / Damietta / Safaga — Egypt. Packing: Bulk or Big-Bags.",
   "log.compliance.h": "EU Compliance",
-  "log.compliance.p": "Origin docs, invoices and COA. Conforms to EU goods & safety standards.",
+  "log.compliance.p": "Certificates of origin, invoices, and analysis reports. Full compliance with EU standards and product safety regulations.",
 
   "about.title": "About us",
   "about.p1": "Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources. We focus on transparency, quality, speed — and",
   "about.pricing": "competitive pricing via direct procurement",
   "about.p2": "3rd-party tests (SGS/BV) on request. Samples available prior to contracting.",
-"payment.details": "Full bank details for each currency (IBAN / SWIFT / Routing) are provided on the or upon request.",
+
+  "payment.details": "Full bank details for each currency (IBAN / SWIFT / Routing) are provided on the invoice or upon request.",
+
   "contact.title": "Get in touch",
   "form.name": "Name",
   "form.email": "Email",
@@ -77,7 +81,7 @@
   "contact.whatsapp": "WhatsApp",
   "contact.note": "We do not use analytics cookies. This form opens your mail app to send directly.",
   "contact.details": "Contact details",
-  "contact.docs": "Official documents (contracts, invoices, COA) are shared after qualifying the request.",
+  "contact.docs": "Official documents (contracts, invoices, specifications/COA) are shared after qualifying the request.",
 
   "site.company": "Euro Agri Trading s.r.o.",
 
