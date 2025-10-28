@@ -1,43 +1,46 @@
 {
-  "site.name": "Euro Agri Trading — Důvěryhodný zemědělský zprostředkovatel",
+  "site.name": "Euro Agri Trading s.r.o — Důvěryhodný agro makléř",
 
   "nav.home": "Domů",
   "nav.products": "Produkty",
-  "nav.coa": "Certifikát analýzy",
-  "nav.logistics": "Logistika & Soulad",
+  "nav.coa": "COA",
+  "nav.logistics": "Logistika a shoda",
   "nav.about": "O nás",
   "nav.contact": "Kontakt",
 
-  "hero.pill": "Zprostředkovatelská firma se sídlem v Česku ↔️ kupci v EU",
-  "hero.cta": "Požádat o nabídku",
-  "hero.cta2": "Zobrazit certifikát analýzy",
-  "hero.note": "* Působíme nezávisle jako zprostředkovatel/obchodník. Nemáme přímé spojení s výrobci.",
+  "hero.title": "AGRO SLUŽBY — Důvěryhodné agro zprostředkování",
+  "hero.desc": "Sloužíme jako důvěryhodný zprostředkovatel spojující certifikované dodavatele s mezinárodními kupujícími, zajišťující plnou transparentnost a vzájemnou důvěru během celého obchodního procesu.",
+  "hero.highlight": "Získejte výhodu cen přímo z továrny a exkluzivních obchodních podmínek, které nejsou dostupné na volném trhu.",
+  "hero.tradeNote": "Všechny transakce se řídí mezinárodními obchodními standardy.",
+  "hero.mainProduct": "Kamenný fosfát — Třída 26% P₂O₅ (referenční vzorek)",
+  "hero.specTags": "P₂O₅ ≥ 26,3% / SiO₂ ≈ 13,3% / F ≈ 2,6%",
+  "hero.spec1": "Tříděno proséváním — připraveno k mletí nebo přímé aplikaci.",
+  "hero.spec2": "COA přiloženo, analýzy specifické pro kupujícího jsou k dispozici.",
 
   "products.title": "Hlavní produkt",
-  "products.lead": "Přírodní fosfát — Kvalita 26% P₂O₅ (referenční vzorek)",
+  "products.lead": "Kamenný fosfát — Třída 26% P₂O₅ (referenční vzorek)",
   "products.spec1": "Tříděno proséváním — připraveno k mletí nebo přímé aplikaci",
-  "products.spec2": "Certifikát analýzy je k dispozici; další analýzy na vyžádání",
-  "products.viewCoa": "Otevřít certifikát",
+  "products.spec2": "COA přiloženo; analýzy specifické pro kupujícího jsou k dispozici",
+  "products.viewCoa": "Otevřít COA",
   "products.all": "Dostupné produkty",
 
-  "card.rock.title": "Přírodní fosfát — Kvalita 26%",
-  "card.rock.text": "Spolehlivý zdroj s konsolidovanými dodávkami Bulk do přístavů EU.",
+  "card.rock.title": "Kamenný fosfát — Třída 26%",
+  "card.rock.text": "Spolehlivý zdroj s konsolidovanými hromadnými zásilkami do přístavů EU za konkurenceschopné ceny přímo z továrny.",
   "card.rock.cta": "Požádat o nabídku",
-  "card.rock.coa": "Zobrazit certifikát analýzy",
+  "card.rock.coa": "Zobrazit COA",
 
-  "log.ports": "Přístavy: Alexandrie / Damietta",
   "card.urea.title": "Močovina / NPK (na vyžádání)",
-  "card.urea.text": "Další produkty (močovina, MAP/DAP, NPK) dostupné na vyžádání.",
-  "card.urea.cta": "Zeptat se nyní",
+  "card.urea.text": "Další řady (močovina, MAP/DAP, NPK) lze přidat dle poptávky s flexibilními možnostmi dodávek.",
+  "card.urea.cta": "Zeptejte se na močovinu",
+
+  "card.custom.title": "Vlastní specifikace",
+  "card.custom.text": "Dodávky, balení a analýzy přizpůsobené požadavkům kupujícího s oficiální dokumentací.",
+  "card.custom.cta": "Požádat o vlastní specifikaci",
 
   "generic.expand": "Připraveno k rozšíření",
 
-  "card.custom.title": "Individuální specifikace",
-  "card.custom.text": "Dodávky, balení a analýzy přizpůsobené požadavkům zákazníka.",
-  "card.custom.cta": "Vyžádat individuální specifikace",
-
-  "coa.title": "Certifikát analýzy — Přírodní fosfát kvalita 26%",
-  "coa.sub": "Referenční vzorek (datum: 01/09/2023). Nový certifikát je k dispozici pro každou dodávku.",
+  "coa.title": "Certifikát analýzy — Kamenný fosfát třída 26%",
+  "coa.sub": "Referenční vzorek (datum: 01/09/2023). Čerstvé COA lze poskytnout pro každou zásilku.",
 
   "coa.th.test": "Test",
   "coa.th.method": "Metoda",
@@ -46,36 +49,39 @@
   "coa.th.temp": "Teplota",
   "coa.th.hum": "Vlhkost",
 
-  "sieve.title": "Prosévací analýza — Kvalita 26% (P₂O₅=26.33%)",
-  "sieve.size": "Velikost částic",
-  "sieve.percent": "Podíl v %",
+  "sieve.title": "Analýza prosévání — Třída 26% (P₂O₅=26,33%)",
+  "sieve.size": "Velikost",
+  "sieve.percent": "Procento hmotnosti",
 
-  "coa.export": "Exportovat prosévací analýzu jako CSV",
-  "coa.print": "Tisk/uložit PDF — Certifikát analýzy",
+  "coa.export": "Exportovat prosévací CSV",
+  "coa.print": "Tisk/Uložit PDF — COA",
 
-  "log.title": "Logistika & Soulad",
-  "log.incoterms": "FOB / CFR / CIF / DDP dle cíle — kompletní sledování dodávky a jasné smlouvy.",
-  "log.ports.h": "Přístavy & Balení",
-  "log.ports.p": "Nakládka obvykle přes Alexandrii/Damiettu — Egypt. Balení: Bulk nebo Big-Bagy.",
-  "log.compliance.h": "EU Soulad",
-  "log.compliance.p": "Doklady o původu, faktury a certifikát analýzy. V souladu s normami EU.",
+  "log.title": "Logistika a shoda",
+  "log.incoterms": "FOB / CFR / CIF / DDP podle cíle — plné sledování zásilky a jasné smlouvy.",
+  "log.ports": "Přístavy: Alexandrie / Damietta",
+  "log.ports.h": "Přístavy a balení",
+  "log.ports.p": "Typické nakládání přes Alexandrii/Damiettu — Egypt. Balení: volně ložené nebo Big-Bagy.",
+  "log.compliance.h": "Shoda s EU",
+  "log.compliance.p": "Doklady o původu, faktury a COA. V souladu s evropskými normami bezpečnosti a kvality.",
 
   "about.title": "O nás",
-  "about.p1": "Zprostředkovatelská firma se sídlem v Česku spojující evropské kupce se spolehlivými zemědělskými vstupy. Zaměřujeme se na transparentnost, kvalitu, rychlost — a",
-  "about.pricing": "konkurenční ceny díky přímému nákupu",
-  "about.p2": "Jednáme nezávisle jako zprostředkovatel/obchodník. Názvy výrobců veřejně neuvádíme kvůli důvěrnosti.",
-  "about.p3": "Testy třetích stran (SGS/BV) na vyžádání. Vzorky k dispozici před uzavřením smlouvy.",
-
+  "about.p1": "Zprostředkovatelská společnost se sídlem v České republice spojující evropské kupce se spolehlivými zemědělskými vstupy z důvěryhodných zdrojů. Zaměřujeme se na transparentnost, kvalitu, rychlost — a",
+  "about.pricing": "konkurenceschopné ceny díky přímému nákupu",
+  "about.p2": "Testy třetích stran (SGS/BV) na vyžádání. Vzorky jsou k dispozici před uzavřením smlouvy.",
+  
+  "payment.details": "Úplné bankovní údaje pro každou měnu (IBAN / SWIFT / Routing) jsou uvedeny v nabídce nebo na vyžádání.",
+  
   "contact.title": "Kontaktujte nás",
   "form.name": "Jméno",
   "form.email": "E-mail",
   "form.message": "Zpráva",
   "form.send": "Odeslat",
   "contact.whatsapp": "WhatsApp",
-  "contact.note": "Nepoužíváme analytické cookies. Tento formulář otevře váš e-mailový klient přímo.",
+  "contact.note": "Nepoužíváme analytické cookies. Tento formulář otevře vaši e-mailovou aplikaci pro přímé odeslání.",
   "contact.details": "Kontaktní údaje",
-  "contact.docs": "Požadované dokumenty (smlouvy, faktury, COA) poskytujeme po vyžádání.",
+  "contact.docs": "Oficiální dokumenty (smlouvy, faktury, COA) jsou sdíleny po kvalifikaci požadavku.",
+
   "site.company": "Euro Agri Trading s.r.o.",
 
-  "footer.note": "©️ 2025 — Nezávislý zprostředkovatel/obchodník. Ochranné známky patří jejich vlastníkům. Tato stránka slouží pouze pro obchodní informace."
+  "footer.note": "©️ 2025 — Nezávislý makléř/marketér. Ochranné známky patří jejich vlastníkům. Stránka slouží pouze k obchodním informacím."
 }
