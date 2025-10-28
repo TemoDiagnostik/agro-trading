@@ -661,6 +661,22 @@ form label {
  flex-wrap: wrap;
  gap: 12px;
 }
+
+/* ===== 💳 Payment Section ===== */
+.payment-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.payment-text {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
 /
 /* ===== NOTES & MUTED FIX ===== */
 .note {
