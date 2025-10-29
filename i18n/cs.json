@@ -85,10 +85,11 @@
   "cert.title": "Specifikace produktů a dokumenty o shodě",
   "cert.note": "Poznámka: Níže uvedené specifikace představují zjednodušené marketingové verze. Úplné verze jsou k dispozici na vyžádání.",
 
-  "doc.sgs": "Ověření kvality SGS — Fosfátová ruda",
-  "doc.sgs.desc": "Nezávislá inspekce a ověření potvrzené SGS Egypt pro jakostní třídy 20–28 % P₂O₅.",
-  "doc.msds": "Shrnutí MSDS — Soulad s EU (REACH)",
-  "doc.msds.desc": "Shrnutí bezpečnostních údajů materiálu pro regulatorní shodu dle rámce EU REACH.",
+  "sgs.title": "Ověření kvality SGS — Fosfátová ruda",
+"sgs.sub": "Nezávislá inspekce a ověření potvrzené SGS Egypt pro jakostní třídy 20–28 % P₂O₅.",
+
+"msds.title": "Shrnutí MSDS — Soulad s EU",
+"msds.sub": "Shrnutí bezpečnostních údajů materiálu pro regulatorní shodu (EU REACH).",
 
   "contact.title": "Kontaktujte nás",
   "contact.details": "Kontaktní údaje",
