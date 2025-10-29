@@ -82,8 +82,30 @@
   "contact.note": "Nepoužíváme analytické cookies. Tento formulář otevře vaši e-mailovou aplikaci pro přímé odeslání.",
   "contact.details": "Kontaktní údaje",
   "contact.docs": "Oficiální dokumenty (smlouvy, faktury a specifikace produktů) jsou sdíleny po ověření žádosti.",
+
   "footer.payment": "Všechny platby a obchodní vyrovnání probíhají přímo mezi kupujícím a certifikovaným dodavatelem, zatímco Euro Agri Trading s.r.o. působí výhradně jako nezávislý zprostředkovatel zajišťující koordinaci a transparentnost.",
   "site.company": "Euro Agri Trading s.r.o.",
 
-  "footer.note": "©️ 2025 — Nezávislý zprostředkovatel/marketér. Ochranné známky patří jejich vlastníkům. Stránka slouží pouze k obchodním informacím."
+  "footer.note": "©️ 2025 — Nezávislý zprostředkovatel/marketér. Ochranné známky patří jejich vlastníkům. Stránka slouží pouze k obchodním informacím.",
+
+  "services.title": "Naše služby",
+  "services.agro": "Zemědělské služby",
+  "services.agro.desc": "Komplexní podpora pro evropské farmáře a distributory prostřednictvím ověřených a osvědčených produktů a hnojiv.",
+
+  "services.testing": "Kontrola kvality",
+  "services.testing.desc": "Certifikovaná analýza půd a hnojiv zajišťující soulad s nejvyššími standardy EU.",
+
+  "services.lab": "Laboratorní analýza",
+  "services.lab.desc": "Pokročilé testování ve specializovaných laboratořích pro ověření zásilek před exportem a dodáním.",
+
+  "docs.title": "Specifikace produktů a dokumenty o shodě",
+  "docs.note": "Poznámka: Níže uvedené specifikace představují zjednodušené marketingové verze. Úplné verze jsou k dispozici na vyžádání.",
+
+  "doc.sgs": "Ověření kvality SGS — Fosfátová ruda",
+  "doc.sgs.desc": "Nezávislá inspekce a ověření potvrzené SGS Egypt pro jakostní třídy 20–28 % P₂O₅.",
+
+  "doc.msds": "Shrnutí MSDS — Soulad s EU (REACH)",
+  "doc.msds.desc": "Shrnutí bezpečnostních údajů materiálu pro regulatorní shodu dle rámce EU REACH.",
+
+  "footer.legal": "Naše činnost je v souladu s celními, obchodními a zemědělskými dovozními předpisy EU. Plná právní shoda je zajištěna prostřednictvím české registrace a certifikace."
 }
