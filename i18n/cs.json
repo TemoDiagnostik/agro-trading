@@ -9,37 +9,37 @@
   "nav.contact": "Kontakt",
 
   "hero.title": "AGRO SLUŽBY — Důvěryhodné zemědělské zprostředkování",
-  "hero.desc": "Působíme jako spolehlivý prostředník spojující certifikované dodavatele s mezinárodními odběrateli a zajišťujeme plnou transparentnost a vzájemnou důvěru po celou dobu obchodního procesu.",
-  "hero.highlight": "Využijte přímé tovární ceny a exkluzivní obchodní podmínky, které nejsou běžně dostupné na otevřeném trhu.",
+  "hero.desc": "Jsme spolehlivým prostředníkem spojujícím certifikované dodavatele s mezinárodními odběrateli a zajišťujeme plnou transparentnost a vzájemnou důvěru v průběhu celého obchodního procesu.",
+  "hero.highlight": "Využijte přímé tovární ceny a exkluzivní obchodní podmínky, které nejsou běžně dostupné na trhu.",
   "hero.tradeNote": "Všechny transakce probíhají podle mezinárodních obchodních standardů.",
-  "hero.mainProduct": "Fosfátová ruda — Třídy 20–28 % P₂O₅ (referenční vzorek: 26 %)",
+  "hero.mainProduct": "Fosfátová ruda — Obsah P₂O₅ 20–28 % (referenční vzorek: 26 %)",
   "hero.specTags": "P₂O₅: 20–28 % / SiO₂ ≈ 13,3 % / F ≈ 2,6 %",
   "hero.spec1": "Tříděná zrnitost — připraveno k mletí nebo přímé aplikaci.",
   "hero.spec2": "Přiložen list specifikace; individuální analýzy na vyžádání.",
 
   "products.title": "Hlavní produkt",
-  "products.lead": "Fosfátová ruda — Třídy 20–28 % P₂O₅ (referenční vzorek: 26 %)",
+  "products.lead": "Fosfátová ruda — Obsah P₂O₅ 20–28 % (referenční vzorek: 26 %)",
   "products.spec1": "Tříděná zrnitost — připraveno k mletí nebo přímé aplikaci",
   "products.spec2": "Přiložen list specifikace; individuální analýzy na vyžádání",
   "products.viewCoa": "Otevřít specifikaci",
   "products.all": "Dostupné produkty",
 
-  "card.rock.title": "Fosfátová ruda — Třídy 20–28 % P₂O₅",
-  "card.rock.text": "Spolehlivý zdroj s konsolidovanými dodávkami do přístavů EU a konkurenceschopnými cenami přímo od výrobce.",
+  "card.rock.title": "Fosfátová ruda — Obsah P₂O₅ 20–28 %",
+  "card.rock.text": "Spolehlivý zdroj s konsolidovanými dodávkami do přístavů EU, s konkurenceschopnými cenami přímo od výrobce.",
   "card.rock.cta": "Požádat o nabídku",
   "card.rock.coa": "Zobrazit specifikaci",
 
   "card.urea.title": "Močovina / NPK (na vyžádání)",
-  "card.urea.text": "Další sortiment (močovina, MAP/DAP, NPK) je dostupný dle poptávky s flexibilními možnostmi dodávek.",
+  "card.urea.text": "Další sortiment (močovina, MAP/DAP, NPK) je dostupný dle poptávky s flexibilními dodacími možnostmi.",
   "card.urea.cta": "Zeptejte se na močovinu",
 
   "card.custom.title": "Vlastní specifikace",
-  "card.custom.text": "Dodávky, balení a analýzy přizpůsobené požadavkům odběratele s oficiální dokumentací.",
+  "card.custom.text": "Dodávky, balení a analýzy přizpůsobené požadavkům odběratele, s oficiální dokumentací.",
   "card.custom.cta": "Vyžádat vlastní specifikaci",
 
   "generic.expand": "Připraveno k rozšíření",
 
-  "coa.title": "List specifikace — Fosfátová ruda (třídy 20–28 % P₂O₅)",
+  "coa.title": "List specifikace — Fosfátová ruda (obsah P₂O₅ 20–28 %)",
   "coa.sub": "Souhrn chemického složení — dostupné třídy 20 %, 22 %, 24 %, 26 % a 28 % P₂O₅.",
 
   "coa.th.test": "Test",
@@ -54,12 +54,12 @@
   "sieve.percent": "Podíl hmotnost %",
 
   "coa.export": "Exportovat prosévací data CSV",
-  "coa.print": "Tisk/Uložit PDF — Specifikace",
-  "spec.print": "Tisk/Uložit PDF — Specifikace",
+  "coa.print": "Tisk / Uložit PDF — Specifikace",
+  "spec.print": "Tisk / Uložit PDF — Specifikace",
 
   "log.title": "Logistika a shoda",
   "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
-  "log.incoterms": "Dostupné dodací podmínky zahrnují EX-WORK (přístav Safaga), FOB, CFR, CIF a DDP. Aktualizace zásilek jsou zasílány e-mailem po potvrzení rezervace.",
+  "log.incoterms": "Dostupné dodací podmínky: EX-WORK (přístav Safaga), FOB, CFR, CIF a DDP. Aktualizace zásilky jsou sdíleny e-mailem po potvrzení rezervace.",
   "log.ports": "Přístavy: Alexandrie / Damietta / Safaga",
   "log.ports.h": "Přístavy a balení",
   "log.ports.p": "Standardní nakládka přes Alexandrii / Damiettu / Safagu — Egypt. Balení: volně ložené nebo big-bagy.",
@@ -67,10 +67,9 @@
   "log.compliance.p": "Certifikáty původu, faktury a analytické zprávy. Úplný soulad s normami EU a předpisy o bezpečnosti výrobků.",
 
   "about.title": "O nás",
-  "about.p1": "Zprostředkovatelská společnost se sídlem v České republice spojující evropské odběratele se spolehlivými zemědělskými dodavateli. Zaměřujeme se na transparentnost, kvalitu, rychlost a spolehlivost.",
-  "about.pricing": "Konkurenceschopné ceny díky přímému nákupu od výrobců.",
-  "about.p2": "Testování a ověření třetí stranou (SGS / BV) je dostupné na vyžádání. Vzorky lze poskytnout před uzavřením smlouvy.",
-  "about.p3": "Naše činnost odpovídá celním a obchodním předpisům EU a předpisům pro dovoz zemědělských produktů. Plný právní soulad je zajištěn díky registraci a certifikaci v České republice.",
+  "about.p1": "Zprostředkovatelská společnost se sídlem v Česku spojující evropské odběratele se spolehlivými zemědělskými dodavateli. Zaměřujeme se na transparentnost, kvalitu, rychlost a",
+  "about.pricing": "konkurenceschopné ceny díky přímým nákupům od výrobců",
+  "about.p2": "Nezávislé testy třetích stran (SGS/BV) na vyžádání. Vzorky dostupné před uzavřením smlouvy.",
 
   "payment.details": "Úplné bankovní údaje pro každou měnu (IBAN / SWIFT / Routing) jsou uvedeny na faktuře nebo na vyžádání.",
 
@@ -87,5 +86,27 @@
   "footer.payment": "Všechny platby a obchodní vyrovnání probíhají přímo mezi kupujícím a certifikovaným dodavatelem, zatímco Euro Agri Trading s.r.o. působí výhradně jako nezávislý zprostředkovatel zajišťující koordinaci a transparentnost.",
   "site.company": "Euro Agri Trading s.r.o.",
 
-  "footer.note": "©️ 2025 — Nezávislý zprostředkovatel/marketér. Ochranné známky patří jejich vlastníkům. Stránka slouží pouze k obchodním informacím."
+  "footer.note": "©️ 2025 — Nezávislý zprostředkovatel/marketér. Ochranné známky patří jejich vlastníkům. Stránka slouží pouze k obchodním informacím.",
+
+ "services.title": "Naše služby",
+
+"services.agro": "Zemědělské služby",
+"services.agro.text": "Komplexní podpora pro evropské farmáře a distributory prostřednictvím ověřených a osvědčených produktů a hnojiv.",
+
+"services.quality": "Kontrola kvality",
+"services.quality.text": "Certifikovaná analýza půd a hnojiv zajišťující soulad s nejvyššími standardy EU.",
+
+"services.analysis": "Laboratorní analýza",
+"services.analysis.text": "Pokročilé testování ve specializovaných laboratořích pro ověření zásilek před exportem a dodáním.",
+
+  "docs.title": "Specifikace produktů a dokumenty o shodě",
+  "docs.note": "Poznámka: Níže uvedené specifikace představují zjednodušené marketingové verze. Úplné verze jsou k dispozici na vyžádání.",
+
+  "doc.sgs": "Ověření kvality SGS — Fosfátová ruda",
+  "doc.sgs.desc": "Nezávislá inspekce a ověření potvrzené SGS Egypt pro jakostní třídy 20–28 % P₂O₅.",
+
+  "doc.msds": "Shrnutí MSDS — Soulad s EU (REACH)",
+  "doc.msds.desc": "Shrnutí bezpečnostních údajů materiálu pro regulatorní shodu dle rámce EU REACH.",
+
+  "footer.legal": "Naše činnost je v souladu s celními, obchodními a zemědělskými dovozními předpisy EU. Plná právní shoda je zajištěna prostřednictvím české registrace a certifikace."
 }
