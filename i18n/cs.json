@@ -103,6 +103,7 @@
   "form.send": "Odeslat",
 
   "payment.details": "Úplné bankovní údaje pro každou měnu (IBAN / SWIFT / Routing) jsou uvedeny na faktuře nebo na vyžádání.",
+  "payment.btn.request": "Vyžádat Proformu / Údaje Wise",
 
   "footer.payment": "Všechny platby a obchodní vyrovnání probíhají přímo mezi kupujícím a certifikovaným dodavatelem, zatímco Euro Agri Trading s.r.o. působí výhradně jako nezávislý zprostředkovatel zajišťující koordinaci a transparentnost.",
   "footer.legal": "Naše činnost je v souladu s celními, obchodními a zemědělskými dovozními předpisy EU. Plná právní shoda je zajištěna prostřednictvím české registrace a certifikace.",
