@@ -81,10 +81,11 @@
 
   "docs.title": "Especificações dos Produtos e Documentos de Conformidade",
   "docs.note": "Nota: As especificações abaixo são versões simplificadas para marketing. Versões completas estão disponíveis mediante solicitação.",
-  "doc.sgs": "Verificação de Qualidade SGS — Rocha Fosfática",
-  "doc.sgs.desc": "Inspeção e verificação independentes confirmadas pela SGS Egito para graus de 20–28 % P₂O₅.",
-  "doc.msds": "Resumo MSDS — Conformidade com a UE (REACH)",
-  "doc.msds.desc": "Resumo das informações de segurança do material para conformidade regulatória sob a estrutura do REACH da UE.",
+  "sgs.title": "Verificação de Qualidade SGS — Rocha Fosfática",
+"sgs.sub": "Inspeção e verificação independentes confirmadas pela SGS Egito para graus de 20–28 % P₂O₅.",
+
+"msds.title": "Resumo MSDS — Conformidade com a UE",
+"msds.sub": "Resumo das informações de segurança do material para conformidade regulatória (REACH da UE).",
 
   "contact.title": "Fale Conosco",
   "contact.details": "Detalhes de Contato",
