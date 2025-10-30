@@ -103,7 +103,7 @@
   "form.send": "Senden",
 
   "payment.details": "Vollständige Bankverbindungen für jede Währung (IBAN / SWIFT / Routing) sind auf der Rechnung oder auf Anfrage angegeben.",
-
+"payment.btn.request": "Proforma / Wise-Daten anfordern",
   "footer.payment": "Alle Zahlungen und Handelsabwicklungen erfolgen direkt zwischen Käufer und zertifiziertem Lieferanten. Euro Agri Trading s.r.o. agiert ausschließlich als unabhängiger Vermittler zur Koordination und Transparenz.",
   "footer.legal": "Unsere Tätigkeit entspricht den EU-Vorschriften für Zoll, Handel und landwirtschaftliche Einfuhren. Die vollständige rechtliche Konformität ist durch tschechische Registrierung und Zertifizierung gewährleistet.",
   "footer.note": "©️ 2025 – Unabhängiger Vermittler/Marketer. Marken gehören ihren jeweiligen Inhabern. Diese Website dient ausschließlich Informationszwecken im geschäftlichen Kontext.",
