@@ -107,7 +107,7 @@
   "form.send": "Envoyer",
 
   "payment.details": "Les coordonnées bancaires complètes pour chaque devise (IBAN / SWIFT / Routing) sont fournies sur la facture ou sur demande.",
-
+"payment.btn.request": "Demander la proforma / Détails Wise",
   "footer.payment": "Tous les paiements et règlements commerciaux sont effectués directement entre l'acheteur et le fournisseur certifié, tandis que Euro Agri Trading s.r.o. agit uniquement en tant qu'intermédiaire indépendant assurant la coordination et la transparence.",
   "footer.legal": "Nos opérations respectent les réglementations douanières, commerciales et agricoles de l'UE. Conformité légale assurée via enregistrement tchèque.",
   "footer.note": "©️ 2025 — Courtier/Agent indépendant. Les marques appartiennent à leurs propriétaires. Site à usage purement commercial.",
