@@ -130,7 +130,6 @@
         <option value="da">Dansk</option>
         <option value="sv">Svenska</option>
         <option value="fi">Suomi</option>
-        <option value="sk">Slovenčina</option>
         <option value="sl">Slovenščina</option>
         <option value="hr">Hrvatski</option>
         <option value="sr">Srpski</option>
@@ -237,28 +236,34 @@
       <!-- ✅ Agricultural Services -->
       <div class="service">
         <img src="service-agro.png" alt="Agricultural Services">
-        <h3 data-i18n="services.agro">Agricultural Services</h3>
-        <p data-i18n="services.agro.text">
-          Comprehensive support for European farmers and distributors through trusted and tested products and fertilizers.
-        </p>
+        <div class="service-text">
+          <h3 data-i18n="services.agro">Agricultural Services</h3>
+          <p data-i18n="services.agro.text">
+            Comprehensive support for European farmers and distributors through trusted and tested products and fertilizers.
+          </p>
+        </div>
       </div>
 
       <!-- ✅ Quality Testing -->
       <div class="service">
         <img src="service-quality.png" alt="Quality Testing">
-        <h3 data-i18n="services.quality">Quality Testing</h3>
-        <p data-i18n="services.quality.text">
-          Certified analysis of soils and fertilizers to ensure compliance with the highest EU standards.
-        </p>
+        <div class="service-text">
+          <h3 data-i18n="services.quality">Quality Testing</h3>
+          <p data-i18n="services.quality.text">
+            Certified analysis of soils and fertilizers to ensure compliance with the highest EU standards.
+          </p>
+        </div>
       </div>
 
       <!-- ✅ Laboratory Analysis -->
       <div class="service">
         <img src="service-lab.png" alt="Laboratory Analysis">
-        <h3 data-i18n="services.analysis">Laboratory Analysis</h3>
-        <p data-i18n="services.analysis.text">
-          Advanced testing through specialized laboratories to verify shipments before export and delivery.
-        </p>
+        <div class="service-text">
+          <h3 data-i18n="services.analysis">Laboratory Analysis</h3>
+          <p data-i18n="services.analysis.text">
+            Advanced testing through specialized laboratories to verify shipments before export and delivery.
+          </p>
+        </div>
       </div>
 
     </div>
@@ -556,7 +561,9 @@
 							<span class="badge">TRY</span>
 						</div>
 						<p data-i18n="payment.details"></p>
-						<a class="btn btn-primary" href="mailto:info@euroagritrading.eu?subject=Request%20Proforma">Request Proforma / Wise Details</a>
+						<a class="btn btn-primary" data-i18n="payment.btn.request" href="mailto:info@euroagritrading.eu?subject=Request%20Proforma">
+  Request Proforma / Wise Details
+</a>
 					</div>
 				</div>
 				<div class="form-section">
