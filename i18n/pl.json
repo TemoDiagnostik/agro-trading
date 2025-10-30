@@ -103,7 +103,7 @@
   "form.send": "Wyślij",
 
   "payment.details": "Pełne dane bankowe dla każdej waluty (IBAN / SWIFT / Routing) są zawarte na fakturze lub dostępne na życzenie.",
-
+"payment.btn.request": "Poproś o Proformę / Dane Wise",
   "footer.payment": "Wszystkie płatności i rozliczenia handlowe odbywają się bezpośrednio między kupującym a certyfikowanym dostawcą, natomiast Euro Agri Trading s.r.o. działa wyłącznie jako niezależny pośrednik zapewniający koordynację i przejrzystość.",
   "footer.legal": "Nasza działalność jest zgodna z przepisami celnymi, handlowymi i rolniczymi UE. Pełna zgodność prawna dzięki rejestracji i certyfikacji w Czechach.",
   "footer.note": "©️ 2025 — Niezależny pośrednik/marketingowiec. Znaki towarowe należą do ich właścicieli. Strona ma charakter wyłącznie informacyjny handlowy.",
