@@ -103,7 +103,7 @@
   "form.send": "Invia",
 
   "payment.details": "Tutti i dettagli bancari per ciascuna valuta (IBAN / SWIFT / Routing) sono inclusi nella fattura o forniti su richiesta.",
-
+"payment.btn.request": "Richiedi Proforma / Dettagli Wise",
   "footer.payment": "Tutti i pagamenti e gli accordi commerciali vengono effettuati direttamente tra l’acquirente e il fornitore certificato, mentre Euro Agri Trading s.r.o. agisce esclusivamente come intermediario indipendente per garantire coordinamento e trasparenza.",
   "footer.legal": "Le nostre operazioni rispettano le normative doganali, commerciali e agricole dell’UE. Conformità legale completa garantita tramite registrazione e certificazione ceca.",
   "footer.note": "©️ 2025 — Intermediario / marketer indipendente. I marchi appartengono ai rispettivi proprietari. Sito a scopo puramente informativo commerciale.",
