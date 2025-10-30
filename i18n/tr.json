@@ -79,8 +79,8 @@
   "services.analysis": "Laboratuvar Analizi",
   "services.analysis.text": "İhracat öncesi ve teslimat için uzman laboratuvarlarda ileri düzey testler.",
 
-  "docs.title": "Ürün Şartnameleri ve Uygunluk Belgeleri",
-  "docs.note": "Not: Aşağıdaki şartnameler pazarlama amaçlı sadeleştirilmiştir. Tam sürümler talep üzerine sağlanabilir.",
+  "cert.title": "Ürün Özellikleri ve Uygunluk Belgeleri",
+"cert.note": "Not: Aşağıda gösterilen özellikler basitleştirilmiş pazarlama versiyonlarıdır. Tam sürümler talep üzerine sağlanabilir.",
   "sgs.title": "SGS Kalite Doğrulaması — Fosfat Kayası",
   "sgs.sub": "20–28 % P₂O₅ dereceleri için SGS Mısır tarafından onaylanmış bağımsız denetim ve doğrulama.",
 
