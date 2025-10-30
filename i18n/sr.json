@@ -79,8 +79,8 @@
   "services.analysis": "Laboratorijska analiza",
   "services.analysis.text": "Napredna ispitivanja u specijalizovanim laboratorijama za verifikaciju pošiljki pre izvoza i isporuke.",
 
-  "docs.title": "Specifikacije proizvoda i dokumenti o usklađenosti",
-  "docs.note": "Napomena: Ispod su pojednostavljene marketinške verzije specifikacija. Potpune verzije dostupne su na zahtev.",
+  "cert.title": "Specifikacije proizvoda i dokumenti o usklađenosti",
+"cert.note": "Napomena: Prikazane specifikacije su pojednostavljene marketinške verzije. Puni dokumenti su dostupni na zahtev.",
   "sgs.title": "SGS provera kvaliteta — Fosfatna ruda",
   "sgs.sub": "Nezavisna inspekcija i potvrda od strane SGS Egipat za razrede 20–28 % P₂O₅.",
 
