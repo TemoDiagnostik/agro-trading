@@ -160,6 +160,19 @@ header .lang span {
   height: 100vh;
 }
 
+/* تحريك صندوق المواصفات داخل الهيرو */
+.hero-specs-box{
+  margin-top: 40px;     /* زوّدها لـ 50–60 لو عايز ينزل أكتر */
+  /* (اختياري للتجميل)
+  padding: .8rem 1rem;
+  background: rgba(0,0,0,.25);
+  border-left: 4px solid #e6c16d;
+  border-radius: 8px;
+  */
+}
+
+
+
 /* إزالة العنصر الوهمي */
 .hero::before,
 .hero-bleed::before {
