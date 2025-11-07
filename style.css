@@ -1508,4 +1508,13 @@ header .container.nav {
 }
 
 
+
+.hero-content {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.4));
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+
+
  }}}}
