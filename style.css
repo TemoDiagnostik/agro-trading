@@ -1495,4 +1495,17 @@ header .container.nav {
   }
 }
 
+
+
+
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+  .hero-specs-box ul {
+    list-style-position: inside;
+  }
+}
+
+
  }}}}
