@@ -1442,4 +1442,33 @@ header .container.nav {
 .hero :is(h1, p, strong, li) {
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.7) !important;
 }
+
+
+/* Floating caption over hero background */
+.hero-bleed{ position: relative; }
+.hero-caption-special{
+  position: absolute;
+  left: 64px;
+  bottom: 76px;           /* اضبطها حسب ذوقك */
+  color: #e6c16d;         /* الذهبي */
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.65);
+  max-width: 720px;
+}
+@media (max-width: 992px){
+  .hero-caption-special{ left: 32px; bottom: 56px; }
+}
+@media (max-width: 768px){
+  /* على الموبايل نخليها داخل التدفق العادي لتجنب التزاحم */
+  .hero-caption-special{
+    position: static;
+    margin-top: 10px;
+    padding: .6rem .9rem;
+    background: rgba(10,102,47,.12);
+    border-left: 4px solid #e6c16d;
+    border-radius: 8px;
+    color: #fff;
+  }
+}
  }}}}
