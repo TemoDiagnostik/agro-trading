@@ -163,14 +163,13 @@ header .lang span {
 /* تحريك صندوق المواصفات داخل الهيرو */
 .hero-specs-box{
   margin-top: 40px;     /* زوّدها لـ 50–60 لو عايز ينزل أكتر */
-  
+  /* (اختياري للتجميل)
   padding: .8rem 1rem;
   background: rgba(0,0,0,.25);
   border-left: 4px solid #e6c16d;
   border-radius: 8px;
-  
+  */
 }
-
 
 
 /* إزالة العنصر الوهمي */
@@ -1484,4 +1483,16 @@ header .container.nav {
     color: #fff;
   }
 }
+
+/* ⚙️ تعديل موضع النص في الموبايل */
+@media (max-width: 768px) {
+  .hero-specs-box {
+    margin-top: 10px; /* أقل مسافة في الموبايل */
+  }
+
+  .hero-content {
+    padding-bottom: 60px; /* مساحة إضافية أسفل النص حتى لا يختفي */
+  }
+}
+
  }}}}
