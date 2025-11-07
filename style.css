@@ -1517,4 +1517,11 @@ header .container.nav {
 
 
 
+.hero-content {
+  background: rgba(0,0,0,0.25);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+
  }}}}
