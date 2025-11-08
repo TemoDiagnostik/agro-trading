@@ -1,44 +1,36 @@
 {
   "site.name": "Euro Agri Trading s.r.o — Intermediario agricolo affidabile",
-
   "nav.home": "Home",
   "nav.products": "Prodotti",
   "nav.coa": "Specifiche",
   "nav.logistics": "Logistica e conformità",
   "nav.about": "Chi siamo",
   "nav.contact": "Contatto",
-
-  "hero.title": "SERVIZI AGRO — Intermediazione agricola affidabile",
-  "hero.desc": "Siamo un intermediario fidato che collega fornitori certificati con acquirenti internazionali, garantendo piena trasparenza e fiducia reciproca durante l'intero processo commerciale.",
-  "hero.highlight": "Approfitta dei prezzi diretti di fabbrica e di condizioni commerciali esclusive non comunemente disponibili sul mercato.",
-  "hero.tradeNote": "Tutte le transazioni seguono gli standard commerciali internazionali.",
-  "hero.mainProduct": "Roccia fosfatica — Contenuto P₂O₅ 20–28 % (campione di riferimento: 26 %)",
-  "hero.specTags": "P₂O₅: 20–28 % / SiO₂ ≈ 13,3 % / F ≈ 2,6 %",
-  "hero.spec1": "Granulometria selezionata — pronta per macinazione o applicazione diretta.",
-  "hero.spec2": "Scheda tecnica inclusa; analisi individuali disponibili su richiesta.",
-
+  "hero.title": "AGRO SERVICES — Trusted Agro Brokerage",
+  "hero.desc": "We serve as a trusted intermediary connecting certified suppliers with international buyers, ensuring full transparency and mutual confidence throughout the transaction process.",
+  "hero.highlight": "Benefit from factory-direct pricing and exclusive trade terms not available on the open market.",
+  "hero.tradeNote": "All transactions follow international trade standards.",
+  "hero.mainProduct": "Rock Phosphate — Grades 20–28% P₂O₅ (reference sample: 26%)",
+  "hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13.3% / F ≈ 2.6%",
+  "hero.spec1": "Screened granulometry — ready for milling or direct application.",
+  "hero.spec2": "Specification Sheet attached; buyer-specific analyses available.",
   "products.title": "Prodotto principale",
   "products.lead": "Roccia fosfatica — Contenuto P₂O₅ 20–28 % (campione di riferimento: 26 %)",
   "products.spec1": "Granulometria selezionata — pronta per macinazione o applicazione diretta",
   "products.spec2": "Scheda tecnica inclusa; analisi individuali su richiesta",
   "products.viewCoa": "Visualizza specifica",
   "products.all": "Prodotti disponibili",
-
   "card.rock.title": "Roccia fosfatica — Contenuto P₂O₅ 20–28 %",
   "card.rock.text": "Fonte affidabile con spedizioni consolidate ai porti dell'UE, a prezzi competitivi direttamente dal produttore.",
   "card.rock.cta": "Richiedi un'offerta",
   "card.rock.coa": "Visualizza specifica",
-
   "card.urea.title": "Urea / NPK (su richiesta)",
   "card.urea.text": "Altri prodotti (urea, MAP/DAP, NPK) disponibili su richiesta con opzioni di consegna flessibili.",
   "card.urea.cta": "Richiedi informazioni sull’urea",
-
   "card.custom.title": "Specifiche personalizzate",
   "card.custom.text": "Fornitura, imballaggio e analisi adattati alle esigenze dell’acquirente, con documentazione ufficiale.",
   "card.custom.cta": "Richiedi specifiche personalizzate",
-
   "generic.expand": "Pronto per l'espansione",
-
   "coa.title": "Scheda tecnica — Roccia fosfatica (P₂O₅ 20–28 %)",
   "coa.sub": "Riepilogo della composizione chimica — gradi disponibili: 20 %, 22 %, 24 %, 26 % e 28 % P₂O₅.",
   "coa.th.test": "Test",
@@ -50,12 +42,10 @@
   "coa.export": "Esporta dati di vagliatura CSV",
   "coa.print": "Stampa / Salva PDF — Specifica",
   "spec.print": "Stampa / Salva PDF — Specifica",
-
   "sieve.title": "Analisi di vagliatura — Roccia fosfatica (P₂O₅ 20–28 %)",
   "sieve.sub": "Granulometria e distribuzione delle particelle — adatto alla macinazione o applicazione diretta.",
   "sieve.size": "Dimensione",
   "sieve.percent": "Percentuale in peso",
-
   "log.title": "Logistica e conformità",
   "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
   "log.incoterms": "Termini disponibili: EX-WORK (porto di Safaga), FOB, CFR, CIF e DDP. Gli aggiornamenti di spedizione vengono condivisi via email dopo la conferma della prenotazione.",
@@ -64,13 +54,11 @@
   "log.ports.p": "Carico standard da Alessandria / Damietta / Safaga — Egitto. Imballaggio sfuso o in big bag.",
   "log.compliance.h": "Dichiarazione di conformità UE",
   "log.compliance.p": "Documentazione di origine e conformità per soddisfare i requisiti del mercato UE.",
-
   "about.title": "Chi siamo",
   "about.p1": "Società di intermediazione con sede in Repubblica Ceca che collega acquirenti europei con fornitori agricoli affidabili.",
   "about.pricing": "Prezzi competitivi grazie ad acquisti diretti dal produttore.",
   "about.p2": "Test indipendenti da terze parti (SGS/BV) disponibili su richiesta. Campioni disponibili prima del contratto.",
   "about.p3": "Le nostre operazioni rispettano le normative doganali, commerciali e di importazione agricola dell'UE. Conformità legale completa garantita tramite registrazione e certificazione ceca.",
-
   "services.title": "I nostri servizi",
   "services.agro": "Servizi agricoli",
   "services.agro.text": "Supporto completo per agricoltori e distributori europei tramite prodotti e fertilizzanti testati e certificati.",
@@ -78,36 +66,28 @@
   "services.quality.text": "Analisi certificata di suoli e fertilizzanti conforme agli standard più elevati dell’UE.",
   "services.analysis": "Analisi di laboratorio",
   "services.analysis.text": "Test avanzati in laboratori specializzati per verificare le spedizioni prima dell’esportazione e consegna.",
-
   "docs.title": "Specifiche del prodotto e documenti di conformità",
   "docs.note": "Nota: Le specifiche mostrate di seguito sono versioni semplificate a scopo promozionale. Le versioni complete sono disponibili su richiesta.",
-
   "cert.title": "Specifiche del prodotto e documenti di conformità",
   "cert.note": "Nota: Le specifiche mostrate di seguito sono versioni semplificate a scopo promozionale. Le versioni complete sono disponibili su richiesta.",
-
   "sgs.title": "Verifica di qualità SGS — Roccia fosfatica",
   "sgs.sub": "Ispezione e verifica indipendente confermata da SGS Egitto per gradi P₂O₅ del 20–28 %.",
-
   "msds.title": "Sintesi MSDS — Conformità UE",
   "msds.sub": "Sintesi dei dati sulla sicurezza dei materiali conforme al regolamento REACH dell’UE.",
-
   "contact.title": "Contattaci",
   "contact.details": "Dettagli di contatto",
   "contact.docs": "Documenti ufficiali — contratti, fatture, specifiche dei prodotti.",
   "contact.whatsapp": "WhatsApp",
   "contact.note": "Non utilizziamo cookie analitici. Questo modulo aprirà la tua app email per l’invio diretto.",
-
   "form.name": "Nome completo",
   "form.email": "Email",
   "form.message": "Messaggio",
   "form.send": "Invia",
-
   "payment.details": "Tutti i dettagli bancari per ciascuna valuta (IBAN / SWIFT / Routing) sono inclusi nella fattura o forniti su richiesta.",
-"payment.btn.request": "Richiedi Proforma / Dettagli Wise",
+  "payment.btn.request": "Richiedi Proforma / Dettagli Wise",
   "footer.payment": "Tutti i pagamenti e gli accordi commerciali vengono effettuati direttamente tra l’acquirente e il fornitore certificato, mentre Euro Agri Trading s.r.o. agisce esclusivamente come intermediario indipendente per garantire coordinamento e trasparenza.",
   "footer.legal": "Le nostre operazioni rispettano le normative doganali, commerciali e agricole dell’UE. Conformità legale completa garantita tramite registrazione e certificazione ceca.",
   "footer.note": "©️ 2025 — Intermediario / marketer indipendente. I marchi appartengono ai rispettivi proprietari. Sito a scopo puramente informativo commerciale.",
-
   "site.company": "Euro Agri Trading s.r.o.",
   "soon.title": "Roccia fosfatica a basso contenuto di cadmio",
   "soon.sub": "31–32 % P₂O₅ — Specifiche e MSDS disponibili a breve.",

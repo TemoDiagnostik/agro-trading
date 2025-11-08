@@ -1,44 +1,36 @@
 {
   "site.name": "Euro Agri Trading s.r.o — Pouzdan agro posrednik",
-
   "nav.home": "Početna",
   "nav.products": "Proizvodi",
   "nav.coa": "Specifikacije",
   "nav.logistics": "Logistika i usklađenost",
   "nav.about": "O nama",
   "nav.contact": "Kontakt",
-
-  "hero.title": "AGRO USLUGE — Pouzdano poljoprivredno posredovanje",
-  "hero.desc": "Mi smo pouzdan posrednik koji povezuje sertifikovane dobavljače sa međunarodnim kupcima, obezbeđujući potpunu transparentnost i međusobno poverenje tokom celog procesa trgovine.",
-  "hero.highlight": "Iskoristite direktne cene iz fabrike i ekskluzivne komercijalne uslove koji obično nisu dostupni na tržištu.",
-  "hero.tradeNote": "Sve transakcije se sprovode u skladu sa međunarodnim trgovinskim standardima.",
-  "hero.mainProduct": "Fosfatna ruda — Sadržaj P₂O₅ 20–28 % (referentni uzorak: 26 %)",
-  "hero.specTags": "P₂O₅: 20–28 % / SiO₂ ≈ 13,3 % / F ≈ 2,6 %",
-  "hero.spec1": "Sortirana granulacija — spremna za mlevenje ili direktnu primenu.",
-  "hero.spec2": "Tehnički list priložen; individualne analize na zahtev.",
-
+  "hero.title": "AGRO SERVICES — Trusted Agro Brokerage",
+  "hero.desc": "We serve as a trusted intermediary connecting certified suppliers with international buyers, ensuring full transparency and mutual confidence throughout the transaction process.",
+  "hero.highlight": "Benefit from factory-direct pricing and exclusive trade terms not available on the open market.",
+  "hero.tradeNote": "All transactions follow international trade standards.",
+  "hero.mainProduct": "Rock Phosphate — Grades 20–28% P₂O₅ (reference sample: 26%)",
+  "hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13.3% / F ≈ 2.6%",
+  "hero.spec1": "Screened granulometry — ready for milling or direct application.",
+  "hero.spec2": "Specification Sheet attached; buyer-specific analyses available.",
   "products.title": "Glavni proizvod",
   "products.lead": "Fosfatna ruda — Sadržaj P₂O₅ 20–28 % (referentni uzorak: 26 %)",
   "products.spec1": "Sortirana granulacija — spremna za mlevenje ili direktnu primenu",
   "products.spec2": "Tehnički list priložen; individualne analize na zahtev",
   "products.viewCoa": "Otvori specifikacije",
   "products.all": "Dostupni proizvodi",
-
   "card.rock.title": "Fosfatna ruda — P₂O₅ 20–28 %",
   "card.rock.text": "Pouzdan izvor sa konsolidovanim isporukama u EU luke, sa konkurentnim cenama direktno od proizvođača.",
   "card.rock.cta": "Zatraži ponudu",
   "card.rock.coa": "Prikaži specifikacije",
-
   "card.urea.title": "Urea / NPK (na zahtev)",
   "card.urea.text": "Ostali proizvodi (urea, MAP/DAP, NPK) dostupni na zahtev uz fleksibilne opcije isporuke.",
   "card.urea.cta": "Pitaj za ureu",
-
   "card.custom.title": "Prilagođene specifikacije",
   "card.custom.text": "Isporuke, pakovanja i analize prilagođene zahtevima kupca, uz zvaničnu dokumentaciju.",
   "card.custom.cta": "Zatraži prilagođene specifikacije",
-
   "generic.expand": "Spremno za proširenje",
-
   "coa.title": "Tehnički list — Fosfatna ruda (P₂O₅ 20–28 %)",
   "coa.sub": "Sažetak hemijskog sastava — dostupni razredi: 20 %, 22 %, 24 %, 26 % i 28 % P₂O₅.",
   "coa.th.test": "Test",
@@ -50,12 +42,10 @@
   "coa.export": "Izvezi podatke prosejavanja CSV",
   "coa.print": "Štampaj / Sačuvaj PDF — Specifikacije",
   "spec.print": "Štampaj / Sačuvaj PDF — Specifikacije",
-
   "sieve.title": "Analiza prosejavanja — Fosfatna ruda (P₂O₅ 20–28 %)",
   "sieve.sub": "Granulometrija i raspodela čestica — pogodna za mlevenje ili direktnu primenu.",
   "sieve.size": "Veličina",
   "sieve.percent": "Udeo mase %",
-
   "log.title": "Logistika i usklađenost",
   "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
   "log.incoterms": "Dostupni uslovi isporuke: EX-WORK (luka Safaga), FOB, CFR, CIF i DDP. Ažuriranja pošiljki šalju se putem e-pošte nakon potvrde rezervacije.",
@@ -64,13 +54,11 @@
   "log.ports.p": "Standardno utovaranje preko Aleksandrije / Damijete / Safage — Egipat. Pakovanje: rasuto ili u velikim džakovima.",
   "log.compliance.h": "Izjava o usklađenosti sa EU",
   "log.compliance.p": "Dokumentacija o poreklu i usklađenosti za ispunjavanje zahteva EU tržišta.",
-
   "about.title": "O nama",
   "about.p1": "Posrednička firma sa sedištem u Češkoj koja povezuje evropske kupce sa pouzdanim poljoprivrednim dobavljačima.",
   "about.pricing": "Konkurentne cene zahvaljujući direktnoj kupovini od proizvođača.",
   "about.p2": "Nezavisna testiranja trećih strana (SGS/BV) dostupna na zahtev. Uzorci dostupni pre potpisivanja ugovora.",
   "about.p3": "Naše poslovanje je u skladu sa carinskim, trgovinskim i uvoznim propisima EU za poljoprivredu. Potpuna pravna usklađenost obezbeđena je češkom registracijom i sertifikacijom.",
-
   "services.title": "Naše usluge",
   "services.agro": "Poljoprivredne usluge",
   "services.agro.text": "Kompletna podrška za evropske farmere i distributere kroz proverene i pouzdane proizvode i đubriva.",
@@ -78,33 +66,26 @@
   "services.quality.text": "Sertifikovana analiza zemljišta i đubriva u skladu sa najvišim EU standardima.",
   "services.analysis": "Laboratorijska analiza",
   "services.analysis.text": "Napredna ispitivanja u specijalizovanim laboratorijama za verifikaciju pošiljki pre izvoza i isporuke.",
-
   "cert.title": "Specifikacije proizvoda i dokumenti o usklađenosti",
-"cert.note": "Napomena: Prikazane specifikacije su pojednostavljene marketinške verzije. Puni dokumenti su dostupni na zahtev.",
+  "cert.note": "Napomena: Prikazane specifikacije su pojednostavljene marketinške verzije. Puni dokumenti su dostupni na zahtev.",
   "sgs.title": "SGS provera kvaliteta — Fosfatna ruda",
   "sgs.sub": "Nezavisna inspekcija i potvrda od strane SGS Egipat za razrede 20–28 % P₂O₅.",
-
   "msds.title": "MSDS sažetak — Usklađenost sa EU",
   "msds.sub": "Sažetak podataka o bezbednosti materijala za regulatornu usklađenost (EU REACH).",
-
   "contact.title": "Kontaktirajte nas",
   "contact.details": "Kontakt podaci",
   "contact.docs": "Zvanična dokumentacija — ugovori, fakture, specifikacije proizvoda.",
   "contact.whatsapp": "WhatsApp",
   "contact.note": "Ne koristimo analitičke kolačiće. Ova forma otvara vašu e-mail aplikaciju za direktno slanje.",
-
   "form.name": "Puno ime",
   "form.email": "E-mail",
   "form.message": "Poruka",
   "form.send": "Pošalji",
-
   "payment.details": "Kompletni bankovni podaci za svaku valutu (IBAN / SWIFT / Routing) nalaze se na fakturi ili na zahtev.",
   "payment.btn.request": "Zatraži predračun / Wise podatke",
-
   "footer.payment": "Sva plaćanja i trgovinski aranžmani odvijaju se direktno između kupca i sertifikovanog dobavljača, dok Euro Agri Trading s.r.o. deluje isključivo kao nezavisni posrednik obezbeđujući koordinaciju i transparentnost.",
   "footer.legal": "Naše poslovanje je u skladu sa carinskim, trgovinskim i uvoznim propisima EU za poljoprivredu. Potpuna pravna usklađenost obezbeđena je kroz registraciju i sertifikaciju u Češkoj.",
   "footer.note": "©️ 2025 — Nezavisni posrednik / marketinški agent. Zaštitni znaci pripadaju svojim vlasnicima. Sajt služi isključivo u informativne komercijalne svrhe.",
-
   "site.company": "Euro Agri Trading s.r.o.",
   "soon.title": "Fosfatna ruda sa niskim sadržajem kadmijuma",
   "soon.sub": "31–32 % P₂O₅ — Specifikacije i MSDS uskoro dostupni.",
