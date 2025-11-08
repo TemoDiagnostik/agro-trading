@@ -1528,13 +1528,13 @@ header .container.nav {
 @media (max-width: 768px) {
   /* لو السطر الأخير عندك داخل <p class="trade-note">  */
   .hero-specs-box .trade-note {
-    margin-top: 0.80rem;   /* نزول بسيط لتحت */
+    margin-top: 0.75rem;   /* نزول بسيط لتحت */
     display: block;
   }
 
   /* احتياطي: لو السطر الأخير ليس داخل .trade-note (نص عام بعد <ul>) */
   .hero-specs-box > :last-child {
-    margin-top: 0.80rem;
+    margin-top: 0.75rem;
   }
 }
  }}}}
