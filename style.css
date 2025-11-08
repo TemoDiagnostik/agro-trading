@@ -1522,6 +1522,21 @@ header .container.nav {
   padding: 1rem 1.5rem;
   border-radius: 8px;
 }
+/* 📱 Mobile Hero Layout Fix */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 25vh; /* ينزل النص لتحت شوية */
+    text-align: center;
+  }
 
+  .hero-specs-box {
+    margin-top: 2.5rem; /* يضيف مسافة بين الجملة الجديدة والـ specs */
+  }
+
+  .hero-subline, .lead {
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+  }
+}
 
  }}}}
