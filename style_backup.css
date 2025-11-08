@@ -160,6 +160,18 @@ header .lang span {
   height: 100vh;
 }
 
+/* تحريك صندوق المواصفات داخل الهيرو */
+.hero-specs-box{
+  margin-top: 40px;     /* زوّدها لـ 50–60 لو عايز ينزل أكتر */
+  /* (اختياري للتجميل)
+  padding: .8rem 1rem;
+  background: rgba(0,0,0,.25);
+  border-left: 4px solid #e6c16d;
+  border-radius: 8px;
+  */
+}
+
+
 /* إزالة العنصر الوهمي */
 .hero::before,
 .hero-bleed::before {
@@ -1442,4 +1454,74 @@ header .container.nav {
 .hero :is(h1, p, strong, li) {
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.7) !important;
 }
+
+
+/* Floating caption over hero background */
+.hero-bleed{ position: relative; }
+.hero-caption-special{
+  position: absolute;
+  left: 64px;
+  bottom: 76px;           /* اضبطها حسب ذوقك */
+  color: #e6c16d;         /* الذهبي */
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.65);
+  max-width: 720px;
+}
+@media (max-width: 992px){
+  .hero-caption-special{ left: 32px; bottom: 56px; }
+}
+@media (max-width: 768px){
+  /* على الموبايل نخليها داخل التدفق العادي لتجنب التزاحم */
+  .hero-caption-special{
+    position: static;
+    margin-top: 10px;
+    padding: .6rem .9rem;
+    background: rgba(10,102,47,.12);
+    border-left: 4px solid #e6c16d;
+    border-radius: 8px;
+    color: #fff;
+  }
+}
+
+/* ⚙️ تعديل موضع النص في الموبايل */
+@media (max-width: 768px) {
+  .hero-specs-box {
+    margin-top: 10px; /* أقل مسافة في الموبايل */
+  }
+
+  .hero-content {
+    padding-bottom: 60px; /* مساحة إضافية أسفل النص حتى لا يختفي */
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+  .hero-specs-box ul {
+    list-style-position: inside;
+  }
+}
+
+
+
+.hero-content {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.4));
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+
+
+.hero-content {
+  background: rgba(0,0,0,0.25);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}
+
+
  }}}}
