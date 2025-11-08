@@ -1487,7 +1487,7 @@ header .container.nav {
 /* ⚙️ تعديل موضع النص في الموبايل */
 @media (max-width: 768px) {
   .hero-specs-box {
-    margin-top: 30px; /* أقل مسافة في الموبايل */
+    margin-top: 20px; /* أقل مسافة في الموبايل */
   }
 
   .hero-content {
