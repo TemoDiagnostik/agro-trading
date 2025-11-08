@@ -1522,21 +1522,45 @@ header .container.nav {
   padding: 1rem 1.5rem;
   border-radius: 8px;
 }
-/* 📱 Mobile Hero Layout Fix */
+/* ========== 🧩 HERO MOBILE FIX (Nov 2025) ========== */
+
+/* ثبّت الطبقات لضمان ظهور النص فوق الصورة */
+.hero-bleed { position: relative; }
+.hero-media { position: absolute; inset: 0; z-index: 0; }
+.hero-content { position: relative; z-index: 5; }  /* النص فوق الخلفية */
+
+/* ⚙️ إصلاح التوزيع والتباين في الموبايل */
 @media (max-width: 768px) {
   .hero-content {
-    padding-top: 25vh; /* ينزل النص لتحت شوية */
+    padding-top: 0.5vh;          /* ينزل النص لتحت شوية */
     text-align: center;
   }
 
-  .hero-specs-box {
-    margin-top: 2.5rem; /* يضيف مسافة بين الجملة الجديدة والـ specs */
+  .hero-title {
+    margin-bottom: 0.75rem;     /* مسافة بسيطة تحت العنوان */
   }
 
-  .hero-subline, .lead {
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
+  .hero-subline, .lead { 
+    margin-bottom: 0.9rem;      /* مسافة بين الفقرات */
+    line-height: 1.45;          /* ارتفاع الأسطر */
+  }
+
+  .hero-specs-box {
+    margin-top: 1.25rem;        /* مسافة بين النص والمربع */
+    background: rgba(0,0,0,.45); /* خلفية شفافة داكنة للوضوح */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  .hero-content .hero-title,
+  .hero-content .hero-subline,
+  .hero-content .lead,
+  .hero-specs-box {
+    text-shadow: 0 2px 8px rgba(0,0,0,.6); /* ظلال للنص للوضوح */
   }
 }
+
+/* لو عندك overlay غامق فوق الصورة تأكد أن ترتيبه أقل من النص */
+.hero-media::after { z-index: 1; }
 
  }}}}
