@@ -139,7 +139,24 @@ header .lang span {
  line-height: 1;
 }
 
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
+  .navbar-nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}
 
 
 
