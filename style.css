@@ -1524,29 +1524,31 @@ header .container.nav {
 }
 
 
+/* 🎯 تحسين العرض على الهواتف */
 @media (max-width: 768px) {
   .hero-specs-box {
-    padding-bottom: 6rem; /* بدل 4rem */
+    padding: 1.25rem 1rem;           /* مسافة داخلية حول النص */
+    text-align: center;              /* توسيط النصوص */
+  }
+
+  .hero-specs-box h1,
+  .hero-specs-box h2 {
+    font-size: 1.25rem;              /* عنوان مناسب للجوال */
+    line-height: 1.4;
+  }
+
+  .hero-specs-box p,
+  .hero-specs-box li {
+    font-size: 0.95rem;              /* خط واضح لكن مش ضخم */
+    line-height: 1.6;                /* راحة للعين */
+    margin-bottom: 0.75rem;          /* مسافة بين الأسطر */
   }
 
   .hero-specs-box .trade-note {
     margin-top: 1rem;
-    margin-bottom: 2rem; /* احتياط إضافي */
-    display: block;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
     opacity: 0.85;
-  }
-}
-@media (max-width: 768px) {
-  .mobile-spacer {
-    height: 5rem;
-  }
-}
-
-  /* احتياطي: لو السطر الأخير ليس داخل .trade-note (نص عام بعد <ul>) */
-  .hero-specs-box > :last-child {
-    margin-top: 0.75rem;
+    line-height: 1.5;
   }
 }
  }}}}
