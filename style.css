@@ -1585,35 +1585,5 @@ header .container.nav {
 
 
 
-@media (max-width: 768px) {
-  /* زر القائمة */
-  .nav-toggle {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin: 10px;
-  }
 
-  .navbar-nav {
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    background: rgba(0, 0, 0, 0.75);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
-
-  .navbar-nav li {
-    text-align: center;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .navbar-nav.show {
-    display: flex;
-  }
-}
  }}}}
