@@ -1526,11 +1526,12 @@ header .container.nav {
 
 @media (max-width: 768px) {
   .hero-specs-box {
-    padding-bottom: 5rem; /* يرفع المحتوى بالكامل فوق الشريط الثابت */
+    padding-bottom: 6rem; /* بدل 4rem */
   }
 
   .hero-specs-box .trade-note {
     margin-top: 1rem;
+    margin-bottom: 2rem; /* احتياط إضافي */
     display: block;
     font-size: 0.95rem;
     line-height: 1.5;
