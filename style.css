@@ -1524,15 +1524,17 @@ header .container.nav {
 }
 
 
-/* 🔧 Mobile tweak — improve spacing and visibility for trade note */
 @media (max-width: 768px) {
+  .hero-specs-box {
+    padding-bottom: 5rem; /* يرفع المحتوى بالكامل فوق الشريط الثابت */
+  }
+
   .hero-specs-box .trade-note {
-    margin-top: 1rem;           /* مسافة بينه وبين اللي فوق */
-    margin-bottom: 4rem;        /* مسافة كافية تحته عشان ما يختفي ورا الشريط */
-    display: block;             /* يتأكد إنه ياخذ سطر كامل */
-    font-size: 0.95rem;         /* حجم مناسب للموبايل */
-    line-height: 1.5;           /* يسهل القراءة */
-    opacity: 0.85;              /* توضيح أنه ملاحظة ختامية */
+    margin-top: 1rem;
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.85;
   }
 }
 
