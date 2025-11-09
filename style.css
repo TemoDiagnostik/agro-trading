@@ -1524,13 +1524,16 @@ header .container.nav {
 }
 
 
-/* 🔧 Mobile tweak — push the last line in hero specs a bit lower */
+/* 🔧 Mobile tweak — improve spacing for trade note */
 @media (max-width: 768px) {
-  /* لو السطر الأخير عندك داخل <p class="trade-note">  */
   .hero-specs-box .trade-note {
-    margin-top: 0.75rem;   /* نزول بسيط لتحت */
-    display: block;
+    margin-top: 1rem;          /* نزوله شوي لتحت عشان يفصل عن اللي فوقه */
+    display: block;            /* يتأكد إنه ياخذ سطر لحاله */
+    font-size: 0.95rem;        /* حجم مناسب للهواتف */
+    line-height: 1.5;          /* راحة في القراءة */
+    opacity: 0.85;             /* يعطيه مظهر note أو توضيح إضافي */
   }
+}
 
   /* احتياطي: لو السطر الأخير ليس داخل .trade-note (نص عام بعد <ul>) */
   .hero-specs-box > :last-child {
