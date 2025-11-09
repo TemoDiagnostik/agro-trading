@@ -1551,4 +1551,10 @@ header .container.nav {
     line-height: 1.5;
   }
 }
+
+@media (max-width: 768px) {
+  .mobile-bottom-spacer {
+    height: 3rem;  /* أو زوّدها شوي حسب الحاجة */
+  }
+}
  }}}}
