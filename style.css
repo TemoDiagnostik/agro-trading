@@ -161,36 +161,7 @@ header .lang span {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background-color: rgba(0, 0, 0, 0.65);
-    border-radius: 0 0 10px 10px;
-    padding: 0.5rem 0;
-    margin: 0;
-  }
 
-  .navbar-nav li {
-    border-top: 1px solid rgba(255,255,255,0.15);
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-  }
-
-  .navbar-nav a {
-    display: block;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-  }
-
-  .navbar-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-}
 
 
 
