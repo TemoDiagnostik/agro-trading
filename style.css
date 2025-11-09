@@ -1538,6 +1538,11 @@ header .container.nav {
     opacity: 0.85;
   }
 }
+@media (max-width: 768px) {
+  .mobile-spacer {
+    height: 5rem;
+  }
+}
 
   /* احتياطي: لو السطر الأخير ليس داخل .trade-note (نص عام بعد <ul>) */
   .hero-specs-box > :last-child {
