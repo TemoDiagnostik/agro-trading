@@ -13,6 +13,8 @@
 "hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13,3% / F ≈ 2,6%",
 "hero.spec1": "Materiał przesiany — odpowiedni do mielenia lub bezpośredniego zastosowania.",
 "hero.spec2": "Załączony arkusz specyfikacji; możliwość wykonania analizy laboratoryjnej na zamówienie.",
+  "hero.grade": "Klasa referencyjna: 26% P₂O₅",
+"hero.comp": "Skład chemiczny: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
   "products.title": "Główny produkt",
   "products.lead": "Ruda fosforytowa — Zawartość P₂O₅ 20–28 % (próbka referencyjna: 26 %)",
   "products.spec1": "Sortowana granulacja — gotowa do mielenia lub bezpośredniego zastosowania",
