@@ -13,8 +13,8 @@
 "hero.specTags": "P₂O₅: 20–28 % / SiO₂ ≈ 13,3 % / F ≈ 2,6 %",
 "hero.spec1": "Prosijani materijal — pogodan za mljevenje ili izravnu primjenu.",
 "hero.spec2": "Uključen list sa specifikacijama; laboratorijska analiza po narudžbi dostupna.",
-"hero.refGrade": "Referentna kvaliteta: 26% P₂O₅",
-"hero.chemComp": "Kemijski sastav: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
+"hero.grade": "Referentna kvaliteta: 26% P₂O₅",
+"hero.comp": "Kemijski sastav: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
   
   "products.title": "Glavni proizvod",
   "products.lead": "Fosfatna ruda — P₂O₅ sadržaj 20–28 % (referentni uzorak: 26 %)",
