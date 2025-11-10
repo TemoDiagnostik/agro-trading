@@ -14,6 +14,10 @@
   "hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13.3% / F ≈ 2.6%",
   "hero.spec1": "Screened granulometry — ready for milling or direct application.",
   "hero.spec2": "Specification Sheet attached; buyer-specific analyses available.",
+  "hero.refGrade": "Referencia fokozat: 26% P₂O₅",
+"hero.chemComp": "Kémiai összetétel: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
+
+  
   "products.title": "Fő Termék",
   "products.lead": "Foszfátérc — P₂O₅ tartalom 20–28 % (referencia: 26 %)",
   "products.spec1": "Osztályozott szemcseméret — őrlésre vagy közvetlen alkalmazásra kész",
