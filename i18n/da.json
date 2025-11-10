@@ -6,13 +6,17 @@
   "nav.logistics": "Logistik og Overensstemmelse",
   "nav.about": "Om os",
   "nav.contact": "Kontakt",
-  "hero.title": "AGRO SERVICES — Pålidelig EU–Egypten gødningsmægler",
+ "hero.title": "AGRO SERVICES — Pålidelig EU–Egypten gødningsmægler",
 "hero.desc": "Vi forbinder certificerede egyptiske producenter af gødning med globale købere og tilbyder fabrikspriser, gennemsigtige processer og fuld EU-overholdelse.",
 "hero.tradeNote": "Alle transaktioner overholder Incoterms®️ 2020 og internationale handelsstandarder.",
 "hero.mainProduct": "Fosfatsten — P₂O₅: 20–28% (referenceprøve: 26%)",
 "hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13,3% / F ≈ 2,6%",
 "hero.spec1": "Sigtet materiale — egnet til maling eller direkte anvendelse.",
 "hero.spec2": "Specifikationsark medfølger; tilpasset laboratorieanalyse tilgængelig efter anmodning.",
+"hero.refGrade": "Referencekvalitet: 26% P₂O₅",
+"hero.chemComp": "Kemisk sammensætning: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
+
+  
   "products.title": "Hovedprodukt",
   "products.lead": "Fosfatsten — P₂O₅-indhold 20–28 % (referencesample: 26 %)",
   "products.spec1": "Klassificeret kornstørrelse — klar til formaling eller direkte anvendelse",
