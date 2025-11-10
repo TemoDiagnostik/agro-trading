@@ -13,8 +13,8 @@
 "hero.specTags": "P₂O₅: 20–28 % / SiO₂ ≈ 13,3 % / F ≈ 2,6 %",
 "hero.spec1": "Seulottu materiaali — soveltuu jauhamiseen tai suoraan käyttöön.",
 "hero.spec2": "Mukaan liitetty erittelylomake; räätälöity laboratoriotesti saatavilla pyynnöstä.",
-"hero.refGrade": "Vertailuluokka: 26% P₂O₅",
-"hero.chemComp": "Kemiallinen koostumus: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
+"hero.grade": "Vertailuluokka: 26% P₂O₅",
+"hero.comp": "Kemiallinen koostumus: P₂O₅: 20–28%, SiO₂ ≈ 13,3%, F ≈ 2,6%",
   
   "products.title": "Päätuote",
   "products.lead": "Fosfaattikivi — P₂O₅-pitoisuus 20–28 % (vertailunäyte: 26 %)",
