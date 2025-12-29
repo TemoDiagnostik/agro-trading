@@ -80,6 +80,42 @@
 
   <!-- Preload hero image (كما هو) -->
   <link rel="preload" as="image" href="hero-port.png" imagesrcset="hero-port.png">
+
+<style>
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .hero-content p,
+    .hero-specs-box li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .hero-content {
+      padding: 1.5rem 1rem 4rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    .navbar-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .navbar-nav li a {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+</style>
+
+
+	
 </head>
 	<body>
 		<!-- قسم الرأس (الهيدر) -->
@@ -99,14 +135,14 @@
 
     <!-- Navigation -->
     <nav>
-      <ul>
-        <li><a href="#home" data-i18n="nav.home">Home</a></li>
-        <li><a href="#products" data-i18n="nav.products">Products</a></li>
-        <li><a href="#coa" data-i18n="nav.coa">COA</a></li>
-        <li><a href="#logistics" data-i18n="nav.logistics">Logistics & Compliance</a></li>
-        <li><a href="#about" data-i18n="nav.about">About us</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-      </ul>
+		
+      <ul class="navbar-nav">
+  <li><a href="#home" data-i18n="nav.home">Home</a></li>
+  <li><a href="#products" data-i18n="nav.products">Products</a></li>
+  <li><a href="#certificates" data-i18n="nav.coa">Specifications</a></li>
+  <li><a href="#about" data-i18n="nav.about">About us</a></li>
+  <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+</ul>
     </nav>
 
     <!-- Language selector -->
@@ -147,43 +183,43 @@
 
     <!-- 🏷️ Title -->
     <h1 class="hero-title" data-i18n="hero.title">
-      AGRO SERVICES — Trusted Agro Brokerage
+      AGRO SERVICES — Trusted EU–Egypt Fertilizer Brokerage
     </h1>
 
-    <!-- 💬 Marketing tagline -->
-    <p class="hero-subline" data-i18n="hero.highlight">
-      Benefit from factory-direct pricing and exclusive trade terms not available on the open market.
+    <!-- 💬 Professional subtitle -->
+    <p class="lead" data-i18n="hero.desc">
+      We connect certified Egyptian fertilizer producers with European and international buyers, offering factory-direct pricing, exclusive trade terms, and full compliance with EU standards.
     </p>
 
-    <!-- 🧩 Product description -->
-    <p class="lead" data-i18n="hero.desc">
-      We serve as a trusted intermediary connecting certified suppliers with international buyers,
-      ensuring full transparency and mutual confidence throughout the transaction process.
-    </p>
-<p class="hero-authorized" data-i18n="hero.authorized">
-  We work directly with major Egyptian fertilizer producers as their authorized partner in the EU market.
-</p>
     <!-- 📦 Product specs card -->
     <div class="hero-specs-box">
-      <p><strong data-i18n="products.lead">
-        Rock Phosphate — Grades 20–28% P₂O₅ (Reference sample: 26%)
-      </strong></p>
+      <p>
+        <strong data-i18n="products.lead">
+          Featured Product — Rock Phosphate (P₂O₅: 20–28%)
+        </strong>
+      </p>
 
-      <ul>
-        <li><span class="tag">P₂O₅: 20–28%</span> <span class="tag">SiO₂ ≈ 13.3%</span> <span class="tag">F ≈ 2.6%</span></li>
+     <ul>
+        <li data-i18n="hero.grade">
+          Reference grade: 26% P₂O₅
+        </li>
+        <li data-i18n="hero.comp">
+          Chemical composition: P₂O₅ 20–28%, SiO₂ ≈ 13.3%, F ≈ 2.6%
+        </li>
         <li data-i18n="products.spec1">
-          Screened granulometry — ready for milling or direct application.
+          Screened particle size — ideal for milling or direct soil application
         </li>
         <li data-i18n="products.spec2">
-          Attached Specification Sheet + optional further analyses on request.
+          Official specification sheet provided; lab reports tailored on request
         </li>
       </ul>
 
       <p class="trade-note" data-i18n="hero.tradeNote">
-        Competitive price for all grades.<br>
-        All transactions follow international trade standards.
+        All transactions comply with Incoterms® 2020 and international trade regulations.
       </p>
     </div>
+	  <!-- 📦 فاصل سفلي على الموبايل -->
+<div class="mobile-bottom-spacer"></div>
   </div>
 </section>
 		
