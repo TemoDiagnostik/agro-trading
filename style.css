@@ -1586,49 +1586,77 @@ header .container.nav {
 
 
 /* =========================
-   FINAL PATCH — HERO SIMPLIFICATION (Option 1)
-   Keep title + subtitle, hide technical specs box
+   HERO — FINAL (keep specs on desktop, simplify on mobile)
    ========================= */
 
-/* Hide the technical specs box in hero */
-.hero-bleed .hero-specs-box{
-  display: none !important;
-}
-
-/* Fix: your CSS makes .lead absolute at the bottom (we want it under title) */
-.hero-bleed .lead{
-  position: static !important;
-  bottom: auto !important;
-  left: auto !important;
-  margin: 12px 0 0 0 !important;
-  max-width: 720px;
-  z-index: 5;
-}
-
-/* Reduce empty space caused by height: 100vh */
+/* Desktop: keep hero full but not forced 100vh */
 .hero-bleed{
-  height: auto !important;
-  min-height: 70vh;
+  min-height: 78vh;
+  height: auto;
 }
 
-/* Mobile tuning */
-@media (max-width: 768px){
-  .hero-bleed{
-    min-height: 60vh;
-    padding: 40px 16px 40px;
-  }
+/* Keep lead under title (not pinned to bottom) */
+.hero-bleed .lead{
+  position: static;
+  margin-top: 12px;
+  max-width: 720px;
 }
 
+/* Specs box: show on desktop, but make it cleaner */
+.hero-bleed .hero-specs-box{
+  display: block;
+  margin-top: 18px;
+  max-width: 760px;
+  background: rgba(0,0,0,.25);
+  padding: 14px 16px;
+  border-radius: 10px;
+}
 
 /* =========================
-   FINAL CTA REFINEMENT — B2B Style (FIXED for .hero-bleed)
+   CTA — FINAL (applies to hero-bleed)
    ========================= */
 
-.hero-bleed .cta-row {
-  margin-top: 18px;
-  gap: 14px;
+.hero-bleed .cta-row{
+  margin-top: 16px;
+  gap: 12px;
+  justify-content: flex-start; /* B2B */
 }
 
+.hero-bleed .btn-primary,
+.hero-bleed .btn-outline{
+  height: 42px;
+  line-height: 42px;
+  font-size: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.18);
+}
+
+/* Mobile: hide heavy specs + make buttons lighter and not huge */
+@media (max-width: 768px){
+  .hero-bleed{
+    min-height: 62vh;
+    padding: 40px 16px 40px;
+  }
+
+  /* Hide specs only on mobile */
+  .hero-bleed .hero-specs-box{
+    display: none;
+  }
+
+  /* Buttons: smaller + less covering image */
+  .hero-bleed .cta-row{
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+  .hero-bleed .cta-row .btn{
+    width: 86%;
+    max-width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}
 /* Primary CTA — softer, professional */
 .hero-bleed .btn-primary {
   background-color: #0f7a3a; /* أفتح قليلاً */
