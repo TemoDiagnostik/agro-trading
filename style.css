@@ -1621,16 +1621,16 @@ header .container.nav {
 
 
 /* =========================
-   FINAL CTA REFINEMENT — B2B Style
+   FINAL CTA REFINEMENT — B2B Style (FIXED for .hero-bleed)
    ========================= */
 
-.hero .cta-row {
+.hero-bleed .cta-row {
   margin-top: 18px;
   gap: 14px;
 }
 
 /* Primary CTA — softer, professional */
-.hero .btn-primary {
+.hero-bleed .btn-primary {
   background-color: #0f7a3a; /* أفتح قليلاً */
   border: 1px solid rgba(255,255,255,.6);
   box-shadow: 0 2px 6px rgba(0,0,0,.18);
@@ -1640,7 +1640,7 @@ header .container.nav {
 }
 
 /* Secondary CTA — less dominant */
-.hero .btn-outline {
+.hero-bleed .btn-outline {
   background-color: rgba(15,122,58,.85);
   border: 1px solid rgba(255,255,255,.4);
   font-size: 15px;
@@ -1649,15 +1649,15 @@ header .container.nav {
 }
 
 /* Hover: subtle, not aggressive */
-.hero .btn-primary:hover,
-.hero .btn-outline:hover {
+.hero-bleed .btn-primary:hover,
+.hero-bleed .btn-outline:hover {
   transform: none;
   filter: brightness(1.05);
 }
 
 /* Mobile: keep buttons elegant, not bulky */
 @media (max-width: 768px) {
-  .hero .cta-row .btn {
+  .hero-bleed .cta-row .btn {
     width: 90%;
     max-width: 320px;
   }
