@@ -1584,81 +1584,52 @@ header .container.nav {
 
 
 
-
 /* =========================
-   HERO — FINAL (keep specs on desktop, simplify on mobile)
+   FINAL PATCH — HERO SIMPLIFICATION (Option 1)
+   Keep title + subtitle, hide technical specs box
    ========================= */
 
-/* Desktop: keep hero full but not forced 100vh */
-.hero-bleed{
-  min-height: 78vh;
-  height: auto;
-}
-
-/* Keep lead under title (not pinned to bottom) */
-.hero-bleed .lead{
-  position: static;
-  margin-top: 12px;
-  max-width: 720px;
-}
-
-/* Specs box: show on desktop, but make it cleaner */
+/* Hide the technical specs box in hero */
 .hero-bleed .hero-specs-box{
-  display: block;
-  margin-top: 18px;
-  max-width: 760px;
-  background: rgba(0,0,0,.25);
-  padding: 14px 16px;
-  border-radius: 10px;
+  display: none !important;
 }
 
-/* =========================
-   CTA — FINAL (applies to hero-bleed)
-   ========================= */
-
-.hero-bleed .cta-row{
-  margin-top: 16px;
-  gap: 12px;
-  justify-content: flex-start; /* B2B */
+/* Fix: your CSS makes .lead absolute at the bottom (we want it under title) */
+.hero-bleed .lead{
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 12px 0 0 0 !important;
+  max-width: 720px;
+  z-index: 5;
 }
 
-.hero-bleed .btn-primary,
-.hero-bleed .btn-outline{
-  height: 42px;
-  line-height: 42px;
-  font-size: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.18);
+/* Reduce empty space caused by height: 100vh */
+.hero-bleed{
+  height: auto !important;
+  min-height: 70vh;
 }
 
-/* Mobile: hide heavy specs + make buttons lighter and not huge */
+/* Mobile tuning */
 @media (max-width: 768px){
   .hero-bleed{
-    min-height: 62vh;
+    min-height: 60vh;
     padding: 40px 16px 40px;
   }
-
-  /* Hide specs only on mobile */
-  .hero-bleed .hero-specs-box{
-    display: none;
-  }
-
-  /* Buttons: smaller + less covering image */
-  .hero-bleed .cta-row{
-    justify-content: center;
-    margin-top: 14px;
-  }
-
-  .hero-bleed .cta-row .btn{
-    width: 86%;
-    max-width: 300px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    border-radius: 10px;
-  }
 }
+
+
+/* =========================
+   FINAL CTA REFINEMENT — B2B Style
+   ========================= */
+
+.hero .cta-row {
+  margin-top: 18px;
+  gap: 14px;
+}
+
 /* Primary CTA — softer, professional */
-.hero-bleed .btn-primary {
+.hero .btn-primary {
   background-color: #0f7a3a; /* أفتح قليلاً */
   border: 1px solid rgba(255,255,255,.6);
   box-shadow: 0 2px 6px rgba(0,0,0,.18);
@@ -1668,7 +1639,7 @@ header .container.nav {
 }
 
 /* Secondary CTA — less dominant */
-.hero-bleed .btn-outline {
+.hero .btn-outline {
   background-color: rgba(15,122,58,.85);
   border: 1px solid rgba(255,255,255,.4);
   font-size: 15px;
@@ -1677,15 +1648,15 @@ header .container.nav {
 }
 
 /* Hover: subtle, not aggressive */
-.hero-bleed .btn-primary:hover,
-.hero-bleed .btn-outline:hover {
+.hero .btn-primary:hover,
+.hero .btn-outline:hover {
   transform: none;
   filter: brightness(1.05);
 }
 
 /* Mobile: keep buttons elegant, not bulky */
 @media (max-width: 768px) {
-  .hero-bleed .cta-row .btn {
+  .hero .cta-row .btn {
     width: 90%;
     max-width: 320px;
   }
