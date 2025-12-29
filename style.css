@@ -404,6 +404,9 @@ header .lang span {
 }
 .trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
 .trust-banner strong {color:#0f766e;}
+
+
+
 /* ===== PRODUCTS ===== */
 #products {
  padding:64px 0;
@@ -447,6 +450,52 @@ header .lang span {
  border-color:var(--brand);
  color:#059669;
 }
+
+
+/* =========================
+   STAGE 2 PATCH — PRODUCTS
+   (No HTML / No i18n changes)
+   ========================= */
+
+/* Make tag row wrap nicely */
+#products .tag-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+/* Force CTA buttons to sit at the bottom of each card */
+#products .card{
+  display:flex;
+  flex-direction:column;
+}
+
+#products .cta{
+  margin-top:auto;              /* key line */
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  padding-top:12px;
+}
+
+/* Make product buttons consistent */
+#products .cta .btn{
+  min-width:140px;
+  text-align:center;
+}
+
+/* Mobile: full width buttons */
+@media (max-width:768px){
+  #products .cta{
+    gap:10px;
+  }
+  #products .cta .btn{
+    width:100%;
+    min-width:0;
+  }
+}
+
 /* ===== COA ===== */
 #coa .cta-row {
  display: flex;
@@ -479,6 +528,15 @@ header .lang span {
   margin-bottom: 24px;
   color: #0f172a;
 }
+
+
+/* =========================
+   STAGE 2 PATCH — SERVICES (Optional)
+   ========================= */
+#services .service-text{
+  min-height: 140px;
+}
+
 
 /* ✅ Layout Grid */
 #services .grid {
