@@ -278,46 +278,47 @@ header .lang span {
   z-index: 2;
 }
 
-/* الأزرار */
-.hero .cta-row .btn {
-  width: 200px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
+/* تعديل التباعد بين الأزرار */
+.hero .cta-row {
+  gap: 24px; /* زيادت التباعد بين الأزرار */
+  flex-direction: column; /* جعل الأزرار في عمود على الموبايل */
+  align-items: center; /* التأكد من محاذاة الأزرار في المنتصف */
 }
 
-/* زر رئيسي */
+/* أزرار CTA الرئيسية */
 .hero .btn-primary {
   background-color: #0a662f;
   border: 2px solid #ffffff;
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-size: 18px;  /* زيادة حجم الخط */
+  padding: 16px 40px; /* زيادة الحجم الكلي */
+  margin-bottom: 12px; /* تباعد أسفل الزر */
 }
 
+/* تأثير hover على زر CTA */
 .hero .btn-primary:hover {
   background-color: #ffffff;
   color: #0a662f;
+  transform: translateY(-2px);  /* تأثير الحركة الصغيرة */
 }
 
-/* زر outline */
+/* أزرار CTA الثانوية */
 .hero .btn-outline {
   background-color: #0d9488;
   border: 2px solid #0d9488;
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 16px;  /* حجم أقل من الزر الرئيسي */
+  padding: 14px 32px; /* حجم أصغر */
 }
 
 .hero .btn-outline:hover {
   background-color: #0a6e64;
   border-color: #0a6e64;
   color: #ffffff;
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* تأثير الحركة الصغيرة */
 }
-
 /* النصوص الثانوية */
 .hero .muted,
 .hero .note,
