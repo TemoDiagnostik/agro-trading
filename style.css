@@ -349,7 +349,7 @@ header .lang span {
   .hero-bleed .small-text {
     position: static !important;
     transform: none !important;
-    width: 110%;
+    width: 100%;
     margin: 1.rem 0;
     padding: 0 20px;
     text-align: left;
@@ -1584,6 +1584,38 @@ header .container.nav {
 
 
 
+/* =========================
+   FINAL PATCH — HERO SIMPLIFICATION (Option 1)
+   Keep title + subtitle, hide technical specs box
+   ========================= */
 
+/* Hide the technical specs box in hero */
+.hero-bleed .hero-specs-box{
+  display: none !important;
+}
+
+/* Fix: your CSS makes .lead absolute at the bottom (we want it under title) */
+.hero-bleed .lead{
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 12px 0 0 0 !important;
+  max-width: 720px;
+  z-index: 5;
+}
+
+/* Reduce empty space caused by height: 100vh */
+.hero-bleed{
+  height: auto !important;
+  min-height: 70vh;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px){
+  .hero-bleed{
+    min-height: 60vh;
+    padding: 40px 16px 40px;
+  }
+}
 
  }}}}
