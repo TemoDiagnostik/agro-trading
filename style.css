@@ -654,13 +654,13 @@ header .lang span {
   overflow: hidden;               /* IMPORTANT: makes banner follow rounded corners */
 }
 
-/* ===== Compliance banner strip (FULL-BLEED like "before") ===== */
+/* ===== Compliance banner strip (FULL-BLEED) ===== */
 #logistics .compliance-banner{
-  height: 84px;
+  height: 120px;                 /* كان 84px — صغير فبيقص */
   overflow: hidden;
-  margin: -18px -18px 12px -18px; /* cancels card padding (18px) -> touches edges */
+  margin: -18px -18px 12px -18px;
   border-radius: var(--radius) var(--radius) 0 0;
-  background: #0b3d91;
+  background: #0b3d91;           /* خلفية لو الصورة فيها فراغ */
   border-bottom: 1px solid rgba(2,6,23,.08);
 }
 
@@ -668,9 +668,11 @@ header .lang span {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: left center;   /* keeps COMPLIANCE text visible */
+  object-fit: contain;           /* ✅ يمنع القص */
+  object-position: center;       /* ✅ يوسّط الكلمة */
 }
+
+
 
 /* Compliance bullet list */
 #logistics .compliance-block .mini-specs{
@@ -691,7 +693,7 @@ header .lang span {
   }
 
   #logistics .compliance-banner{
-    height: 64px;
+    height: 90px;
   }
 
   #logistics .compliance-banner img{
