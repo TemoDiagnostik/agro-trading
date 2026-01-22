@@ -1690,7 +1690,12 @@ header .container.nav {
 }
 
 #products .card .cta{
-  margin-top: auto; /* pushes buttons to bottom */
+  margin-top: auto;
+  min-height: 96px;      /* مساحة تكفي صفّين أزرار */
+  display: flex;
+  gap: 10px;
+  align-items: flex-end; /* نفس خط القاعدة */
+  flex-wrap: wrap;
 }
 
 #products .card .tag-row,
