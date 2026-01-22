@@ -1750,3 +1750,33 @@ header .container.nav {
   display: block !important;
 }
 
+
+
+/* Make hero specs box readable & premium */
+.hero-specs-box{
+  max-width: 760px;
+  padding: 14px 16px;
+  background: rgba(0,0,0,0.38);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-left: 4px solid rgba(230,193,109,0.9);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.hero-specs-box ul{
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+
+.hero-specs-box li{
+  margin: 6px 0;
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
+.hero-specs-box .trade-note{
+  margin-top: 10px;
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
