@@ -1726,14 +1726,22 @@ header .container.nav {
 
 
 
-.hero-specs-box{
-  display:block !important;
-  visibility:visible !important;
-  opacity:1 !important;
-  position:relative;
-  z-index:10;
-  margin-top:16px;
+/* FIX: ensure hero specs box is not clipped */
+.hero,
+.hero-content{
+  overflow: visible !important;
+  height: auto !important;
 }
+
+.hero-specs-box{
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 20 !important;
+  margin-top: 14px;
+}
+
 
 
  }}}}
