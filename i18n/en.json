@@ -65,15 +65,24 @@
   "coa.print": "Print/Save PDF — Spec",
   "spec.print": "Print/Save PDF — Spec",
 
-  "log.title": "Logistics & Compliance",
-  "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
-"log.incoterms": "Available shipping terms include EX-WORK (Safaga Port), FOB, CFR, CIF, and DDP. Shipment updates are shared via email after booking confirmation.",
-  "log.ports": "Ports: Alexandria / Damietta / Safaga",
-  "log.ports.h": "Ports & Packing",
-  "log.ports.p": "Standard loading via Alexandria / Damietta / Safaga — Egypt. Packing: Bulk or Big-Bags.",
-  "log.compliance.h": "EU Compliance",
-  "log.compliance.p": "Certificates of origin, invoices, and analysis reports. Full compliance with EU standards and product safety regulations.",
+ "log.title": "Logistics & Compliance",
+"log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
+"log.incoterms": "Available shipping terms include EX-WORK, FOB, CFR, CIF, and DDP (subject to contract). Shipment updates are shared via email after booking confirmation.",
 
+"log.ports": "Ports: Egypt (multiple ports subject to schedule)",
+"log.ports.h": "Ports & Packing",
+"log.ports.p": "Loading ports: Egypt (multiple ports subject to schedule). Shipping: Bulk vessel or 20’ containers. Packing options: Bulk with liner / Jumbo bags (upon request).",
+
+"log.compliance.h": "EU Compliance",
+"log.compliance.p": "Certificates of origin, invoices, and analysis reports. Full compliance with EU standards and product safety regulations.",
+
+"compliance.title": "Compliance & Verification",
+"compliance.lead": "Specifications shown are marketing guidance. Final values are confirmed by shipment-specific COA/SGS for each lot.",
+"compliance.p1": "Shipment-specific COA / SGS (or equivalent) available per shipment",
+"compliance.p2": "Heavy metals (Cd, etc.) provided upon request in the shipment COA",
+"compliance.p3": "Full original documents are shared with verified buyers only",
+"compliance.p4": "Low-Cadmium 31–32% is marketed only after receiving shipment-specific COA showing Cd and heavy metals",
+  
   "about.title": "About us",
   "about.p1": "Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources. We focus on transparency, quality, speed — and",
   "about.pricing": "competitive pricing via direct procurement",
