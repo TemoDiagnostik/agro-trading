@@ -1740,5 +1740,13 @@ header .container.nav {
 }
 
 
+.hero,
+.hero-bleed{
+  overflow: visible !important;
+  height: auto !important;
+}
 
- }}}}
+.hero-bleed .hero-specs-box{
+  display: block !important;
+}
+
