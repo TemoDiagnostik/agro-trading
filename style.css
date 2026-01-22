@@ -1650,10 +1650,7 @@ header .container.nav {
    Keep title + subtitle, hide technical specs box
    ========================= */
 
-/* Hide the technical specs box in hero */
-.hero-bleed .hero-specs-box{
-  display: none !important;
-}
+
 
 /* Fix: your CSS makes .lead absolute at the bottom (we want it under title) */
 .hero-bleed .lead{
