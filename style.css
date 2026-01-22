@@ -599,12 +599,12 @@ header .lang span {
 
 
 /* =========================
-   LOGISTICS (clean single block) — FINAL
+   LOGISTICS (final clean block)
    ========================= */
 #logistics{
   background: #f9fafb;
-  padding: 34px 0 64px;          /* Desktop spacing */
-  scroll-margin-top: 90px;       /* for anchor jump (menu) */
+  padding: 34px 0 64px;        /* Desktop spacing */
+  scroll-margin-top: 90px;     /* for anchor jump (menu) */
 }
 
 #logistics .container{
@@ -613,7 +613,7 @@ header .lang span {
 
 /* Title spacing */
 #logistics h2{
-  margin: 0 0 18px 0;            /* move title up */
+  margin: 0 0 18px 0;          /* move title up */
 }
 
 /* Grid + cards */
@@ -646,35 +646,37 @@ header .lang span {
   border-radius: 10px;
 }
 
-/* ===== Compliance full-width block ===== */
+/* Compliance full-width block */
 #logistics .compliance-block{
   width: 100%;
-  margin: 0 0 18px 0;            /* space before 3 cards grid */
+  margin: 0 0 18px 0;          /* space before 3 cards grid */
   border-left: 4px solid rgba(230,193,109,0.9);
-  overflow: hidden;               /* IMPORTANT: makes banner follow rounded corners */
 }
 
-/* ===== Compliance banner strip (FULL-BLEED) ===== */
-#logistics .compliance-banner{
-  height: 120px;                 /* كان 84px — صغير فبيقص */
+/* ✅ Banner strip INSIDE compliance block */
+#logistics .compliance-block .compliance-banner{
+  height: 120px;
   overflow: hidden;
+
+  /* full-bleed inside card (no weird margins) */
   margin: -18px -18px 12px -18px;
   border-radius: var(--radius) var(--radius) 0 0;
-  background: #0b3d91;           /* خلفية لو الصورة فيها فراغ */
+
+  background: #0b3d91;         /* fallback */
   border-bottom: 1px solid rgba(2,6,23,.08);
 }
 
-#logistics .compliance-banner img{
+#logistics .compliance-block .compliance-banner img{
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;           /* ✅ يمنع القص */
-  object-position: center;       /* ✅ يوسّط الكلمة */
+
+  /* ✅ أهم تعديل: يمنع قص كلمة COMPLIANCE */
+  object-fit: contain;
+  object-position: center;
 }
 
-
-
-/* Compliance bullet list */
+/* Compliance list */
 #logistics .compliance-block .mini-specs{
   margin: 10px 0 0 0;
   padding-left: 18px;
@@ -688,19 +690,14 @@ header .lang span {
 /* Mobile */
 @media (max-width: 768px){
   #logistics{
-    padding: 22px 16px 48px !important;
+    padding: 22px 16px 48px;
     scroll-margin-top: 120px;
   }
 
-  #logistics .compliance-banner{
+  #logistics .compliance-block .compliance-banner{
     height: 90px;
   }
-
-  #logistics .compliance-banner img{
-    object-position: left center;
-  }
 }
-
 /* ===== FEATURES ===== */
 .features {
  display: flex;
