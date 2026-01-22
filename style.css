@@ -600,8 +600,8 @@ header .lang span {
 
 /* ===== LOGISTICS ===== */
 #logistics {
- padding: 34px 0;
- background: #f9fafb;
+  padding: 34px 0 64px !important;
+  background: #f9fafb;
 }
 #logistics .grid {
  display: grid;
@@ -1396,7 +1396,7 @@ header .lang {
   }
 }
  
-
+}}}}
 
 
 /* ===================================================
@@ -1714,9 +1714,9 @@ header .container.nav {
    ========================= */
 
 /* قلل المسافة العلوية للقسم */
-#logistics{
-  padding-top: 34px !important;   /* كان كبير — عدله حسب ذوقك (28–44) */
-  padding-bottom: 64px !important;
+#logistics {
+  padding: 34px 0 64px !important;
+  background: #f9fafb;
 }
 
 /* لو في أي margin من فوق بيتراكم */
