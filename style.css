@@ -598,41 +598,58 @@ header .lang span {
 }
 
 
-/* ===== LOGISTICS ===== */
-#logistics {
-  padding: 34px 0 64px !important;
+/* =========================
+   LOGISTICS (clean single block)
+   ========================= */
+#logistics{
   background: #f9fafb;
-}
-#logistics .grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- gap: 32px;
-}
-#logistics .card {
- background: #fff;
- border: 1px solid #e5e7eb;
- border-radius: var(--radius);
- box-shadow: 0 8px 24px rgba(2,6,23,.06);
- padding: 18px;
- display: flex;
- flex-direction: column;
- transition: .2s ease;
-}
-#logistics .card:hover {
- transform: translateY(-4px);
-}
-#logistics .card img {
- width: 100%;
- height: 200px;
- object-fit: cover;
- margin-top: 12px;
- border-radius: 10px;
+  padding: 34px 0 64px;          /* Desktop spacing */
+  scroll-margin-top: 90px;       /* for anchor jump (menu) */
 }
 
-/* ===== LOGISTICS: Compliance full-width block (NEW) ===== */
+#logistics .container{
+  margin-top: 0;
+}
+
+/* Title spacing */
+#logistics h2{
+  margin: 0 0 18px 0;            /* move title up */
+}
+
+/* Grid + cards */
+#logistics .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+#logistics .card{
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(2,6,23,.06);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: .2s ease;
+}
+
+#logistics .card:hover{
+  transform: translateY(-4px);
+}
+
+#logistics .card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+/* Compliance full-width block */
 #logistics .compliance-block{
   width: 100%;
-  margin: 0 0 18px 0;        /* مسافة قبل شبكة الـ 3 كروت */
+  margin: 0 0 18px 0;            /* space before 3 cards grid */
   border-left: 4px solid rgba(230,193,109,0.9);
 }
 
@@ -646,13 +663,15 @@ header .lang span {
   line-height: 1.55;
 }
 
-/* ??? ??????? ??????? */
-@media (max-width: 640px) {
- #services,
- #logistics {
-   padding: 40px 16px;
- }
+/* Mobile */
+@media (max-width: 768px){
+  #logistics{
+    padding: 22px 16px 48px !important;  /* top/right-bottom-left */
+    scroll-margin-top: 120px;
+  }
 }
+
+
 /* ===== FEATURES ===== */
 .features {
  display: flex;
@@ -1708,40 +1727,4 @@ header .container.nav {
 #products .card .cta .btn{
   width: 100%;
   text-align: center;
-}
-/* =========================
-   LOGISTICS — spacing fix (move title up)
-   ========================= */
-
-/* قلل المسافة العلوية للقسم */
-#logistics {
-  padding: 34px 0 64px !important;
-  background: #f9fafb;
-}
-
-/* لو في أي margin من فوق بيتراكم */
-#logistics .container{
-  margin-top: 0 !important;
-}
-
-/* العنوان نفسه */
-#logistics h2{
-  margin-top: 0 !important;
-  margin-bottom: 18px !important;
-}
-
-/* لو التنقل بالمنيو بيوقف فوق العنوان بسبب الهيدر */
-#logistics{
-  scroll-margin-top: 90px; /* عدلها لو الهيدر أعلى/أقل */
-}
-
-/* موبايل */
-@media (max-width: 768px){
-  #logistics{
-    padding-top: 22px !important;
-    padding-bottom: 48px !important;
-  }
-  #logistics{
-    scroll-margin-top: 120px;
-  }
 }
