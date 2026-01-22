@@ -663,6 +663,27 @@ header .lang span {
   line-height: 1.55;
 }
 
+/* Compliance banner strip */
+#logistics .compliance-banner{
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: -6px 0 12px 0;
+}
+
+#logistics .compliance-banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 768px){
+  #logistics .compliance-banner{ height: 96px; }
+}
+
 /* Mobile */
 @media (max-width: 768px){
   #logistics{
