@@ -628,6 +628,24 @@ header .lang span {
  margin-top: 12px;
  border-radius: 10px;
 }
+
+/* ===== LOGISTICS: Compliance full-width block (NEW) ===== */
+#logistics .compliance-block{
+  width: 100%;
+  margin: 0 0 18px 0;        /* مسافة قبل شبكة الـ 3 كروت */
+  border-left: 4px solid rgba(230,193,109,0.9);
+}
+
+#logistics .compliance-block .mini-specs{
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+}
+
+#logistics .compliance-block .mini-specs li{
+  margin: 6px 0;
+  line-height: 1.55;
+}
+
 /* ??? ??????? ??????? */
 @media (max-width: 640px) {
  #services,
