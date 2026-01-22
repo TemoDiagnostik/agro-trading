@@ -230,52 +230,83 @@
 </div>
 
 
-    <!-- 📦 CTA Buttons (Newly added) -->
-   <div class="cta-row">
+   <!-- ✅ HERO: keep clean (CTA only). Specs box is handled later via CSS -->
+<div class="cta-row">
   <a href="#certificates" class="btn btn-primary" data-i18n="nav.coa">Specifications</a>
   <a href="#contact" class="btn btn-outline" data-i18n="nav.contact">Contact</a>
 </div>
-    
-    <!-- 📦 فاصل سفلي على الموبايل -->
-    <div class="mobile-bottom-spacer"></div>
-  </div>
+
+<!-- 📦 فاصل سفلي على الموبايل -->
+<div class="mobile-bottom-spacer"></div>
+</div>
 </section>
-		
-		<!-- 🌍 قسم المنتجات (Global Products Section) -->
+
+<!-- 🌍 Global Products Section -->
 <section id="products">
   <div class="container">
     <h2 data-i18n="products.all">Available Products</h2>
-    
-    <div class="grid cols-2">
-      
+
+    <!-- ✅ 3 cards -->
+    <div class="grid cols-3">
+
       <!-- 🌐 Rock Phosphate -->
       <div class="card">
-        <h3 data-i18n="card.rock.title">Rock Phosphate — Grade 26%</h3>
+        <h3 data-i18n="card.rock.title">Rock Phosphate — Grades 18–32% P₂O₅</h3>
         <p class="muted" data-i18n="card.rock.text">
-          Secure and reliable supply chain through consolidated bulk shipments to European ports. Sourced directly from certified producers.
+          Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.
         </p>
+
+        <!-- ✅ Key Specs (compact) -->
+        <ul class="mini-specs">
+          <li data-i18n="card.rock.forms">Forms: Powder / Granular / Fine Powder</li>
+          <li data-i18n="card.rock.moisture">Moisture: typically max 3–5% (grade & season dependent)</li>
+          <li data-i18n="card.rock.coa">Shipment-specific COA/SGS provided per shipment</li>
+          <li data-i18n="card.rock.hm">Heavy metals (Cd, etc.) provided upon request in the shipment COA</li>
+        </ul>
+
         <div class="tag-row">
           <span class="tag" data-i18n="log.bulk">Bulk & Big-Bag</span>
-          <span class="tag" data-i18n="log.ports">Ports: Alexandria / Damietta</span>
-          <span class="tag" data-i18n="log.incotermTag">Incoterms: FOB / CFR / DDP</span>
+          <span class="tag" data-i18n="log.ports">Ports: Alexandria / Damietta / Safaga</span>
+          <span class="tag" data-i18n="log.incotermTag">EX-WORK / FOB / CFR / CIF / DDP</span>
         </div>
+
         <div class="cta">
-          <a class="btn btn-primary" href="#contact" data-i18n="card.rock.cta">Request Quote</a>
-          <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open COA</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="card.rock.cta">Request a Quote</a>
+          <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open Spec</a>
+        </div>
+      </div>
+
+      <!-- 🌿 Low-Cadmium 31–32% (Coming Soon / Upon Request) -->
+      <div class="card">
+        <h3 data-i18n="card.lowcd.title">Low-Cadmium Rock Phosphate — 31–32% P₂O₅</h3>
+        <p class="muted" data-i18n="card.lowcd.text">
+          Available upon request. Marketed only after receiving shipment-specific COA showing Cd and heavy metals for the shipment lot.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag" data-i18n="card.lowcd.tag1">Coming soon / upon request</span>
+          <span class="tag" data-i18n="card.lowcd.tag2">Shipment-specific COA required</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact" data-i18n="card.lowcd.cta">Request a Quote (RFQ)</a>
+          <a class="btn btn-outline" href="#contact" data-i18n="card.lowcd.cta2">Ask for availability</a>
         </div>
       </div>
 
       <!-- 🌐 Urea / NPK -->
       <div class="card">
-        <h3 data-i18n="card.urea.title">Urea / NPK (Available Upon Request)</h3>
+        <h3 data-i18n="card.urea.title">Urea / NPK (on request)</h3>
         <p class="muted" data-i18n="card.urea.text">
-          Additional fertilizers (Urea, MAP, DAP, NPK blends) can be supplied upon client specifications and regional requirements.
+          Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.
         </p>
+
         <div class="tag-row">
-          <span class="tag" data-i18n="generic.expand">Flexible export terms</span>
+          <span class="tag" data-i18n="generic.expand">Ready to expand</span>
         </div>
+
         <div class="cta">
-          <a class="btn btn-primary" href="#contact" data-i18n="card.urea.cta">Request Specification</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="card.urea.cta">Ask about Urea</a>
         </div>
       </div>
 
