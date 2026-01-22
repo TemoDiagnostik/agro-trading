@@ -1693,9 +1693,9 @@ header .container.nav {
   margin-top: auto; /* pushes buttons to bottom */
 }
 
+#products .card .tag-row,
 #products .card .mini-specs{
-  margin: 10px 0 0;
-  padding-left: 18px;
+  margin-bottom: 10px;
 }
 
 #products .card .mini-specs li{
@@ -1704,5 +1704,5 @@ header .container.nav {
 }
 #products h2{
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
