@@ -668,7 +668,7 @@ header .lang span {
   height: 100%;
   display: block;
   object-fit: cover;                   /* ✅ يملأ بدون فراغات */
-  object-position: center;             /* عدّلها لو احتجت */
+ object-position: center 55%;             /* عدّلها لو احتجت */
 }
 /* Compliance list */
 #logistics .compliance-block .mini-specs{
