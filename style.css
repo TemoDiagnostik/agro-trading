@@ -1677,3 +1677,32 @@ header .container.nav {
     max-width: 320px;
   }
 }
+
+
+/* Products: equal card height + buttons aligned */
+#products .grid{
+  align-items: stretch;
+}
+
+#products .card{
+  display: flex;
+  flex-direction: column;
+}
+
+#products .card .cta{
+  margin-top: auto; /* pushes buttons to bottom */
+}
+
+#products .card .mini-specs{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+#products .card .mini-specs li{
+  margin: 4px 0;
+  line-height: 1.45;
+}
+#products h2{
+  text-align: center;
+  margin-bottom: 18px;
+}
