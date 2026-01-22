@@ -1560,7 +1560,6 @@ header .container.nav {
 
 /* =========================
    HERO — CONTENT PANEL
-   (Keep subtle panel on desktop; stronger on mobile)
    ========================= */
 .hero-content {
   background: rgba(0, 0, 0, 0.18);
@@ -1592,36 +1591,11 @@ header .container.nav {
 }
 
 /* =========================
-   HERO — BEHAVIOR (Final decision)
-   Clean desktop hero, specs only on mobile
+   HERO — FINAL DECISION
+   Hide hero specs box everywhere (clean hero on desktop + mobile)
    ========================= */
-@media (min-width: 769px){
-  .hero-bleed .hero-specs-box { display: none !important; }
-}
-
-@media (max-width: 768px){
-  .hero-bleed .hero-specs-box {
-    display: block !important;
-    margin-top: 1.2rem;
-    padding: 1rem 0.95rem;
-    text-align: left;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 10px;
-  }
-
-  .hero-bleed .hero-specs-box li{
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 6px 0;
-  }
-
-  .hero-bleed .hero-specs-box .trade-note{
-    margin-top: 10px;
-    font-size: 0.88rem;
-    opacity: 0.9;
-    font-style: italic;
-  }
+.hero-bleed .hero-specs-box{
+  display: none !important;
 }
 
 /* =========================
@@ -1678,8 +1652,9 @@ header .container.nav {
   }
 }
 
-
-/* Products: equal card height + buttons aligned */
+/* =========================
+   PRODUCTS — LAYOUT & CTA (clean, no duplicates)
+   ========================= */
 #products .grid{
   align-items: stretch;
 }
@@ -1687,15 +1662,6 @@ header .container.nav {
 #products .card{
   display: flex;
   flex-direction: column;
-}
-
-#products .card .cta{
-  margin-top: auto;
-  min-height: 96px;      /* مساحة تكفي صفّين أزرار */
-  display: flex;
-  gap: 10px;
-  align-items: flex-end; /* نفس خط القاعدة */
-  flex-wrap: wrap;
 }
 
 #products .card .tag-row,
@@ -1707,32 +1673,22 @@ header .container.nav {
   margin: 4px 0;
   line-height: 1.45;
 }
+
 #products h2{
   text-align: center;
   margin-bottom: 22px;
 }
-/* Products CTA: stack buttons vertically (clean B2B) */
+
+/* Products CTA: stacked buttons + aligned bottom */
 #products .card .cta{
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important;
-  align-items: stretch !important;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
 }
 
 #products .card .cta .btn{
   width: 100%;
   text-align: center;
-}
-/* Slightly larger cards on wide screens only */
-@media (min-width: 1200px){
-  #services .card,
-  #logistics .card{
-    padding: 18px 18px;
-  }
-
-  #services .card img,
-  #logistics .card img{
-    height: 190px;
-    object-fit: cover;
-  }
 }
