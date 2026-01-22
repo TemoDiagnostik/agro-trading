@@ -8,27 +8,32 @@
   "nav.about": "About",
   "nav.contact": "Contact",
 
- "hero.title": "AGRO SERVICES — Trusted EU–Egypt Fertilizer Brokerage",
-"hero.desc": "We connect certified Egyptian fertilizer producers with global buyers, offering factory-direct pricing, transparent processes, and full EU compliance.",
-"hero.tradeNote": "All transactions comply with Incoterms® 2020 and international trade standards.",
-"hero.mainProduct": "Rock Phosphate — P₂O₅: 20–28% (Ref. Sample: 26%)",
-"hero.specTags": "P₂O₅: 20–28% / SiO₂ ≈ 13.3% / F ≈ 2.6%",
-"hero.spec1": "Screened material — suitable for milling or direct application.",
-"hero.spec2": "Specification sheet included; custom lab analysis available upon request.",
-"hero.grade": "Reference grade: 26% P₂O₅",
-"hero.comp": "Chemical composition: P₂O₅: 20–28%, SiO₂ ≈ 13.3%, F ≈ 2.6%",
-  
+  "hero.title": "AGRO SERVICES — Trusted EU–Egypt Fertilizer Brokerage",
+  "hero.desc": "We connect certified Egyptian fertilizer producers with global buyers, offering factory-direct pricing, transparent processes, and full EU compliance.",
+  "hero.tradeNote": "All transactions comply with Incoterms® 2020 and international trade standards.",
+
+  "hero.mainProduct": "Rock Phosphate — P₂O₅: 18–32% (subject to availability & shipment-specific COA) (Ref. sample: 26%)",
+  "hero.specTags": "P₂O₅: 18–32% (subject to availability & shipment-specific COA) / Key components available in COA",
+  "hero.spec1": "Screened material — suitable for milling or direct application.",
+  "hero.spec2": "Specification sheet included; custom lab analysis available upon request.",
+  "hero.grade": "Reference grade: 26% P₂O₅",
+  "hero.comp": "Grade range: P₂O₅ 18–32% (subject to availability & shipment-specific COA). Key components available in COA (e.g., CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI).",
+
+  "hero.forms": "Forms: Powder / Granular / Fine Powder",
+  "hero.sizing": "Sizing: Customized sizing upon request (sieving on request)",
+
   "products.title": "Flagship Product",
-  "products.lead": "Rock Phosphate — Grades 20–28% P₂O₅ (reference sample: 26%)",
+  "products.lead": "Rock Phosphate — Grades 18–32% P₂O₅ (subject to availability & shipment-specific COA) (reference sample: 26%)",
   "products.spec1": "Screened granulometry — ready for milling or direct application",
-  "products.spec2": "Specification Sheet attached; buyer-specific analyses available",
+  "products.spec2": "Specification sheet included; buyer-specific analyses available",
   "products.viewCoa": "Open Spec",
   "products.all": "Available Products",
 
-  "card.rock.title": "Rock Phosphate — Grades 20–28% P₂O₅",
-  "card.rock.text": "Reliable source with consolidated bulk shipments to EU ports, with competitive pricing directly from the factory.",
+  "card.rock.title": "Rock Phosphate — Grades 18–32% P₂O₅",
+  "card.rock.text": "Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.",
   "card.rock.cta": "Request a Quote",
   "card.rock.coa": "View Spec",
+
 
   "card.urea.title": "Urea / NPK (on request)",
   "card.urea.text": "Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.",
