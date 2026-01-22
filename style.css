@@ -1486,8 +1486,10 @@ header .container.nav {
 
 
 
+/* =========================
+   MOBILE — CTA BUTTONS (top)
+   ========================= */
 @media (max-width: 768px) {
-  /* ✅ الأزرار العلوية */
   .cta-row {
     display: flex;
     flex-direction: column;
@@ -1496,11 +1498,8 @@ header .container.nav {
     margin-top: 14px;
   }
 
- .hero-product-specs {
-  margin-top: 1.4rem !important;
-}
- 
-  .cta-row a {
+  .cta-row a,
+  .hero-card a {
     width: 100%;
     max-width: 280px;
     text-align: center;
@@ -1508,59 +1507,46 @@ header .container.nav {
     border-radius: 6px;
   }
 
-  /* ✅ الأزرار السفلية داخل .hero-card أو القسم المماثل */
   .hero-card a {
     display: block;
-    width: 100%;
-    max-width: 280px;
     margin: 8px auto;
-    text-align: center;
-    border: 2px solid #007c2e !important;
-    border-radius: 6px;
   }
 }
 
+/* =========================
+   HERO — VISUAL CONTRAST
+   ========================= */
+.hero-bleed { position: relative; }
 
-
-/* 🌑 تحسين التباين البصري فوق الصورة */
+/* Dark overlay for readability */
 .hero-bleed::after {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.55));
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.30), rgba(0,0,0,0.55));
   z-index: 1;
 }
 
-/* ✨ تحسين وضوح النصوص أكثر */
+/* Stronger text readability */
 .hero :is(h1, p, strong, li) {
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.7) !important;
 }
 
-
-/* Floating caption over hero background */
-.hero-bleed{ position: relative; }
+/* =========================
+   HERO — CAPTION (optional)
+   ========================= */
 .hero-caption-special{
   position: absolute;
   left: 64px;
-  bottom: 76px;           /* اضبطها حسب ذوقك */
-  color: #e6c16d;         /* الذهبي */
+  bottom: 76px;
+  color: #e6c16d;
   font-weight: 700;
   font-size: 1.05rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,.65);
   max-width: 720px;
 }
-/* 🌿 تعديل عام للبطل */
-.hero-content {
-  background: rgba(0, 0, 0, 0.25);
-  padding: 1rem 1.5rem 1.5rem;
-  border-radius: 8px;
-}
 
-/* 📱 تحسين العرض على الهواتف */
 @media (max-width: 768px) {
-
   .hero-caption-special {
     position: static;
     margin-top: 1rem;
@@ -1570,57 +1556,17 @@ header .container.nav {
     border-radius: 8px;
     color: #fff;
   }
-
-  .hero-content {
-    text-align: center;
-    padding: 1.75rem 1.25rem 3.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .hero-specs-box {
-    margin-top: 1.5rem;
-    padding: 1.25rem 1rem;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-  }
-
-  .hero-specs-box h1,
-  .hero-specs-box h2 {
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .hero-specs-box p,
-  .hero-specs-box li {
-    font-size: 0.96rem;
-    line-height: 1.7;
-    margin-bottom: 0.6rem;
-  }
-
-  .hero-specs-box .trade-note {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    opacity: 0.85;
-    line-height: 1.5;
-    font-style: italic;
-  }
-
-  .mobile-bottom-spacer {
-    height: 3rem;
-  }
 }
 
-
-
-
-
-
-
-
-
+/* =========================
+   HERO — CONTENT PANEL
+   (Keep subtle panel on desktop; stronger on mobile)
+   ========================= */
+.hero-content {
+  background: rgba(0, 0, 0, 0.18);
+  padding: 1rem 1.25rem 1.25rem;
+  border-radius: 8px;
+}
 
 @media (max-width: 768px) {
   .hero-title {
@@ -1629,30 +1575,58 @@ header .container.nav {
     word-break: break-word;
   }
 
-  .hero-content p,
-  .hero-specs-box li {
+  .hero-content {
+    text-align: center;
+    padding: 1.6rem 1.15rem 2.2rem;
+    background: rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-content p {
     font-size: 0.95rem;
     line-height: 1.7;
   }
 
-  .hero-content {
-    padding: 1.5rem 1rem 4rem;
-    background: rgba(0, 0, 0, 0.3);
+  .mobile-bottom-spacer { height: 3rem; }
+}
+
+/* =========================
+   HERO — BEHAVIOR (Final decision)
+   Clean desktop hero, specs only on mobile
+   ========================= */
+@media (min-width: 769px){
+  .hero-bleed .hero-specs-box { display: none !important; }
+}
+
+@media (max-width: 768px){
+  .hero-bleed .hero-specs-box {
+    display: block !important;
+    margin-top: 1.2rem;
+    padding: 1rem 0.95rem;
+    text-align: left;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 10px;
+  }
+
+  .hero-bleed .hero-specs-box li{
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 6px 0;
+  }
+
+  .hero-bleed .hero-specs-box .trade-note{
+    margin-top: 10px;
+    font-size: 0.88rem;
+    opacity: 0.9;
+    font-style: italic;
   }
 }
 
-
-
-
-
 /* =========================
-   FINAL PATCH — HERO SIMPLIFICATION (Option 1)
-   Keep title + subtitle, hide technical specs box
+   HERO — LEAD FIX (keep subtitle under title)
    ========================= */
-
-
-
-/* Fix: your CSS makes .lead absolute at the bottom (we want it under title) */
 .hero-bleed .lead{
   position: static !important;
   bottom: auto !important;
@@ -1662,33 +1636,17 @@ header .container.nav {
   z-index: 5;
 }
 
-/* Reduce empty space caused by height: 100vh */
-.hero-bleed{
-  height: auto !important;
-  min-height: 70vh;
-}
-
-/* Mobile tuning */
-@media (max-width: 768px){
-  .hero-bleed{
-    min-height: 60vh;
-    padding: 40px 16px 40px;
-  }
-}
-
-
 /* =========================
-   FINAL CTA REFINEMENT — B2B Style
+   CTA REFINEMENT — B2B Style
    ========================= */
-
 .hero .cta-row {
   margin-top: 18px;
   gap: 14px;
 }
 
-/* Primary CTA — softer, professional */
+/* Primary CTA */
 .hero .btn-primary {
-  background-color: #0f7a3a; /* أفتح قليلاً */
+  background-color: #0f7a3a;
   border: 1px solid rgba(255,255,255,.6);
   box-shadow: 0 2px 6px rgba(0,0,0,.18);
   font-size: 16px;
@@ -1696,7 +1654,7 @@ header .container.nav {
   line-height: 44px;
 }
 
-/* Secondary CTA — less dominant */
+/* Secondary CTA */
 .hero .btn-outline {
   background-color: rgba(15,122,58,.85);
   border: 1px solid rgba(255,255,255,.4);
@@ -1705,78 +1663,17 @@ header .container.nav {
   line-height: 42px;
 }
 
-/* Hover: subtle, not aggressive */
+/* Hover */
 .hero .btn-primary:hover,
 .hero .btn-outline:hover {
   transform: none;
   filter: brightness(1.05);
 }
 
-/* Mobile: keep buttons elegant, not bulky */
+/* Mobile buttons sizing */
 @media (max-width: 768px) {
   .hero .cta-row .btn {
     width: 90%;
     max-width: 320px;
   }
-}
-
-
-
-
-/* FIX: ensure hero specs box is not clipped */
-.hero,
-.hero-content{
-  overflow: visible !important;
-  height: auto !important;
-}
-
-.hero-specs-box{
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: relative !important;
-  z-index: 20 !important;
-  margin-top: 14px;
-}
-
-
-.hero,
-.hero-bleed{
-  overflow: visible !important;
-  height: auto !important;
-}
-
-.hero-bleed .hero-specs-box{
-  display: block !important;
-}
-
-
-
-/* Make hero specs box readable & premium */
-.hero-specs-box{
-  max-width: 760px;
-  padding: 14px 16px;
-  background: rgba(0,0,0,0.38);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-left: 4px solid rgba(230,193,109,0.9);
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-.hero-specs-box ul{
-  margin: 8px 0 0 0;
-  padding-left: 18px;
-}
-
-.hero-specs-box li{
-  margin: 6px 0;
-  line-height: 1.55;
-  font-size: 0.98rem;
-}
-
-.hero-specs-box .trade-note{
-  margin-top: 10px;
-  font-size: 0.92rem;
-  opacity: 0.9;
 }
