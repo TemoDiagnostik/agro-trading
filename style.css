@@ -1725,4 +1725,15 @@ header .container.nav {
 
 
 
+
+.hero-specs-box{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  position:relative;
+  z-index:10;
+  margin-top:16px;
+}
+
+
  }}}}
