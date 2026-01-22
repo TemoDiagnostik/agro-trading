@@ -599,7 +599,7 @@ header .lang span {
 
 
 /* =========================
-   LOGISTICS (clean single block)
+   LOGISTICS (clean single block) — FINAL
    ========================= */
 #logistics{
   background: #f9fafb;
@@ -646,13 +646,33 @@ header .lang span {
   border-radius: 10px;
 }
 
-/* Compliance full-width block */
+/* ===== Compliance full-width block ===== */
 #logistics .compliance-block{
   width: 100%;
   margin: 0 0 18px 0;            /* space before 3 cards grid */
   border-left: 4px solid rgba(230,193,109,0.9);
+  overflow: hidden;               /* IMPORTANT: makes banner follow rounded corners */
 }
 
+/* ===== Compliance banner strip (FULL-BLEED like "before") ===== */
+#logistics .compliance-banner{
+  height: 84px;
+  overflow: hidden;
+  margin: -18px -18px 12px -18px; /* cancels card padding (18px) -> touches edges */
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: #0b3d91;
+  border-bottom: 1px solid rgba(2,6,23,.08);
+}
+
+#logistics .compliance-banner img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: left center;   /* keeps COMPLIANCE text visible */
+}
+
+/* Compliance bullet list */
 #logistics .compliance-block .mini-specs{
   margin: 10px 0 0 0;
   padding-left: 18px;
@@ -663,35 +683,21 @@ header .lang span {
   line-height: 1.55;
 }
 
-/* Compliance banner strip */
-#logistics .compliance-banner{
-  width: 100%;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 12px;
-  margin: -6px 0 12px 0;
-}
-
-#logistics .compliance-banner img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-@media (max-width: 768px){
-  #logistics .compliance-banner{ height: 96px; }
-}
-
 /* Mobile */
 @media (max-width: 768px){
   #logistics{
-    padding: 22px 16px 48px !important;  /* top/right-bottom-left */
+    padding: 22px 16px 48px !important;
     scroll-margin-top: 120px;
   }
-}
 
+  #logistics .compliance-banner{
+    height: 64px;
+  }
+
+  #logistics .compliance-banner img{
+    object-position: left center;
+  }
+}
 
 /* ===== FEATURES ===== */
 .features {
