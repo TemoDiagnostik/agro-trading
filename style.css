@@ -1711,3 +1711,15 @@ header .container.nav {
   text-align: center;
   margin-bottom: 22px;
 }
+/* Products CTA: stack buttons vertically (clean B2B) */
+#products .card .cta{
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  align-items: stretch !important;
+}
+
+#products .card .cta .btn{
+  width: 100%;
+  text-align: center;
+}
