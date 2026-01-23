@@ -1803,25 +1803,31 @@ header .container.nav {
 
 
 /* =========================
-   HOW WE WORK — layout polish
+   HOW WE WORK — final merged block
+   (replace old #how-we-work CSS with this)
    ========================= */
+
 #how-we-work{
-  padding: 56px 0;
-  background: #f9fafb;
+  padding: 64px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  border-top: 1px solid #e5e7eb;
 }
 
+/* Title */
 #how-we-work h2{
   text-align: center;
   margin: 0 0 12px 0;
 }
 
+/* Lead paragraph */
 #how-we-work .how-lead{
   max-width: 980px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 20px auto;
   text-align: center;
   line-height: 1.65;
 }
 
+/* Main card wrapper */
 #how-we-work .how-card{
   max-width: 980px;
   margin: 0 auto;
@@ -1830,8 +1836,10 @@ header .container.nav {
   border-radius: var(--radius);
   box-shadow: 0 8px 24px rgba(2,6,23,.06);
   padding: 22px;
+  border-top: 4px solid rgba(230,193,109,0.95); /* subtle premium accent */
 }
 
+/* Two-column layout */
 #how-we-work .how-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1847,6 +1855,7 @@ header .container.nav {
   line-height: 1.7;
 }
 
+/* Policy list */
 #how-we-work .policy{
   margin: 0;
   padding: 0;
@@ -1869,6 +1878,7 @@ header .container.nav {
   color: #0f7a3a;
 }
 
+/* Important note block */
 #how-we-work .how-note{
   margin-top: 14px;
   padding: 14px 16px;
@@ -1882,13 +1892,16 @@ header .container.nav {
   margin-bottom: 6px;
 }
 
+/* Mobile */
 @media (max-width: 768px){
   #how-we-work{
-    padding: 40px 16px;
+    padding: 44px 16px;
   }
+
   #how-we-work .how-grid{
     grid-template-columns: 1fr;
   }
+
   #how-we-work .how-lead{
     text-align: left;
   }
