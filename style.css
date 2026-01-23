@@ -599,106 +599,93 @@ header .lang span {
 
 
 /* =========================
-   LOGISTICS (final clean block)
+   LOGISTICS — FINAL (banner centered & full-bleed)
    ========================= */
 #logistics{
-  background: #f9fafb;
-  padding: 34px 0 64px;        /* Desktop spacing */
-  scroll-margin-top: 90px;     /* anchor jump */
+  background:#f9fafb;
+  padding:34px 0 64px;
+  scroll-margin-top:90px;
 }
 
-#logistics .container{
-  margin-top: 0;
-}
-
-/* Title spacing */
 #logistics h2{
-  margin: 0 0 18px 0;          /* move title up */
+  margin:0 0 18px 0;
 }
 
-/* Grid */
+/* Grid + cards */
 #logistics .grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:32px;
 }
 
-/* Cards */
 #logistics .card{
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(2,6,23,.06);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  transition: .2s ease;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  transition:.2s ease;
 }
 
-#logistics .card:hover{
-  transform: translateY(-4px);
+#logistics .card:hover{ transform:translateY(-4px); }
+
+#logistics .card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  margin-top:12px;
+  border-radius:10px;
 }
 
-/* ✅ مهم جدًا: خلي ستايل الصور يطبق فقط على الصورة المباشرة داخل الكارت
-   (وبالتالي لا يؤثر على صورة البانر لأنها داخل div) */
-#logistics .card > img{
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-top: 12px;
-  border-radius: 10px;
-}
-
-/* Compliance full-width block */
+/* Compliance card */
 #logistics .compliance-block{
-  width: 100%;
-  margin: 0 0 18px 0;
-  border-left: 4px solid rgba(230,193,109,0.9);
+  width:100%;
+  margin:0 0 18px 0;
+  border-left:4px solid rgba(230,193,109,.9);
+  overflow:hidden; /* مهم */
 }
 
-/* ✅ Banner strip (1600x320 = 5:1) */
+/* ✅ Banner: full-bleed داخل الكارت + في المنتصف */
 #logistics .compliance-block .compliance-banner{
-  width: 100%;
-  aspect-ratio: 5 / 1;
-  overflow: hidden;
-  margin: -18px -18px 12px -18px; /* full-bleed داخل الكارت */
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: #0b3d91;
+  margin:-18px -18px 12px -18px;      /* يلغي padding الكارت ويخلّيه فل بليد */
+  border-radius:var(--radius) var(--radius) 0 0;
+  overflow:hidden;
+  background:#0b3d91;
+  line-height:0;
 }
 
-/* Override أي ستايل قديم على img */
 #logistics .compliance-block .compliance-banner img{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  margin: 0 !important;
-  border-radius: 0 !important;
+  width:100%;
+  height:auto;              /* لأن الصورة 1600x320 أصلاً */
+  display:block;
+  margin:0 auto;            /* ✅ تمركز */
+  transform:scale(1.04);    /* ✅ يخفي أي فراغ داخلي من Canva */
+  transform-origin:center;  /* ✅ زووم من المنتصف */
 }
 
 /* Compliance list */
 #logistics .compliance-block .mini-specs{
-  margin: 10px 0 0 0;
-  padding-left: 18px;
+  margin:10px 0 0 0;
+  padding-left:18px;
 }
 
 #logistics .compliance-block .mini-specs li{
-  margin: 6px 0;
-  line-height: 1.55;
+  margin:6px 0;
+  line-height:1.55;
 }
 
 /* Mobile */
-@media (max-width: 768px){
+@media (max-width:768px){
   #logistics{
-    padding: 22px 16px 48px;
-    scroll-margin-top: 120px;
-  }
-
-  #logistics .card > img{
-    height: 180px;
+    padding:22px 16px 48px;
+    scroll-margin-top:120px;
   }
 }
+
+
+
 
 /* ===== FEATURES ===== */
 .features {
@@ -1761,21 +1748,3 @@ header .container.nav {
 
 
 
-/* ✅ FORCE CENTER (works even if older rules exist) */
-#logistics .compliance-block{
-  width: min(1100px, calc(100% - 32px)) !important;
-  margin: 0 auto 18px auto !important;
-  display: block !important;
-}
-
-#logistics .grid{
-  width: min(1100px, calc(100% - 32px)) !important;
-  margin: 0 auto !important;
-}
-
-@media (max-width: 768px){
-  #logistics .compliance-block,
-  #logistics .grid{
-    width: calc(100% - 24px) !important;
-  }
-}
