@@ -1945,3 +1945,25 @@ header .container.nav {
     text-align: center;
   }
 }
+/* About card: centered + readable on mobile */
+#about .about-card{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px 22px;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(3px);
+}
+
+@media (max-width: 768px){
+  #about .about-card{
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 18px 16px;
+  }
+  #about .about-card p,
+  #about .about-card{
+    font-size: 0.98rem;
+    line-height: 1.65;
+    text-align: center; /* لو تحبها left قولّي */
+  }
+}
