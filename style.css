@@ -1756,6 +1756,27 @@ header .container.nav {
   width: 100%;
   text-align: center;
 }
+
+
+
+
+
+/* ✅ Center the Compliance block on ALL screens */
+#logistics .compliance-block{
+  width: 100%;
+  max-width: 1100px;          /* عدّلها 980–1200 حسب ذوقك */
+  margin: 0 auto 18px auto;   /* ✅ في المنتصف */
+  box-sizing: border-box;
+}
+
+/* (اختياري) خلي شبكة الـ 3 كروت تحتها بنفس عرض الكارت عشان يكون كل شيء متوازن */
+#logistics .grid{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
 /* ✅ Mobile: center Compliance block */
 @media (max-width: 768px){
   #logistics .compliance-block{
