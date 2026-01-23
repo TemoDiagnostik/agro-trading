@@ -115,19 +115,19 @@
 "about.p2": "Independent inspection (SGS / Intertek / BV) and samples are available upon request prior to contracting.",
 "about.p3": "We support the transaction workflow and document handling. The sales contract and performance obligations are agreed directly between the seller and the buyer.",
 
-  "payment.details": "Full bank details for each currency (IBAN / SWIFT / Routing) are provided on the invoice or upon request.",
+"payment.details": "Bank details for each currency (IBAN / SWIFT / Routing) are provided on the invoice or to verified buyers upon request.",
 
-  "contact.title": "Get in touch",
-  "form.name": "Name",
-  "form.email": "Email",
-  "form.message": "Message",
-  "form.send": "Send",
-  "contact.whatsapp": "WhatsApp",
-  "contact.note": "We do not use analytics cookies. This form opens your mail app to send directly.",
-  "contact.details": "Contact details",
-  "contact.docs": "Official documents (contracts, invoices, and product specifications) are shared after qualifying the request.",
-"footer.payment": "All payments and trade settlements are conducted directly between the buyer and the certified supplier, while Euro Agri Trading s.r.o acts solely as an independent intermediary ensuring coordination and transparency.",
-  "site.company": "Euro Agri Trading s.r.o.",
+"contact.title": "Get in touch",
+"form.name": "Name",
+"form.email": "Email",
+"form.message": "Message",
+"form.send": "Send",
+"contact.whatsapp": "WhatsApp",
+"contact.note": "We do not use analytics cookies. This form opens your mail app to send the message directly.",
+"contact.details": "Contact details",
+"contact.docs": "Official documents (contracts, invoices, shipment-specific COA/SGS, and product specifications) are shared after qualifying the request.",
 
-  "footer.note": "©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. Page for commercial information only."
-}
+"footer.payment": "All payments and trade settlements are conducted directly between the buyer and the seller. Euro Agri Trading s.r.o. acts solely as an independent EU-based intermediary, providing coordination and process support.",
+"site.company": "Euro Agri Trading s.r.o.",
+
+"footer.note": "© 2025 — Independent broker/marketer. Trademarks belong to their respective owners. This website is for commercial information only."
