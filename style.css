@@ -1906,3 +1906,21 @@ header .container.nav {
     text-align: left;
   }
 }
+
+
+/* Disabled buttons (Coming Soon) */
+.btn:disabled{
+  background: #d1d5db !important;   /* رمادي */
+  border-color: #cbd5e1 !important;
+  color: #6b7280 !important;
+  cursor: not-allowed !important;
+  opacity: 0.95;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* منع أي تأثير hover على الزرار المعطّل */
+.btn:disabled:hover{
+  filter: none !important;
+  transform: none !important;
+}
