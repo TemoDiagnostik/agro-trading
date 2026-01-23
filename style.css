@@ -1931,16 +1931,19 @@ header .container.nav {
    ABOUT — card readability (targets current HTML)
    ========================= */
 #about .content-box{
+  width: min(980px, 92%);          /* ✅ دي اللي هتفرق: مش 100% */
   max-width: 980px;
   margin: 0 auto;
   padding: 22px 22px;
   background: rgba(255,255,255,0.88);
   backdrop-filter: blur(3px);
   border-radius: 18px;
+  box-sizing: border-box;          /* ✅ مهم مع الـ padding */
 }
 
 @media (max-width: 768px){
   #about .content-box{
+    width: min(560px, 92%);        /* ✅ نفس الفكرة للموبايل */
     max-width: 560px;
     margin: 0 auto;
     padding: 18px 16px;
