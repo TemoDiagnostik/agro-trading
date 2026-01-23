@@ -1794,3 +1794,9 @@ header .container.nav {
     text-align: left;
   }
 }
+
+
+#how-we-work{ scroll-margin-top: 90px; }
+@media (max-width: 768px){
+  #how-we-work{ scroll-margin-top: 120px; }
+}
