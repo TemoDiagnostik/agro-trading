@@ -11,7 +11,7 @@
 
   "hero.title": "AGRO SERVICES — Trusted EU–Egypt Fertilizer Brokerage",
   "hero.desc": "We connect certified Egyptian fertilizer producers with global buyers, offering factory-direct pricing, transparent processes, and full EU compliance.",
-  "hero.tradeNote": "All transactions comply with Incoterms® 2020 and international trade standards.",
+  "hero.tradeNote": "All transactions comply with Incoterms®️ 2020 and international trade standards.",
   "hero.mainProduct": "Rock Phosphate — P₂O₅: 18–32% (subject to availability & shipment-specific COA) (Ref. sample: 26%)",
   "hero.specTags": "P₂O₅: 18–32% (subject to availability & shipment-specific COA) / Key components available in COA",
   "hero.spec1": "Screened material — suitable for milling or direct application.",
@@ -21,7 +21,7 @@
   "hero.forms": "Forms: Powder / Granular / Fine Powder",
   "hero.sizing": "Sizing: Customized sizing upon request (sieving on request)",
   "hero.moisture": "Moisture: typically max 3–5% (grade & season dependent)",
-  
+
   "products.title": "Flagship Product",
   "products.lead": "Rock Phosphate — Grades 18–32% P₂O₅ (subject to availability & shipment-specific COA) (reference sample: 26%)",
   "products.spec1": "Screened granulometry — ready for milling or direct application",
@@ -33,18 +33,44 @@
   "card.rock.text": "Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.",
   "card.rock.cta": "Request a Quote",
   "card.rock.coa": "View Spec",
+
   "card.urea.title": "Urea / NPK (on request)",
   "card.urea.text": "Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.",
   "card.urea.cta": "Ask about Urea",
   "card.urea.cta2": "Request a Quote (RFQ)",
+
   "card.custom.title": "Custom specs",
   "card.custom.text": "Tailored supply, packing, and analyses per buyer requirements, with official documentation support.",
   "card.custom.cta": "Request Custom Specs",
 
   "generic.expand": "Ready to expand",
 
+  /* =========================
+     CERTIFICATES / DOCUMENTS SECTION (NEW)
+     ========================= */
+  "cert.title": "Product Specifications & Compliance Documents",
+  "cert.note": "Note: The documents displayed below are simplified marketing versions. Full originals and shipment-specific documents can be provided to verified buyers upon request.",
+
+  /* Cards: Spec / Sieving / SGS / EU / MSDS / Low-Cadmium */
   "coa.title": "Specification Sheet — Rock Phosphate (Grades 20–28% P₂O₅)",
-  "coa.sub": "Summary of chemical composition — available grades 20%, 22%, 24%, 26%, and 28% P₂O₅.",
+  "coa.sub": "Summary of chemical composition (marketing sample). Final values are confirmed per shipment via COA/SGS. Other grades (18–32% P₂O₅) are subject to availability & shipment-specific COA.",
+
+  "sieve.title": "Sieving Analysis — Rock Phosphate (20–28% P₂O₅)",
+  "sieve.sub": "Granulometry and particle size distribution — suitable for milling or direct application.",
+
+  "sgs.title": "SGS Quality Verification — Rock Phosphate",
+  "sgs.sub": "Independent inspection / verification (sample). Shipment-specific COA/SGS is provided per lot as agreed.",
+
+  "eu.title": "EU Compliance",
+  "eu.sub": "Documentation includes certificate of origin, invoices, and analysis reports. Full compliance with EU standards and product safety regulations.",
+
+  "msds.title": "MSDS Summary — EU Compliance",
+  "msds.sub": "Material safety summary for regulatory compliance (EU REACH).",
+
+  "lowcad.title": "Low-Cadmium Rock Phosphate",
+  "lowcad.sub": "31–32% P₂O₅ — Specification & MSDS uploading soon (shipment-specific COA required).",
+
+  /* Table headers (if used) */
   "coa.th.test": "Test",
   "coa.th.method": "Method",
   "coa.th.unit": "Unit",
@@ -52,43 +78,45 @@
   "coa.th.temp": "Temp.",
   "coa.th.hum": "Humidity",
 
-  "sieve.title": "Sieving Analysis — Rock Phosphate (20–28% P₂O₅)",
   "sieve.size": "Size",
   "sieve.percent": "Percent wt%",
 
+  /* Buttons */
   "coa.export": "Export sieving CSV",
   "coa.print": "Print/Save PDF — Spec",
   "spec.print": "Print/Save PDF — Spec",
+  "cert.request": "Request Custom Specs",
+  "cert.view": "View",
+  "cert.soon": "Coming Soon",
 
-"log.title": "Logistics & Compliance",
-"log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
-"log.incoterms": "Available shipping terms include EX-WORK, FOB, CFR, CIF, and DDP. Final terms are confirmed in the contract. Shipment updates are shared via email after booking confirmation.",
-"log.ports": "Ports: Egypt (multiple ports subject to schedule)",
-"log.ports.h": "Ports & Packing",
-"log.ports.p": "Shipping: Bulk vessel or 20’ containers. Packing options: Bulk with liner or Jumbo bags (upon request).",
-"log.compliance.h": "EU Compliance",
-"log.compliance.p": "Documentation includes certificate of origin, invoices, and analysis reports. Full compliance with EU standards and product safety regulations.",
+  "log.title": "Logistics & Compliance",
+  "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
+  "log.incoterms": "Available shipping terms include EX-WORK, FOB, CFR, CIF, and DDP. Final terms are confirmed in the contract. Shipment updates are shared via email after booking confirmation.",
+  "log.ports": "Ports: Egypt (multiple ports subject to schedule)",
+  "log.ports.h": "Ports & Packing",
+  "log.ports.p": "Shipping: Bulk vessel or 20’ containers. Packing options: Bulk with liner or Jumbo bags (upon request).",
+  "log.compliance.h": "EU Compliance",
+  "log.compliance.p": "Documentation includes certificate of origin, invoices, and analysis reports. Full compliance with EU standards and product safety regulations.",
 
+  "how.title": "How We Work (EU Brokerage & Risk-Control)",
+  "how.lead": "Euro Agri Trading s.r.o. operates as an independent EU-based brokerage and coordination company. We connect verified suppliers with qualified buyers and support the transaction process in a structured and compliant manner.",
+  "how.policyTitle": "Transaction Policy (Risk-Control)",
+  "how.policyLead": "To protect all parties and ensure professional execution, we follow standard international trade practices:",
+  "how.p1": "Payment: LC at sight (100%)",
+  "how.p2": "No advance payments",
+  "how.p3": "Independent inspection at loading: SGS / Intertek / BV (as agreed)",
+  "how.p4": "Shipment-specific documentation: COA/SGS per shipment; heavy metals (e.g., Cd) included upon request/market requirement",
+  "how.p5": "Buyer-facing documents: full originals and shipment-specific certificates are shared with verified buyers upon request",
+  "how.noteTitle": "Important Note",
+  "how.noteText": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract between seller and buyer. The sales contract, delivery terms, and performance obligations are agreed directly between the seller and buyer, supported by LC conditions and third-party inspection.",
 
-"how.title": "How We Work (EU Brokerage & Risk-Control)",
-"how.lead": "Euro Agri Trading s.r.o. operates as an independent EU-based brokerage and coordination company. We connect verified suppliers with qualified buyers and support the transaction process in a structured and compliant manner.",
-"how.policyTitle": "Transaction Policy (Risk-Control)",
-"how.policyLead": "To protect all parties and ensure professional execution, we follow standard international trade practices:",
-"how.p1": "Payment: LC at sight (100%)",
-"how.p2": "No advance payments",
-"how.p3": "Independent inspection at loading: SGS / Intertek / BV (as agreed)",
-"how.p4": "Shipment-specific documentation: COA/SGS per shipment; heavy metals (e.g., Cd) included upon request/market requirement",
-"how.p5": "Buyer-facing documents: full originals and shipment-specific certificates are shared with verified buyers upon request",
-"how.noteTitle": "Important Note",
-"how.noteText": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract between seller and buyer. The sales contract, delivery terms, and performance obligations are agreed directly between the seller and buyer, supported by LC conditions and third-party inspection.",
-  
-"compliance.title": "Compliance & Verification",
-"compliance.lead": "Specifications shown are marketing guidance. Final values are confirmed by shipment-specific COA/SGS for each lot.",
-"compliance.p1": "Shipment-specific COA / SGS (or equivalent) is available per shipment",
-"compliance.p2": "Heavy metals (Cd, etc.) can be provided upon request in the shipment COA",
-"compliance.p3": "Full original documents are shared with verified buyers only",
-"compliance.p4": "Low-Cadmium 31–32% is marketed only after receiving a shipment-specific COA showing Cd and heavy metals",
-  
+  "compliance.title": "Compliance & Verification",
+  "compliance.lead": "Specifications shown are marketing guidance. Final values are confirmed by shipment-specific COA/SGS for each lot.",
+  "compliance.p1": "Shipment-specific COA / SGS (or equivalent) is available per shipment",
+  "compliance.p2": "Heavy metals (Cd, etc.) can be provided upon request in the shipment COA",
+  "compliance.p3": "Full original documents are shared with verified buyers only",
+  "compliance.p4": "Low-Cadmium 31–32% is marketed only after receiving a shipment-specific COA showing Cd and heavy metals",
+
   "about.title": "About us",
   "about.p1": "Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources. We focus on transparency, quality, speed — and",
   "about.pricing": "competitive pricing via direct procurement",
@@ -105,7 +133,8 @@
   "contact.note": "We do not use analytics cookies. This form opens your mail app to send directly.",
   "contact.details": "Contact details",
   "contact.docs": "Official documents (contracts, invoices, and product specifications) are shared after qualifying the request.",
-"footer.payment": "All payments and trade settlements are conducted directly between the buyer and the certified supplier, while Euro Agri Trading s.r.o acts solely as an independent intermediary ensuring coordination and transparency.",
+
+  "footer.payment": "All payments and trade settlements are conducted directly between the buyer and the certified supplier, while Euro Agri Trading s.r.o acts solely as an independent intermediary ensuring coordination and transparency.",
   "site.company": "Euro Agri Trading s.r.o.",
 
   "footer.note": "©️ 2025 — Independent broker/marketer. Trademarks belong to their owners. Page for commercial information only."
