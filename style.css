@@ -1928,31 +1928,35 @@ header .container.nav {
 
 
 /* =========================
-   ABOUT — card readability (targets current HTML)
+   ABOUT — FINAL (visible + stable)
+   Targets: <div class="content-box about-card">
    ========================= */
-#about .content-box{
-  width: min(980px, 92%);          /* ✅ دي اللي هتفرق: مش 100% */
+#about .content-box.about-card{
   max-width: 980px;
   margin: 0 auto;
-  padding: 22px 22px;
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(3px);
+  padding: 34px 26px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(4px);
   border-radius: 18px;
-  box-sizing: border-box;          /* ✅ مهم مع الـ padding */
+  box-shadow: 0 10px 28px rgba(2,6,23,.10);
 }
 
+/* نصوص أوضح */
+#about .content-box.about-card p{
+  line-height: 1.7;
+}
+
+/* Mobile */
 @media (max-width: 768px){
-  #about .content-box{
-    width: min(560px, 92%);        /* ✅ نفس الفكرة للموبايل */
-    max-width: 560px;
-    margin: 0 auto;
-    padding: 18px 16px;
+  #about .content-box.about-card{
+    width: min(92vw, 560px);
+    padding: 22px 18px;
   }
 
-  #about .content-box p,
-  #about .content-box{
-    font-size: 0.98rem;
-    line-height: 1.65;
+  #about .content-box.about-card,
+  #about .content-box.about-card p{
+    font-size: 1rem;
+    line-height: 1.75;
     text-align: center;
   }
 }
