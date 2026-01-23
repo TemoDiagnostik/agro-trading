@@ -604,7 +604,7 @@ header .lang span {
 #logistics{
   background: #f9fafb;
   padding: 34px 0 64px;        /* Desktop spacing */
-  scroll-margin-top: 90px;     /* for anchor jump (menu) */
+  scroll-margin-top: 90px;     /* anchor jump */
 }
 
 #logistics .container{
@@ -616,13 +616,14 @@ header .lang span {
   margin: 0 0 18px 0;          /* move title up */
 }
 
-/* Grid + cards */
+/* Grid */
 #logistics .grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
 }
 
+/* Cards */
 #logistics .card{
   background: #fff;
   border: 1px solid #e5e7eb;
@@ -638,7 +639,9 @@ header .lang span {
   transform: translateY(-4px);
 }
 
-#logistics .card img{
+/* ✅ مهم جدًا: خلي ستايل الصور يطبق فقط على الصورة المباشرة داخل الكارت
+   (وبالتالي لا يؤثر على صورة البانر لأنها داخل div) */
+#logistics .card > img{
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -649,26 +652,29 @@ header .lang span {
 /* Compliance full-width block */
 #logistics .compliance-block{
   width: 100%;
-  margin: 0 0 18px 0;          /* space before 3 cards grid */
+  margin: 0 0 18px 0;
   border-left: 4px solid rgba(230,193,109,0.9);
 }
 
-/* Compliance banner strip (ratio-based, perfect for 1600x320) */
+/* ✅ Banner strip (1600x320 = 5:1) */
 #logistics .compliance-block .compliance-banner{
   width: 100%;
-  aspect-ratio: 5 / 1;                 /* ✅ نفس نسبة 1600x320 */
+  aspect-ratio: 5 / 1;
   overflow: hidden;
-  margin: -18px -18px 12px -18px;      /* full-bleed داخل الكارت */
+  margin: -18px -18px 12px -18px; /* full-bleed داخل الكارت */
   border-radius: var(--radius) var(--radius) 0 0;
-  background: #0b3d91;                 /* fallback */
+  background: #0b3d91;
 }
 
+/* Override أي ستايل قديم على img */
 #logistics .compliance-block .compliance-banner img{
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;                   /* ✅ يملأ بدون فراغات */
- object-position: center 60%;             /* عدّلها لو احتجت */
+  object-fit: cover;
+  object-position: center;
+  margin: 0 !important;
+  border-radius: 0 !important;
 }
 
 /* Compliance list */
@@ -689,11 +695,10 @@ header .lang span {
     scroll-margin-top: 120px;
   }
 
-  #logistics .compliance-block .compliance-banner{
-    height: 90px;
+  #logistics .card > img{
+    height: 180px;
   }
 }
-
 
 /* ===== FEATURES ===== */
 .features {
