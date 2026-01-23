@@ -1747,4 +1747,50 @@ header .container.nav {
 
 
 
+/* =========================
+   HOW WE WORK
+   ========================= */
+#how-we-work{
+  padding: 64px 0;
+  background: #ffffff;
+}
 
+#how-we-work h2{
+  text-align: center;
+  margin: 0 0 14px 0;
+}
+
+#how-we-work > .container > .muted{
+  max-width: 920px;
+  margin: 0 auto 22px auto;
+  text-align: center;
+  line-height: 1.65;
+}
+
+#how-we-work .how-card{
+  border-left: 4px solid rgba(230,193,109,0.9);
+}
+
+#how-we-work .how-note{
+  border-left-color: rgba(10,102,47,0.55);
+}
+
+#how-we-work .mini-specs{
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+}
+
+#how-we-work .mini-specs li{
+  margin: 6px 0;
+  line-height: 1.55;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  #how-we-work{
+    padding: 44px 16px;
+  }
+  #how-we-work > .container > .muted{
+    text-align: left;
+  }
+}
