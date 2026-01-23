@@ -1926,25 +1926,7 @@ header .container.nav {
 }
 
 
-/* Footer payment note: cleaner + smaller on mobile */
-[data-i18n="footer.payment"]{
-  max-width: 980px;
-  margin: 18px auto 10px;
-  padding: 0 16px;
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  opacity: .88;
-}
 
-@media (max-width: 768px){
-  [data-i18n="footer.payment"]{
-    margin: 12px auto 8px;
-    font-size: 0.88rem;
-    line-height: 1.6;
-    text-align: center;
-  }
-}
 /* About card: centered + readable on mobile */
 #about .about-card{
   max-width: 980px;
