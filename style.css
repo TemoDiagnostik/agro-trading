@@ -1800,3 +1800,96 @@ header .container.nav {
 @media (max-width: 768px){
   #how-we-work{ scroll-margin-top: 120px; }
 }
+
+
+/* =========================
+   HOW WE WORK — layout polish
+   ========================= */
+#how-we-work{
+  padding: 56px 0;
+  background: #f9fafb;
+}
+
+#how-we-work h2{
+  text-align: center;
+  margin: 0 0 12px 0;
+}
+
+#how-we-work .how-lead{
+  max-width: 980px;
+  margin: 0 auto 18px auto;
+  text-align: center;
+  line-height: 1.65;
+}
+
+#how-we-work .how-card{
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(2,6,23,.06);
+  padding: 22px;
+}
+
+#how-we-work .how-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+#how-we-work h3{
+  margin: 0 0 10px 0;
+}
+
+#how-we-work p{
+  line-height: 1.7;
+}
+
+#how-we-work .policy{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#how-we-work .policy li{
+  margin: 10px 0;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.55;
+}
+
+#how-we-work .policy li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: #0f7a3a;
+}
+
+#how-we-work .how-note{
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-left: 4px solid rgba(230,193,109,0.95);
+  background: rgba(230,193,109,0.10);
+  border-radius: 12px;
+}
+
+#how-we-work .how-note strong{
+  display: block;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px){
+  #how-we-work{
+    padding: 40px 16px;
+  }
+  #how-we-work .how-grid{
+    grid-template-columns: 1fr;
+  }
+  #how-we-work .how-lead{
+    text-align: left;
+  }
+}
