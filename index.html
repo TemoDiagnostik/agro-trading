@@ -799,7 +799,7 @@
 			};
 			// إرسال عبر mailto
 			window.sendMailto = function(form){
-				const data = new FormData(form); const to = "trading@temosliving.de"; const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
+				const data = new FormData(form); const to = "info@euroagritrading.eu"; const subject = encodeURIComponent("RFQ - Euro Agri Trading (info@euroagritrading.eu)");
 				const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`);
 				location.href = `mailto:${to}?subject=${subject}&body=${body}`; return false;
 			};
@@ -834,8 +834,8 @@
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"name": "Euro Agri Trading s.r.o.",
-	"url": "https://trading.temosliving.de",
-	"email": "trading@temosliving.de",
+	"url": "https://info@euroagritrading.eu",
+	"email": "info@euroagritrading.eu",
 	"telephone": "+420 732 133 919",
 	"address": {
 		"@type": "PostalAddress",
@@ -847,7 +847,7 @@
 	"contactPoint": {
 		"@type": "ContactPoint",
 		"contactType": "sales",
-		"email": "trading@temosliving.de",
+		"email": "info@euroagritrading.eu",
 		"telephone": "+420 732 133 919",
 		"areaServed": "EU"
 	},
