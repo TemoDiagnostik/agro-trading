@@ -1948,34 +1948,33 @@ header .container.nav {
     margin: 0 auto;
     padding: 18px 16px;
   }
-
-  #about .content-box p,
-  #about .content-box{
-    font-size: 0.98rem;
-    line-height: 1.65;
-    text-align: center;
-  }
 }
+
+
+
+/* =========================
+   ABOUT — final readability (append at end)
+   ========================= */
+
+#about .content-box,
+#about .content-box p{
+  font-size: 0.98rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* قائمة النقاط لو استخدمتها */
 #about .about-list{
   margin: 12px 0;
   padding-left: 18px;
   line-height: 1.55;
 }
 #about .about-list li{ margin: 6px 0; }
-#about .about-card .muted{
-  margin-top: 14px;
-  font-size: 0.92em;
-  opacity: 0.78;
-}
 
-/* =========================
-   ABOUT — final readability (append at end)
-   ========================= */
+/* Overlay خفيف فوق الخلفية */
 #about .about-bg{
   position: relative;
 }
-
-/* لو عندك صورة خلفية قوية، ده يعمل طبقة خفيفة فوقها */
 #about .about-bg::before{
   content: "";
   position: absolute;
@@ -1984,8 +1983,9 @@ header .container.nav {
   pointer-events: none;
 }
 
+/* الكارد نفسه */
 #about .about-card{
-  position: relative;                  /* علشان يبقى فوق الـoverlay */
+  position: relative;
   background: rgba(255,255,255,.92);
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 18px;
@@ -2008,8 +2008,10 @@ header .container.nav {
   margin: 10px 0;
 }
 
+/* الملاحظة القانونية */
 #about .about-card p.muted{
+  margin-top: 14px;
   color: #374151;
   font-size: 14px;
+  opacity: 0.78;
 }
-
