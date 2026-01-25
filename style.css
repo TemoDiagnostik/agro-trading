@@ -1967,3 +1967,49 @@ header .container.nav {
   font-size: 0.92em;
   opacity: 0.78;
 }
+
+/* =========================
+   ABOUT — final readability (append at end)
+   ========================= */
+#about .about-bg{
+  position: relative;
+}
+
+/* لو عندك صورة خلفية قوية، ده يعمل طبقة خفيفة فوقها */
+#about .about-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.45);
+  pointer-events: none;
+}
+
+#about .about-card{
+  position: relative;                  /* علشان يبقى فوق الـoverlay */
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 26px 22px;
+  max-width: 980px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+#about .about-card h2{
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#about .about-card p{
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+#about .about-card p.muted{
+  color: #374151;
+  font-size: 14px;
+}
+
