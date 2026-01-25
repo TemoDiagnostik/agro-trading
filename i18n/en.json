@@ -92,21 +92,29 @@
   "cert.title": "Product Specifications & Compliance Documents",
 "cert.note": "Note: The documents displayed below are simplified marketing versions. Full originals and shipment-specific certificates can be provided to verified buyers upon request.",
 
-"sgs.title": "Independent Inspection & Verification (SGS / Intertek / BV)",
-"sgs.sub": "Shipment-specific inspection documentation is available per shipment as agreed.",
 
-"eu.title": "EU Compliance Documents",
-"eu.sub": "Certificates of origin, invoices, and analysis reports. Full compliance with applicable EU standards and product safety regulations.",
+  "coa.imgAlt": "Rock Phosphate specifications overview (20–28% P₂O₅)",
+  "sieve.imgAlt": "Rock Phosphate sieving analysis (granulometry, 20–28% P₂O₅)",
+  "sgs.imgAlt": "Independent inspection & verification (SGS / Intertek / BV)",
+  "eu.imgAlt": "EU compliance documents",
+  "msds.imgAlt": "MSDS summary for EU REACH",
+  "lowcad.imgAlt": "Low-Cadmium Rock Phosphate (31–32% P₂O₅) — Coming soon",
 
-"msds.title": "MSDS Summary — EU REACH",
-"msds.sub": "Material Safety Data Sheet (summary) for compliance and safe handling guidance.",
+  "sgs.title": "Independent Inspection & Verification (SGS / Intertek / BV)",
+  "sgs.sub": "Shipment-specific inspection documentation is available per shipment as agreed.",
 
-"lowcad.title": "Low-Cadmium Rock Phosphate (31–32% P₂O₅)",
-"lowcad.sub": "Coming soon / upon request. Only marketed after receiving shipment-specific COA showing Cd and heavy metals.",
+  "eu.title": "EU Compliance Documents",
+  "eu.sub": "Certificates of origin, invoices, and analysis reports. Full compliance with applicable EU standards and product safety regulations.",
 
-"cert.view": "View",
-"cert.soon": "Coming Soon",
-"cert.request": "Request Full Originals",
+  "msds.title": "MSDS Summary — EU REACH",
+  "msds.sub": "Material Safety Data Sheet (summary) for compliance and safe handling guidance.",
+
+  "lowcad.title": "Low-Cadmium Rock Phosphate (31–32% P₂O₅)",
+  "lowcad.sub": "Coming soon / upon request. Only marketed after receiving shipment-specific COA showing Cd and heavy metals.",
+
+  "cert.view": "View",
+  "cert.soon": "Coming Soon",
+  "cert.request": "Request Full Originals",
 
   
  "about.title": "About us",
