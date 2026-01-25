@@ -109,12 +109,12 @@
   "msds.title": "MSDS Summary — EU REACH",
   "msds.sub": "Material Safety Data Sheet (summary) for compliance and safe handling guidance.",
 
-  "lowcad.title": "Low-Cadmium Rock Phosphate (31–32% P₂O₅)",
-  "lowcad.sub": "Coming soon / upon request. Only marketed after receiving shipment-specific COA showing Cd and heavy metals.",
+ "lowcad.title": "Low-Cadmium Rock Phosphate (31–32% P₂O₅)",
+"lowcad.sub": "Coming soon / upon request. Marketed only after receiving shipment-specific third-party COA/inspection (SGS/Intertek/BV) confirming Cd & heavy metals (ppm/mg/kg) for the actual lot.",
 
-  "cert.view": "View",
-  "cert.soon": "Coming Soon",
-  "cert.request": "Request Full Originals",
+"cert.view": "View Sample",
+"cert.soon": "Coming Soon",
+"cert.request": "Request Full Originals",
 
   
  "about.title": "About us",
