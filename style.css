@@ -1507,161 +1507,129 @@ form label {
 
 
 /* =========================
-   HEADER — ALIGNMENT ONLY (PASTE AT VERY END)
-   Logo far left | Title centered | Nav + Lang far right
-   (No color changes)
+   HEADER — FINAL GRID (NO OVERLAP)
+   Logo left | Title center | Nav right | Lang far right
+   Paste at VERY END of style.css (replace any previous header override)
    ========================= */
 
-/* 1) خلي الهيدر ياخد عرض الشاشة بالكامل (بدون max-width بتاع .container) */
-header .container.nav{
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
+header{
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  z-index: 100;
+}
 
-  position: relative !important;
+header .container.nav{
+  height: 70px !important;           /* نفس حجم البار */
+  padding: 0 20px !important;
+  box-sizing: border-box;
+
+  direction: ltr !important;         /* الهيدر ثابت LTR */
+  display: grid !important;
+  grid-template-columns: auto minmax(260px, 1fr) auto auto !important; /* brand | title | nav | lang */
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+/* Logo far left */
+header .brand{
+  grid-column: 1 !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 14px !important;
-
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
-
-/* 2) اللوجو أقصى الشمال */
-header .brand{
-  flex: 0 0 auto !important;
-  margin: 0 !important;
 }
 header .logo-img{
-  max-height: 64px !important;  /* عدّلها 56–70 حسب شكل لوجوك */
+  max-height: 56px !important;  /* كبر/صغر لو تحب: 56–64 */
   width: auto !important;
   height: auto !important;
   display: block !important;
 }
 
-/* 3) اسم الشركة في منتصف الشاشة بالظبط */
+/* Title centered (NO absolute -> no overlap) */
 header .brand-text{
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  grid-column: 2 !important;
+  justify-self: center !important;
   text-align: center !important;
-  margin: 0 !important;
 
-  pointer-events: none !important; /* عشان ما يمنع الضغط على اللينكات */
+  font-weight: 700 !important;
+  font-size: 1.02rem !important;
+  color: #0a662f !important;
 
-  /* حماية من التداخل */
-  max-width: 42vw !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+
+  pointer-events: none !important;   /* ما يمنعش الضغط على nav */
 }
 
-/* 4) الـ Nav + اللغة أقصى اليمين */
+/* Nav right */
 header nav{
-  margin-left: auto !important;
-  flex: 0 0 auto !important;
+  grid-column: 3 !important;
+  justify-self: end !important;
+  margin-left: 0 !important;
 }
 header .navbar-nav{
   display: flex !important;
   align-items: center !important;
+  justify-content: flex-end !important;
   gap: 12px !important;
   flex-wrap: nowrap !important;
   margin: 0 !important;
   padding: 0 !important;
+  list-style: none !important;
 }
+header nav ul li a{
+  font-size: 0.82rem !important;
+  white-space: nowrap !important;
+}
+
+/* Lang far right */
 header .lang{
-  flex: 0 0 auto !important;
-  margin-left: 12px !important;
+  grid-column: 4 !important;
+  justify-self: end !important;
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
+  margin-left: 0 !important;
+}
+header .lang select{
+  border: 2px solid #0a662f !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+  background: #fff !important;
+  color: #0a662f !important;
+  font-weight: 600 !important;
 }
 
-/* 5) موبايل: منع الزحمة */
+/* Mobile/Small screens: stack nicely */
 @media (max-width: 980px){
   header .container.nav{
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    height: auto !important;
     padding: 10px 16px !important;
+    grid-template-columns: auto 1fr auto !important; /* logo | title | lang */
+    grid-template-rows: auto auto !important;
+    gap: 10px !important;
   }
+
+  header .brand{ grid-column: 1 !important; }
+  header .lang{  grid-column: 3 !important; }
+
   header .brand-text{
-    position: static !important;
-    transform: none !important;
-    max-width: 100% !important;
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
     pointer-events: auto !important;
     white-space: normal !important;
-    order: 2 !important;
+    text-align: center !important;
   }
+
   header nav{
-    order: 3 !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    margin-left: 0 !important;
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
   }
+
   header .navbar-nav{
     flex-wrap: wrap !important;
     justify-content: center !important;
   }
-  header .lang{
-    order: 1 !important;
-    margin-left: auto !important;
-  }
-}
-
-
-/* =========================
-   HEADER — SIZE + ORIGINAL COLORS (APPEND UNDER ALIGNMENT BLOCK)
-   ========================= */
-
-/* تكبير اللوجو بدون ما يبوّظ البار */
-header .logo-img{
-  max-height: 72px !important; /* جرّب 72.. لو زحمة قلّلها لـ 68 */
-}
-
-/* تكبير وتخانة اسم الشركة + لونك الأصلي */
-header .brand-text{
-  font-size: 1.18rem !important;
-  font-weight: 800 !important;
-  color: var(--brand-ink) !important; /* يرجع اللون الأصلي */
-  text-shadow: none !important;
-}
-
-/* =========================
-   HERO CTA BUTTONS — FIX BLUE + RESTORE ORIGINAL THEME
-   ========================= */
-
-#home .cta-row{
-  gap: 12px !important;
-}
-
-#home .cta-row .btn{
-  padding: 12px 18px !important;
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  border-radius: 10px !important;
-}
-
-/* Primary: أخضر الموقع */
-#home .cta-row .btn-primary{
-  background: var(--brand) !important;
-  border: 2px solid var(--brand) !important;
-  color: #fff !important;
-}
-#home .cta-row .btn-primary:hover{
-  background: var(--brand-ink) !important;
-  border-color: var(--brand-ink) !important;
-}
-
-/* Outline: شفاف + حدود أخضر (بدون الأزرق) */
-#home .cta-row .btn-outline{
-  background: transparent !important;
-  border: 2px solid var(--brand) !important;
-  color: var(--brand) !important;
-}
-#home .cta-row .btn-outline:hover{
-  background: rgba(21,128,61,.10) !important;
-  border-color: var(--brand-ink) !important;
-  color: var(--brand-ink) !important;
 }
