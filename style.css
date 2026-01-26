@@ -57,56 +57,7 @@ html {
  margin: 0 auto;
 }
 
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
-header {
- position: relative !important;   /* ??? ???? */
- width: 100%;
- background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
- backdrop-filter: blur(6px); /* ???? ???? */
- box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
- height: auto;
- z-index: 100;
- transition: all 0.3s ease;
-}
 
-/* ????? ?????? ????? */
-header .container.nav {
- height: 70px !important;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 0 20px;
-}
-
-/* ?????? */
-header .logo-img {
- max-height: 90px !important;
- height: auto;
-}
-
-/* ?? ?????? */
-header .brand-text {
- font-weight: 700;
- font-size: 1.1rem;
- color: #0a662f !important; /* ???? ???? */
- margin-left: 10px;
- text-shadow: 0 1px 1px rgba(255,255,255,0.3);
-}
-
-header nav ul {
- display: flex;
- gap: 1rem;
- list-style: none;
- margin: 0;
- padding: 0;
-}
-
-header nav ul li a {
- font-size: 0.82rem;
- font-weight: 500;
- color: #000;
- text-decoration: none;
- }
 /* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
 header nav ul li a {
  position: relative;
@@ -1611,11 +1562,10 @@ form label {
 
 
 
-
 /* =========================
-   HEADER — FINAL GRID (NO OVERLAP)
-   Logo left | Title center | Nav right | Lang far right
-   Paste at VERY END of style.css (replace any previous header override)
+   HEADER — ONE SOURCE OF TRUTH (PASTE AT VERY END)
+   Desktop: Logo far left | Title center | Nav right | Lang far right
+   Mobile: Compact (not tall) + nav scroll (no wrap)
    ========================= */
 
 header{
@@ -1627,12 +1577,17 @@ header{
   z-index: 100;
 }
 
+/* IMPORTANT: full width (so logo truly far left) */
 header .container.nav{
-  height: 70px !important;           /* نفس حجم البار */
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+
+  height: 70px !important;
   padding: 0 20px !important;
   box-sizing: border-box;
 
-  direction: ltr !important;         /* الهيدر ثابت LTR */
+  direction: ltr !important;
   display: grid !important;
   grid-template-columns: auto minmax(260px, 1fr) auto auto !important; /* brand | title | nav | lang */
   align-items: center !important;
@@ -1646,27 +1601,27 @@ header .brand{
   align-items: center !important;
 }
 header .logo-img{
-  max-height: 85px !important;  /* كبر/صغر لو تحب: 56–64 */
+  max-height: 90px !important;  /* كبّر/صغّر هنا لو تحب (مثلاً 72) */
   width: auto !important;
   height: auto !important;
   display: block !important;
 }
 
-/* Title centered (NO absolute -> no overlap) */
+/* Title centered */
 header .brand-text{
   grid-column: 2 !important;
   justify-self: center !important;
   text-align: center !important;
 
-  font-weight: 700 !important;
-  font-size: 1.02rem !important;
+  font-weight: 800 !important;        /* أثخن */
+  font-size: 1.12rem !important;      /* أكبر */
   color: #0a662f !important;
 
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 
-  pointer-events: none !important;   /* ما يمنعش الضغط على nav */
+  pointer-events: none !important;
 }
 
 /* Nav right */
@@ -1680,13 +1635,14 @@ header .navbar-nav{
   align-items: center !important;
   justify-content: flex-end !important;
   gap: 12px !important;
-  flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;   /* لا يلف */
   margin: 0 !important;
   padding: 0 !important;
   list-style: none !important;
 }
 header nav ul li a{
-  font-size: 0.70rem !important;
+  font-size: 0.82rem !important;   /* رجّع الحجم الطبيعي */
+  font-weight: 600 !important;
   white-space: nowrap !important;
 }
 
@@ -1697,7 +1653,6 @@ header .lang{
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
-  margin-left: 0 !important;
 }
 header .lang select{
   border: 2px solid #0a662f !important;
@@ -1708,34 +1663,60 @@ header .lang select{
   font-weight: 600 !important;
 }
 
-/* Mobile/Small screens: stack nicely */
-@media (max-width: 980px){
+
+/* حرّك اللوجو لفوق شوية (ضعه في آخر style.css) */
+header .brand{
+  margin-top: -6px !important;  /* جرّب -4 أو -8 حسب ما يناسبك */
+}
+
+
+/* =========================
+   MOBILE (make header slim like before)
+   ========================= */
+@media (max-width: 768px){
   header .container.nav{
     height: auto !important;
-    padding: 10px 16px !important;
+    padding: 8px 12px !important;
+    gap: 6px !important;
+
     grid-template-columns: auto 1fr auto !important; /* logo | title | lang */
     grid-template-rows: auto auto !important;
-    gap: 10px !important;
   }
 
-  header .brand{ grid-column: 1 !important; }
-  header .lang{  grid-column: 3 !important; }
+  header .logo-img{
+    max-height: 44px !important;   /* يقلل ارتفاع البار */
+  }
 
   header .brand-text{
-    grid-column: 1 / -1 !important;
-    justify-self: center !important;
-    pointer-events: auto !important;
-    white-space: normal !important;
-    text-align: center !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    font-size: 0.92rem !important;
+    font-weight: 800 !important;
   }
 
+  header .lang{
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+  }
+
+  /* Nav سطر ثاني “رفيع” + سكرول أفقي بدل ما يلف ويطوّل البار */
   header nav{
     grid-column: 1 / -1 !important;
-    justify-self: center !important;
+    grid-row: 2 !important;
+    justify-self: stretch !important;
   }
 
   header .navbar-nav{
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px !important;
+    padding-bottom: 4px !important;
+  }
+  header .navbar-nav::-webkit-scrollbar{ display:none; }
+
+  header nav ul li a{
+    font-size: 0.78rem !important;
+    padding-bottom: 3px !important;
   }
 }
