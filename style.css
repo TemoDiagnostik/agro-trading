@@ -1664,11 +1664,9 @@ header .lang select{
 }
 
 
-/* حرّك اللوجو لفوق شوية (ضعه في آخر style.css) */
-header .brand{
-  margin-top: -6px !important;  /* جرّب -4 أو -8 حسب ما يناسبك */
+@media (max-width: 820px){
+  header .brand{ margin-top: -6px !important; }
 }
-
 
 /* =========================
    MOBILE (make header slim like before)
@@ -1720,3 +1718,84 @@ header .brand{
     padding-bottom: 3px !important;
   }
 }
+
+/* =========================
+   MOBILE HEADER FIX (ONLY)
+   Paste at VERY END of style.css
+   ========================= */
+@media (max-width: 820px){
+
+  header .container.nav{
+    height: auto !important;
+    padding: 10px 12px !important;
+
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    grid-template-areas:
+      "logo  .   lang"
+      "title title title"
+      "nav   nav   nav";
+    row-gap: 8px !important;
+    column-gap: 10px !important;
+
+    align-items: center !important;
+  }
+
+  header .brand{ grid-area: logo !important; }
+  header .lang{
+    grid-area: lang !important;
+    justify-self: end !important;
+  }
+
+  /* اسم الشركة كسطر طبيعي (من غير absolute) */
+  header .brand-text{
+    grid-area: title !important;
+    position: static !important;
+    transform: none !important;
+
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+
+    pointer-events: auto !important;
+    text-align: center !important;
+    line-height: 1.15 !important;
+    padding: 0 6px !important;
+  }
+
+  /* الناف تحت */
+  header nav{
+    grid-area: nav !important;
+    justify-self: center !important;
+    width: 100% !important;
+  }
+  header .navbar-nav{
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  /* حجم اللوجو للموبايل */
+  header .logo-img{
+    max-height: 42px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* زر اللغة أصغر */
+  header .lang select{
+    padding: 4px 8px !important;
+    font-size: .9rem !important;
+  }
+}
+
+/* أصغر جداً */
+@media (max-width: 380px){
+  header .brand-text{ font-size: .98rem !important; }
+  header nav ul li a{ font-size: .82rem !important; }
+}
+
+
+
+
