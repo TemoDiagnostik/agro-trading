@@ -1609,3 +1609,59 @@ header .lang{
     margin-left: auto !important;
   }
 }
+
+
+/* =========================
+   HEADER — SIZE + ORIGINAL COLORS (APPEND UNDER ALIGNMENT BLOCK)
+   ========================= */
+
+/* تكبير اللوجو بدون ما يبوّظ البار */
+header .logo-img{
+  max-height: 72px !important; /* جرّب 72.. لو زحمة قلّلها لـ 68 */
+}
+
+/* تكبير وتخانة اسم الشركة + لونك الأصلي */
+header .brand-text{
+  font-size: 1.18rem !important;
+  font-weight: 800 !important;
+  color: var(--brand-ink) !important; /* يرجع اللون الأصلي */
+  text-shadow: none !important;
+}
+
+/* =========================
+   HERO CTA BUTTONS — FIX BLUE + RESTORE ORIGINAL THEME
+   ========================= */
+
+#home .cta-row{
+  gap: 12px !important;
+}
+
+#home .cta-row .btn{
+  padding: 12px 18px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+}
+
+/* Primary: أخضر الموقع */
+#home .cta-row .btn-primary{
+  background: var(--brand) !important;
+  border: 2px solid var(--brand) !important;
+  color: #fff !important;
+}
+#home .cta-row .btn-primary:hover{
+  background: var(--brand-ink) !important;
+  border-color: var(--brand-ink) !important;
+}
+
+/* Outline: شفاف + حدود أخضر (بدون الأزرق) */
+#home .cta-row .btn-outline{
+  background: transparent !important;
+  border: 2px solid var(--brand) !important;
+  color: var(--brand) !important;
+}
+#home .cta-row .btn-outline:hover{
+  background: rgba(21,128,61,.10) !important;
+  border-color: var(--brand-ink) !important;
+  color: var(--brand-ink) !important;
+}
