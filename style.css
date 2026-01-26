@@ -1666,3 +1666,11 @@ header .brand-text{
     padding: 10px 16px !important;
   }
 }
+
+
+
+/* FIX LOGO SIZE */
+header .logo-img{
+  max-height: 56px !important;
+  width: auto !important;
+}
