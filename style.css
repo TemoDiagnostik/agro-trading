@@ -947,32 +947,31 @@ form label {
   transform: translateY(-1px);
 }
 
-/* OUTLINE = (اختيار 1) شفاف + حد ذهبي + نص أخضر */
+/* OUTLINE = أخضر ممتلئ + حد ذهبي + نص أبيض */
 .btn-outline{
-  background-color: transparent;
-  color: var(--cert-green-dark);
-  border-color: var(--cert-gold);
-  box-shadow: none;
-}
-.btn-outline:hover{
-  background-color: rgba(15,107,74,.08);
-  transform: translateY(-1px);
-}
-
-/* لو تريد الـ Outline يكون "ممتلئ أخضر" مثل باقي الأزرار، فعّل هذا بدل البلوك أعلاه:
-.btn-outline{
-  background-color: var(--cert-green-dark);
+  background-color: var(--cert-green);
   color:#fff;
   border-color: var(--cert-gold);
   box-shadow: 0 4px 10px rgba(0,0,0,.14);
 }
 .btn-outline:hover{
-  background-color: #094a33;
+  background-color: var(--cert-green-dark);
   border-color: var(--cert-gold);
   transform: translateY(-1px);
 }
-*/
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+
+/* Disabled */
+.btn-outline:disabled,
+.btn-outline[disabled]{
+  background-color: var(--cert-green);
+  border-color: var(--cert-gold);
+  color:#fff;
+  opacity:.65;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
 header {
  position: relative !important;   /* ??? ???? */
  width: 100%;
