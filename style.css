@@ -1842,6 +1842,14 @@ header .brand-text .brand-tagline{
   opacity: .85;
 }
 
+header .brand-text .brand-tagline{
+  opacity: 1 !important;
+  color: inherit !important;
+}
 
-
-
+/* Darken tagline (Trusted Agro Broker) */
+header .brand-text .brand-tagline{
+  opacity: 1 !important;
+  color: #0a662f !important;   /* غامق */
+  font-weight: 600 !important;
+}
