@@ -1853,3 +1853,19 @@ header .brand-text .brand-tagline{
   color: #0a662f !important;   /* غامق */
   font-weight: 600 !important;
 }
+
+
+
+/* EU flag near Contact Details */
+.eu-flag-inline{
+  margin: 10px 0 14px;
+}
+
+.eu-flag-inline img{
+  display: block;
+  width: 210px;     /* عدّلها براحتك */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
