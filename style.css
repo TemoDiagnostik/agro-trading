@@ -1782,7 +1782,7 @@ header .brand{ margin-top: -9px !important; }
 
   /* حجم اللوجو للموبايل */
   header .logo-img{
-    max-height: 42px !important;
+    max-height: 90px !important;
     width: auto !important;
     height: auto !important;
   }
