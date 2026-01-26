@@ -133,7 +133,8 @@
 "payment.title": "Payments / Proforma",
 "payment.note": "Payment details are shared on official proforma/invoice with verified buyers only.",
 "payment.btn.request": "Request Proforma / Payment Details",
-
+"payment.note": "Bank details are provided in the Proforma Invoice (PI) upon request.",
+  
 "contact.title": "Get in touch",
 "form.name": "Name",
 "form.email": "Email",
