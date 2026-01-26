@@ -2015,3 +2015,16 @@ header .container.nav {
   font-size: 14px;
   opacity: 0.78;
 }
+
+
+/* Contact — bank note (clean & professional) */
+#contact .bank-note{
+  margin-top: 14px;            /* ينزل سطر تحت ويعمل فصل واضح */
+  padding: 10px 12px;
+  font-weight: 700;            /* خط أغلظ */
+  color: #0f6b3a;              /* أخضر واضح */
+  background: rgba(15,107,58,.08);
+  border-left: 4px solid #0f6b3a;
+  border-radius: 10px;
+  display: inline-block;
+}
