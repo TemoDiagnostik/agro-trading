@@ -2049,3 +2049,84 @@ header .container.nav {
   border-radius: 10px;
   display: inline-block;
 }
+
+
+
+
+
+/* =========================
+   HEADER LAYOUT (Logo left / Title center / Lang right)
+   ========================= */
+
+/* رأيي الأفضل: أبيض شبه شفاف (احترافي + مقروء فوق أي خلفية) */
+header{
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15,23,42,.08);
+}
+
+/* توزيع العناصر داخل الهيدر بدون تغيير الحجم */
+header .container.nav{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* اللوجو أقصى اليسار */
+header .brand{
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* الـ nav واللغات يروحوا يمين */
+header nav{
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+header .lang{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+/* اسم الشركة في المنتصف بالضبط */
+header .brand-text{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 700;
+
+  /* مهم: ما يمنعش الضغط على لينكات الـ nav */
+  pointer-events: none;
+
+  /* حماية من التداخل لو الاسم طويل */
+  max-width: 46vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* نخلي اللينكات فوق الاسم (لأن الاسم absolute) */
+header .brand,
+header nav,
+header .lang{
+  position: relative;
+  z-index: 2;
+}
+
+/* موبايل/شاشات أصغر: نخلي الاسم طبيعي عشان ما يتزاحمش */
+@media (max-width: 900px){
+  header .brand-text{
+    position: static;
+    transform: none;
+    max-width: 100%;
+    pointer-events: auto;
+    white-space: normal;
+  }
+}
