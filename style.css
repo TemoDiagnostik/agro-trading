@@ -1869,3 +1869,11 @@ header .brand-text .brand-tagline{
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,.12);
 }
+
+
+/* Mobile only: shrink EU flag */
+@media (max-width: 768px){
+  .eu-flag-inline img{
+    width: 150px;   /* غيّر الرقم براحتك: 120–160 مناسب */
+  }
+}
