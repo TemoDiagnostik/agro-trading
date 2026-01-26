@@ -752,7 +752,12 @@
   <span style="font-size:0.8rem; color:#aaa;">
     Regulatory framework: Regulation (EU) 2019/1009 (EU fertilising products) and REACH/CLP where applicable.
   </span>
-</div><!-- i18n + utilities (scripts) -->
+</div>
+
+
+
+
+		<!-- i18n + utilities (scripts) -->
 		<script type="module">
 			// قائمة اللغات المدعومة
 			const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
@@ -798,113 +803,72 @@
 				const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "sieving-analysis.csv"; document.body.appendChild(a); a.click(); a.remove();
 			};
 
-  // تشغيل أول مرة
-  const startLang = detectLang();
-  setLang(startLang);
 
-  // تغيير اللغة من القائمة بدون Reload
-  document.addEventListener('change', async (e)=>{
-    const sel = document.getElementById('langSelect');
-    if (!sel) return;
-    if (e.target !== sel) return;
+			
+			// إرسال عبر mailto
+			window.sendMailto = function(form){
+				const data = new FormData(form); const to = "info@euroagritrading.eu"; const subject = encodeURIComponent("RFQ - Euro Agri Trading (info@euroagritrading.eu)");
+				const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`);
+				location.href = `mailto:${to}?subject=${subject}&body=${body}`; return false;
+			};
+			// تمرير سلس للروابط الداخلية
+			document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener("click", e=>{ const id = a.getAttribute("href").slice(1); const el = document.getElementById(id); if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); } }); });
+			// mobile menu hooks (إن وُجدت الماركب)
+			document.addEventListener("DOMContentLoaded", ()=>{ const menuToggle = document.querySelector(".menu-toggle"); const mainNav = document.querySelector(".main-nav"); if (menuToggle && mainNav) { menuToggle.addEventListener("click", ()=> mainNav.classList.toggle("active")); } });
+		</script>
+		<script>
+			// تبديل صنف عند التمرير (للهيدر الظل/التأثير)
+			window.addEventListener("scroll", () => { document.body.classList.toggle("scrolled", window.scrollY > 80); });
+		</script>
 
-    const lang = sel.value;
-    const u = new URL(location.href);
-    u.searchParams.set('lang', lang);
-    history.replaceState({}, '', u.toString());
-    await setLang(lang);
-  });
 
-  // CSV export helper
-  window.exportSievingCSV = function(){
-    const table = document.querySelector("#sieving");
-    if (!table) return;
+		<script>
+  document.getElementById('langSelect').addEventListener('change', function() {
+    const selectedLang = this.value;
+    const url = new URL(window.location.href);
 
-    const rows = [...table.querySelectorAll("tr")].map(tr =>
-      [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
-    );
+    // غيّر أو أضف ?lang=... حسب اللغة المختارة
+    url.searchParams.set('lang', selectedLang);
 
-    const csv = rows.join("\n");
-    const blob = new Blob([csv], { type:"text/csv;charset=utf-8" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "sieving-analysis.csv";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  };
-
-  // إرسال عبر mailto
-  window.sendMailto = function(form){
-    const data = new FormData(form);
-    const to = "info@euroagritrading.eu";
-    const subject = encodeURIComponent("RFQ - Euro Agri Trading");
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`
-    );
-    location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    return false;
-  };
-
-  // تمرير سلس للروابط الداخلية
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener("click", e=>{
-      const id = a.getAttribute("href").slice(1);
-      const el = document.getElementById(id);
-      if(el){
-        e.preventDefault();
-        el.scrollIntoView({ behavior:"smooth", block:"start" });
-      }
-    });
-  });
-
-  // mobile menu hooks (إن وُجدت الماركب)
-  document.addEventListener("DOMContentLoaded", ()=>{
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
-    if (menuToggle && mainNav){
-      menuToggle.addEventListener("click", ()=> mainNav.classList.toggle("active"));
-    }
+    // إعادة التوجيه للصفحة باللغة المختارة
+    window.location.href = url.toString();
   });
 </script>
 
-<script>
-  // تبديل صنف عند التمرير (للهيدر الظل/التأثير)
-  window.addEventListener("scroll", () => {
-    document.body.classList.toggle("scrolled", window.scrollY > 80);
-  });
-</script>
-
-<!-- JSON-LD (محفوظ كما هو لكن مصحح) -->
-<script type="application/ld+json">
+		
+		<!-- JSON-LD (محفوظ كما هو) -->
+		<script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Euro Agri Trading s.r.o.",
-  "url": "https://euroagritrading.eu",
-  "email": "info@euroagritrading.eu",
-  "telephone": "+420 732 133 919",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Malenovice č.ev. 48",
-    "addressLocality": "Frýdlant nad Ostravicí",
-    "postalCode": "739 11",
-    "addressCountry": "CZ"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "email": "info@euroagritrading.eu",
-    "telephone": "+420 732 133 919",
-    "areaServed": "EU"
-  },
-  "identifier": [
-    { "@type":"PropertyValue", "name":"IČO", "value":"17314780" },
-    { "@type":"PropertyValue", "name":"DIČ", "value":"CZ8005062648" }
-  ],
-  "sameAs": []
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Euro Agri Trading s.r.o.",
+	"url": "https://info@euroagritrading.eu",
+	"email": "info@euroagritrading.eu",
+	"telephone": "+420 732 133 919",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Malenovice č.ev. 48",
+		"addressLocality": "Frýdlant nad Ostravicí",
+		"postalCode": "739 11",
+		"addressCountry": "CZ"
+	},
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"contactType": "sales",
+		"email": "info@euroagritrading.eu",
+		"telephone": "+420 732 133 919",
+		"areaServed": "EU"
+	},
+	"identifier": [
+		{"@type":"PropertyValue","name":"IČO","value":"17314780"},
+		{"@type":"PropertyValue","name":"DIČ","value":"CZ0000000"}
+	],
+	"additionalProperty": [
+		{"@type":"PropertyValue","name":"Bank IBAN","value":"CZ00 0000 0000 0000 0000 0000"},
+		{"@type":"PropertyValue","name":"SWIFT","value":"XXXXXXXX"}
+	],
+	"sameAs": []
 }
-</script>
-
-</body>
+		</script>
+	</body>
 </html>
