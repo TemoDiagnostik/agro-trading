@@ -1663,6 +1663,10 @@ header .lang select{
   font-weight: 600 !important;
 }
 
+header .brand{ margin-top: -9px !important; }
+}
+
+
 
 @media (max-width: 820px){
   header .brand{ margin-top: -6px !important; }
