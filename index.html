@@ -577,23 +577,46 @@
         </div>
       </div>
 
-      <!-- ✅ البطاقة 6 — Low-Cadmium -->
-      <div class="card">
-        <img src="soon-placeholder.png"
-             alt="Low-Cadmium Rock Phosphate (31–32% P₂O₅) — Coming soon"
-             data-i18n-alt="lowcad.imgAlt">
+     <!-- ✅ البطاقة 6 — Low-Cadmium (31–32%) -->
+<div class="card">
+  <!-- ✅ صورة العينة (Marketing Sample) -->
+  <img src="soon-placeholder.png"
+       alt="Low-Cadmium Rock Phosphate (31–32% P₂O₅) — Marketing sample"
+       data-i18n-alt="lowcad.imgAlt">
 
-        <h3 data-i18n="lowcad.title">Low-Cadmium Rock Phosphate (31–32% P₂O₅)</h3>
+  <h3 data-i18n="lowcad.title">Low-Cadmium Rock Phosphate (31–32% P₂O₅)</h3>
 
-        <p class="muted" data-i18n="lowcad.sub">
-          Independent third-party inspection can be arranged per shipment (as agreed). Shipment-specific reports are available upon request.
-        </p>
+  <!-- ✅ Badges بدل أزرار معطلة -->
+  <div class="tag-row" style="justify-content:center; margin-top:10px;">
+    <span class="tag" data-i18n="lowcad.tag1">Coming soon / upon request (subject to customization)</span>
+    <span class="tag" data-i18n="lowcad.tag2">Shipment-specific COA required</span>
+  </div>
 
-        <div class="cta">
-          <button class="btn btn-outline" disabled data-i18n="cert.view">View Sample</button>
-          <button class="btn btn-primary" disabled data-i18n="cert.soon">Coming Soon</button>
-        </div>
-      </div>
+  <!-- ✅ نص واضح (مش مخيف) + مطابق لشرطك -->
+  <p class="muted" data-i18n="lowcad.sub">
+    Marketed only after receiving shipment-specific third-party COA/inspection (SGS / Intertek / BV)
+    confirming Cd (reported in ppm/mg/kg) & heavy metals for the actual lot. Availability of 31–32% is
+    subject to customization and shipment-specific COA.
+  </p>
+
+  <div class="cta">
+    <!-- ✅ يذهب للفورم مباشرة وليس معلوماتك -->
+    <a href="#contactFormBox"
+       class="btn btn-primary"
+       data-i18n="lowcad.cta.avail">
+      Ask for availability (RFQ)
+    </a>
+
+    <!-- ✅ فتح صورة العينة (بدّل الرابط لو عندك ملف sample آخر) -->
+    <a href="soon-placeholder.png"
+       class="btn btn-outline"
+       target="_blank"
+       rel="noopener"
+       data-i18n="lowcad.cta.sample">
+      View Sample (Marketing)
+    </a>
+  </div>
+</div>
 
     </div>
   </div>
