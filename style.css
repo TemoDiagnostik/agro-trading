@@ -57,6 +57,112 @@ html {
  margin: 0 auto;
 }
 
+/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
+header {
+ position: relative !important;   /* ??? ???? */
+ width: 100%;
+ background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
+ backdrop-filter: blur(6px); /* ???? ???? */
+ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+ height: auto;
+ z-index: 100;
+ transition: all 0.3s ease;
+}
+
+/* ????? ?????? ????? */
+header .container.nav {
+ height: 70px !important;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 20px;
+}
+
+/* ?????? */
+header .logo-img {
+ max-height: 90px !important;
+ height: auto;
+}
+
+/* ?? ?????? */
+header .brand-text {
+ font-weight: 700;
+ font-size: 1.1rem;
+ color: #0a662f !important; /* ???? ???? */
+ margin-left: 10px;
+ text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+
+header nav ul {
+ display: flex;
+ gap: 1rem;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+header nav ul li a {
+ font-size: 0.82rem;
+ font-weight: 500;
+ color: #000;
+ text-decoration: none;
+ }
+/* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
+header nav ul li a {
+ position: relative;
+ padding-bottom: 4px; /* ????? ????? ??? ???? ????? */
+ border-bottom: 2px solid #0a662f; /* ? ???? ?????? ?????? */
+ transition: all 0.3s ease;
+}
+
+/* ??? ?????? ????? ????? */
+header nav ul li a:hover {
+ color: #0a662f !important; /* ? ???? ???? ???? */
+ border-bottom-color: #0d9488 !important; /* ? ???? ???? ?????? */
+}
+
+
+header nav ul li a:hover {
+ color: #0a662f !important; /* ???? ??? ?????? */
+}
+
+/* ✅ إطار أخضر ثابت لزر اللغة */
+header .lang select {
+  border: 2px solid #0a662f !important;  /* أخضر ثابت */
+  border-radius: 6px !important;         /* زوايا ناعمة */
+  padding: 4px 8px !important;           /* مسافة داخلية مريحة */
+  background-color: #ffffff !important;  /* خلفية بيضاء ثابتة */
+}
+
+
+/* ????? ??????? ????????? */
+header .lang span {
+ font-size: 1rem;
+ line-height: 1;
+}
+
+
+
+.navbar {
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
 
 
 
@@ -1580,7 +1686,7 @@ header .navbar-nav{
   list-style: none !important;
 }
 header nav ul li a{
-  font-size: 0.82rem !important;
+  font-size: 0.90rem !important;
   white-space: nowrap !important;
 }
 
