@@ -865,9 +865,7 @@ form label {
 }
 
 
-  header {
-    padding-top: env(safe-area-inset-top); /* دعم لأجهزة iOS */
-  }
+  
 
  
   .hero-bleed,
