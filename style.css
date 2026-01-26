@@ -1803,3 +1803,45 @@ header .brand{ margin-top: -9px !important; }
 
 
 
+/* === Company name (brand-text) — professional look === */
+header .brand-text{
+  font-weight: 800 !important;
+  letter-spacing: 0.2px !important;
+  text-transform: none !important;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* يخلي الشكل أنظف بدون مزخرفة */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+
+
+/* === Company name (split) — pro corporate style === */
+header .brand-text{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header .brand-text .brand-name{
+  font-weight: 800 !important;
+  letter-spacing: 0.2px !important;
+}
+
+header .brand-text .brand-sep{
+  opacity: .55;
+  font-weight: 600 !important;
+}
+
+header .brand-text .brand-tagline{
+  font-weight: 600 !important;
+  letter-spacing: 0.6px !important;
+  opacity: .85;
+}
+
+
+
+
