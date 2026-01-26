@@ -38,6 +38,10 @@ html[lang="ar"] {
  --muted: #64748b;
  --radius: 14px;
  --ring: rgba(16,185,129, .35);
+ 
+ --cert-green: #0f6b4a;
+  --cert-green-dark: #0b5a3d;
+  --cert-gold: #c9a24a;
 }
 /* Smooth scrolling for anchor links */
 html {
@@ -909,47 +913,65 @@ form label {
 .form-section {
  margin-bottom: 40px;
 }
-/* ===== GLOBAL BUTTONS (FINAL CLEAN VERSION) ===== */
-.btn {
- display: inline-block;
- padding: 10px 16px;
- font-size: 14px;
- font-weight: 600;
- border-radius: 8px;
- text-align: center;
- white-space: nowrap;
- cursor: pointer;
- text-decoration: none;
- transition: all 0.3s ease;
- border: none;
- background: transparent;
-}
-/* ?? ????? (????) */
-.btn-primary {
- background-color: var(--brand);
- color: #ffffff ;
- border: 2px solid var(--brand);
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-}
-.btn-primary:hover {
- background-color: var(--brand-ink);
- border-color: var(--brand-ink);
- transform: translateY(-1px);
-}
-.btn-outline {
- background-color: #15803d ; /* ???? ????? */
- border: 2px solid #15803d ; /* ??? ????? */
- color: #ffffff ; /* ?? ???? */
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
- transition: all 0.3s ease;
-}
-.btn-outline:hover {
- background-color: #065f46 ; /* ?????? ?????? ??? ??????? */
- border-color: #065f46 ;
- transform: translateY(-1px);
-}
 
 
+
+/* ===== CERTIFICATE THEME BUTTONS (GREEN + GOLD) ===== */
+
+/* زر عام */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:700;
+  border-radius:8px;
+  text-align:center;
+  white-space:nowrap;
+  cursor:pointer;
+  text-decoration:none;
+  transition:all .25s ease;
+  background:transparent;
+  border:2px solid transparent; /* مهم علشان الحدود تظهر صح */
+}
+
+/* PRIMARY = أخضر غامق + حد ذهبي */
+.btn-primary{
+  background-color: var(--cert-green);
+  color:#fff;
+  border-color: var(--cert-gold);
+  box-shadow: 0 4px 10px rgba(0,0,0,.14);
+}
+.btn-primary:hover{
+  background-color: var(--cert-green-dark);
+  border-color: var(--cert-gold);
+  transform: translateY(-1px);
+}
+
+/* OUTLINE = (اختيار 1) شفاف + حد ذهبي + نص أخضر */
+.btn-outline{
+  background-color: transparent;
+  color: var(--cert-green-dark);
+  border-color: var(--cert-gold);
+  box-shadow: none;
+}
+.btn-outline:hover{
+  background-color: rgba(15,107,74,.08);
+  transform: translateY(-1px);
+}
+
+/* لو تريد الـ Outline يكون "ممتلئ أخضر" مثل باقي الأزرار، فعّل هذا بدل البلوك أعلاه:
+.btn-outline{
+  background-color: var(--cert-green-dark);
+  color:#fff;
+  border-color: var(--cert-gold);
+  box-shadow: 0 4px 10px rgba(0,0,0,.14);
+}
+.btn-outline:hover{
+  background-color: #094a33;
+  border-color: var(--cert-gold);
+  transform: translateY(-1px);
+}
+*/
 /* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
 header {
  position: relative !important;   /* ??? ???? */
