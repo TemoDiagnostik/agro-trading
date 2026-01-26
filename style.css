@@ -59,114 +59,6 @@ html {
 
 
 
-/* ===== TRANSPARENT SLIM HEADER (FINAL VERSION) ===== */
-header {
- position: relative !important;   /* ??? ???? */
- width: 100%;
- background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
- backdrop-filter: blur(6px); /* ???? ???? */
- box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
- height: auto;
- z-index: 100;
- transition: all 0.3s ease;
-}
-
-/* ????? ?????? ????? */
-header .container.nav {
- height: 70px !important;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 0 20px;
-}
-
-/* ?????? */
-header .logo-img {
- max-height: 90px !important;
- height: auto;
-}
-
-/* ?? ?????? */
-header .brand-text {
- font-weight: 700;
- font-size: 1.1rem;
- color: #0a662f !important; /* ???? ???? */
- margin-left: 10px;
- text-shadow: 0 1px 1px rgba(255,255,255,0.3);
-}
-
-header nav ul {
- display: flex;
- gap: 1rem;
- list-style: none;
- margin: 0;
- padding: 0;
-}
-
-header nav ul li a {
- font-size: 0.82rem;
- font-weight: 500;
- color: #000;
- text-decoration: none;
- }
-/* ===== GREEN UNDERLINE FOR NAV LINKS ===== */
-header nav ul li a {
- position: relative;
- padding-bottom: 4px; /* ????? ????? ??? ???? ????? */
- border-bottom: 2px solid #0a662f; /* ? ???? ?????? ?????? */
- transition: all 0.3s ease;
-}
-
-/* ??? ?????? ????? ????? */
-header nav ul li a:hover {
- color: #0a662f !important; /* ? ???? ???? ???? */
- border-bottom-color: #0d9488 !important; /* ? ???? ???? ?????? */
-}
-
-
-header nav ul li a:hover {
- color: #0a662f !important; /* ???? ??? ?????? */
-}
-
-/* ✅ إطار أخضر ثابت لزر اللغة */
-header .lang select {
-  border: 2px solid #0a662f !important;  /* أخضر ثابت */
-  border-radius: 6px !important;         /* زوايا ناعمة */
-  padding: 4px 8px !important;           /* مسافة داخلية مريحة */
-  background-color: #ffffff !important;  /* خلفية بيضاء ثابتة */
-}
-
-
-/* ????? ??????? ????????? */
-header .lang span {
- font-size: 1rem;
- line-height: 1;
-}
-
-
-
-.navbar {
-  background: #f5f5f5;
-  padding: 0.5rem 1rem;
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-
-
 
 
 
@@ -972,170 +864,12 @@ form label {
   box-shadow:none;
 }
 
-header {
- position: relative !important;   /* ??? ???? */
- width: 100%;
- background: rgba(255, 255, 255, 0.05) !important; /* ???? ????? */
- backdrop-filter: blur(6px); /* ???? ???? */
- box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
- height: auto;
- z-index: 100;
- transition: all 0.3s ease;
-}
-
-/* ????? ?????? ????? */
-header .container.nav {
- height: 70px !important;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 0 20px;
-}
-
-/* ?????? */
-header .logo-img {
- max-height: 85px !important;
- height: auto;
-}
-
-/* ?? ?????? */
-header .brand-text {
- font-weight: 700;
- font-size: 1.1rem;
- color: #0a662f !important; /* ???? ???? */
- margin-left: 10px;
- text-shadow: 0 1px 1px rgba(255,255,255,0.3);
-}
-
-/* ????? ??????? */
-header nav ul {
- display: flex;
- gap: 1rem;
- list-style: none;
- margin: 0;
- padding: 0;
-}
-
-header nav ul li a {
- color: #000000 !important;    /* ???? ???? */
- font-size: 0.8rem !important; /* ???? ?????? */
- font-weight: 500;
- text-decoration: none;
- transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
- color: #0a662f !important; /* ???? ??? ?????? */
-}
-
-/* ?? ????? */
-header .lang select {
- background: rgba(255,255,255,0.15);
- border: 1px solid rgba(255,255,255,0.2);
- border-radius: 6px;
- color: #0a662f;
- padding: 4px 8px;
- font-size: 0.85rem;
-}
-/* ????? ????? */
-@media (max-width: 768px) {
- header .container.nav {
-   height: 64px !important;
-   flex-wrap: wrap;
-   justify-content: center;
- }
-
-@media (max-width: 768px) {
-  header .container.nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
-    padding: 12px 16px !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    height: auto !important;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 999;
-  }
-
-  header .logo-img {
-    max-height: 64px !important;
-    height: auto !important;
-  }
-
-  header .brand-text {
-    font-size: 0.9rem !important;
-    margin: 0 !important;
-    text-align: center !important;
-    line-height: 1.4 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-  }
-
-  header nav {
-    width: 100% !important;
-    margin-top: 8px;
-  }
-
-  header nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 10px !important;
-  }
-
-  header nav ul li a {
-    font-size: 0.85rem !important;
-    white-space: nowrap !important;
-    padding-bottom: 3px !important;
-    border-bottom: 2px solid #0a662f !important;
-    color: #0a662f !important;
-    text-decoration: none !important;
-  }
-
-  header .lang {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin-top: 8px !important;
-  }
-
-  header .lang select {
-    background: rgba(255, 255, 255, 0.85) !important;
-    border: 1px solid rgba(0, 0, 0, 0.15) !important;
-    border-radius: 6px !important;
-    color: #0a662f !important;
-    padding: 4px 8px !important;
-    font-size: 0.85rem !important;
-  }
-}
-/* ===================================== */
-/* 🔄 Landscape View on Phones (e.g. Pro Max) */
-/* ===================================== */
-@media (max-width: 930px) and (orientation: landscape) and (max-height: 500px) {
-  header .container.nav {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    height: auto !important; /* خليه auto عشان يتوسع حسب المحتوى */
-    min-height: 64px;         /* ضمان الحد الأدنى للارتفاع */
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 8px 16px !important;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    position: relative;
-    z-index: 999;
-  }
 
   header {
     padding-top: env(safe-area-inset-top); /* دعم لأجهزة iOS */
   }
 
+ 
   .hero-bleed,
   .hero-content {
     padding-top: 90px !important; /* المسافة من فوق عشان يبعد عن الهيدر */
@@ -1272,287 +1006,8 @@ header .lang select {
    0 2px 4px rgb(0 0 0),   /* ?? ???? ???? */
    0 0 3px rgb(21 22 21);     /* ???? ???? ??? ???? */
 }
-/* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
-header nav ul li a {
- position: relative;
- color: #000000 ;      /* ??? ???? */
- text-decoration: none ;
- font-weight: 500;
- padding-bottom: 4px ; /* ????? ??? ???? ????? */
- border-bottom: 2px solid #0a662f ; /* ???? ?????? */
-} /* ? ??? ??? ????? ??? */
-header nav ul li a:hover {
- border-bottom-color: #0d9488 ; /* ???? ?????? */
- color: #0a662f ;
-}
-/* ===== DESKTOP HEADER CLEAN LAYOUT (GRID) ===== */
-@media (min-width: 769px) {
- /* ?????? Grid: ???? | ????? | ?? ??? */
- header .container.nav {
-   display: grid ;
-   grid-template-columns: auto 1fr auto ;
-   align-items: center ;
-   gap: 10px ;
-   height: 70px ;
-   padding: 0 20px ;
-   box-sizing: border-box ;
- }
- /* ????? ??????? */
- header nav { justify-self: center ; }
- html:not([dir="rtl"]) header .lang { justify-self: end ; }
- html[dir="rtl"]        header .lang { justify-self: start ; }
-}
-/* ===== PERMANENT UNDERLINE FOR NAV LINKS (ALL DEVICES) ===== */
-header nav ul {
- display: flex;
- gap: 1rem;
- list-style: none;
- margin: 0;
- padding: 0;
-}
-header nav ul li a {
- position: relative;
- color: #000000 ;
- text-decoration: none ;
- font-weight: 500;
- padding-bottom: 4px ;
- border-bottom: 2px solid #0a662f ;
-header nav ul li a:hover {
- border-bottom-color: #0d9488 ;
- color: #0a662f ;
-}
-
-
-@media (max-width: 768px) {
-  header .container.nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
-    padding: 12px 16px !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    height: auto !important;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 999;
-  }
-
-  header .logo-img {
-    max-height: 64px !important;
-    height: auto !important;
-  }
-
-  header .brand-text {
-    font-size: 0.9rem !important;
-    margin: 0 !important;
-    text-align: center !important;
-    line-height: 1.4 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-  }
-
-  header nav {
-    width: 100% !important;
-    margin-top: 8px;
-  }
-
-  header nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 10px !important;
-  }
-
-  header nav ul li a {
-    font-size: 0.85rem !important;
-    white-space: nowrap !important;
-    padding-bottom: 3px !important;
-    border-bottom: 2px solid #0a662f !important;
-    color: #0a662f !important;
-    text-decoration: none !important;
-  }
-
-  header .lang {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin-top: 8px !important;
-  }
-
-  header .lang select {
-    background: rgba(255, 255, 255, 0.85) !important;
-    border: 1px solid rgba(0, 0, 0, 0.15) !important;
-    border-radius: 6px !important;
-    color: #0a662f !important;
-    padding: 4px 8px !important;
-    font-size: 0.85rem !important;
-  }
-}
  
-/* === FIX: Separate language selector column (for all languages) === */
-@media (min-width: 769px) {
- header .container.nav {
-   display: grid ;
-   grid-template-columns: auto 1fr auto ;
-   align-items: center ;
- }
- /* ???? ?? ??????? ???? ?? ??????? */
- header nav {
-   justify-self: center ;
- }
- /* ?? ????? ???? ?? ???? ?????? */
- header .lang {
-   justify-self: end ;
-   position: relative ;
-   right: 0 ;
-   left: auto ;
-   margin-left: 20px ;
-   display: flex ;
-   align-items: center ;
-   gap: 6px ;
- }
 
-
-
-
-
-
-
-/* ✅ اجعل الهيدر دائمًا LTR مهما كانت اللغة */
-header .container.nav {
-  direction: ltr !important;
-  text-align: left !important;
-  flex-direction: row !important;
-}
-
-/* ✅ تأكيد على ترتيب زر اللغة دائمًا */
-header .lang {
-  direction: ltr !important;
-  flex-direction: row !important;
-}
-
-/* ✅ حتى في RTL على الموبايل */
-@media (max-width: 768px) {
-  html[dir="rtl"] header .container.nav {
-    direction: ltr !important;
-    text-align: left !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  html[dir="rtl"] header .lang {
-    right: 16px !important;
-    left: auto !important;
-  }
-}
- 
-}}}}
-
-
-/* ===================================================
-   إصلاحات شريط الرأس (Header) — تنسيق ثابت ولغات متعددة
-   =================================================== */
-
-/* شكل البار القديم (نحيف) ومسافات متوازنة */
-header .container.nav {
-  height: 68px !important;              /* ارتفاع البار القديم */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row !important;       /* ثابت دائماً - لا ينعكس */
-  padding: 0 22px !important;           /* توازن جانبي */
-  gap: 18px !important;                 /* مسافات بين العناصر */
-}
-
-/* زر اللغة والأيقونة */
-header .lang {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
-/* فصل الروابط والكلمات ومنع الالتصاق والانكسار */
-header nav a,
-header nav span,
-header nav button {
-  margin: 0 6px !important;
-  white-space: nowrap;
-}
-
-
-
-html[dir="rtl"] header .lang {
-  right: -15px !important;
-  left: auto !important;
-}
-
-/* ✅ Fix: Keep header LTR on all devices, even RTL languages */
-header .container.nav {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-
-
-
-/* === ✅ Fix: Position Language Selector in Mobile View === */
-@media (max-width: 768px) {
-  header .lang {
-    position: absolute !important;
-    top: 10px !important;
-    right: 16px !important;
-    width: auto !important;
-    margin: 0 !important;
-    z-index: 999 !important;
-  }
-}
-
-/* ✅ RTL Fix for Arabic and similar */
-@media (max-width: 768px) {
-  html[dir="rtl"] header .lang {
-    right: auto !important;
-    left: 16px !important;
-  }
-}
-
-
-
-@media (max-width: 768px) {
-  header .container.nav {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    gap: 4px !important;
-    min-height: 48px !important;
-  }
-
-  header .logo-img {
-    max-height: 64px !important;
-    height: 64px !important;
-    margin-top: -10px !important;
-    margin-bottom: -6px !important;
-  }
-
-  header .brand-text {
-    font-size: 0.85rem !important;
-    line-height: 1.1 !important;
-    margin: 0 !important;
-    max-width: 100%;
-    text-align: center !important;
-  }
-
-  header .lang {
-    margin-top: 2px !important;
-  }
-}
 
 
 
@@ -2055,64 +1510,108 @@ header .container.nav {
 
 
 /* =========================
-   HEADER LAYOUT (Logo left / Title center / Lang right)
+   HEADER — FINAL (ONE SOURCE OF TRUTH)
+   Logo left | Title center | Nav + Lang right
    ========================= */
 
-/* رأيي الأفضل: أبيض شبه شفاف (احترافي + مقروء فوق أي خلفية) */
 header{
-  background: rgba(255,255,255,.92);
+  position: relative !important;   /* لا تغيّر الثبات */
+  width: 100%;
+  background: rgba(255,255,255,.92);  /* أفضل من الشفاف: مقروء فوق أي خلفية */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  z-index: 100;
 }
 
-/* توزيع العناصر داخل الهيدر بدون تغيير الحجم */
+/* البار نفس الارتفاع */
 header .container.nav{
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 0 20px !important;
+  box-sizing: border-box;
+  direction: ltr !important; /* ثابت */
 }
 
-/* اللوجو أقصى اليسار */
+/* Logo أقصى الشمال */
 header .brand{
   display: flex;
   align-items: center;
   flex: 0 0 auto;
 }
-
-/* الـ nav واللغات يروحوا يمين */
-header nav{
-  margin-left: auto;
-  flex: 0 0 auto;
+header .logo-img{
+  max-height: 70px !important; /* لا تكبره عشان ما يزحم */
+  height: auto;
 }
 
-header .lang{
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 0 0 auto;
-}
-
-/* اسم الشركة في المنتصف بالضبط */
+/* اسم الشركة في المنتصف (بدون ما يمنع الضغط على الروابط) */
 header .brand-text{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   font-weight: 700;
-
-  /* مهم: ما يمنعش الضغط على لينكات الـ nav */
+  font-size: 1.05rem;
+  color: #0a662f !important;
+  text-shadow: 0 1px 1px rgba(255,255,255,.3);
   pointer-events: none;
 
-  /* حماية من التداخل لو الاسم طويل */
-  max-width: 46vw;
+  /* منع التداخل */
+  max-width: 44vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* نخلي اللينكات فوق الاسم (لأن الاسم absolute) */
+/* Nav + Lang يمين */
+header nav{
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+header nav ul{
+  display: flex;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* روابط nav (خط سفلي ذهبي/أخضر ثابت) */
+header nav ul li a{
+  font-size: .85rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #0a662f;
+  white-space: nowrap;
+  transition: .25s ease;
+}
+header nav ul li a:hover{
+  color: #0a662f;
+  border-bottom-color: #d4af37; /* ذهبي */
+}
+
+/* اللغة أقصى اليمين */
+header .lang{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+header .lang select{
+  border: 2px solid #0a662f !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+  background: #fff !important;
+  color: #0a662f !important;
+  font-weight: 600;
+}
+
+/* مهم: خلى العناصر فوق الاسم */
 header .brand,
 header nav,
 header .lang{
@@ -2120,13 +1619,41 @@ header .lang{
   z-index: 2;
 }
 
-/* موبايل/شاشات أصغر: نخلي الاسم طبيعي عشان ما يتزاحمش */
+/* شاشات أصغر: الاسم يبقى سطر طبيعي + nav يلف */
 @media (max-width: 900px){
+  header .container.nav{
+    height: auto !important;
+    padding: 10px 16px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
   header .brand-text{
     position: static;
     transform: none;
     max-width: 100%;
     pointer-events: auto;
     white-space: normal;
+    text-align: center;
+    order: 2;
+  }
+
+  header nav{
+    order: 3;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header .lang{
+    order: 1;
+    margin-left: auto;
   }
 }
