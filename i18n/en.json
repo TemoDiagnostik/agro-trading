@@ -86,7 +86,7 @@
 "log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
 "log.incoterms": "Available shipping terms include EX-WORK, FOB, CFR, CIF, and DDP. Final terms are confirmed in the contract. Shipment updates are shared via email after booking confirmation.",
 "log.ports": "Ports: Egypt (multiple ports subject to schedule)",
-"log.ports.tag": "Ports: Alexandria / Damietta / Safaga",
+"log.ports.tag": "Ports: Alexandria / Damietta / Safaga / Ain Sokhna",
 "log.ports.h": "Ports & Packing",
 "log.ports.p": "Shipping: Bulk vessel or 20’ containers. Packing options: Bulk with liner or Jumbo bags (upon request).",
 "log.compliance.h": "EU Compliance",
