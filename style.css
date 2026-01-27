@@ -861,6 +861,25 @@ form label {
   color: #666;
 }
 
+/* ===== 💳 Payment list cleanup ===== */
+.payment-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 12px auto 0;
+  max-width: 820px;
+  text-align: left;
+}
+.payment-list li{
+  position: relative;
+  padding-left: 18px;
+  margin: 8px 0;
+}
+.payment-list li::before{
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 /* ===== NOTES & MUTED FIX ===== */
 .note {
  font-size: 0.85rem;
