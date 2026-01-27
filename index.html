@@ -623,10 +623,38 @@
 		<!-- 💳 قسم ملاحظات الدفع (Payment Note) -->
 <section id="payment-note" class="payment-section">
   <div class="container">
+
+    <h3 class="payment-title" data-i18n="payment.title">Payments / Proforma</h3>
+
     <p class="muted payment-text" data-i18n="footer.payment">
       All payments and trade settlements are handled directly between the buyer and the certified supplier.
       Euro Agri Trading s.r.o acts solely as an independent intermediary ensuring transparency and coordination.
     </p>
+
+    <ul class="payment-list">
+      <li data-i18n="payment.opt.lcSight">LC at sight (100%) — Preferred</li>
+      <li data-i18n="payment.opt.lcUsance">Usance / Deferred LC (subject to approval)</li>
+      <li data-i18n="payment.opt.collection">Documentary Collection (CAD / D/P or D/A) — for qualified repeat buyers</li>
+      <li data-i18n="payment.opt.advance">Advance Payment (partial) — case-by-case</li>
+      <li data-i18n="payment.opt.openAccount">Open Account — only for established partners / credit-insured</li>
+      <li data-i18n="payment.opt.sblc">SBLC / Bank Guarantee — as agreed (if required)</li>
+    </ul>
+
+    <!-- ✅ سطر حماية مهم: يوضح أن طريقة الدفع تُتفق حسب الصفقة -->
+    <p class="muted payment-disclaimer" data-i18n="payment.disclaimer">
+      Final payment method is agreed case-by-case based on compliance, counterparty verification, and transaction structure.
+    </p>
+
+    <p class="muted payment-note" data-i18n="payment.note">
+      Bank details are provided in the Proforma Invoice (PI) upon request.
+    </p>
+
+    <div class="cta">
+      <a href="#contact" class="btn btn-primary" data-i18n="payment.btn.request">
+        Request Proforma / Payment Details
+      </a>
+    </div>
+
   </div>
 </section>
 		
