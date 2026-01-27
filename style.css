@@ -1376,6 +1376,16 @@ form label {
   line-height: 1.55;
 }
 
+#how-we-work .how-subtitle{
+  margin: 14px 0 6px;
+  font-size: 1rem;
+}
+
+#how-we-work .how-conf{
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* Mobile */
 @media (max-width: 768px){
   #how-we-work{
