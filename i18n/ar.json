@@ -85,7 +85,7 @@
 
   "log.title": "اللوجستيات والامتثال",
 "log.bulk": "شحن سائب (Bulk) وأكياس جامبو (Jumbo Bags)",
-"log.incotermTag": "EX-WORK / FOB / CFR / CIF / DDP",
+"log.incotermTag": "EXW / FOB / CFR / CIF / DDP",
 "log.incoterms": "تشمل شروط الشحن المتاحة: EX-WORK وFOB وCFR وCIF وDDP. يتم تأكيد الشروط النهائية ضمن العقد. يتم إرسال تحديثات الشحنة عبر البريد الإلكتروني بعد تأكيد الحجز.",
 "log.ports": "الموانئ: مصر (عدة موانئ حسب الجدول)",
 "log.ports.tag": "الموانئ: الإسكندرية / دمياط / سفاجا / العين السخنة",
