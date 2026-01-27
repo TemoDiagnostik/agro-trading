@@ -107,7 +107,8 @@
   "how.p5": "Käuferdokumente: vollständige Originale und sendungsspezifische Zertifikate werden verifizierten Käufern auf Anfrage bereitgestellt",
   "how.noteTitle": "Wichtiger Hinweis",
   "how.noteText": "Euro Agri Trading s.r.o. ist keine Vertragspartei des Kaufvertrags zwischen Verkäufer und Käufer. Kaufvertrag, Lieferbedingungen und Leistungspflichten werden direkt zwischen Verkäufer und Käufer vereinbart, gestützt durch LC-Bedingungen und Drittinspektion.",
-
+"how.conf.title": "Vertraulichkeit & Brokerage Mandat",
+"how.conf.text": "Wir halten bei der Einführung von Parteien eine professionelle Vertraulichkeit ein. Kontaktdaten der Gegenpartei werden nur nach Eingang einer seriösen Anfrage (RFQ/LOI) geteilt, und wir bestätigen das Brokerage-Mandat schriftlich (Brokerage Mandate/Agreement), um Rollenklärung, Transparenz und Schutz für alle Parteien sicherzustellen. Folgegeschäfte mit eingeführten Parteien bleiben innerhalb der vereinbarten Schutzfrist abgedeckt.",
 
   "compliance.title": "Konformität & Verifizierung",
   "compliance.lead": "Gezeigte Spezifikationen dienen als Marketingrichtwert. Endgültige Werte werden chargenweise durch COA/SGS bestätigt.",
