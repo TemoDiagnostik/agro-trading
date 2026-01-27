@@ -737,10 +737,14 @@ header .lang span {
  font-size: 0.9rem;
  text-align: center;
 }
+
+
 /* ===== SCROLL OFFSET ===== */
 section, [id] {
  scroll-margin-top: 110px;
 }
+
+
 /* ===== CONTACT SECTION ===== */
 #contact {
  padding: 60px 0;
@@ -804,6 +808,8 @@ form label {
  gap: 12px;
 }
 
+
+
 /* ===== 💳 Payment Section ===== */
 .payment-section {
   background: rgba(255, 255, 255, 0.05);
@@ -819,7 +825,42 @@ form label {
   font-size: 15px;
   line-height: 1.6;
 }
-/
+
+/* ===== 💳 Payment Section (enhancements) ===== */
+.payment-title{
+  margin: 0 0 10px 0;
+}
+
+.payment-options{
+  max-width: 900px;
+  margin: 14px auto 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* consistent with section centering */
+  gap: 10px;
+}
+
+.payment-chip{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #444;
+  background: rgba(255,255,255,0.55);
+}
+
+.payment-disclaimer,
+.payment-note{
+  max-width: 900px;
+  margin: 8px auto 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+}
+
 /* ===== NOTES & MUTED FIX ===== */
 .note {
  font-size: 0.85rem;
