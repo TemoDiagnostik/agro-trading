@@ -13,7 +13,7 @@
   gtag('config', 'G-6XRD7YWF4S');
 </script>
 
-
+	
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -38,6 +38,7 @@
   
 
   <!-- Set early lang/dir (يبقى كما هو لتجنّب فليكر) -->
+    <!-- Set early lang/dir (يبقى كما هو لتجنّب فليكر) -->
     <script>
     (function () {
       const RTL = new Set(['ar']);
@@ -128,10 +129,11 @@
     </div>
 
     <!-- Company name -->
-    <span class="brand-text" data-i18n="site.name">
-      Euro Agri Trading s.r.o — Trusted Agro Broker
-      <span class="llc-hint" data-i18n="site.company.llc" style="display:none"></span>
-    </span>
+   <span class="brand-text"site.name">
+  <span class="brand-name">Euro Agri Trading s.r.o</span>
+  <span class="brand-sep"> — </span>
+  <span class="brand-tagline">Trusted Agro Broker</span>
+</span>
 
     <!-- Navigation -->
     <nav>
@@ -140,6 +142,7 @@
   <li><a href="#home" data-i18n="nav.home">Home</a></li>
   <li><a href="#products" data-i18n="nav.products">Products</a></li>
   <li><a href="#certificates" data-i18n="nav.coa">Specifications</a></li>
+ <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>		  
   <li><a href="#about" data-i18n="nav.about">About us</a></li>
   <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
 </ul>
@@ -175,6 +178,9 @@
   </div>
 </header>
 
+
+
+		
 <!-- 🌾 HERO SECTION — Professional Global Style -->
 <section id="home" class="hero-bleed">
   <div class="hero-media" aria-hidden="true"></div>
@@ -192,79 +198,127 @@
     </p>
 
     <!-- 📦 Product specs card -->
-    <div class="hero-specs-box">
-      <p>
-        <strong data-i18n="products.lead">
-          Featured Product — Rock Phosphate (P₂O₅: 20–28%)
-        </strong>
-      </p>
+<div class="hero-specs-box">
+  <p>
+    <strong data-i18n="products.lead">
+      Featured Product — Rock Phosphate (P₂O₅: 18–32%) <span style="font-weight:400;">(subject to availability & shipment-specific COA)</span>
+    </strong>
+  </p>
 
-     <ul>
-        <li data-i18n="hero.grade">
-          Reference grade: 26% P₂O₅
-        </li>
-        <li data-i18n="hero.comp">
-          Chemical composition: P₂O₅ 20–28%, SiO₂ ≈ 13.3%, F ≈ 2.6%
-        </li>
-        <li data-i18n="products.spec1">
-          Screened particle size — ideal for milling or direct soil application
-        </li>
-        <li data-i18n="products.spec2">
-          Official specification sheet provided; lab reports tailored on request
-        </li>
-      </ul>
+  <ul>
+    <li data-i18n="hero.grade">
+      Reference grade: 26% P₂O₅
+    </li>
 
-      <p class="trade-note" data-i18n="hero.tradeNote">
-        All transactions comply with Incoterms® 2020 and international trade regulations.
-      </p>
-    </div>
-	  <!-- 📦 فاصل سفلي على الموبايل -->
+    <li data-i18n="hero.comp">
+      Grade range: P₂O₅ 18–32% (subject to availability & shipment-specific COA). Key components available in COA (e.g., CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI).
+    </li>
+	  
+  <li data-i18n="hero.forms">Forms: Powder / Granular / Fine Powder</li>
+  <li data-i18n="hero.sizing">Sizing: Customized sizing upon request (sieving on request)</li>
+	<li data-i18n="hero.moisture">Moisture: typically max 3–5% (grade & season dependent)</li>
+  
+
+    <li data-i18n="products.spec1">
+      Screened particle size — ideal for milling or direct soil application
+    </li>
+    <li data-i18n="products.spec2">
+      Official specification sheet provided; lab reports tailored on request
+    </li>
+  </ul>
+
+  <p class="trade-note" data-i18n="hero.tradeNote">
+    All transactions comply with Incoterms®️ 2020 and international trade regulations.
+  </p>
+</div>
+
+
+   <!-- ✅ HERO: keep clean (CTA only). Specs box is handled later via CSS -->
+<div class="cta-row">
+  <a href="#certificates" class="btn btn-primary" data-i18n="nav.coa">Specifications</a>
+  <a href="#contact" class="btn btn-outline" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- 📦 فاصل سفلي على الموبايل -->
 <div class="mobile-bottom-spacer"></div>
-  </div>
+</div>
 </section>
-		
-		<!-- 🌍 قسم المنتجات (Global Products Section) -->
+
+<!-- 🌍 Global Products Section -->
 <section id="products">
   <div class="container">
     <h2 data-i18n="products.all">Available Products</h2>
-    
-    <div class="grid cols-2">
-      
+
+    <!-- ✅ 3 cards -->
+    <div class="grid cols-3">
+
       <!-- 🌐 Rock Phosphate -->
       <div class="card">
-        <h3 data-i18n="card.rock.title">Rock Phosphate — Grade 26%</h3>
+        <h3 data-i18n="card.rock.title">Rock Phosphate — Grades 18–32% P₂O₅</h3>
         <p class="muted" data-i18n="card.rock.text">
-          Secure and reliable supply chain through consolidated bulk shipments to European ports. Sourced directly from certified producers.
+          Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.
         </p>
+
+        <!-- ✅ Key Specs (compact) -->
+        <ul class="mini-specs">
+          <li data-i18n="card.rock.forms">Forms: Powder / Granular / Fine Powder</li>
+          <li data-i18n="card.rock.moisture">Moisture: typically max 3–5% (grade & season dependent)</li>
+          <li data-i18n="card.rock.coa">Shipment-specific COA/SGS provided per shipment</li>
+          <li data-i18n="card.rock.hm">Heavy metals (Cd, etc.) provided upon request in the shipment COA</li>
+        </ul>
+
         <div class="tag-row">
           <span class="tag" data-i18n="log.bulk">Bulk & Big-Bag</span>
-          <span class="tag" data-i18n="log.ports">Ports: Alexandria / Damietta</span>
-          <span class="tag" data-i18n="log.incotermTag">Incoterms: FOB / CFR / DDP</span>
+          <span class="tag" data-i18n="log.ports">Ports: Alexandria / Damietta / Safaga</span>
+          <span class="tag" data-i18n="log.incotermTag">EX-WORK / FOB / CFR / CIF / DDP</span>
         </div>
+
         <div class="cta">
-          <a class="btn btn-primary" href="#contact" data-i18n="card.rock.cta">Request Quote</a>
-          <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open COA</a>
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="card.rock.cta">Request a Quote</a>
+          <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open Spec</a>
+        </div>
+      </div>
+
+      <!-- 🌿 Low-Cadmium 31–32% (Coming Soon / Upon Request) -->
+      <div class="card">
+        <h3 data-i18n="card.lowcd.title">Low-Cadmium Rock Phosphate — 31–32% P₂O₅</h3>
+        <p class="muted" data-i18n="card.lowcd.text">
+          Available upon request. Marketed only after receiving shipment-specific COA showing Cd and heavy metals for the shipment lot.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag" data-i18n="card.lowcd.tag1">Coming soon / upon request</span>
+          <span class="tag" data-i18n="card.lowcd.tag2">Shipment-specific COA required</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="card.lowcd.cta">Request a Quote (RFQ)</a>
+          <a class="btn btn-outline" href="#contactFormBox" data-i18n="card.lowcd.cta2">Ask for availability</a>
         </div>
       </div>
 
       <!-- 🌐 Urea / NPK -->
       <div class="card">
-        <h3 data-i18n="card.urea.title">Urea / NPK (Available Upon Request)</h3>
+        <h3 data-i18n="card.urea.title">Urea / NPK (on request)</h3>
         <p class="muted" data-i18n="card.urea.text">
-          Additional fertilizers (Urea, MAP, DAP, NPK blends) can be supplied upon client specifications and regional requirements.
+          Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.
         </p>
+
         <div class="tag-row">
-          <span class="tag" data-i18n="generic.expand">Flexible export terms</span>
+          <span class="tag" data-i18n="generic.expand">Ready to expand</span>
         </div>
+
         <div class="cta">
-          <a class="btn btn-primary" href="#contact" data-i18n="card.urea.cta">Request Specification</a>
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="card.urea.cta">Ask about Urea</a>
+          <a class="btn btn-outline" href="#contactFormBox" data-i18n="card.urea.cta2">Request a Quote (RFQ)</a>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-	<!-- 🌟 قسم الخدمات (Services Section) -->
+		
+<!-- 🌟 قسم الخدمات (Services Section) -->
 <section id="services">
   <div class="container">
     <h2 data-i18n="services.title">Our Services</h2>
@@ -288,7 +342,7 @@
         <div class="service-text">
           <h3 data-i18n="services.quality">Quality Testing</h3>
           <p data-i18n="services.quality.text">
-            Certified analysis of soils and fertilizers to ensure compliance with the highest EU standards.
+            Independent testing can be arranged via SGS / Intertek / BV (upon request) to support compliance and quality assurance.
           </p>
         </div>
       </div>
@@ -299,7 +353,7 @@
         <div class="service-text">
           <h3 data-i18n="services.analysis">Laboratory Analysis</h3>
           <p data-i18n="services.analysis.text">
-            Advanced testing through specialized laboratories to verify shipments before export and delivery.
+            Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required.
           </p>
         </div>
       </div>
@@ -308,34 +362,53 @@
   </div>
 </section>
 		
-		<!-- 🚢 قسم اللوجستيات (Logistics & Compliance) -->
+	<!-- 🚢 Logistics & Compliance -->
 <section id="logistics">
   <div class="container">
     <h2 data-i18n="log.title">Logistics & Compliance</h2>
 
-    <div class="grid cols-3">
+    <!-- ✅ Compliance & Verification (Full width card) -->
+    <div class="card compliance-block">
 
-      <!-- ✅ Incoterms -->
+      <!-- ✅ Banner strip -->
+      <div class="compliance-banner">
+        <img src="compliance-banner.png" alt="Compliance & Verification">
+      </div>
+
+      <h3 data-i18n="compliance.title">Compliance & Verification</h3>
+      <p class="muted" data-i18n="compliance.lead">
+        Specifications shown are marketing guidance. Final values are confirmed by shipment-specific COA/SGS for each lot.
+      </p>
+
+      <ul class="mini-specs">
+        <li data-i18n="compliance.p1">Shipment-specific COA / SGS (or equivalent) available per shipment</li>
+        <li data-i18n="compliance.p2">Heavy metals (Cd, etc.) provided upon request in the shipment COA</li>
+        <li data-i18n="compliance.p3">Full original documents are shared with verified buyers only</li>
+        <li data-i18n="compliance.p4">Low-Cadmium 31–32% is marketed only after receiving shipment-specific COA showing Cd and heavy metals</li>
+      </ul>
+
+    </div>
+    <!-- ✅ /Compliance -->
+
+    <div class="grid cols-3">
       <div class="card">
         <h3 data-i18n="log.incotermTag">EX-WORK / FOB / CFR / CIF / DDP</h3>
         <p class="muted" data-i18n="log.incoterms">
-          Available shipping terms include EX-WORK (Safaga Port), FOB, CFR, CIF, and DDP.<br>
+          Available shipping terms include EX-WORK, FOB, CFR, CIF, and DDP (subject to contract).<br>
           Shipment updates are shared via email after booking confirmation.
         </p>
         <img src="logistics1.png" alt="Incoterms" class="log-img">
       </div>
 
-      <!-- ✅ Ports & Packing -->
       <div class="card">
         <h3 data-i18n="log.ports.h">Ports & Packing</h3>
         <p class="muted" data-i18n="log.ports.p">
-          Standard loading via <strong>Alexandria / Damietta / Safaga — Egypt</strong>.<br>
-          Packing options: Bulk or Big-Bags depending on client requirements.
+          Loading ports: Egypt (multiple ports subject to schedule).<br>
+          Shipping: Bulk vessel or 20’ containers. Packing options: Bulk with liner / Jumbo bags (upon request).
         </p>
         <img src="logistics2.png" alt="Ports & Packing" class="log-img">
       </div>
 
-      <!-- ✅ EU Compliance -->
       <div class="card">
         <h3 data-i18n="log.compliance.h">EU Compliance</h3>
         <p class="muted" data-i18n="log.compliance.p">
@@ -344,18 +417,53 @@
         </p>
         <img src="logistics3.png" alt="EU Compliance" class="log-img">
       </div>
+    </div><!-- /.grid -->
 
+  </div><!-- /.container -->
+</section>
+
+<!-- 🧭 How We Work (EU Brokerage & Risk-Control) -->
+<section id="how-we-work">
+  <div class="container">
+    <h2 data-i18n="how.title">How We Work (EU Brokerage & Risk-Control)</h2>
+
+    <p class="muted" data-i18n="how.lead">
+      Euro Agri Trading s.r.o. operates as an independent EU-based brokerage and coordination company. We connect verified suppliers with qualified buyers and support the transaction process in a structured and compliant manner.
+    </p>
+
+    <div class="grid cols-2">
+      <!-- Policy card -->
+      <div class="card how-card">
+        <h3 data-i18n="how.policyTitle">Transaction Policy (Risk-Control)</h3>
+        <p class="muted" data-i18n="how.policyLead">
+          To protect all parties and ensure professional execution, we follow standard international trade practices:
+        </p>
+
+        <ul class="mini-specs">
+          <li data-i18n="how.p1">Payment: LC at sight (100%)</li>
+          <li data-i18n="how.p2">No advance payments</li>
+          <li data-i18n="how.p3">Independent inspection at loading: SGS / Intertek / BV (as agreed)</li>
+          <li data-i18n="how.p4">Shipment-specific documentation: COA/SGS per shipment; heavy metals (e.g., Cd) included upon request/market requirement</li>
+          <li data-i18n="how.p5">Buyer-facing documents: full originals and shipment-specific certificates are shared with verified buyers upon request</li>
+        </ul>
+      </div>
+
+      <!-- Note card -->
+      <div class="card how-card how-note">
+        <h3 data-i18n="how.noteTitle">Important Note</h3>
+        <p class="muted" data-i18n="how.noteText">
+          Euro Agri Trading s.r.o. is not a contracting party to the sales contract between seller and buyer. The sales contract, delivery terms, and performance obligations are agreed directly between the seller and buyer, supported by LC conditions and third-party inspection.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-		
-		
 
-    <!-- 📄 قسم المواصفات (Product Specifications & Compliance Documents) -->
+	<!-- 📄 قسم المواصفات (Product Specifications & Compliance Documents) -->
 <section id="certificates">
   <div class="container">
-    
+
     <!-- العنوان -->
     <h2 data-i18n="cert.title">
       Product Specifications & Compliance Documents
@@ -363,7 +471,7 @@
 
     <!-- الملاحظة -->
     <p class="muted" data-i18n="cert.note">
-      Note: The specifications displayed below are simplified marketing versions. 
+      Note: The specifications displayed below are simplified marketing versions.
       Full versions can be provided upon request.
     </p>
 
@@ -372,152 +480,145 @@
 
       <!-- ✅ البطاقة 1 — Specification Sheet -->
       <div class="card">
-        <img src="cert-coa-summary.png" 
-             alt="Rock Phosphate specifications overview (20–28% P₂O₅)" 
+        <img src="cert-coa-summary.png"
+             alt="Rock Phosphate specifications overview (20–28% P₂O₅)"
              data-i18n-alt="coa.imgAlt">
-        <h3 data-i18n="coa.title">
-          Specification Sheet — Rock Phosphate (Grades 20–28% P₂O₅)
-        </h3>
+        <h3 data-i18n="coa.title">Specification Sheet — Rock Phosphate (Grades 20–28% P₂O₅)</h3>
         <p class="muted" data-i18n="coa.sub">
           Summary of chemical composition — available grades 20%, 22%, 24%, 26%, and 28% P₂O₅.
         </p>
         <div class="cta">
-          <a href="coa_rock_phosphate_grades20-28.pdf" 
-             class="btn btn-outline" 
-             target="_blank" 
-             rel="noopener" 
-             download="coa_rock_phosphate_grades20-28.pdf" 
-             data-i18n="spec.print">
-             Print/Save PDF — Spec
-          </a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">
-             Request Custom Specs
-          </a>
+          <a href="coa_rock_phosphate_grades20-28.pdf"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener"
+             download="coa_rock_phosphate_grades20-28.pdf"
+             data-i18n="spec.print">Print/Save PDF — Spec</a>
+          <a href="#contactFormBox" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
         </div>
       </div>
 
       <!-- ✅ البطاقة 2 — Sieving Analysis -->
       <div class="card">
-        <img src="cert-sieving-summary.png" 
-             alt="Rock Phosphate sieving analysis (granulometry, 20–28% P₂O₅)" 
+        <img src="cert-sieving-summary.png"
+             alt="Rock Phosphate sieving analysis (granulometry, 20–28% P₂O₅)"
              data-i18n-alt="sieve.imgAlt">
-        <h3 data-i18n="sieve.title">
-          Sieving Analysis — Rock Phosphate (20–28% P₂O₅)
-        </h3>
+        <h3 data-i18n="sieve.title">Sieving Analysis — Rock Phosphate (20–28% P₂O₅)</h3>
         <p class="muted" data-i18n="sieve.sub">
           Granulometry and particle size distribution — suitable for milling or direct application.
         </p>
         <div class="cta">
-          <a href="sieving_analysis_rock_phosphate.pdf" 
-             class="btn btn-outline" 
-             target="_blank" 
-             rel="noopener" 
-             download="sieving_analysis_rock_phosphate.pdf" 
-             data-i18n="spec.print">
-             Print/Save PDF — Spec
-          </a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">
-             Request Custom Specs
-          </a>
+          <a href="sieving_analysis_rock_phosphate.pdf"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener"
+             download="sieving_analysis_rock_phosphate.pdf"
+             data-i18n="spec.print">Print/Save PDF — Spec</a>
+          <a href="#contactFormBox" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
         </div>
       </div>
 
-      <!-- ✅ البطاقة 3 — SGS Quality Report -->
+      <!-- ✅ البطاقة 3 — Inspection / Verification -->
       <div class="card">
-        <img src="cert-sgs-summary.png" 
-             alt="SGS verification summary — Rock Phosphate (20–28% P₂O₅)" 
+        <img src="cert-sgs-summary.png"
+             alt="Independent inspection & verification (SGS / Intertek / BV)"
              data-i18n-alt="sgs.imgAlt">
-        <h3 data-i18n="sgs.title">
-          SGS Quality Verification — Rock Phosphate
-        </h3>
+        <h3 data-i18n="sgs.title">Independent Inspection & Verification (SGS / Intertek / BV)</h3>
         <p class="muted" data-i18n="sgs.sub">
-          Independent inspection and verification — confirmed by SGS Egypt for grades 20–28% P₂O₅.
+          Independent third-party inspection can be arranged per shipment (as agreed). Official, shipment-specific reports are shared with verified buyers upon request.
         </p>
         <div class="cta">
-          <a href="sgs_quality_verification.pdf" 
-             class="btn btn-outline" 
-             target="_blank" 
-             rel="noopener" 
-             download="sgs_quality_verification.pdf" 
-             data-i18n="spec.print">
-             Print/Save PDF — Spec
-          </a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">
-             Request Custom Specs
-          </a>
+          <a href="sgs_quality_verification.pdf"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener"
+             download="sgs_quality_verification.pdf"
+             data-i18n="spec.print">Print/Save PDF — Spec</a>
+          <a href="#contactFormBox" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
         </div>
       </div>
 
       <!-- ✅ البطاقة 4 — EU Compliance -->
       <div class="card">
-        <img src="cert-declaration.png" 
-             alt="EU compliance declaration and supporting documentation" 
+        <img src="cert-declaration.png"
+             alt="EU compliance documents"
              data-i18n-alt="eu.imgAlt">
-        <h3 data-i18n="log.compliance.h">
-          EU Compliance Declaration
-        </h3>
-        <p class="muted" data-i18n="log.compliance.p">
-          Origin and conformity documentation for EU market compliance.
+        <h3 data-i18n="eu.title">EU Compliance Documents</h3>
+        <p class="muted" data-i18n="eu.sub">
+          Documentation supports compliance with applicable EU requirements and product safety regulations.
         </p>
         <div class="cta">
-          <a href="eu_compliance_docs.pdf" 
-             class="btn btn-outline" 
-             target="_blank" 
-             rel="noopener" 
-             download="eu_compliance_docs.pdf" 
-             data-i18n="spec.print">
-             Print/Save PDF — Spec
-          </a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">
-             Request Custom Specs
-          </a>
+          <a href="eu_compliance_docs.pdf"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener"
+             download="eu_compliance_docs.pdf"
+             data-i18n="spec.print">Print/Save PDF — Spec</a>
+          <a href="#contactFormBox" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
         </div>
       </div>
 
       <!-- ✅ البطاقة 5 — MSDS -->
       <div class="card">
-        <img src="cert-msds-summary.png" 
-             alt="MSDS summary for EU REACH compliance" 
+        <img src="cert-msds-summary.png"
+             alt="MSDS summary for EU REACH"
              data-i18n-alt="msds.imgAlt">
-        <h3 data-i18n="msds.title">
-          MSDS Summary — EU Compliance
-        </h3>
+        <h3 data-i18n="msds.title">MSDS Summary — EU REACH</h3>
         <p class="muted" data-i18n="msds.sub">
-          Material safety summary for regulatory compliance (EU REACH).
+          Material Safety Data Sheet (summary) for compliance and safe handling guidance.
         </p>
+        <p class="fineprint" data-i18n="msds.note">Public sample only — shipment MSDS on request.</p>
         <div class="cta">
-          <a href="msds_summary_eu_reach.pdf" 
-             class="btn btn-outline" 
-             target="_blank" 
-             rel="noopener" 
-             download="msds_summary_eu_reach.pdf" 
-             data-i18n="spec.print">
-             Print/Save PDF — Spec
-          </a>
-          <a href="#contact" class="btn btn-primary" data-i18n="card.custom.cta">
-             Request Custom Specs
-          </a>
+          <a href="msds_summary_eu_reach.pdf"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener"
+             download="msds_summary_eu_reach.pdf"
+             data-i18n="spec.print">Print/Save PDF — Spec</a>
+          <a href="#contactFormBox" class="btn btn-primary" data-i18n="card.custom.cta">Request Custom Specs</a>
         </div>
       </div>
 
-      <!-- ✅ البطاقة 6 — Coming Soon -->
-      <div class="card">
-        <img src="soon-placeholder.png" 
-             alt="Low-Cadmium Rock Phosphate — specification coming soon" 
-             data-i18n-alt="soon.imgAlt">
-        <h3 data-i18n="soon.title">Low-Cadmium Rock Phosphate</h3>
-        <p class="muted" data-i18n="soon.sub">
-          31–32% P₂O₅ — Specification & MSDS uploading soon.
-        </p>
-        <div class="cta">
-          <button class="btn btn-outline" disabled data-i18n="soon.btn.view">
-            View
-          </button>
-          <button class="btn btn-primary" disabled data-i18n="soon.btn.soon">
-            Coming Soon
-          </button>
-        </div>
-      </div>
+     <!-- ✅ البطاقة 6 — Low-Cadmium (31–32%) -->
+<div class="card">
+  <!-- ✅ صورة العينة (Marketing Sample) -->
+  <img src="soon-placeholder.png"
+       alt="Low-Cadmium Rock Phosphate (31–32% P₂O₅) — Marketing sample"
+       data-i18n-alt="lowcad.imgAlt">
+
+  <h3 data-i18n="lowcad.title">Low-Cadmium Rock Phosphate (31–32% P₂O₅)</h3>
+
+  <!-- ✅ Badges بدل أزرار معطلة -->
+  <div class="tag-row" style="justify-content:center; margin-top:10px;">
+    <span class="tag" data-i18n="lowcad.tag1">Coming soon / upon request (subject to customization)</span>
+    <span class="tag" data-i18n="lowcad.tag2">Shipment-specific COA required</span>
+  </div>
+
+  <!-- ✅ نص واضح (مش مخيف) + مطابق لشرطك -->
+  <p class="muted" data-i18n="lowcad.sub">
+    Marketed only after receiving shipment-specific third-party COA/inspection (SGS / Intertek / BV)
+    confirming Cd (reported in ppm/mg/kg) & heavy metals for the actual lot. Availability of 31–32% is
+    subject to customization and shipment-specific COA.
+  </p>
+
+  <div class="cta">
+    <!-- ✅ يذهب للفورم مباشرة وليس معلوماتك -->
+    <a href="#contactFormBox"
+       class="btn btn-primary"
+       data-i18n="lowcad.cta.avail">
+      Ask for availability (RFQ)
+    </a>
+
+    <!-- ✅ فتح صورة العينة (بدّل الرابط لو عندك ملف sample آخر) -->
+    <a href="soon-placeholder.png"
+       class="btn btn-outline"
+       target="_blank"
+       rel="noopener"
+       data-i18n="lowcad.cta.sample">
+      View Sample (Marketing)
+    </a>
+  </div>
+</div>
 
     </div>
   </div>
@@ -538,28 +639,30 @@
 		<!-- 🏢 قسم التعريف (About Section) -->
 <section id="about">
   <div class="about-bg">
-    <div class="content-box">
+    <div class="content-box about-card">
       <div class="container">
 
-        <!-- العنوان -->
         <h2 data-i18n="about.title">About Us</h2>
 
-        <!-- الفقرات -->
         <p data-i18n="about.p1">
-          Czech-headquartered brokerage connecting European buyers with reliable agricultural inputs from trusted sources.
+          Euro Agri Trading s.r.o. is an EU-based brokerage and coordination company connecting qualified buyers with verified suppliers.
         </p>
 
         <p data-i18n="about.pricing">
-          Competitive pricing through direct sourcing.
+          We support the process with transparent coordination and competitive terms based on verified sourcing.
         </p>
 
         <p data-i18n="about.p2">
-          Third-party testing (SGS / BV) available upon request. Samples can be provided prior to contracting.
+          Independent inspection (SGS / Intertek / BV) and samples can be arranged upon request (as agreed).
         </p>
 
         <p data-i18n="about.p3">
-          Our operations adhere to EU customs, trade, and agricultural import regulations. 
-          Full legal compliance is ensured through Czech registration and certification.
+          We operate under Czech registration and follow applicable EU customs and trade requirements.
+        </p>
+
+        <!-- ملاحظة قانونية قصيرة وواضحة -->
+        <p class="muted" data-i18n="about.note">
+          Euro Agri Trading s.r.o. is not a contracting party to the sales contract; contract terms and performance obligations are agreed directly between seller and buyer.
         </p>
 
       </div>
@@ -571,6 +674,10 @@
 			<div class="container">
 				<div class="info-section">
 					<h2 class="contact-heading" data-i18n="contact.details">Contact Details</h2>
+					<div class="eu-flag-inline" aria-label="EU flag">
+                    <img src="eu-flag.png" alt="EU Flag">
+                   </div>
+					
 					<p>
 						<strong data-i18n="site.company">Euro Agri Trading s.r.o — Limited Liability Company.</strong><br>
 						Nader Abdou<br>
@@ -579,12 +686,9 @@
 						<span class="kbd">+420 732 133 919</span><br>
 						<span class="kbd">IČO: 17314780</span> — <span class="kbd">DIČ: CZ8005062648</span>
 					</p>
-					<div class="bank-section">
-						<h4>Local Bank — CZK (Air Bank a.s.)</h4>
-						<p><strong>IBAN:</strong> CZ75 3030 0000 0034 8056 0018<br>
-						<strong>SWIFT/BIC:</strong> AIRACZPP<br>
-						<strong>Account Holder:</strong> Nader Fathi Elsayed Abdou</p>
-					</div>
+					<p class="bank-note" data-i18n="payment.note">
+  Bank details are provided in the Proforma Invoice (PI) upon request.
+</p>
 					<div class="bank-section">
 						<h4>WISE Business — Multi-Currency Account</h4>
 						<div class="badges">
@@ -604,29 +708,55 @@
 </a>
 					</div>
 				</div>
-				<div class="form-section">
-					<h2 class="contact-heading" data-i18n="contact.title">Get in Touch</h2>
-					<form onsubmit="return sendMailto(this)">
-						<label>
-							<span data-i18n="form.name">Full Name</span><br>
-							<input name="name" required placeholder="Full Name">
-						</label><br><br>
-						<label>
-							<span data-i18n="form.email">Email</span><br>
-							<input name="email" type="email" required placeholder="you@example.com">
-						</label><br><br>
-						<label>
-							<span data-i18n="form.message">Message</span><br>
-							<textarea name="message" rows="5" required placeholder="Required: product / quantity / port / terms"></textarea>
-						</label>
-						<div class="cta">
-							<button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
-							<a class="btn btn-outline" href="https://wa.me/00420732133919" target="_blank" data-i18n="contact.whatsapp">WhatsApp</a>
-						</div>
-						<p class="note" data-i18n="contact.note">We do not use analytics cookies. This form opens your mail app to send directly.</p>
-					</form>
-				</div>
-				<p class="muted" data-i18n="contact.docs" style="margin-top:14px">Official documents - contracts, invoices, specifications.</p>
+
+
+				
+				<div class="form-section" id="contactFormBox">
+  <h2 class="contact-heading" data-i18n="contact.title">Get in Touch</h2>
+
+  <form id="contactForm" onsubmit="return sendMailto(this)">
+    <!-- ✅ موضوع/سياق الرسالة (يتعبّى تلقائياً من أزرار الطلب) -->
+    <input type="hidden" name="topic" value="">
+
+    <label>
+      <span data-i18n="form.name">Full Name</span><br>
+      <input name="name" required placeholder="Full Name">
+    </label><br><br>
+
+    <label>
+      <span data-i18n="form.email">Email</span><br>
+      <input name="email" type="email" required placeholder="you@example.com">
+    </label><br><br>
+
+    <label>
+      <span data-i18n="form.message">Message</span><br>
+      <textarea id="rfqMessage"
+                name="message"
+                rows="6"
+                required
+                placeholder="Required: product / grade / quantity / port / terms"></textarea>
+    </label>
+
+    <div class="cta">
+      <button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
+
+      <!-- ✅ wa.me لازم رقم بدون + أو 00 -->
+      <a class="btn btn-outline"
+         href="https://wa.me/420732133919"
+         target="_blank"
+         rel="noopener"
+         data-i18n="contact.whatsapp">WhatsApp</a>
+    </div>
+
+    <p class="note" data-i18n="contact.note">
+      We do not use analytics cookies. This form opens your mail app to send directly.
+    </p>
+  </form>
+</div>
+
+<p class="muted" data-i18n="contact.docs" style="margin-top:14px">
+  Official documents - contracts, invoices, specifications.
+</p>
 			</div>
 		</section>
 		<!-- تنسيقات مساعدة داخلية (محفوظة كما هي) -->
@@ -638,12 +768,19 @@
 			.badges{ display:flex; gap:6px; flex-wrap:wrap; margin-top:4px }
 			.badge{ border:1px solid #ddd; border-radius:999px; padding:4px 10px; font-size:.9rem; background:#fff }
 		</style>
+		
 		<!-- تذييل الحقوق (Footer legal) -->
-		<div class="footer-legal" style="text-align:center; font-size:0.9rem; color:#ccc; margin-top:15px;">
-			© 2025 Euro Agri Trading s.r.o. — All rights reserved.<br>
-			Registered in Czech Republic | IČO: 17314780 | DIČ: CZ8005062648<br>
-			<span style="font-size:0.8rem; color:#aaa;">In compliance with EU Regulation (EC) No. 2003/2003 on fertilizers and REACH standards.</span>
-		</div>
+<div class="footer-legal" style="text-align:center; font-size:0.9rem; color:#ccc; margin-top:15px;">
+  <span data-i18n="footer.legal.rights">©️ 2025 Euro Agri Trading s.r.o. — All rights reserved.</span><br>
+  <span data-i18n="footer.legal.reg">Registered in Czech Republic | IČO: 17314780 | DIČ: CZ8005062648</span><br>
+  <span style="font-size:0.8rem; color:#aaa;" data-i18n="footer.legal.framework">
+    Regulatory framework: Regulation (EU) 2019/1009 (EU fertilising products) and REACH/CLP where applicable.
+  </span>
+</div>
+
+
+
+
 		<!-- i18n + utilities (scripts) -->
 		<script type="module">
 			// قائمة اللغات المدعومة
@@ -689,9 +826,11 @@
 				const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
 				const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "sieving-analysis.csv"; document.body.appendChild(a); a.click(); a.remove();
 			};
+
+			
 			// إرسال عبر mailto
 			window.sendMailto = function(form){
-				const data = new FormData(form); const to = "trading@temosliving.de"; const subject = encodeURIComponent("RFQ - Euro Agri Trading (trading.temosliving.de)");
+				const data = new FormData(form); const to = "info@euroagritrading.eu"; const subject = encodeURIComponent("RFQ - Euro Agri Trading (info@euroagritrading.eu)");
 				const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`);
 				location.href = `mailto:${to}?subject=${subject}&body=${body}`; return false;
 			};
@@ -726,8 +865,8 @@
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"name": "Euro Agri Trading s.r.o.",
-	"url": "https://trading.temosliving.de",
-	"email": "trading@temosliving.de",
+	"url": "https://info@euroagritrading.eu",
+	"email": "info@euroagritrading.eu",
 	"telephone": "+420 732 133 919",
 	"address": {
 		"@type": "PostalAddress",
@@ -739,7 +878,7 @@
 	"contactPoint": {
 		"@type": "ContactPoint",
 		"contactType": "sales",
-		"email": "trading@temosliving.de",
+		"email": "info@euroagritrading.eu",
 		"telephone": "+420 732 133 919",
 		"areaServed": "EU"
 	},
