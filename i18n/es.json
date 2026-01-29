@@ -1,5 +1,5 @@
 {
-  "site.name": "Euro Agri Trading s.r.o — Bróker agro de confianza",
+  "site.name": "Euro Agri Trading s.r.o — Intermediario agro de confianza",
   "site.company": "Euro Agri Trading s.r.o.",
 
   "nav.home": "Inicio",
@@ -10,23 +10,23 @@
   "nav.about": "Sobre nosotros",
   "nav.contact": "Contacto",
 
-  "hero.title": "SERVICIOS AGRO — Corretaje de fertilizantes UE–Egipto de confianza",
-  "hero.desc": "Conectamos productores egipcios certificados de fertilizantes con compradores globales, ofreciendo precios directos de fábrica, procesos transparentes y pleno cumplimiento con la UE.",
+  "hero.title": "SERVICIOS AGRO — Intermediación de fertilizantes UE–Egipto de confianza",
+  "hero.desc": "Conectamos productores egipcios certificados de fertilizantes con compradores globales, con precios directos de fábrica, ejecución transparente y pleno cumplimiento con la UE.",
   "hero.tradeNote": "Todas las transacciones cumplen con Incoterms®️ 2020 y los estándares del comercio internacional.",
-  "hero.mainProduct": "Fosfato de roca — P₂O₅: 18–32% (sujeto a disponibilidad y COA específico por envío) (muestra ref.: 26%)",
-  "hero.specTags": "P₂O₅: 18–32% (sujeto a disponibilidad y COA específico por envío) / Componentes clave disponibles en el COA",
+  "hero.mainProduct": "Fosfato de roca — P₂O₅: 18–32% (sujeto a disponibilidad y COA por envío) (muestra de referencia: 26%)",
+  "hero.specTags": "P₂O₅: 18–32% (sujeto a disponibilidad y COA por envío) / Componentes clave indicados en el COA",
   "hero.spec1": "Material cribado — apto para molienda o aplicación directa.",
-  "hero.spec2": "Incluye ficha de especificaciones; análisis de laboratorio personalizado disponible bajo solicitud.",
+  "hero.spec2": "Incluye ficha de especificaciones; análisis de laboratorio a medida disponible bajo solicitud.",
   "hero.grade": "Grado de referencia: 26% P₂O₅",
-  "hero.comp": "Rango de grados: P₂O₅ 18–32% (sujeto a disponibilidad y COA específico por envío). Componentes clave disponibles en el COA (p. ej., CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI).",
+  "hero.comp": "Rango de grados: P₂O₅ 18–32% (sujeto a disponibilidad y COA por envío). Componentes clave indicados en el COA (p. ej., CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI).",
   "hero.forms": "Formas: Polvo / Granulado / Polvo fino",
   "hero.sizing": "Granulometría: a medida bajo solicitud (tamizado bajo solicitud)",
   "hero.moisture": "Humedad: normalmente máx. 3–5% (depende del grado y la temporada)",
 
   "products.title": "Producto principal",
-  "products.lead": "Fosfato de roca — Grados 18–32% P₂O₅ (sujeto a disponibilidad y COA específico por envío) (muestra de referencia: 26%)",
+  "products.lead": "Fosfato de roca — Grados 18–32% P₂O₅ (sujeto a disponibilidad y COA por envío) (muestra de referencia: 26%)",
   "products.spec1": "Granulometría cribada — lista para molienda o aplicación directa",
-  "products.spec2": "Incluye ficha de especificaciones; análisis específicos para el comprador disponibles",
+  "products.spec2": "Incluye ficha de especificaciones; análisis según requisitos del comprador disponibles",
   "products.viewCoa": "Abrir especificación",
   "products.all": "Productos disponibles",
 
@@ -36,21 +36,21 @@
   "services.quality": "Control de calidad",
   "services.analysis": "Análisis de laboratorio",
   "services.quality.text": "Se pueden organizar pruebas independientes vía SGS / Intertek / BV (bajo solicitud) para respaldar el cumplimiento y el aseguramiento de calidad.",
-  "services.analysis.text": "Se puede organizar verificación de laboratorio por terceros (SGS / Intertek / BV) según lo acordado, incluyendo informes específicos por envío cuando sea necesario.",
+  "services.analysis.text": "Se puede organizar verificación de laboratorio por terceros (SGS / Intertek / BV) según lo acordado, incluyendo informes por envío cuando sea necesario.",
 
   "card.rock.title": "Fosfato de roca — Grados 18–32% P₂O₅",
-  "card.rock.text": "Fuente fiable con envíos consolidados a puertos de la UE, con precios competitivos directamente de fábrica. Los valores finales se confirman mediante COA/SGS específico por envío.",
+  "card.rock.text": "Fuente fiable con envíos consolidados a puertos de la UE, con precios competitivos directamente de fábrica. Los valores finales se confirman mediante COA/SGS por envío.",
   "card.rock.cta": "Solicitar cotización",
   "card.rock.coa": "Ver especificación",
   "card.rock.forms": "Formas: Polvo / Granulado / Polvo fino",
   "card.rock.moisture": "Humedad: normalmente máx. 3–5% (depende del grado y la temporada)",
-  "card.rock.coa2": "COA/SGS específico por envío proporcionado en cada envío",
+  "card.rock.coa2": "COA/SGS por envío proporcionado en cada envío",
   "card.rock.hm": "Metales pesados (Cd, etc.) disponibles bajo solicitud en el COA del envío",
 
   "card.lowcd.title": "Fosfato de roca bajo en cadmio — 31–32% P₂O₅",
-  "card.lowcd.text": "Disponible bajo solicitud. Se comercializa solo después de recibir un COA específico por envío que muestre Cd y metales pesados del lote enviado.",
+  "card.lowcd.text": "Disponible bajo solicitud. Se comercializa solo tras recibir un COA por envío con Cd y metales pesados del lote real.",
   "card.lowcd.tag1": "Próximamente / bajo solicitud",
-  "card.lowcd.tag2": "COA específico por envío requerido",
+  "card.lowcd.tag2": "COA por envío requerido",
   "card.lowcd.cta": "Solicitar cotización (RFQ)",
   "card.lowcd.cta2": "Consultar disponibilidad",
 
@@ -66,7 +66,7 @@
   "generic.expand": "Listo para ampliar",
 
   "coa.title": "Hoja de especificaciones de muestra — Fosfato de roca (Referencia: 26% P₂O₅)",
-  "coa.sub": "Muestra de marketing solo para presentación. Los valores finales se confirman por envío mediante COA/SGS. Otros grados (18–32% P₂O₅) están sujetos a disponibilidad y COA específico por envío.",
+  "coa.sub": "Muestra de marketing solo para presentación. Los valores finales se confirman por envío mediante COA/SGS. Otros grados (18–32% P₂O₅) están sujetos a disponibilidad y COA por envío.",
   "coa.th.test": "Prueba",
   "coa.th.method": "Método",
   "coa.th.unit": "Unidad",
@@ -96,29 +96,29 @@
   "log.compliance.h": "Cumplimiento UE",
   "log.compliance.p": "La documentación incluye Certificado de Origen, facturas comerciales e informes de análisis. Los documentos respaldan el cumplimiento de los requisitos aplicables de la UE y las normativas de seguridad del producto.",
 
-  "how.title": "Cómo trabajamos (Bróker UE y control de riesgos)",
-  "how.lead": "Euro Agri Trading s.r.o. opera como una empresa independiente de corretaje y coordinación con base en la UE. Conectamos proveedores verificados con compradores cualificados y apoyamos el proceso de transacción de forma estructurada y conforme.",
+  "how.title": "Cómo trabajamos (Intermediación UE y control de riesgos)",
+  "how.lead": "Euro Agri Trading s.r.o. opera como una empresa independiente de intermediación y coordinación con base en la UE. Conectamos proveedores verificados con compradores cualificados y apoyamos el proceso de transacción de forma estructurada y conforme.",
   "how.policyTitle": "Política de transacción (control de riesgos)",
   "how.policyLead": "Para proteger a todas las partes y asegurar una ejecución profesional, seguimos prácticas estándar del comercio internacional:",
   "how.p1": "Pago: LC a la vista (100%)",
   "how.p2": "Sin pagos anticipados",
   "how.p3": "Inspección independiente en carga: SGS / Intertek / BV (según lo acordado)",
-  "how.conf.title": "Confidencialidad y mandato de corretaje",
-  "how.conf.text": "Aplicamos confidencialidad profesional al presentar a las partes. Los datos de la contraparte se comparten solo tras recibir una solicitud seria (RFQ/LOI), y confirmamos el mandato de corretaje por escrito (Brokerage Mandate/Agreement) para garantizar claridad, transparencia y protección para todas las partes. Las órdenes/transacciones repetidas con partes introducidas siguen cubiertas dentro del período de protección acordado.",
-  "how.p4": "Documentación específica por envío: COA/SGS por envío; metales pesados (p. ej., Cd) incluidos bajo solicitud / requisito de mercado",
-  "how.p5": "Documentos para el comprador: originales completos y certificados específicos por envío se comparten bajo solicitud con compradores verificados",
+  "how.conf.title": "Confidencialidad y mandato de intermediación",
+  "how.conf.text": "Aplicamos confidencialidad profesional al presentar a las partes. Los datos de la contraparte se comparten solo tras recibir una solicitud seria (RFQ/LOI), y confirmamos el mandato de intermediación por escrito (Brokerage Mandate/Agreement) para garantizar claridad, transparencia y protección para todas las partes. Las órdenes/transacciones repetidas con partes introducidas siguen cubiertas dentro del período de protección acordado.",
+  "how.p4": "Documentación por envío: COA/SGS por envío; metales pesados (p. ej., Cd) incluidos bajo solicitud / requisito de mercado",
+  "how.p5": "Documentos para el comprador: originales completos y certificados por envío se comparten bajo solicitud con compradores verificados",
   "how.noteTitle": "Nota importante",
   "how.noteText": "Euro Agri Trading s.r.o. no es parte contratante del contrato de compraventa entre vendedor y comprador. El contrato de compraventa, los términos de entrega y las obligaciones de ejecución se acuerdan directamente entre vendedor y comprador, respaldados por condiciones LC e inspección de terceros.",
 
   "compliance.title": "Cumplimiento y verificación",
-  "compliance.lead": "Las especificaciones mostradas son orientación de marketing. Los valores finales se confirman mediante COA/SGS específico por envío para cada lote.",
-  "compliance.p1": "COA / SGS específico por envío (o equivalente) disponible por envío",
+  "compliance.lead": "Las especificaciones mostradas son orientación de marketing. Los valores finales se confirman mediante COA/SGS por envío para cada lote.",
+  "compliance.p1": "COA / SGS por envío (o equivalente) disponible por envío",
   "compliance.p2": "Metales pesados (Cd, etc.) pueden proporcionarse bajo solicitud en el COA del envío",
   "compliance.p3": "Los documentos originales completos se comparten solo con compradores verificados",
-  "compliance.p4": "El bajo cadmio 31–32% se comercializa solo tras recibir un COA específico por envío que muestre Cd y metales pesados",
+  "compliance.p4": "El bajo cadmio 31–32% se comercializa solo tras recibir un COA por envío con Cd y metales pesados",
 
   "cert.title": "Especificaciones del producto y documentos de cumplimiento",
-  "cert.note": "Nota: Los documentos mostrados abajo son versiones de marketing simplificadas. Los originales completos y certificados específicos por envío pueden proporcionarse a compradores verificados bajo solicitud.",
+  "cert.note": "Nota: Los documentos mostrados abajo son versiones de marketing simplificadas. Los originales completos y certificados por envío pueden proporcionarse a compradores verificados bajo solicitud.",
   "cert.view": "Ver muestra",
   "cert.soon": "Próximamente",
   "cert.request": "Solicitar originales completos",
@@ -131,7 +131,7 @@
   "lowcad.imgAlt": "Fosfato de roca bajo en cadmio (31–32% P₂O₅) — Próximamente",
 
   "sgs.title": "Inspección y verificación independientes (SGS / Intertek / BV)",
-  "sgs.sub": "Se puede organizar inspección independiente de terceros por envío (según lo acordado). Informes específicos por envío disponibles bajo solicitud.",
+  "sgs.sub": "Se puede organizar inspección independiente de terceros por envío (según lo acordado). Informes por envío disponibles bajo solicitud.",
 
   "eu.title": "Documentos de cumplimiento UE",
   "eu.sub": "La documentación respalda el cumplimiento de los requisitos aplicables de la UE y las normativas de seguridad del producto.",
@@ -141,13 +141,13 @@
   "msds.note": "Solo muestra pública — MSDS del envío bajo solicitud.",
 
   "lowcad.title": "Fosfato de roca bajo en cadmio (31–32% P₂O₅)",
-  "lowcad.sub": "Próximamente / bajo solicitud (sujeto a personalización). Se comercializa solo tras recibir COA/inspección de terceros específico por envío (SGS/Intertek/BV) confirmando Cd (reportado en ppm/mg/kg) y metales pesados del lote real. La disponibilidad del 31–32% está sujeta a personalización y COA específico por envío.",
+  "lowcad.sub": "Próximamente / bajo solicitud (sujeto a personalización). Se comercializa solo tras recibir COA/inspección de terceros por envío (SGS/Intertek/BV) confirmando Cd (reportado en ppm/mg/kg) y metales pesados del lote real. La disponibilidad del 31–32% está sujeta a personalización y COA por envío.",
   "lowcad.tag1": "Próximamente / bajo solicitud (sujeto a personalización)",
-  "lowcad.tag2": "COA específico por envío requerido",
+  "lowcad.tag2": "COA por envío requerido",
   "lowcad.cta.avail": "Consultar disponibilidad (RFQ)",
 
   "about.title": "Sobre nosotros",
-  "about.p1": "Euro Agri Trading s.r.o. es una empresa de corretaje y coordinación con base en la UE que conecta compradores cualificados con proveedores verificados.",
+  "about.p1": "Euro Agri Trading s.r.o. es una empresa de intermediación y coordinación con base en la UE que conecta compradores cualificados con proveedores verificados.",
   "about.pricing": "Apoyamos el proceso con coordinación transparente y condiciones competitivas basadas en abastecimiento verificado.",
   "about.p2": "Inspección independiente (SGS / Intertek / BV) y muestras pueden organizarse bajo solicitud (según lo acordado).",
   "about.p3": "Operamos bajo registro checo y seguimos los requisitos aduaneros y comerciales aplicables de la UE.",
@@ -173,7 +173,7 @@
   "contact.whatsapp": "WhatsApp",
   "contact.note": "No usamos cookies de analítica. Este formulario abre tu aplicación de correo para enviar el mensaje directamente.",
   "contact.details": "Datos de contacto",
-  "contact.docs": "Los documentos oficiales (contratos, facturas, COA/SGS específico por envío y especificaciones de producto) se comparten tras calificar la solicitud.",
+  "contact.docs": "Los documentos oficiales (contratos, facturas, COA/SGS por envío y especificaciones de producto) se comparten tras calificar la solicitud.",
 
   "footer.payment": "Todos los pagos y liquidaciones comerciales se realizan directamente entre el comprador y el vendedor. Euro Agri Trading s.r.o. actúa únicamente como intermediario independiente con base en la UE, proporcionando coordinación y soporte del proceso.",
 
@@ -181,6 +181,5 @@
   "footer.legal.reg": "Registrada en la República Checa | IČO: 17314780 | DIČ: CZ8005062648",
   "footer.legal.framework": "Marco regulatorio: Reglamento (UE) 2019/1009 (productos fertilizantes de la UE) y REACH/CLP cuando corresponda.",
 
-  "footer.note": "©️ 2025 — Bróker/marketer independiente. Las marcas pertenecen a sus respectivos propietarios. Este sitio web es solo para información comercial."
+  "footer.note": "©️ 2025 — Intermediario/marketer independiente. Las marcas pertenecen a sus respectivos propietarios. Este sitio web es solo para información comercial."
 }
-
