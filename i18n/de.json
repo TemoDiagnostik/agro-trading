@@ -162,6 +162,7 @@
   "payment.disclaimer": "Die finale Zahlungsart wird fallweise vereinbart – abhängig von Compliance, Gegenparteiprüfung und Transaktionsstruktur.",
   "payment.lead": "Zahlungen und Handelsabwicklungen erfolgen direkt zwischen Käufer und Verkäufer. Euro Agri Trading s.r.o. agiert ausschließlich als unabhängiger Vermittler zur Koordination und Prozessunterstützung.",
  "payment.note": "Bankdaten werden auf Anfrage in der Proforma-Rechnung (PI) bereitgestellt.",
+"payment.btn.request": "Proforma / Zahlungsdetails anfordern",
 
   
   "contact.title": "Kontaktieren Sie uns",
