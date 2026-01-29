@@ -36,7 +36,9 @@
 "services.quality": "Quality Testing",
 "services.analysis": "Laboratory Analysis",
 "services.quality.text": "Independent testing can be arranged via SGS / Intertek / BV (upon request) to support compliance and quality assurance.",
-"services.analysis.text": "Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required).",
+"services.analysis.text": "Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required.",
+
+
 
 
   "card.rock.title": "Rock Phosphate — Grades 18–32% P₂O₅",
