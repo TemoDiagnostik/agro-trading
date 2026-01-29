@@ -31,11 +31,12 @@
   "products.all": "Dostupné produkty",
 
   "services.title": "Naše služby",
-  "services.agro": "Zemědělské služby",
-  "services.quality": "Testování kvality",
-  "services.analysis": "Laboratorní analýza",
-  "services.quality.text": "Nezávislé testování lze zajistit prostřednictvím SGS / Intertek / BV (na vyžádání) pro podporu shody a zajištění kvality.",
-  "services.analysis.text": "Ověření třetí stranou (SGS / Intertek / BV) lze zajistit dle dohody, včetně zpráv pro konkrétní zásilku, pokud je vyžadováno.",
+"services.agro": "Zemědělské služby",
+"services.agro.text": "Komplexní podpora pro evropské zemědělce a distributory prostřednictvím prověřených a otestovaných produktů a hnojiv.",
+"services.quality": "Testování kvality",
+"services.analysis": "Laboratorní analýza",
+"services.quality.text": "Nezávislé testování lze zajistit prostřednictvím SGS / Intertek / BV (na vyžádání) pro podporu shody a zajištění kvality.",
+"services.analysis.text": "Ověření třetí stranou (SGS / Intertek / BV) lze zajistit dle dohody, včetně zpráv pro konkrétní zásilku, pokud je vyžadováno.",
 
   "card.rock.title": "Rock Phosphate — třídy 18–32% P₂O₅",
   "card.rock.text": "Spolehlivý zdroj s konsolidovanými zásilkami do přístavů EU a konkurenceschopným cenovým nastavením přímo z výroby. Konečné hodnoty jsou potvrzeny COA/SGS pro konkrétní zásilku.",
@@ -74,8 +75,9 @@
   "coa.th.hum": "Vlhkost",
 
   "sieve.title": "Analýza prosévání — Rock Phosphate (vzorek)",
-  "sieve.size": "Velikost",
-  "sieve.percent": "Procenta wt%",
+"sieve.sub": "Granulometrie a rozdělení velikosti částic — vhodné pro mletí nebo přímou aplikaci.",
+"sieve.size": "Velikost",
+"sieve.percent": "Procenta wt%",
 
   "coa.export": "Exportovat prosévání CSV",
   "coa.print": "Zobrazit vzorové PDF — Spec",
