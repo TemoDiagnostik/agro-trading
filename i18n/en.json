@@ -155,8 +155,9 @@
   "about.pricing": "We support the process with transparent coordination and competitive terms based on verified sourcing.",
   "about.p2": "Independent inspection (SGS / Intertek / BV) and samples can be arranged upon request (as agreed).",
   "about.p3": "We operate under Czech registration and follow applicable EU customs and trade requirements.",
-  "about.note": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract; contract terms and performance obligations are agreed directly between seller and buyer.",
+ "about.note": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract; contract terms and performance obligations are agreed directly between seller and buyer.",
 
+  "payment.title": "Payments / Proforma",
   "payment.opt.lcSight": "LC at sight (100%) — Preferred",
   "payment.opt.lcUsance": "Usance / Deferred LC (subject to approval)",
   "payment.opt.collection": "Documentary Collection (CAD / D/P or D/A) — for qualified repeat buyers",
