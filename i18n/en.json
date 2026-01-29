@@ -31,11 +31,13 @@
   "products.all": "Available Products",
 
   "services.title": "Our Services",
-  "services.agro": "Agricultural Services",
-  "services.quality": "Quality Testing",
-  "services.analysis": "Laboratory Analysis",
-  "services.quality.text": "Independent testing can be arranged via SGS / Intertek / BV (upon request) to support compliance and quality assurance.",
-  "services.analysis.text": "Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required.",
+"services.agro": "Agricultural Services",
+"services.agro.text": "Comprehensive support for European farmers and distributors through trusted and tested products and fertilizers.",
+"services.quality": "Quality Testing",
+"services.analysis": "Laboratory Analysis",
+"services.quality.text": "Independent testing can be arranged via SGS / Intertek / BV (upon request) to support compliance and quality assurance.",
+"services.analysis.text": "Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required).",
+
 
   "card.rock.title": "Rock Phosphate — Grades 18–32% P₂O₅",
   "card.rock.text": "Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.",
@@ -74,8 +76,10 @@
   "coa.th.hum": "Humidity",
 
   "sieve.title": "Sieving Analysis — Rock Phosphate (Sample)",
-  "sieve.size": "Size",
-  "sieve.percent": "Percent wt%",
+"sieve.sub": "Granulometry and particle size distribution — suitable for milling or direct application.",
+"sieve.size": "Size",
+"sieve.percent": "Percent wt%",
+
 
   "coa.export": "Export sieving CSV",
   "coa.print": "View Sample PDF — Spec",
