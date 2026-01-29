@@ -164,6 +164,8 @@
   "payment.disclaimer": "Final payment method is agreed case-by-case based on compliance, counterparty verification, and transaction structure.",
   "payment.lead": "Payments and trade settlements are handled directly between the buyer and the seller. Euro Agri Trading s.r.o. acts solely as an independent intermediary providing coordination and process support.",
   "payment.note": "Bank details are provided in the Proforma Invoice (PI) upon request.",
+  "payment.btn.request": "Request Proforma / Payment Details",
+
   
   "contact.title": "Get in touch",
   "form.name": "Name",
