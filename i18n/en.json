@@ -11,14 +11,14 @@
   "nav.contact": "Contact",
 
   "hero.title": "AGRO SERVICES — Trusted EU–Egypt Fertilizer Brokerage",
-  "hero.desc": "We connect certified Egyptian fertilizer producers with global buyers, offering factory-direct pricing, transparent processes, and full EU compliance.",
+  "hero.desc": "We connect certified Egyptian fertilizer producers with global buyers, offering factory-direct pricing, transparent execution, and full EU compliance.",
   "hero.tradeNote": "All transactions comply with Incoterms®️ 2020 and international trade standards.",
-  "hero.mainProduct": "Rock Phosphate — P₂O₅: 18–32% (subject to availability & shipment-specific COA) (Ref. sample: 26%)",
-  "hero.specTags": "P₂O₅: 18–32% (subject to availability & shipment-specific COA) / Key components available in COA",
+  "hero.mainProduct": "Rock Phosphate — P₂O₅: 18–32% (subject to availability & shipment-specific COA) (reference sample: 26%)",
+  "hero.specTags": "P₂O₅: 18–32% (subject to availability & shipment-specific COA) / Key components available in the COA",
   "hero.spec1": "Screened material — suitable for milling or direct application.",
-  "hero.spec2": "Specification sheet included; custom lab analysis available upon request.",
+  "hero.spec2": "Specification sheet included; custom laboratory analysis available upon request.",
   "hero.grade": "Reference grade: 26% P₂O₅",
-  "hero.comp": "Grade range: P₂O₅ 18–32% (subject to availability & shipment-specific COA). Key components available in COA (e.g., CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI).",
+  "hero.comp": "Grade range: P₂O₅ 18–32% (subject to availability & shipment-specific COA). Key components available in the COA (e.g., CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI).",
   "hero.forms": "Forms: Powder / Granular / Fine Powder",
   "hero.sizing": "Sizing: Customized sizing upon request (sieving on request)",
   "hero.moisture": "Moisture: typically max 3–5% (grade & season dependent)",
@@ -31,39 +31,36 @@
   "products.all": "Available Products",
 
   "services.title": "Our Services",
-"services.agro": "Agricultural Services",
-"services.agro.text": "Comprehensive support for European farmers and distributors through trusted and tested products and fertilizers.",
-"services.quality": "Quality Testing",
-"services.analysis": "Laboratory Analysis",
-"services.quality.text": "Independent testing can be arranged via SGS / Intertek / BV (upon request) to support compliance and quality assurance.",
-"services.analysis.text": "Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required.",
-
-
-
+  "services.agro": "Agricultural Services",
+  "services.agro.text": "Comprehensive support for European farmers and distributors through trusted, tested products and fertilizers.",
+  "services.quality": "Quality Testing",
+  "services.analysis": "Laboratory Analysis",
+  "services.quality.text": "Independent testing can be arranged via SGS / Intertek / BV (upon request) to support compliance and quality assurance.",
+  "services.analysis.text": "Third-party laboratory verification can be arranged (SGS / Intertek / BV) as agreed, including shipment-specific reports when required.",
 
   "card.rock.title": "Rock Phosphate — Grades 18–32% P₂O₅",
-  "card.rock.text": "Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.",
+  "card.rock.text": "Reliable sourcing with consolidated shipments to EU ports and competitive factory-direct pricing. Final values are confirmed by shipment-specific COA/SGS.",
   "card.rock.cta": "Request a Quote",
   "card.rock.coa": "View Spec",
   "card.rock.forms": "Forms: Powder / Granular / Fine Powder",
   "card.rock.moisture": "Moisture: typically max 3–5% (grade & season dependent)",
-  "card.rock.coa2": "Shipment-specific COA/SGS provided per shipment",
-  "card.rock.hm": "Heavy metals (Cd, etc.) provided upon request in the shipment COA",
+  "card.rock.coa2": "Shipment-specific COA/SGS provided for each shipment",
+  "card.rock.hm": "Heavy metals (e.g., Cd) provided upon request in the shipment COA",
 
   "card.lowcd.title": "Low-Cadmium Rock Phosphate — 31–32% P₂O₅",
-  "card.lowcd.text": "Available upon request. Marketed only after receiving shipment-specific COA showing Cd and heavy metals for the shipment lot.",
+  "card.lowcd.text": "Available upon request. Marketed only after receiving a shipment-specific COA confirming Cd and heavy metals for the shipment lot.",
   "card.lowcd.tag1": "Coming soon / upon request",
   "card.lowcd.tag2": "Shipment-specific COA required",
   "card.lowcd.cta": "Request a Quote (RFQ)",
   "card.lowcd.cta2": "Ask for availability",
 
   "card.urea.title": "Urea / NPK (on request)",
-  "card.urea.text": "Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.",
+  "card.urea.text": "Additional product lines (Urea, MAP/DAP, NPK) can be added based on demand, with flexible supply options.",
   "card.urea.cta": "Ask about Urea",
   "card.urea.cta2": "Request a Quote (RFQ)",
 
   "card.custom.title": "Custom specs",
-  "card.custom.text": "Tailored supply, packing, and analyses per buyer requirements, with official documentation support.",
+  "card.custom.text": "Tailored supply, packing, and analyses per buyer requirements, supported by official documentation.",
   "card.custom.cta": "Request Custom Specs",
 
   "generic.expand": "Ready to expand",
@@ -78,10 +75,9 @@
   "coa.th.hum": "Humidity",
 
   "sieve.title": "Sieving Analysis — Rock Phosphate (Sample)",
-"sieve.sub": "Granulometry and particle size distribution — suitable for milling or direct application.",
-"sieve.size": "Size",
-"sieve.percent": "Percent wt%",
-
+  "sieve.sub": "Granulometry and particle size distribution — suitable for milling or direct application.",
+  "sieve.size": "Size",
+  "sieve.percent": "Percent wt%",
 
   "coa.export": "Export sieving CSV",
   "coa.print": "View Sample PDF — Spec",
@@ -98,7 +94,7 @@
   "log.ports.p": "Shipping: bulk vessel or 20' containers. Packing options: bulk with liner or jumbo bags (upon request).",
 
   "log.compliance.h": "EU Compliance",
-  "log.compliance.p": "Documentation includes Certificate of Origin, commercial invoices, and analysis reports. Documents support compliance with applicable EU requirements and product safety regulations.",
+  "log.compliance.p": "Documentation includes the Certificate of Origin, commercial invoices, and analysis reports. Documents support compliance with applicable EU requirements and product safety regulations.",
 
   "how.title": "How We Work (EU Brokerage & Risk-Control)",
   "how.lead": "Euro Agri Trading s.r.o. operates as an independent EU-based brokerage and coordination company. We connect verified suppliers with qualified buyers and support the transaction process in a structured and compliant manner.",
@@ -108,7 +104,7 @@
   "how.p2": "No advance payments",
   "how.p3": "Independent inspection at loading: SGS / Intertek / BV (as agreed)",
   "how.conf.title": "Confidentiality & Brokerage Mandate",
-"how.conf.text": "We follow professional confidentiality when introducing parties. Counterparty details are shared only after receiving a serious request (RFQ/LOI), and we confirm the brokerage mandate in writing (Brokerage Mandate/Agreement) to ensure clarity, transparency, and protection for all parties. Repeat orders/transactions with introduced parties remain covered within the agreed protection term.",
+  "how.conf.text": "We apply professional confidentiality when introducing parties. Counterparty details are shared only after receiving a serious request (RFQ/LOI), and we confirm the brokerage mandate in writing (Brokerage Mandate/Agreement) to ensure clarity, transparency, and protection for all parties. Repeat orders/transactions with introduced parties remain covered within the agreed protection term.",
   "how.p4": "Shipment-specific documentation: COA/SGS per shipment; heavy metals (e.g., Cd) included upon request / market requirement",
   "how.p5": "Buyer-facing documents: full originals and shipment-specific certificates are shared with verified buyers upon request",
   "how.noteTitle": "Important Note",
@@ -155,7 +151,7 @@
   "about.pricing": "We support the process with transparent coordination and competitive terms based on verified sourcing.",
   "about.p2": "Independent inspection (SGS / Intertek / BV) and samples can be arranged upon request (as agreed).",
   "about.p3": "We operate under Czech registration and follow applicable EU customs and trade requirements.",
- "about.note": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract; contract terms and performance obligations are agreed directly between seller and buyer.",
+  "about.note": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract; contract terms and performance obligations are agreed directly between seller and buyer.",
 
   "payment.title": "Payments / Proforma",
   "payment.opt.lcSight": "LC at sight (100%) — Preferred",
@@ -169,7 +165,6 @@
   "payment.note": "Bank details are provided in the Proforma Invoice (PI) upon request.",
   "payment.btn.request": "Request Proforma / Payment Details",
 
-  
   "contact.title": "Get in touch",
   "form.name": "Name",
   "form.email": "Email",
