@@ -78,8 +78,9 @@
   "coa.th.hum": "Feuchtigkeit",
 
   "sieve.title": "Siebanalyse — Phosphatgestein (Beispiel)",
-  "sieve.size": "Größe",
-  "sieve.percent": "Prozent (Gewicht)",
+"sieve.sub": "Granulometrie und Partikelgrößenverteilung — geeignet zum Mahlen oder zur direkten Anwendung.",
+"sieve.size": "Größe",
+"sieve.percent": "Prozent (Gewicht)",
 
   "coa.export": "Siebung als CSV exportieren",
   "coa.print": "PDF anzeigen — Spezifikation",
