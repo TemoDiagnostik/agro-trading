@@ -162,6 +162,8 @@
   "payment.disclaimer": "Konečná platební metoda se sjednává případ od případu na základě shody, ověření protistrany a struktury transakce.",
   "payment.lead": "Platby a vypořádání obchodu probíhají přímo mezi kupujícím a prodávajícím. Euro Agri Trading s.r.o. působí pouze jako nezávislý zprostředkovatel poskytující koordinaci a podporu procesu.",
   "payment.note": "Bankovní údaje jsou uvedeny v proforma faktuře (PI) na vyžádání.",
+  "payment.btn.request": "Vyžádat proforma / platební údaje",
+
 
   "contact.title": "Kontaktujte nás",
   "form.name": "Jméno",
