@@ -153,6 +153,7 @@
   "about.p3": "Nous opérons sous immatriculation tchèque et suivons les exigences applicables de l’UE en matière de douane et de commerce.",
   "about.note": "Euro Agri Trading s.r.o. n’est pas partie contractante au contrat de vente ; les conditions contractuelles et obligations d’exécution sont convenues directement entre le vendeur et l’acheteur.",
 
+  "payment.title": "Paiements / Pro forma",
   "payment.opt.lcSight": "LC à vue (100%) — préférée",
   "payment.opt.lcUsance": "LC usance / différée (sous réserve d’approbation)",
   "payment.opt.collection": "Encaissement documentaire (CAD / D/P ou D/A) — pour acheteurs récurrents qualifiés",
