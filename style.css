@@ -810,6 +810,29 @@ form label {
 
 
 
+.contact-icons{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-top:8px;
+}
+.icon-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  opacity:.85;
+}
+.icon-link:hover{
+  opacity:1;
+}
+.icon-link svg{
+  width:18px;
+  height:18px;
+  display:block;
+}
+
+
 /* ===== 💳 Payment Section ===== */
 .payment-section {
   background: rgba(255, 255, 255, 0.05);
