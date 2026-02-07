@@ -810,27 +810,35 @@ form label {
 
 
 
-.contact-icons{
+.contact-links{
   display:flex;
-  gap:10px;
-  align-items:center;
-  margin-top:8px;
+  flex-direction:column;
+  gap:8px;
+  margin-top:10px;
 }
-.icon-link{
+
+.contact-item{
   display:inline-flex;
   align-items:center;
-  justify-content:center;
+  gap:10px;
   text-decoration:none;
-  opacity:.85;
+  font-weight:500;
 }
-.icon-link:hover{
-  opacity:1;
-}
-.icon-link svg{
-  width:18px;
-  height:18px;
+
+.contact-item .icon{
+  width:20px;
+  height:20px;
   display:block;
+  fill:currentColor;
 }
+
+/* Brand colors */
+.contact-item.wa{ color:#25D366; }   /* WhatsApp green */
+.contact-item.mail{ color:#6B7280; } /* neutral gray (clean email) */
+.contact-item.li{ color:#0A66C2; }   /* LinkedIn blue */
+
+/* Hover */
+.contact-item:hover{ opacity:.9; text-decoration:underline; }
 
 
 /* ===== 💳 Payment Section ===== */
