@@ -810,11 +810,13 @@ form label {
 
 
 
+/* Address + IDs lines */
 .contact-line{
   display:flex;
   align-items:center;
   gap:10px;
   flex-wrap:wrap;
+  margin: 0 0 10px 0;
 }
 
 .contact-line .icon{
@@ -824,18 +826,58 @@ form label {
   fill:currentColor;
 }
 
-.contact-line .icon-loc{
-  color:#10B981; /* أخضر هادئ يليق مع ثيمك */
+.icon-loc{ color:#10B981; }   /* location icon */
+.icon-ico{ color:#6B7280; }   /* IČO icon (neutral) */
+
+/* Verify link */
+.verify-link{
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,.15);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  color: inherit;             /* text stays same as site */
+  opacity: .85;
+}
+.verify-link:hover{
+  opacity: 1;
+  text-decoration: underline;
 }
 
-/* Brand colors */
-.contact-item.wa{ color:#25D366; }   /* WhatsApp green */
-.contact-item.mail{ color:#6B7280; } /* neutral gray (clean email) */
-.contact-item.li{ color:#0A66C2; }   /* LinkedIn blue */
+/* Contact links vertical */
+.contact-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:8px;
+}
 
-/* Hover */
-.contact-item:hover{ opacity:.9; text-decoration:underline; }
+.contact-item{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  font-weight:500;
+  color: inherit;             /* keep link/text same as site */
+}
 
+.contact-item .icon{
+  width:20px;
+  height:20px;
+  display:block;
+  fill:currentColor;
+}
+
+/* Brand colors ONLY for icons */
+.contact-item.wa .icon{ color:#25D366; }  /* WhatsApp */
+.contact-item.mail .icon{ color:#6B7280; }/* Email (clean neutral) */
+.contact-item.li .icon{ color:#0A66C2; }  /* LinkedIn */
+
+.contact-item:hover{
+  text-decoration: underline;
+  opacity: .95;
+}
 
 /* ===== 💳 Payment Section ===== */
 .payment-section {
