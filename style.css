@@ -810,26 +810,22 @@ form label {
 
 
 
-.contact-links{
+.contact-line{
   display:flex;
-  flex-direction:column;
-  gap:8px;
-  margin-top:10px;
-}
-
-.contact-item{
-  display:inline-flex;
   align-items:center;
   gap:10px;
-  text-decoration:none;
-  font-weight:500;
+  flex-wrap:wrap;
 }
 
-.contact-item .icon{
+.contact-line .icon{
   width:20px;
   height:20px;
   display:block;
   fill:currentColor;
+}
+
+.contact-line .icon-loc{
+  color:#10B981; /* أخضر هادئ يليق مع ثيمك */
 }
 
 /* Brand colors */
