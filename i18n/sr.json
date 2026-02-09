@@ -140,11 +140,11 @@
   "msds.sub": "Bezbednosno-tehnički list (sažetak) za usklađenost i smernice bezbednog rukovanja.",
   "msds.note": "Javni uzorak — MSDS pošiljke na zahtev.",
 
-  "lowcad.title": "Fosfatna ruda sa niskim kadmijumom (31–32% P₂O₅)",
-  "lowcad.sub": "Uskoro / na zahtev (uz mogućnost prilagođavanja). Nudi se tek nakon prijema COA/inspekcije treće strane specifične za pošiljku (SGS/Intertek/BV) koja potvrđuje Cd (u ppm/mg/kg) i teške metale za stvarni lot. Dostupnost 31–32% zavisi od prilagođavanja i COA specifičnog za pošiljku.",
-  "lowcad.tag1": "Uskoro / na zahtev (uz mogućnost prilagođavanja)",
-  "lowcad.tag2": "Potreban COA specifičan za pošiljku",
-  "lowcad.cta.avail": "Upitaj dostupnost (RFQ)",
+  "lowcad.title": "Stenski fosfat sa niskim kadmijumom (31–32% P₂O₅)",
+"lowcad.sub": "Dostupno na zahtev. Nudi se samo uz COA i inspekciju treće strane za konkretnu pošiljku, koja potvrđuje Cd i teške metale.",
+"lowcad.tag1": "Na zahtev",
+"lowcad.tag2": "Potreban COA za konkretnu pošiljku",
+"lowcad.cta.avail": "Pitajte za dostupnost (RFQ)",
 
   "about.title": "O nama",
   "about.p1": "Euro Agri Trading s.r.o. je brokerska i koordinaciona kompanija sa sedištem u EU koja povezuje kvalifikovane kupce sa verifikovanim dobavljačima.",

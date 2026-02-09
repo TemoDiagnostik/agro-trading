@@ -139,10 +139,12 @@
   "msds.sub": "Sicherheitsdatenblatt (Zusammenfassung) zur Konformität und sicheren Handhabung.",
   "msds.note": "Nur öffentliches Muster — MSDS pro Lieferung auf Anfrage verfügbar.",
 
-  "lowcad.title": "Niedrig-Cadmium-Phosphatgestein (31–32 % P₂O₅)",
-  "lowcad.sub": "Bald verfügbar / auf Anfrage (anpassbar). Vermarktung nur nach COA & Drittanalyse (SGS/Intertek/BV) mit Cd- und Schwermetallwerten (ppm/mg/kg) der tatsächlichen Charge. Verfügbarkeit abhängig von COA & Anpassung.",
-  "lowcad.tag1": "Bald verfügbar / auf Anfrage (anpassbar)",
-  "lowcad.tag2": "Chargenspezifisches COA erforderlich",
+ "lowcad.title": "Niedrig-Cadmium Rohphosphat (31–32% P₂O₅)",
+"lowcad.sub": "Auf Anfrage verfügbar. Vermarktung nur mit chargen-/sendungsspezifischem COA und Drittprüfung, die Cd und Schwermetalle bestätigt.",
+"lowcad.tag1": "Auf Anfrage",
+"lowcad.tag2": "Sendungsspezifisches COA erforderlich",
+"lowcad.cta.avail": "Verfügbarkeit anfragen (RFQ)",
+
 
   "about.title": "Über uns",
   "about.p1": "Euro Agri Trading s.r.o. ist ein EU-basiertes Vermittlungs- und Koordinationsunternehmen, das qualifizierte Käufer mit geprüften Lieferanten verbindet.",

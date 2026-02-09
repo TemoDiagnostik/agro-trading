@@ -140,11 +140,11 @@
   "msds.sub": "Säkerhetsdatablad (sammanfattning) för efterlevnad och vägledning för säker hantering.",
   "msds.note": "Endast offentlig provversion — MSDS för sändning på begäran.",
 
-  "lowcad.title": "Låg-kadmium fosfatsten (31–32% P₂O₅)",
-  "lowcad.sub": "Kommer snart / på begäran (beroende på anpassning). Marknadsförs endast efter att sändningsspecifikt tredjeparts COA/inspektion (SGS/Intertek/BV) som bekräftar Cd (rapporterat i ppm/mg/kg) och tungmetaller för den faktiska batchen har erhållits. Tillgänglighet av 31–32% beror på anpassning och sändningsspecifikt COA.",
-  "lowcad.tag1": "Kommer snart / på begäran (beroende på anpassning)",
-  "lowcad.tag2": "Sändningsspecifikt COA krävs",
-  "lowcad.cta.avail": "Fråga om tillgänglighet (RFQ)",
+ "lowcad.title": "Lågkadmium fosfatberg (31–32% P₂O₅)",
+"lowcad.sub": "Tillgänglig på begäran. Marknadsförs endast med sändningsspecifikt COA och tredjepartsinspektion som bekräftar Cd och tungmetaller.",
+"lowcad.tag1": "På begäran",
+"lowcad.tag2": "Sändningsspecifikt COA krävs",
+"lowcad.cta.avail": "Fråga om tillgänglighet (RFQ)",
 
   "about.title": "Om oss",
   "about.p1": "Euro Agri Trading s.r.o. är ett EU-baserat mäklar- och koordinationsbolag som kopplar samman kvalificerade köpare med verifierade leverantörer.",

@@ -140,11 +140,11 @@
   "msds.sub": "Ficha de Dados de Segurança (resumo) para conformidade e orientação de manuseamento seguro.",
   "msds.note": "Apenas amostra pública — MSDS da expedição mediante pedido.",
 
-  "lowcad.title": "Fosfato de rocha de baixo cádmio (31–32% P₂O₅)",
-  "lowcad.sub": "Em breve / mediante pedido (sujeito a personalização). Comercializado apenas após receção de COA/inspeção de terceiros específico por expedição (SGS/Intertek/BV) confirmando Cd (reportado em ppm/mg/kg) e metais pesados para o lote real. A disponibilidade de 31–32% está sujeita a personalização e COA específico por expedição.",
-  "lowcad.tag1": "Em breve / mediante pedido (sujeito a personalização)",
-  "lowcad.tag2": "COA específico por expedição obrigatório",
-  "lowcad.cta.avail": "Consultar disponibilidade (RFQ)",
+ "lowcad.title": "Fosfato de rocha com baixo cádmio (31–32% P₂O₅)",
+"lowcad.sub": "Disponível sob consulta. Comercializado apenas com COA e inspeção de terceiros específica por embarque, confirmando Cd e metais pesados.",
+"lowcad.tag1": "Sob consulta",
+"lowcad.tag2": "COA específico do embarque obrigatório",
+"lowcad.cta.avail": "Solicitar disponibilidade (RFQ)",
 
   "about.title": "Sobre nós",
   "about.p1": "A Euro Agri Trading s.r.o. é uma empresa de corretagem e coordenação baseada na UE que liga compradores qualificados a fornecedores verificados.",

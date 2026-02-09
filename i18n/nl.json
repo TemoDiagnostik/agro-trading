@@ -140,11 +140,11 @@
   "msds.sub": "Veiligheidsinformatieblad (samenvatting) voor compliance en veilige hantering.",
   "msds.note": "Alleen openbaar voorbeeld — MSDS per zending op verzoek.",
 
-  "lowcad.title": "Laag-cadmium rotsfosfaat (31–32% P₂O₅)",
-  "lowcad.sub": "Binnenkort / op verzoek (afhankelijk van maatwerk). Wordt alleen aangeboden na ontvangst van COA/inspectie door derden per zending (SGS/Intertek/BV) met Cd (ppm/mg/kg) en zware-metalenwaarden voor de daadwerkelijke partij. Beschikbaarheid van 31–32% is afhankelijk van maatwerk en COA per zending.",
-  "lowcad.tag1": "Binnenkort / op verzoek (afhankelijk van maatwerk)",
-  "lowcad.tag2": "COA per zending vereist",
-  "lowcad.cta.avail": "Beschikbaarheid opvragen (RFQ)",
+ "lowcad.title": "Laag-cadmium fosfaatgesteente (31–32% P₂O₅)",
+"lowcad.sub": "Op aanvraag beschikbaar. Alleen aangeboden met een zending-specifieke COA en inspectie door derden die Cd en zware metalen bevestigt.",
+"lowcad.tag1": "Op aanvraag",
+"lowcad.tag2": "Zending-specifieke COA vereist",
+"lowcad.cta.avail": "Beschikbaarheid aanvragen (RFQ)",
 
   "about.title": "Over ons",
   "about.p1": "Euro Agri Trading s.r.o. is een EU-gebaseerde bemiddelings- en coördinatiepartner die gekwalificeerde kopers verbindt met geverifieerde leveranciers.",

@@ -140,11 +140,11 @@
   "msds.sub": "Sikkerhedsdatablad (resumé) til compliance og sikker håndtering.",
   "msds.note": "Kun offentlig prøve — MSDS for forsendelse efter anmodning.",
 
-  "lowcad.title": "Lav-cadmium fosfatsten (31–32% P₂O₅)",
-  "lowcad.sub": "Kommer snart / efter anmodning (afhængig af tilpasning). Markedsføres kun efter modtagelse af forsendelsesspecifikt tredjeparts COA/inspektion (SGS/Intertek/BV), der bekræfter Cd (angivet i ppm/mg/kg) og tungmetaller for den faktiske batch. Tilgængelighed af 31–32% afhænger af tilpasning og forsendelsesspecifikt COA.",
-  "lowcad.tag1": "Kommer snart / efter anmodning (afhængig af tilpasning)",
-  "lowcad.tag2": "Forsendelsesspecifikt COA kræves",
-  "lowcad.cta.avail": "Spørg om tilgængelighed (RFQ)",
+ "lowcad.title": "Lav-cadmium fosfatsten (31–32% P₂O₅)",
+"lowcad.sub": "Tilgængelig på forespørgsel. Markedsføres kun med forsendelsesspecifikt COA og tredjepartsinspektion, der bekræfter Cd og tungmetaller.",
+"lowcad.tag1": "På forespørgsel",
+"lowcad.tag2": "Forsendelsesspecifikt COA kræves",
+"lowcad.cta.avail": "Spørg om tilgængelighed (RFQ)",
 
   "about.title": "Om os",
   "about.p1": "Euro Agri Trading s.r.o. er en EU-baseret mægler- og koordineringsvirksomhed, der forbinder kvalificerede købere med verificerede leverandører.",

@@ -140,11 +140,11 @@
   "msds.sub": "Biztonsági adatlap (összefoglaló) megfelelőséghez és biztonságos kezeléshez.",
   "msds.note": "Csak nyilvános minta — szállítmány MSDS kérésre.",
 
-  "lowcad.title": "Alacsony kadmiumtartalmú kőzetfoszfát (31–32% P₂O₅)",
-  "lowcad.sub": "Hamarosan / kérésre (testreszabás függvényében). Csak akkor kerül piacra, ha rendelkezésre áll szállítmány-specifikus COA/harmadik fél általi ellenőrzés (SGS/Intertek/BV), amely igazolja a Cd-t (ppm/mg/kg) és a nehézfémeket a tényleges tételre. A 31–32% elérhetősége testreszabástól és szállítmány-specifikus COA-tól függ.",
-  "lowcad.tag1": "Hamarosan / kérésre (testreszabás függvényében)",
-  "lowcad.tag2": "Szállítmány-specifikus COA szükséges",
-  "lowcad.cta.avail": "Elérhetőség érdeklődése (RFQ)",
+ "lowcad.title": "Alacsony kadmiumtartalmú foszfátkő (31–32% P₂O₅)",
+"lowcad.sub": "Kérésre elérhető. Csak szállítmány-specifikus COA-val és harmadik fél általi ellenőrzéssel forgalmazzuk, amely igazolja a Cd-t és a nehézfémeket.",
+"lowcad.tag1": "Kérésre",
+"lowcad.tag2": "Szállítmány-specifikus COA szükséges",
+"lowcad.cta.avail": "Érdeklődjön a készletről (RFQ)",
 
   "about.title": "Rólunk",
   "about.p1": "Az Euro Agri Trading s.r.o. EU-alapú brókeri és koordinációs vállalat, amely minősített vevőket kapcsol össze ellenőrzött beszállítókkal.",

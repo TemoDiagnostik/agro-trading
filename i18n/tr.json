@@ -140,11 +140,11 @@
   "msds.sub": "Uygunluk ve güvenli kullanım rehberi için Malzeme Güvenlik Bilgi Formu (özet).",
   "msds.note": "Sadece kamuya açık örnek — sevkiyat MSDS’si talep üzerine.",
 
-  "lowcad.title": "Düşük Kadmiyumlu Kaya Fosfatı (P₂O₅ %31–32)",
-  "lowcad.sub": "Yakında / talep üzerine (özelleştirmeye bağlı). Yalnızca sevkiyata özel üçüncü taraf COA/denetimi (SGS/Intertek/BV) Cd’yi (ppm/mg/kg olarak) ve ağır metalleri doğruladığında pazarlanır. %31–32 mevcudiyeti özelleştirme ve sevkiyata özel COA’ya bağlıdır.",
-  "lowcad.tag1": "Yakında / talep üzerine (özelleştirmeye bağlı)",
-  "lowcad.tag2": "Sevkiyata özel COA gereklidir",
-  "lowcad.cta.avail": "Uygunluğu Sor (RFQ)",
+  "lowcad.title": "Düşük kadmiyumlu kaya fosfatı (31–32% P₂O₅)",
+"lowcad.sub": "Talep üzerine temin edilir. Yalnızca sevkiyata özel COA ve üçüncü taraf muayenesi ile pazarlanır; Cd ve ağır metalleri doğrular.",
+"lowcad.tag1": "Talep üzerine",
+"lowcad.tag2": "Sevkiyata özel COA gerekli",
+"lowcad.cta.avail": "Uygunluk sor (RFQ)",
 
   "about.title": "Hakkımızda",
   "about.p1": "Euro Agri Trading s.r.o., nitelikli alıcıları doğrulanmış tedarikçilerle buluşturan AB merkezli bir brokerlik ve koordinasyon şirketidir.",

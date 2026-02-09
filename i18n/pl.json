@@ -140,11 +140,11 @@
   "msds.sub": "Karta charakterystyki (podsumowanie) dla zgodności i wskazówek bezpiecznego obchodzenia się.",
   "msds.note": "Tylko próbka publiczna — MSDS dla wysyłki na życzenie.",
 
-  "lowcad.title": "Fosforyt o niskiej zawartości kadmu (31–32% P₂O₅)",
-  "lowcad.sub": "Wkrótce / na życzenie (zależnie od personalizacji). Oferowany dopiero po otrzymaniu COA/inspekcji strony trzeciej dla konkretnej wysyłki (SGS/Intertek/BV) potwierdzających Cd (raportowane w ppm/mg/kg) oraz metale ciężkie dla rzeczywistej partii. Dostępność 31–32% zależy od personalizacji i COA dla konkretnej wysyłki.",
-  "lowcad.tag1": "Wkrótce / na życzenie (zależnie od personalizacji)",
-  "lowcad.tag2": "Wymagane COA dla konkretnej wysyłki",
-  "lowcad.cta.avail": "Zapytaj o dostępność (RFQ)",
+ "lowcad.title": "Fosforyt o niskiej zawartości kadmu (31–32% P₂O₅)",
+"lowcad.sub": "Dostępny na zapytanie. Oferowany wyłącznie z COA i kontrolą strony trzeciej dla danej wysyłki, potwierdzającą Cd i metale ciężkie.",
+"lowcad.tag1": "Na zapytanie",
+"lowcad.tag2": "Wymagane COA dla danej wysyłki",
+"lowcad.cta.avail": "Zapytaj o dostępność (RFQ)",
 
   "about.title": "O nas",
   "about.p1": "Euro Agri Trading s.r.o. to firma brokerska i koordynacyjna z siedzibą w UE, łącząca kwalifikowanych kupujących ze zweryfikowanymi dostawcami.",

@@ -140,11 +140,11 @@
   "msds.sub": "Fiche de données de sécurité (résumé) pour la conformité et les consignes de manipulation en sécurité.",
   "msds.note": "Exemple public uniquement — MSDS d’expédition sur demande.",
 
-  "lowcad.title": "Phosphate naturel faible en cadmium (31–32% P₂O₅)",
-  "lowcad.sub": "Bientôt / sur demande (sous réserve de personnalisation). Commercialisé uniquement après réception d’un COA/inspection tiers par expédition (SGS/Intertek/BV) confirmant le Cd (rapporté en ppm/mg/kg) et les métaux lourds pour le lot réel. La disponibilité du 31–32% dépend de la personnalisation et d’un COA par expédition.",
-  "lowcad.tag1": "Bientôt / sur demande (sous réserve de personnalisation)",
-  "lowcad.tag2": "COA par expédition requis",
-  "lowcad.cta.avail": "Demander la disponibilité (RFQ)",
+  "lowcad.title": "Phosphate naturel à faible cadmium (31–32% P₂O₅)",
+"lowcad.sub": "Disponible sur demande. Commercialisé uniquement avec un COA et une inspection tiers spécifiques à l’expédition confirmant le Cd et les métaux lourds.",
+"lowcad.tag1": "Sur demande",
+"lowcad.tag2": "COA spécifique à l’expédition requis",
+"lowcad.cta.avail": "Demander la disponibilité (RFQ)",
 
   "about.title": "À propos de nous",
   "about.p1": "Euro Agri Trading s.r.o. est une société de courtage et de coordination basée dans l’UE reliant des acheteurs qualifiés à des fournisseurs vérifiés.",

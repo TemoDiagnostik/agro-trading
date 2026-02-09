@@ -141,10 +141,10 @@
   "msds.note": "Solo campione pubblico — MSDS della spedizione su richiesta.",
 
   "lowcad.title": "Fosfato di roccia a basso cadmio (31–32% P₂O₅)",
-  "lowcad.sub": "Prossimamente / su richiesta (soggetto a personalizzazione). Commercializzato solo dopo aver ricevuto un COA/ispezione di terze parti per spedizione (SGS/Intertek/BV) che confermi Cd (riportato in ppm/mg/kg) e metalli pesanti per il lotto effettivo. La disponibilità del 31–32% è soggetta a personalizzazione e a COA per spedizione.",
-  "lowcad.tag1": "Prossimamente / su richiesta (soggetto a personalizzazione)",
-  "lowcad.tag2": "COA per spedizione richiesto",
-  "lowcad.cta.avail": "Chiedi disponibilità (RFQ)",
+"lowcad.sub": "Disponibile su richiesta. Commercializzato solo con COA e ispezione di terza parte specifici per spedizione che confermino Cd e metalli pesanti.",
+"lowcad.tag1": "Su richiesta",
+"lowcad.tag2": "COA specifico per spedizione richiesto",
+"lowcad.cta.avail": "Richiedi disponibilità (RFQ)",
 
   "about.title": "Chi siamo",
   "about.p1": "Euro Agri Trading s.r.o. è una società di intermediazione e coordinamento con sede nell’UE che collega acquirenti qualificati con fornitori verificati.",

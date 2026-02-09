@@ -140,11 +140,11 @@
   "msds.sub": "Fișă cu date de securitate (rezumat) pentru conformitate și ghidaj de manipulare sigură.",
   "msds.note": "Doar mostră publică — MSDS pentru expediție la cerere.",
 
-  "lowcad.title": "Fosfat de rocă cu cadmiu redus (31–32% P₂O₅)",
-  "lowcad.sub": "În curând / la cerere (sub rezerva personalizării). Este promovat doar după primirea unui COA/inspecții de la terți, specifice expediției (SGS/Intertek/BV), care confirmă Cd (raportat în ppm/mg/kg) și metalele grele pentru lotul real. Disponibilitatea 31–32% depinde de personalizare și COA specific expediției.",
-  "lowcad.tag1": "În curând / la cerere (sub rezerva personalizării)",
-  "lowcad.tag2": "COA specific expediției necesar",
-  "lowcad.cta.avail": "Întreabă despre disponibilitate (RFQ)",
+ "lowcad.title": "Fosfat de rocă cu cadmiu redus (31–32% P₂O₅)",
+"lowcad.sub": "Disponibil la cerere. Comercializat doar cu COA și inspecție terță parte, specifice expediției, care confirmă Cd și metalele grele.",
+"lowcad.tag1": "La cerere",
+"lowcad.tag2": "COA specific expediției necesar",
+"lowcad.cta.avail": "Cere disponibilitatea (RFQ)",
 
   "about.title": "Despre noi",
   "about.p1": "Euro Agri Trading s.r.o. este o companie de brokeraj și coordonare cu bază în UE, care conectează cumpărători calificați cu furnizori verificați.",

@@ -140,11 +140,11 @@
   "msds.sub": "Käyttöturvallisuustiedote (yhteenveto) vaatimustenmukaisuuden ja turvallisen käsittelyn ohjeistukseen.",
   "msds.note": "Vain julkinen näyte — lähetyskohtainen MSDS pyynnöstä.",
 
-  "lowcad.title": "Matalakadmiuminen fosfaattikivi (31–32% P₂O₅)",
-  "lowcad.sub": "Tulossa / pyynnöstä (räätälöinnin mukaan). Markkinoidaan vasta sen jälkeen, kun lähetyskohtainen kolmannen osapuolen COA/tarkastus (SGS/Intertek/BV), joka vahvistaa Cd:n (raportoitu ppm/mg/kg) ja raskasmetallit todelliselle erälle, on saatu. 31–32% saatavuus riippuu räätälöinnistä ja lähetyskohtaisesta COA:sta.",
-  "lowcad.tag1": "Tulossa / pyynnöstä (räätälöinnin mukaan)",
-  "lowcad.tag2": "Lähetyskohtainen COA vaaditaan",
-  "lowcad.cta.avail": "Kysy saatavuutta (RFQ)",
+  "lowcad.title": "Vähäkadmiuminen fosfaattikivi (31–32% P₂O₅)",
+"lowcad.sub": "Saatavilla pyynnöstä. Markkinoidaan vain erä-/lähetyskohtaisen COA:n ja kolmannen osapuolen tarkastuksen kanssa, jotka varmistavat Cd:n ja raskasmetallit.",
+"lowcad.tag1": "Pyynnöstä",
+"lowcad.tag2": "Lähetyskohtainen COA vaaditaan",
+"lowcad.cta.avail": "Kysy saatavuutta (RFQ)",
 
   "about.title": "Tietoa meistä",
   "about.p1": "Euro Agri Trading s.r.o. on EU-pohjainen välitys- ja koordinointiyhtiö, joka yhdistää pätevät ostajat varmennettuihin toimittajiin.",

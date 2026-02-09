@@ -140,11 +140,11 @@
   "msds.sub": "Bezpečnostní list (shrnutí) pro shodu a pokyny k bezpečné manipulaci.",
   "msds.note": "Veřejný vzorek — MSDS pro zásilku na vyžádání.",
 
-  "lowcad.title": "Nízkokadmiový Rock Phosphate (31–32% P₂O₅)",
-  "lowcad.sub": "Již brzy / na vyžádání (dle možností úprav). Nabízeno až po obdržení COA/inspekce třetí stranou pro konkrétní zásilku (SGS/Intertek/BV), která potvrzuje Cd (uváděno v ppm/mg/kg) a těžké kovy pro danou šarži. Dostupnost 31–32% závisí na úpravě a COA pro konkrétní zásilku.",
-  "lowcad.tag1": "Již brzy / na vyžádání (dle možností úprav)",
-  "lowcad.tag2": "Vyžadováno COA pro konkrétní zásilku",
-  "lowcad.cta.avail": "Zeptejte se na dostupnost (RFQ)",
+  "lowcad.title": "Nízkokadmiový fosfátový kámen (31–32% P₂O₅)",
+"lowcad.sub": "Dostupné na vyžádání. Nabízeno pouze s COA a kontrolou třetí strany specifickou pro danou zásilku, potvrzující Cd a těžké kovy.",
+"lowcad.tag1": "Na vyžádání",
+"lowcad.tag2": "Vyžadováno COA pro konkrétní zásilku",
+"lowcad.cta.avail": "Zeptejte se na dostupnost (RFQ)",
 
   "about.title": "O nás",
   "about.p1": "Euro Agri Trading s.r.o. je koordinační a zprostředkovatelská společnost se sídlem v EU, která propojuje kvalifikované odběratele s ověřenými dodavateli.",

@@ -140,11 +140,11 @@
   "msds.sub": "Bezpečnostný list (zhrnutie) pre súlad a pokyny na bezpečnú manipuláciu.",
   "msds.note": "Verejná vzorka — MSDS pre zásielku na vyžiadanie.",
 
-  "lowcad.title": "Nízkokadmiová fosfátová hornina (31–32% P₂O₅)",
-  "lowcad.sub": "Už čoskoro / na vyžiadanie (v závislosti od možnosti prispôsobenia). Ponúkané až po obdržaní COA/inšpekcie tretej strany pre konkrétnu zásielku (SGS/Intertek/BV), ktorá potvrdzuje Cd (uvádzané v ppm/mg/kg) a ťažké kovy pre danú šaržu. Dostupnosť 31–32% závisí od prispôsobenia a COA pre konkrétnu zásielku.",
-  "lowcad.tag1": "Už čoskoro / na vyžiadanie (v závislosti od možnosti prispôsobenia)",
-  "lowcad.tag2": "Vyžaduje sa COA pre konkrétnu zásielku",
-  "lowcad.cta.avail": "Opýtať sa na dostupnosť (RFQ)",
+  "lowcad.title": "Nízko-kadmiový fosfátový kameň (31–32% P₂O₅)",
+"lowcad.sub": "Dostupné na vyžiadanie. Ponúkané iba s COA a kontrolou tretej strany špecifickou pre danú zásielku, potvrdzujúcou Cd a ťažké kovy.",
+"lowcad.tag1": "Na vyžiadanie",
+"lowcad.tag2": "Vyžaduje sa COA pre konkrétnu zásielku",
+"lowcad.cta.avail": "Opýtajte sa na dostupnosť (RFQ)",
 
   "about.title": "O nás",
   "about.p1": "Euro Agri Trading s.r.o. je sprostredkovateľská a koordinačná spoločnosť so sídlom v EÚ, ktorá spája kvalifikovaných odberateľov s overenými dodávateľmi.",
