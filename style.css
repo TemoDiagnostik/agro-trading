@@ -119,231 +119,109 @@ header .lang span {
 
 
 
-/* =============== HERO SECTION (FULL WIDTH BRIGHT VERSION) =============== */
-.hero,
+/* ===== HERO IMPROVEMENTS ===== */
+
 .hero-bleed {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 60px 20px;
-  background: url("hero-bg-desktop.png") center/cover no-repeat;
-  background-color: #ffffff;
-  overflow: hidden;
-  text-align: left;
-  z-index: 0;
-  height: 100vh;
+  padding: 120px 0 80px;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
 }
 
-/* تحريك صندوق المواصفات داخل الهيرو */
-.hero-specs-box{
-  margin-top: 40px;     /* زوّدها لـ 50–60 لو عايز ينزل أكتر */
-  /* (اختياري للتجميل)
-  padding: .8rem 1rem;
-  background: rgba(0,0,0,.25);
-  border-left: 4px solid #e6c16d;
-  border-radius: 8px;
-  */
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-
-/* إزالة العنصر الوهمي */
-.hero::before,
-.hero-bleed::before {
-  content: none;
-}
-
-/* النصوص العامة داخل hero */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
-  position: relative;
-  z-index: 2;
-}
-
-/* العنوان الرئيسي */
-.hero h1 {
-  font-size: clamp(36px, 6vw, 60px);
+.hero-title {
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  color: #0f172a;
 }
 
-/* الفقرات العامة */
-.hero p {
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.5;
-  max-width: 720px;
-  margin-bottom: 1rem;
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 32px;
+  max-width: 820px;
 }
 
-/* ✅ تخصيص فقرة we serve */
-.hero-bleed .lead {
-  position: absolute;
-  bottom: 100px;
-  left: 30px;
-  font-size: 13px;
-  line-height: 1.5;
-  max-width: 500px;
-  color: #e0e0e0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  z-index: 5;
-  margin: 0;
+.hero-specs-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
 }
 
-/* الجملة الثانية */
-.hero-bleed .small-text[data-i18n="hero.tradeNote"] {
-  position: absolute;
-  bottom: 80px;
-  left: 30px;
-  font-size: 13px;
-  color: #e0e0e0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  max-width: 500px;
-  line-height: 1.4;
-  z-index: 5;
-  margin: 0;
+.hero-specs-box ul {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 18px;
 }
 
-/* مواصفات المنتج */
-.hero-product-specs {
-  position: absolute;
-  top: 40%;
-  left: 40px; /* محاذاة إلى اليسار */
-  transform: translateY(-50%); /* تحافظ على التوسيط العمودي فقط */
-  color: #ffffff;
-  text-shadow: 2px 2px 6px rgb(95 95 95 / 60%);
-  max-width: 700px;
-  font-size: 18px;
-  line-height: 1.7;
-  text-align: left; /* محاذاة النص لليسار */
-  z-index: 5;
+.hero-specs-box li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #475569;
 }
 
-/* CTA row */
-.hero .cta-row {
+.trade-note {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* CTA buttons */
+.cta-row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 22px;
-  position: relative;
-  z-index: 2;
+  gap: 16px;
+  margin-top: 10px;
 }
 
-/* تعديل التباعد بين الأزرار */
-.hero .cta-row {
-  gap: 24px; /* زيادت التباعد بين الأزرار */
-  flex-direction: column; /* جعل الأزرار في عمود على الموبايل */
-  align-items: center; /* التأكد من محاذاة الأزرار في المنتصف */
-}
-
-/* أزرار CTA الرئيسية */
-.hero .btn-primary {
-  background-color: #0a662f;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  font-size: 18px;  /* زيادة حجم الخط */
-  padding: 16px 40px; /* زيادة الحجم الكلي */
-  margin-bottom: 12px; /* تباعد أسفل الزر */
-}
-
-/* تأثير hover على زر CTA */
-.hero .btn-primary:hover {
-  background-color: #ffffff;
-  color: #0a662f;
-  transform: translateY(-2px);  /* تأثير الحركة الصغيرة */
-}
-
-/* أزرار CTA الثانوية */
-.hero .btn-outline {
-  background-color: #0d9488;
-  border: 2px solid #0d9488;
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  font-size: 16px;  /* حجم أقل من الزر الرئيسي */
-  padding: 14px 32px; /* حجم أصغر */
-}
-
-.hero .btn-outline:hover {
-  background-color: #0a6e64;
-  border-color: #0a6e64;
-  color: #ffffff;
-  transform: translateY(-1px); /* تأثير الحركة الصغيرة */
-}
-/* النصوص الثانوية */
-.hero .muted,
-.hero .note,
-.hero .lead {
-  color: #ffffff;
-  opacity: 1;
-}
-
-/* ========= Responsive fix for mobile ========= */
-@media (max-width: 768px) {
-  .hero,
-  .hero-bleed {
-    background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 40px 16px 70px;
-    text-align: left;
-    position: relative;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  .hero-product-specs,
-  .hero-bleed .lead,
-  .hero-bleed .small-text {
-    position: static !important;
-    transform: none !important;
-    width: 100%;
-    margin: 1.rem 0;
-    padding: 0 20px;
-    text-align: left;
-  }
-
-  .hero-product-specs {
-    margin-top: 1.8rem;
-    font-size: 10px;
-  }
-
-   .hero-bleed .lead,
-.hero-bleed .small-text {
-  display: block;
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: none;
-}
-
-.hero-text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  
-  padding: 12px;
+.btn {
+  padding: 10px 22px;
+  font-size: 1rem;
   border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #0a662f;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0d8a45;
+}
+
+.btn-outline {
+  border: 2px solid #0a662f;
+  color: #0a662f;
+}
+
+.btn-outline:hover {
+  background: #0a662f;
   color: #fff;
 }
 
-  .hero .cta-row {
-    gap: 12px;
-    flex-direction: column;
-    align-items: center;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.9rem;
   }
-
-  .hero .cta-row .btn {
-    width: 220px;
+  .lead {
+    font-size: 1.05rem;
+  }
+  .hero-specs-box {
+    padding: 18px 20px;
   }
 }
+
 
 
 
