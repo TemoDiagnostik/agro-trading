@@ -92,6 +92,28 @@ header .lang span {
  line-height: 1;
 }
 
+/* ===========================
+   HEADER BRAND FIX (FINAL)
+   =========================== */
+
+.brand-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-name {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0a662f; /* أخضر كما طلبت */
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  letter-spacing: 0.2px;
+}
 
 
 .navbar {
@@ -113,10 +135,6 @@ header .lang span {
   color: #333;
   font-weight: 500;
 }
-
-
-
-
 
 
 /* ===========================
@@ -249,6 +267,64 @@ header .lang span {
     gap: 12px;
   }
 
+  .cta-row .btn {
+    width: 220px;
+    text-align: center;
+  }
+}
+
+
+.btn {
+  padding: 12px 26px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #0a662f;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0d8a45;
+}
+
+.btn-outline {
+  border: 2px solid #0a662f;
+  color: #0a662f;
+}
+
+.btn-outline:hover {
+  background: #0a662f;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-bleed {
+    background: url("hero-bg-mobile.png") center/cover no-repeat;
+    padding: 80px 16px 70px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+  }
+
+  .hero-specs-box {
+    padding: 18px 20px;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
 
  
   .cta-row .btn {
@@ -257,26 +333,7 @@ header .lang span {
   }
 }
 
-/* ===== HEADER BRAND FIX ===== */
 
-.brand-text {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.brand-name {
-  font-size: 1.55rem;   /* أكبر بدرجتين */
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.brand-tagline {
-  font-size: 0.95rem;   /* أصغر بثلاث درجات */
-  font-weight: 500;
-  color: #475569;
-  letter-spacing: 0.2px;
-}
 
 
 
