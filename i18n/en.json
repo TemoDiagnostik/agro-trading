@@ -1,5 +1,5 @@
 {
-  "site.name": "Euro Agri Trading s.r.o — EU Fertilizer Sourcing Agency",
+"site.name": "Euro Agri Trading s.r.o — EU Fertilizer Sourcing Agency",  
   "site.company": "Euro Agri Trading s.r.o.",
 
   "nav.home": "Home",
@@ -10,17 +10,29 @@
   "nav.about": "About",
   "nav.contact": "Contact",
   
- "hero.title": "Trusted EU Fertilizer Sourcing Agency — Global Multi‑Origin Supply",
+ 
+"hero.title": "Trusted EU Fertilizer Sourcing Agency — Global Multi‑Origin Supply",
+
 "hero.desc": "We connect verified and trusted fertilizer producers from multiple global origins with European and international buyers, offering competitive factory‑direct pricing through our established supplier network. We supply Rock Phosphate (18%–34% P₂O₅) and a full range of high‑demand specialty fertilizers, including Water‑Soluble Fertilizers (WSF), Calcium Nitrate, and Micronutrients — tailored to market needs and shipment‑specific COA.",
+
 "hero.tradeNote": "All transactions comply with EU standards and Incoterms® 2020.",
+
 "hero.mainProduct": "Rock Phosphate — P₂O₅: 18–34% (availability varies by origin & shipment-specific COA)",
+
 "hero.specTags": "P₂O₅: 18–34% / Full COA available including CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI",
+
 "hero.grade": "Reference grade: 26% P₂O₅",
+
 "hero.comp": "Grade range: 18–34% P₂O₅ depending on origin. Full COA available including CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI.",
+
 "hero.forms": "Forms: Powder / Granular / Fine Powder",
+
 "hero.sizing": "Sizing: Customized upon request (sieving available)",
+
 "hero.moisture": "Moisture: typically max 3–5% (origin & season dependent)",
+
 "hero.spec1": "Screened particle size — suitable for milling or direct soil application.",
+
 "hero.spec2": "Official specification sheet provided; lab reports available on request.",
 
 
