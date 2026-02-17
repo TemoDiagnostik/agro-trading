@@ -249,12 +249,34 @@ header .lang span {
     gap: 12px;
   }
 
+
+ 
   .cta-row .btn {
     width: 220px;
     text-align: center;
   }
 }
 
+/* ===== HEADER BRAND FIX ===== */
+
+.brand-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-name {
+  font-size: 1.55rem;   /* أكبر بدرجتين */
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.brand-tagline {
+  font-size: 0.95rem;   /* أصغر بثلاث درجات */
+  font-weight: 500;
+  color: #475569;
+  letter-spacing: 0.2px;
+}
 
 
 
