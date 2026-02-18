@@ -1425,4 +1425,34 @@ form label {
   display: inline-block;
 }
 
+/* ===========================
+   HERO COLOR FIX — FINAL PATCH
+   =========================== */
+
+/* إصلاح ألوان النصوص داخل الهيرو */
+.hero h1,
+.hero p,
+.hero .lead,
+.hero .small-text,
+.hero-product-specs {
+  color: #1e293b !important;      /* نص داكن وواضح */
+  text-shadow: none !important;   /* إزالة الظلال السوداء */
+}
+
+/* خلفية شفافة سوداء تحت النصوص فقط */
+.hero-text-content,
+.hero-product-specs,
+.hero .lead,
+.hero .small-text {
+  background: rgba(0, 0, 0, 0.35) !important;  /* خلفية سوداء شفافة */
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  display: inline-block !important;
+}
+
+/* إصلاح الخلفية الداكنة للهيرو */
+.hero,
+.hero-bleed {
+  background-color: #ffffff !important;   /* يمنع ظهور الخلفية السوداء */
+}
 
