@@ -212,7 +212,8 @@ header .lang select {
 }
 
 /* النصوص العامة */
-.hero-bleed :is(h1,p,span,strong,li,a){
+.hero-bleed :is(h1,h2,h3,p,span,strong,li,a){
+
   color:#fff;
   text-shadow: 0 2px 3px rgba(0,0,0,0.55);
 }
