@@ -194,9 +194,12 @@ header .lang select {
   z-index: 1;
 }
 
-/* النصوص داخل الهيرو */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
+/* HERO — النصوص البيضاء بدون تضارب */
+.hero h1,
+.hero p,
+.hero .lead,
+.hero .small-text,
+.hero-product-specs {
   color: #ffffff !important;
   text-shadow: none !important;
   position: relative;
