@@ -204,14 +204,6 @@ header .lang select {
   content: none;
 }
 
-/* النصوص العامة داخل hero */
-.hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
-.hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
-  position: relative;
-  z-index: 2;
-}
 
 /* العنوان الرئيسي */
 .hero h1 {
