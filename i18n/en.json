@@ -10,16 +10,15 @@
   "nav.about": "About",
   "nav.contact": "Contact",
   
- 
-"hero.title": "Trusted EU Fertilizer Sourcing Agency — Global Multi‑Origin Supply",
+ "hero.title": "Trusted EU Fertilizer Sourcing Agency — Multi-Origin Supply",
 
-"hero.desc": "We connect verified and trusted fertilizer producers from multiple global origins with European and international buyers, offering competitive factory‑direct pricing through our established supplier network. We supply Rock Phosphate (18%–34% P₂O₅) and a full range of high‑demand specialty fertilizers, including Water‑Soluble Fertilizers (WSF), Calcium Nitrate, and Micronutrients — tailored to market needs and shipment‑specific COA.",
+"hero.desc": "We connect verified fertilizer producers from multiple global origins with European and international buyers, offering factory-direct pricing and shipment-specific COA under EU-compliant standards.",
 
 "hero.tradeNote": "All transactions comply with EU standards and Incoterms® 2020.",
 
-"hero.mainProduct": "Rock Phosphate — P₂O₅: 18–34% (availability varies by origin & shipment-specific COA)",
+"hero.mainProduct": "Rock Phosphate — P₂O₅: 18–34% (origin-dependent, shipment-specific COA available)",
 
-"hero.specTags": "P₂O₅: 18–34% / Full COA available including CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI",
+"hero.specTags": "P₂O₅: 18–34% | Full COA including CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI",
 
 "hero.grade": "Reference grade: 26% P₂O₅",
 
@@ -33,7 +32,8 @@
 
 "hero.spec1": "Screened particle size — suitable for milling or direct soil application.",
 
-"hero.spec2": "Official specification sheet provided; lab reports available on request.",
+"hero.spec2": "Official specification sheet provided; lab reports available upon request.",
+
 
 
   "products.title": "Flagship Product",
