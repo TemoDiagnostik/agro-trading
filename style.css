@@ -171,98 +171,130 @@ header .lang select {
 
 
 
-/* =============== HERO SECTION — CLEAN MULTI-ORIGIN (FIXED) =============== */
+/* =============== HERO SECTION — CLEAN MULTI-ORIGIN (REFINED) =============== */
 
 .hero-bleed{
   position: relative;
   width: 100%;
-  padding: 72px 20px;
+  padding: 70px 20px;
   background: url("hero-bg-desktop.png") center/cover no-repeat;
   background-color: #ffffff;
   overflow: hidden;
   text-align: left;
   z-index: 0;
-  min-height: 92vh; /* بدل height:100vh */
+  min-height: 92vh;
   display: flex;
   align-items: center;
 }
 
+/* Overlay أخف + تدرّج يعطي عمق */
 .hero-bleed::after{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,0.42);
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.62) 0%,
+    rgba(0,0,0,0.40) 45%,
+    rgba(0,0,0,0.30) 100%
+  );
   z-index:1;
 }
 
+/* Layout */
 .hero-content{
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* نص + specs */
-  gap: 28px;
+  grid-template-columns: 1.35fr 0.85fr; /* نص أكبر / specs أصغر */
+  gap: 26px;
   align-items: start;
 }
 
-/* النصوص */
+/* النصوص العامة */
 .hero-bleed :is(h1,p,span,strong,li,a){
   color:#fff;
-  text-shadow: 0 2px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 3px rgba(0,0,0,0.55);
 }
 
 .hero-top{
-  max-width: 720px;
+  max-width: 760px;
 }
 
+/* Badge */
 .hero-badge{
   display: inline-block;
   font-size: 12px;
-  letter-spacing: .8px;
+  letter-spacing: .9px;
   text-transform: uppercase;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.25);
-  padding: 6px 10px;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.22);
+  padding: 6px 12px;
   border-radius: 999px;
   margin-bottom: 14px;
+  backdrop-filter: blur(6px);
 }
 
+/* Title */
 .hero-title{
-  margin: 0 0 12px 0;
-  line-height: 1.12;
+  margin: 0 0 14px 0;
+  line-height: 1.08;
+  font-size: clamp(30px, 4.2vw, 52px);
+  max-width: 900px;
 }
 
+/* Lead (مختصر + واضح) */
 .hero-bleed .lead{
-  margin: 0 0 12px 0;
-  font-size: 16px;
-  max-width: 680px;
-  line-height: 1.55;
-  background: rgba(0,0,0,0.25);
+  margin: 0 0 14px 0;
+  font-size: 15px;
+  max-width: 660px;
+  line-height: 1.6;
+  background: rgba(0,0,0,0.22);
   padding: 10px 14px;
   border-radius: 12px;
+  backdrop-filter: blur(6px);
 }
 
+/* Origins line */
 .hero-origins{
   margin: 0 0 18px 0;
   font-size: 13px;
   opacity: .95;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.22);
   padding: 8px 12px;
   border-radius: 12px;
   display: inline-block;
+  backdrop-filter: blur(6px);
 }
 
-/* Specs box */
+/* ===== Specs box (أهم تعديل: أقل ارتفاعًا + scroll) ===== */
 .hero-specs-box{
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.20);
-  border-radius: 14px;
-  padding: 16px 16px;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  padding: 14px 14px;
   max-width: 520px;
+
+  /* يقلل الزحمة */
+  max-height: 360px;
+  overflow: auto;
+
+  backdrop-filter: blur(8px);
+}
+
+/* Scroll لطيف (اختياري) */
+.hero-specs-box::-webkit-scrollbar{
+  width: 8px;
+}
+.hero-specs-box::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
 }
 
 .hero-specs-title{
   margin: 0 0 10px 0;
-  font-size: 14px;
+  font-size: 13.5px;
+  line-height: 1.35;
 }
 
 .hero-specs-note{
@@ -270,13 +302,18 @@ header .lang select {
   font-weight: 400;
   opacity: .9;
   margin-top: 6px;
+  font-size: 12.5px;
 }
 
 .hero-specs-list{
   margin: 0;
   padding-left: 18px;
-  font-size: 13px;
+  font-size: 12.5px;
   line-height: 1.55;
+}
+
+.hero-specs-list li{
+  margin-bottom: 7px;
 }
 
 .trade-note{
@@ -285,15 +322,15 @@ header .lang select {
   opacity: .95;
 }
 
-/* CTA row (نخليها افقي على الديسكتوب) */
+/* CTA row */
 .cta-row{
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
-/* Buttons: أنت قلت Hover لا نلمسه، فخليت الأساسي فقط */
+/* Buttons */
 .btn-primary{
   background-color: #0a662f;
   border: 2px solid #ffffff;
@@ -316,16 +353,26 @@ header .lang select {
     padding: 44px 16px 56px;
     min-height: auto;
   }
+
   .hero-content{
     grid-template-columns: 1fr;
   }
+
+  .hero-title{
+    font-size: 32px;
+  }
+
   .hero-specs-box{
     max-width: 100%;
+    max-height: none;   /* في الموبايل نخليه يفتح كامل */
+    overflow: visible;
   }
+
   .cta-row{
     flex-direction: column;
     align-items: flex-start;
   }
+
   .cta-row .btn{
     width: 220px;
   }
