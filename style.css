@@ -180,6 +180,8 @@ header .lang select {
   overflow: hidden;
   text-align: left;
   z-index: 0;
+ height: 100vh;
+
 }
 
 /* طبقة شفافة فوق الخلفية */
