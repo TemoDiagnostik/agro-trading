@@ -1412,16 +1412,19 @@ form label {
 
 
 /* ===========================
-   HERO — WHITE TRANSPARENT BOX (FINAL)
+   HERO — WHITE TRANSPARENT BOX (FINAL CLEAN)
    =========================== */
 
 .hero-bleed {
   width: 100%;
-  padding: 120px 20px;
+  max-width: 100%;
+  padding: 100px 20px 80px; /* متوازن بدون نفخ */
   background: url("hero-bg-desktop.png") center/cover no-repeat;
   background-color: #ffffff;
   position: relative;
   text-align: left;
+  margin: 0 auto;            /* يمنع أي انزلاق يمين/يسار */
+  box-sizing: border-box;    /* يمنع التمدد */
 }
 
 /* White transparent box */
@@ -1434,6 +1437,7 @@ form label {
   box-shadow: 0 6px 22px rgba(0,0,0,0.12);
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 /* Title */
@@ -1491,11 +1495,14 @@ form label {
   color: #0a662f;
 }
 
-/* Mobile */
+/* ===========================
+   MOBILE
+   =========================== */
 @media (max-width: 768px) {
   .hero-bleed {
     background: url("hero-bg-mobile.png") center/cover no-repeat;
-    padding: 60px 16px;
+    padding: 60px 16px 70px;
+    text-align: center;
   }
 
   .hero-content {
@@ -1517,6 +1524,7 @@ form label {
   .cta-row {
     flex-direction: column;
     gap: 12px;
+    align-items: center;
   }
 
   .cta-row .btn {
@@ -1524,4 +1532,3 @@ form label {
     text-align: center;
   }
 }
-
