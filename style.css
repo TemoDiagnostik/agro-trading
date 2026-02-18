@@ -168,8 +168,8 @@ header .lang select {
   }
 }
 
+/* =============== HERO SECTION — CLEAN FINAL VERSION =============== */
 
-/* =============== HERO SECTION (FIXED COLORS + OVERLAY) =============== */
 .hero,
 .hero-bleed {
   position: relative;
@@ -182,35 +182,35 @@ header .lang select {
   z-index: 0;
 }
 
-/* طبقة شفافة فوق الخلفية لتحسين وضوح النص */
+/* طبقة شفافة فوق الخلفية */
 .hero::after,
 .hero-bleed::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);   /* خلفية سوداء شفافة */
+  background: rgba(0,0,0,0.35);
   z-index: 1;
 }
 
-/* النصوص العامة داخل hero */
+/* النصوص داخل الهيرو */
 .hero :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge),
 .hero-bleed :is(h1, h2, h3, h4, h5, h6, p, span, strong, li, a, .lead, .muted, .note, .badge) {
-  color: #ffffff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+  color: #ffffff !important;
+  text-shadow: none !important;
   position: relative;
   z-index: 2;
 }
 
-/* النصوص فوق الطبقة */
-.hero h1,
-.hero p,
-.hero .lead,
-.hero .small-text,
-.hero-product-specs {
+/* خلفية شفافة تحت النصوص */
+.hero-product-specs,
+.hero-bleed .lead,
+.hero-bleed .small-text {
+  background: rgba(0,0,0,0.35);
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: inline-block;
   position: relative;
   z-index: 2;
-  color: #ffffff;                 /* نص أبيض واضح */
-  text-shadow: none;
 }
 
 /* lead */
@@ -271,13 +271,14 @@ header .lang select {
   padding: 14px 32px;
 }
 
-
+/* Hover (كما طلبت — لا نلمسه) */
 .hero .btn-outline:hover {
   background-color: #0a6e64;
   border-color: #0a6e64;
   color: #ffffff;
-  transform: translateY(-1px); /* تأثير الحركة الصغيرة */
+  transform: translateY(-1px);
 }
+
 /* النصوص الثانوية */
 .hero .muted,
 .hero .note,
@@ -1349,65 +1350,4 @@ form label {
   display: inline-block;
 }
 
-/* ===========================
-   HERO COLOR FIX — FINAL PATCH
-   =========================== */
-
-/* إصلاح ألوان النصوص داخل الهيرو */
-.hero h1,
-.hero p,
-.hero .lead,
-.hero .small-text,
-.hero-product-specs {
-  color: #1e293b !important;      /* نص داكن وواضح */
-  text-shadow: none !important;   /* إزالة الظلال السوداء */
-}
-
-/* خلفية شفافة سوداء تحت النصوص فقط */
-.hero-text-content,
-.hero-product-specs,
-.hero .lead,
-.hero .small-text {
-  background: rgba(0, 0, 0, 0.35) !important;  /* خلفية سوداء شفافة */
-  padding: 12px 16px !important;
-  border-radius: 10px !important;
-  display: inline-block !important;
-}
-
-/* إصلاح الخلفية الداكنة للهيرو */
-.hero,
-.hero-bleed {
-  background-color: #ffffff !important;   /* يمنع ظهور الخلفية السوداء */
-}
-/* ===========================
-   HERO COLOR OVERRIDE — FINAL
-   =========================== */
-
-/* إصلاح لون الخلفية الداكنة للهيرو */
-.hero,
-.hero-bleed {
-  background-color: #ffffff !important;
-  background-blend-mode: normal !important;
-}
-
-/* إصلاح النصوص (إلغاء الأبيض الإجباري) */
-.hero h1,
-.hero p,
-.hero .lead,
-.hero .small-text,
-.hero-product-specs {
-  color: #1e293b !important;      /* نص داكن وواضح */
-  text-shadow: none !important;   /* إزالة الظلال السوداء */
-}
-
-/* خلفية شفافة سوداء تحت النصوص فقط */
-.hero-text-content,
-.hero-product-specs,
-.hero .lead,
-.hero .small-text {
-  background: rgba(0, 0, 0, 0.35) !important;  /* خلفية سوداء شفافة */
-  padding: 12px 16px !important;
-  border-radius: 10px !important;
-  display: inline-block !important;
-}
 
