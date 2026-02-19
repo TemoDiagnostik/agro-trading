@@ -149,46 +149,52 @@ header .lang select {
 }
 
 /* =========================
-   MOBILE HEADER — CORPORATE COMPACT
+   MOBILE HEADER — CLEAN CORPORATE
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
   header{
-    padding: 8px 14px;
+    padding: 10px 12px;
   }
 
   header .container{
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
   }
 
   /* اللوجو */
   header .logo-img{
-    height: 30px;
+    height: 34px;
   }
 
   /* اسم الشركة */
   header .brand-text{
     font-size: 17px;
     font-weight: 600;
-    margin: 2px 0 0 0;
+    margin: 2px 0;
   }
 
-  /* السطر التعريفي */
-  header .tagline{
-    font-size: 12px;
-    opacity: .8;
-    margin: 0;
-  }
-
-  /* القائمة */
+  /* القائمة — صف واحد مع سكرول أفقي */
   header nav ul{
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 13.5px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    white-space: nowrap;
+    gap: 10px;
+    padding: 6px 4px;
     margin: 4px 0;
+  }
+
+  header nav ul::-webkit-scrollbar{
+    display: none;
+  }
+
+  header nav a{
+    font-size: 13px;
+    padding: 6px 8px;
+    line-height: 1.2;
   }
 
   /* زر اللغة */
