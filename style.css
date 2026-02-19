@@ -1726,18 +1726,18 @@ form label {
 
 
 /* =========================
-   PRODUCTS — Subtle Highlight Note
+   PRODUCTS — Premium Subtle Note
    ========================= */
 
 #products .products-note{
-  margin: 28px auto 0 auto;
+  margin: 30px auto 0 auto;
   max-width: 900px;
 
-  padding: 14px 18px;
+  padding: 16px 20px;
 
-  background: #f8fafc;           /* خلفية خفيفة جداً */
-  border: 1px solid #e2e8f0;     /* إطار ناعم */
-  border-radius: 12px;
+  background: #f8fafc;           /* خلفية هادئة */
+  border-left: 4px solid #059669; /* خط أخضر جانبي أنيق */
+  border-radius: 10px;
 
   text-align: center;
 
@@ -1745,7 +1745,7 @@ form label {
   font-weight: 600;
   color: #0f172a;
 
-  box-shadow: 0 4px 14px rgba(2,6,23,.04); /* ظل خفيف جداً */
+  box-shadow: 0 6px 18px rgba(2,6,23,.05);
 }
 
 /* الجزء الأول من الجملة لو حابب تخليه أهدأ */
