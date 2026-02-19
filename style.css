@@ -272,9 +272,14 @@ header .lang select {
 }
 
 /* النصوص العامة: بدون شادو */
-.hero-bleed :is(h1,h2,h3,p,span,strong,li,a){
+.hero-bleed :is(h1,h2,h3,p,span,strong,li){
   color:#fff;
-  text-shadow: none;               /* ✅ إلغاء الشادو */
+  text-shadow: 0 1px 2px rgba(0,0,0,.28);
+}
+
+/* العنوان الرئيسي شادو أقوى “درجة” واحدة عشان يثبت */
+.hero-title{
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
 }
 
 /* Badge: حذف/إخفاء لأنه “ملوش لازمة” */
