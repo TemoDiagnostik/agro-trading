@@ -249,16 +249,12 @@ header .lang select {
 
 /* Overlay (هو اللي يعمل الكونتراست بدل صناديق وشادو) */
 .hero-bleed::after{
-  content:"";
-  position:absolute;
-  inset:0;
   background: linear-gradient(
     90deg,
-    rgba(0,0,0,0.62) 0%,
-    rgba(0,0,0,0.38) 55%,
-    rgba(0,0,0,0.18) 100%
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.30) 55%,
+    rgba(0,0,0,0.12) 100%
   );
-  z-index:1;
 }
 
 /* Layout */
