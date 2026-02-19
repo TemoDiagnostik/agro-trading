@@ -203,8 +203,9 @@
 
         <ul class="hero-specs-list">
           <li data-i18n="hero.productsLine">
-            Rock Phosphate • NPK Granular • Water-Soluble Fertilizers (WSF) • Calcium Nitrate • Micronutrients • Water-Retention Granules (Hydrogel)
-          </li>
+  Rock Phosphate • Water-Soluble Fertilizers (WSF) • Calcium Nitrate • Micronutrients
+  <span class="hero-onrequest" data-i18n="hero.productsOnRequest">• On request: NPK Granular • Water-Retention Polymer (Hydrogel)</span>
+</li>
         </ul>
 
         <p class="trade-note" data-i18n="hero.tradeNote">
@@ -223,78 +224,126 @@
 </section>
 
 
-<!-- 🌍 Global Products Section -->
+<!-- 🌍 Global Products Section (NEW) -->
 <section id="products">
   <div class="container">
-    <h2 data-i18n="products.all">Available Products</h2>
+    <h2 data-i18n="products.all">Product Categories</h2>
 
-    <!-- ✅ 3 cards -->
-    <div class="grid cols-3">
+    <div class="grid cols-4">
 
-      <!-- 🌐 Rock Phosphate -->
-<div class="card">
-  <h3 data-i18n="card.rock.title">Rock Phosphate — Grades 18–32% P₂O₅</h3>
-
-  <p class="muted" data-i18n="card.rock.text">
-    Reliable source with consolidated shipments to EU ports, with competitive pricing directly from the factory. Final values are confirmed by shipment-specific COA/SGS.
-  </p>
-
-  <!-- ✅ Key Specs (compact) -->
-  <ul class="mini-specs">
-    <li data-i18n="card.rock.forms">Forms: Powder / Granular / Fine Powder</li>
-    <li data-i18n="card.rock.moisture">Moisture: typically max 3–5% (grade & season dependent)</li>
-    <li data-i18n="card.rock.coa2">Shipment-specific COA/SGS provided per shipment</li>
-    <li data-i18n="card.rock.hm">Heavy metals (Cd, etc.) provided upon request in the shipment COA</li>
-  </ul>
-
-  <div class="tag-row">
-    <span class="tag" data-i18n="log.bulk">Bulk & Big-Bag</span>
-    <span class="tag" data-i18n="log.ports.tag">Ports: Alexandria / Damietta / Safaga</span>
-    <span class="tag" data-i18n="log.incotermTag">EXW / FOB / CFR / CIF / DDP</span>
-  </div>
-
-  <div class="cta">
-    <a class="btn btn-primary" href="#contactFormBox" data-i18n="card.rock.cta">Request a Quote</a>
-    <a class="btn btn-outline" href="#certificates" data-i18n="products.viewCoa">Open Spec</a>
-  </div>
-</div>
-
-<!-- 🌿 Low-Cadmium 31–32% (Coming Soon / Upon Request) -->
-<div class="card">
-  <h3 data-i18n="card.lowcd.title">Low-Cadmium Rock Phosphate — 31–32% P₂O₅</h3>
-  <p class="muted" data-i18n="card.lowcd.text">
-    Available upon request. Marketed only after receiving shipment-specific COA showing Cd and heavy metals for the shipment lot.
-  </p>
-
-  <div class="tag-row">
-    <span class="tag" data-i18n="card.lowcd.tag1">Coming soon / upon request</span>
-    <span class="tag" data-i18n="card.lowcd.tag2">Shipment-specific COA required</span>
-  </div>
-
-  <div class="cta">
-    <a class="btn btn-primary" href="#contactFormBox" data-i18n="card.lowcd.cta">Request a Quote (RFQ)</a>
-    <a class="btn btn-outline" href="#contactFormBox" data-i18n="card.lowcd.cta2">Ask for availability</a>
-  </div>
-</div>
-
-      <!-- 🌐 Urea / NPK -->
+      <!-- 1) Rock Phosphate (Main / Anchor) -->
       <div class="card">
-        <h3 data-i18n="card.urea.title">Urea / NPK (on request)</h3>
-        <p class="muted" data-i18n="card.urea.text">
-          Additional lines (Urea, MAP/DAP, NPK) can be added per demand, with flexible supply options.
+        <h3 data-i18n="cat.rp.title">Rock Phosphate</h3>
+
+        <p class="muted" data-i18n="cat.rp.text">
+          Multi-origin supply with grade and heavy-metals verified by shipment-specific COA (SGS/Intertek/BV upon request).
+          Low-cadmium options are available subject to shipment COA confirmation.
         </p>
 
+        <ul class="mini-specs">
+          <li data-i18n="cat.rp.s1">Grades: 18–34% P₂O₅ (by origin)</li>
+          <li data-i18n="cat.rp.s2">Forms: Powder / Granular / Fine Powder</li>
+          <li data-i18n="cat.rp.s3">COA: P₂O₅, CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI</li>
+          <li data-i18n="cat.rp.s4">Low-Cd: available upon request (shipment COA required)</li>
+        </ul>
+
         <div class="tag-row">
-          <span class="tag" data-i18n="generic.expand">Ready to expand</span>
+          <span class="tag" data-i18n="cat.tags.bulk">Bulk / Big-Bag / Bags</span>
+          <span class="tag" data-i18n="cat.tags.incoterms">EXW / FOB / CFR / CIF</span>
+          <span class="tag" data-i18n="cat.tags.coa">Shipment-specific COA</span>
         </div>
 
         <div class="cta">
-          <a class="btn btn-primary" href="#contactFormBox" data-i18n="card.urea.cta">Ask about Urea</a>
-          <a class="btn btn-outline" href="#contactFormBox" data-i18n="card.urea.cta2">Request a Quote (RFQ)</a>
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="cat.cta.rfq">Request RFQ</a>
+          <a class="btn btn-outline" href="#certificates" data-i18n="cat.cta.specs">View Specs</a>
+        </div>
+      </div>
+
+      <!-- 2) Water-Soluble Fertilizers (WSF) -->
+      <div class="card">
+        <h3 data-i18n="cat.wsf.title">Water-Soluble Fertilizers (WSF)</h3>
+
+        <p class="muted" data-i18n="cat.wsf.text">
+          NPK water-soluble grades tailored to crop programs and regional demand. COA provided per shipment.
+        </p>
+
+        <ul class="mini-specs">
+          <li data-i18n="cat.wsf.s1">Type: NPK WSF (fully soluble)</li>
+          <li data-i18n="cat.wsf.s2">Forms: Powder / Crystalline</li>
+          <li data-i18n="cat.wsf.s3">Packaging: 25kg / 50kg / Big-Bag (as agreed)</li>
+          <li data-i18n="cat.wsf.s4">COA: guaranteed analysis per grade</li>
+        </ul>
+
+        <div class="tag-row">
+          <span class="tag" data-i18n="cat.tags.specialty">Specialty Fertilizers</span>
+          <span class="tag" data-i18n="cat.tags.custom">Custom grades</span>
+          <span class="tag" data-i18n="cat.tags.coa">Shipment-specific COA</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="cat.cta.rfq">Request RFQ</a>
+          <a class="btn btn-outline" href="#contactFormBox" data-i18n="cat.cta.catalog">Ask for Grades</a>
+        </div>
+      </div>
+
+      <!-- 3) Calcium Nitrate -->
+      <div class="card">
+        <h3 data-i18n="cat.cn.title">Calcium Nitrate</h3>
+
+        <p class="muted" data-i18n="cat.cn.text">
+          CAN / CN options for fertigation and open-field use. Specification and COA provided per shipment.
+        </p>
+
+        <ul class="mini-specs">
+          <li data-i18n="cat.cn.s1">Type: Calcium Nitrate (CN / CAN as available)</li>
+          <li data-i18n="cat.cn.s2">Form: Prilled / Granular / Crystalline (by grade)</li>
+          <li data-i18n="cat.cn.s3">Packaging: 25kg / 50kg</li>
+          <li data-i18n="cat.cn.s4">COA: guaranteed analysis per shipment</li>
+        </ul>
+
+        <div class="tag-row">
+          <span class="tag" data-i18n="cat.tags.specialty">Specialty Fertilizers</span>
+          <span class="tag" data-i18n="cat.tags.coa">Shipment-specific COA</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="cat.cta.rfq">Request RFQ</a>
+          <a class="btn btn-outline" href="#contactFormBox" data-i18n="cat.cta.avail">Check Availability</a>
+        </div>
+      </div>
+
+      <!-- 4) Micronutrients -->
+      <div class="card">
+        <h3 data-i18n="cat.micro.title">Micronutrients</h3>
+
+        <p class="muted" data-i18n="cat.micro.text">
+          Micronutrient portfolio for blending or direct application. COA and specification are provided by product.
+        </p>
+
+        <ul class="mini-specs">
+          <li data-i18n="cat.micro.s1">Types: Zn / Fe / Mn / B / Cu / Mo</li>
+          <li data-i18n="cat.micro.s2">Forms: Powder / Granular (by product)</li>
+          <li data-i18n="cat.micro.s3">Packaging: 25kg / 50kg</li>
+          <li data-i18n="cat.micro.s4">COA: per shipment / per product</li>
+        </ul>
+
+        <div class="tag-row">
+          <span class="tag" data-i18n="cat.tags.specialty">Specialty Fertilizers</span>
+          <span class="tag" data-i18n="cat.tags.coa">Shipment-specific COA</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#contactFormBox" data-i18n="cat.cta.rfq">Request RFQ</a>
+          <a class="btn btn-outline" href="#contactFormBox" data-i18n="cat.cta.list">Ask for List</a>
         </div>
       </div>
 
     </div>
+
+    <!-- Also available (On request) -->
+    <p class="products-note" data-i18n="products.note">
+      Also available on request: NPK Granular • Water-Retention Polymer (Hydrogel).
+    </p>
   </div>
 </section>
 		
