@@ -1608,3 +1608,117 @@ form label {
     width: 150px;   /* غيّر الرقم براحتك: 120–160 مناسب */
   }
 }
+
+
+
+
+
+
+
+/* =========================
+   CORPORATE CLEAN — PRODUCTS
+   Paste at VERY END of style.css
+   ========================= */
+
+/* Section background: clean + corporate */
+#products{
+  padding: 64px 0 !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  background-attachment: initial !important;
+}
+
+/* Optional: subtle separation line above/below */
+#products{
+  border-top: 1px solid #eef2f7;
+  border-bottom: 1px solid #eef2f7;
+}
+
+/* Better section title spacing */
+#products h2{
+  text-align: center;
+  margin: 0 0 22px 0;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+/* Grid stays the same but slightly tighter + consistent */
+#products .grid{
+  display: grid;
+  gap: 22px !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card: sharper corporate look */
+#products .card{
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 28px rgba(2,6,23,.06) !important;
+  padding: 18px !important;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#products .card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(2,6,23,.10) !important;
+}
+
+/* Text */
+#products .card h3{
+  margin: 0 0 10px 0;
+  color: #0f172a;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+#products .muted{
+  color: #334155;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+/* Tag row wrap (keep) */
+#products .tag-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+/* Tags: more corporate (less “playful”) */
+#products .tag{
+  background:#f8fafc !important;
+  border:1px solid #e2e8f0 !important;
+  color:#0f172a !important;
+  font-weight:700;
+  font-size:.88rem !important;
+  padding:.32rem .55rem !important;
+  border-radius:10px !important;
+}
+
+/* CTA pinned bottom (keep) */
+#products .cta{
+  margin-top:auto;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  padding-top:12px;
+}
+
+/* Button consistency (keep) */
+#products .cta .btn{
+  min-width: 150px;
+  text-align:center;
+}
+
+/* Mobile */
+@media (max-width:768px){
+  #products{
+    padding: 52px 0 !important;
+  }
+  #products .cta .btn{
+    width:100%;
+    min-width:0;
+  }
+}
