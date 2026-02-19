@@ -195,14 +195,19 @@ header .lang select {
 
   /* الناف تحت */
   header nav{
-    grid-area: nav !important;
-    justify-self: center !important;
     width: 100% !important;
+    overflow: hidden !important;
   }
-  header .navbar-nav{
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
+   header .navbar-nav{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   /* حجم اللوجو للموبايل */
@@ -1572,4 +1577,15 @@ form label {
   header .brand-name{ font-size: 16px !important; }
   header .lang select{ max-width: 130px !important; }
   header .navbar-nav a{ font-size: 12.5px !important; }
+}
+/* FIX horizontal shift */
+html, body{
+  overflow-x: hidden !important;
+}
+
+/* تأكد أن الهيدر لا يتجاوز العرض */
+header,
+header .container.nav{
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
