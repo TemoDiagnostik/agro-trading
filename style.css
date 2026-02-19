@@ -1726,26 +1726,35 @@ form label {
 
 
 /* =========================
-   PRODUCTS — Premium Subtle Note
+   PRODUCTS — NOTE (VISIBLE + CORPORATE)
    ========================= */
 
+/* امسح/عطّل أي ستايل قديم لو موجود */
+#products .additional-note{ display:none !important; }
+
 #products .products-note{
-  margin: 30px auto 0 auto;
-  max-width: 900px;
+  display:block !important;
+  margin: 28px auto 0 !important;
+  max-width: 980px !important;
 
-  padding: 16px 20px;
+  padding: 14px 18px !important;
 
-  background: #f8fafc;           /* خلفية هادئة */
-  border-left: 4px solid #059669; /* خط أخضر جانبي أنيق */
-  border-radius: 10px;
+  /* خليها واضحة فوق الخلفية */
+  background: rgba(255,255,255,0.92) !important;
+  border: 1px solid rgba(15,23,42,0.10) !important;
 
-  text-align: center;
+  /* خط أخضر من الجنبين */
+  border-left: 4px solid #059669 !important;
+  border-right: 4px solid #059669 !important;
 
-  font-size: 15px;
-  font-weight: 600;
-  color: #0f172a;
+  border-radius: 12px !important;
 
-  box-shadow: 0 6px 18px rgba(2,6,23,.05);
+  text-align: center !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+
+  box-shadow: 0 10px 26px rgba(2,6,23,0.10) !important;
 }
 
 /* الجزء الأول من الجملة لو حابب تخليه أهدأ */
