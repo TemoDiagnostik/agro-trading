@@ -10,12 +10,14 @@
   "nav.about": "About",
   "nav.contact": "Contact",
   
-"hero.badge": "EU-based sourcing agency",
+"hero.title": "EU-Based Phosphate & Specialty Fertilizer Sourcing",
+"hero.subtitle": "Structured execution. Shipment-verified compliance. Multi-origin supply.",
+"hero.desc": "We connect producers with serious buyers through transparent sourcing, shipment-specific third-party COA, and EU-focused trade execution.",
 "hero.specsTitle": "Core Products",
 "hero.specsNote": "Multi-origin supply. COA available upon request.",
-"hero.productsLine": "Rock Phosphate • NPK Granular • Water-Soluble Fertilizers (WSF) • Calcium Nitrate • Micronutrients • Water-Retention Granules (Hydrogel)",
-"hero.tradeNote": "Execution: LC at sight • SGS/Intertek/BV inspection • shipment-specific documentation",
+"hero.productsLine": "Rock Phosphate • Water-Soluble Fertilizers (WSF) • Calcium Nitrate • Micronutrients",
 "hero.productsOnRequest": "• On request: NPK Granular • Water-Retention Polymer (Hydrogel)",
+"hero.tradeNote": "Execution: LC at sight • SGS/Intertek/BV inspection • shipment-specific documentation",
 
 
 
