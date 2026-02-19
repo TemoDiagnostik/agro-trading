@@ -1417,24 +1417,3 @@ form label {
 
 
 
-/* ===== HERO micro-fixes (safe) ===== */
-
-/* 1) تحريك بسيط للنص من اليسار (يمنع إحساس "ملزوق") */
-.hero-left{
-  padding-left: 10px;
-}
-
-/* 2) رفع صندوق المنتجات قليلًا */
-.hero-specs-box{
-  margin-top: 8px;
-}
-
-/* 3) ظل خفيف للأزرار لزيادة الوضوح فوق الخلفية */
-.cta-row .btn{
-  box-shadow: 0 6px 16px rgba(0,0,0,.25);
-}
-
-/* 4) السماح بتكسير سطر المنتجات بشكل طبيعي (لو صار طويل) */
-.hero-specs-list li{
-  white-space: normal;
-}
