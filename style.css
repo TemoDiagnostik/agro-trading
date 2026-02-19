@@ -149,46 +149,56 @@ header .lang select {
 }
 
 /* =========================
-   MOBILE HEADER REFINED
+   MOBILE HEADER — CORPORATE COMPACT
    ========================= */
 @media (max-width: 768px) {
 
-  header {
-    padding: 10px 14px;
+  header{
+    padding: 8px 14px;
   }
 
-  header .container {
+  header .container{
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
   }
 
-  /* اللوجو أصغر */
-  header .logo-img {
-    height: 36px;
+  /* اللوجو */
+  header .logo-img{
+    height: 30px;
   }
 
-  /* اسم الشركة أصغر */
-  header .brand-text {
-    font-size: 18px;
+  /* اسم الشركة */
+  header .brand-text{
+    font-size: 17px;
+    font-weight: 600;
+    margin: 2px 0 0 0;
   }
 
-  /* روابط القائمة */
-  header nav ul {
-    gap: 10px;
+  /* السطر التعريفي */
+  header .tagline{
+    font-size: 12px;
+    opacity: .8;
+    margin: 0;
+  }
+
+  /* القائمة */
+  header nav ul{
+    gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13.5px;
+    margin: 4px 0;
   }
 
-  /* اللغة */
-  .lang-switch {
+  /* زر اللغة */
+  .lang-switch{
     margin-top: 4px;
+    font-size: 13px;
+    padding: 4px 10px;
   }
 
 }
-
-
 
 
 /* =============== HERO SECTION — GLOBAL CLEAN (NO BOXES / NO TEXT SHADOW) =============== */
