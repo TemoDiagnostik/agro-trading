@@ -1770,3 +1770,24 @@ form label {
     padding: 12px 14px;
   }
 }
+
+
+
+/* Hero: On-request line styling */
+.hero-onrequest{
+  display: inline-block;
+  margin-left: 8px;
+  opacity: .85;
+  font-weight: 600;
+  font-size: .95em;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px){
+  .hero-onrequest{
+    display: block;
+    margin: 6px 0 0 0;
+    white-space: normal;
+    opacity: .9;
+  }
+}
