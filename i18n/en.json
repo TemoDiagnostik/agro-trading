@@ -15,7 +15,7 @@
 "hero.specsNote": "Multi-origin supply. COA available upon request.",
 "hero.productsLine": "Rock Phosphate • NPK Granular • Water-Soluble Fertilizers (WSF) • Calcium Nitrate • Micronutrients • Water-Retention Granules (Hydrogel)",
 "hero.tradeNote": "Execution: LC at sight • SGS/Intertek/BV inspection • shipment-specific documentation",
-
+"hero.productsOnRequest": "• On request: NPK Granular • Water-Retention Polymer (Hydrogel)",
 
 
 
@@ -24,8 +24,48 @@
   "products.spec1": "Screened granulometry — ready for milling or direct application",
   "products.spec2": "Specification sheet included; buyer-specific analyses available",
   "products.viewCoa": "Open Spec",
-  "products.all": "Available Products",
+ "products.all": "Product Categories",
+"products.note": "Also available on request: NPK Granular • Water-Retention Polymer (Hydrogel).",
+"cat.cta.rfq": "Request RFQ",
+"cat.cta.specs": "View Specs",
+"cat.cta.catalog": "Ask for Grades",
+"cat.cta.avail": "Check Availability",
+"cat.cta.list": "Ask for List",
 
+"cat.tags.bulk": "Bulk / Big-Bag / Bags",
+"cat.tags.incoterms": "EXW / FOB / CFR / CIF",
+"cat.tags.coa": "Shipment-specific COA",
+"cat.tags.specialty": "Specialty Fertilizers",
+"cat.tags.custom": "Custom grades",
+
+"cat.rp.title": "Rock Phosphate",
+"cat.rp.text": "Multi-origin supply with grade and heavy-metals verified by shipment-specific COA (SGS/Intertek/BV upon request). Low-cadmium options are available subject to shipment COA confirmation.",
+"cat.rp.s1": "Grades: 18–34% P₂O₅ (by origin)",
+"cat.rp.s2": "Forms: Powder / Granular / Fine Powder",
+"cat.rp.s3": "COA: P₂O₅, CaO, SiO₂, Al₂O₃, Fe₂O₃, MgO, SO₃, Cl, LOI",
+"cat.rp.s4": "Low-Cd: available upon request (shipment COA required)",
+
+"cat.wsf.title": "Water-Soluble Fertilizers (WSF)",
+"cat.wsf.text": "NPK water-soluble grades tailored to crop programs and regional demand. COA provided per shipment.",
+"cat.wsf.s1": "Type: NPK WSF (fully soluble)",
+"cat.wsf.s2": "Forms: Powder / Crystalline",
+"cat.wsf.s3": "Packaging: 25kg / 50kg / Big-Bag (as agreed)",
+"cat.wsf.s4": "COA: guaranteed analysis per grade",
+
+"cat.cn.title": "Calcium Nitrate",
+"cat.cn.text": "CAN / CN options for fertigation and open-field use. Specification and COA provided per shipment.",
+"cat.cn.s1": "Type: Calcium Nitrate (CN / CAN as available)",
+"cat.cn.s2": "Form: Prilled / Granular / Crystalline (by grade)",
+"cat.cn.s3": "Packaging: 25kg / 50kg",
+"cat.cn.s4": "COA: guaranteed analysis per shipment",
+
+"cat.micro.title": "Micronutrients",
+"cat.micro.text": "Micronutrient portfolio for blending or direct application. COA and specification are provided by product.",
+"cat.micro.s1": "Types: Zn / Fe / Mn / B / Cu / Mo",
+"cat.micro.s2": "Forms: Powder / Granular (by product)",
+"cat.micro.s3": "Packaging: 25kg / 50kg",
+"cat.micro.s4": "COA: per shipment / per product",
+  
   "services.title": "Our Services",
   "services.agro": "Agricultural Services",
   "services.agro.text": "Comprehensive support for European farmers and distributors through trusted, tested products and fertilizers.",
