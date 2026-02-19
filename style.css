@@ -68,7 +68,7 @@ header {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   padding: 10px 0;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
 }
@@ -149,23 +149,43 @@ header .lang select {
 }
 
 /* =========================
-   MOBILE
+   MOBILE HEADER REFINED
    ========================= */
 @media (max-width: 768px) {
+
+  header {
+    padding: 10px 14px;
+  }
+
   header .container {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 6px;
   }
 
+  /* اللوجو أصغر */
+  header .logo-img {
+    height: 36px;
+  }
+
+  /* اسم الشركة أصغر */
+  header .brand-text {
+    font-size: 18px;
+  }
+
+  /* روابط القائمة */
   header nav ul {
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    font-size: 14px;
   }
 
-  header .logo-img {
-    height: 48px;
+  /* اللغة */
+  .lang-switch {
+    margin-top: 4px;
   }
+
 }
 
 
