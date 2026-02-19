@@ -383,6 +383,13 @@ header .lang select {
   opacity: .95;
 }
 
+
+.hero-onrequest{
+  opacity:.92;
+  font-weight:600;
+}
+
+
 /* CTA row */
 .cta-row{
   display: flex;
@@ -530,6 +537,34 @@ header .lang select {
   min-width:140px;
   text-align:center;
 }
+
+
+
+/* Product Categories (NEW) */
+#products .grid.cols-4{
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+#products .mini-specs{
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+  font-size: .92rem;
+  color:#334155;
+  line-height: 1.55;
+}
+
+#products .mini-specs li{ margin-bottom: 6px; }
+
+#products .products-note{
+  margin-top: 18px;
+  text-align: center;
+  font-size: .95rem;
+  color:#334155;
+  opacity:.9;
+}
+
+
+
 
 /* Mobile: full width buttons */
 @media (max-width:768px){
