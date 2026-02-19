@@ -1726,25 +1726,38 @@ form label {
 
 
 /* =========================
-   PRODUCTS — Additional Line Highlight
+   PRODUCTS — Subtle Highlight Note
    ========================= */
 
-#products .additional-note{
-  margin-top: 26px;
+#products .products-note{
+  margin: 28px auto 0 auto;
+  max-width: 900px;
+
+  padding: 14px 18px;
+
+  background: #f8fafc;           /* خلفية خفيفة جداً */
+  border: 1px solid #e2e8f0;     /* إطار ناعم */
+  border-radius: 12px;
+
   text-align: center;
 
   font-size: 15px;
   font-weight: 600;
+  color: #0f172a;
 
-  color: #0f172a;              /* غامق واضح */
-  opacity: 1 !important;
-
-  padding-top: 18px;
-  border-top: 1px solid #e5e7eb;   /* خط فاصل أنيق */
+  box-shadow: 0 4px 14px rgba(2,6,23,.04); /* ظل خفيف جداً */
 }
 
-/* كلمة Also available */
-#products .additional-note span{
-  color: #64748b;   /* رمادي هادي */
+/* الجزء الأول من الجملة لو حابب تخليه أهدأ */
+#products .products-note::first-line{
+  color: #64748b;
   font-weight: 500;
+}
+
+/* Mobile refinement */
+@media (max-width:768px){
+  #products .products-note{
+    font-size: 14px;
+    padding: 12px 14px;
+  }
 }
