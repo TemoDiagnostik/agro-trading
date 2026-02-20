@@ -452,17 +452,25 @@ header .lang select {
 
 
 
-/* ===== TRUST BANNER ===== */
 .trust-banner {
- padding:.9rem 0;
- background:#f1f5f9;
- border-top:3px solid #84cc16;
- border-bottom:1px solid #e2e8f0;
- text-align:center;
+  padding: 1.2rem 0;
+  background: #f8fafc;
+  border-top: 4px solid #84cc16;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
 }
-.trust-banner p {margin:.2rem 0;font-size:1rem;color:#334155;}
-.trust-banner strong {color:#0f766e;}
 
+.trust-banner p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.trust-banner strong {
+  color: #0f766e;
+  font-weight: 700;
+}
 
 
 /* ===== PRODUCTS ===== */
