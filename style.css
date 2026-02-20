@@ -434,31 +434,33 @@ header .lang select {
     font-size: 32px;
   }
 
-.cta-row .btn{
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
- 
-  .hero-specs-box{
-    max-width: 100%;
-    max-height: none;
-    overflow: visible;
-  }
-
-   .cta-row a.btn{
-    width: 100% !important;
-    max-width: 360px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-
-     .cta-row{
+  /* CTA row on mobile: stack buttons */
+  .cta-row{
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 12px !important;
     width: 100% !important;
   }
-}
 
+  .cta-row a.btn{
+    width: 100% !important;
+    max-width: 360px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  /* optional: soft shadow only on mobile buttons */
+  .cta-row a.btn{
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  .hero-specs-box{
+    max-width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+}
 
 
 .trust-banner {
