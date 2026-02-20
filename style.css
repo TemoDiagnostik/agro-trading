@@ -254,9 +254,9 @@ header .lang select {
   inset:0;
   background: linear-gradient(
     90deg,
-    rgba(0,0,0,0.52) 0%,
-    rgba(0,0,0,0.28) 55%,
-    rgba(0,0,0,0.08) 100%
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.22) 55%,
+    rgba(0,0,0,0.05) 100%
   );
   z-index:1;
 }
@@ -444,13 +444,18 @@ header .lang select {
     overflow: visible;
   }
 
-  .cta-row .btn{
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    padding: 16px 18px;
-    font-size: 15px;
-    border-radius: 14px;
+   .cta-row a.btn{
+    width: 100% !important;
+    max-width: 360px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+
+     .cta-row{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
   }
 }
 
