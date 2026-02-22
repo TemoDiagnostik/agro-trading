@@ -30,9 +30,9 @@
 
   "cat.cta.rfq": "Request RFQ",
   "cat.cta.specs": "View Specs",
-  "cat.cta.catalog": "Ask for Grades",
+  "cat.cta.catalog": "Ask for Availability",
   "cat.cta.avail": "Check Availability",
-  "cat.cta.list": "Ask for List",
+  "cat.cta.list": "Ask for Availability",
 
   "cat.tags.bulk": "Bulk / Big-Bag / Bags",
   "cat.tags.incoterms": "EXW / FOB / CFR / CIF",
