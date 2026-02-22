@@ -1121,11 +1121,13 @@ form label {
   max-width: 820px;
   text-align: left;
 }
+
 .payment-list li{
   position: relative;
   padding-left: 18px;
   margin: 8px 0;
 }
+
 .payment-list li::before{
   content: "•";
   position: absolute;
@@ -1133,11 +1135,12 @@ form label {
   top: 0;
 }
 
- .wise-note{
+.wise-note{
   font-size: 0.85rem;
   color: #6b6b6b;
   margin-top: 8px;
 }
+
 /* ===== NOTES & MUTED FIX ===== */
 .note {
  font-size: 0.85rem;
