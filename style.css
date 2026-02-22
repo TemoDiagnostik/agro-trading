@@ -2451,7 +2451,63 @@ nav {
   font-weight: 500;
 }
 
+/* ===== NAV FIX (stable with long translations) ===== */
 
+/* لو عندك container للـ nav خليّه flex */
+header .container-nav,
+.navbar,
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;         /* يسمح بسطر ثاني عند اللغات الطويلة */
+}
+
+/* القائمة نفسها */
+.navbar-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 14px;          /* row-gap / column-gap */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 520px;         /* تاخد مساحة وتسمح بالالتفاف */
+  flex-wrap: wrap;         /* مهم جداً للغات الطويلة */
+}
+
+/* مهم: لا تمنع اللف */
+.navbar-nav li{
+  white-space: normal;     /* بدل nowrap */
+}
+
+/* الروابط */
+.navbar-nav a{
+  display: inline-block;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 1.1;
+  border-radius: 10px;
+}
+
+/* على الديسكتوب الكبير نحاول نخليه صف واحد لو المساحة تسمح */
+@media (min-width: 1100px){
+  .navbar-nav{
+    flex-wrap: nowrap;
+  }
+  .navbar-nav a{
+    font-size: 13.5px;
+    padding: 8px 9px;
+  }
+}
+
+/* على الشاشات المتوسطة/الصغيرة نخلي اللف دائمًا */
+@media (max-width: 1099px){
+  .navbar-nav{
+    flex-wrap: wrap;
+  }
+}
 
 
 
