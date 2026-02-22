@@ -315,6 +315,7 @@ header .lang select {
   backdrop-filter: none;
 }
 
+
 /* Products line (لو موجودة عندك) */
 .hero-products-line{
   margin: 10px 0 18px 0;
@@ -881,7 +882,65 @@ header .lang select {
  margin-top: auto;
 }
 
+/* ===== CERT LIGHTBOX (Preview) ===== */
+.cert-preview{
+  cursor: zoom-in;
+}
 
+/* overlay */
+.cert-lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;            /* hidden by default */
+  place-items: center;
+  background: rgba(0,0,0,0.75);
+  z-index: 9999;
+  padding: 18px;
+}
+
+.cert-lightbox.is-open{
+  display: grid;
+}
+
+/* modal box */
+.cert-lightbox__box{
+  position: relative;
+  max-width: min(980px, 96vw);
+  max-height: 92vh;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+/* image inside */
+.cert-lightbox__img{
+  display: block;
+  max-width: 100%;
+  max-height: calc(92vh - 40px);
+  height: auto;
+  border-radius: 10px;
+}
+
+/* close button */
+.cert-lightbox__close{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cert-lightbox__close:hover{
+  background: rgba(0,0,0,0.65);
+}
 
 /* ===== FOOTER ===== */
 .foot {
@@ -1825,6 +1884,7 @@ form label {
   #products .product-thumbs img{ height:80px; }
   #products .cta .btn{ width:100%; min-width:0; }
 }
+
 
 
 
