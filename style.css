@@ -927,6 +927,10 @@ section, [id] {
  border-left: 4px solid #00a87a;
  padding-left: 10px;
 }
+.contact-details img{
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
 .kbd {
  font-family: monospace;
  background: #e7f2f0;
