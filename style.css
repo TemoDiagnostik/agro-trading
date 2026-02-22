@@ -2208,7 +2208,14 @@ body.supplier-page .supplier-cta-bottom{
 }
 
 
-
+/* Supplier hero trust line */
+body.supplier-page .hero-trustline{
+  margin-top: 10px;
+  color: rgba(255,255,255,.85);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 /* HERO secondary CTA row */
 .cta-row-secondary{
   margin-top: 10px;
