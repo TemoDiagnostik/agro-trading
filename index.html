@@ -1244,7 +1244,74 @@
     });
   })();
 </script>
-		
+
+
+
+
+		<script>
+(function () {
+  const imgs = document.querySelectorAll('#certificates img.cert-preview');
+  if (!imgs.length) return;
+
+  // Create lightbox once
+  const overlay = document.createElement('div');
+  overlay.className = 'cert-lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Certificate preview');
+
+  overlay.innerHTML = `
+    <div class="cert-lightbox__box">
+      <button class="cert-lightbox__close" type="button" aria-label="Close preview">×</button>
+      <img class="cert-lightbox__img" alt="">
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  const modalImg = overlay.querySelector('.cert-lightbox__img');
+  const btnClose = overlay.querySelector('.cert-lightbox__close');
+  let lastFocused = null;
+
+  function openPreview(src, alt){
+    lastFocused = document.activeElement;
+    modalImg.src = src;
+    modalImg.alt = alt || 'Certificate preview';
+    overlay.classList.add('is-open');
+    btnClose.focus();
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  function closePreview(){
+    overlay.classList.remove('is-open');
+    modalImg.src = '';
+    document.documentElement.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  // open on image click
+  imgs.forEach(img => {
+    img.addEventListener('click', () => {
+      // Optionally support higher-res via: data-full="..."
+      const full = img.getAttribute('data-full') || img.currentSrc || img.src;
+      openPreview(full, img.alt);
+    });
+  });
+
+  // close handlers
+  btnClose.addEventListener('click', closePreview);
+
+  overlay.addEventListener('click', (e) => {
+    // click outside the box closes
+    if (e.target === overlay) closePreview();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!overlay.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closePreview();
+  });
+})();
+</script>
 		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
 {
