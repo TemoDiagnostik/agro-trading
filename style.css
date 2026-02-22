@@ -2458,3 +2458,65 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
   z-index: 5;
   mix-blend-mode: screen;         /* يعطي شكل watermark محترم */
 }
+
+
+
+/* ===== CERT MODAL ===== */
+.cert-modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+.cert-modal[aria-hidden="false"]{
+  display: block;
+}
+
+.cert-modal__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+}
+
+.cert-modal__panel{
+  position: relative;
+  max-width: 900px;
+  width: 95%;
+  margin: 40px auto;
+  background: #111;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.cert-modal__panel img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔥 Watermark ONLY in zoom */
+.cert-modal__panel::after{
+  content: "EURO AGRI TRADING • PUBLIC SAMPLE";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-size: clamp(20px,3vw,42px);
+  color: rgba(255,255,255,.15);
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+.cert-modal__close{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
