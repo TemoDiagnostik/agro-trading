@@ -2245,3 +2245,17 @@ body.supplier-page .supplier-grid-2{
 body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
   grid-column: 1 / -1;
 }
+
+
+
+
+/* WhatsApp button — highlight as secondary channel */
+.btn-whatsapp{
+  background: transparent !important;
+  border: 2px solid #0a662f !important;
+  color: #0a662f !important;
+}
+
+.btn-whatsapp:hover{
+  filter: brightness(0.95);
+}
