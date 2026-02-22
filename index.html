@@ -1253,40 +1253,7 @@
 
 
 
-
-
-		<!-- Certificate Zoom Modal -->
-<div id="certModal" class="cert-modal" aria-hidden="true">
-  <div class="cert-modal__backdrop" data-close="1"></div>
-
-  <div class="cert-modal__panel">
-    <button class="cert-modal__close" data-close="1">×</button>
-    <img id="certModalImg" src="" alt="Certificate preview">
-  </div>
-</div>
-
-
-		<script>
-const modal = document.getElementById('certModal');
-const modalImg = document.getElementById('certModalImg');
-
-document.querySelectorAll('#certificates .card img').forEach(img=>{
-  img.addEventListener('click', ()=>{
-    modalImg.src = img.src;
-    modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
-  });
-});
-
-modal.addEventListener('click', e=>{
-  if(e.target.dataset.close){
-    modal.setAttribute('aria-hidden','true');
-    modalImg.src = '';
-    document.body.style.overflow = '';
-  }
-});
-</script>
-		
+	
 		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
 {
