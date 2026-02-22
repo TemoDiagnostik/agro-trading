@@ -885,6 +885,15 @@ header .lang select {
  color: var(--muted);
  font-size: 0.9rem;
  text-align: center;
+ background: #0f1b14; /* darker green-ish charcoal */
+  color: rgba(255,255,255,0.88);
+footer .muted,
+footer p,
+footer a{
+  color: rgba(255,255,255,0.80) !important;
+footer a:hover{
+  color: #ffffff !important;
+  text-decoration: underline;
 }
 
 
