@@ -929,10 +929,6 @@ section, [id] {
   padding-left: 10px;
 }
 
-.contact-details img{
-  width: 380px;
-  height: auto;
-}
 
 /* Keyboard-style highlight */
 .kbd {
@@ -1571,7 +1567,13 @@ form label {
   display: inline-block;
 }
 
-
+.eu-flag-inline img{
+  width: 100%;
+  max-width: 380px;   /* غيّر الرقم حسب الحجم الذي تريده */
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
 
 /* =========================
    MOBILE HEADER FIX (FINAL COMPACT)
