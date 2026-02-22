@@ -2321,3 +2321,40 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
   font-size: 0.9rem;
   opacity: 0.85;
 }
+
+
+
+
+/* Contact layout improvement */
+.contact-details-wrapper{
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* EU flag size */
+.eu-flag-inline img{
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* Text block */
+.contact-details-block{
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px){
+  .contact-details-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eu-flag-inline img{
+    max-width: 300px;
+  }
+}
