@@ -674,8 +674,9 @@
 
       <!-- Card 2 — Sieving Analysis -->
       <div class="card">
-        <img src="cert-sieving-summary.png?v=20260209"
-             alt="Rock Phosphate sieving analysis (granulometry, 20–28% P₂O₅)">
+        <img class="cert-preview"
+     src="cert-coa-summary.png?v=20260209"
+     alt="Rock Phosphate specifications overview (20–28% P₂O₅)">
         <h3>Sieving Analysis — Rock Phosphate (Sample)</h3>
         <p class="muted">
           Granulometry and particle size distribution — suitable for milling or direct application.
@@ -696,8 +697,9 @@
 
       <!-- Card 3 — Independent Inspection -->
       <div class="card">
-        <img src="cert-sgs-summary.png?v=20260209"
-             alt="Independent inspection & verification (SGS / Intertek / BV)">
+        <img class="cert-preview"
+     src="cert-coa-summary.png?v=20260209"
+     alt="Rock Phosphate specifications overview (20–28% P₂O₅)">
         <h3>Independent Inspection & Verification (SGS / Intertek / BV)</h3>
         <p class="muted">
           Independent third-party inspection can be arranged per shipment (as agreed).
@@ -719,8 +721,9 @@
 
       <!-- Card 4 — EU Compliance -->
       <div class="card">
-        <img src="cert-declaration.png?v=20260209"
-             alt="EU compliance documents">
+        <img class="cert-preview"
+     src="cert-coa-summary.png?v=20260209"
+     alt="Rock Phosphate specifications overview (20–28% P₂O₅)">
         <h3>EU Compliance Documents</h3>
         <p class="muted">
           Documentation supports compliance with applicable EU requirements and product safety regulations.
@@ -741,8 +744,9 @@
 
       <!-- Card 5 — MSDS -->
       <div class="card">
-        <img src="cert-msds-summary.png?v=20260209"
-             alt="MSDS summary for EU REACH">
+        <img class="cert-preview"
+     src="cert-coa-summary.png?v=20260209"
+     alt="Rock Phosphate specifications overview (20–28% P₂O₅)">
         <h3>MSDS Summary — EU REACH</h3>
         <p class="muted">
           Material Safety Data Sheet (public summary) for compliance and safe handling guidance.
@@ -790,8 +794,9 @@
 
       <!-- Card 7 — Available Grades Summary -->
       <div class="card">
-        <img src="cert-grades-18-30.png?v=20260209"
-             alt="Available Grades Summary — Rock Phosphate (18–30% P₂O₅)">
+        <img class="cert-preview"
+     src="cert-coa-summary.png?v=20260209"
+     alt="Rock Phosphate specifications overview (20–28% P₂O₅)">
 
         <h3>Available Grades Summary — Rock Phosphate (18–30% P₂O₅)</h3>
 
@@ -1247,71 +1252,6 @@
 
 
 
-
-		<script>
-(function () {
-  const imgs = document.querySelectorAll('#certificates img.cert-preview');
-  if (!imgs.length) return;
-
-  // Create lightbox once
-  const overlay = document.createElement('div');
-  overlay.className = 'cert-lightbox';
-  overlay.setAttribute('role', 'dialog');
-  overlay.setAttribute('aria-modal', 'true');
-  overlay.setAttribute('aria-label', 'Certificate preview');
-
-  overlay.innerHTML = `
-    <div class="cert-lightbox__box">
-      <button class="cert-lightbox__close" type="button" aria-label="Close preview">×</button>
-      <img class="cert-lightbox__img" alt="">
-    </div>
-  `;
-
-  document.body.appendChild(overlay);
-
-  const modalImg = overlay.querySelector('.cert-lightbox__img');
-  const btnClose = overlay.querySelector('.cert-lightbox__close');
-  let lastFocused = null;
-
-  function openPreview(src, alt){
-    lastFocused = document.activeElement;
-    modalImg.src = src;
-    modalImg.alt = alt || 'Certificate preview';
-    overlay.classList.add('is-open');
-    btnClose.focus();
-    document.documentElement.style.overflow = 'hidden';
-  }
-
-  function closePreview(){
-    overlay.classList.remove('is-open');
-    modalImg.src = '';
-    document.documentElement.style.overflow = '';
-    if (lastFocused) lastFocused.focus();
-  }
-
-  // open on image click
-  imgs.forEach(img => {
-    img.addEventListener('click', () => {
-      // Optionally support higher-res via: data-full="..."
-      const full = img.getAttribute('data-full') || img.currentSrc || img.src;
-      openPreview(full, img.alt);
-    });
-  });
-
-  // close handlers
-  btnClose.addEventListener('click', closePreview);
-
-  overlay.addEventListener('click', (e) => {
-    // click outside the box closes
-    if (e.target === overlay) closePreview();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!overlay.classList.contains('is-open')) return;
-    if (e.key === 'Escape') closePreview();
-  });
-})();
-</script>
 
 
 
