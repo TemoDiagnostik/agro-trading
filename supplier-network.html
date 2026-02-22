@@ -1,124 +1,313 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>Supplier Network | Euro Agri Trading</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XRD7YWF4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6XRD7YWF4S');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Supplier Network | Euro Agri Trading s.r.o.</title>
+  <meta name="description" content="Verified supplier network with KYC, shipment-specific COA validation, third-party inspection, and EU-focused execution." />
+
+  <!-- Tajawal for Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css?v=25">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="theme-color" content="#0a662f">
+
+  <!-- Set early lang/dir -->
+  <script>
+    (function () {
+      const RTL = new Set(['ar']);
+      const urlLang = new URLSearchParams(location.search).get('lang');
+      const saved   = localStorage.getItem('lang');
+      const nav     = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+      const guess   = (urlLang || saved || nav || 'en').toLowerCase().split('-')[0];
+      const lang    = (['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'].includes(guess) ? guess : 'en');
+      document.documentElement.lang = lang;
+      document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+      if (lang === 'ar') {
+        document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
+      }
+    })();
+  </script>
+
+  <!-- hreflang -->
+  <link rel="alternate" href="supplier-network.html?lang=ar" hreflang="ar" />
+  <link rel="alternate" href="supplier-network.html?lang=en" hreflang="en" />
+  <link rel="alternate" href="supplier-network.html?lang=cs" hreflang="cs" />
+  <link rel="alternate" href="supplier-network.html?lang=de" hreflang="de" />
+  <link rel="alternate" href="supplier-network.html?lang=fr" hreflang="fr" />
+  <link rel="alternate" href="supplier-network.html?lang=es" hreflang="es" />
+  <link rel="alternate" href="supplier-network.html?lang=it" hreflang="it" />
+  <link rel="alternate" href="supplier-network.html?lang=pl" hreflang="pl" />
+  <link rel="alternate" href="supplier-network.html?lang=nl" hreflang="nl" />
+  <link rel="alternate" href="supplier-network.html?lang=ro" hreflang="ro" />
+  <link rel="alternate" href="supplier-network.html?lang=el" hreflang="el" />
+  <link rel="alternate" href="supplier-network.html?lang=pt" hreflang="pt" />
+  <link rel="alternate" href="supplier-network.html?lang=bg" hreflang="bg" />
+  <link rel="alternate" href="supplier-network.html?lang=hu" hreflang="hu" />
+  <link rel="alternate" href="supplier-network.html?lang=da" hreflang="da" />
+  <link rel="alternate" href="supplier-network.html?lang=sv" hreflang="sv" />
+  <link rel="alternate" href="supplier-network.html?lang=fi" hreflang="fi" />
+  <link rel="alternate" href="supplier-network.html?lang=sk" hreflang="sk" />
+  <link rel="alternate" href="supplier-network.html?lang=sl" hreflang="sl" />
+  <link rel="alternate" href="supplier-network.html?lang=hr" hreflang="hr" />
+  <link rel="alternate" href="supplier-network.html?lang=sr" hreflang="sr" />
+  <link rel="alternate" href="supplier-network.html?lang=tr" hreflang="tr" />
+
+  <!-- Preload supplier hero image -->
+  <link rel="preload" as="image" href="img/supplier-bg.png" imagesrcset="img/supplier-bg.png">
+
 </head>
 
-<body>
+<body class="supplier-page">
 
-<!-- ===== NAVBAR (نسخة من index بدون تغيير) ===== -->
-<header class="header">
-  <div class="container nav">
-    <a href="index.html" class="logo">
-      <img src="logo-main.png" alt="Euro Agri Trading">
-    </a>
+<header>
+  <div class="container nav" role="navigation" aria-label="Primary">
+
+    <div class="brand">
+      <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+    </div>
+
+    <div class="brand-text">
+      <span class="brand-name">Euro Agri Trading s.r.o</span>
+      <span class="brand-sep">—</span>
+      <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
+    </div>
+
     <nav>
-      <a href="index.html#products">Products</a>
-      <a href="supplier-network.html" class="active">Supplier Network</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#contactFormBox">Contact</a>
+      <ul class="navbar-nav">
+        <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="supplier-network.html" class="active">Supplier Network</a></li>
+        <li><a href="index.html#certificates" data-i18n="nav.coa">Specifications</a></li>
+        <li><a href="index.html#how-we-work" data-i18n="nav.how">How We Work</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About us</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
     </nav>
+
+    <div class="lang" aria-label="Language selector">
+      <span aria-hidden="true">🌐</span>
+      <select id="langSelect" title="Language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="cs">Čeština</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="it">Italiano</option>
+        <option value="pl">Polski</option>
+        <option value="nl">Nederlands</option>
+        <option value="ro">Română</option>
+        <option value="el">Ελληνικά</option>
+        <option value="pt">Português</option>
+        <option value="bg">Български</option>
+        <option value="hu">Magyar</option>
+        <option value="da">Dansk</option>
+        <option value="sv">Svenska</option>
+        <option value="fi">Suomi</option>
+        <option value="sk">Slovenčina</option>
+        <option value="sl">Slovenščina</option>
+        <option value="hr">Hrvatski</option>
+        <option value="sr">Srpski</option>
+        <option value="tr">Türkçe</option>
+      </select>
+    </div>
+
   </div>
 </header>
 
+<!-- HERO (Supplier Network) -->
+<section id="supplier-home" class="supplier-hero hero-bleed">
+  <div class="hero-overlay" aria-hidden="true"></div>
 
-<!-- ===== PAGE HERO ===== -->
-<section class="page-hero">
-  <div class="container">
-    <h1>Verified Supplier Network</h1>
-    <p>
-      Multi-origin sourcing • Shipment-specific COA • Third-party inspection (SGS / Intertek / BV)
-    </p>
-  </div>
-</section>
+  <div class="container hero-content">
+    <div class="hero-left">
 
+      <h1 class="hero-title">Verified Supplier Network</h1>
+      <h2 class="hero-subtitle">
+        Multi-origin sourcing. Shipment-specific COA. Third-party inspection (SGS / Intertek / BV).
+      </h2>
 
-<!-- ===== COVERAGE SECTION ===== -->
-<section class="sn-section">
-  <div class="container">
-    <h2>Global Coverage</h2>
+      <p class="lead hero-desc">
+        We operate as an EU-based sourcing agency — supplier identities are not published publicly.
+        Documentation and shipment-specific reports are shared only with verified buyers upon RFQ confirmation.
+      </p>
 
-    <div class="grid sn-grid">
-      <div class="sn-card">
-        <h3>Europe</h3>
-        <p>Selected producers and distributors aligned with EU compliance standards.</p>
+      <!-- CTA (clean + professional) -->
+      <div class="cta-row supplier-cta">
+        <a href="index.html#products" class="btn btn-primary">View Products</a>
+        <a href="index.html#contactFormBox" class="btn btn-outline">Request Cooperation</a>
       </div>
 
-      <div class="sn-card">
-        <h3>North Africa</h3>
-        <p>Phosphate and fertilizer producers with export-ready documentation.</p>
-      </div>
-
-      <div class="sn-card">
-        <h3>Middle East</h3>
-        <p>Strategic fertilizer and mineral supply partners.</p>
-      </div>
-
-      <div class="sn-card">
-        <h3>Asia</h3>
-        <p>Water-soluble and specialty fertilizer manufacturing network.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== VERIFICATION FRAMEWORK ===== -->
-<section class="sn-section light">
-  <div class="container">
-    <h2>Verification Framework</h2>
-
-    <div class="grid sn-grid">
-
-      <div class="sn-card">
-        <h3>Entity & Export Check</h3>
-        <p>Company registration, export capability, and trade documentation validation.</p>
-      </div>
-
-      <div class="sn-card">
-        <h3>Quality & COA Review</h3>
-        <p>Shipment-specific COA validation including heavy metals analysis when required.</p>
-      </div>
-
-      <div class="sn-card">
-        <h3>Inspection at Loading</h3>
-        <p>Independent inspection arranged via SGS / Intertek / BV upon request.</p>
-      </div>
-
-      <div class="sn-card">
-        <h3>Logistics & Compliance</h3>
-        <p>Export documentation and EU import alignment support.</p>
+      <!-- Trust strip -->
+      <div class="supplier-trust-strip" role="region" aria-label="Trust highlights">
+        <div class="trust-pill">KYC & Entity Verification</div>
+        <div class="trust-pill">Shipment-specific COA review</div>
+        <div class="trust-pill">Inspection at Loading</div>
+        <div class="trust-pill">Export documentation support</div>
       </div>
 
     </div>
   </div>
 </section>
 
-
-<!-- ===== CONFIDENTIALITY NOTE ===== -->
-<section class="sn-section">
+<!-- CONTENT -->
+<section class="supplier-section">
   <div class="container">
-    <div class="sn-note">
-      Supplier identities are not published publicly.
-      Details are shared only with verified buyers upon RFQ confirmation.
+
+    <div class="supplier-grid-2">
+      <div class="supplier-panel">
+        <h3>Global Coverage</h3>
+        <p class="muted">
+          Multi-origin sourcing aligned with EU import workflows. Origins are shared case-by-case based on product, grade, and availability.
+        </p>
+
+        <div class="supplier-cards">
+          <div class="supplier-card">
+            <strong>Europe</strong>
+            <span class="muted">Selected producers & distributors aligned with EU compliance standards.</span>
+          </div>
+          <div class="supplier-card">
+            <strong>North Africa</strong>
+            <span class="muted">Phosphate and fertilizer products with export-ready documentation.</span>
+          </div>
+          <div class="supplier-card">
+            <strong>Middle East</strong>
+            <span class="muted">Strategic fertilizer and mineral supply partners.</span>
+          </div>
+          <div class="supplier-card">
+            <strong>Asia</strong>
+            <span class="muted">Water-soluble and specialty fertilizer manufacturing network.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="supplier-panel">
+        <h3>Verification Framework</h3>
+        <p class="muted">
+          Our process is designed to reduce risk and ensure shipment-grade consistency.
+        </p>
+
+        <ol class="supplier-steps">
+          <li>
+            <strong>Entity & Export Check</strong>
+            <span class="muted">Company registration, export capability, and documentation validation.</span>
+          </li>
+          <li>
+            <strong>Quality & COA Review</strong>
+            <span class="muted">Shipment-specific COA validation including heavy metals analysis when required.</span>
+          </li>
+          <li>
+            <strong>Inspection at Loading</strong>
+            <span class="muted">Independent inspection arranged via SGS / Intertek / BV upon request.</span>
+          </li>
+          <li>
+            <strong>Logistics & Compliance</strong>
+            <span class="muted">Export documentation support and EU import alignment.</span>
+          </li>
+        </ol>
+
+        <div class="supplier-note">
+          Supplier identities are not published publicly. Details are shared only with verified buyers upon RFQ confirmation.
+        </div>
+
+        <div class="cta-row supplier-cta-bottom">
+          <a href="index.html#contactFormBox" class="btn btn-primary">Request RFQ</a>
+          <a href="index.html#certificates" class="btn btn-outline">View COA Standards</a>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
+<!-- Scripts: reuse same translation logic -->
+<script type="module">
+  const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
+  const RTL = new Set(['ar']);
 
-<!-- ===== CTA ===== -->
-<section class="sn-cta">
-  <div class="container">
-    <h2>Interested in Working With Us?</h2>
-    <a href="index.html#contactFormBox" class="btn btn-primary">
-      Request Cooperation
-    </a>
-  </div>
-</section>
+  function detectLang(){
+    const url = new URLSearchParams(location.search).get('lang');
+    if (url) return url.toLowerCase().split('-')[0];
+    const saved = localStorage.getItem('lang');
+    if (saved) return saved.toLowerCase();
+    const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    return nav.toLowerCase().split('-')[0];
+  }
 
+  async function loadTranslations(lang){
+    try{
+      const res = await fetch(`i18n/${lang}.json?v=1`);
+      if(!res.ok) throw new Error('no translation file');
+      return await res.json();
+    }catch(e){
+      if(lang !== 'en'){
+        const res2 = await fetch(`i18n/en.json?v=1`);
+        return await res2.json();
+      }
+      return {};
+    }
+  }
+
+  function applyTranslations(dict){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict && dict[key]) el.textContent = dict[key];
+    });
+  }
+
+  function setDirAndFont(lang){
+    document.documentElement.lang = lang;
+    document.documentElement.dir = RTL.has(lang) ? 'rtl' : 'ltr';
+    if(lang === 'ar'){
+      document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
+    } else {
+      document.documentElement.style.fontFamily = "";
+    }
+  }
+
+  function updateUrlLang(lang){
+    const u = new URL(location.href);
+    u.searchParams.set('lang', lang);
+    history.replaceState({}, '', u.toString());
+  }
+
+  const langSelect = document.getElementById('langSelect');
+  let lang = detectLang();
+  if(!SUPPORTED.includes(lang)) lang = 'en';
+  langSelect.value = lang;
+  setDirAndFont(lang);
+  updateUrlLang(lang);
+
+  const dict = await loadTranslations(lang);
+  applyTranslations(dict);
+
+  langSelect.addEventListener('change', async (e)=>{
+    const newLang = e.target.value;
+    localStorage.setItem('lang', newLang);
+    setDirAndFont(newLang);
+    updateUrlLang(newLang);
+    const d = await loadTranslations(newLang);
+    applyTranslations(d);
+  });
+</script>
 
 </body>
 </html>
