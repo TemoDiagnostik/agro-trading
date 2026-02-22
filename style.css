@@ -880,21 +880,27 @@ header .lang select {
 
 /* ===== FOOTER ===== */
 .foot {
- padding: 2rem 0;
- border-top: 1px solid #e2e8f0;
- color: var(--muted);
- font-size: 0.9rem;
- text-align: center;
- background: #0f1b14; /* darker green-ish charcoal */
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+  background: #0f1b14; /* darker green-ish charcoal */
   color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Text + links inside footer */
 footer .muted,
 footer p,
-footer a{
+footer a {
   color: rgba(255,255,255,0.80) !important;
-footer a:hover{
+}
+
+/* Hover effect */
+footer a:hover {
   color: #ffffff !important;
   text-decoration: underline;
 }
+
 
 
 /* ===== SCROLL OFFSET ===== */
