@@ -2421,3 +2421,40 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
     max-width: 300px;
   }
 }
+
+
+
+/* ===== Watermark ONLY in the zoom modal ===== */
+.cert-modal,
+.image-modal,
+.lightbox,
+.modal { /* استخدم الكلاس الحقيقي عندك، أو اترك أكثر من خيار */
+  /* no changes here */
+}
+
+.cert-modal .modal-content,
+.image-modal .modal-content,
+.lightbox .modal-content,
+.modal .modal-content{
+  position: relative;
+}
+
+.cert-modal .modal-content::after,
+.image-modal .modal-content::after,
+.lightbox .modal-content::after,
+.modal .modal-content::after{
+  content: "EURO AGRI TRADING • PUBLIC SAMPLE";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: clamp(18px, 3vw, 40px);
+  color: rgba(255,255,255,.16);   /* لو الخلفية داكنة */
+  transform: rotate(-18deg);
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: screen;         /* يعطي شكل watermark محترم */
+}
