@@ -1122,6 +1122,12 @@ form label {
   left: 0;
   top: 0;
 }
+
+ .wise-note{
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-top: 8px;
+}
 /* ===== NOTES & MUTED FIX ===== */
 .note {
  font-size: 0.85rem;
