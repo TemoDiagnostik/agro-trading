@@ -1316,6 +1316,20 @@
 })();
 </script>
 
+		
+<script>
+document.getElementById('closeCertModal').onclick = function(){
+  document.getElementById('certModal').style.display = 'none';
+  document.getElementById('certModalImg').src = '';
+};
+
+document.getElementById('certModal').onclick = function(e){
+  if(e.target.id === 'certModal'){
+    this.style.display = 'none';
+    document.getElementById('certModalImg').src = '';
+  }
+};
+</script>
 
 
 	
