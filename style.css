@@ -2235,3 +2235,13 @@ body.supplier-page .hero-trustline{
     min-width: 0;
   }
 }
+
+
+/* Make Execution panel full width on second row */
+body.supplier-page .supplier-grid-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
+  grid-column: 1 / -1;
+}
