@@ -188,13 +188,12 @@
 "cert.card.grades.btn.custom": "Request Custom Specs",
 "cert.card.grades.imgAlt": "Available Grades Summary — Rock Phosphate (18–30% P₂O₅) — Marketing sample",
 
-
-  "about.title": "About Us",
-  "about.p1": "Euro Agri Trading s.r.o. is an EU-based brokerage and coordination company connecting qualified buyers with verified suppliers.",
-  "about.pricing": "We support the process with transparent coordination and competitive terms based on verified sourcing.",
-  "about.p2": "Independent inspection (SGS / Intertek / BV) and samples can be arranged upon request (as agreed).",
-  "about.p3": "We operate under Czech registration and follow applicable EU customs and trade requirements.",
-  "about.note": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract; contract terms and performance obligations are agreed directly between seller and buyer.",
+"about.title": "About Us",
+"about.p1": "Euro Agri Trading s.r.o. is an EU-based sourcing and coordination company connecting qualified buyers with verified suppliers across multiple origins.",
+"about.pricing": "We support structured transaction execution with transparent coordination and competitive terms based on verified sourcing and shipment-specific documentation.",
+"about.p2": "Independent third-party inspection (SGS / Intertek / BV) and shipment-specific COA documentation can be arranged upon request (as agreed).",
+"about.p3": "The company is registered in the Czech Republic and operates in alignment with applicable EU trade, customs, and regulatory frameworks.",
+"about.note": "Euro Agri Trading s.r.o. is not a contracting party to the sales contract. Contract terms and performance obligations are agreed directly between the seller and the buyer.",
 
 "payment.title": "Payment & Settlement Framework",
 "payment.opt.lcSight": "Irrevocable LC at sight (100%) — Primary structure",
