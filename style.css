@@ -2192,12 +2192,20 @@ body.supplier-page .supplier-cta-bottom{
 
 /* Navbar active link (optional) */
 .navbar-nav a.active{
-  font-weight: 900;
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  font-weight: 700;
+  position: relative;
 }
 
-
+.navbar-nav a.active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #0a662f;
+  border-radius: 2px;
+}
 
 
 
