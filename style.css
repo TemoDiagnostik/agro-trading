@@ -2259,3 +2259,21 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
 .btn-whatsapp:hover{
   filter: brightness(0.95);
 }
+
+
+
+.payment-section .payment-text,
+.payment-section .payment-disclaimer,
+.payment-section .payment-note{
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.payment-section .payment-disclaimer{
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+.payment-section .payment-note{
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
