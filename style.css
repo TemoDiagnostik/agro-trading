@@ -929,10 +929,9 @@ section, [id] {
   padding-left: 10px;
 }
 
-.contact-details img {
-  max-height: 260px;
-  object-fit: cover;
-  border-radius: 14px;
+.contact-details img{
+  width: 380px;
+  height: auto;
 }
 
 /* Keyboard-style highlight */
