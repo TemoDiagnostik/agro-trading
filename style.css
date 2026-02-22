@@ -2196,3 +2196,27 @@ body.supplier-page .supplier-cta-bottom{
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+
+
+
+
+
+/* HERO secondary CTA row */
+.cta-row-secondary{
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cta-row-secondary .btn{
+  min-width: 190px;
+  text-align: center;
+}
+
+@media (max-width: 768px){
+  .cta-row-secondary .btn{
+    width: 100%;
+    min-width: 0;
+  }
+}
