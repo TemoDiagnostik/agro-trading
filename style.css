@@ -2424,7 +2424,32 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
 
 
 
+/* ===== NAVBAR FIX ===== */
 
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;              /* مسافة بين العناصر */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;      /* يمنع النزول لسطر جديد */
+}
+
+.navbar-nav li {
+  white-space: nowrap;    /* يمنع كسر الكلمات */
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
 
 
 
