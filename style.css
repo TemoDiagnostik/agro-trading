@@ -1790,43 +1790,6 @@ form label {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==============================
    SUPPLIER NETWORK PAGE (NEW)
    Paste at END of style.css
@@ -2140,120 +2103,57 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
 
 
 /* =========================
-   HEADER — RESPONSIVE (SINGLE SOURCE OF TRUTH)
-   Paste ONCE at VERY END of style.css
+   HEADER NAV — HOTFIX (DESKTOP + LANG SAFE)
+   Paste at VERY END of style.css
    ========================= */
 
-/* Tablet / small desktop: prevent overflow when language labels get long */
-@media (max-width: 1100px){
-  header .container.nav{
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  header .brand{ order: 1; }
-  header .lang{ order: 2; }
-
-  header nav{
-    order: 3;
-    width: 100%;
-  }
-
-  header nav ul{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  header nav ul li a{
-    font-size: 0.92rem;
-    padding: 6px 6px;
-  }
+/* 1) Make it work whether container has .nav or not */
+header .container,
+header .container.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;            /* ✅ allow second line if language is long */
 }
 
-/* Mobile */
+/* 2) Ensure nav takes a full row when needed */
+header nav{
+  flex: 1 1 520px;            /* ✅ can wrap to next line */
+  min-width: 320px;
+}
+
+/* 3) Force navbar ul to behave consistently */
+header nav ul,
+header nav .navbar-nav{
+  display: flex;
+  flex-wrap: wrap;            /* ✅ no overflow / no overlap */
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4) Keep each label as one “chip” (don’t break inside a word) */
+header nav ul li a{
+  white-space: nowrap;
+  font-size: 0.92rem;
+  padding: 6px 6px;
+}
+
+/* 5) Keep language selector from being squeezed weirdly */
+header .lang{
+  flex: 0 0 auto;
+}
+
+/* Mobile remains as you already have — but make sure nav ul is flex */
 @media (max-width: 820px){
-
-  header{
-    padding: 6px 0;
-  }
-
-  header .container.nav{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      "logo  .   lang"
-      "title title title"
-      "nav   nav   nav";
-    row-gap: 6px;
-    column-gap: 10px;
-
-    align-items: center;
-    justify-content: initial;
-  }
-
-  header .brand{ grid-area: logo; }
-  header .lang{
-    grid-area: lang;
-    justify-self: end;
-  }
-
-  header .logo-img{
-    max-height: 44px;
-    height: auto;
-    width: auto;
-  }
-
-  header .brand-text{
-    grid-area: title;
-    text-align: center;
-    line-height: 1.15;
-    white-space: normal;
-  }
-
-  header nav{
-    grid-area: nav;
-    width: 100%;
-  }
-
-  header nav ul{
+  header nav ul,
+  header nav .navbar-nav{
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
   }
-
-  header nav ul li a{
-    font-size: 13px;
-    padding: 5px 6px;
-  }
-
-  header .lang select{
-    padding: 3px 6px;
-    font-size: .85rem;
-  }
 }
-
-/* Very small */
-@media (max-width: 380px){
-  header nav ul li a{ font-size: 12px; }
-}
-
-/* EU flag: control size safely */
-.eu-flag-inline img{
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-@media (max-width: 768px){
-  .eu-flag-inline img{
-    max-width: 150px;
-  }
-}
-
-
-
-
