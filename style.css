@@ -1981,6 +1981,12 @@ body.supplier-page .supplier-secondary-box p{
   color: #1f2937;
 }
 
+body.supplier-page .supplier-panel,
+body.supplier-page .supplier-card,
+body.supplier-page .supplier-steps,
+body.supplier-page .supplier-note{
+  color: #1f2937;
+}
 /* Body section */
 body.supplier-page .supplier-section{
   padding: 58px 0;
