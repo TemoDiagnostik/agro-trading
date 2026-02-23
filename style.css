@@ -434,6 +434,32 @@ html {
   }
 }
 
+/* Subhead under Products */
+.subhead{
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.products-sublead{
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* Trust banner: avoid nested container issues */
+.trust-banner{
+  margin: 16px 0 22px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.trust-banner p{ margin: 0; }
+
+/* Text-only cards */
+.product-text-card .tag-row{ margin-top: 10px; }
+.product-text-card .cta{ margin-top: 12px; }
+
+
 
 /* =============== CORE PRODUCT (Rock Phosphate) =============== */
 .core-product { margin: 20px 0 10px; }
