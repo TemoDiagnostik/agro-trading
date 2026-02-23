@@ -2473,3 +2473,58 @@ header .brand-text .brand-tagline{
     width: 150px;   /* غيّر الرقم براحتك: 120–160 مناسب */
   }
 }
+/* ===== HEADER DESKTOP FIX: prevent text overlap ===== */
+
+/* مهم: استهدف نفس الكلاس اللي عندك للهيدر */
+header .container.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+
+/* Brand لا ينكمش بشكل يبوّظ اللوجو */
+header .brand{
+  flex:0 0 auto;
+  min-width: 240px;          /* يمنع تداخل الاسم */
+}
+
+/* nav ياخد باقي المساحة */
+header nav{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* خلي عناصر الناف تقدر تلف بدل ما تتداخل */
+header .navbar-nav,
+header nav ul{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;            /* ✅ هذا أهم سطر */
+}
+
+/* لا تكسر كلمات الروابط */
+header .navbar-nav a,
+header nav ul li a{
+  white-space:nowrap;
+}
+
+/* زر اللغة ما ينكمش ويخبط */
+header .lang{
+  flex:0 0 auto;
+}
+
+/* ===== عند شاشات أضيق: خفف الضغط ===== */
+@media (max-width: 1180px){
+  header .brand{ min-width: 200px; }
+  header .navbar-nav,
+  header nav ul{ gap:10px; }
+  header nav ul li a{ font-size: 0.92rem; }
+}
+
+/* ===== عند شاشات أضيق أكثر: اخفي الـ tagline لتفادي الزحمة ===== */
+@media (max-width: 1050px){
+  header .brand-tagline{ display:none; }
+}
