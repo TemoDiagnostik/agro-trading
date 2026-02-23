@@ -19,7 +19,8 @@
   "hero.productsLine": "Rock Phosphate (Primary Focus)",
   "hero.productsOnRequest": "Additional supply lines available upon request.",
   "hero.tradeNote": "Execution framework: LC at sight • SGS/Intertek/BV inspection • shipment-specific documentation",
-
+  "hero.primaryFocus": "Primary focus: Rock Phosphate (18–34% P₂O₅) — shipment-specific validation.",
+  
   "products.title": "Flagship Product",
   "products.lead": "Rock Phosphate — Grades 18–32% P₂O₅ (subject to availability & shipment-specific COA) (reference sample: 26%)",
   "products.spec1": "Screened granulometry — ready for milling or direct application",
