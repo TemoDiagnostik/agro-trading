@@ -241,31 +241,14 @@
 </section>
 
 
-
-
-<!-- ✅ TRUST BANNER -->
-<div class="trust-banner" role="region" aria-label="Trust & compliance">
+<!-- 🌍 Products Section (Core product first, then categories) -->
+<section id="products">
   <div class="container">
-    <p>
-      <strong data-i18n="trust.title">EU-based execution.</strong>
-      <span data-i18n="trust.text">
-        LC at sight • SGS/Intertek/BV inspection • shipment-specific COA • verified documentation.
-      </span>
-    </p>
-  </div>
-</div>
-
-
-
-
-		<section id="products">
-  <div class="container">
+    <h2 data-i18n="products.all">Product Categories</h2>
 
     <!-- 🔷 Core Product — Rock Phosphate -->
     <div class="core-product">
-
       <div class="card core-card">
-
         <div class="core-layout">
 
           <div class="core-image">
@@ -276,23 +259,23 @@
           </div>
 
           <div class="core-content">
-            <h3>Rock Phosphate — Multi-Origin Supply</h3>
+            <h3 data-i18n="core.rp.title">Rock Phosphate — Multi-Origin Supply</h3>
 
-            <p class="muted">
-              Structured EU-based sourcing of rock phosphate with
-              shipment-specific COA verification and third-party inspection options.
+            <p class="muted" data-i18n="core.rp.text">
+              Structured EU-based sourcing of rock phosphate with shipment-specific COA verification
+              and third-party inspection options.
             </p>
 
             <ul class="mini-specs">
-              <li>Grades: 18–34% P₂O₅ (by origin)</li>
-              <li>Forms: Powder / Granular</li>
-              <li>Low-Cd options upon shipment confirmation</li>
-              <li>EXW / FOB / CFR / CIF</li>
+              <li data-i18n="core.rp.s1">Grades: 18–34% P₂O₅ (by origin)</li>
+              <li data-i18n="core.rp.s2">Forms: Powder / Granular</li>
+              <li data-i18n="core.rp.s3">Low-Cd options upon shipment confirmation</li>
+              <li data-i18n="core.rp.s4">EXW / FOB / CFR / CIF</li>
             </ul>
 
             <div class="cta">
-              <a class="btn btn-primary" href="#contactFormBox">Request RFQ</a>
-              <a class="btn btn-outline" href="#certificates">View Specifications</a>
+              <a class="btn btn-primary" href="#contactFormBox" data-i18n="cat.cta.rfq">Request RFQ</a>
+              <a class="btn btn-outline" href="#certificates" data-i18n="core.rp.cta.specs">View Specifications</a>
             </div>
           </div>
 
@@ -300,8 +283,21 @@
       </div>
     </div>
 
+    <!-- ✅ TRUST BANNER (keep this, remove the big trust-strip section) -->
+    <div class="trust-banner" role="region" aria-label="Trust & compliance">
+      <div class="container">
+        <p>
+          <strong data-i18n="trust.title">EU-based execution.</strong>
+          <span data-i18n="trust.text">
+            LC at sight • SGS/Intertek/BV inspection • shipment-specific COA • verified documentation.
+          </span>
+        </p>
+      </div>
+    </div>
 
- 
+    <!-- باقي المنتجات (بدون Rock Phosphate) -->
+    <div class="grid cols-4">
+
       <!-- 2) Water-Soluble Fertilizers (WSF) -->
       <div class="card">
         <img class="product-main" src="img/wsf-packaging.png" alt="wsf-packaging.png" loading="lazy" decoding="async">
@@ -309,7 +305,7 @@
         <div class="product-thumbs" aria-label="WSF gallery">
           <img src="img/wsf-crystalline.png" alt="WSF crystalline" loading="lazy" decoding="async">
           <img src="img/application-wsf-mixing-fertigation.png" alt="WSF mixing for fertigation" loading="lazy" decoding="async">
-			<img src="img/wsf-warehouse.png" alt="wsf-warehouse" loading="lazy" decoding="async">
+          <img src="img/wsf-warehouse.png" alt="wsf-warehouse" loading="lazy" decoding="async">
         </div>
 
         <h3 data-i18n="cat.wsf.title">Water-Soluble Fertilizers (WSF)</h3>
@@ -337,33 +333,18 @@
         </div>
       </div>
 
-
-
-		
-
       <!-- 3) Calcium Nitrate -->
-    <div class="card">
-  <img class="product-main" 
-       src="img/calcium-nitrate-granules-closeup.png" 
-       alt="Calcium nitrate granules closeup" 
-       loading="lazy" decoding="async">
+      <div class="card">
+        <img class="product-main"
+             src="img/calcium-nitrate-granules-closeup.png"
+             alt="Calcium nitrate granules closeup"
+             loading="lazy" decoding="async">
 
-  <div class="product-thumbs" aria-label="Calcium nitrate gallery">
-
-    <img src="img/calcium-nitrate-granules.png" 
-         alt="Calcium nitrate granules" 
-         loading="lazy" decoding="async">
-
-    <img src="img/calcium-nitrate-fertigation-application.png" 
-         alt="Calcium nitrate fertigation application" 
-         loading="lazy" decoding="async">
-
-    <img src="img/calcium-nitrate-25kg-bags.png" 
-         alt="Calcium nitrate 25kg bags" 
-         loading="lazy" decoding="async">
-
- 
-</div>
+        <div class="product-thumbs" aria-label="Calcium nitrate gallery">
+          <img src="img/calcium-nitrate-granules.png" alt="Calcium nitrate granules" loading="lazy" decoding="async">
+          <img src="img/calcium-nitrate-fertigation-application.png" alt="Calcium nitrate fertigation application" loading="lazy" decoding="async">
+          <img src="img/calcium-nitrate-25kg-bags.png" alt="Calcium nitrate 25kg bags" loading="lazy" decoding="async">
+        </div>
 
         <h3 data-i18n="cat.cn.title">Calcium Nitrate</h3>
 
@@ -388,7 +369,7 @@
           <a class="btn btn-outline" href="#contactFormBox" data-i18n="cat.cta.avail">Check Availability</a>
         </div>
       </div>
- 
+
       <!-- 4) Micronutrients -->
       <div class="card">
         <img class="product-main" src="img/iron-chelate-eddha-granules.jpg" alt="iron-chelate-eddha-granules" loading="lazy" decoding="async">
@@ -428,9 +409,9 @@
     <p class="products-note" data-i18n="products.note">
       Also available on request: NPK Granular • Water-Retention Polymer (Hydrogel).
     </p>
+
   </div>
 </section>
-
 
 
 
