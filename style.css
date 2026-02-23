@@ -1855,9 +1855,8 @@ form label {
 
 
 
-
 /* ==============================
-   SUPPLIER NETWORK PAGE (NEW)
+   SUPPLIER NETWORK PAGE
    Paste at END of style.css
    ============================== */
 
@@ -1881,7 +1880,7 @@ body.supplier-page .hero-bleed.supplier-hero{
   }
 }
 
-/* Keep same overlay behavior */
+/* Overlay */
 body.supplier-page .supplier-hero .hero-overlay{
   position:absolute;
   inset:0;
@@ -1894,55 +1893,20 @@ body.supplier-page .supplier-hero .hero-overlay{
   z-index:1;
 }
 
-/* Ensure hero content sits above overlay */
+/* Keep content above overlay */
 body.supplier-page .supplier-hero .hero-content,
 body.supplier-page .supplier-hero .hero-left{
   position: relative;
   z-index: 2;
 }
 
-/* CTA layout (clean + not between buttons) */
+/* CTA row */
 body.supplier-page .supplier-cta{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
   margin-top:14px;
 }
-
-/* ===============================
-   Supplier Secondary Strip
-   =============================== */
-
-.supplier-secondary-products{
-  padding: 32px 0;
-  background: #f8fafc;
-}
-
-.supplier-secondary-box{
-  max-width: 920px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px 28px;
-  border-radius: 14px;
-  background: rgba(5,150,105,0.08);
-  border: 1px solid rgba(5,150,105,0.28);
-  box-shadow: 0 8px 24px rgba(2,6,23,.05);
-}
-
-.supplier-secondary-box h3{
-  margin: 0 0 10px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #047857; /* brand green */
-}
-
-.supplier-secondary-box p{
-  margin: 0;
-  font-size: .95rem;
-  line-height: 1.6;
-  color: #334155;
-}
-
 
 body.supplier-page .supplier-cta .btn{
   min-width: 190px;
@@ -1956,7 +1920,16 @@ body.supplier-page .supplier-cta .btn{
   }
 }
 
-/* Trust strip */
+/* Hero trust line */
+body.supplier-page .hero-trustline{
+  margin-top: 10px;
+  color: rgba(255,255,255,.85);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Trust strip pills */
 body.supplier-page .supplier-trust-strip{
   margin-top: 18px;
   display: flex;
@@ -1975,6 +1948,37 @@ body.supplier-page .trust-pill{
   font-weight: 700;
   font-size: .92rem;
   backdrop-filter: blur(6px);
+}
+
+/* Secondary products strip */
+body.supplier-page .supplier-secondary-products{
+  padding: 32px 0;
+  background: #f8fafc;
+}
+
+body.supplier-page .supplier-secondary-box{
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 28px;
+  border-radius: 14px;
+  background: rgba(5,150,105,0.08);
+  border: 1px solid rgba(5,150,105,0.28);
+  box-shadow: 0 8px 24px rgba(2,6,23,.05);
+}
+
+body.supplier-page .supplier-secondary-box h3{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #047857;
+}
+
+body.supplier-page .supplier-secondary-box p{
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: #334155;
 }
 
 /* Body section */
@@ -2077,13 +2081,13 @@ body.supplier-page .supplier-cta-bottom{
   }
 }
 
-/* Navbar active link (optional) */
-.navbar-nav a.active{
+/* Nav active link */
+body.supplier-page .navbar-nav a.active{
   font-weight: 700;
   position: relative;
 }
 
-.navbar-nav a.active::after{
+body.supplier-page .navbar-nav a.active::after{
   content: "";
   position: absolute;
   left: 0;
@@ -2094,44 +2098,67 @@ body.supplier-page .supplier-cta-bottom{
   border-radius: 2px;
 }
 
-
-/* Supplier hero trust line */
-body.supplier-page .hero-trustline{
-  margin-top: 10px;
-  color: rgba(255,255,255,.85);
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-/* HERO secondary CTA row */
-.cta-row-secondary{
+/* (Optional) secondary CTA row styling — scoped */
+body.supplier-page .cta-row-secondary{
   margin-top: 10px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.cta-row-secondary .btn{
+body.supplier-page .cta-row-secondary .btn{
   min-width: 190px;
   text-align: center;
 }
 
 @media (max-width: 768px){
-  .cta-row-secondary .btn{
+  body.supplier-page .cta-row-secondary .btn{
     width: 100%;
     min-width: 0;
   }
 }
 
+/* ===============================
+   Make all Supplier Panels match green style
+   =============================== */
 
-/* Make Execution panel full width on second row */
-body.supplier-page .supplier-grid-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+body.supplier-page .supplier-panel{
+  background: rgba(5,150,105,0.08);
+  border: 1px solid rgba(5,150,105,0.28);
+  box-shadow: 0 8px 24px rgba(2,6,23,.05);
 }
 
-body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
-  grid-column: 1 / -1;
+/* Panel titles green */
+body.supplier-page .supplier-panel h3{
+  color: #047857;
 }
+
+/* Supplier cards inside panels */
+body.supplier-page .supplier-card{
+  background: rgba(5,150,105,0.06);
+  border: 1px solid rgba(5,150,105,0.22);
+}
+
+/* Card headings */
+body.supplier-page .supplier-card strong{
+  color: #047857;
+}
+
+/* Step titles */
+body.supplier-page .supplier-steps strong{
+  color: #047857;
+}
+
+/* Note boxes */
+body.supplier-page .supplier-note{
+  background: rgba(5,150,105,0.08);
+  border: 1px solid rgba(5,150,105,0.30);
+  border-left: 4px solid #059669;
+  color: #0f172a;
+}
+
+
+
 
 
 
