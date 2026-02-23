@@ -2372,3 +2372,61 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
     width: 150px;   /* غيّر الرقم براحتك: 120–160 مناسب */
   }
 }
+
+
+
+
+/* ===== HEADER DESKTOP FIX (works with .container OR .container.nav) ===== */
+header .container,
+header .container.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:nowrap;
+}
+
+/* Brand */
+header .brand{
+  flex:0 0 auto;
+  min-width: 240px;
+}
+
+/* Nav takes remaining space */
+header nav{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Make nav wrap instead of overlapping */
+header nav ul,
+header .navbar-nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;     /* ✅ أهم سطر لمنع التداخل */
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+header nav a{
+  white-space:nowrap;
+}
+
+/* Language selector */
+header .lang{
+  flex:0 0 auto;
+}
+
+/* When space gets tighter */
+@media (max-width: 1150px){
+  header .brand{ min-width: 200px; }
+  header nav a{ font-size: .92rem; }
+  header nav ul, header .navbar-nav{ gap:10px; }
+}
+
+@media (max-width: 1050px){
+  header .brand-tagline{ display:none; } /* اختياري لكن مفيد */
+}
