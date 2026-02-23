@@ -2375,7 +2375,44 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
 
 
 
+/* ===== Brand text: stable layout (all languages) ===== */
+header .brand-text{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;              /* يسمح باللف عند الحاجة */
+  line-height: 1.15;
+}
 
+header .brand-name{
+  font-weight: 800;
+  color: #0a662f;
+}
+
+header .brand-sep{
+  opacity: .6;
+  margin: 0 2px;
+}
+
+header .brand-tagline{
+  font-weight: 600;
+  color: #0a662f;
+  opacity: .75;
+}
+
+/* Mobile: center + منع تكدس */
+@media (max-width: 820px){
+  header .brand-text{
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  /* لو ضاقت الشاشة قوي، نخفي الشرطة عشان ما تعمل سطر لوحدها */
+  header .brand-sep{
+    display: none;
+  }
+}
 
 /* ===== HEADER DESKTOP FIX (works with .container OR .container.nav) ===== */
 header .container,
