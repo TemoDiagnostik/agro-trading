@@ -2271,13 +2271,6 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
 }
 
 
-.eu-flag-inline img{
-  width: 100%;
-  max-width: 380px;   /* غيّر الرقم حسب الحجم الذي تريده */
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
 
 /* =========================
    MOBILE HEADER FIX (FINAL COMPACT)
@@ -2380,4 +2373,3 @@ body.supplier-page .supplier-grid-2 .supplier-panel:nth-child(3){
     width: 150px;   /* غيّر الرقم براحتك: 120–160 مناسب */
   }
 }
-
