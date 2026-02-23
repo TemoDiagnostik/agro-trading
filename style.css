@@ -226,25 +226,23 @@ html {
 }
 
 .hero-micro{
-  margin: 10px 0 14px;
+  margin: 12px 0 14px;
   font-size: 0.98rem;
-  line-height: 1.4;
-  color: rgba(255,255,255,0.88);
   font-weight: 600;
+  color: rgba(255,255,255,0.88);
 }
 
 .cta-row{
   display:flex;
-  gap:12px;
+  gap:14px;
   flex-wrap:wrap;
-  margin-top:16px;
+  margin-top:18px;
 }
 
 .cta-row-secondary{
   margin-top:10px;
 }
 
-/* Mobile: stack buttons */
 @media (max-width:768px){
   .cta-row .btn{
     width:100%;
