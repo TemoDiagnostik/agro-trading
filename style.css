@@ -680,27 +680,33 @@ html {
  border-color: var(--brand);
  color: #059669;
 }
+
+
 /* ===== CERTIFICATES ===== */
 #certificates {
  padding-block: 40px;
  background-color: var(--paper-2);
 }
+
 #certificates .grid {
  display: grid;
  grid-template-columns: repeat(3, 1fr);
  gap: 20px;
  justify-items: center;
 }
+
 @media (max-width: 1000px) {
  #certificates .grid {
    grid-template-columns: repeat(2, 1fr);
  }
 }
+
 @media (max-width: 640px) {
  #certificates .grid {
    grid-template-columns: 1fr;
  }
 }
+
 #certificates .card {
  background: #f0ede5;
  border: 1px solid #dcdcdc;
@@ -714,6 +720,7 @@ html {
  max-width: 340px;
  min-height: 480px;
 }
+
 #certificates .card img {
  width: 100%;
  height: auto;
@@ -724,6 +731,7 @@ html {
  margin-bottom: 12px;
  aspect-ratio: 3 / 4;
 }
+
 #certificates .card h3 {
  font-size: 16px;
  color: var(--ink);
@@ -742,6 +750,11 @@ html {
  margin-top: auto;
 }
 
+/* Optional (clean): center tag-row for Low-Cd card */
+#certificates .tag-row-center{
+  justify-content:center;
+  margin-top:10px;
+}
 
 /* ===== CERT LIGHTBOX (Preview) ===== */
 .cert-preview{
