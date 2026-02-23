@@ -1909,6 +1909,37 @@ body.supplier-page .supplier-cta{
   margin-top:14px;
 }
 
+/* Secondary Products Strip (Supplier Page) */
+
+.supplier-secondary-products{
+  margin-top: 0;
+  padding: 28px 0;
+  background: #f8fafc;
+}
+
+.supplier-secondary-box{
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 18px 24px;
+  border-radius: 14px;
+  background: rgba(5,150,105,0.08);
+  border: 1px solid rgba(5,150,105,0.25);
+}
+
+.supplier-secondary-box h3{
+  margin: 0 0 8px;
+  color: #047857; /* brand green */
+  font-weight: 700;
+}
+
+.supplier-secondary-box p{
+  margin: 0;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+
 body.supplier-page .supplier-cta .btn{
   min-width: 190px;
   text-align:center;
