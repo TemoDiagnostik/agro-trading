@@ -2119,13 +2119,14 @@ body.supplier-page .cta-row-secondary .btn{
 }
 
 /* ===============================
-   Make all Supplier Panels match green style
+   Balanced Supplier Styling (Professional)
    =============================== */
 
+/* Panels stay white */
 body.supplier-page .supplier-panel{
-  background: rgba(5,150,105,0.08);
-  border: 1px solid rgba(5,150,105,0.28);
-  box-shadow: 0 8px 24px rgba(2,6,23,.05);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 28px rgba(2,6,23,.06);
 }
 
 /* Panel titles green */
@@ -2133,13 +2134,13 @@ body.supplier-page .supplier-panel h3{
   color: #047857;
 }
 
-/* Supplier cards inside panels */
+/* Cards inside panels */
 body.supplier-page .supplier-card{
-  background: rgba(5,150,105,0.06);
-  border: 1px solid rgba(5,150,105,0.22);
+  background: #ffffff;
+  border: 1px solid rgba(5,150,105,0.25);
 }
 
-/* Card headings */
+/* Card titles */
 body.supplier-page .supplier-card strong{
   color: #047857;
 }
@@ -2149,15 +2150,14 @@ body.supplier-page .supplier-steps strong{
   color: #047857;
 }
 
-/* Note boxes */
+/* Note box remains green highlight */
 body.supplier-page .supplier-note{
   background: rgba(5,150,105,0.08);
   border: 1px solid rgba(5,150,105,0.30);
   border-left: 4px solid #059669;
   color: #0f172a;
+  font-weight: 700;
 }
-
-
 
 
 
