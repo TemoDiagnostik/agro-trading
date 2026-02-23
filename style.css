@@ -434,6 +434,37 @@ html {
   }
 }
 
+
+
+
+/* ===== Core Product Layout ===== */
+.core-layout{
+  display:flex;
+  gap:40px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.core-image{
+  flex:1 1 420px;
+}
+
+.core-image img{
+  width:100%;
+  border-radius:12px;
+}
+
+.core-content{
+  flex:1 1 420px;
+}
+
+@media (max-width: 820px){
+  .core-layout{
+    flex-direction:column;
+  }
+}
+
+
 /* ===== COA ===== */
 #coa .cta-row {
  display: flex;
