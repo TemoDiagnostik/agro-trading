@@ -59,115 +59,64 @@ html {
  margin: 0 auto;
 }
 
-.eu-flag-inline img{
-  width: 100%;
-  max-width: 380px;   /* غيّر الرقم حسب الحجم الذي تريده */
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
 
 /* =========================
-   MOBILE HEADER FIX (FINAL COMPACT)
+   HEADER NAV — HOTFIX (DESKTOP + LANG SAFE)
    Paste at VERY END of style.css
    ========================= */
+
+/* 1) Make it work whether container has .nav or not */
+header .container,
+header .container.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;            /* ✅ allow second line if language is long */
+}
+
+/* 2) Ensure nav takes a full row when needed */
+header nav{
+  flex: 1 1 520px;            /* ✅ can wrap to next line */
+  min-width: 320px;
+}
+
+/* 3) Force navbar ul to behave consistently */
+header nav ul,
+header nav .navbar-nav{
+  display: flex;
+  flex-wrap: wrap;            /* ✅ no overflow / no overlap */
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4) Keep each label as one “chip” (don’t break inside a word) */
+header nav ul li a{
+  white-space: nowrap;
+  font-size: 0.92rem;
+  padding: 6px 6px;
+}
+
+/* 5) Keep language selector from being squeezed weirdly */
+header .lang{
+  flex: 0 0 auto;
+}
+
+/* Mobile remains as you already have — but make sure nav ul is flex */
 @media (max-width: 820px){
-
-  header{
-    padding: 4px 8px !important;
-  }
-
-  header .container.nav{
-    height: auto !important;
-    padding: 6px 8px !important;
-
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    grid-template-areas:
-      "logo  .   lang"
-      "title title title"
-      "nav   nav   nav";
-    row-gap: 4px !important;
-    column-gap: 6px !important;
-
-    align-items: center !important;
-  }
-
-  header .brand{
-    grid-area: logo !important;
-  }
-
-  header .lang{
-    grid-area: lang !important;
-    justify-self: end !important;
-  }
-
-  /* اسم الشركة */
-  header .brand-text{
-    grid-area: title !important;
-    position: static !important;
-    transform: none !important;
-
-    max-width: 100% !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-
-    pointer-events: auto !important;
-    text-align: center !important;
-    font-size: 15px !important;
-    line-height: 1.1 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  /* الناف */
-  header nav{
-    grid-area: nav !important;
-    justify-self: center !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  header .navbar-nav{
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 6px !important;
-    margin: 0 !important;
-  }
-
-  header nav ul li a{
-    font-size: 13px !important;
-    padding: 4px 6px !important;
-  }
-
-  /* حجم اللوجو للموبايل */
-  header .logo-img{
-    max-height: 42px !important;
-    width: auto !important;
-    height: auto !important;
-  }
-
-  /* زر اللغة */
-  header .lang select{
-    padding: 3px 6px !important;
-    font-size: .85rem !important;
-  }
-
-}
-
-/* أصغر جداً */
-@media (max-width: 380px){
-  header .brand-text{ font-size: .92rem !important; }
-  header nav ul li a{ font-size: .8rem !important; }
-}
-
-/* Mobile only: shrink EU flag */
-@media (max-width: 768px){
-  .eu-flag-inline img{
-    width: 150px;   /* غيّر الرقم براحتك: 120–160 مناسب */
+  header nav ul,
+  header nav .navbar-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 }
+
+
 
 /* =============== HERO SECTION — GLOBAL CLEAN (NO BOXES / NO TEXT SHADOW) =============== */
 
