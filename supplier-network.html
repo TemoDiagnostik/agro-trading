@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
 
-  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XRD7YWF4S"></script>
   <script>
@@ -15,8 +14,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Supplier Network | Euro Agri Trading s.r.o.</title>
-  <meta name="description" content="Verified supplier network with KYC, shipment-specific COA validation, third-party inspection, and EU-focused execution." />
+  <title data-i18n="sup.meta.title">Supplier Network | Euro Agri Trading s.r.o.</title>
+  <meta name="description" data-i18n-content="sup.meta.desc"
+        content="Verified supplier network with KYC, shipment-specific COA validation, third-party inspection, and EU-focused execution." />
 
   <!-- Tajawal for Arabic -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
@@ -73,7 +73,6 @@
 
   <!-- Preload supplier hero image -->
   <link rel="preload" as="image" href="img/supplier-bg.png" imagesrcset="img/supplier-bg.png">
-
 </head>
 
 <body class="supplier-page">
@@ -88,14 +87,14 @@
     <div class="brand-text">
       <span class="brand-name">Euro Agri Trading s.r.o</span>
       <span class="brand-sep">—</span>
-      <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
+      <span class="brand-tagline" data-i18n="brand.tagline">EU Fertilizer Sourcing Agency</span>
     </div>
 
     <nav>
       <ul class="navbar-nav">
         <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
         <li><a href="index.html#products" data-i18n="nav.products">Products</a></li>
-        <li><a href="supplier-network.html" class="active">Supplier Network</a></li>
+        <li><a href="supplier-network.html" class="active" data-i18n="nav.suppliers">Supplier Network</a></li>
         <li><a href="index.html#certificates" data-i18n="nav.coa">Specifications</a></li>
         <li><a href="index.html#how-we-work" data-i18n="nav.how">How We Work</a></li>
         <li><a href="index.html#about" data-i18n="nav.about">About us</a></li>
@@ -141,48 +140,44 @@
   <div class="container hero-content">
     <div class="hero-left">
 
-      <h1 class="hero-title">Verified Supplier Network — Rock Phosphate & Specialty Fertilizers</h1>
+      <h1 class="hero-title" data-i18n="sup.hero.title">
+        Verified Supplier Network — Rock Phosphate & Specialty Fertilizers
+      </h1>
 
-      <h2 class="hero-subtitle">
+      <h2 class="hero-subtitle" data-i18n="sup.hero.subtitle">
         Shipment-verified compliance • Structured documentation • Multi-origin coordination aligned with EU import standards.
       </h2>
 
-      <p class="lead hero-desc">
-        Primary sourcing focus: Rock Phosphate (18–34% P₂O₅).
-        Additional specialty fertilizers coordinated upon structured request.
-        Supplier identities are disclosed only under NDA and after buyer verification.
+      <p class="lead hero-desc" data-i18n="sup.hero.desc">
+        Primary sourcing focus: Rock Phosphate (18–34% P₂O₅). Additional specialty fertilizers coordinated upon structured request. Supplier identities are disclosed only under NDA and after buyer verification.
       </p>
 
-      <p class="hero-trustline">
+      <p class="hero-trustline" data-i18n="sup.hero.trustline">
         RFQ responses within 24–48 hours • Documentation shared after buyer verification
       </p>
 
       <div class="cta-row supplier-cta">
-        <a href="index.html#contactFormBox" class="btn btn-primary">Request RFQ</a>
-        <a href="index.html#products" class="btn btn-outline">View Products</a>
+        <a href="index.html#contactFormBox" class="btn btn-primary" data-i18n="sup.cta.rfq">Request RFQ</a>
+        <a href="index.html#products" class="btn btn-outline" data-i18n="sup.cta.products">View Products</a>
       </div>
 
       <div class="supplier-trust-strip" role="region" aria-label="Trust highlights">
-        <div class="trust-pill">KYC & Entity Verification</div>
-        <div class="trust-pill">Shipment-specific COA validation</div>
-        <div class="trust-pill">Independent Inspection (SGS / Intertek / BV)</div>
-        <div class="trust-pill">EU-aligned documentation control</div>
+        <div class="trust-pill" data-i18n="sup.pill.kyc">KYC & Entity Verification</div>
+        <div class="trust-pill" data-i18n="sup.pill.coa">Shipment-specific COA validation</div>
+        <div class="trust-pill" data-i18n="sup.pill.inspect">Independent Inspection (SGS / Intertek / BV)</div>
+        <div class="trust-pill" data-i18n="sup.pill.docs">EU-aligned documentation control</div>
       </div>
 
     </div>
   </div>
 </section>
-  
-</section> <!-- /supplier-hero -->
 
-<!-- Additional Coordinated Products (Styled like main trust strip) -->
+<!-- Additional Coordinated Products (Styled box) -->
 <section class="supplier-secondary-products">
   <div class="container">
     <div class="supplier-secondary-box">
-      <h3 data-i18n="sup.secondary.title">
-        Additional Coordinated Products (Upon Structured Request)
-      </h3>
-      <p data-i18n="sup.secondary.text">
+      <h3 data-i18n="sup.secondary.title">Additional Coordinated Products (Upon Structured Request)</h3>
+      <p class="muted" data-i18n="sup.secondary.text">
         Water-Soluble Fertilizers (WSF), Calcium Nitrate, Micronutrients, and selected specialty formulations are coordinated through verified supply lines with shipment-specific documentation.
       </p>
     </div>
@@ -197,122 +192,111 @@
 
       <!-- PANEL 1 -->
       <div class="supplier-panel">
-        <h3>Multi-Origin Coverage</h3>
-        <p class="muted">
-          Structured sourcing aligned with EU import workflows.
-          Origins are confirmed per transaction based on grade, allocation, and shipment readiness.
+        <h3 data-i18n="sup.panel.coverage.title">Multi-Origin Coverage</h3>
+        <p class="muted" data-i18n="sup.panel.coverage.text">
+          Structured sourcing aligned with EU import workflows. Origins are confirmed per transaction based on grade, allocation, and shipment readiness.
         </p>
 
         <div class="supplier-cards">
           <div class="supplier-card">
-            <strong>Europe</strong>
-            <span class="muted">EU-aligned producers and distributors.</span>
+            <strong data-i18n="sup.region.eu.title">Europe</strong>
+            <span class="muted" data-i18n="sup.region.eu.text">EU-aligned producers and distributors.</span>
           </div>
           <div class="supplier-card">
-            <strong>North Africa</strong>
-            <span class="muted">Rock phosphate and mineral supply with export-ready documentation.</span>
+            <strong data-i18n="sup.region.na.title">North Africa</strong>
+            <span class="muted" data-i18n="sup.region.na.text">Rock phosphate and mineral supply with export-ready documentation.</span>
           </div>
           <div class="supplier-card">
-            <strong>Middle East</strong>
-            <span class="muted">Fertilizer and mineral sourcing partners.</span>
+            <strong data-i18n="sup.region.me.title">Middle East</strong>
+            <span class="muted" data-i18n="sup.region.me.text">Fertilizer and mineral sourcing partners.</span>
           </div>
           <div class="supplier-card">
-            <strong>Asia</strong>
-            <span class="muted">Water-soluble and specialty fertilizer manufacturing network.</span>
+            <strong data-i18n="sup.region.asia.title">Asia</strong>
+            <span class="muted" data-i18n="sup.region.asia.text">Water-soluble and specialty fertilizer manufacturing network.</span>
           </div>
         </div>
       </div>
 
-
       <!-- PANEL 2 -->
       <div class="supplier-panel">
-        <h3>Verification & Risk-Control Framework</h3>
-        <p class="muted">
+        <h3 data-i18n="sup.panel.verify.title">Verification & Risk-Control Framework</h3>
+        <p class="muted" data-i18n="sup.panel.verify.text">
           Designed to reduce supply risk and ensure shipment-grade consistency.
         </p>
 
         <ol class="supplier-steps">
           <li>
-            <strong>Entity & Export Validation</strong>
-            <span class="muted">Registration, export capability, and compliance documentation review.</span>
+            <strong data-i18n="sup.step.1.title">Entity & Export Validation</strong>
+            <span class="muted" data-i18n="sup.step.1.text">Registration, export capability, and compliance documentation review.</span>
           </li>
           <li>
-            <strong>Shipment-Specific COA Review</strong>
-            <span class="muted">Grade confirmation including heavy metals (e.g., Cd) where required.</span>
+            <strong data-i18n="sup.step.2.title">Shipment-Specific COA Review</strong>
+            <span class="muted" data-i18n="sup.step.2.text">Grade confirmation including heavy metals (e.g., Cd) where required.</span>
           </li>
           <li>
-            <strong>Inspection at Loading</strong>
-            <span class="muted">Independent inspection arranged via SGS / Intertek / BV (as agreed).</span>
+            <strong data-i18n="sup.step.3.title">Inspection at Loading</strong>
+            <span class="muted" data-i18n="sup.step.3.text">Independent inspection arranged via SGS / Intertek / BV (as agreed).</span>
           </li>
           <li>
-            <strong>Documentation Alignment</strong>
-            <span class="muted">COA, BL, CI/PL, COO aligned prior to execution.</span>
+            <strong data-i18n="sup.step.4.title">Documentation Alignment</strong>
+            <span class="muted" data-i18n="sup.step.4.text">COA, BL, CI/PL, COO aligned prior to execution.</span>
           </li>
         </ol>
 
-        <div class="supplier-note">
+        <div class="supplier-note" data-i18n="sup.note.verify">
           Supplier identities and shipment documents are disclosed only after RFQ confirmation, buyer verification, and NDA (where applicable).
         </div>
 
         <div class="cta-row supplier-cta-bottom">
-          <a href="index.html#contactFormBox" class="btn btn-primary">Request RFQ</a>
+          <a href="index.html#contactFormBox" class="btn btn-primary" data-i18n="sup.cta.rfq">Request RFQ</a>
         </div>
       </div>
 
     </div>
 
-
     <!-- EXECUTION FRAMEWORK -->
     <div class="supplier-panel" style="margin-top:22px;">
-      <h3>Structured Trade Framework</h3>
+      <h3 data-i18n="sup.panel.trade.title">Structured Trade Framework</h3>
 
-      <p class="muted">
-        Euro Agri Trading s.r.o. operates as an EU-based sourcing and transaction coordination partner.
-        Execution is structured under documented engagement terms and aligned with international trade practice.
+      <p class="muted" data-i18n="sup.panel.trade.text">
+        Euro Agri Trading s.r.o. operates as an EU-based sourcing and transaction coordination partner. Execution is structured under documented engagement terms and aligned with international trade practice.
       </p>
 
       <div class="supplier-cards">
         <div class="supplier-card">
-          <strong>Commission Structure</strong>
-          <span class="muted">
-            Governed by written agreement with defined scope and transaction triggers.
-          </span>
+          <strong data-i18n="sup.card.comm.title">Commission Structure</strong>
+          <span class="muted" data-i18n="sup.card.comm.text">Governed by written agreement with defined scope and transaction triggers.</span>
         </div>
 
         <div class="supplier-card">
-          <strong>Secure Payment Model</strong>
-          <span class="muted">
-            Preferred structure: Irrevocable LC at sight (subject to contractual alignment).
-          </span>
+          <strong data-i18n="sup.card.pay.title">Secure Payment Model</strong>
+          <span class="muted" data-i18n="sup.card.pay.text">Preferred structure: Irrevocable LC at sight (subject to contractual alignment).</span>
         </div>
 
         <div class="supplier-card">
-          <strong>Confidentiality</strong>
-          <span class="muted">
-            Direct supplier details shared only after verification and contractual alignment.
-          </span>
+          <strong data-i18n="sup.card.conf.title">Confidentiality</strong>
+          <span class="muted" data-i18n="sup.card.conf.text">Direct supplier details shared only after verification and contractual alignment.</span>
         </div>
 
         <div class="supplier-card">
-          <strong>Controlled Documentation</strong>
-          <span class="muted">
-            Shipment documents reviewed for consistency prior to issuance where applicable.
-          </span>
+          <strong data-i18n="sup.card.docs.title">Controlled Documentation</strong>
+          <span class="muted" data-i18n="sup.card.docs.text">Shipment documents reviewed for consistency prior to issuance where applicable.</span>
         </div>
       </div>
 
-      <div class="supplier-note">
+      <div class="supplier-note" data-i18n="sup.note.public">
         No supplier identities are publicly disclosed. Information is released only after verified RFQ and structured engagement confirmation.
       </div>
 
       <div class="cta-row supplier-cta-bottom">
-        <a href="index.html#contactFormBox" class="btn btn-primary">Request RFQ</a>
+        <a href="index.html#contactFormBox" class="btn btn-primary" data-i18n="sup.cta.rfq">Request RFQ</a>
       </div>
     </div>
 
   </div>
 </section>
-<!-- Scripts: reuse same translation logic -->
+
+<!-- Scripts: translation loader -->
 <script type="module">
   const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
   const RTL = new Set(['ar']);
@@ -345,6 +329,20 @@
       const key = el.getAttribute('data-i18n');
       if(dict && dict[key]) el.textContent = dict[key];
     });
+
+    // meta description support
+    const meta = document.querySelector('meta[name="description"][data-i18n-content]');
+    if(meta && dict){
+      const k = meta.getAttribute('data-i18n-content');
+      if(dict[k]) meta.setAttribute('content', dict[k]);
+    }
+
+    // title support
+    const t = document.querySelector('title[data-i18n]');
+    if(t && dict){
+      const k = t.getAttribute('data-i18n');
+      if(dict[k]) document.title = dict[k];
+    }
   }
 
   function setDirAndFont(lang){
