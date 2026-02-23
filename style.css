@@ -435,7 +435,28 @@ html {
 }
 
 
+/* =============== CORE PRODUCT (Rock Phosphate) =============== */
+.core-product { margin: 20px 0 10px; }
 
+.core-card { padding: 16px; }
+
+.core-layout{
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap:16px;
+  align-items:center;
+}
+
+.core-image img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  display:block;
+}
+
+@media (max-width: 900px){
+  .core-layout{ grid-template-columns: 1fr; }
+}
 
 /* ===== Core Product Layout ===== */
 .core-layout{
