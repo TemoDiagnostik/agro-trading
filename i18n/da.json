@@ -284,7 +284,8 @@
   "payment.lead": "Betalinger og trade settlement håndteres direkte mellem køber og sælger. Euro Agri Trading s.r.o. fungerer som en uafhængig EU-baseret sourcing- og koordineringspartner, der understøtter struktureret transaktionseksekvering.",
   "payment.note": "Leverandørens bankoplysninger fremgår af proformafakturaen (PI) efter RFQ-bekræftelse og køberverifikation.",
   "payment.btn.request": "Anmod om proforma / betalingsstruktur",
-
+"payment.guard": "Ingen forudbetalinger. Uafhængig tredjepartsinspektion ved lastning kan arrangeres efter aftale.",
+  
   "contact.title": "Kontakt os",
   "form.name": "Navn",
   "form.email": "E-mail",
