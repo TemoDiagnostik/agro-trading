@@ -11,6 +11,15 @@
   "nav.about": "Tietoa meistä",
   "nav.contact": "Yhteystiedot",
 
+ "services.cta.rfq": "Pyydä RFQ",
+  "services.cta.inspect": "Pyydä tarkastus",
+  "services.cta.docs": "Pyydä asiakirjojen tarkistus",
+  "services.agro.alt": "Rakenteellinen lannoitteiden hankinta",
+  "services.quality.alt": "Tarkastuksen koordinointi",
+  "services.analysis.alt": "Dokumentaatio ja EU-vaatimustenmukaisuus",
+  "wise.note": "Pankkitiedot jaetaan vasta RFQ-vahvistuksen ja ostajan varmennuksen jälkeen.",
+  
+
   "hero.title": "EU-pohjainen fosfaattikiven hankinta ja strukturoitu toteutus",
   "hero.subtitle": "Lähetyskohtaisesti varmennettu vaatimustenmukaisuus • Strukturoitu dokumentaatio • Monilähteinen koordinointi",
   "hero.desc": "Koordinoimme fosfaattikiven strukturoitua hankintaa varmennettujen toimittajien ja hyväksyttyjen ostajien välillä. Toimintaa tukevat lähetyskohtaiset kolmannen osapuolen asiakirjat sekä EU-linjattu kaupallinen toteutus.",
