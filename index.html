@@ -133,11 +133,17 @@
     </div>
 
     <!-- Company name -->
-    <div class="brand-text">
-      <span class="brand-name">Euro Agri Trading s.r.o</span>
-      <span class="brand-sep">—</span>
-      <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
-    </div>
+   <div class="brand-wrap">
+  <div class="brand">
+    <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+  </div>
+
+  <div class="brand-text">
+    <span class="brand-name">Euro Agri Trading s.r.o</span>
+    <span class="brand-sep">—</span>
+    <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
+  </div>
+</div>
 
   <!-- Navigation -->
 <nav aria-label="Primary Navigation">
@@ -159,35 +165,41 @@
     </li>
   </ul>
 </nav>
-    <!-- Language selector -->
-    <div class="lang" aria-label="Language selector">
-      <span aria-hidden="true">🌐</span>
-      <select id="langSelect" title="Language">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="cs">Čeština</option>
-        <option value="de">Deutsch</option>
-        <option value="fr">Français</option>
-        <option value="es">Español</option>
-        <option value="it">Italiano</option>
-        <option value="pl">Polski</option>
-        <option value="nl">Nederlands</option>
-        <option value="ro">Română</option>
-        <option value="el">Ελληνικά</option>
-        <option value="pt">Português</option>
-        <option value="bg">Български</option>
-        <option value="hu">Magyar</option>
-        <option value="da">Dansk</option>
-        <option value="sv">Svenska</option>
-        <option value="fi">Suomi</option>
-        <option value="sl">Slovenščina</option>
-		<option value="sk">Slovenčina</option>
-        <option value="hr">Hrvatski</option>
-        <option value="sr">Srpski</option>
-        <option value="tr">Türkçe</option>
-      </select>
-    </div>
+   <!-- Language selector (Flags UI) -->
+<div class="lang lang-flags" aria-label="Language selector">
+  <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
+    <img class="flag" src="flags/gb.svg" alt="English">
+    <span class="chev">▾</span>
+  </button>
 
+  <ul class="lang-menu" role="menu" aria-label="Languages"></ul>
+
+  <!-- Keep your existing select (same options) for your translation logic -->
+  <select id="langSelect" title="Language" hidden>
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+    <option value="cs">Čeština</option>
+    <option value="de">Deutsch</option>
+    <option value="fr">Français</option>
+    <option value="es">Español</option>
+    <option value="it">Italiano</option>
+    <option value="pl">Polski</option>
+    <option value="nl">Nederlands</option>
+    <option value="ro">Română</option>
+    <option value="el">Ελληνικά</option>
+    <option value="pt">Português</option>
+    <option value="bg">Български</option>
+    <option value="hu">Magyar</option>
+    <option value="da">Dansk</option>
+    <option value="sv">Svenska</option>
+    <option value="fi">Suomi</option>
+    <option value="sl">Slovenščina</option>
+    <option value="sk">Slovenčina</option>
+    <option value="hr">Hrvatski</option>
+    <option value="sr">Srpski</option>
+    <option value="tr">Türkçe</option>
+  </select>
+</div>
   </div>
 </header>
 
@@ -1117,164 +1129,113 @@
 		</script>
 
 
+
+
+		
 		<script>
-  document.getElementById('langSelect').addEventListener('change', function() {
-    const selectedLang = this.value;
-    const url = new URL(window.location.href);
+(function(){
+  const wrap = document.querySelector('.lang-flags');
+  const select = document.getElementById('langSelect');
+  if(!wrap || !select) return;
 
-    // غيّر أو أضف ?lang=... حسب اللغة المختارة
-    url.searchParams.set('lang', selectedLang);
+  const btn = wrap.querySelector('.lang-btn');
+  const btnFlag = wrap.querySelector('.lang-btn .flag');
+  const menu = wrap.querySelector('.lang-menu');
 
-    // إعادة التوجيه للصفحة باللغة المختارة
-    window.location.href = url.toString();
-  });
-</script>
+  // Map lang -> flag file (you can change any)
+  const flagMap = {
+    en: 'gb',  // English -> UK
+    ar: 'sa',  // Arabic -> Saudi (common choice)
+    cs: 'cz',
+    de: 'de',
+    fr: 'fr',
+    es: 'es',
+    it: 'it',
+    pl: 'pl',
+    nl: 'nl',
+    ro: 'ro',
+    el: 'gr',
+    pt: 'pt',
+    bg: 'bg',
+    hu: 'hu',
+    da: 'dk',
+    sv: 'se',
+    fi: 'fi',
+    sl: 'si',
+    sk: 'sk',
+    hr: 'hr',
+    sr: 'rs',
+    tr: 'tr'
+  };
 
-
-
-
-<script>
-(() => {
-  const products = document.querySelector('#products');
-  if (!products) return;
-
-  // 1) Deterrence: منع right-click + drag على صور المنتجات
-  const imgs = products.querySelectorAll('img');
-  imgs.forEach(img => {
-    img.setAttribute('draggable', 'false');
-
-    img.addEventListener('contextmenu', (e) => e.preventDefault()); // منع القائمة
-    img.addEventListener('dragstart', (e) => e.preventDefault());  // منع السحب
-  });
-
-  // 2) Create lightbox (بدون تعديل HTML)
-  const lb = document.createElement('div');
-  lb.className = 'eat-lightbox';
-  lb.innerHTML = `
-    <button class="eat-lightbox__close" type="button" aria-label="Close">×</button>
-    <img class="eat-lightbox__img" alt="">
-  `;
-  document.body.appendChild(lb);
-
-  const lbImg = lb.querySelector('.eat-lightbox__img');
-  const lbClose = lb.querySelector('.eat-lightbox__close');
-
-  function openLightbox(src, alt) {
-    lbImg.src = src;
-    lbImg.alt = alt || 'Preview';
-    lb.classList.add('is-open');
-    document.documentElement.style.overflow = 'hidden'; // منع scroll بالخلف
+  function flagSrcFor(lang){
+    const code = flagMap[lang] || lang;
+    return `flags/${code}.svg`;
   }
 
-  function closeLightbox() {
-    lb.classList.remove('is-open');
-    lbImg.src = '';
-    document.documentElement.style.overflow = '';
+  // Build menu from select options
+  function buildMenu(){
+    menu.innerHTML = '';
+    [...select.options].forEach(opt => {
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('data-lang', opt.value);
+
+      const img = document.createElement('img');
+      img.alt = '';
+      img.src = flagSrcFor(opt.value);
+
+      const span = document.createElement('span');
+      span.textContent = opt.textContent;
+
+      b.appendChild(img);
+      b.appendChild(span);
+      li.appendChild(b);
+      menu.appendChild(li);
+    });
   }
 
-  // فتح عند الضغط على أي صورة داخل products
-  products.addEventListener('click', (e) => {
-    const img = e.target.closest('img');
-    if (!img) return;
+  function setCurrentFromSelect(){
+    const lang = select.value || 'en';
+    btnFlag.src = flagSrcFor(lang);
+    btnFlag.alt = select.options[select.selectedIndex]?.textContent || 'Language';
+  }
 
-    // لو الصورة داخل رابط (مش عندك حالياً) نمنع الانتقال
-    e.preventDefault();
+  buildMenu();
+  setCurrentFromSelect();
 
-    openLightbox(img.currentSrc || img.src, img.alt);
+  // Toggle open/close
+  btn.addEventListener('click', () => {
+    wrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', wrap.classList.contains('open') ? 'true' : 'false');
   });
 
-  // إغلاق: زر X أو الضغط على الخلفية
-  lbClose.addEventListener('click', closeLightbox);
-  lb.addEventListener('click', (e) => {
-    if (e.target === lb) closeLightbox();
-  });
-
-  // إغلاق: Esc
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lb.classList.contains('is-open')) {
-      closeLightbox();
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if(!wrap.contains(e.target)){
+      wrap.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
-})();
-</script>
 
+  // Choose language
+  menu.addEventListener('click', (e) => {
+    const item = e.target.closest('button[data-lang]');
+    if(!item) return;
 
-		
-<script>
-  (function(){
-    const lang = (new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang') || 'en');
-    document.querySelectorAll('a[href="supplier-network.html"]').forEach(a=>{
-      a.href = `supplier-network.html?lang=${encodeURIComponent(lang)}`;
-    });
-  })();
-</script>
+    const lang = item.getAttribute('data-lang');
+    select.value = lang;
 
-<script>
-(function () {
-  const imgs = document.querySelectorAll('#certificates img.cert-preview');
-  if (!imgs.length) return;
+    // Trigger your existing translation logic
+    select.dispatchEvent(new Event('change', { bubbles:true }));
 
-  // Create lightbox once
-  const overlay = document.createElement('div');
-  overlay.className = 'cert-lightbox';
-  overlay.setAttribute('role', 'dialog');
-  overlay.setAttribute('aria-modal', 'true');
-  overlay.setAttribute('aria-label', 'Certificate preview');
-
-  overlay.innerHTML = `
-    <div class="cert-lightbox__box">
-      <button class="cert-lightbox__close" type="button" aria-label="Close preview">×</button>
-      <img class="cert-lightbox__img" alt="">
-    </div>
-  `;
-
-  document.body.appendChild(overlay);
-
-  const modalImg = overlay.querySelector('.cert-lightbox__img');
-  const btnClose = overlay.querySelector('.cert-lightbox__close');
-  let lastFocused = null;
-
-  function openPreview(src, alt){
-    lastFocused = document.activeElement;
-    modalImg.src = src;
-    modalImg.alt = alt || 'Certificate preview';
-    overlay.classList.add('is-open');
-    btnClose.focus();
-    document.documentElement.style.overflow = 'hidden';
-  }
-
-  function closePreview(){
-    overlay.classList.remove('is-open');
-    modalImg.src = '';
-    document.documentElement.style.overflow = '';
-    if (lastFocused) lastFocused.focus();
-  }
-
-  // open on image click
-  imgs.forEach(img => {
-    img.addEventListener('click', () => {
-      // Optionally support higher-res via: data-full="..."
-      const full = img.getAttribute('data-full') || img.currentSrc || img.src;
-      openPreview(full, img.alt);
-    });
-  });
-
-  // close handlers
-  btnClose.addEventListener('click', closePreview);
-
-  overlay.addEventListener('click', (e) => {
-    // click outside the box closes
-    if (e.target === overlay) closePreview();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!overlay.classList.contains('is-open')) return;
-    if (e.key === 'Escape') closePreview();
+    setCurrentFromSelect();
+    wrap.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
   });
 })();
 </script>
-
-		
 
 
 	
