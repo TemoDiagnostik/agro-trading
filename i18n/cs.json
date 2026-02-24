@@ -11,6 +11,15 @@
   "nav.about": "O nás",
   "nav.contact": "Kontakt",
 
+"services.cta.rfq": "Odeslat RFQ",
+  "services.cta.inspect": "Požádat o inspekci",
+  "services.cta.docs": "Požádat o kontrolu dokumentace",
+  "services.agro.alt": "Strukturované zajištění hnojiv",
+  "services.quality.alt": "Koordinace inspekce",
+  "services.analysis.alt": "Dokumentace a shoda s EU",
+  "wise.note": "Bankovní údaje jsou sdíleny pouze po potvrzení RFQ a ověření kupujícího.",
+  
+
   "hero.title": "Zajištění dodávek fosfátové horniny v EU a strukturovaná realizace",
   "hero.subtitle": "Ověřená shodnost pro každou zásilku • Strukturovaná dokumentace • Koordinace více původů",
   "hero.desc": "Koordinujeme strukturované zajištění dodávek fosfátové horniny mezi ověřenými dodavateli a kvalifikovanými kupujícími, podložené zásilkově specifickou dokumentací třetí strany a obchodní realizací v souladu s EU.",
