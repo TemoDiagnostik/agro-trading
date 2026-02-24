@@ -283,7 +283,8 @@
   "payment.lead": "Los pagos y la liquidación comercial se gestionan directamente entre el comprador y el vendedor. Euro Agri Trading s.r.o. opera como socio independiente con base en la UE de abastecimiento y coordinación, apoyando una ejecución estructurada de la transacción.",
   "payment.note": "Los datos bancarios del proveedor se proporcionan en la factura proforma (PI) tras la confirmación del RFQ y la verificación del comprador.",
   "payment.btn.request": "Solicitar proforma / estructura de pago",
-
+"payment.guard": "Sin pagos por adelantado. Se puede coordinar una inspección independiente por terceros en la carga según lo acordado.",
+  
   "contact.title": "Ponte en contacto",
   "form.name": "Nombre",
   "form.email": "Correo electrónico",
