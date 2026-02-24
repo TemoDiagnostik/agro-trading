@@ -288,6 +288,9 @@
   "payment.lead": "Payments and trade settlements are handled directly between the buyer and the seller. Euro Agri Trading s.r.o. operates as an independent EU-based sourcing and coordination partner supporting structured transaction execution.",
   "payment.note": "Supplier bank details are provided in the Proforma Invoice (PI) after RFQ confirmation and buyer verification.",
   "payment.btn.request": "Request Proforma / Payment Structure",
+"payment.guard": "No advance payments. Independent third-party inspection at loading can be arranged as agreed.",
+
+  
  "wise.note": "Bank details are shared only after RFQ confirmation and buyer verification.",
   "contact.title": "Get in touch",
   "form.name": "Name",
