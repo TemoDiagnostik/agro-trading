@@ -140,25 +140,27 @@
     </div>
 
     <!-- Navigation -->
-    <nav>
+<nav aria-label="Primary Navigation">
   <ul class="navbar-nav">
     <li><a href="#home" data-i18n="nav.home">Home</a></li>
-
     <li><a href="#products" data-i18n="nav.products">Products</a></li>
-
     <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
-
     <li><a href="#certificates" data-i18n="nav.coa">Specifications</a></li>
-
     <li><a href="#logistics" data-i18n="nav.logistics">Logistics & Compliance</a></li>
 
-    <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>
-
-    <li><a href="#about" data-i18n="nav.about">About</a></li>
-
-    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    <!-- More dropdown -->
+    <li class="nav-more">
+      <a class="more-trigger" href="#" aria-haspopup="true" aria-expanded="false" data-i18n="nav.more">More</a>
+      <ul class="more-menu" aria-label="More">
+        <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
+
+<!-- CTA Contact (instead of inside list) -->
+<a class="cta-btn" href="#contact" data-i18n="nav.contact">Contact</a>
 
     <!-- Language selector -->
     <div class="lang" aria-label="Language selector">
