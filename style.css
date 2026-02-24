@@ -2237,47 +2237,61 @@ body.supplier-page .supplier-note{
   }
 }
 
-/* ===== Institutional Header ===== */
+
+
+
+
+/* ===== Keep your old institutional/green identity ===== */
+:root{
+  --brand-green: #1f7a3a;   /* عدّلها لو عندك درجة محددة */
+  --text-dark:  #1f2a37;
+  --text-mid:   rgba(31,42,55,.72);
+  --line:       rgba(31,42,55,.10);
+  --bg:         rgba(255,255,255,.92);
+}
+
+/* Header */
 header{
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 
-/* Layout: logo+name | nav | actions (CTA + lang) */
+/* Layout: keep your existing .container.nav class */
 .container.nav{
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 32px;
-  height: 78px;
+  padding: 0 28px;
+  height: 82px;
 
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto; /* left | nav | lang */
   align-items: center;
   column-gap: 22px;
 }
 
-/* ===== Brand ===== */
+/* Logo bigger */
 .brand{
   display:flex;
   align-items:center;
 }
 .logo-img{
-  height: 40px;
+  height: 52px;   /* كان أصغر — كبرته */
   width: auto;
   display:block;
 }
 
-/* Company text stays elegant, doesn't push nav */
+/* Company name bigger + green */
 .brand-text{
   margin-left: 14px;
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
-  max-width: 560px;
+
+  max-width: 640px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2285,19 +2299,23 @@ header{
 
 .brand-name{
   font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
-  font-weight: 750;
-  letter-spacing: 0.2px;
-  color: #0f172a;
-  font-size: 15px;
-}
-.brand-sep{ opacity: .55; }
-.brand-tagline{
-  color: rgba(15, 23, 42, 0.65);
-  font-weight: 560;
-  font-size: 13px;
+  font-weight: 800;
+  font-size: 18px;           /* أكبر */
+  color: var(--brand-green); /* أخضر */
+  letter-spacing: .2px;
 }
 
-/* ===== Nav center ===== */
+.brand-sep{
+  opacity: .55;
+}
+
+.brand-tagline{
+  color: rgba(31,122,58,.75); /* أخضر أهدى */
+  font-weight: 650;
+  font-size: 14px;
+}
+
+/* Nav center */
 nav{
   justify-self: center;
   min-width: 0;
@@ -2306,80 +2324,99 @@ nav{
 .navbar-nav{
   display:flex;
   align-items:center;
-  gap: 18px;
+  gap: 22px;
   list-style:none;
   margin:0;
   padding:0;
   flex-wrap: nowrap;
 }
 
+/* Green underline hover (like your previous style) */
 .navbar-nav a{
   font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(15, 23, 42, 0.78);
+  font-size: 14.5px;
+  font-weight: 650;
+  color: var(--text-mid);
   text-decoration: none;
   white-space: nowrap;
-  padding: 10px 10px;
-  border-radius: 10px;
-  transition: background .18s ease, color .18s ease;
+  padding: 10px 2px;
+  position: relative;
+  transition: color .18s ease;
+}
+
+.navbar-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom: -6px;
+  height: 2px;
+  width: 0%;
+  background: var(--brand-green);
+  transition: width .22s ease;
 }
 
 .navbar-nav a:hover{
-  color: #0f172a;
-  background: rgba(15, 23, 42, 0.05);
+  color: var(--text-dark);
 }
 
-/* ===== More dropdown (no JS) ===== */
-.nav-more{
-  position: relative;
+.navbar-nav a:hover::after{
+  width: 100%;
 }
+
+/* ===== More dropdown ===== */
+.nav-more{ position: relative; }
 
 .more-trigger{
-  display: inline-flex;
-  align-items: center;
+  display:inline-flex;
+  align-items:center;
   gap: 8px;
 }
 
-/* add arrow via CSS (more professional than characters) */
+/* subtle arrow */
 .more-trigger::after{
-  content: "";
-  width: 6px; height: 6px;
-  border-right: 2px solid rgba(15,23,42,.55);
-  border-bottom: 2px solid rgba(15,23,42,.55);
+  content:"";
+  width:6px; height:6px;
+  border-right:2px solid rgba(31,42,55,.55);
+  border-bottom:2px solid rgba(31,42,55,.55);
   transform: rotate(45deg);
-  margin-top: -2px;
+  margin-top:-2px;
 }
 
-/* dropdown panel */
+/* Menu */
 .more-menu{
   position:absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 12px);
   left: 0;
-  min-width: 210px;
-  padding: 8px;
+  min-width: 220px;
+  padding: 10px;
   margin: 0;
   list-style: none;
 
-  background: rgba(255,255,255,0.98);
-  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(255,255,255,.98);
+  border: 1px solid rgba(31,42,55,.10);
   border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+  box-shadow: 0 18px 40px rgba(0,0,0,.10);
 
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
   transition: opacity .16s ease, transform .16s ease;
-  z-index: 20;
+  z-index: 30;
 }
 
 .more-menu a{
   display:block;
   padding: 10px 12px;
-  border-radius: 10px;
+  border-radius: 12px;
+  color: rgba(31,42,55,.82);
 }
 
-/* show on hover + keyboard focus */
+.more-menu a:hover{
+  color: var(--text-dark);
+  background: rgba(31,122,58,.08);
+}
+
+/* show */
 .nav-more:hover .more-menu,
 .nav-more:focus-within .more-menu{
   opacity: 1;
@@ -2387,98 +2424,61 @@ nav{
   pointer-events: auto;
 }
 
-/* ===== Actions column: CTA + Language ===== */
-.cta-btn{
-  justify-self: end;
-  margin-inline-start: 10px;
-
-  background: #0f2e4d;
-  color:#fff;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration:none;
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 10px 24px rgba(15, 46, 77, 0.18);
-  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
-}
-
-.cta-btn:hover{
-  background: #163d66;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(15, 46, 77, 0.22);
-}
-
-/* Language selector */
+/* ===== Language selector (keep it clean with many languages) ===== */
 .lang{
   justify-self: end;
   display:flex;
   align-items:center;
   gap: 10px;
-  margin-inline-start: 10px;
 }
 
-/* remove globe emoji for institutional vibe */
+/* remove globe icon (institutional look). لو تحبه رجّعه */
 .lang span{ display:none; }
 
 .lang select{
   appearance: none;
-  border: 1px solid rgba(15, 23, 42, 0.15);
-  background: rgba(255,255,255,0.95);
+  border: 2px solid rgba(31,122,58,.55);
+  background: rgba(255,255,255,.96);
   border-radius: 12px;
   padding: 9px 36px 9px 12px;
   font-size: 14px;
-  font-weight: 650;
-  color: #0f172a;
+  font-weight: 700;
+  color: var(--text-dark);
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-  max-width: 220px; /* مهم مع 23 لغة */
+  max-width: 240px; /* مهم مع 23 لغة */
 }
 
-/* little arrow on select */
-.lang{
-  position: relative;
-}
+.lang{ position: relative; }
 .lang::after{
-  content: "";
-  position: absolute;
+  content:"";
+  position:absolute;
   right: 12px;
-  width: 6px; height: 6px;
-  border-right: 2px solid rgba(15,23,42,.55);
-  border-bottom: 2px solid rgba(15,23,42,.55);
+  width:6px; height:6px;
+  border-right:2px solid rgba(31,42,55,.55);
+  border-bottom:2px solid rgba(31,42,55,.55);
   transform: rotate(45deg);
-  pointer-events: none;
+  pointer-events:none;
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1200px){
-  .container.nav{ padding: 0 18px; column-gap: 16px; }
-  .navbar-nav{ gap: 12px; }
-  .brand-text{ max-width: 380px; }
+@media (max-width: 1100px){
+  .navbar-nav{ gap: 14px; }
+  .brand-text{ max-width: 420px; }
+  .brand-tagline, .brand-sep{ display:none; }
 }
 
-@media (max-width: 992px){
-  .brand-tagline, .brand-sep{ display:none; }
-  .brand-text{ max-width: 220px; }
-
-  /* keep nav usable without wrapping chaos */
+@media (max-width: 900px){
   nav{ justify-self: stretch; }
   .navbar-nav{
-    overflow-x: auto;
+    overflow-x:auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     padding-bottom: 6px;
   }
-  .navbar-nav::-webkit-scrollbar{ height: 6px; }
-  .navbar-nav::-webkit-scrollbar-thumb{
-    background: rgba(15,23,42,0.18);
-    border-radius: 999px;
-  }
 }
 
-/* ===== RTL Support ===== */
-html[dir="rtl"] .brand-text{ margin-left: 0; margin-right: 14px; }
-html[dir="rtl"] .more-menu{ left: auto; right: 0; }
-html[dir="rtl"] .lang::after{ right:auto; left: 12px; }
+/* RTL support */
+html[dir="rtl"] .brand-text{ margin-left:0; margin-right:14px; }
+html[dir="rtl"] .more-menu{ left:auto; right:0; }
+html[dir="rtl"] .lang::after{ right:auto; left:12px; }
+html[dir="rtl"] .navbar-nav a::after{ left:auto; right:0; }
