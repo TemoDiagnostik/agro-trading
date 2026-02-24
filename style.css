@@ -2239,7 +2239,12 @@ body.supplier-page .supplier-note{
 }
 
 
-/* Flags language UI */
+
+
+
+
+
+/* ===== Flags language UI ===== */
 .lang-flags{
   position: relative;
   justify-self: end;
@@ -2336,7 +2341,7 @@ body.supplier-page .supplier-note{
 
 /* ===== Keep your old institutional/green identity ===== */
 :root{
-  --brand-green: #1f7a3a;   /* عدّلها لو عندك درجة محددة */
+  --brand-green: #1f7a3a;
   --text-dark:  #1f2a37;
   --text-mid:   rgba(31,42,55,.72);
   --line:       rgba(31,42,55,.10);
@@ -2353,7 +2358,7 @@ header{
   border-bottom: 1px solid var(--line);
 }
 
-/* Layout: keep your existing .container.nav class */
+/* Layout */
 .container.nav{
   max-width: 1440px;
   margin: 0 auto;
@@ -2361,25 +2366,34 @@ header{
   height: 82px;
 
   display: grid;
-  grid-template-columns: auto 1fr auto; /* left | nav | lang */
+  grid-template-columns: auto 1fr auto; /* brand-wrap | nav | lang */
   align-items: center;
   column-gap: 22px;
 }
 
-/* Logo bigger */
+/* ===== Brand wrap (FIX for grid) ===== */
+.brand-wrap{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0; /* important for ellipsis */
+}
+
+/* Logo */
 .brand{
   display:flex;
   align-items:center;
 }
+
 .logo-img{
-  height: 52px;   /* كان أصغر — كبرته */
+  height: 52px;
   width: auto;
   display:block;
 }
 
-/* Company name bigger + green */
+/* Company name */
 .brand-text{
-  margin-left: 14px;
+  margin-left: 0; /* FIX: was 14px; wrapper handles spacing */
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
@@ -2393,17 +2407,15 @@ header{
 .brand-name{
   font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
   font-weight: 800;
-  font-size: 18px;           /* أكبر */
-  color: var(--brand-green); /* أخضر */
+  font-size: 18px;
+  color: var(--brand-green);
   letter-spacing: .2px;
 }
 
-.brand-sep{
-  opacity: .55;
-}
+.brand-sep{ opacity: .55; }
 
 .brand-tagline{
-  color: rgba(31,122,58,.75); /* أخضر أهدى */
+  color: rgba(31,122,58,.75);
   font-weight: 650;
   font-size: 14px;
 }
@@ -2424,7 +2436,7 @@ nav{
   flex-wrap: nowrap;
 }
 
-/* Green underline hover (like your previous style) */
+/* Links */
 .navbar-nav a{
   font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
   font-size: 14.5px;
@@ -2437,15 +2449,17 @@ nav{
   transition: color .18s ease;
 }
 
+/* ===== Underline FIX (removes dot glitch) ===== */
 .navbar-nav a::after{
   content:"";
   position:absolute;
-  left:0;
+  left:0; right:0;
   bottom: -6px;
   height: 2px;
-  width: 0%;
   background: var(--brand-green);
-  transition: width .22s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .22s ease;
 }
 
 .navbar-nav a:hover{
@@ -2453,7 +2467,7 @@ nav{
 }
 
 .navbar-nav a:hover::after{
-  width: 100%;
+  transform: scaleX(1);
 }
 
 /* ===== More dropdown ===== */
@@ -2465,14 +2479,12 @@ nav{
   gap: 8px;
 }
 
-/* subtle arrow */
+/* ===== More arrow FIX (no border-artifacts) ===== */
 .more-trigger::after{
-  content:"";
-  width:6px; height:6px;
-  border-right:2px solid rgba(31,42,55,.55);
-  border-bottom:2px solid rgba(31,42,55,.55);
-  transform: rotate(45deg);
-  margin-top:-2px;
+  content:" ▾";
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(31,42,55,.65);
 }
 
 /* Menu */
@@ -2517,7 +2529,7 @@ nav{
   pointer-events: auto;
 }
 
-/* ===== Language selector (keep it clean with many languages) ===== */
+/* ===== Language selector base ===== */
 .lang{
   justify-self: end;
   display:flex;
@@ -2525,33 +2537,15 @@ nav{
   gap: 10px;
 }
 
-/* remove globe icon (institutional look). لو تحبه رجّعه */
+/* remove globe icon */
 .lang span{ display:none; }
 
-.lang select{
-  appearance: none;
-  border: 2px solid rgba(31,122,58,.55);
-  background: rgba(255,255,255,.96);
-  border-radius: 12px;
-  padding: 9px 36px 9px 12px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-dark);
-  cursor: pointer;
-  max-width: 240px; /* مهم مع 23 لغة */
-}
-
-.lang{ position: relative; }
-.lang::after{
-  content:"";
-  position:absolute;
-  right: 12px;
-  width:6px; height:6px;
-  border-right:2px solid rgba(31,42,55,.55);
-  border-bottom:2px solid rgba(31,42,55,.55);
-  transform: rotate(45deg);
-  pointer-events:none;
-}
+/* IMPORTANT:
+   You are using flags UI, select is hidden.
+   Also: prevent arrow pseudo-element from showing on flags UI.
+*/
+.lang::after{ content:none !important; }
+.lang select{ display:none; }
 
 /* ===== Responsive ===== */
 @media (max-width: 1100px){
@@ -2571,7 +2565,7 @@ nav{
 }
 
 /* RTL support */
-html[dir="rtl"] .brand-text{ margin-left:0; margin-right:14px; }
+html[dir="rtl"] .brand-text{ margin-left:0; margin-right:0; }
+html[dir="rtl"] .brand-wrap{ direction: rtl; }
 html[dir="rtl"] .more-menu{ left:auto; right:0; }
-html[dir="rtl"] .lang::after{ right:auto; left:12px; }
-html[dir="rtl"] .navbar-nav a::after{ left:auto; right:0; }
+html[dir="rtl"] .navbar-nav a::after{ transform-origin: right; }
