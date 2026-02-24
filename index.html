@@ -127,79 +127,76 @@
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
 
-    <!-- Logo -->
-    <div class="brand">
-      <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+    <!-- Brand (Logo + Company name) -->
+    <div class="brand-wrap">
+      <div class="brand">
+        <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+      </div>
+
+      <div class="brand-text">
+        <span class="brand-name">Euro Agri Trading s.r.o</span>
+        <span class="brand-sep">—</span>
+        <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
+      </div>
     </div>
 
-    <!-- Company name -->
-   <div class="brand-wrap">
-  <div class="brand">
-    <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
-  </div>
+    <!-- Navigation -->
+    <nav aria-label="Primary Navigation">
+      <ul class="navbar-nav">
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
+        <li><a href="#certificates" data-i18n="nav.coa">Specifications</a></li>
+        <li><a href="#logistics" data-i18n="nav.logistics">Logistics &amp; Compliance</a></li>
 
-  <div class="brand-text">
-    <span class="brand-name">Euro Agri Trading s.r.o</span>
-    <span class="brand-sep">—</span>
-    <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
-  </div>
-</div>
-
-  <!-- Navigation -->
-<nav aria-label="Primary Navigation">
-  <ul class="navbar-nav">
-    <li><a href="#home" data-i18n="nav.home">Home</a></li>
-    <li><a href="#products" data-i18n="nav.products">Products</a></li>
-    <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
-    <li><a href="#certificates" data-i18n="nav.coa">Specifications</a></li>
-    <li><a href="#logistics" data-i18n="nav.logistics">Logistics &amp; Compliance</a></li>
-
-    <!-- More dropdown -->
-    <li class="nav-more">
-      <a class="more-trigger" href="#" aria-haspopup="true" aria-expanded="false" data-i18n="nav.more">More</a>
-      <ul class="more-menu" aria-label="More">
-        <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>
-        <li><a href="#about" data-i18n="nav.about">About</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <!-- More dropdown -->
+        <li class="nav-more">
+          <a class="more-trigger" href="#" aria-haspopup="true" aria-expanded="false" data-i18n="nav.more">More</a>
+          <ul class="more-menu" aria-label="More">
+            <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-</nav>
-   <!-- Language selector (Flags UI) -->
-<div class="lang lang-flags" aria-label="Language selector">
-  <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
-    <img class="flag" src="flags/gb.svg" alt="English">
-    <span class="chev">▾</span>
-  </button>
+    </nav>
 
-  <ul class="lang-menu" role="menu" aria-label="Languages"></ul>
+    <!-- Language selector (Flags UI) -->
+    <div class="lang lang-flags" aria-label="Language selector">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
+        <img class="flag" src="flags/gb.svg" alt="English">
+        <span class="chev">▾</span>
+      </button>
 
-  <!-- Keep your existing select (same options) for your translation logic -->
-  <select id="langSelect" title="Language" hidden>
-    <option value="en">English</option>
-    <option value="ar">العربية</option>
-    <option value="cs">Čeština</option>
-    <option value="de">Deutsch</option>
-    <option value="fr">Français</option>
-    <option value="es">Español</option>
-    <option value="it">Italiano</option>
-    <option value="pl">Polski</option>
-    <option value="nl">Nederlands</option>
-    <option value="ro">Română</option>
-    <option value="el">Ελληνικά</option>
-    <option value="pt">Português</option>
-    <option value="bg">Български</option>
-    <option value="hu">Magyar</option>
-    <option value="da">Dansk</option>
-    <option value="sv">Svenska</option>
-    <option value="fi">Suomi</option>
-    <option value="sl">Slovenščina</option>
-    <option value="sk">Slovenčina</option>
-    <option value="hr">Hrvatski</option>
-    <option value="sr">Srpski</option>
-    <option value="tr">Türkçe</option>
-  </select>
-</div>
+      <ul class="lang-menu" role="menu" aria-label="Languages"></ul>
+
+      <!-- Keep your existing select (same options) for your translation logic -->
+      <select id="langSelect" title="Language" hidden>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="cs">Čeština</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="it">Italiano</option>
+        <option value="pl">Polski</option>
+        <option value="nl">Nederlands</option>
+        <option value="ro">Română</option>
+        <option value="el">Ελληνικά</option>
+        <option value="pt">Português</option>
+        <option value="bg">Български</option>
+        <option value="hu">Magyar</option>
+        <option value="da">Dansk</option>
+        <option value="sv">Svenska</option>
+        <option value="fi">Suomi</option>
+        <option value="sl">Slovenščina</option>
+        <option value="sk">Slovenčina</option>
+        <option value="hr">Hrvatski</option>
+        <option value="sr">Srpski</option>
+        <option value="tr">Türkçe</option>
+      </select>
+    </div>
+
   </div>
 </header>
 
@@ -1141,6 +1138,12 @@
   const btn = wrap.querySelector('.lang-btn');
   const btnFlag = wrap.querySelector('.lang-btn .flag');
   const menu = wrap.querySelector('.lang-menu');
+  if(!btn || !btnFlag || !menu) return;
+
+  // امنع More من عمل jump لأعلى الصفحة بسبب href="#"
+  document.querySelectorAll('.more-trigger[href="#"]').forEach(a => {
+    a.addEventListener('click', (e) => e.preventDefault());
+  });
 
   // عدّل المسار هنا لو لازم
   const FLAG_BASE = 'flags'; // مثال: 'assets/flags'
@@ -1251,9 +1254,9 @@
   select.addEventListener('change', () => {
     setCurrentFromSelect();
   });
+
 })();
 </script>
-
 	
 		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
