@@ -283,7 +283,8 @@
   "payment.lead": "Maksut ja kaupan selvitykset hoidetaan suoraan ostajan ja myyjän välillä. Euro Agri Trading s.r.o. toimii itsenäisenä EU-pohjaisena hankinta- ja koordinointikumppanina, joka tukee strukturoitua transaktion toteutusta.",
   "payment.note": "Toimittajan pankkitiedot annetaan proforma-laskussa (PI) RFQ-vahvistuksen ja ostajan varmennuksen jälkeen.",
   "payment.btn.request": "Pyydä proforma / maksujärjestely",
-
+"payment.guard": "Ei ennakkomaksuja. Riippumaton kolmannen osapuolen tarkastus lastauksen yhteydessä voidaan järjestää sopimuksen mukaan.",
+  
   "contact.title": "Ota yhteyttä",
   "form.name": "Nimi",
   "form.email": "Sähköposti",
