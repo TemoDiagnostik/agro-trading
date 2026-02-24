@@ -2539,6 +2539,93 @@ nav{
 }
 
 /* ===== RTL ===== */
-html[dir="rtl"] .brand-wrap{direction:rtl;}
+
 html[dir="rtl"] .more-menu{left:auto; right:0;}
 html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
+
+
+
+
+/* ===================================================
+   HEADER FIX — Stable layout + smaller nav + RTL stable
+   Paste at END of style.css (after everything)
+   =================================================== */
+
+/* 1) Smaller nav (desktop too) */
+.navbar-nav{
+  gap: 14px;                 /* كان 22 */
+}
+
+.navbar-nav a{
+  font-size: 13px;           /* كان 14/14.5 */
+  padding: 8px 2px;          /* كان 10px */
+}
+
+/* optional: لو عايز أصغر كمان */
+@media (max-width: 1200px){
+  .navbar-nav{ gap: 12px; }
+  .navbar-nav a{ font-size: 12.5px; }
+}
+
+/* 2) Prevent layout jumping across languages:
+      keep nav in one line, and if text gets long -> scroll */
+nav{
+  min-width: 0;
+}
+
+.navbar-nav{
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 6px;
+}
+
+/* 3) RTL: keep HEADER GRID order fixed (brand | nav | lang)
+      but allow Arabic text direction inside menu + nav */
+html[dir="rtl"] header,
+html[dir="rtl"] .container.nav{
+  direction: ltr; /* IMPORTANT: prevents header flipping */
+}
+
+/* Make Arabic text render RTL inside nav + dropdown only */
+html[dir="rtl"] nav,
+html[dir="rtl"] .navbar-nav{
+  direction: rtl;
+}
+
+html[dir="rtl"] .navbar-nav a{
+  text-align: right;
+}
+
+/* More dropdown should open aligned logically in RTL */
+html[dir="rtl"] .more-menu{
+  left: auto;
+  right: 0;
+}
+
+/* 4) Fix "white / washed" language items */
+.lang-menu{
+  background: rgba(255,255,255,.98) !important;
+}
+
+.lang-menu button{
+  color: var(--text-dark) !important;
+  opacity: 1 !important;
+}
+
+/* Arabic inside language menu aligns right */
+html[dir="rtl"] .lang-menu button{
+  text-align: right;
+}
+
+/* 5) Keep language button ALWAYS on the right */
+.lang{
+  justify-self: end !important;
+  margin-left: auto;
+}
+
+/* 6) Remove any old RTL rule that flips brand-wrap */
+html[dir="rtl"] .brand-wrap{
+  direction: ltr !important;  /* keep brand stable */
+}
