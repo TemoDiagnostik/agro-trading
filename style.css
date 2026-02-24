@@ -2293,7 +2293,7 @@ header{
 }
 
 .logo-img{
-  height:70px;
+  height:80px;
   width:auto;
   display:block;
 }
@@ -2628,4 +2628,17 @@ html[dir="rtl"] .lang-menu button{
 /* 6) Remove any old RTL rule that flips brand-wrap */
 html[dir="rtl"] .brand-wrap{
   direction: ltr !important;  /* keep brand stable */
+}
+
+
+
+/* Hide the horizontal scrollbar for the nav (keep scroll working) */
+.navbar-nav{
+  -ms-overflow-style: none;      /* IE/Edge legacy */
+  scrollbar-width: none;         /* Firefox */
+}
+
+.navbar-nav::-webkit-scrollbar{
+  height: 0;                     /* Chrome/Safari */
+  display: none;
 }
