@@ -2853,6 +2853,23 @@ nav{
   border-radius:999px;
 }
 
+
+.lang-code{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 34px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: rgba(31,122,58,.10);
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: .6px;
+  font-size: 12px;
+}
+
+
 /* Responsive */
 @media (max-width:1100px){
   .navbar-nav{gap:14px;}
