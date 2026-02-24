@@ -282,7 +282,9 @@
   "payment.lead": "Zahlungen und Handelsabwicklungen erfolgen direkt zwischen Käufer und Verkäufer. Euro Agri Trading s.r.o. agiert als unabhängiger, EU-basierter Beschaffungs- und Koordinationspartner zur Unterstützung strukturierter Transaktionsabwicklung.",
   "payment.note": "Bankdetails des Lieferanten werden in der Proforma-Rechnung (PI) nach RFQ-Bestätigung und Käuferverifizierung bereitgestellt.",
   "payment.btn.request": "Proforma / Zahlungsstruktur anfordern",
+"payment.guard": "Keine Vorauszahlungen. Eine unabhängige Drittparteieninspektion beim Verladen kann nach Vereinbarung organisiert werden.",
 
+  
   "contact.title": "Kontakt aufnehmen",
   "form.name": "Name",
   "form.email": "E-Mail",
