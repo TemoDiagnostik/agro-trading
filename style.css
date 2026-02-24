@@ -2424,41 +2424,45 @@ header .lang select{
 
 
 
-/* NAV: keep it aligned across languages */
+/* HEADER LAYOUT FIX */
 .container.nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* make nav take available space */
+/* Logo block */
+.brand,
+.brand-text {
+  flex: 0 0 auto;
+}
+
+/* Navigation block */
 nav {
   flex: 1 1 auto;
   min-width: 0;
 }
 
-/* prevent wrapping, allow horizontal scroll on small widths */
+/* UL layout */
 .navbar-nav {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;   /* يسمح بسطرين بشكل منظم */
+  gap: 18px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
 }
 
-/* keep links in one line */
+/* prevent ugly breaks */
 .navbar-nav a {
   white-space: nowrap;
-  display: inline-block;
+  font-weight: 500;
 }
 
-/* keep language selector from pushing nav */
+/* Language selector stays right */
 .lang {
   flex: 0 0 auto;
-  margin-left: auto;
 }
