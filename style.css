@@ -2411,3 +2411,54 @@ header .lang select{
 @media (max-width: 380px){
   header nav ul.navbar-nav li a{ font-size:12px; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAV: keep it aligned across languages */
+.container.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* make nav take available space */
+nav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* prevent wrapping, allow horizontal scroll on small widths */
+.navbar-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* keep links in one line */
+.navbar-nav a {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* keep language selector from pushing nav */
+.lang {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
