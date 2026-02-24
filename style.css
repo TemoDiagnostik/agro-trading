@@ -2237,232 +2237,248 @@ body.supplier-page .supplier-note{
   }
 }
 
-/* =========================
-   HEADER / NAV — SINGLE SOURCE OF TRUTH
-   Paste ONCE at VERY END of style.css
-   ========================= */
-
+/* ===== Institutional Header ===== */
 header{
-  background:#fff;
-  border-bottom:1px solid #e5e7eb;
-  padding:10px 0;
-  position:relative;
-  z-index:100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
-header .container.nav{
-  max-width:1180px;
-  margin:0 auto;
-  padding:0 20px;
+/* Layout: logo+name | nav | actions (CTA + lang) */
+.container.nav{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 78px;
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-
-/* Brand */
-header .brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  flex:0 0 auto;
-}
-
-header .logo-img{
-  height:70px;
-  width:auto;
-}
-
-/* Company name */
-header .brand-text{
-  display:flex;
-  align-items:baseline;
-  gap:8px;
-  flex-wrap:wrap;
-  line-height:1.15;
-  min-width:180px;
-}
-
-header .brand-name{
-  font-size:1.05rem;
-  font-weight:800;
-  color:#0a662f;
-}
-
-header .brand-sep{
-  opacity:.6;
-}
-
-header .brand-tagline{
-  font-size:.82rem;
-  font-weight:600;
-  color:#0a662f;
-  opacity:.75;
-}
-
-/* Nav */
-header nav{
-  flex:1 1 auto;
-  min-width:260px;
-}
-
-header nav ul.navbar-nav{
-  list-style:none;
-  margin:0;
-  padding:0;
-
-  display:flex;
-  gap:14px;
-  justify-content:center;
-  flex-wrap:wrap;              /* مهم لتغيّر اللغات */
-}
-
-header nav ul.navbar-nav li a{
-  text-decoration:none;
-  color:#57595a;
-  font-weight:600;
-  padding:6px 6px;
-  border-bottom:2px solid transparent;
-  transition:.25s;
-  white-space:nowrap;
-}
-
-header nav ul.navbar-nav li a:hover{
-  color:#0a662f;
-  border-bottom-color:#0a662f;
-}
-
-/* Language */
-header .lang{
-  flex:0 0 auto;
-  display:flex;
-  align-items:center;
-  gap:6px;
-}
-
-header .lang select{
-  border:2px solid #0a662f;
-  border-radius:6px;
-  padding:4px 8px;
-  background:#fff;
-  color:#0a662f;
-  font-weight:600;
-}
-
-/* Tablet: tighten spacing */
-@media (max-width: 1100px){
-  header .container.nav{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-  header nav{
-    width:100%;
-  }
-  header nav ul.navbar-nav{
-    gap:10px;
-  }
-}
-
-/* Mobile: stack cleanly */
-@media (max-width: 820px){
-  header .container.nav{
-    display:grid;
-    grid-template-columns:auto 1fr auto;
-    grid-template-areas:
-      "logo  .   lang"
-      "title title title"
-      "nav   nav   nav";
-    row-gap:6px;
-    column-gap:10px;
-    align-items:center;
-  }
-
-  header .brand{ grid-area:logo; }
-  header .lang{ grid-area:lang; justify-self:end; }
-
-  header .logo-img{ height:44px; }
-
-  header .brand-text{
-    grid-area:title;
-    justify-content:center;
-    text-align:center;
-  }
-
-  /* لا نترك الشرطة تعمل سطر لوحدها */
-  header .brand-sep{ display:none; }
-
-  header nav{ grid-area:nav; width:100%; }
-  header nav ul.navbar-nav{
-    justify-content:center;
-    gap:8px;
-  }
-  header nav ul.navbar-nav li a{
-    font-size:13px;
-    padding:5px 6px;
-  }
-
-  header .lang select{
-    padding:3px 6px;
-    font-size:.85rem;
-  }
-}
-
-@media (max-width: 380px){
-  header nav ul.navbar-nav li a{ font-size:12px; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* HEADER LAYOUT FIX */
-.container.nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  column-gap: 22px;
 }
 
-/* Logo block */
-.brand,
-.brand-text {
-  flex: 0 0 auto;
+/* ===== Brand ===== */
+.brand{
+  display:flex;
+  align-items:center;
+}
+.logo-img{
+  height: 40px;
+  width: auto;
+  display:block;
 }
 
-/* Navigation block */
-nav {
-  flex: 1 1 auto;
+/* Company text stays elegant, doesn't push nav */
+.brand-text{
+  margin-left: 14px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  max-width: 560px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.brand-name{
+  font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
+  font-weight: 750;
+  letter-spacing: 0.2px;
+  color: #0f172a;
+  font-size: 15px;
+}
+.brand-sep{ opacity: .55; }
+.brand-tagline{
+  color: rgba(15, 23, 42, 0.65);
+  font-weight: 560;
+  font-size: 13px;
+}
+
+/* ===== Nav center ===== */
+nav{
+  justify-self: center;
   min-width: 0;
 }
 
-/* UL layout */
-.navbar-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;   /* يسمح بسطرين بشكل منظم */
+.navbar-nav{
+  display:flex;
+  align-items:center;
   gap: 18px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  flex-wrap: nowrap;
 }
 
-/* prevent ugly breaks */
-.navbar-nav a {
+.navbar-nav a{
+  font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(15, 23, 42, 0.78);
+  text-decoration: none;
   white-space: nowrap;
-  font-weight: 500;
+  padding: 10px 10px;
+  border-radius: 10px;
+  transition: background .18s ease, color .18s ease;
 }
 
-/* Language selector stays right */
-.lang {
-  flex: 0 0 auto;
+.navbar-nav a:hover{
+  color: #0f172a;
+  background: rgba(15, 23, 42, 0.05);
 }
+
+/* ===== More dropdown (no JS) ===== */
+.nav-more{
+  position: relative;
+}
+
+.more-trigger{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* add arrow via CSS (more professional than characters) */
+.more-trigger::after{
+  content: "";
+  width: 6px; height: 6px;
+  border-right: 2px solid rgba(15,23,42,.55);
+  border-bottom: 2px solid rgba(15,23,42,.55);
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+/* dropdown panel */
+.more-menu{
+  position:absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 210px;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+
+  background: rgba(255,255,255,0.98);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity .16s ease, transform .16s ease;
+  z-index: 20;
+}
+
+.more-menu a{
+  display:block;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* show on hover + keyboard focus */
+.nav-more:hover .more-menu,
+.nav-more:focus-within .more-menu{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ===== Actions column: CTA + Language ===== */
+.cta-btn{
+  justify-self: end;
+  margin-inline-start: 10px;
+
+  background: #0f2e4d;
+  color:#fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", Inter, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration:none;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 24px rgba(15, 46, 77, 0.18);
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+
+.cta-btn:hover{
+  background: #163d66;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(15, 46, 77, 0.22);
+}
+
+/* Language selector */
+.lang{
+  justify-self: end;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-inline-start: 10px;
+}
+
+/* remove globe emoji for institutional vibe */
+.lang span{ display:none; }
+
+.lang select{
+  appearance: none;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 9px 36px 9px 12px;
+  font-size: 14px;
+  font-weight: 650;
+  color: #0f172a;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  max-width: 220px; /* مهم مع 23 لغة */
+}
+
+/* little arrow on select */
+.lang{
+  position: relative;
+}
+.lang::after{
+  content: "";
+  position: absolute;
+  right: 12px;
+  width: 6px; height: 6px;
+  border-right: 2px solid rgba(15,23,42,.55);
+  border-bottom: 2px solid rgba(15,23,42,.55);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px){
+  .container.nav{ padding: 0 18px; column-gap: 16px; }
+  .navbar-nav{ gap: 12px; }
+  .brand-text{ max-width: 380px; }
+}
+
+@media (max-width: 992px){
+  .brand-tagline, .brand-sep{ display:none; }
+  .brand-text{ max-width: 220px; }
+
+  /* keep nav usable without wrapping chaos */
+  nav{ justify-self: stretch; }
+  .navbar-nav{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 6px;
+  }
+  .navbar-nav::-webkit-scrollbar{ height: 6px; }
+  .navbar-nav::-webkit-scrollbar-thumb{
+    background: rgba(15,23,42,0.18);
+    border-radius: 999px;
+  }
+}
+
+/* ===== RTL Support ===== */
+html[dir="rtl"] .brand-text{ margin-left: 0; margin-right: 14px; }
+html[dir="rtl"] .more-menu{ left: auto; right: 0; }
+html[dir="rtl"] .lang::after{ right:auto; left: 12px; }
