@@ -1133,47 +1133,14 @@
   if(!wrap || !select) return;
 
   const btn = wrap.querySelector('.lang-btn');
-  const btnFlag = wrap.querySelector('.lang-btn .flag');
+  const codeEl = wrap.querySelector('.lang-code');
   const menu = wrap.querySelector('.lang-menu');
-  if(!btn || !btnFlag || !menu) return;
+  if(!btn || !codeEl || !menu) return;
 
-  // امنع More من عمل jump لأعلى الصفحة بسبب href="#"
-  document.querySelectorAll('.more-trigger[href="#"]').forEach(a => {
-    a.addEventListener('click', (e) => e.preventDefault());
+  // امنع More من عمل jump
+  document.querySelectorAll('.more-trigger[href="#"]').forEach(a=>{
+    a.addEventListener('click', e => e.preventDefault());
   });
-
-  // عدّل المسار هنا لو لازم
-  const FLAG_BASE = 'flags'; // مثال: 'assets/flags'
-
-  const flagMap = {
-    en: 'gb',
-    ar: 'sa',
-    cs: 'cz',
-    de: 'de',
-    fr: 'fr',
-    es: 'es',
-    it: 'it',
-    pl: 'pl',
-    nl: 'nl',
-    ro: 'ro',
-    el: 'gr',
-    pt: 'pt',
-    bg: 'bg',
-    hu: 'hu',
-    da: 'dk',
-    sv: 'se',
-    fi: 'fi',
-    sl: 'si',
-    sk: 'sk',
-    hr: 'hr',
-    sr: 'rs',
-    tr: 'tr'
-  };
-
-  function flagSrcFor(lang){
-    const code = flagMap[lang] || lang;
-    return `${FLAG_BASE}/${code}.svg`;
-  }
 
   function buildMenu(){
     menu.innerHTML = '';
@@ -1183,14 +1150,9 @@
       b.type = 'button';
       b.setAttribute('data-lang', opt.value);
 
-      const img = document.createElement('img');
-      img.alt = '';
-      img.src = flagSrcFor(opt.value);
-
       const span = document.createElement('span');
       span.textContent = opt.textContent;
 
-      b.appendChild(img);
       b.appendChild(span);
       li.appendChild(b);
       menu.appendChild(li);
@@ -1198,9 +1160,8 @@
   }
 
   function setCurrentFromSelect(){
-    const lang = select.value || 'en';
-    btnFlag.src = flagSrcFor(lang);
-    btnFlag.alt = select.options[select.selectedIndex]?.textContent || 'Language';
+    const lang = (select.value || 'en').toUpperCase();
+    codeEl.textContent = lang;
   }
 
   function openMenu(){
@@ -1216,42 +1177,32 @@
   buildMenu();
   setCurrentFromSelect();
 
-  // Toggle
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     wrap.classList.contains('open') ? closeMenu() : openMenu();
   });
 
-  // Close on outside click
   document.addEventListener('click', (e) => {
     if(!wrap.contains(e.target)) closeMenu();
   });
 
-  // Close on Escape
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape') closeMenu();
   });
 
-  // Choose language
   menu.addEventListener('click', (e) => {
     const item = e.target.closest('button[data-lang]');
     if(!item) return;
 
     const lang = item.getAttribute('data-lang');
     select.value = lang;
-
-    // triggers your existing translation handler
     select.dispatchEvent(new Event('change', { bubbles:true }));
 
     setCurrentFromSelect();
     closeMenu();
   });
 
-  // If language changes from elsewhere, keep flag in sync
-  select.addEventListener('change', () => {
-    setCurrentFromSelect();
-  });
-
+  select.addEventListener('change', setCurrentFromSelect);
 })();
 </script>
 	
