@@ -11,6 +11,15 @@
   "nav.about": "Acerca de",
   "nav.contact": "Contacto",
 
+"services.cta.rfq": "Solicitar RFQ",
+  "services.cta.inspect": "Solicitar inspección",
+  "services.cta.docs": "Solicitar revisión documental",
+  "services.agro.alt": "Abastecimiento estructurado de fertilizantes",
+  "services.quality.alt": "Coordinación de inspección",
+  "services.analysis.alt": "Documentación y cumplimiento UE",
+  "wise.note": "Los datos bancarios se comparten únicamente tras la confirmación del RFQ y la verificación del comprador.",
+  
+
   "hero.title": "Abastecimiento de roca fosfática con base en la UE y ejecución estructurada",
   "hero.subtitle": "Cumplimiento verificado por envío • Documentación estructurada • Coordinación multiorigen",
   "hero.desc": "Coordinamos el abastecimiento estructurado de roca fosfática entre proveedores verificados y compradores calificados, respaldado por documentación de terceros específica por envío y una ejecución comercial alineada con la UE.",
