@@ -1132,7 +1132,7 @@
 
 
 		
-		<script>
+	<script>
 (function(){
   const wrap = document.querySelector('.lang-flags');
   const select = document.getElementById('langSelect');
@@ -1142,10 +1142,12 @@
   const btnFlag = wrap.querySelector('.lang-btn .flag');
   const menu = wrap.querySelector('.lang-menu');
 
-  // Map lang -> flag file (you can change any)
+  // عدّل المسار هنا لو لازم
+  const FLAG_BASE = 'flags'; // مثال: 'assets/flags'
+
   const flagMap = {
-    en: 'gb',  // English -> UK
-    ar: 'sa',  // Arabic -> Saudi (common choice)
+    en: 'gb',
+    ar: 'sa',
     cs: 'cz',
     de: 'de',
     fr: 'fr',
@@ -1170,10 +1172,9 @@
 
   function flagSrcFor(lang){
     const code = flagMap[lang] || lang;
-    return `flags/${code}.svg`;
+    return `${FLAG_BASE}/${code}.svg`;
   }
 
-  // Build menu from select options
   function buildMenu(){
     menu.innerHTML = '';
     [...select.options].forEach(opt => {
@@ -1202,21 +1203,33 @@
     btnFlag.alt = select.options[select.selectedIndex]?.textContent || 'Language';
   }
 
+  function openMenu(){
+    wrap.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu(){
+    wrap.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
   buildMenu();
   setCurrentFromSelect();
 
-  // Toggle open/close
-  btn.addEventListener('click', () => {
-    wrap.classList.toggle('open');
-    btn.setAttribute('aria-expanded', wrap.classList.contains('open') ? 'true' : 'false');
+  // Toggle
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    wrap.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   // Close on outside click
   document.addEventListener('click', (e) => {
-    if(!wrap.contains(e.target)){
-      wrap.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
+    if(!wrap.contains(e.target)) closeMenu();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeMenu();
   });
 
   // Choose language
@@ -1227,16 +1240,19 @@
     const lang = item.getAttribute('data-lang');
     select.value = lang;
 
-    // Trigger your existing translation logic
+    // triggers your existing translation handler
     select.dispatchEvent(new Event('change', { bubbles:true }));
 
     setCurrentFromSelect();
-    wrap.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
+    closeMenu();
+  });
+
+  // If language changes from elsewhere, keep flag in sync
+  select.addEventListener('change', () => {
+    setCurrentFromSelect();
   });
 })();
 </script>
-
 
 	
 		<!-- JSON-LD (محفوظ كما هو) -->
