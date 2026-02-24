@@ -1125,9 +1125,9 @@
 
 
 
-		
-	<script>
-(function(){
+		<script>
+document.addEventListener('DOMContentLoaded', function(){
+
   const wrap = document.querySelector('.lang-flags');
   const select = document.getElementById('langSelect');
   if(!wrap || !select) return;
@@ -1137,75 +1137,56 @@
   const menu = wrap.querySelector('.lang-menu');
   if(!btn || !codeEl || !menu) return;
 
-  // امنع More من عمل jump
-  document.querySelectorAll('.more-trigger[href="#"]').forEach(a=>{
-    a.addEventListener('click', e => e.preventDefault());
-  });
-
   function buildMenu(){
     menu.innerHTML = '';
-    [...select.options].forEach(opt => {
+    Array.from(select.options).forEach(opt => {
       const li = document.createElement('li');
       const b = document.createElement('button');
       b.type = 'button';
-      b.setAttribute('data-lang', opt.value);
-
-      const span = document.createElement('span');
-      span.textContent = opt.textContent;
-
-      b.appendChild(span);
+      b.dataset.lang = opt.value;
+      b.textContent = opt.textContent;
       li.appendChild(b);
       menu.appendChild(li);
     });
   }
 
-  function setCurrentFromSelect(){
-    const lang = (select.value || 'en').toUpperCase();
-    codeEl.textContent = lang;
+  function setCurrent(){
+    codeEl.textContent = (select.value || 'en').toUpperCase();
   }
 
   function openMenu(){
     wrap.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-expanded','true');
   }
 
   function closeMenu(){
     wrap.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-expanded','false');
   }
 
   buildMenu();
-  setCurrentFromSelect();
+  setCurrent();
 
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', function(e){
     e.preventDefault();
-    wrap.classList.contains('open') ? closeMenu() : openMenu();
+    wrap.classList.toggle('open');
   });
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', function(e){
     if(!wrap.contains(e.target)) closeMenu();
   });
 
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape') closeMenu();
-  });
-
-  menu.addEventListener('click', (e) => {
-    const item = e.target.closest('button[data-lang]');
-    if(!item) return;
-
-    const lang = item.getAttribute('data-lang');
-    select.value = lang;
-    select.dispatchEvent(new Event('change', { bubbles:true }));
-
-    setCurrentFromSelect();
+  menu.addEventListener('click', function(e){
+    const b = e.target.closest('button[data-lang]');
+    if(!b) return;
+    select.value = b.dataset.lang;
+    select.dispatchEvent(new Event('change',{bubbles:true}));
+    setCurrent();
     closeMenu();
   });
 
-  select.addEventListener('change', setCurrentFromSelect);
-})();
+});
 </script>
-	
 		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
 {
