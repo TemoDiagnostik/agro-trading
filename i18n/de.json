@@ -11,6 +11,14 @@
   "nav.about": "Über uns",
   "nav.contact": "Kontakt",
 
+ "services.cta.rfq": "RFQ anfordern",
+  "services.cta.inspect": "Inspektion anfordern",
+  "services.cta.docs": "Dokumentenprüfung anfordern",
+  "services.agro.alt": "Strukturierte Düngemittelbeschaffung",
+  "services.quality.alt": "Inspektionskoordination",
+  "services.analysis.alt": "Dokumentation & EU-Compliance",
+  "wise.note": "Bankdaten werden erst nach RFQ-Bestätigung und Käuferverifizierung weitergegeben.",
+  
   "hero.title": "EU-basierte Rohphosphat-Beschaffung & strukturierte Abwicklung",
   "hero.subtitle": "Sendungsgeprüfte Compliance • Strukturierte Dokumentation • Koordination mehrerer Ursprünge",
   "hero.desc": "Wir koordinieren die strukturierte Beschaffung von Rohphosphat zwischen verifizierten Lieferanten und qualifizierten Käufern, gestützt durch sendungsspezifische Drittanbieter-Dokumentation und eine handelsübliche Abwicklung im Einklang mit EU-Anforderungen.",
