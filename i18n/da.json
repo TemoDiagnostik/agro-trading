@@ -11,6 +11,16 @@
   "nav.about": "Om os",
   "nav.contact": "Kontakt",
 
+  "services.cta.rfq": "Anmod om RFQ",
+  "services.cta.inspect": "Anmod om inspektion",
+  "services.cta.docs": "Anmod om dokumentgennemgang",
+  "services.agro.alt": "Struktureret gødningssourcing",
+  "services.quality.alt": "Inspektionskoordinering",
+  "services.analysis.alt": "Dokumentation & EU-compliance",
+  "wise.note": "Bankoplysninger deles først efter RFQ-bekræftelse og køberverifikation.",
+
+
+  
   "hero.title": "EU-baseret sourcing af råfosfat & struktureret eksekvering",
   "hero.subtitle": "Forsendelsesverificeret compliance • Struktureret dokumentation • Koordinering på tværs af flere oprindelser",
   "hero.desc": "Vi koordinerer struktureret sourcing af råfosfat mellem verificerede leverandører og kvalificerede købere, understøttet af forsendelsesspecifik tredjepartsdokumentation og EU-tilpasset trade execution.",
