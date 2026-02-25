@@ -2245,8 +2245,7 @@ body.supplier-page .supplier-note{
 
 
 /* ===================================================
-   HEADER — FINAL CLEAN VERSION (LETTERS LANGUAGE UI)
-   Paste at END of style.css
+   HEADER — FINAL (ONE VERSION ONLY)
    =================================================== */
 
 :root{
@@ -2257,7 +2256,7 @@ body.supplier-page .supplier-note{
   --bg:rgba(255,255,255,.94);
 }
 
-/* ===== Header ===== */
+/* Header */
 header{
   position:sticky;
   top:0;
@@ -2267,19 +2266,19 @@ header{
   border-bottom:1px solid var(--line);
 }
 
-/* 3 columns: brand | nav | language */
+/* Layout */
 .container.nav{
   max-width:1440px;
   margin:0 auto;
   padding:0 28px;
   height:82px;
   display:grid;
-  grid-template-columns:auto 1fr auto;
+  grid-template-columns:auto 1fr auto; /* brand | nav | lang */
   align-items:center;
   column-gap:22px;
 }
 
-/* ===== Brand ===== */
+/* Brand */
 .brand-wrap{
   display:flex;
   align-items:center;
@@ -2287,13 +2286,10 @@ header{
   min-width:0;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-}
+.brand{display:flex;align-items:center;}
 
 .logo-img{
-  height:80px;
+  height:80px; /* انت اللي رافعها — سيبها زي ما تحب */
   width:auto;
   display:block;
 }
@@ -2315,80 +2311,80 @@ header{
   color:var(--brand-green);
   letter-spacing:.2px;
 }
-
 .brand-sep{opacity:.55;}
-
 .brand-tagline{
   color:rgba(31,122,58,.75);
   font-weight:650;
   font-size:14px;
 }
 
-/* ===== Navigation ===== */
-nav{
-  justify-self:center;
-  min-width:0;
-}
+/* Nav */
+nav{justify-self:center;min-width:0;}
 
 .navbar-nav{
   display:flex;
   align-items:center;
-  gap:22px;
   list-style:none;
   margin:0;
   padding:0;
-  flex-wrap:nowrap;
+
+  gap: 8px;                 /* انت اخترت 8 */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+
+  /* hide scrollbar but keep scrolling */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+.navbar-nav::-webkit-scrollbar{display:none;height:0;}
 
 .navbar-nav a{
   font-family:system-ui,-apple-system,"Segoe UI",Inter,Arial,sans-serif;
-  font-size:14px;
+  font-size:12px;           /* انت اخترت 12 */
   font-weight:650;
   color:var(--text-mid);
   text-decoration:none;
   white-space:nowrap;
-  padding:10px 2px;
+  padding:6px 2px;          /* انت اخترت 6px */
   position:relative;
   transition:color .18s ease;
 }
 
-/* Clean underline animation */
+/* Underline (STATIC green line under all items) */
 .navbar-nav a::after{
   content:"";
   position:absolute;
-  left:0;
-  right:0;
+  left:0; right:0;
   bottom:-6px;
   height:2px;
   background:var(--brand-green);
-  transform:scaleX(0);
+  transform:scaleX(1);      /* ثابت */
   transform-origin:left;
-  transition:transform .22s ease;
+  opacity:.95;
+  transition:opacity .18s ease;
 }
+.navbar-nav a:hover{color:var(--text-dark);}
+.navbar-nav a:hover::after{opacity:1;}
 
-.navbar-nav a:hover{
-  color:var(--text-dark);
-}
-
-.navbar-nav a:hover::after{
-  transform:scaleX(1);
-}
-
-/* ===== More Dropdown ===== */
+/* More */
 .nav-more{position:relative;}
 
 .more-trigger{
   display:inline-flex;
   align-items:center;
   gap:6px;
+  color:var(--brand-green) !important;
+  font-weight:750;
 }
-
 .more-trigger::after{
   content:" ▾";
   font-size:12px;
-  color:rgba(31,42,55,.65);
+  color:var(--brand-green) !important;
 }
 
+/* More menu */
 .more-menu{
   position:absolute;
   top:calc(100% + 12px);
@@ -2407,33 +2403,26 @@ nav{
   transition:.18s ease;
   z-index:30;
 }
-
 .more-menu a{
   display:block;
   padding:10px 12px;
   border-radius:12px;
   color:rgba(31,42,55,.82);
 }
-
 .more-menu a:hover{
   background: rgba(31,122,58,.06);
   color: var(--brand-green);
 }
 
-/* More opens ONLY when .open class is added via JS */
+/* Open ONLY via JS (class .open) */
 .nav-more.open .more-menu{
   opacity:1;
   transform:translateY(0);
   pointer-events:auto;
 }
 
-/* ===== Language (LETTERS UI) ===== */
-.lang{
-  justify-self:end;
-  display:flex;
-  align-items:center;
-}
-
+/* Language (letters) */
+.lang{justify-self:end;display:flex;align-items:center;}
 .lang::after{content:none !important;}
 
 .lang-btn{
@@ -2443,10 +2432,9 @@ nav{
   padding:8px 12px;
   border-radius:12px;
   border:2px solid rgba(31,122,58,.55);
-  background:rgba(255,255,255,.96);
+  background:#fff; /* خليتها صريحة عشان ما يبانش اللي وراها */
   cursor:pointer;
 }
-
 .lang-code{
   display:inline-flex;
   align-items:center;
@@ -2461,13 +2449,8 @@ nav{
   letter-spacing:.6px;
   color:var(--text-dark);
 }
+.lang-btn .chev{font-size:12px;color:rgba(31,42,55,.65);}
 
-.lang-btn .chev{
-  font-size:12px;
-  color:rgba(31,42,55,.65);
-}
-
-/* Language dropdown */
 .lang-flags{position:relative;}
 
 .lang-menu{
@@ -2477,7 +2460,7 @@ nav{
   width:240px;
   max-height:340px;
   overflow:auto;
-  background:rgba(255,255,255,.98);
+  background:rgba(255,255,255,.98) !important;
   border:1px solid rgba(31,42,55,.12);
   border-radius:14px;
   box-shadow:0 18px 40px rgba(0,0,0,.10);
@@ -2490,13 +2473,11 @@ nav{
   transition:.16s ease;
   z-index:9999;
 }
-
 .lang-flags.open .lang-menu{
   opacity:1;
   transform:translateY(0);
   pointer-events:auto;
 }
-
 .lang-menu button{
   width:100%;
   display:block;
@@ -2507,128 +2488,36 @@ nav{
   text-align:left;
   font-weight:600;
   cursor:pointer;
-  color:rgba(31,42,55,.9);
+  color:var(--text-dark) !important;
+  opacity:1 !important;
 }
+.lang-menu button:hover{background:rgba(31,122,58,.08);}
 
-.lang-menu button:hover{
-  background:rgba(31,122,58,.08);
-}
-
-/* Scrollbar */
-.lang-menu::-webkit-scrollbar{width:8px;}
-.lang-menu::-webkit-scrollbar-thumb{
-  background:rgba(31,42,55,.18);
-  border-radius:999px;
-}
-
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width:1100px){
-  .navbar-nav{gap:14px;}
   .brand-text{max-width:420px;}
   .brand-tagline,.brand-sep{display:none;}
 }
 
-@media (max-width:900px){
-  nav{justify-self:stretch;}
-  .navbar-nav{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
-    padding-bottom:6px;
-  }
+@media (max-width:1200px){
+  .navbar-nav{gap:10px;}
+  .navbar-nav a{font-size:11px;}
 }
 
-/* ===================================================
-   HEADER PATCH — CLEAN (NO DUPLICATES)
-   Put this at END of style.css (replace your current chunk)
-   =================================================== */
-
-/* 1) Smaller nav */
-.navbar-nav{
-  gap: 8px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 6px;
-
-  /* hide scrollbars but keep scrolling */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.navbar-nav::-webkit-scrollbar{
-  display: none;
-  height: 0;
-}
-
-.navbar-nav a{
-  font-size: 12px;
-  padding: 6px 2px;
-}
-
-@media (max-width: 1200px){
-  .navbar-nav{ gap: 10px; }
-  .navbar-nav a{ font-size: 11px; }
-}
-
-/* 2) Keep language menu readable (no washed white text) */
-.lang-menu{
-  background: rgba(255,255,255,.98) !important;
-}
-.lang-menu button{
-  color: var(--text-dark) !important;
-  opacity: 1 !important;
-}
-
-/* 3) Keep language button at the far right */
-.lang{
-  justify-self: end !important;
-  margin-left: auto;
-}
-
-/* 4) RTL: keep HEADER layout fixed (do not flip), only text RTL */
+/* RTL: keep header layout fixed, only text RTL */
 html[dir="rtl"] header,
 html[dir="rtl"] .container.nav{
-  direction: ltr;
+  direction:ltr;
 }
-
-/* text direction RTL inside nav + dropdowns */
 html[dir="rtl"] nav,
 html[dir="rtl"] .navbar-nav,
 html[dir="rtl"] .more-menu,
 html[dir="rtl"] .lang-menu{
-  direction: rtl;
+  direction:rtl;
 }
-
 html[dir="rtl"] .navbar-nav a,
 html[dir="rtl"] .lang-menu button{
-  text-align: right;
+  text-align:right;
 }
-
-/* More dropdown aligns to the right in RTL */
-html[dir="rtl"] .more-menu{
-  left: auto;
-  right: 0;
-}
-
-/* underline grows from right in RTL */
-html[dir="rtl"] .navbar-nav a::after{
-  transform-origin: right;
-}
-
-/* 5) Persistent green underline under nav links */
-.navbar-nav a::after{
-  transform: scaleX(1) !important;
-  opacity: .95;
-}
-.navbar-nav a:hover::after{
-  opacity: 1;
-}
-
-/* 6) More in brand green */
-.more-trigger{
-  color: var(--brand-green) !important;
-  font-weight: 750;
-}
-.more-trigger::after{
-  color: var(--brand-green) !important;
-}
+html[dir="rtl"] .more-menu{left:auto; right:0;}
+html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
