@@ -2343,7 +2343,7 @@ nav{justify-self:center;min-width:0;}
 .navbar-nav a{
   font-family:system-ui,-apple-system,"Segoe UI",Inter,Arial,sans-serif;
   font-size:12px;           /* انت اخترت 12 */
-  font-weight:650;
+  font-weight:550;
   color:var(--text-mid);
   text-decoration:none;
   white-space:nowrap;
