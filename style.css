@@ -2357,8 +2357,8 @@ nav{justify-self:center;min-width:0;}
   content:"";
   position:absolute;
   left:0; right:0;
-  bottom:-6px;
-  height:2px;
+  bottom:-1px;
+  height:1px;
   background:var(--brand-green);
   transform:scaleX(1);      /* ثابت */
   transform-origin:left;
