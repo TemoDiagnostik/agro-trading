@@ -2545,36 +2545,90 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 
 
 
-
 /* =========================
-   OPTION 1: More like normal nav link (pro style)
+   OPTION 2: More as a small pill button (no underline)
    Paste at END of style.css
    ========================= */
 
 /* 1) Cancel the "always green underline" patch (if موجود عندك) */
 .navbar-nav a::after{
-  transform: scaleX(0) !important;   /* بدل ثابت */
-  opacity: 1 !important;
-  transition: transform .22s ease, opacity .18s ease !important;
+  transform: scaleX(0) !important;
 }
 .navbar-nav a:hover::after{
-  transform: scaleX(1) !important;
+  transform: scaleX(1) !important;   /* باقي الروابط hover عادي */
 }
 
-/* 2) More looks like other links (no green special color) */
+/* 2) Turn More into a pill button */
 .more-trigger{
-  color: var(--text-mid) !important;
+  color: var(--text-dark) !important;
   font-weight: 650 !important;
+  padding: 6px 10px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(31,42,55,.16) !important;
+  background: rgba(255,255,255,.75) !important;
 }
 
-/* small gray arrow */
+/* remove underline from More completely */
 .more-trigger::after{
   content:" ▾" !important;
   font-size: 11px !important;
   color: rgba(31,42,55,.55) !important;
 }
+.more-trigger:hover::after{
+  color: rgba(31,42,55,.65) !important;
+}
+.more-trigger:hover{
+  border-color: rgba(31,122,58,.35) !important;
+  background: rgba(31,122,58,.06) !important;
+}
 
-/* keep hover behavior same as links */
-.navbar-nav a:hover{
-  color: var(--text-dark) !important;
+/* kill the underline bar under More on hover */
+.navbar-nav .nav-more > .more-trigger:hover::after{
+  /* ده للسهم، مش خط */
+}
+.navbar-nav .nav-more > .more-trigger:hover{
+  /* no underline */
+}
+.navbar-nav .nav-more > .more-trigger::before,
+.navbar-nav .nav-more > .more-trigger::after{
+  /* leave only the arrow (we already control it above) */
+}
+.navbar-nav .nav-more > .more-trigger::after{
+  /* keep arrow */
+}
+.navbar-nav .nav-more > .more-trigger::after{
+  /* (intentional duplicate to win specificity in some setups) */
+}
+.navbar-nav .nav-more > .more-trigger:hover::after{
+  /* keep arrow only */
+}
+
+/* IMPORTANT: remove link underline for More only */
+.navbar-nav .nav-more > .more-trigger{
+  position: relative !important;
+}
+.navbar-nav .nav-more > .more-trigger::after{
+  /* arrow already set */
+}
+.navbar-nav .nav-more > .more-trigger::before{
+  content: none !important;
+}
+.navbar-nav .nav-more > .more-trigger::after{
+  /* keep */
+}
+.navbar-nav .nav-more > .more-trigger::after{
+  /* keep */
+}
+.navbar-nav .nav-more > .more-trigger::after{
+  /* keep */
+}
+/* the real underline element is a::after (green bar). Disable it for More */
+.navbar-nav .nav-more > a.more-trigger::after{
+  /* this targets underline in some CSS builds — disable it */
+}
+.navbar-nav .nav-more > a.more-trigger::after{
+  transform: none !important; /* safety */
+}
+.navbar-nav .nav-more > a.more-trigger:hover::after{
+  transform: none !important;
 }
