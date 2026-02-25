@@ -1124,86 +1124,35 @@
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const moreItem = document.querySelector('.nav-more');
+  const trigger  = document.querySelector('.more-trigger');
+  if (!moreItem || !trigger) return;
 
-		<script>
-document.addEventListener('DOMContentLoaded', function(){
-
-  const wrap = document.querySelector('.lang-flags');
-  const select = document.getElementById('langSelect');
-  if(!wrap || !select) return;
-
-  const btn = wrap.querySelector('.lang-btn');
-  const codeEl = wrap.querySelector('.lang-code');
-  const menu = wrap.querySelector('.lang-menu');
-  if(!btn || !codeEl || !menu) return;
-
-  function buildMenu(){
-    menu.innerHTML = '';
-    Array.from(select.options).forEach(opt => {
-      const li = document.createElement('li');
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.dataset.lang = opt.value;
-      b.textContent = opt.textContent;
-      li.appendChild(b);
-      menu.appendChild(li);
-    });
+  function closeMore() {
+    moreItem.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
   }
 
-  function setCurrent(){
-    codeEl.textContent = (select.value || 'en').toUpperCase();
-  }
-
-  function openMenu(){
-    wrap.classList.add('open');
-    btn.setAttribute('aria-expanded','true');
-  }
-
-  function closeMenu(){
-    wrap.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-  }
-
-  buildMenu();
-  setCurrent();
-
-  // Toggle open/close (stop propagation prevents outside-click closing instantly)
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    wrap.classList.contains('open') ? closeMenu() : openMenu();
+  trigger.addEventListener('click', function (e) {
+    e.preventDefault();      // يمنع jump بسبب href="#"
+    e.stopPropagation();     // يمنع قفله فورًا بسبب click خارج
+    const isOpen = moreItem.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  // Close on outside click
-  document.addEventListener('click', function(e){
-    if(!wrap.contains(e.target)) closeMenu();
+  // اقفل لو ضغطت برا
+  document.addEventListener('click', function (e) {
+    if (!moreItem.contains(e.target)) closeMore();
   });
 
-  // Close on Escape
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeMenu();
+  // اقفل بزر Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMore();
   });
-
-  // Choose language
-  menu.addEventListener('click', function(e){
-    const b = e.target.closest('button[data-lang]');
-    if(!b) return;
-
-    select.value = b.dataset.lang;
-
-    // trigger your translation logic (existing)
-    select.dispatchEvent(new Event('change',{bubbles:true}));
-
-    setCurrent();
-    closeMenu();
-  });
-
-  // Keep button synced if language changes elsewhere
-  select.addEventListener('change', setCurrent);
-
 });
-</script>
-		<!-- JSON-LD (محفوظ كما هو) -->
+</script>		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
 {
 	"@context": "https://schema.org",
