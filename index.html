@@ -1124,6 +1124,99 @@
 
 
 
+
+
+
+<!-- ===== Language (Letters UI) Script ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  const wrap   = document.querySelector('.lang-flags');
+  const select = document.getElementById('langSelect');
+  if (!wrap || !select) return;
+
+  const btn    = wrap.querySelector('.lang-btn');
+  const codeEl = wrap.querySelector('.lang-code');
+  const menu   = wrap.querySelector('.lang-menu');
+  if (!btn || !codeEl || !menu) return;
+
+  function buildMenu(){
+    menu.innerHTML = '';
+    Array.from(select.options).forEach(opt => {
+      const li = document.createElement('li');
+      const b  = document.createElement('button');
+
+      b.type = 'button';
+      b.dataset.lang = opt.value;
+      b.textContent  = opt.textContent;
+
+      li.appendChild(b);
+      menu.appendChild(li);
+    });
+  }
+
+  function setCurrent(){
+    codeEl.textContent = (select.value || 'en').toUpperCase();
+  }
+
+  function openMenu(){
+    wrap.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+
+  function closeMenu(){
+    wrap.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+
+  buildMenu();
+  setCurrent();
+
+  // Toggle open / close
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    wrap.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    if (!wrap.contains(e.target)) closeMenu();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // Choose language
+  menu.addEventListener('click', function(e){
+    const b = e.target.closest('button[data-lang]');
+    if (!b) return;
+
+    select.value = b.dataset.lang;
+
+    // trigger your existing translation logic
+    select.dispatchEvent(new Event('change',{bubbles:true}));
+
+    setCurrent();
+    closeMenu();
+  });
+
+  // Keep button synced if language changes elsewhere
+  select.addEventListener('change', setCurrent);
+
+});
+</script>
+
+
+
+
+
+
+
+		
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const moreItem = document.querySelector('.nav-more');
