@@ -2644,3 +2644,51 @@ html[dir="rtl"] .brand-wrap{
 }
 
 
+
+
+/* ===== PATCH: Keep header layout fixed on Arabic (RTL) ===== */
+html[dir="rtl"] header,
+html[dir="rtl"] .container.nav{
+  direction: ltr; /* layout ثابت */
+}
+
+/* only text direction becomes RTL */
+html[dir="rtl"] nav,
+html[dir="rtl"] .navbar-nav,
+html[dir="rtl"] .more-menu,
+html[dir="rtl"] .lang-menu{
+  direction: rtl;
+}
+
+/* underline grows from right in RTL (looks correct) */
+html[dir="rtl"] .navbar-nav a::after{
+  transform-origin: right;
+}
+
+
+
+/* ===== PATCH: Persistent green underline under ALL nav links ===== */
+.navbar-nav a::after{
+  transform: scaleX(1) !important;   /* always visible */
+  opacity: .95;
+}
+
+.navbar-nav a:hover::after{
+  opacity: 1;
+}
+
+
+
+
+
+
+
+/* ===== PATCH: More in brand green ===== */
+.more-trigger{
+  color: var(--brand-green) !important;
+  font-weight: 750;
+}
+
+.more-trigger::after{
+  color: var(--brand-green) !important;
+}
