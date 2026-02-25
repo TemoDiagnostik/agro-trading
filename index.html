@@ -1167,23 +1167,39 @@ document.addEventListener('DOMContentLoaded', function(){
   buildMenu();
   setCurrent();
 
+  // Toggle open/close (stop propagation prevents outside-click closing instantly)
   btn.addEventListener('click', function(e){
     e.preventDefault();
-    wrap.classList.toggle('open');
+    e.stopPropagation();
+    wrap.classList.contains('open') ? closeMenu() : openMenu();
   });
 
+  // Close on outside click
   document.addEventListener('click', function(e){
     if(!wrap.contains(e.target)) closeMenu();
   });
 
+  // Close on Escape
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMenu();
+  });
+
+  // Choose language
   menu.addEventListener('click', function(e){
     const b = e.target.closest('button[data-lang]');
     if(!b) return;
+
     select.value = b.dataset.lang;
+
+    // trigger your translation logic (existing)
     select.dispatchEvent(new Event('change',{bubbles:true}));
+
     setCurrent();
     closeMenu();
   });
+
+  // Keep button synced if language changes elsewhere
+  select.addEventListener('change', setCurrent);
 
 });
 </script>
