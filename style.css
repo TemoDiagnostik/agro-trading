@@ -2628,3 +2628,80 @@ html[dir="rtl"] .navbar-nav .nav-more > a.more-trigger::after{
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   REMOVE BOX FROM MORE + LANGUAGE
+   Clean text style only
+   ========================================= */
+
+/* Remove box from More */
+.navbar-nav .nav-more > a.more-trigger{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 6px 4px !important;
+  border-radius: 0 !important;
+
+  color: var(--text-dark) !important;
+  font-weight: 650 !important;
+}
+
+/* Remove underline bar from More only */
+.navbar-nav .nav-more > a.more-trigger::after{
+  content: " ▾" !important;
+
+  position: static !important;  /* مهم جداً */
+  background: transparent !important;
+  height: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+
+  font-size: 12px !important;
+  color: rgba(31,42,55,.65) !important;
+}
+
+/* Remove box from Language button */
+.lang-btn{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 6px 4px !important;
+  border-radius: 0 !important;
+}
+
+/* Remove inner EN badge box */
+.lang-code{
+  background: transparent !important;
+  padding: 0 !important;
+  min-width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  color: var(--text-dark) !important;
+}
+
+/* Keep small arrow */
+.lang-btn .chev{
+  margin-left: 6px !important;
+  font-size: 12px !important;
+  color: rgba(31,42,55,.65) !important;
+}
+
+/* RTL arrow spacing fix */
+html[dir="rtl"] .lang-btn .chev{
+  margin-left: 0 !important;
+  margin-right: 6px !important;
+}
