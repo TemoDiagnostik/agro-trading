@@ -2568,36 +2568,78 @@ nav{
 }
 
 /* ===================================================
-   FINAL OVERRIDE (Requested)
-   - More beside language
-   - More black, clear, not too bold
-   - Language button same style as More
+   FINAL OVERRIDE (CLEAN + SAFE)
    - Nav centered
+   - More beside language (grid col 3)
+   - Language beside More (grid col 4)
+   - More + Language same minimal style (no box)
+   - No underline under More
    =================================================== */
 
-/* NAV في المنتصف */
-nav{ justify-self: center; }
-.navbar-nav{ justify-content: center; }
+/* 1) Grid: Brand | Nav | More | Lang */
+.container.nav{
+  grid-template-columns: auto 1fr auto auto;
+}
 
-/* More: أسود وخط واضح (لو عايز تخن: غيّر 500 إلى 600) */
-.more-trigger{
+/* 2) Nav stays centered */
+nav{
+  grid-column: 2;
+  justify-self: center;
+}
+.navbar-nav{
+  justify-content: center;
+}
+
+/* 3) Place More + Lang on the right */
+.nav-more{
+  grid-column: 3;
+  align-self: center;
+}
+.lang{
+  grid-column: 4;
+  align-self: center;
+  display:flex;
+  align-items:center;
+  gap:12px; /* مسافة محترمة بين More واللغة */
+}
+
+/* 4) More style: black, clear, not too bold */
+.nav-more .more-trigger{
   color:#111 !important;
-  font-weight:500; /* <-- التخانة هنا */
-}
-.more-trigger::after{
-  color:#666 !important;
+  font-weight:500 !important; /* لو عايز تخن: 600 */
+  font-size:12px !important;
+  text-decoration:none !important; /* بدون خط */
 }
 
-/* Language: نفس ستايل More (إزالة البوكس) */
+/* remove the global green underline ONLY for More */
+.nav-more .more-trigger::after{
+  content:" ▾" !important;
+  position:static !important;
+  background:transparent !important;
+  height:auto !important;
+  transform:none !important;
+  opacity:1 !important;
+
+  color:#666 !important;
+  font-size:11px !important;
+}
+
+/* 5) Language same style as More (no box) */
 .lang-btn{
   background:transparent !important;
   border:0 !important;
-  padding:6px 4px !important;
+  padding:0 !important;
   border-radius:0 !important;
 
-  font-weight:500; /* <-- لو عايز تخن: 600 */
+  font-weight:500 !important; /* لو عايز تخن: 600 */
+  font-size:12px !important;
   color:#111 !important;
+
+  display:flex;
+  align-items:center;
+  gap:4px;
 }
+
 .lang-code{
   background:transparent !important;
   padding:0 !important;
@@ -2605,10 +2647,16 @@ nav{ justify-self: center; }
   height:auto !important;
   border-radius:0 !important;
 
-  font-weight:500; /* <-- لو عايز تخن: 600 */
+  font-weight:500 !important; /* لو عايز تخن: 600 */
+  font-size:12px !important;
   color:#111 !important;
   letter-spacing:.2px !important;
 }
+
 .lang-btn .chev{
   color:#666 !important;
+  font-size:11px !important;
 }
+
+/* RTL small spacing fix (optional) */
+html[dir="rtl"] .lang{ gap:12px; }
