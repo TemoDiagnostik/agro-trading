@@ -2543,13 +2543,8 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 
 
 
-
 /* ===================================================
-   HEADER — FINAL (ONE VERSION ONLY) ✅ CLEAN
-   - No duplicates
-   - More + Language = text + arrow (NO boxes)
-   - Green line controlled and does NOT conflict with More arrow
-   - Nav move left/right by numbers
+   HEADER — FINAL (ONE VERSION ONLY)
    =================================================== */
 
 :root{
@@ -2558,11 +2553,6 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
   --text-mid:rgba(31,42,55,.72);
   --line:rgba(31,42,55,.10);
   --bg:rgba(255,255,255,.94);
-
-  /* ===== CONTROL NUMBERS ===== */
-  --nav-shift-x: 0px;     /* (-) = left  |  (+) = right */
-  --nav-underline-h: 1px; /* thickness of green line */
-  --nav-underline-y: -1px;/* position from bottom (negative = up a bit) */
 }
 
 /* Header */
@@ -2594,12 +2584,15 @@ header{
   gap:14px;
   min-width:0;
 }
+
 .brand{display:flex;align-items:center;}
+
 .logo-img{
-  height:80px;
+  height:80px; /* انت اللي رافعها — سيبها زي ما تحب */
   width:auto;
   display:block;
 }
+
 .brand-text{
   display:inline-flex;
   align-items:baseline;
@@ -2609,6 +2602,7 @@ header{
   white-space:nowrap;
   text-overflow:ellipsis;
 }
+
 .brand-name{
   font-family:system-ui,-apple-system,"Segoe UI",Inter,Arial,sans-serif;
   font-weight:800;
@@ -2624,13 +2618,7 @@ header{
 }
 
 /* Nav */
-nav{
-  justify-self:center;
-  min-width:0;
-
-  /* ===== NAV MOVE BY NUMBER ===== */
-  transform: translateX(var(--nav-shift-x));
-}
+nav{justify-self:center;min-width:0;}
 
 .navbar-nav{
   display:flex;
@@ -2639,78 +2627,60 @@ nav{
   margin:0;
   padding:0;
 
-  gap:8px;
-  flex-wrap:nowrap;
+  gap: 8px;                 /* انت اخترت 8 */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
 
-  /* IMPORTANT:
-     dropdown needs visible overflow on desktop */
-  overflow:visible;
+  /* hide scrollbar but keep scrolling */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
-/* On small screens allow horizontal scroll */
-@media (max-width: 900px){
-  .navbar-nav{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    padding-bottom:6px;
-
-    -ms-overflow-style:none;
-    scrollbar-width:none;
-  }
-  .navbar-nav::-webkit-scrollbar{display:none;height:0;}
-}
+.navbar-nav::-webkit-scrollbar{display:none;height:0;}
 
 .navbar-nav a{
   font-family:system-ui,-apple-system,"Segoe UI",Inter,Arial,sans-serif;
-  font-size:12px;
+  font-size:12px;           /* انت اخترت 12 */
   font-weight:550;
   color:var(--text-mid);
   text-decoration:none;
   white-space:nowrap;
-  padding:6px 2px;
+  padding:6px 2px;          /* انت اخترت 6px */
   position:relative;
   transition:color .18s ease;
 }
 
-/* ===== GREEN LINE (UNDERLINE) — now on ::before to avoid conflict ===== */
-.navbar-nav a::before{
+/* Underline (STATIC green line under all items) */
+.navbar-nav a::after{
   content:"";
   position:absolute;
   left:0; right:0;
-  bottom:var(--nav-underline-y);
-  height:var(--nav-underline-h);
+  bottom:-1px;
+  height:1px;
   background:var(--brand-green);
+  transform:scaleX(1);      /* ثابت */
+  transform-origin:left;
   opacity:.95;
+  transition:opacity .18s ease;
 }
 .navbar-nav a:hover{color:var(--text-dark);}
+.navbar-nav a:hover::after{opacity:1;}
 
-/* More (dropdown trigger) */
-.nav-more{
-  position:relative;
-  z-index:2000;
-}
+/* More */
+.nav-more{position:relative;}
 
-/* More trigger = TEXT ONLY (NO BOX) */
-.navbar-nav .nav-more > a.more-trigger{
+.more-trigger{
   display:inline-flex;
   align-items:center;
   gap:6px;
-
-  background:transparent;
-  border:0;
-  border-radius:0;
-  padding:6px 4px;
-
-  color:var(--text-dark);
-  font-weight:650;
+  color:var(--brand-green) !important;
+  font-weight:750;
 }
-
-/* Arrow for More (safe because underline is on ::before now) */
-.navbar-nav .nav-more > a.more-trigger::after{
-  content:"▾";
+.more-trigger::after{
+  content:" ▾";
   font-size:12px;
-  line-height:1;
-  color:rgba(31,42,55,.65);
+  color:var(--brand-green) !important;
 }
 
 /* More menu */
@@ -2730,7 +2700,7 @@ nav{
   transform:translateY(-6px);
   pointer-events:none;
   transition:.18s ease;
-  z-index:3000;
+  z-index:30;
 }
 .more-menu a{
   display:block;
@@ -2739,11 +2709,11 @@ nav{
   color:rgba(31,42,55,.82);
 }
 .more-menu a:hover{
-  background:rgba(31,122,58,.06);
-  color:var(--brand-green);
+  background: rgba(31,122,58,.06);
+  color: var(--brand-green);
 }
 
-/* Open via JS (class .open) */
+/* Open ONLY via JS (class .open) */
 .nav-more.open .more-menu{
   opacity:1;
   transform:translateY(0);
@@ -2751,43 +2721,37 @@ nav{
 }
 
 /* Language (letters) */
-.lang{
-  justify-self:end;
-  display:flex;
-  align-items:center;
-}
+.lang{justify-self:end;display:flex;align-items:center;}
 .lang::after{content:none !important;}
 
-/* Language button = TEXT ONLY (NO BOX) */
 .lang-btn{
   display:flex;
   align-items:center;
-  gap:6px;
-
-  padding:6px 4px;
-  border:0;
-  border-radius:0;
-  background:transparent;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:12px;
+  border:2px solid rgba(31,122,58,.55);
+  background:#fff; /* خليتها صريحة عشان ما يبانش اللي وراها */
   cursor:pointer;
 }
 .lang-code{
-  display:inline;
-  background:transparent;
-  min-width:auto;
-  height:auto;
-  padding:0;
-  border-radius:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:22px;
+  padding:0 8px;
+  border-radius:8px;
+  background:rgba(31,122,58,.10);
   font-size:12px;
-  font-weight:700;
+  font-weight:800;
   letter-spacing:.6px;
   color:var(--text-dark);
 }
-.lang-btn .chev{
-  font-size:12px;
-  color:rgba(31,42,55,.65);
-}
+.lang-btn .chev{font-size:12px;color:rgba(31,42,55,.65);}
 
 .lang-flags{position:relative;}
+
 .lang-menu{
   position:absolute;
   top:calc(100% + 10px);
@@ -2795,7 +2759,7 @@ nav{
   width:240px;
   max-height:340px;
   overflow:auto;
-  background:rgba(255,255,255,.98);
+  background:rgba(255,255,255,.98) !important;
   border:1px solid rgba(31,42,55,.12);
   border-radius:14px;
   box-shadow:0 18px 40px rgba(0,0,0,.10);
@@ -2823,7 +2787,8 @@ nav{
   text-align:left;
   font-weight:600;
   cursor:pointer;
-  color:var(--text-dark);
+  color:var(--text-dark) !important;
+  opacity:1 !important;
 }
 .lang-menu button:hover{background:rgba(31,122,58,.08);}
 
@@ -2832,6 +2797,7 @@ nav{
   .brand-text{max-width:420px;}
   .brand-tagline,.brand-sep{display:none;}
 }
+
 @media (max-width:1200px){
   .navbar-nav{gap:10px;}
   .navbar-nav a{font-size:11px;}
@@ -2853,3 +2819,188 @@ html[dir="rtl"] .lang-menu button{
   text-align:right;
 }
 html[dir="rtl"] .more-menu{left:auto; right:0;}
+html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
+
+
+/* FIX: allow dropdown to show (avoid clipping by overflow) */
+.navbar-nav{
+  overflow: visible !important;     /* desktop: dropdown visible */
+}
+
+/* keep horizontal scroll only on small screens */
+@media (max-width: 900px){
+  .navbar-nav{
+    overflow-x: auto !important;
+    overflow-y: visible !important; /* best effort */
+  }
+}
+
+/* ensure dropdown sits above */
+.nav-more{ position: relative; z-index: 2000; }
+.more-menu{ z-index: 3000; }
+
+
+
+
+
+/* ===================================================
+   PATCH (Option 2): Make "More" match Language pill
+   + keep it near language + remove underline for More only
+   Paste at END of style.css
+   =================================================== */
+
+/* 1) Bring nav closer to language */
+.container.nav{
+  column-gap: 10px !important; /* كان 22 */
+}
+
+/* 2) Keep nav at the end (near language) */
+nav{
+  justify-self: end !important;
+}
+
+/* 3) Make sure items sit toward the right */
+.navbar-nav{
+  justify-content: flex-end !important;
+}
+
+/* 4) Small spacing between More and Language button */
+.lang{
+  margin-left: 8px !important;
+}
+
+/* -------------------------------------------
+   5) MORE = same pill style as language
+   ------------------------------------------- */
+.navbar-nav .nav-more > a.more-trigger{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  padding: 8px 12px !important;
+  border-radius: 12px !important;
+  border: 2px solid rgba(31,122,58,.55) !important;
+  background: #fff !important;
+
+  color: var(--text-dark) !important;   /* لو تريده أخضر: var(--brand-green) */
+  font-weight: 800 !important;
+
+  text-decoration: none !important;
+}
+
+/* Arrow beside More (like language) */
+.navbar-nav .nav-more > a.more-trigger::after{
+  content: "▾" !important;
+
+  position: static !important;   /* IMPORTANT: cancels your underline positioning */
+  height: auto !important;
+  background: transparent !important;
+  transform: none !important;
+  opacity: 1 !important;
+
+  font-size: 12px !important;
+  line-height: 1 !important;
+  color: rgba(31,42,55,.65) !important;
+
+  transition: none !important;
+}
+
+/* 6) Kill the green underline bar for More ONLY
+      (your underline is also using a::after globally) */
+.navbar-nav .nav-more > a.more-trigger{
+  /* nothing */
+}
+.navbar-nav .nav-more > a.more-trigger:hover{
+  color: var(--text-dark) !important;
+}
+
+/* Optional: subtle hover like language */
+.navbar-nav .nav-more > a.more-trigger:hover{
+  background: rgba(31,122,58,.06) !important;
+}
+
+/* 7) RTL: keep arrow spacing correct */
+html[dir="rtl"] .navbar-nav .nav-more > a.more-trigger{
+  gap: 8px !important;
+}
+html[dir="rtl"] .navbar-nav .nav-more > a.more-trigger::after{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   REMOVE BOX FROM MORE + LANGUAGE
+   Clean text style only
+   ========================================= */
+
+/* Remove box from More */
+.navbar-nav .nav-more > a.more-trigger{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 6px 4px !important;
+  border-radius: 0 !important;
+
+  color: var(--text-dark) !important;
+  font-weight: 650 !important;
+}
+
+/* Remove underline bar from More only */
+.navbar-nav .nav-more > a.more-trigger::after{
+  content: " ▾" !important;
+
+  position: static !important;  /* مهم جداً */
+  background: transparent !important;
+  height: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+
+  font-size: 12px !important;
+  color: rgba(31,42,55,.65) !important;
+}
+
+/* Remove box from Language button */
+.lang-btn{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 6px 4px !important;
+  border-radius: 0 !important;
+}
+
+/* Remove inner EN badge box */
+.lang-code{
+  background: transparent !important;
+  padding: 0 !important;
+  min-width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  color: var(--text-dark) !important;
+}
+
+/* Keep small arrow */
+.lang-btn .chev{
+  margin-left: 6px !important;
+  font-size: 12px !important;
+  color: rgba(31,42,55,.65) !important;
+}
+
+/* RTL arrow spacing fix */
+html[dir="rtl"] .lang-btn .chev{
+  margin-left: 0 !important;
+  margin-right: 6px !important;
+}
