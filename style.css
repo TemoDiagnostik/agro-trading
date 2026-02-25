@@ -2557,8 +2557,8 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 }
 
 .navbar-nav a{
-  font-size: 13px;           /* كان 14/14.5 */
-  padding: 8px 2px;          /* كان 10px */
+  font-size: 12px;           /* كان 14/14.5 */
+  padding: 6px 2px;          /* كان 10px */
 }
 
 /* optional: لو عايز أصغر كمان */
