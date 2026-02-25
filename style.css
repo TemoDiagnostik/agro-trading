@@ -2539,3 +2539,42 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 /* ensure dropdown sits above */
 .nav-more{ position: relative; z-index: 2000; }
 .more-menu{ z-index: 3000; }
+
+
+
+
+
+
+
+/* =========================
+   OPTION 1: More like normal nav link (pro style)
+   Paste at END of style.css
+   ========================= */
+
+/* 1) Cancel the "always green underline" patch (if موجود عندك) */
+.navbar-nav a::after{
+  transform: scaleX(0) !important;   /* بدل ثابت */
+  opacity: 1 !important;
+  transition: transform .22s ease, opacity .18s ease !important;
+}
+.navbar-nav a:hover::after{
+  transform: scaleX(1) !important;
+}
+
+/* 2) More looks like other links (no green special color) */
+.more-trigger{
+  color: var(--text-mid) !important;
+  font-weight: 650 !important;
+}
+
+/* small gray arrow */
+.more-trigger::after{
+  content:" ▾" !important;
+  font-size: 11px !important;
+  color: rgba(31,42,55,.55) !important;
+}
+
+/* keep hover behavior same as links */
+.navbar-nav a:hover{
+  color: var(--text-dark) !important;
+}
