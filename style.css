@@ -2581,28 +2581,7 @@ nav{
   padding-bottom: 6px;
 }
 
-/* 3) RTL: keep HEADER GRID order fixed (brand | nav | lang)
-      but allow Arabic text direction inside menu + nav */
-html[dir="rtl"] header,
-html[dir="rtl"] .container.nav{
-  direction: ltr; /* IMPORTANT: prevents header flipping */
-}
 
-/* Make Arabic text render RTL inside nav + dropdown only */
-html[dir="rtl"] nav,
-html[dir="rtl"] .navbar-nav{
-  direction: rtl;
-}
-
-html[dir="rtl"] .navbar-nav a{
-  text-align: right;
-}
-
-/* More dropdown should open aligned logically in RTL */
-html[dir="rtl"] .more-menu{
-  left: auto;
-  right: 0;
-}
 
 /* 4) Fix "white / washed" language items */
 .lang-menu{
@@ -2644,15 +2623,13 @@ html[dir="rtl"] .brand-wrap{
 }
 
 
-
-
-/* ===== PATCH: Keep header layout fixed on Arabic (RTL) ===== */
+/* ===== RTL (Arabic) — keep HEADER layout fixed, only text RTL ===== */
 html[dir="rtl"] header,
 html[dir="rtl"] .container.nav{
-  direction: ltr; /* layout ثابت */
+  direction: ltr; /* يمنع انقلاب الهيدر (brand | nav | lang) */
 }
 
-/* only text direction becomes RTL */
+/* خلي اتجاه النص RTL داخل الناف والقوائم فقط */
 html[dir="rtl"] nav,
 html[dir="rtl"] .navbar-nav,
 html[dir="rtl"] .more-menu,
@@ -2660,10 +2637,22 @@ html[dir="rtl"] .lang-menu{
   direction: rtl;
 }
 
-/* underline grows from right in RTL (looks correct) */
+/* محاذاة الروابط عربي */
+html[dir="rtl"] .navbar-nav a{
+  text-align: right;
+}
+
+/* قائمة More تفتح يمين في RTL */
+html[dir="rtl"] .more-menu{
+  left: auto;
+  right: 0;
+}
+
+/* خط الهوفر/الأندرلاين يبدأ من اليمين في RTL */
 html[dir="rtl"] .navbar-nav a::after{
   transform-origin: right;
 }
+
 
 
 
