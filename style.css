@@ -2416,12 +2416,12 @@ nav{
 }
 
 .more-menu a:hover{
-  color:var(--text-dark);
-  background:rgba(31,122,58,.08);
+  background: rgba(31,122,58,.06);
+  color: var(--brand-green);
 }
 
-.nav-more:hover .more-menu,
-.nav-more:focus-within .more-menu{
+/* More opens ONLY when .open class is added via JS */
+.nav-more.open .more-menu{
   opacity:1;
   transform:translateY(0);
   pointer-events:auto;
