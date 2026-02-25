@@ -2521,3 +2521,21 @@ html[dir="rtl"] .lang-menu button{
 }
 html[dir="rtl"] .more-menu{left:auto; right:0;}
 html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
+
+
+/* FIX: allow dropdown to show (avoid clipping by overflow) */
+.navbar-nav{
+  overflow: visible !important;     /* desktop: dropdown visible */
+}
+
+/* keep horizontal scroll only on small screens */
+@media (max-width: 900px){
+  .navbar-nav{
+    overflow-x: auto !important;
+    overflow-y: visible !important; /* best effort */
+  }
+}
+
+/* ensure dropdown sits above */
+.nav-more{ position: relative; z-index: 2000; }
+.more-menu{ z-index: 3000; }
