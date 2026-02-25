@@ -2544,91 +2544,87 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 
 
 
-
-/* =========================
-   OPTION 2: More as a small pill button (no underline)
+/* ===================================================
+   PATCH (Option 2): Make "More" match Language pill
+   + keep it near language + remove underline for More only
    Paste at END of style.css
-   ========================= */
+   =================================================== */
 
-/* 1) Cancel the "always green underline" patch (if موجود عندك) */
-.navbar-nav a::after{
-  transform: scaleX(0) !important;
-}
-.navbar-nav a:hover::after{
-  transform: scaleX(1) !important;   /* باقي الروابط hover عادي */
+/* 1) Bring nav closer to language */
+.container.nav{
+  column-gap: 10px !important; /* كان 22 */
 }
 
-/* 2) Turn More into a pill button */
-.more-trigger{
-  color: var(--text-dark) !important;
-  font-weight: 650 !important;
-  padding: 6px 10px !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(31,42,55,.16) !important;
-  background: rgba(255,255,255,.75) !important;
+/* 2) Keep nav at the end (near language) */
+nav{
+  justify-self: end !important;
 }
 
-/* remove underline from More completely */
-.more-trigger::after{
-  content:" ▾" !important;
-  font-size: 11px !important;
-  color: rgba(31,42,55,.55) !important;
+/* 3) Make sure items sit toward the right */
+.navbar-nav{
+  justify-content: flex-end !important;
 }
-.more-trigger:hover::after{
+
+/* 4) Small spacing between More and Language button */
+.lang{
+  margin-left: 8px !important;
+}
+
+/* -------------------------------------------
+   5) MORE = same pill style as language
+   ------------------------------------------- */
+.navbar-nav .nav-more > a.more-trigger{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  padding: 8px 12px !important;
+  border-radius: 12px !important;
+  border: 2px solid rgba(31,122,58,.55) !important;
+  background: #fff !important;
+
+  color: var(--text-dark) !important;   /* لو تريده أخضر: var(--brand-green) */
+  font-weight: 800 !important;
+
+  text-decoration: none !important;
+}
+
+/* Arrow beside More (like language) */
+.navbar-nav .nav-more > a.more-trigger::after{
+  content: "▾" !important;
+
+  position: static !important;   /* IMPORTANT: cancels your underline positioning */
+  height: auto !important;
+  background: transparent !important;
+  transform: none !important;
+  opacity: 1 !important;
+
+  font-size: 12px !important;
+  line-height: 1 !important;
   color: rgba(31,42,55,.65) !important;
+
+  transition: none !important;
 }
-.more-trigger:hover{
-  border-color: rgba(31,122,58,.35) !important;
+
+/* 6) Kill the green underline bar for More ONLY
+      (your underline is also using a::after globally) */
+.navbar-nav .nav-more > a.more-trigger{
+  /* nothing */
+}
+.navbar-nav .nav-more > a.more-trigger:hover{
+  color: var(--text-dark) !important;
+}
+
+/* Optional: subtle hover like language */
+.navbar-nav .nav-more > a.more-trigger:hover{
   background: rgba(31,122,58,.06) !important;
 }
 
-/* kill the underline bar under More on hover */
-.navbar-nav .nav-more > .more-trigger:hover::after{
-  /* ده للسهم، مش خط */
+/* 7) RTL: keep arrow spacing correct */
+html[dir="rtl"] .navbar-nav .nav-more > a.more-trigger{
+  gap: 8px !important;
 }
-.navbar-nav .nav-more > .more-trigger:hover{
-  /* no underline */
-}
-.navbar-nav .nav-more > .more-trigger::before,
-.navbar-nav .nav-more > .more-trigger::after{
-  /* leave only the arrow (we already control it above) */
-}
-.navbar-nav .nav-more > .more-trigger::after{
-  /* keep arrow */
-}
-.navbar-nav .nav-more > .more-trigger::after{
-  /* (intentional duplicate to win specificity in some setups) */
-}
-.navbar-nav .nav-more > .more-trigger:hover::after{
-  /* keep arrow only */
-}
-
-/* IMPORTANT: remove link underline for More only */
-.navbar-nav .nav-more > .more-trigger{
-  position: relative !important;
-}
-.navbar-nav .nav-more > .more-trigger::after{
-  /* arrow already set */
-}
-.navbar-nav .nav-more > .more-trigger::before{
-  content: none !important;
-}
-.navbar-nav .nav-more > .more-trigger::after{
-  /* keep */
-}
-.navbar-nav .nav-more > .more-trigger::after{
-  /* keep */
-}
-.navbar-nav .nav-more > .more-trigger::after{
-  /* keep */
-}
-/* the real underline element is a::after (green bar). Disable it for More */
-.navbar-nav .nav-more > a.more-trigger::after{
-  /* this targets underline in some CSS builds — disable it */
-}
-.navbar-nav .nav-more > a.more-trigger::after{
-  transform: none !important; /* safety */
-}
-.navbar-nav .nav-more > a.more-trigger:hover::after{
-  transform: none !important;
+html[dir="rtl"] .navbar-nav .nav-more > a.more-trigger::after{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
