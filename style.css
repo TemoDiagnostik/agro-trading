@@ -2553,7 +2553,7 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 
 /* 1) Smaller nav (desktop too) */
 .navbar-nav{
-  gap: 10px;                 /* كان 22 */
+  gap: 8px;                 /* كان 22 */
 }
 
 .navbar-nav a{
@@ -2563,8 +2563,8 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 
 /* optional: لو عايز أصغر كمان */
 @media (max-width: 1200px){
-  .navbar-nav{ gap: 12px; }
-  .navbar-nav a{ font-size: 12.5px; }
+  .navbar-nav{ gap: 10px; }
+  .navbar-nav a{ font-size: 11px; }
 }
 
 /* 2) Prevent layout jumping across languages:
