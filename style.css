@@ -2538,98 +2538,60 @@ nav{
   }
 }
 
-/* ===== RTL ===== */
-
-html[dir="rtl"] .more-menu{left:auto; right:0;}
-html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
-
-
-
-
 /* ===================================================
-   HEADER FIX — Stable layout + smaller nav + RTL stable
-   Paste at END of style.css (after everything)
+   HEADER PATCH — CLEAN (NO DUPLICATES)
+   Put this at END of style.css (replace your current chunk)
    =================================================== */
 
-/* 1) Smaller nav (desktop too) */
+/* 1) Smaller nav */
 .navbar-nav{
-  gap: 8px;                 /* كان 22 */
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+
+  /* hide scrollbars but keep scrolling */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.navbar-nav::-webkit-scrollbar{
+  display: none;
+  height: 0;
 }
 
 .navbar-nav a{
-  font-size: 12px;           /* كان 14/14.5 */
-  padding: 6px 2px;          /* كان 10px */
+  font-size: 12px;
+  padding: 6px 2px;
 }
 
-/* optional: لو عايز أصغر كمان */
 @media (max-width: 1200px){
   .navbar-nav{ gap: 10px; }
   .navbar-nav a{ font-size: 11px; }
 }
 
-/* 2) Prevent layout jumping across languages:
-      keep nav in one line, and if text gets long -> scroll */
-nav{
-  min-width: 0;
-}
-
-.navbar-nav{
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  padding-bottom: 6px;
-}
-
-
-
-/* 4) Fix "white / washed" language items */
+/* 2) Keep language menu readable (no washed white text) */
 .lang-menu{
   background: rgba(255,255,255,.98) !important;
 }
-
 .lang-menu button{
   color: var(--text-dark) !important;
   opacity: 1 !important;
 }
 
-/* Arabic inside language menu aligns right */
-html[dir="rtl"] .lang-menu button{
-  text-align: right;
-}
-
-/* 5) Keep language button ALWAYS on the right */
+/* 3) Keep language button at the far right */
 .lang{
   justify-self: end !important;
   margin-left: auto;
 }
 
-/* 6) Remove any old RTL rule that flips brand-wrap */
-html[dir="rtl"] .brand-wrap{
-  direction: ltr !important;  /* keep brand stable */
-}
-
-
-
-/* Hide the horizontal scrollbar for the nav (keep scroll working) */
-.navbar-nav{
-  -ms-overflow-style: none;      /* IE/Edge legacy */
-  scrollbar-width: none;         /* Firefox */
-}
-
-.navbar-nav::-webkit-scrollbar{
-  height: 0;                     /* Chrome/Safari */
-  display: none;
-}
-
-
-/* ===== RTL (Arabic) — keep HEADER layout fixed, only text RTL ===== */
+/* 4) RTL: keep HEADER layout fixed (do not flip), only text RTL */
 html[dir="rtl"] header,
 html[dir="rtl"] .container.nav{
-  direction: ltr; /* يمنع انقلاب الهيدر (brand | nav | lang) */
+  direction: ltr;
 }
 
-/* خلي اتجاه النص RTL داخل الناف والقوائم فقط */
+/* text direction RTL inside nav + dropdowns */
 html[dir="rtl"] nav,
 html[dir="rtl"] .navbar-nav,
 html[dir="rtl"] .more-menu,
@@ -2637,47 +2599,36 @@ html[dir="rtl"] .lang-menu{
   direction: rtl;
 }
 
-/* محاذاة الروابط عربي */
-html[dir="rtl"] .navbar-nav a{
+html[dir="rtl"] .navbar-nav a,
+html[dir="rtl"] .lang-menu button{
   text-align: right;
 }
 
-/* قائمة More تفتح يمين في RTL */
+/* More dropdown aligns to the right in RTL */
 html[dir="rtl"] .more-menu{
   left: auto;
   right: 0;
 }
 
-/* خط الهوفر/الأندرلاين يبدأ من اليمين في RTL */
+/* underline grows from right in RTL */
 html[dir="rtl"] .navbar-nav a::after{
   transform-origin: right;
 }
 
-
-
-
-/* ===== PATCH: Persistent green underline under ALL nav links ===== */
+/* 5) Persistent green underline under nav links */
 .navbar-nav a::after{
-  transform: scaleX(1) !important;   /* always visible */
+  transform: scaleX(1) !important;
   opacity: .95;
 }
-
 .navbar-nav a:hover::after{
   opacity: 1;
 }
 
-
-
-
-
-
-
-/* ===== PATCH: More in brand green ===== */
+/* 6) More in brand green */
 .more-trigger{
   color: var(--brand-green) !important;
   font-weight: 750;
 }
-
 .more-trigger::after{
   color: var(--brand-green) !important;
 }
