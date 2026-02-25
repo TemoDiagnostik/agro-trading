@@ -3004,3 +3004,36 @@ html[dir="rtl"] .lang-btn .chev{
   margin-left: 0 !important;
   margin-right: 6px !important;
 }
+
+
+
+
+/* ===================================================
+   NAV POSITION CONTROL (Numbered Layout System)
+   =================================================== */
+
+/* 1 = Brand
+   2 = Nav
+   3 = More
+   4 = Language
+*/
+
+.container.nav{
+  grid-template-columns: auto 1fr auto auto;
+}
+
+/* Nav position */
+nav{
+  grid-column: 2;
+}
+
+/* More position */
+.nav-more{
+  grid-column: 3;
+  align-self: center;
+}
+
+/* Language position */
+.lang{
+  grid-column: 4;
+}
