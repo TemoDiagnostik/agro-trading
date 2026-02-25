@@ -2605,9 +2605,9 @@ nav{
 
 /* 4) More style: black, clear, not too bold */
 .nav-more .more-trigger{
-  color:#111 !important;
-  font-weight:500 !important; /* لو عايز تخن: 600 */
-  font-size:12px !important;
+  color:#0a662f !important;
+  font-weight:400 !important; /* لو عايز تخن: 600 */
+  font-size:15px !important;
   text-decoration:none !important; /* بدون خط */
 }
 
@@ -2621,7 +2621,7 @@ nav{
   opacity:1 !important;
 
   color:#666 !important;
-  font-size:11px !important;
+  font-size:15px !important;
 }
 
 /* 5) Language same style as More (no box) */
@@ -2648,14 +2648,14 @@ nav{
   border-radius:0 !important;
 
   font-weight:500 !important; /* لو عايز تخن: 600 */
-  font-size:12px !important;
-  color:#111 !important;
+  font-size:10px !important;
+  color:#0a662f !important;
   letter-spacing:.2px !important;
 }
 
 .lang-btn .chev{
   color:#666 !important;
-  font-size:11px !important;
+  font-size:15px !important;
 }
 
 /* RTL small spacing fix (optional) */
