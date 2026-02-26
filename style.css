@@ -2768,3 +2768,42 @@ html[dir="rtl"] .lang{ gap:12px; }
   /* Dropdown مكانه مناسب على الهاتف */
   .more-menu{ right: 0; left: auto; }
 }
+/* ===================================================
+   MOBILE NAV TUNING (Final)
+   - يمنع قص آخر عنصر (Logistics)
+   - يجعل الـ nav scroll أفقي نظيف
+   - يقلل الزحمة على الهاتف
+   =================================================== */
+@media (max-width: 900px){
+
+  /* خلي nav ياخد عرض كامل + لا يقص المحتوى */
+  nav{ width:100%; }
+
+  .navbar-nav{
+    /* مهم: لا تخليه center على الهاتف، لأن center مع scroll يسبب قصّ الأطراف */
+    justify-content:flex-start !important;
+
+    /* Scroll أفقي */
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch;
+
+    /* مساحة جانبية تمنع قص أول/آخر عنصر */
+    padding:0 12px 4px !important;
+
+    /* تقليل الزحمة */
+    gap:14px !important;
+  }
+
+  .navbar-nav a{
+    font-size:12px !important;
+    padding:6px 0 !important;
+    white-space:nowrap;
+  }
+
+  /* لو لسه زحمة على شاشات أصغر جداً */
+  @media (max-width: 420px){
+    .navbar-nav{ gap:12px !important; }
+    .navbar-nav a{ font-size:11px !important; }
+  }
+}
