@@ -1122,11 +1122,13 @@ form label {
  text-align: center;
 }
 .content-box {
- background-color: rgba(255, 255, 255, 0.85);
- padding: 40px;
- border-radius: 12px;
- max-width: 900px;
- margin: auto;
+ background-color: rgba(255, 255, 255, 0.88);
+  padding: 35px 50px;
+  border-radius: 18px;
+  max-width: 760px;
+  margin: -40px auto 60px auto;  /* ← هذا هو الفرق */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
 }
 /* ???????? */
 @media (max-width: 768px) {
