@@ -1106,7 +1106,7 @@ form label {
 .about-bg {
   background-image: url('about-desktop.png');
   background-size: cover;
-  background-position: center 35%; /* ينزل الصورة لأسفل قليلاً */
+  background-position: center 45%; /* ينزل الصورة لأسفل قليلاً */
   min-height: 650px;               /* هذا هو المفتاح */
   display: flex;
   align-items: center;
