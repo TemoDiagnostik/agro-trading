@@ -304,7 +304,11 @@
 
   </div>
 </section>
-<!-- Scripts: translation loader -->
+
+
+
+
+  
 <script type="module">
   const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
   const RTL = new Set(['ar']);
@@ -313,23 +317,19 @@
     const url = new URLSearchParams(location.search).get('lang');
     if (url) return url.toLowerCase().split('-')[0];
     const saved = localStorage.getItem('lang');
-    if (saved) return saved.toLowerCase();
+    if (saved) return saved.toLowerCase().split('-')[0];
     const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
     return nav.toLowerCase().split('-')[0];
   }
 
   async function loadTranslations(lang){
-    try{
-      const res = await fetch(`i18n/${lang}.json?v=1`);
-      if(!res.ok) throw new Error('no translation file');
-      return await res.json();
-    }catch(e){
-      if(lang !== 'en'){
-        const res2 = await fetch(`i18n/en.json?v=1`);
-        return await res2.json();
-      }
-      return {};
-    }
+    const tryFetch = async (l) => {
+      const res = await fetch(`i18n/${l}.json?v=1`);
+      if(!res.ok) throw new Error('missing');
+      return res.json();
+    };
+    try { return await tryFetch(lang); }
+    catch(e){ return (lang !== 'en') ? await tryFetch('en') : {}; }
   }
 
   function applyTranslations(dict){
@@ -338,14 +338,12 @@
       if(dict && dict[key]) el.textContent = dict[key];
     });
 
-    // meta description support
     const meta = document.querySelector('meta[name="description"][data-i18n-content]');
     if(meta && dict){
       const k = meta.getAttribute('data-i18n-content');
       if(dict[k]) meta.setAttribute('content', dict[k]);
     }
 
-    // title support
     const t = document.querySelector('title[data-i18n]');
     if(t && dict){
       const k = t.getAttribute('data-i18n');
@@ -356,11 +354,8 @@
   function setDirAndFont(lang){
     document.documentElement.lang = lang;
     document.documentElement.dir = RTL.has(lang) ? 'rtl' : 'ltr';
-    if(lang === 'ar'){
-      document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
-    } else {
-      document.documentElement.style.fontFamily = "";
-    }
+    document.documentElement.style.fontFamily =
+      (lang === 'ar') ? "'Tajawal','Noto Sans Arabic',system-ui,sans-serif" : "";
   }
 
   function updateUrlLang(lang){
@@ -370,23 +365,32 @@
   }
 
   const langSelect = document.getElementById('langSelect');
+  if (!langSelect) {
+    console.warn('langSelect not found (id="langSelect").');
+  }
+
   let lang = detectLang();
   if(!SUPPORTED.includes(lang)) lang = 'en';
-  langSelect.value = lang;
+
   setDirAndFont(lang);
   updateUrlLang(lang);
-
   const dict = await loadTranslations(lang);
   applyTranslations(dict);
 
-  langSelect.addEventListener('change', async (e)=>{
-    const newLang = e.target.value;
-    localStorage.setItem('lang', newLang);
-    setDirAndFont(newLang);
-    updateUrlLang(newLang);
-    const d = await loadTranslations(newLang);
-    applyTranslations(d);
-  });
+  if (langSelect) {
+    // مهم: لو options values صح، ده هيظبط الاختيار
+    langSelect.value = lang;
+
+    langSelect.addEventListener('change', async (e)=>{
+      const newLang = e.target.value;
+      if(!SUPPORTED.includes(newLang)) return;
+      localStorage.setItem('lang', newLang);
+      setDirAndFont(newLang);
+      updateUrlLang(newLang);
+      const d = await loadTranslations(newLang);
+      applyTranslations(d);
+    });
+  }
 </script>
 
 </body>
