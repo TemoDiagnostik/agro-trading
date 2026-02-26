@@ -1866,6 +1866,11 @@ header{
   position: relative !important;
 }
 
+body{
+  padding-top: 120px; /* نفس ارتفاع الهيدر عندك تقريباً */
+}
+
+
 body.supplier-page .hero-bleed.supplier-hero{
   position: relative;
   width: 100%;
