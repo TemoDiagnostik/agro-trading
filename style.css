@@ -2833,3 +2833,88 @@ html[dir="rtl"] .lang{ gap:12px; }
   .navbar-nav{ gap:12px !important; }
   .navbar-nav a{ font-size:11px !important; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   SUPPLIER PAGE — DESKTOP NAV FIX
+   paste at VERY END of style.css
+   ============================== */
+
+/* اجعل الهيدر Flex مضبوط واسم الشركة ما يكسرش السطر */
+body.supplier-page header .container.nav{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+}
+
+/* Logo ثابت */
+body.supplier-page header .brand{ flex: 0 0 auto !important; }
+
+/* اسم الشركة: سطر واحد + قصّ بدل ما ينزل nav */
+body.supplier-page header .brand-text{
+  flex: 0 1 420px !important;   /* يتحكم في عرض العنوان */
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* خلي nav يتمدد وياخد المساحة */
+body.supplier-page header nav{
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+/* امنع لفّ عناصر الـ nav على ديسكتوب — واسمح بسكرول أفقي لو ضاقت */
+body.supplier-page header nav .navbar-nav{
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  gap: 14px !important;          /* قلل الـ gap لتفادي النزول */
+}
+
+/* اللانج ثابت يمين */
+body.supplier-page header .lang{ flex: 0 0 auto !important; }
+
+/* على شاشات لابتوب أضيق: اخفي tagline عشان يفضل nav فوق */
+@media (max-width: 1180px){
+  body.supplier-page header .brand-tagline,
+  body.supplier-page header .brand-sep{
+    display: none !important;
+  }
+  body.supplier-page header .brand-text{
+    flex-basis: 300px !important;
+  }
+}
