@@ -2256,24 +2256,64 @@ body.supplier-page header .lang{ flex: 0 0 auto !important; }
 
 
 /* ==============================
-   SUPPLIER PAGE — CLEAN MOBILE HEADER
+   SUPPLIER PAGE — MOBILE HEADER (ONE LINE)
    ============================== */
-
 @media (max-width: 768px){
 
+  /* خلي الهيدر نحيف + سطر واحد */
   body.supplier-page header{
-    height: 52px;
-    padding: 0;
+    padding: 6px 0 !important;
   }
 
   body.supplier-page header .container.nav{
-    padding: 6px 12px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;       /* <<< مهم: يمنع سطر تاني */
+    padding: 6px 10px !important;
   }
 
-  body.supplier-page{
-    padding-top: 52px;
+  /* اللوجو أصغر */
+  body.supplier-page header .brand img{
+    height: 30px !important;
   }
 
+  /* اسم الشركة: قصّ عشان يسيب مكان للـ nav */
+  body.supplier-page header .brand-text{
+    max-width: 42vw !important;
+    font-size: 16px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* nav داخل نفس السطر + سكرول أفقي لو ضاقت */
+  body.supplier-page header nav{
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  body.supplier-page header nav .navbar-nav{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.supplier-page header nav .navbar-nav a{
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 6px 8px !important;
+  }
+
+  /* اللغة ثابتة يمين */
+  body.supplier-page header .lang{
+    flex: 0 0 auto !important;
+  }
 }
 
 
