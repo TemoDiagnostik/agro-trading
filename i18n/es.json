@@ -10,7 +10,8 @@
   "nav.how": "Cómo trabajamos",
   "nav.about": "Acerca de",
   "nav.contact": "Contacto",
-
+"nav.more": "Plus",
+  
 "services.cta.rfq": "Solicitar RFQ",
   "services.cta.inspect": "Solicitar inspección",
   "services.cta.docs": "Solicitar revisión documental",
