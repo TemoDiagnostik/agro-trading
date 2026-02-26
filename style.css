@@ -2820,3 +2820,19 @@ html[dir="rtl"] .lang{ gap:12px; }
   }
 
 }
+@media (max-width: 900px){
+
+  /* Hint صغير يوضح إن في عناصر مخفية يمين/شمال */
+  nav{
+    position: relative;
+  }
+  nav::after{
+    content:"";
+    position:absolute;
+    top:0; right:0;
+    width:28px; height:100%;
+    pointer-events:none;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+
+}
