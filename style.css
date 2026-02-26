@@ -1126,7 +1126,7 @@ form label {
   padding: 35px 50px;
   border-radius: 18px;
   max-width: 760px;
-  margin: -40px auto 60px auto;  /* ← هذا هو الفرق */
+  margin: -80px auto 80px auto;  /* ← هذا هو الفرق */
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   backdrop-filter: blur(6px);
 }
