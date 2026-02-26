@@ -10,7 +10,8 @@
   "nav.how": "كيف نعمل",
   "nav.about": "من نحن",
   "nav.contact": "اتصل بنا",
-
+"nav.more": "المزيد",
+  
  "services.cta.rfq": "إرسال طلب عرض سعر",
   "services.cta.inspect": "طلب فحص",
   "services.cta.docs": "طلب مراجعة المستندات",
