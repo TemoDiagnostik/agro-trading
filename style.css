@@ -1107,7 +1107,7 @@ form label {
  background-image: url('about-desktop.png');
  background-size: cover;
  background-position: center;
- padding: 80px 20px;
+ padding: 120px 20px;   /* زودنا المساحة لإظهار الخلفية */
  text-align: center;
 }
 .about-note {
