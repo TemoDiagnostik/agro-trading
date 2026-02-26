@@ -2660,3 +2660,50 @@ nav{
 
 /* RTL small spacing fix (optional) */
 html[dir="rtl"] .lang{ gap:12px; }
+
+/* ===================================================
+   EU POLISH (Corporate)
+   - Calm typography
+   - Clear hierarchy (Nav primary / Utilities secondary)
+   - Clean spacing and hover
+   =================================================== */
+
+/* Utilities spacing (More + Language) */
+.lang{
+  gap: 14px;                 /* مسافة أوروبية مريحة */
+}
+
+/* More = utility (not primary nav) */
+.nav-more .more-trigger{
+  color: rgba(31,42,55,.78) !important;  /* هادئ */
+  font-weight: 550 !important;           /* متوسط (مش تخين) */
+  letter-spacing: .2px;
+}
+
+/* More hover = brand accent */
+.nav-more .more-trigger:hover{
+  color: var(--brand-green) !important;
+}
+
+/* Arrow tone */
+.nav-more .more-trigger::after{
+  color: rgba(31,42,55,.55) !important;
+}
+
+/* Language = same utility tone */
+.lang-btn{
+  color: rgba(31,42,55,.78) !important;
+  font-weight: 550 !important;           /* لو تحب أثخن: 600 */
+  letter-spacing: .2px;
+}
+
+/* Language hover = brand accent */
+.lang-btn:hover .lang-code,
+.lang-btn:hover{
+  color: var(--brand-green) !important;
+}
+
+/* Chevron tone */
+.lang-btn .chev{
+  color: rgba(31,42,55,.55) !important;
+}
