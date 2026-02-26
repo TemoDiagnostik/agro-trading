@@ -2807,3 +2807,16 @@ html[dir="rtl"] .lang{ gap:12px; }
     .navbar-nav a{ font-size:11px !important; }
   }
 }
+@media (max-width: 900px){
+
+  /* مهم جدًا */
+  .navbar-nav{
+    padding-right: 24px !important;  /* يمنع قص آخر عنصر */
+  }
+
+  /* يمنع أي قص خفي */
+  .navbar-nav li:last-child{
+    margin-right: 16px !important;
+  }
+
+}
