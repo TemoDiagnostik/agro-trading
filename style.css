@@ -2491,11 +2491,7 @@ nav{justify-self:center;min-width:0;}
 }
 .lang-menu button:hover{background:rgba(31,122,58,.08);}
 
-/* Responsive */
-@media (max-width:1100px){
-  .brand-text{max-width:420px;}
-  .brand-tagline,.brand-sep{display:none;}
-}
+.brand-wrap
 
 @media (max-width:1200px){
   .navbar-nav{gap:10px;}
@@ -2525,13 +2521,8 @@ html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
   overflow: visible !important;     /* desktop: dropdown visible */
 }
 
-/* keep horizontal scroll only on small screens */
-@media (max-width: 900px){
-  .navbar-nav{
-    overflow-x: auto !important;
-    overflow-y: visible !important; /* best effort */
-  }
-}
+
+
 
 /* ensure dropdown sits above */
 .nav-more{ position: relative; z-index: 2000; }
@@ -2711,13 +2702,7 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 
 
-/* ===================================================
-   MOBILE FIX (بدون تغيير HTML)
-   - صف 1: Brand (Logo + Company name) في المنتصف
-   - صف 2: Nav قابل للـ scroll
-   - صف 3: More + EN جنب بعض ومحترمين
-   =================================================== */
-
+/* ===== MOBILE HEADER (<= 900px) — ONE VERSION ONLY ===== */
 @media (max-width: 900px){
 
   /* نحول الهيدر Grid واضح 3 صفوف */
@@ -2734,7 +2719,7 @@ html[dir="rtl"] .lang{ gap:12px; }
 
   /* --- Row 1: Brand --- */
   .brand-wrap{
-    grid-column: 1 / -1;   /* ياخد العرض كله */
+    grid-column: 1 / -1;
     grid-row: 1;
     justify-content: center;
   }
@@ -2742,11 +2727,11 @@ html[dir="rtl"] .lang{ gap:12px; }
   /* تصغير اللوجو لمنع التداخل */
   .logo-img{ height: 54px; }
 
-  /* خفّف النص قليلاً ليظهر اسم الشركة بوضوح */
+  /* خفّف النص ليظهر اسم الشركة بوضوح */
   .brand-text{ max-width: 100%; }
   .brand-name{ font-size: 16px; }
 
-  /* يمكن إخفاء الشعار الصغير فقط لتقليل الزحمة */
+  /* تقليل الزحمة على الهاتف */
   .brand-tagline,
   .brand-sep{ display: none; }
 
@@ -2761,26 +2746,25 @@ html[dir="rtl"] .lang{ gap:12px; }
   .navbar-nav{
     justify-content: flex-start;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: 4px;
   }
 
-  /* --- Row 3: Actions (More + Lang) --- */
+  /* --- Row 3: Actions (More + EN) --- */
   .nav-more{
-    grid-column: 2;  /* في النص */
+    grid-column: 2;
     grid-row: 3;
     justify-self: center;
+    margin-right: 14px;
   }
 
   .lang{
-    grid-column: 3;  /* بجانب More */
+    grid-column: 3;
     grid-row: 3;
     justify-self: center;
     margin-left: 0 !important;
   }
 
-  /* مسافة بسيطة بين More و EN */
-  .nav-more{ margin-right: 14px; }
-
-  /* مهم: لا تسمح لـ More menu أنه يقطع الشاشة */
+  /* Dropdown مكانه مناسب على الهاتف */
   .more-menu{ right: 0; left: auto; }
 }
