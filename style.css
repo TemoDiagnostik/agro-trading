@@ -2200,6 +2200,144 @@ body.supplier-page .supplier-note{
 
 
 
+/* ==============================
+   SUPPLIER PAGE — DESKTOP NAV FIX
+   paste at VERY END of style.css
+   ============================== */
+
+/* اجعل الهيدر Flex مضبوط واسم الشركة ما يكسرش السطر */
+body.supplier-page header .container.nav{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+}
+
+/* Logo ثابت */
+body.supplier-page header .brand{ flex: 0 0 auto !important; }
+
+/* اسم الشركة: سطر واحد + قصّ بدل ما ينزل nav */
+body.supplier-page header .brand-text{
+  flex: 0 1 420px !important;   /* يتحكم في عرض العنوان */
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* خلي nav يتمدد وياخد المساحة */
+body.supplier-page header nav{
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+/* امنع لفّ عناصر الـ nav على ديسكتوب — واسمح بسكرول أفقي لو ضاقت */
+body.supplier-page header nav .navbar-nav{
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  gap: 14px !important;          /* قلل الـ gap لتفادي النزول */
+}
+
+/* اللانج ثابت يمين */
+body.supplier-page header .lang{ flex: 0 0 auto !important; }
+
+/* على شاشات لابتوب أضيق: اخفي tagline عشان يفضل nav فوق */
+@media (max-width: 1180px){
+  body.supplier-page header .brand-tagline,
+  body.supplier-page header .brand-sep{
+    display: none !important;
+  }
+  body.supplier-page header .brand-text{
+    flex-basis: 300px !important;
+  }
+}
+
+
+/* ==============================
+   SUPPLIER PAGE — MOBILE HEADER FIX
+   paste at VERY END of style.css
+   ============================== */
+
+@media (max-width: 768px){
+
+  /* padding-top مناسب لهيدر الموبايل */
+  body.supplier-page{
+    padding-top: 88px !important;
+  }
+
+  /* الهيدر يلفّ صفّين */
+  body.supplier-page header .container.nav{
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* اخفاء tagline/الفاصل لو موجود */
+  body.supplier-page header .brand-tagline,
+  body.supplier-page header .brand-sep{
+    display: none !important;
+  }
+
+  /* الشعار */
+  body.supplier-page header .brand{
+    order: 1 !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* اسم الشركة: صغير + قصّ */
+  body.supplier-page header .brand-text{
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    max-width: 55vw !important;
+    font-size: 16px !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* زر اللغة يمين */
+  body.supplier-page header .lang{
+    order: 2 !important;
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* nav ينزل سطر لوحده */
+  body.supplier-page header nav{
+    order: 3 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* nav: سطر واحد + سكرول أفقي */
+  body.supplier-page header nav .navbar-nav{
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px !important;
+    padding: 6px 2px 4px !important;
+  }
+
+  /* روابط nav أصغر */
+  body.supplier-page header nav .navbar-nav a{
+    font-size: 13px !important;
+    padding: 8px 10px !important;
+    white-space: nowrap !important;
+  }
+}
+
+
+
+
+
+
+
+
 .payment-section .payment-text,
 .payment-section .payment-disclaimer,
 .payment-section .payment-note{
@@ -2866,55 +3004,3 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 
 
-/* ==============================
-   SUPPLIER PAGE — DESKTOP NAV FIX
-   paste at VERY END of style.css
-   ============================== */
-
-/* اجعل الهيدر Flex مضبوط واسم الشركة ما يكسرش السطر */
-body.supplier-page header .container.nav{
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 14px !important;
-}
-
-/* Logo ثابت */
-body.supplier-page header .brand{ flex: 0 0 auto !important; }
-
-/* اسم الشركة: سطر واحد + قصّ بدل ما ينزل nav */
-body.supplier-page header .brand-text{
-  flex: 0 1 420px !important;   /* يتحكم في عرض العنوان */
-  min-width: 0 !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-/* خلي nav يتمدد وياخد المساحة */
-body.supplier-page header nav{
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-}
-
-/* امنع لفّ عناصر الـ nav على ديسكتوب — واسمح بسكرول أفقي لو ضاقت */
-body.supplier-page header nav .navbar-nav{
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch;
-  gap: 14px !important;          /* قلل الـ gap لتفادي النزول */
-}
-
-/* اللانج ثابت يمين */
-body.supplier-page header .lang{ flex: 0 0 auto !important; }
-
-/* على شاشات لابتوب أضيق: اخفي tagline عشان يفضل nav فوق */
-@media (max-width: 1180px){
-  body.supplier-page header .brand-tagline,
-  body.supplier-page header .brand-sep{
-    display: none !important;
-  }
-  body.supplier-page header .brand-text{
-    flex-basis: 300px !important;
-  }
-}
