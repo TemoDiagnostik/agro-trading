@@ -1104,11 +1104,15 @@ form label {
 }
 /* ===== ABOUT SECTION ===== */
 .about-bg {
- background-image: url('about-desktop.png');
- background-size: cover;
- background-position: center;
- padding: 120px 20px;   /* زودنا المساحة لإظهار الخلفية */
- text-align: center;
+  background-image: url('about-desktop.png');
+  background-size: cover;
+  background-position: center 35%; /* ينزل الصورة لأسفل قليلاً */
+  min-height: 650px;               /* هذا هو المفتاح */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
 }
 .about-note {
  font-size: 0.9rem;
