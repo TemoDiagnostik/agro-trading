@@ -2768,30 +2768,28 @@ html[dir="rtl"] .lang{ gap:12px; }
   /* Dropdown مكانه مناسب على الهاتف */
   .more-menu{ right: 0; left: auto; }
 }
+
+
+
+
+
 /* ===================================================
-   MOBILE NAV TUNING (Final)
-   - يمنع قص آخر عنصر (Logistics)
-   - يجعل الـ nav scroll أفقي نظيف
-   - يقلل الزحمة على الهاتف
+   MOBILE NAV TUNING (Final - Clean)
    =================================================== */
+
 @media (max-width: 900px){
 
-  /* خلي nav ياخد عرض كامل + لا يقص المحتوى */
-  nav{ width:100%; }
+  nav{ width:100%; position:relative; }
 
   .navbar-nav{
-    /* مهم: لا تخليه center على الهاتف، لأن center مع scroll يسبب قصّ الأطراف */
     justify-content:flex-start !important;
 
-    /* Scroll أفقي */
     overflow-x:auto !important;
     overflow-y:hidden !important;
     -webkit-overflow-scrolling:touch;
 
-    /* مساحة جانبية تمنع قص أول/آخر عنصر */
     padding:0 12px 4px !important;
 
-    /* تقليل الزحمة */
     gap:14px !important;
   }
 
@@ -2801,31 +2799,11 @@ html[dir="rtl"] .lang{ gap:12px; }
     white-space:nowrap;
   }
 
-  /* لو لسه زحمة على شاشات أصغر جداً */
-  @media (max-width: 420px){
-    .navbar-nav{ gap:12px !important; }
-    .navbar-nav a{ font-size:11px !important; }
-  }
-}
-@media (max-width: 900px){
-
-  /* مهم جدًا */
-  .navbar-nav{
-    padding-right: 24px !important;  /* يمنع قص آخر عنصر */
-  }
-
-  /* يمنع أي قص خفي */
-  .navbar-nav li:last-child{
-    margin-right: 16px !important;
-  }
-
-}
-@media (max-width: 900px){
+  /* يمنع قص آخر عنصر */
+  .navbar-nav{ padding-right:24px !important; }
+  .navbar-nav li:last-child{ margin-right:16px !important; }
 
   /* Hint صغير يوضح إن في عناصر مخفية يمين/شمال */
-  nav{
-    position: relative;
-  }
   nav::after{
     content:"";
     position:absolute;
@@ -2834,5 +2812,9 @@ html[dir="rtl"] .lang{ gap:12px; }
     pointer-events:none;
     background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
   }
+}
 
+@media (max-width: 420px){
+  .navbar-nav{ gap:12px !important; }
+  .navbar-nav a{ font-size:11px !important; }
 }
