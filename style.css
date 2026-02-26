@@ -2332,7 +2332,43 @@ body.supplier-page header .lang{ flex: 0 0 auto !important; }
 }
 
 
+/* ==============================
+   SUPPLIER PAGE — MOBILE HEADER COMPACT
+   ============================== */
 
+@media (max-width: 768px){
+
+  /* نقلل ارتفاع الهيدر نفسه */
+  body.supplier-page header{
+    padding: 6px 0 !important;
+  }
+
+  body.supplier-page header .container.nav{
+    padding: 6px 10px !important;
+    gap: 6px !important;
+  }
+
+  /* اللوجو أصغر */
+  body.supplier-page header .brand img{
+    height: 32px !important;
+  }
+
+  /* اسم الشركة أصغر */
+  body.supplier-page header .brand-text{
+    font-size: 15px !important;
+  }
+
+  /* nav أصغر */
+  body.supplier-page header nav .navbar-nav a{
+    font-size: 12px !important;
+    padding: 6px 8px !important;
+  }
+
+  /* عدل المسافة فوق الصفحة حسب الارتفاع الجديد */
+  body.supplier-page{
+    padding-top: 70px !important; /* كان 88 */
+  }
+}
 
 
 
