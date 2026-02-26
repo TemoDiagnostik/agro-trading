@@ -2711,58 +2711,76 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 
 
-/* ===============================
-   MOBILE HEADER – KEEP FULL BRAND
-   =============================== */
+/* ===================================================
+   MOBILE FIX (بدون تغيير HTML)
+   - صف 1: Brand (Logo + Company name) في المنتصف
+   - صف 2: Nav قابل للـ scroll
+   - صف 3: More + EN جنب بعض ومحترمين
+   =================================================== */
+
 @media (max-width: 900px){
 
+  /* نحول الهيدر Grid واضح 3 صفوف */
   .container.nav{
-    height:auto;
-    padding:10px 14px;
-    row-gap:8px;
-    grid-template-columns: 1fr;
+    height: auto;
+    padding: 10px 14px;
+    row-gap: 8px;
+
+    /* 4 أعمدة: نستخدم الوسط لـ More و EN */
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
   }
 
-  /* ترتيب العناصر عمودياً */
+  /* --- Row 1: Brand --- */
   .brand-wrap{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-wrap:wrap;
+    grid-column: 1 / -1;   /* ياخد العرض كله */
+    grid-row: 1;
+    justify-content: center;
   }
 
-  /* تصغير اللوجو قليلاً فقط */
-  .logo-img{
-    height:48px;
-  }
+  /* تصغير اللوجو لمنع التداخل */
+  .logo-img{ height: 54px; }
 
-  /* تصغير النص قليلاً بدون إخفاء */
-  .brand-name{
-    font-size:15px;
-  }
+  /* خفّف النص قليلاً ليظهر اسم الشركة بوضوح */
+  .brand-text{ max-width: 100%; }
+  .brand-name{ font-size: 16px; }
 
-  .brand-tagline{
-    font-size:12px;
-  }
+  /* يمكن إخفاء الشعار الصغير فقط لتقليل الزحمة */
+  .brand-tagline,
+  .brand-sep{ display: none; }
 
-  /* الناف ينزل سطر مستقل */
+  /* --- Row 2: Nav --- */
   nav{
-    margin-top:6px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: stretch;
+    min-width: 0;
   }
 
   .navbar-nav{
-    justify-content:flex-start;
-    overflow-x:auto;
-    padding-bottom:4px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
   }
 
-  .navbar-nav a{
-    font-size:12px;
+  /* --- Row 3: Actions (More + Lang) --- */
+  .nav-more{
+    grid-column: 2;  /* في النص */
+    grid-row: 3;
+    justify-self: center;
   }
 
-  /* More + EN يبقوا يمين */
-  .nav-more,
   .lang{
-    margin-left:auto;
+    grid-column: 3;  /* بجانب More */
+    grid-row: 3;
+    justify-self: center;
+    margin-left: 0 !important;
   }
+
+  /* مسافة بسيطة بين More و EN */
+  .nav-more{ margin-right: 14px; }
+
+  /* مهم: لا تسمح لـ More menu أنه يقطع الشاشة */
+  .more-menu{ right: 0; left: auto; }
 }
