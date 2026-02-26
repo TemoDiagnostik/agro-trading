@@ -2320,6 +2320,73 @@ body.supplier-page header .lang{ flex: 0 0 auto !important; }
 
 
 
+
+
+/* ==============================
+   SUPPLIER HEADER — DESKTOP PRO LAYOUT
+   ============================== */
+
+body.supplier-page header .container.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* left: logo + name */
+body.supplier-page .brand-wrap{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  min-width: 260px; /* يمنع تكسير البراند */
+}
+
+/* center: nav takes remaining space and centers */
+body.supplier-page header nav{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+body.supplier-page .navbar-nav{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* right: language fixed */
+body.supplier-page .lang-flags{
+  flex: 0 0 auto;
+  margin-left: auto; /* يضمن يمين */
+}
+
+/* keep nav links clean */
+body.supplier-page .navbar-nav a{
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 8px 10px;
+}
+
+/* prevent wrapping on desktop */
+@media (min-width: 992px){
+  body.supplier-page header .container.nav{
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+
+
+
+
+
 .payment-section .payment-text,
 .payment-section .payment-disclaimer,
 .payment-section .payment-note{
