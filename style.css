@@ -2711,65 +2711,58 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 
 
-/* ===================================================
-   MOBILE HEADER FIX
-   - يمنع التراكب على الهاتف
-   - يجعل الهيدر صفوف واضحة
-   =================================================== */
-
-/* Desktop layout: Brand | Nav | Actions */
-.container.nav{
-  grid-template-columns: auto 1fr auto; /* brand | nav | actions */
-}
-
-/* Actions container (More + Language جنب بعض) */
-.nav-actions{
-  justify-self: end;
-  display: inline-flex;
-  align-items: center;
-  gap: 16px; /* المسافة بين More و EN */
-}
-
-/* ----- Mobile ----- */
+/* ===============================
+   MOBILE HEADER – KEEP FULL BRAND
+   =============================== */
 @media (max-width: 900px){
 
-  /* الهيدر يصبح على صفوف بدل الزحمة */
   .container.nav{
-    height: auto;
-    padding: 10px 14px;
-    row-gap: 8px;
+    height:auto;
+    padding:10px 14px;
+    row-gap:8px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
   }
 
-  /* brand أعلى */
+  /* ترتيب العناصر عمودياً */
   .brand-wrap{
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
   }
 
-  /* nav في المنتصف (Scrollable) */
-  nav{
-    justify-self: stretch;
-  }
-  .navbar-nav{
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 4px;
-  }
-
-  /* actions (More + EN) تحت وبشكل مرتب */
-  .nav-actions{
-    justify-self: center;
-  }
-
-  /* تقليل حجم اللوجو على الهاتف (اختياري لكن مهم لمنع التداخل) */
+  /* تصغير اللوجو قليلاً فقط */
   .logo-img{
-    height: 54px;
+    height:48px;
   }
 
-  /* إخفاء tagline على الهاتف لتقليل الزحمة */
-  .brand-tagline,
-  .brand-sep{
-    display: none;
+  /* تصغير النص قليلاً بدون إخفاء */
+  .brand-name{
+    font-size:15px;
+  }
+
+  .brand-tagline{
+    font-size:12px;
+  }
+
+  /* الناف ينزل سطر مستقل */
+  nav{
+    margin-top:6px;
+  }
+
+  .navbar-nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    padding-bottom:4px;
+  }
+
+  .navbar-nav a{
+    font-size:12px;
+  }
+
+  /* More + EN يبقوا يمين */
+  .nav-more,
+  .lang{
+    margin-left:auto;
   }
 }
