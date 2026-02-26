@@ -80,17 +80,21 @@
 <header>
   <div class="container nav" role="navigation" aria-label="Primary">
 
-    <div class="brand">
-      <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+    <!-- Brand (Logo + Company name) -->
+    <div class="brand-wrap">
+      <div class="brand">
+        <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+      </div>
+
+      <div class="brand-text">
+        <span class="brand-name">Euro Agri Trading s.r.o</span>
+        <span class="brand-sep">—</span>
+        <span class="brand-tagline" data-i18n="brand.tagline">EU Fertilizer Sourcing Agency</span>
+      </div>
     </div>
 
-    <div class="brand-text">
-      <span class="brand-name">Euro Agri Trading s.r.o</span>
-      <span class="brand-sep">—</span>
-      <span class="brand-tagline" data-i18n="brand.tagline">EU Fertilizer Sourcing Agency</span>
-    </div>
-
-    <nav>
+    <!-- Navigation (Supplier page: short) -->
+    <nav aria-label="Primary Navigation">
       <ul class="navbar-nav">
         <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
         <li><a href="supplier-network.html" class="active" data-i18n="nav.suppliers">Supplier Network</a></li>
@@ -98,9 +102,19 @@
       </ul>
     </nav>
 
-    <div class="lang" aria-label="Language selector">
-  
-      <select id="langSelect" title="Language">
+    <!-- NO "More" on supplier page (keep it simple) -->
+
+    <!-- Language (same component as main header) -->
+    <div class="lang lang-flags" aria-label="Language selector">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
+        <span class="lang-code" aria-hidden="true">EN</span>
+        <span class="chev">▾</span>
+      </button>
+
+      <ul class="lang-menu" role="menu" aria-label="Languages"></ul>
+
+      <!-- keep select for JS (hidden like main) -->
+      <select id="langSelect" title="Language" hidden>
         <option value="en">English</option>
         <option value="ar">العربية</option>
         <option value="cs">Čeština</option>
@@ -118,8 +132,8 @@
         <option value="da">Dansk</option>
         <option value="sv">Svenska</option>
         <option value="fi">Suomi</option>
-        <option value="sk">Slovenčina</option>
         <option value="sl">Slovenščina</option>
+        <option value="sk">Slovenčina</option>
         <option value="hr">Hrvatski</option>
         <option value="sr">Srpski</option>
         <option value="tr">Türkçe</option>
@@ -128,7 +142,6 @@
 
   </div>
 </header>
-
 <!-- HERO (Supplier Network) -->
 <section id="supplier-home" class="supplier-hero hero-bleed">
   <div class="hero-overlay" aria-hidden="true"></div>
