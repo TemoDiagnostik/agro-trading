@@ -1861,6 +1861,11 @@ form label {
    Paste at END of style.css
    ============================== */
 
+
+header{
+  position: relative !important;
+}
+
 body.supplier-page .hero-bleed.supplier-hero{
   position: relative;
   width: 100%;
