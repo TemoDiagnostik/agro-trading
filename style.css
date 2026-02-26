@@ -1867,7 +1867,12 @@ header{
 }
 
 body{
-  padding-top: 120px; /* نفس ارتفاع الهيدر عندك تقريباً */
+  padding-top: 0 !important;
+}
+
+/* ولو تريدها فقط لصفحة الموردين (أكثر أماناً) */
+body.supplier-page{
+  padding-top: 0 !important;
 }
 
 
