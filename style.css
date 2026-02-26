@@ -2366,7 +2366,7 @@ body.supplier-page header .lang{ flex: 0 0 auto !important; }
 
   /* عدل المسافة فوق الصفحة حسب الارتفاع الجديد */
   body.supplier-page{
-    padding-top: 70px !important; /* كان 88 */
+    padding-top: 54px !important; /* كان 88 */
   }
 }
 
