@@ -2561,27 +2561,7 @@ body.supplier-onboarding input[type="file"]{
   background: #f8fafc;
 }
 
-body.supplier-onboarding .onb-check{
-  margin-top: 10px;
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;      /* ✅ بدل flex-start */
-  font-weight: 750;
-  color: rgba(31,42,55,.88);
-  line-height: 1.4;
-}
 
-body.supplier-onboarding .onb-check input[type="checkbox"]{
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  flex: 0 0 auto;
-  transform: none !important;
-}
-
-body.supplier-onboarding .onb-check span{
-  flex: 1 1 auto;
-}
 
 body.supplier-onboarding .onb-note{
   margin: 10px 0 0;
@@ -2643,16 +2623,6 @@ body.supplier-onboarding .supplier-onb-secure{
    SUPPLIER ONBOARDING
    ========================= */
 
-body.supplier-onboarding .onb-check{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  margin:14px 0;
-  font-weight:600;
-  line-height:1.5;
-}
-
-
 
 body.supplier-onboarding .supplier-onb-actions{
   margin-top:18px;
@@ -2684,6 +2654,45 @@ body.supplier-onboarding .supplier-onb-actions .btn{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== SUPPLIER ONBOARDING: CHECKBOX INLINE FIX (FINAL) ===== */
+body.supplier-onboarding .onb-check{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 14px 0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Hard override: protects against global input{width:100%; display:block;} */
+body.supplier-onboarding .onb-check input[type="checkbox"]{
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px !important;
+  display: inline-block !important;
+  margin: 3px 0 0 !important;
+  padding: 0 !important;
+  max-width: 18px !important;
+}
+
+/* Text stays beside checkbox */
+body.supplier-onboarding .onb-check span{
+  display: block;
+  flex: 1 1 auto;
+}
 
 
 
