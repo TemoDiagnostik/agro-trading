@@ -2627,6 +2627,36 @@ body.supplier-onboarding .supplier-onb-secure{
 
 
 
+/* ===== FIX CHECKBOX ALIGNMENT DEFINITIVE ===== */
+
+body.supplier-onboarding .onb-check{
+  display: flex;
+  align-items: center;       /* محاذاة رأسية صحيحة */
+  gap: 10px;
+  margin: 14px 0;
+  font-weight: 750;
+  color: rgba(31,42,55,.88);
+  line-height: 1.45;
+  width: 100%;               /* يمنع انكماشه داخل grid */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
