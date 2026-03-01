@@ -2639,30 +2639,28 @@ body.supplier-onboarding .supplier-onb-secure{
 
 
 
-/* ===== FIX CHECKBOX ALIGNMENT DEFINITIVE ===== */
-
-body.supplier-onboarding .onb-check{
-  display: flex;
-  align-items: center;       /* محاذاة رأسية صحيحة */
-  gap: 10px;
-  margin: 14px 0;
-  font-weight: 750;
-  color: rgba(31,42,55,.88);
-  line-height: 1.45;
-  width: 100%;               /* يمنع انكماشه داخل grid */
-}
-
-body.supplier-onboarding .onb-check input[type="checkbox"]{
+/* ===== HARD RESET for checkboxes inside supplier onboarding ===== */
+body.supplier-onboarding input[type="checkbox"]{
+  all: revert;
   width: 18px;
   height: 18px;
   margin: 0;
-  flex-shrink: 0;            /* يمنع تحركه */
-  position: relative;
-  top: 1px;
+  position: static !important;
+  transform: none !important;
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+}
+
+body.supplier-onboarding .onb-check{
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 12px 0 !important;
+  width: 100% !important;
 }
 
 body.supplier-onboarding .onb-check span{
-  display: inline-block;
+  display: inline-block !important;
 }
 
 
