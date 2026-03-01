@@ -2771,22 +2771,17 @@ body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
    =============================== */
 
 #supplierJoinBtn{
-  background: #1e5aaf;          /* Dark navy */
+  background: #6b7075;          /* Dark navy */
   color: #ffffff;
   border: 2px solid #d4af37;    /* Gold accent */
   transition: all .25s ease;
 }
 
 #supplierJoinBtn:hover{
-  background: #111827;
+  background: #0F6B4A;
   border-color: #f0c94a;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
-}
-
-#supplierJoinBtn:active{
-  transform: translateY(0);
-  box-shadow: none;
 }
 .payment-section .payment-text,
 .payment-section .payment-disclaimer,
