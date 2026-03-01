@@ -2700,6 +2700,94 @@ body.supplier-page.supplier-onboarding label.onb-check > span{
 
 
 
+
+
+
+
+
+
+
+
+/* ===============================
+   Custom Checkbox – Red when checked
+   =============================== */
+
+body.supplier-onboarding .onb-check input[type="checkbox"]{
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all .2s ease;
+  background: #fff;
+}
+
+/* Checked state */
+body.supplier-onboarding .onb-check input[type="checkbox"]:checked{
+  background: #dc2626;       /* Red */
+  border-color: #dc2626;
+}
+
+/* Checkmark */
+body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
+  content: "✓";
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   HERO – Become Supplier Button
+   =============================== */
+
+#supplierJoinBtn{
+  background: #1f2937;          /* Dark navy */
+  color: #ffffff;
+  border: 2px solid #d4af37;    /* Gold accent */
+  transition: all .25s ease;
+}
+
+#supplierJoinBtn:hover{
+  background: #111827;
+  border-color: #f0c94a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+#supplierJoinBtn:active{
+  transform: translateY(0);
+  box-shadow: none;
+}
 .payment-section .payment-text,
 .payment-section .payment-disclaimer,
 .payment-section .payment-note{
