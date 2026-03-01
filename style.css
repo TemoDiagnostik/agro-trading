@@ -2576,7 +2576,7 @@ body.supplier-onboarding .onb-check input[type="checkbox"]{
   height: 18px;
   margin: 0;
   flex: 0 0 auto;
-  transform: translateY(1px);
+  transform: none !important;
 }
 
 body.supplier-onboarding .onb-check span{
@@ -2652,9 +2652,7 @@ body.supplier-onboarding .onb-check{
   line-height:1.5;
 }
 
-body.supplier-onboarding .onb-check input{
-  margin-top:3px;
-}
+
 
 body.supplier-onboarding .supplier-onb-actions{
   margin-top:18px;
