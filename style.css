@@ -2639,32 +2639,41 @@ body.supplier-onboarding .supplier-onb-secure{
 
 
 
-/* ===== HARD RESET for checkboxes inside supplier onboarding ===== */
-body.supplier-onboarding input[type="checkbox"]{
-  all: revert;
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  position: static !important;
-  transform: none !important;
-  appearance: auto !important;
-  -webkit-appearance: auto !important;
-}
+/* =========================
+   SUPPLIER ONBOARDING
+   ========================= */
 
 body.supplier-onboarding .onb-check{
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  margin: 12px 0 !important;
-  width: 100% !important;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:14px 0;
+  font-weight:600;
+  line-height:1.5;
 }
 
-body.supplier-onboarding .onb-check span{
-  display: inline-block !important;
+body.supplier-onboarding .onb-check input{
+  margin-top:3px;
 }
 
+body.supplier-onboarding .supplier-onb-actions{
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
+body.supplier-onboarding .supplier-onb-actions .btn{
+  min-width:220px;
+  text-align:center;
+}
 
+@media (max-width:768px){
+  body.supplier-onboarding .supplier-onb-actions .btn{
+    width:100%;
+    min-width:0;
+  }
+}
 
 
 
