@@ -2726,8 +2726,8 @@ body.supplier-onboarding .onb-check input[type="checkbox"]{
 
 /* Checked state */
 body.supplier-onboarding .onb-check input[type="checkbox"]:checked{
-  background: #dc2626;       /* Red */
-  border-color: #dc2626;
+  background: #18b33f;       /* Red */
+  border-color: #23740c;
 }
 
 /* Checkmark */
@@ -2771,7 +2771,7 @@ body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
    =============================== */
 
 #supplierJoinBtn{
-  background: #1f2937;          /* Dark navy */
+  background: #1e5aaf;          /* Dark navy */
   color: #ffffff;
   border: 2px solid #d4af37;    /* Gold accent */
   transition: all .25s ease;
