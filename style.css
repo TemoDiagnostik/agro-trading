@@ -2657,43 +2657,34 @@ body.supplier-onboarding .supplier-onb-actions .btn{
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* ===== SUPPLIER ONBOARDING: CHECKBOX INLINE FIX (FINAL) ===== */
-body.supplier-onboarding .onb-check{
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin: 14px 0;
-  font-weight: 600;
-  line-height: 1.5;
+/* ===== FINAL FIX: checkbox beside text (strong) ===== */
+body.supplier-page.supplier-onboarding label.onb-check{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  margin: 14px 0 !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
 }
 
-/* Hard override: protects against global input{width:100%; display:block;} */
-body.supplier-onboarding .onb-check input[type="checkbox"]{
+body.supplier-page.supplier-onboarding label.onb-check > input[type="checkbox"]{
+  display: inline-block !important;
   width: 18px !important;
   height: 18px !important;
-  flex: 0 0 18px !important;
-  display: inline-block !important;
-  margin: 3px 0 0 !important;
-  padding: 0 !important;
+  min-width: 18px !important;
   max-width: 18px !important;
+  flex: 0 0 18px !important;
+  margin: 3px 0 0 0 !important;
+  padding: 0 !important;
+  transform: none !important;
 }
 
-/* Text stays beside checkbox */
-body.supplier-onboarding .onb-check span{
-  display: block;
-  flex: 1 1 auto;
+body.supplier-page.supplier-onboarding label.onb-check > span{
+  display: inline-block !important;
+  flex: 1 1 auto !important;
+  margin: 0 !important;
 }
-
 
 
 
