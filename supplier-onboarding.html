@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Supplier Partnership Program | Euro Agri Trading s.r.o.</title>
+  <meta name="description" content="Supplier pre-qualification and KYC intake for long-term export cooperation. Verifiable legal documentation required." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=25">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <meta name="theme-color" content="#0a662f">
+
+  <!-- Early lang/dir (same logic) -->
+  <script>
+    (function () {
+      const RTL = new Set(['ar']);
+      const urlLang = new URLSearchParams(location.search).get('lang');
+      const saved   = localStorage.getItem('lang');
+      const nav     = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+      const guess   = (urlLang || saved || nav || 'en').toLowerCase().split('-')[0];
+      const lang    = (['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'].includes(guess) ? guess : 'en');
+      document.documentElement.lang = lang;
+      document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+      if (lang === 'ar') {
+        document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
+      }
+    })();
+  </script>
+</head>
+
+<body class="supplier-page supplier-onboarding">
+
+<header>
+  <div class="container nav" role="navigation" aria-label="Primary">
+    <div class="brand-wrap">
+      <div class="brand">
+        <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Euro Agri Trading s.r.o</span>
+        <span class="brand-sep">—</span>
+        <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
+      </div>
+    </div>
+
+    <nav aria-label="Primary Navigation">
+      <ul class="navbar-nav">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="supplier-network.html">Supplier Network</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Language component (same as your supplier page) -->
+    <div class="lang-flags" aria-label="Language">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="lang-code">EN</span>
+        <span class="lang-caret">▼</span>
+      </button>
+      <ul class="lang-menu" role="menu"></ul>
+      <select id="langSelect" aria-label="Language" hidden>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="cs">Čeština</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="it">Italiano</option>
+        <option value="pl">Polski</option>
+        <option value="nl">Nederlands</option>
+        <option value="ro">Română</option>
+        <option value="el">Ελληνικά</option>
+        <option value="pt">Português</option>
+        <option value="bg">Български</option>
+        <option value="hu">Magyar</option>
+        <option value="da">Dansk</option>
+        <option value="sv">Svenska</option>
+        <option value="fi">Suomi</option>
+        <option value="sk">Slovenčina</option>
+        <option value="sl">Slovenščina</option>
+        <option value="hr">Hrvatski</option>
+        <option value="sr">Srpski</option>
+        <option value="tr">Türkçe</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<!-- Intro -->
+<section class="supplier-onb-hero">
+  <div class="container">
+    <div class="supplier-onb-head">
+      <h1>Supplier Partnership Program</h1>
+      <p class="supplier-onb-sub">
+        Structured pre-qualification for long-term export cooperation.
+      </p>
+
+      <div class="supplier-onb-alert">
+        We review submissions based on verifiable legal documentation and export capability.
+        Incomplete or non-verifiable submissions will not be processed.
+      </div>
+
+      <div class="supplier-onb-steps" role="list" aria-label="Steps">
+        <div class="onb-step" role="listitem"><span class="onb-badge">1</span> Company Profile</div>
+        <div class="onb-step" role="listitem"><span class="onb-badge">2</span> Products & Capacity</div>
+        <div class="onb-step" role="listitem"><span class="onb-badge">3</span> Compliance Documents</div>
+        <div class="onb-step" role="listitem"><span class="onb-badge">4</span> Declaration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="supplier-onb-section">
+  <div class="container">
+    <form class="supplier-onb-form" onsubmit="return submitSupplierKYC(this)">
+      <!-- CARD 1 -->
+      <div class="supplier-onb-card">
+        <h3>1) Company Profile</h3>
+        <div class="onb-grid">
+          <label>Legal Company Name *<input name="company_name" required></label>
+          <label>Commercial Registration No. *<input name="reg_no" required></label>
+          <label>Country of Registration *<input name="country" required></label>
+          <label>Registered Address *<input name="address" required></label>
+          <label>Corporate Email *<input type="email" name="email" required></label>
+          <label>Website (optional)<input name="website"></label>
+          <label>Contact Person (Name & Position) *<input name="contact_person" required></label>
+          <label>Direct Phone / WhatsApp *<input name="phone" required></label>
+        </div>
+        <p class="onb-note">
+          Note: Submissions from non-corporate email domains may require additional verification.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="supplier-onb-card">
+        <h3>2) Products & Export Capability</h3>
+        <div class="onb-grid">
+          <label>Products Offered *<input name="products" required placeholder="Rock Phosphate, WSF, Calcium Nitrate, Micronutrients..."></label>
+          <label>Origin(s) Available *<input name="origins" required placeholder="Egypt, Morocco, Turkey, China, EU..."></label>
+          <label>Monthly Export Capacity (MT) *<input name="capacity" required></label>
+          <label>MOQ (MT) *<input name="moq" required></label>
+          <label>Available Packing *<input name="packing" required placeholder="Bulk / Jumbo / 25kg / 50kg"></label>
+          <label>Main Loading Port(s) *<input name="ports" required></label>
+          <label>Incoterms Available *<input name="incoterms" required placeholder="FOB / CFR / CIF..."></label>
+          <label>Supplier Type * 
+            <select name="supplier_type" required>
+              <option value="" selected disabled>Select</option>
+              <option>Producer</option>
+              <option>Trader</option>
+              <option>Producer + Trader</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="supplier-onb-card">
+        <h3>3) Compliance Documents (Mandatory)</h3>
+
+        <div class="onb-uploads">
+          <label>Company Registration Extract (PDF) *<input type="file" name="doc_reg" accept=".pdf" required></label>
+          <label>Tax / VAT Certificate (PDF) *<input type="file" name="doc_tax" accept=".pdf" required></label>
+          <label>Sample COA (PDF) *<input type="file" name="doc_coa" accept=".pdf" required></label>
+          <label>Sample MSDS / SDS (PDF) *<input type="file" name="doc_msds" accept=".pdf" required></label>
+
+          <label>Optional: ISO / QA Certificates<input type="file" name="doc_iso" accept=".pdf"></label>
+          <label>Optional: Inspection Reports (SGS / Intertek / BV)<input type="file" name="doc_inspect" accept=".pdf"></label>
+        </div>
+
+        <label class="onb-check">
+          <input type="checkbox" name="bl_confirm" required>
+          We confirm availability of masked Bill of Lading (B/L) or export references upon request.
+        </label>
+
+        <p class="onb-note">
+          Sensitive banking details are requested only after initial review and NDA (where applicable).
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="supplier-onb-card">
+        <h3>4) Trade & Compliance Declaration</h3>
+        <div class="onb-grid">
+          <label>Accepted Payment Terms *<input name="payment_terms" required placeholder="Irrevocable LC at sight / CAD ..."></label>
+          <label>Beneficiary Bank Country *<input name="bank_country" required></label>
+        </div>
+
+        <label class="onb-check">
+          <input type="checkbox" name="auth_confirm" required>
+          We confirm that all submitted documents are authentic and verifiable.
+        </label>
+
+        <label class="onb-check">
+          <input type="checkbox" name="sanctions_confirm" required>
+          We confirm compliance with applicable sanctions and export regulations.
+        </label>
+
+        <div class="supplier-onb-actions">
+          <button class="btn btn-primary" type="submit">Submit for Review</button>
+          <a class="btn btn-outline" id="backToNetwork" href="supplier-network.html">Back to Supplier Network</a>
+        </div>
+
+        <p class="onb-foot">
+          All submissions undergo internal compliance review. Selected suppliers may be contacted for additional verification and NDA execution.
+        </p>
+      </div>
+    </form>
+
+    <!-- Optional secure submission (Microsoft Forms) -->
+    <div class="supplier-onb-secure">
+      <h3>Prefer a secure upload portal?</h3>
+      <p class="muted">
+        You can submit the same package via our secure intake form (recommended for large files).
+      </p>
+      <a class="btn btn-outline" id="msFormsLink" href="#" target="_blank" rel="noopener">Open Secure Submission</a>
+      <p class="onb-note">Replace the link target with your Microsoft Forms URL.</p>
+    </div>
+
+  </div>
+</section>
+
+<script type="module">
+  const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
+  const RTL = new Set(['ar']);
+  const langSelect = document.getElementById('langSelect');
+
+  function normalizeLang(v){ return String(v || 'en').toLowerCase().split('-')[0]; }
+
+  function detectLang(){
+    const url = normalizeLang(new URLSearchParams(location.search).get('lang'));
+    if (SUPPORTED.includes(url)) return url;
+    const saved = normalizeLang(localStorage.getItem('lang'));
+    if (SUPPORTED.includes(saved)) return saved;
+    const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+    const guess = normalizeLang(nav);
+    return SUPPORTED.includes(guess) ? guess : 'en';
+  }
+
+  async function setLang(lang){
+    lang = normalizeLang(lang);
+    if (!SUPPORTED.includes(lang)) lang = 'en';
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+    if (lang === 'ar') document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
+    else document.documentElement.style.removeProperty('font-family');
+
+    if (langSelect) langSelect.value = lang;
+    localStorage.setItem('lang', lang);
+
+    const u = new URL(location.href);
+    u.searchParams.set('lang', lang);
+    history.replaceState({}, '', u.toString());
+
+    // keep back link language
+    const back = document.getElementById('backToNetwork');
+    if (back) back.href = `supplier-network.html?lang=${lang}`;
+  }
+
+  await setLang(detectLang());
+
+  if (langSelect){
+    langSelect.addEventListener('change', async ()=>{ await setLang(langSelect.value); });
+  }
+</script>
+
+<script>
+  // Language menu UI (same behavior)
+  document.addEventListener('DOMContentLoaded', function(){
+    const wrap   = document.querySelector('.lang-flags');
+    const select = document.getElementById('langSelect');
+    if (!wrap || !select) return;
+
+    const btn    = wrap.querySelector('.lang-btn');
+    const codeEl = wrap.querySelector('.lang-code');
+    const menu   = wrap.querySelector('.lang-menu');
+    if (!btn || !codeEl || !menu) return;
+
+    function buildMenu(){
+      menu.innerHTML = '';
+      Array.from(select.options).forEach(opt => {
+        const li = document.createElement('li');
+        const b  = document.createElement('button');
+        b.type = 'button';
+        b.dataset.lang = opt.value;
+        b.textContent  = opt.textContent;
+        li.appendChild(b);
+        menu.appendChild(li);
+      });
+    }
+    function setCurrent(){ codeEl.textContent = (select.value || 'en').toUpperCase(); }
+    function openMenu(){ wrap.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    function closeMenu(){ wrap.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+
+    buildMenu(); setCurrent();
+
+    btn.addEventListener('click', function(e){
+      e.preventDefault(); e.stopPropagation();
+      wrap.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    document.addEventListener('click', function(e){ if (!wrap.contains(e.target)) closeMenu(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+
+    menu.addEventListener('click', function(e){
+      const b = e.target.closest('button[data-lang]');
+      if (!b) return;
+      select.value = b.dataset.lang;
+      select.dispatchEvent(new Event('change',{bubbles:true}));
+      setCurrent();
+      closeMenu();
+    });
+    select.addEventListener('change', setCurrent);
+
+    // Microsoft Forms placeholder
+    const ms = document.getElementById('msFormsLink');
+    if (ms){
+      // ضع هنا رابط Microsoft Forms الحقيقي
+      ms.href = "#";
+    }
+  });
+
+  // Submission handler (mailto fallback – no file attachments via mailto)
+  function submitSupplierKYC(form){
+    const data = new FormData(form);
+
+    const to = "info@euroagritrading.eu";
+    const subject = encodeURIComponent("Supplier Pre-Qualification – Submission");
+
+    // Important: mailto cannot attach files. We still collect the structured info,
+    // and the page offers the Secure Submission button for documents.
+    const body = encodeURIComponent(
+`Supplier Pre-Qualification Submission
+
+[Company Profile]
+Legal Name: ${data.get("company_name")}
+Reg No: ${data.get("reg_no")}
+Country: ${data.get("country")}
+Address: ${data.get("address")}
+Email: ${data.get("email")}
+Website: ${data.get("website") || "-"}
+Contact Person: ${data.get("contact_person")}
+Phone/WhatsApp: ${data.get("phone")}
+
+[Products & Capacity]
+Products: ${data.get("products")}
+Origins: ${data.get("origins")}
+Capacity (MT/month): ${data.get("capacity")}
+MOQ: ${data.get("moq")}
+Packing: ${data.get("packing")}
+Ports: ${data.get("ports")}
+Incoterms: ${data.get("incoterms")}
+Supplier Type: ${data.get("supplier_type")}
+
+[Declaration]
+Payment Terms: ${data.get("payment_terms")}
+Bank Country: ${data.get("bank_country")}
+BL/Export refs available: Yes
+
+Note: Documents must be submitted via the Secure Submission portal (Microsoft Forms) or shared link.`
+    );
+
+    location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    return false;
+  }
+</script>
+
+</body>
+</html>
