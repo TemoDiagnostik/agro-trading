@@ -2627,6 +2627,18 @@ body.supplier-onboarding .supplier-onb-secure{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== FIX CHECKBOX ALIGNMENT DEFINITIVE ===== */
 
 body.supplier-onboarding .onb-check{
@@ -2640,6 +2652,18 @@ body.supplier-onboarding .onb-check{
   width: 100%;               /* يمنع انكماشه داخل grid */
 }
 
+body.supplier-onboarding .onb-check input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;            /* يمنع تحركه */
+  position: relative;
+  top: 1px;
+}
+
+body.supplier-onboarding .onb-check span{
+  display: inline-block;
+}
 
 
 
