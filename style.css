@@ -3471,7 +3471,35 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 
 
+/* ===== SECURE SUBMISSION PAGE ===== */
 
+.secure-wrapper {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.secure-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--brand-ink);
+}
+
+.secure-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  color: var(--soft);
+  line-height: 1.7;
+}
+
+.secure-box {
+  margin-bottom: 40px;
+}
+
+.secure-note {
+  font-size: 14px;
+  color: var(--muted);
+}
 
 
 
