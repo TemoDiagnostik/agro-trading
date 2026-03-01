@@ -169,10 +169,11 @@
         RFQ responses within 24–48 hours • Documentation shared after buyer verification
       </p>
 
-      <div class="cta-row supplier-cta">
-        <a href="index.html#contactFormBox" class="btn btn-primary" data-i18n="sup.hero.cta.rfq">Request RFQ</a>
-        <a href="index.html#products" class="btn btn-outline" data-i18n="sup.hero.cta.products">View Products</a>
-      </div>
+     <div class="cta-row supplier-cta">
+  <a href="index.html#contactFormBox" class="btn btn-primary" data-i18n="sup.hero.cta.rfq">Request RFQ</a>
+  <a href="index.html#products" class="btn btn-outline" data-i18n="sup.hero.cta.products">View Products</a>
+  <a id="supplierJoinBtn" href="supplier-onboarding.html" class="btn btn-outline">Become a Supplier</a>
+</div>
 
       <div class="supplier-trust-strip" role="region" aria-label="Trust highlights">
         <div class="trust-pill" data-i18n="sup.pill.kyc">KYC & Entity Verification</div>
@@ -391,14 +392,35 @@
 
   // init
   await setLang(detectLang());
+function syncJoinBtnHref(){
+  const joinBtn = document.getElementById('supplierJoinBtn');
+  if (!joinBtn) return;
+  const lang = document.documentElement.lang || (langSelect?.value) || 'en';
+  joinBtn.href = `supplier-onboarding.html?lang=${lang}`;
+}
 
+await setLang(detectLang());
+syncJoinBtnHref();
+
+// change handler (direct on select)
+if (langSelect){
+  langSelect.addEventListener('change', async ()=>{
+    await setLang(langSelect.value);
+    syncJoinBtnHref();
+  });
+}
   // change handler (direct on select)
   if (langSelect){
     langSelect.addEventListener('change', async ()=>{
       await setLang(langSelect.value);
     });
   }
-
+// keep lang when moving to supplier onboarding
+const joinBtn = document.getElementById('supplierJoinBtn');
+if (joinBtn){
+  const lang = document.documentElement.lang || 'en';
+  joinBtn.href = `supplier-onboarding.html?lang=${lang}`;
+}
   // CSV export helper
   window.exportSievingCSV = function(){
     const table = document.querySelector("#sieving");
