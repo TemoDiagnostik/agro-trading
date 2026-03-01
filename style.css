@@ -872,6 +872,44 @@ html {
 }
 
 
+
+.legal-page{
+  padding:80px 20px;
+  background:#f9fafb;
+}
+
+.legal-page h1{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+.legal-page h2{
+  margin-top:30px;
+  font-size:1.2rem;
+  color:#1f2937;
+}
+
+.legal-page p,
+.legal-page li{
+  line-height:1.7;
+  color:#374151;
+}
+
+.legal-page ul{
+  padding-left:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== SCROLL OFFSET ===== */
 section, [id] {
  scroll-margin-top: 110px;
