@@ -58,7 +58,35 @@
       }
     })();
   </script>
+<!-- Google Analytics (GA4) - loads only after consent -->
+<script>
+  // default: deny analytics until user accepts
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
 
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+
+  // Helper: call this after user clicks "Accept analytics"
+  window.enableAnalytics = function(measurementId){
+    // load gtag.js dynamically only after consent
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+    document.head.appendChild(s);
+
+    gtag('js', new Date());
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    gtag('config', measurementId, { anonymize_ip: true });
+  };
+</script>
+
+
+	
   <!-- ✅ SEO alternates -->
   <link rel="alternate" href="?lang=ar" hreflang="ar" />
   <link rel="alternate" href="?lang=en" hreflang="en" />
