@@ -1,124 +1,10 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Supplier Partnership Program | Euro Agri Trading s.r.o.</title>
-  <meta name="description" content="Supplier pre-qualification and KYC intake for long-term export cooperation. Verifiable legal documentation required." />
-
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=25">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <meta name="theme-color" content="#0a662f">
-
-  <!-- Early lang/dir (same logic) -->
-  <script>
-    (function () {
-      const RTL = new Set(['ar']);
-      const urlLang = new URLSearchParams(location.search).get('lang');
-      const saved   = localStorage.getItem('lang');
-      const nav     = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-      const guess   = (urlLang || saved || nav || 'en').toLowerCase().split('-')[0];
-      const lang    = (['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'].includes(guess) ? guess : 'en');
-      document.documentElement.lang = lang;
-      document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
-      if (lang === 'ar') {
-        document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
-      }
-    })();
-  </script>
-</head>
-
-<body class="supplier-page supplier-onboarding">
-
-<header>
-  <div class="container nav" role="navigation" aria-label="Primary">
-    <div class="brand-wrap">
-      <div class="brand">
-        <img class="logo-img" src="logo.png" alt="Euro Agri Trading Logo" />
-      </div>
-      <div class="brand-text">
-        <span class="brand-name">Euro Agri Trading s.r.o</span>
-        <span class="brand-sep">—</span>
-        <span class="brand-tagline">EU Fertilizer Sourcing Agency</span>
-      </div>
-    </div>
-
-    <nav aria-label="Primary Navigation">
-      <ul class="navbar-nav">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="supplier-network.html">Supplier Network</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Language component (same as your supplier page) -->
-    <div class="lang-flags" aria-label="Language">
-      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
-        <span class="lang-code">EN</span>
-        <span class="lang-caret">▼</span>
-      </button>
-      <ul class="lang-menu" role="menu"></ul>
-      <select id="langSelect" aria-label="Language" hidden>
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="cs">Čeština</option>
-        <option value="de">Deutsch</option>
-        <option value="fr">Français</option>
-        <option value="es">Español</option>
-        <option value="it">Italiano</option>
-        <option value="pl">Polski</option>
-        <option value="nl">Nederlands</option>
-        <option value="ro">Română</option>
-        <option value="el">Ελληνικά</option>
-        <option value="pt">Português</option>
-        <option value="bg">Български</option>
-        <option value="hu">Magyar</option>
-        <option value="da">Dansk</option>
-        <option value="sv">Svenska</option>
-        <option value="fi">Suomi</option>
-        <option value="sk">Slovenčina</option>
-        <option value="sl">Slovenščina</option>
-        <option value="hr">Hrvatski</option>
-        <option value="sr">Srpski</option>
-        <option value="tr">Türkçe</option>
-      </select>
-    </div>
-  </div>
-</header>
-
-<!-- Intro -->
-<section class="supplier-onb-hero">
-  <div class="container">
-    <div class="supplier-onb-head">
-      <h1>Supplier Partnership Program</h1>
-      <p class="supplier-onb-sub">
-        Structured pre-qualification for long-term export cooperation.
-      </p>
-
-      <div class="supplier-onb-alert">
-        We review submissions based on verifiable legal documentation and export capability.
-        Incomplete or non-verifiable submissions will not be processed.
-      </div>
-
-      <div class="supplier-onb-steps" role="list" aria-label="Steps">
-        <div class="onb-step" role="listitem"><span class="onb-badge">1</span> Company Profile</div>
-        <div class="onb-step" role="listitem"><span class="onb-badge">2</span> Products & Capacity</div>
-        <div class="onb-step" role="listitem"><span class="onb-badge">3</span> Compliance Documents</div>
-        <div class="onb-step" role="listitem"><span class="onb-badge">4</span> Declaration</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Form -->
 <section class="supplier-onb-section">
   <div class="container">
 
-<form class="supplier-onb-form" id="supplierKycForm">
-  <!-- CARD 1 -->
+    <!-- ✅ لا يوجد onsubmit / لا يوجد type=submit → لن يفتح Outlook ولن يعمل Reload -->
+    <form class="supplier-onb-form" id="supplierKycForm" novalidate>
+      <!-- CARD 1 -->
       <div class="supplier-onb-card">
         <h3>1) Company Profile</h3>
         <div class="onb-grid">
@@ -222,155 +108,45 @@
           <span>We confirm compliance with applicable sanctions and export regulations.</span>
         </label>
 
+        <!-- ✅ زرّين فقط -->
         <div class="supplier-onb-actions">
-          <button class="btn btn-primary" type="submit">Submit for Review</button><button class="btn btn-primary" type="button" id="submitSecureBtn">Submit for Review</button>
+          <button class="btn btn-primary" type="button" id="becomeSupplierBtn">Become a Supplier</button>
           <a class="btn btn-outline" id="backToNetwork" href="supplier-network.html">Back to Supplier Network</a>
         </div>
 
         <p class="onb-foot">
           All submissions undergo internal compliance review. Selected suppliers may be contacted for additional verification and NDA execution.
         </p>
+
+        <!-- ✅ بدون زر ثالث: مجرد ملاحظة صغيرة -->
+        <p class="onb-note" style="margin-top:12px;">
+          After validation, “Become a Supplier” opens the secure upload portal in a new window.
+        </p>
       </div>
     </form>
-
-    <!-- Optional secure submission (Microsoft Forms) -->
-    <div class="supplier-onb-secure">
-      <h3>Prefer a secure upload portal?</h3>
-      <p class="muted">
-        You can submit the same package via our secure intake form (recommended for large files).
-      </p>
-      <a class="btn btn-outline"
-   href="https://euroagritradingsro661-my.sharepoint.com/personal/info_euroagritrading_eu/_layouts/15/onedrive.aspx?p=26&s=aHR0cHM6Ly9ldXJvYWdyaXRyYWRpbmdzcm82NjEtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvaW5mb19ldXJvYWdyaXRyYWRpbmdfZXUvSWdBaHZYd1ctTWlPUjRrYi1iVlRIdjhRQWFMdmh2UjI5NVFabDJKOWQ5eGl3N0E"
-   target="_blank"
-   rel="noopener">
-   Open Secure Submission
-</a>
-
-<p class="onb-note">
-  Your secure upload will open in a new window.
-</p>
-
-    </div>
 
   </div>
 </section>
 
-
-
-  
-<script type="module">
-  const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
-  const RTL = new Set(['ar']);
-  const langSelect = document.getElementById('langSelect');
-
-  function normalizeLang(v){ return String(v || 'en').toLowerCase().split('-')[0]; }
-
-  function detectLang(){
-    const url = normalizeLang(new URLSearchParams(location.search).get('lang'));
-    if (SUPPORTED.includes(url)) return url;
-    const saved = normalizeLang(localStorage.getItem('lang'));
-    if (SUPPORTED.includes(saved)) return saved;
-    const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-    const guess = normalizeLang(nav);
-    return SUPPORTED.includes(guess) ? guess : 'en';
-  }
-
-  async function setLang(lang){
-    lang = normalizeLang(lang);
-    if (!SUPPORTED.includes(lang)) lang = 'en';
-    document.documentElement.lang = lang;
-    document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
-    if (lang === 'ar') document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
-    else document.documentElement.style.removeProperty('font-family');
-
-    if (langSelect) langSelect.value = lang;
-    localStorage.setItem('lang', lang);
-
-    const u = new URL(location.href);
-    u.searchParams.set('lang', lang);
-    history.replaceState({}, '', u.toString());
-
-    // keep back link language
-    const back = document.getElementById('backToNetwork');
-    if (back) back.href = `supplier-network.html?lang=${lang}`;
-  }
-
-  await setLang(detectLang());
-
-  if (langSelect){
-    langSelect.addEventListener('change', async ()=>{ await setLang(langSelect.value); });
-  }
-</script>
-
 <script>
-  // Language menu UI (same behavior)
-  document.addEventListener('DOMContentLoaded', function(){
-    const wrap   = document.querySelector('.lang-flags');
-    const select = document.getElementById('langSelect');
-    if (!wrap || !select) return;
+  // ✅ رابط البوابة الآمنة الحقيقي (نفس اللي كان في Open Secure Submission)
+  const SECURE_URL = "https://euroagritradingsro661-my.sharepoint.com/personal/info_euroagritrading_eu/_layouts/15/onedrive.aspx?p=26&s=aHR0cHM6Ly9ldXJvYWdyaXRyYWRpbmdzcm82NjEtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvaW5mb19ldXJvYWdyaXRyYWRpbmdfZXUvSWdBaHZYd1ctTWlPUjRrYi1iVlRIdjhRQWFMdmh2UjI5NVFabDJKOWQ5eGl3N0E";
 
-    const btn    = wrap.querySelector('.lang-btn');
-    const codeEl = wrap.querySelector('.lang-code');
-    const menu   = wrap.querySelector('.lang-menu');
-    if (!btn || !codeEl || !menu) return;
-
-    function buildMenu(){
-      menu.innerHTML = '';
-      Array.from(select.options).forEach(opt => {
-        const li = document.createElement('li');
-        const b  = document.createElement('button');
-        b.type = 'button';
-        b.dataset.lang = opt.value;
-        b.textContent  = opt.textContent;
-        li.appendChild(b);
-        menu.appendChild(li);
-      });
-    }
-    function setCurrent(){ codeEl.textContent = (select.value || 'en').toUpperCase(); }
-    function openMenu(){ wrap.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-    function closeMenu(){ wrap.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-
-    buildMenu(); setCurrent();
-
-    btn.addEventListener('click', function(e){
-      e.preventDefault(); e.stopPropagation();
-      wrap.classList.contains('open') ? closeMenu() : openMenu();
-    });
-    document.addEventListener('click', function(e){ if (!wrap.contains(e.target)) closeMenu(); });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
-
-    menu.addEventListener('click', function(e){
-      const b = e.target.closest('button[data-lang]');
-      if (!b) return;
-      select.value = b.dataset.lang;
-      select.dispatchEvent(new Event('change',{bubbles:true}));
-      setCurrent();
-      closeMenu();
-    });
-    select.addEventListener('change', setCurrent);
-
-    // Microsoft Forms placeholder
-    const ms = document.getElementById('msFormsLink');
-    if (ms){
-      // ضع هنا رابط Microsoft Forms الحقيقي
-      ms.href = "#";
-    }
+  // ✅ لا نسمح بأي submit افتراضي (حتى لو المتصفح حاول)
+  document.getElementById('supplierKycForm').addEventListener('submit', function(e){
+    e.preventDefault();
   });
 
-<script>
-  function submitSupplierKYC(form){
+  document.getElementById('becomeSupplierBtn').addEventListener('click', function(){
+    const form = document.getElementById('supplierKycForm');
 
+    // ✅ تحقق من كل required + ملفات + checkboxes
     if (!form.checkValidity()) {
       form.reportValidity();
-      return false;
+      return;
     }
 
-    const secureUrl = "https://euroagritradingsro661-my.sharepoint.com/...";
-    window.open(secureUrl, "_blank", "noopener");
-
-    return false;
-  }
+    // ✅ افتح البوابة الآمنة بدون مسح البيانات (لا reload)
+    window.open(SECURE_URL, '_blank', 'noopener');
+  });
 </script>
-
-</body>
-</html>
