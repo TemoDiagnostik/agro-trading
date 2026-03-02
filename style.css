@@ -3468,8 +3468,15 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 
 
-
-
+.form-success {
+  margin-top: 20px;
+  padding: 18px;
+  background: #e6f6ee;
+  border: 1px solid #1f8f4e;
+  color: #0f5132;
+  border-radius: 8px;
+  font-size: 15px;
+}
 
 /* ===== SECURE SUBMISSION PAGE ===== */
 
