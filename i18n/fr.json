@@ -21,7 +21,10 @@
   "hero.productsOnRequest": "Autres lignes d’approvisionnement disponibles sur demande.",
   "hero.tradeNote": "Cadre d’exécution : LC à vue • inspection SGS/Intertek/BV • documentation spécifique à l’expédition",
   "hero.primaryFocus": "Focus principal : Phosphate naturel (18–34% P₂O₅) — validation spécifique à l’expédition.",
-
+"sup.hero.cta.supplier": "Candidature Fournisseur (KYC)",
+"sup.apply.title": "Devenez un Partenaire Fournisseur Vérifié",
+"sup.apply.desc": "Les fournisseurs intéressés par une coopération structurée avec Euro Agri Trading s.r.o. sont invités à remplir notre formulaire de préqualification fournisseur (KYC).",
+"sup.apply.button": "Démarrer la préqualification",
   "products.title": "Produit phare",
   "products.lead": "Phosphate naturel — Grades 18–32% P₂O₅ (selon disponibilité & COA spécifique à l’expédition) (échantillon de référence : 26%)",
   "products.spec1": "Granulométrie criblée — prête pour broyage ou application directe",
