@@ -22,6 +22,11 @@
   "hero.tradeNote": "Ramy realizacji: akredytywa płatna za okazaniem (LC at sight) • inspekcja SGS/Intertek/BV • dokumentacja dla konkretnej dostawy",
   "hero.primaryFocus": "Główny obszar: fosforyty (18–34% P₂O₅) — weryfikacja dla każdej dostawy.",
 
+"sup.hero.cta.supplier": "Zgłoszenie Dostawcy (KYC)",
+"sup.apply.title": "Zostań Zweryfikowanym Partnerem Dostaw",
+"sup.apply.desc": "Dostawcy zainteresowani ustrukturyzowaną współpracą z Euro Agri Trading s.r.o. są zaproszeni do wypełnienia naszego formularza wstępnej kwalifikacji dostawcy (KYC).",
+"sup.apply.button": "Rozpocznij kwalifikację",
+  
   "products.title": "Produkt flagowy",
   "products.lead": "Fosforyty — klasy 18–32% P₂O₅ (w zależności od dostępności i COA dla konkretnej dostawy) (próbka referencyjna: 26%)",
   "products.spec1": "Przesiana granulometria — gotowe do mielenia lub bezpośredniego zastosowania",
