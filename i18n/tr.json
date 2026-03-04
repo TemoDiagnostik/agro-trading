@@ -77,7 +77,12 @@
   "sup.trade.card4.text": "Sevkiyat belgeleri, uygulanabilir ise düzenleme öncesinde tutarlılık açısından incelenir.",
   "sup.trade.note": "Hiçbir tedarikçi kimliği kamuya açıklanmaz. Bilgiler yalnızca doğrulanmış RFQ ve yapılandırılmış angajman teyidi sonrasında paylaşılır.",
   "sup.trade.cta.rfq": "RFQ Talep Et",
+"sup.hero.cta.supplier": "Tedarikçi Başvurusu (KYC)",
+"sup.apply.title": "Doğrulanmış Tedarik Ortağı Olun",
+"sup.apply.desc": "Euro Agri Trading s.r.o. ile yapılandırılmış iş birliğiyle ilgilenen tedarikçiler, Tedarikçi Ön Yeterlilik (KYC) Formumuzu doldurmaya davetlidir.",
+"sup.apply.button": "Ön Yeterliliği Başlat",
 
+  
   "trust.title": "AB merkezli yürütme.",
   "trust.text": "Görüldüğünde LC • Bağımsız muayene (SGS/Intertek/BV) • sevkiyat bazlı COA • doğrulanmış dokümantasyon.",
 
