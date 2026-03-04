@@ -31,7 +31,10 @@
   "hero.productsOnRequest": "Yderligere forsyningslinjer kan koordineres efter anmodning.",
   "hero.tradeNote": "Eksekveringsramme: LC at sight • SGS/Intertek/BV-inspektion • forsendelsesspecifik dokumentation",
   "hero.primaryFocus": "Primært fokus: Råfosfat (18–34% P₂O₅) — forsendelsesspecifik validering.",
-
+"sup.hero.cta.supplier": "Leverandøransøgning (KYC)",
+"sup.apply.title": "Bliv en verificeret leverandørpartner",
+"sup.apply.desc": "Leverandører, der er interesserede i struktureret samarbejde med Euro Agri Trading s.r.o., inviteres til at udfylde vores leverandør-forhåndskvalificering (KYC)-formular.",
+"sup.apply.button": "Start forhåndskvalificering",
   "products.title": "Flagskibsprodukt",
   "products.lead": "Råfosfat — kvaliteter 18–32% P₂O₅ (afhængigt af tilgængelighed & forsendelsesspecifik COA) (referenceprøve: 26%)",
   "products.spec1": "Sigtet granulometri — klar til formaling eller direkte anvendelse",
