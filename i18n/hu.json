@@ -21,7 +21,10 @@
   "hero.productsOnRequest": "További beszállítási vonalak kérésre elérhetők.",
   "hero.tradeNote": "Lebonyolítási keret: azonnali LC • SGS/Intertek/BV ellenőrzés • szállítmány-specifikus dokumentáció",
   "hero.primaryFocus": "Elsődleges fókusz: foszfátkő (18–34% P₂O₅) — szállítmány-specifikus igazolással.",
-
+"sup.hero.cta.supplier": "Beszállítói jelentkezés (KYC)",
+"sup.apply.title": "Legyen ellenőrzött beszállítói partner",
+"sup.apply.desc": "Azok a beszállítók, akik strukturált együttműködés iránt érdeklődnek a Euro Agri Trading s.r.o.-val, kérjük töltsék ki a Beszállítói Előminősítési (KYC) űrlapot.",
+"sup.apply.button": "Előminősítés indítása",
   "products.title": "Kiemelt termék",
   "products.lead": "Foszfátkő — 18–32% P₂O₅ minőségek (elérhetőségtől és szállítmány-specifikus COA-tól függően) (referenciaminta: 26%)",
   "products.spec1": "Osztályozott szemcseméret — őrlésre vagy közvetlen felhasználásra kész",
