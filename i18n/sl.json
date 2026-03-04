@@ -22,6 +22,11 @@
   "hero.tradeNote": "Okvir izvedbe: LC na vpogled • pregled SGS/Intertek/BV • dokumentacija specifična za pošiljko",
   "hero.primaryFocus": "Primarni fokus: Fosfatna kamnina (18–34% P₂O₅) — validacija specifična za pošiljko.",
 
+"sup.hero.cta.supplier": "Prijava dobavitelja (KYC)",
+"sup.apply.title": "Postanite preverjen dobaviteljski partner",
+"sup.apply.desc": "Dobavitelji, ki jih zanima strukturirano sodelovanje z Euro Agri Trading s.r.o., so vabljeni, da izpolnijo naš obrazec za predkvalifikacijo dobavitelja (KYC).",
+"sup.apply.button": "Začni predkvalifikacijo",
+  
   "products.title": "Osrednji izdelek",
   "products.lead": "Fosfatna kamnina — razredi 18–32% P₂O₅ (odvisno od razpoložljivosti in COA specifičnega za pošiljko) (referenčni vzorec: 26%)",
   "products.spec1": "Sejana granulometrija — pripravljeno za mletje ali neposredno uporabo",
