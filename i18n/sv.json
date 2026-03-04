@@ -22,6 +22,11 @@
   "hero.tradeNote": "Genomföranderamverk: LC vid anfordran • SGS/Intertek/BV-inspektion • sändningsspecifik dokumentation",
   "hero.primaryFocus": "Primärt fokus: Fosfatsten (18–34% P₂O₅) — sändningsspecifik validering.",
 
+"sup.hero.cta.supplier": "Leverantörsansökan (KYC)",
+"sup.apply.title": "Bli en Verifierad Leveranspartner",
+"sup.apply.desc": "Leverantörer som är intresserade av strukturerat samarbete med Euro Agri Trading s.r.o. inbjuds att fylla i vårt formulär för leverantörsförkvalificering (KYC).",
+"sup.apply.button": "Starta förkvalificering",
+  
   "products.title": "Flaggskeppsprodukt",
   "products.lead": "Fosfatsten — kvaliteter 18–32% P₂O₅ (beroende på tillgänglighet och sändningsspecifik COA) (referensprov: 26%)",
   "products.spec1": "Siktad granulometri — redo för malning eller direkt applicering",
