@@ -33,7 +33,10 @@
   "hero.productsOnRequest": "Další dodavatelské linky jsou k dispozici na vyžádání.",
   "hero.tradeNote": "Rámec realizace: neodvolatelné LC na viděnou • inspekce SGS/Intertek/BV • dokumentace specifická pro zásilku",
   "hero.primaryFocus": "Primární zaměření: fosfátová hornina (18–34% P₂O₅) — ověření specifické pro zásilku.",
-
+"sup.hero.cta.supplier": "Žádost dodavatele (KYC)",
+"sup.apply.title": "Staňte se ověřeným dodavatelem",
+"sup.apply.desc": "Dodavatelé, kteří mají zájem o strukturovanou spolupráci se společností Euro Agri Trading s.r.o., jsou vyzváni k vyplnění formuláře předběžné kvalifikace dodavatele (KYC).",
+"sup.apply.button": "Spustit předběžnou kvalifikaci",
   "products.title": "Vlajkový produkt",
   "products.lead": "Fosfátová hornina — stupně 18–32% P₂O₅ (dle dostupnosti a zásilkově specifického COA) (referenční vzorek: 26%)",
   "products.spec1": "Prosátá granulometrie — připraveno k mletí nebo přímé aplikaci",
