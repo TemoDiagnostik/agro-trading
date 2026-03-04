@@ -30,7 +30,10 @@
   "hero.productsOnRequest": "Líneas de suministro adicionales disponibles bajo solicitud.",
   "hero.tradeNote": "Marco de ejecución: LC a la vista • inspección SGS/Intertek/BV • documentación específica por envío",
   "hero.primaryFocus": "Enfoque principal: roca fosfática (18–34% P₂O₅) — validación específica por envío.",
-
+"sup.hero.cta.supplier": "Solicitud de Proveedor (KYC)",
+"sup.apply.title": "Conviértase en un Socio de Suministro Verificado",
+"sup.apply.desc": "Los proveedores interesados en una cooperación estructurada con Euro Agri Trading s.r.o. están invitados a completar nuestro Formulario de Precalificación de Proveedor (KYC).",
+"sup.apply.button": "Iniciar Precalificación",
   "products.title": "Producto insignia",
   "products.lead": "Roca fosfática — grados 18–32% P₂O₅ (sujeto a disponibilidad y COA específico por envío) (muestra de referencia: 26%)",
   "products.spec1": "Granulometría cribada — lista para molienda o aplicación directa",
