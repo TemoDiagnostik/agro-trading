@@ -31,7 +31,10 @@
   "hero.productsOnRequest": "Weitere Lieferlinien auf Anfrage verfügbar.",
   "hero.tradeNote": "Abwicklungsrahmen: Akkreditiv bei Sicht • SGS/Intertek/BV-Inspektion • sendungsspezifische Dokumentation",
   "hero.primaryFocus": "Primärfokus: Rohphosphat (18–34% P₂O₅) — sendungsspezifische Validierung.",
-
+"sup.hero.cta.supplier": "Lieferantenantrag (KYC)",
+"sup.apply.title": "Werden Sie ein verifizierter Lieferpartner",
+"sup.apply.desc": "Lieferanten, die an einer strukturierten Zusammenarbeit mit Euro Agri Trading s.r.o. interessiert sind, werden gebeten, unser Lieferanten-Vorqualifizierungsformular (KYC) auszufüllen.",
+"sup.apply.button": "Lieferanten-Vorqualifizierung starten",
   "products.title": "Hauptprodukt",
   "products.lead": "Rohphosphat — Qualitäten 18–32% P₂O₅ (je nach Verfügbarkeit & sendungsspezifischem COA) (Referenzmuster: 26%)",
   "products.spec1": "Gesiebte Granulometrie — bereit zum Mahlen oder zur Direktanwendung",
