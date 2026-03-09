@@ -19,7 +19,7 @@
   "hero.specsNote": "Fosfat Kayası — sevkiyat bazlı COA ile çoklu menşeli tedarik.",
   "hero.productsLine": "Fosfat Kayası (Birincil Odak)",
   "hero.productsOnRequest": "Ek tedarik hatları talep üzerine mevcuttur.",
-  "hero.tradeNote": "Yürütme çerçevesi: Görüldüğünde LC • SGS/Intertek/BV muayenesi • sevkiyat bazlı dokümantasyon",
+"hero.tradeNote": "Tercih edilen: görüldüğünde ödemeli gayrikabili rücu akreditif (Irrevocable LC at Sight) • Ayrıca değerlendirilebilir: D/P / CAD ve SBLC / banka teminatı • Uyum incelemesi ve işlem profiline tabi olarak • SGS/Intertek/BV denetimi • Sevkiyata özel dokümantasyon",
   "hero.primaryFocus": "Birincil odak: Fosfat Kayası (18–34% P₂O₅) — sevkiyat bazlı doğrulama.",
 
   "products.title": "Amiral Ürün",
@@ -70,7 +70,7 @@
   "sup.trade.card1.title": "Komisyon Yapısı",
   "sup.trade.card1.text": "Tanımlı kapsam ve işlem tetikleyicileri içeren yazılı anlaşma ile yönetilir.",
   "sup.trade.card2.title": "Güvenli Ödeme Modeli",
-  "sup.trade.card2.text": "Tercih edilen yapı: Görüldüğünde gayrikabili rücu LC (sözleşmesel uyuma tabidir).",
+"sup.trade.card2.text": "Tercih edilen: görüldüğünde ödemeli gayrikabili rücu akreditif (Irrevocable LC at Sight) (sözleşmesel uyum sağlanmasına bağlı olarak).",
   "sup.trade.card3.title": "Gizlilik",
   "sup.trade.card3.text": "Doğrudan tedarikçi detayları yalnızca doğrulama ve sözleşmesel uyum sonrası paylaşılır.",
   "sup.trade.card4.title": "Kontrollü Dokümantasyon",
@@ -84,7 +84,7 @@
 
   
   "trust.title": "AB merkezli yürütme.",
-  "trust.text": "Görüldüğünde LC • Bağımsız muayene (SGS/Intertek/BV) • sevkiyat bazlı COA • doğrulanmış dokümantasyon.",
+"trust.text": "Tercih edilen yapı: görüldüğünde ödemeli gayrikabili rücu akreditif (Irrevocable LC at Sight) • Bağımsız denetim (SGS/Intertek/BV) • Sevkiyata özel COA • Doğrulanmış dokümantasyon",
 
   "cat.cta.rfq": "RFQ Talep Et",
   "cat.cta.specs": "Spesifikasyonları Gör",
@@ -220,7 +220,7 @@
   "how.lead": "Euro Agri Trading s.r.o., bağımsız AB merkezli bir tedarik ve işlem koordinasyon şirketidir. Doğrulanmış tedarikçileri nitelikli alıcılarla buluşturur ve süreci yapılandırılmış ve uyumlu bir şekilde destekleriz.",
   "how.policyTitle": "İşlem Politikası (Risk Kontrol)",
   "how.policyLead": "Tüm tarafları korumak ve profesyonel yürütmeyi sağlamak için standart uluslararası ticaret uygulamalarını izleriz:",
-  "how.p1": "Tercih edilen ödeme: Görüldüğünde LC (100%) — alıcı/satıcı anlaşmasına tabidir",
+"how.p1": "Tercih edilen: görüldüğünde ödemeli gayrikabili rücu akreditif (Irrevocable LC at Sight) • Ayrıca değerlendirilebilir: D/P / CAD ve SBLC / banka teminatı, uyum incelemesi ve işlem profiline tabi olarak",
   "how.p2": "Ön ödeme yok",
   "how.p3": "Yükleme sırasında bağımsız muayene: SGS / Intertek / BV (anlaşmaya göre)",
   "how.p4": "Sevkiyat bazlı dokümantasyon: her sevkiyat için COA/SGS; ağır metaller (örn. Cd) talep üzerine veya pazar gereksinimine göre sağlanır",
@@ -228,7 +228,7 @@
   "how.conf.title": "Gizlilik ve Angajman Çerçevesi",
   "how.conf.text": "Tarafları tanıştırırken profesyonel gizlilik uygularız. Karşı taraf detayları yalnızca ciddi bir talep (RFQ/LOI) alındıktan sonra paylaşılır ve angajman çerçevesi; açıklık, şeffaflık ve koruma için yazılı olarak teyit edilir. Tanıştırılan taraflarla tekrarlayan siparişler/işlemler, kararlaştırılan koruma süresi boyunca kapsanır.",
   "how.noteTitle": "Önemli Not",
-  "how.noteText": "Euro Agri Trading s.r.o., satıcı ile alıcı arasındaki satış sözleşmesinin tarafı değildir. Satış sözleşmesi, teslim koşulları ve performans yükümlülükleri doğrudan taraflar arasında kararlaştırılır; LC şartları ve uygulanabilir olduğunda bağımsız üçüncü taraf muayenesi ile desteklenir.",
+"how.noteText": "Euro Agri Trading s.r.o., satıcı ile alıcı arasındaki satış sözleşmesinin tarafı değildir. Satış sözleşmesi, teslimat şartları ve ifa yükümlülükleri doğrudan satıcı ile alıcı arasında kararlaştırılır; uygun olduğu durumlarda akreditif şartları ve bağımsız üçüncü taraf denetimi ile desteklenir.",
 
   "compliance.title": "Uyum ve Doğrulama",
   "compliance.lead": "Gösterilen spesifikasyonlar gösterge niteliğindedir ve yalnızca ticari yönlendirme amaçlıdır. Nihai ürün parametreleri yalnızca sevkiyat bazlı COA ve uygulanabilir olduğunda bağımsız muayene raporlarıyla doğrulanır.",
@@ -278,16 +278,23 @@
   "about.p3": "Şirket Çek Cumhuriyeti’nde kayıtlıdır ve uygulanabilir AB ticaret ve mevzuat çerçeveleriyle uyumlu şekilde faaliyet gösterir.",
   "about.note": "Euro Agri Trading s.r.o., satıcı ile alıcı arasındaki satış sözleşmesinin tarafı değildir. Sözleşmesel yükümlülükler doğrudan işlem taraflarınca kararlaştırılır.",
 
-  "payment.title": "Ödeme ve Mutabakat Çerçevesi",
-  "payment.opt.lcSight": "Görüldüğünde gayrikabili rücu LC (100%) — Birincil yapı",
-  "payment.opt.lcUsance": "Vadeli / Ertelenmiş LC — uyum incelemesi ve onaya tabidir",
-  "payment.opt.collection": "Vesaik Mukabili Tahsil (yalnızca D/P) — nitelikli tekrar alıcılar için",
-  "payment.opt.sblc": "SBLC / Banka Teminatı — sözleşmeye göre (gerekirse)",
-  "payment.disclaimer": "Nihai ödeme şartları; uyum, karşı taraf doğrulaması ve işlem yapısına göre vaka bazında kararlaştırılır.",
-  "payment.lead": "Ödemeler ve ticari mutabakat doğrudan alıcı ile satıcı arasında yürütülür. Euro Agri Trading s.r.o., yapılandırılmış işlem yürütmesini destekleyen bağımsız AB merkezli bir tedarik ve koordinasyon ortağı olarak faaliyet gösterir.",
-  "payment.note": "Tedarikçi banka bilgileri, RFQ teyidi ve alıcı doğrulamasından sonra Proforma Fatura (PI) içinde sağlanır.",
-  "payment.btn.request": "Proforma / Ödeme Yapısı Talep Et",
-  "payment.guard": "Ön ödeme yok. Yüklemede bağımsız üçüncü taraf muayenesi anlaşmaya göre organize edilebilir.",
+  "payment.title": "Ödeme ve mutabakat çerçevesi",
+
+"payment.lead": "Ödemeler ve ticari mutabakat işlemleri alıcı ile tedarikçi arasında doğrudan yürütülür. Euro Agri Trading s.r.o., yapılandırılmış işlem yürütümünü ve dokümantasyon uyumunu destekleyen, AB merkezli bağımsız bir sourcing ve koordinasyon ortağı olarak faaliyet gösterir.",
+
+"payment.opt.lcSight": "Görüldüğünde ödemeli gayrikabili rücu akreditif (Irrevocable LC at Sight) — Tercih edilen ödeme yapısı",
+
+"payment.opt.collection": "D/P / CAD — Ayrıca değerlendirilebilir, uyum incelemesi ve işlem profiline tabi olarak",
+
+"payment.opt.sblc": "SBLC / banka teminatı — Ayrıca değerlendirilebilir, uyum incelemesi ve işlem profiline tabi olarak",
+
+"payment.guard": "Peşin ödeme yoktur. Yükleme sırasında bağımsız üçüncü taraf denetimi (SGS / Intertek / BV) mutabakata bağlı olarak organize edilebilir.",
+
+"payment.note": "Tedarikçinin banka bilgileri, RFQ onayı ve alıcı doğrulamasından sonra Proforma Fatura (PI) içinde paylaşılır.",
+
+"payment.btn.request": "Proforma / ödeme yapısı talep et",
+
+"payment.disclaimer": "Nihai ödeme şartları, uyum incelemesi, karşı taraf doğrulaması ve işlem yapısı temelinde her işlem için ayrı ayrı kararlaştırılır.",
 
   "wise.note": "Banka bilgileri yalnızca RFQ teyidi ve alıcı doğrulamasından sonra paylaşılır.",
 
