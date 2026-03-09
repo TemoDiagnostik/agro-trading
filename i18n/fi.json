@@ -19,7 +19,7 @@
   "hero.specsNote": "Fosfaattikivi — monilähteinen toimitus lähetyskohtaisella COA:lla.",
   "hero.productsLine": "Fosfaattikivi (ensisijainen painopiste)",
   "hero.productsOnRequest": "Lisätoimituslinjat saatavilla pyynnöstä.",
-  "hero.tradeNote": "Toteutusmalli: näkyvä remburssi (LC at sight) • SGS/Intertek/BV-tarkastus • lähetyskohtainen dokumentaatio",
+"hero.tradeNote": "Ensisijainen: peruuttamaton remburssi nähtäessä (Irrevocable LC at Sight) • Myös mahdollisia: D/P / CAD sekä SBLC / pankkitakaus • Compliance-tarkastuksen ja transaktioprofiilin mukaisesti • SGS/Intertek/BV-tarkastus • Lähetyskohtainen dokumentaatio",
   "hero.primaryFocus": "Ensisijainen painopiste: fosfaattikivi (18–34% P₂O₅) — lähetyskohtainen varmennus.",
 "sup.hero.cta.supplier": "Toimittajahakemus (KYC)",
 "sup.apply.title": "Ryhdytä Varmistetuksi Toimituskumppaniksi",
@@ -73,7 +73,7 @@
   "sup.trade.card1.title": "Provision rakenne",
   "sup.trade.card1.text": "Perustuu kirjalliseen sopimukseen, jossa määritellään laajuus ja transaktion laukaisijat.",
   "sup.trade.card2.title": "Turvallinen maksamalli",
-  "sup.trade.card2.text": "Ensisijainen rakenne: peruuttamaton näkyvä remburssi (LC at sight) (sopimuksen mukaisen linjauksen edellytyksellä).",
+"sup.trade.card2.text": "Ensisijainen: peruuttamaton remburssi nähtäessä (Irrevocable LC at Sight) (sopimuksellisen yhteensovituksen edellytyksin).",
   "sup.trade.card3.title": "Luottamuksellisuus",
   "sup.trade.card3.text": "Suorat toimittajatiedot jaetaan vasta varmennuksen ja sopimuksellisen linjauksen jälkeen.",
   "sup.trade.card4.title": "Hallittu dokumentaatio",
@@ -82,7 +82,7 @@
   "sup.trade.cta.rfq": "Pyydä RFQ",
 
   "trust.title": "EU-pohjainen toteutus.",
-  "trust.text": "LC at sight • Riippumaton tarkastus (SGS/Intertek/BV) • lähetyskohtainen COA • varmennettu dokumentaatio.",
+"trust.text": "Ensisijainen rakenne: peruuttamaton remburssi nähtäessä (Irrevocable LC at Sight) • Riippumaton tarkastus (SGS/Intertek/BV) • Lähetyskohtainen COA • Vahvistettu dokumentaatio",
 
   "cat.cta.rfq": "Pyydä RFQ",
   "cat.cta.specs": "Katso tekniset tiedot",
@@ -224,7 +224,7 @@
   "how.lead": "Euro Agri Trading s.r.o. toimii itsenäisenä EU-pohjaisena hankinta- ja transaktiokoordinointiyhtiönä. Yhdistämme varmennetut toimittajat kelpuutettuihin ostajiin ja tuemme prosessia strukturoituna ja vaatimustenmukaisena.",
   "how.policyTitle": "Transaktiopolitiikka (riskinhallinta)",
   "how.policyLead": "Suojataksemme kaikki osapuolet ja varmistaaksemme ammattimaisen toteutuksen, noudatamme vakiintuneita kansainvälisiä kauppakäytäntöjä:",
-  "how.p1": "Ensisijainen maksu: näkyvä remburssi (LC at sight) (100%) — ostajan/myyjän sopimuksen mukaan",
+"how.p1": "Ensisijainen: peruuttamaton remburssi nähtäessä (Irrevocable LC at Sight) • Myös mahdollisia: D/P / CAD sekä SBLC / pankkitakaus, compliance-tarkastuksen ja transaktioprofiilin mukaisesti",
   "how.p2": "Ei ennakkomaksuja",
   "how.p3": "Riippumaton tarkastus lastauksessa: SGS / Intertek / BV (sovitusti)",
   "how.p4": "Lähetyskohtainen dokumentaatio: COA/SGS per lähetys; raskasmetallit (esim. Cd) pyynnöstä tai markkinavaatimuksen mukaan",
@@ -232,7 +232,7 @@
   "how.conf.title": "Luottamuksellisuus- ja yhteistyökehys",
   "how.conf.text": "Sovellamme ammattimaista luottamuksellisuutta osapuolia esitellessämme. Vastapuolen tiedot jaetaan vasta, kun on vastaanotettu vakava pyyntö (RFQ/LOI), ja yhteistyökehys vahvistetaan kirjallisesti selkeyden, läpinäkyvyyden ja suojan varmistamiseksi kaikille osapuolille. Toistotilaukset tai transaktiot esiteltyjen osapuolten kanssa pysyvät suojattuina sovitun suoja-ajan puitteissa.",
   "how.noteTitle": "Tärkeä huomautus",
-  "how.noteText": "Euro Agri Trading s.r.o. ei ole myyntisopimuksen osapuoli myyjän ja ostajan välillä. Myyntisopimus, toimitusehdot ja suoritusvelvoitteet sovitaan suoraan myyjän ja ostajan välillä, LC-ehtojen ja riippumattoman kolmannen osapuolen tarkastuksen tukemana soveltuvin osin.",
+"how.noteText": "Euro Agri Trading s.r.o. ei ole myyjän ja ostajan välisen kauppasopimuksen sopimuspuoli. Kauppasopimus, toimitusehdot ja suoritusvelvoitteet sovitaan suoraan myyjän ja ostajan välillä remburssiehtojen तथा soveltuvin osin riippumattoman kolmannen osapuolen tarkastuksen tukemina.",
 
   "compliance.title": "Vaatimustenmukaisuus ja varmennus",
   "compliance.lead": "Esitetyt spesifikaatiot ovat ohjeellisia ja tarkoitettu vain kaupalliseksi viitteeksi. Lopulliset tuoteparametrit vahvistetaan yksinomaan lähetyskohtaisella COA:lla ja riippumattomilla tarkastusraporteilla soveltuvin osin.",
@@ -282,16 +282,23 @@
   "about.p3": "Yhtiö on rekisteröity Tšekin tasavaltaan ja toimii soveltuvien EU:n kauppa- ja sääntelykehysten mukaisesti.",
   "about.note": "Euro Agri Trading s.r.o. ei ole myyntisopimuksen osapuoli myyjän ja ostajan välillä. Sopimusvelvoitteet sovitaan suoraan transaktion osapuolten kesken.",
 
-  "payment.title": "Maksu- ja selvityskehys",
-  "payment.opt.lcSight": "Peruuttamaton näkyvä remburssi (LC at sight) (100%) — ensisijainen rakenne",
-  "payment.opt.lcUsance": "Aikaremburssi / lykkätty LC — edellyttää vaatimustenmukaisuustarkistusta ja hyväksyntää",
-  "payment.opt.collection": "Dokumenttiperintä (vain D/P) — kelpuutetuille toistuville ostajille",
-  "payment.opt.sblc": "SBLC / pankkitakaus — sopimuksen mukaan (tarvittaessa)",
-  "payment.disclaimer": "Lopulliset maksuehdot sovitaan tapauskohtaisesti vaatimustenmukaisuuden, vastapuolen varmennuksen ja transaktion rakenteen perusteella.",
-  "payment.lead": "Maksut ja kaupan selvitykset hoidetaan suoraan ostajan ja myyjän välillä. Euro Agri Trading s.r.o. toimii itsenäisenä EU-pohjaisena hankinta- ja koordinointikumppanina, joka tukee strukturoitua transaktiototeutusta.",
-  "payment.note": "Toimittajan pankkitiedot toimitetaan proforma-laskussa (PI) RFQ-vahvistuksen ja ostajan varmennuksen jälkeen.",
-  "payment.btn.request": "Pyydä proforma / maksustruktuuri",
-  "payment.guard": "Ei ennakkomaksuja. Riippumaton kolmannen osapuolen tarkastus lastauksessa voidaan järjestää sovitusti.",
+ "payment.title": "Maksu- ja selvitysviitekehys",
+
+"payment.lead": "Maksut ja kauppaan liittyvät selvitykset hoidetaan suoraan ostajan ja toimittajan välillä. Euro Agri Trading s.r.o. toimii itsenäisenä EU-pohjaisena hankinta- ja koordinointikumppanina, joka tukee transaktioiden jäsenneltyä toteutusta ja dokumentaation yhteensovittamista.",
+
+"payment.opt.lcSight": "Peruuttamaton remburssi nähtäessä (Irrevocable LC at Sight) — Ensisijainen maksurakenne",
+
+"payment.opt.collection": "D/P / CAD — Myös mahdollisia, compliance-tarkastuksen ja transaktioprofiilin mukaisesti",
+
+"payment.opt.sblc": "SBLC / pankkitakaus — Myös mahdollisia, compliance-tarkastuksen ja transaktioprofiilin mukaisesti",
+
+"payment.guard": "Ei ennakkomaksuja. Riippumaton kolmannen osapuolen tarkastus lastauksen yhteydessä (SGS / Intertek / BV) voidaan järjestää sopimuksen mukaan.",
+
+"payment.note": "Toimittajan pankkitiedot toimitetaan proformalaskussa (PI) RFQ-vahvistuksen ja ostajan verifioinnin jälkeen.",
+
+"payment.btn.request": "Pyydä proforma / maksurakenne",
+
+"payment.disclaimer": "Lopulliset maksuehdot sovitaan tapauskohtaisesti compliance-tarkastuksen, vastapuolen verifioinnin ja transaktion rakenteen perusteella.",
 
   "wise.note": "Pankkitiedot jaetaan vain RFQ-vahvistuksen ja ostajan varmennuksen jälkeen.",
 
