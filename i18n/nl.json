@@ -38,7 +38,7 @@
   "products.secondaryLead": "Gecoördineerd bij bevestigde vraag, herkomstallocatie en documentatie op zendingniveau.",
 
   "sup.hero.title": "Geverifieerd leveranciersnetwerk — fosfaatgesteente & speciale meststoffen",
-  "sup.hero.subtitle": "Compliance geverifieerd per zending • Gestructureerde documentatie • Multi-origine coördinatie afgestemd op EU-importnormen.",
+"sup.hero.trustline": "Reacties op RFQ binnen 24–48 uur • Zending-specifieke documentatie wordt gedeeld na verificatie van de koper",
   "sup.hero.desc": "Primaire sourcingfocus: fosfaatgesteente (18–34% P₂O₅). Aanvullende speciale meststoffen worden gecoördineerd op gestructureerde aanvraag. Leveranciersidentiteiten worden uitsluitend onder NDA en na kopersverificatie gedeeld.",
   "sup.hero.trustline": "RFQ-antwoorden binnen 24–48 uur • Documentatie gedeeld na kopersverificatie",
   "sup.hero.cta.rfq": "RFQ aanvragen",
@@ -69,7 +69,7 @@
   "sup.verify.step3.text": "Onafhankelijke inspectie geregeld via SGS / Intertek / BV (zoals overeengekomen).",
   "sup.verify.step4.title": "Documentatie-afstemming",
   "sup.verify.step4.text": "COA, BL, CI/PL, COO afgestemd vóór uitvoering.",
-  "sup.verify.note": "Leveranciersidentiteiten en zendingdocumenten worden uitsluitend gedeeld na RFQ-bevestiging, kopersverificatie en NDA (waar van toepassing).",
+"sup.verify.note": "Identiteiten van leveranciers en zending-specifieke documenten worden pas vrijgegeven na RFQ-bevestiging, verificatie van de koper en NDA waar van toepassing.",
   "sup.trade.title": "Gestructureerd handelsframework",
   "sup.trade.text": "Euro Agri Trading s.r.o. opereert als EU-gebaseerde partner voor sourcing- en transacticoördinatie. De uitvoering is gestructureerd onder gedocumenteerde engagementvoorwaarden en afgestemd op internationale handelspraktijk.",
   "sup.trade.card1.title": "Commissiestructuur",
