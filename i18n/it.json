@@ -19,7 +19,7 @@
   "hero.specsNote": "Roccia fosfatica — fornitura multi-origine con COA specifico per spedizione.",
   "hero.productsLine": "Roccia fosfatica (focus principale)",
   "hero.productsOnRequest": "Linee di fornitura aggiuntive disponibili su richiesta.",
-  "hero.tradeNote": "Struttura di esecuzione: LC a vista • ispezione SGS/Intertek/BV • documentazione specifica per spedizione",
+"hero.tradeNote": "Preferito: credito documentario irrevocabile a vista (Irrevocable LC at Sight) • Valutabili anche: D/P / CAD e SBLC / garanzia bancaria • Soggetto a verifica di compliance e al profilo della transazione • Ispezione SGS/Intertek/BV • Documentazione specifica per spedizione",
   "hero.primaryFocus": "Focus principale: roccia fosfatica (18–34% P₂O₅) — validazione specifica per spedizione.",
 
 "sup.hero.cta.supplier": "Candidatura Fornitore (KYC)",
@@ -75,7 +75,7 @@
   "sup.trade.card1.title": "Struttura commissionale",
   "sup.trade.card1.text": "Regolata da accordo scritto con ambito definito e trigger di transazione.",
   "sup.trade.card2.title": "Modello di pagamento sicuro",
-  "sup.trade.card2.text": "Struttura preferita: LC irrevocabile a vista (soggetta ad allineamento contrattuale).",
+"sup.trade.card2.text": "Preferito: credito documentario irrevocabile a vista (Irrevocable LC at Sight) (soggetto ad allineamento contrattuale).",
   "sup.trade.card3.title": "Riservatezza",
   "sup.trade.card3.text": "I dettagli diretti dei fornitori vengono condivisi solo dopo verifica e allineamento contrattuale.",
   "sup.trade.card4.title": "Documentazione controllata",
@@ -84,7 +84,7 @@
   "sup.trade.cta.rfq": "Richiedi RFQ",
 
   "trust.title": "Esecuzione con base UE.",
-  "trust.text": "LC a vista • Ispezione indipendente (SGS/Intertek/BV) • COA specifico per spedizione • documentazione verificata.",
+"trust.text": "Struttura preferita: credito documentario irrevocabile a vista (Irrevocable LC at Sight) • Ispezione indipendente (SGS/Intertek/BV) • COA specifico per spedizione • Documentazione verificata",
 
   "cat.cta.rfq": "Richiedi RFQ",
   "cat.cta.specs": "Vedi specifiche",
@@ -220,7 +220,7 @@
   "how.lead": "Euro Agri Trading s.r.o. opera come società indipendente con base UE per l’approvvigionamento e il coordinamento delle transazioni. Mettiamo in contatto fornitori verificati con acquirenti qualificati e supportiamo il processo in modo strutturato e conforme.",
   "how.policyTitle": "Politica di transazione (controllo del rischio)",
   "how.policyLead": "Per proteggere tutte le parti e garantire un’esecuzione professionale, seguiamo le prassi standard del commercio internazionale:",
-  "how.p1": "Pagamento preferito: LC a vista (100%) — soggetto ad accordo tra acquirente e venditore",
+"how.p1": "Preferito: credito documentario irrevocabile a vista (Irrevocable LC at Sight) • Valutabili anche: D/P / CAD e SBLC / garanzia bancaria, soggetto a verifica di compliance e al profilo della transazione",
   "how.p2": "Nessun pagamento anticipato",
   "how.p3": "Ispezione indipendente al carico: SGS / Intertek / BV (come concordato)",
   "how.p4": "Documentazione specifica per spedizione: COA/SGS per spedizione; metalli pesanti (es. Cd) forniti su richiesta o secondo requisiti di mercato",
@@ -228,7 +228,7 @@
   "how.conf.title": "Riservatezza e quadro di ingaggio",
   "how.conf.text": "Applichiamo una riservatezza professionale quando introduciamo le parti. I dettagli della controparte vengono condivisi solo dopo una richiesta seria (RFQ/LOI) e il quadro di ingaggio viene confermato per iscritto per garantire chiarezza, trasparenza e protezione per tutte le parti. Ordini ripetuti o transazioni con le parti introdotte restano coperti dal periodo di protezione concordato.",
   "how.noteTitle": "Nota importante",
-  "how.noteText": "Euro Agri Trading s.r.o. non è parte contraente del contratto di vendita tra venditore e acquirente. Il contratto di vendita, i termini di consegna e gli obblighi di performance sono concordati direttamente tra venditore e acquirente, supportati dalle condizioni LC e da ispezione indipendente di terza parte ove applicabile.",
+"how.noteText": "Euro Agri Trading s.r.o. non è parte contrattuale del contratto di vendita tra venditore e acquirente. Il contratto di vendita, i termini di consegna e gli obblighi di esecuzione sono concordati direttamente tra venditore e acquirente, con il supporto delle condizioni del credito documentario e di un’ispezione indipendente di terza parte ove applicabile.",
 
   "compliance.title": "Conformità e verifica",
   "compliance.lead": "Le specifiche mostrate sono indicative e fornite solo come guida commerciale. I parametri finali del prodotto sono confermati esclusivamente tramite COA specifico per spedizione e report di ispezione indipendente ove applicabile.",
@@ -279,15 +279,22 @@
   "about.note": "Euro Agri Trading s.r.o. non è parte contraente del contratto di vendita tra venditore e acquirente. Gli obblighi contrattuali sono concordati direttamente tra le parti transanti.",
 
   "payment.title": "Quadro di pagamento e regolamento",
-  "payment.opt.lcSight": "LC irrevocabile a vista (100%) — struttura primaria",
-  "payment.opt.lcUsance": "LC usance / differita — soggetta a revisione di conformità e approvazione",
-  "payment.opt.collection": "Incasso documentario (solo D/P) — per acquirenti qualificati e ricorrenti",
-  "payment.opt.sblc": "SBLC / Garanzia bancaria — come concordato contrattualmente (se richiesto)",
-  "payment.disclaimer": "I termini di pagamento finali sono concordati caso per caso in base a conformità, verifica della controparte e struttura della transazione.",
-  "payment.lead": "Pagamenti e regolamenti commerciali sono gestiti direttamente tra acquirente e venditore. Euro Agri Trading s.r.o. opera come partner indipendente con base UE per il coordinamento e il supporto all’esecuzione strutturata delle transazioni.",
-  "payment.note": "I dettagli bancari del fornitore sono forniti nella Proforma Invoice (PI) dopo conferma RFQ e verifica dell’acquirente.",
-  "payment.btn.request": "Richiedi proforma / struttura di pagamento",
-  "payment.guard": "Nessun pagamento anticipato. Ispezione indipendente di terza parte al carico può essere organizzata come concordato.",
+
+"payment.lead": "I pagamenti e i regolamenti commerciali sono gestiti direttamente tra l’acquirente e il fornitore. Euro Agri Trading s.r.o. opera come partner indipendente con sede nell’UE per sourcing e coordinamento, supportando un’esecuzione strutturata delle transazioni e l’allineamento documentale.",
+
+"payment.opt.lcSight": "Credito documentario irrevocabile a vista (Irrevocable LC at Sight) — Struttura di pagamento preferita",
+
+"payment.opt.collection": "D/P / CAD — Valutabili anche, soggetto a verifica di compliance e al profilo della transazione",
+
+"payment.opt.sblc": "SBLC / garanzia bancaria — Valutabili anche, soggetto a verifica di compliance e al profilo della transazione",
+
+"payment.guard": "Nessun pagamento anticipato. Un’ispezione indipendente di terza parte al carico (SGS / Intertek / BV) può essere organizzata previo accordo.",
+
+"payment.note": "Le coordinate bancarie del fornitore sono fornite nella fattura proforma (PI) dopo la conferma dell’RFQ e la verifica dell’acquirente.",
+
+"payment.btn.request": "Richiedi proforma / struttura di pagamento",
+
+"payment.disclaimer": "I termini finali di pagamento sono concordati caso per caso sulla base della verifica di compliance, della verifica della controparte e della struttura della transazione.",
 
   "wise.note": "I dettagli bancari vengono condivisi solo dopo conferma RFQ e verifica dell’acquirente.",
   "contact.title": "Contattaci",
