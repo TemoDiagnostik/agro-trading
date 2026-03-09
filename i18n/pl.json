@@ -19,7 +19,7 @@
   "hero.specsNote": "Fosforyty — dostawy z wielu źródeł z COA dla każdej dostawy.",
   "hero.productsLine": "Fosforyty (główny obszar)",
   "hero.productsOnRequest": "Dodatkowe linie dostaw dostępne na zapytanie.",
-  "hero.tradeNote": "Ramy realizacji: akredytywa płatna za okazaniem (LC at sight) • inspekcja SGS/Intertek/BV • dokumentacja dla konkretnej dostawy",
+"hero.tradeNote": "Preferowane: nieodwołalna akredytywa płatna za okazaniem (Irrevocable LC at Sight) • Dopuszczalne również: D/P / CAD oraz SBLC / gwarancja bankowa • Z zastrzeżeniem weryfikacji compliance i profilu transakcji • Inspekcja SGS/Intertek/BV • Dokumentacja właściwa dla danej wysyłki",
   "hero.primaryFocus": "Główny obszar: fosforyty (18–34% P₂O₅) — weryfikacja dla każdej dostawy.",
 
 "sup.hero.cta.supplier": "Zgłoszenie Dostawcy (KYC)",
@@ -75,7 +75,7 @@
   "sup.trade.card1.title": "Struktura prowizji",
   "sup.trade.card1.text": "Regulowana pisemną umową z określonym zakresem i warunkami uruchomienia rozliczeń.",
   "sup.trade.card2.title": "Bezpieczny model płatności",
-  "sup.trade.card2.text": "Preferowana struktura: nieodwołalna akredytywa płatna za okazaniem (zależnie od uzgodnień umownych).",
+"sup.trade.card2.text": "Preferowane: nieodwołalna akredytywa płatna za okazaniem (Irrevocable LC at Sight) (z zastrzeżeniem uzgodnień kontraktowych).",
   "sup.trade.card3.title": "Poufność",
   "sup.trade.card3.text": "Bezpośrednie dane dostawcy udostępniane wyłącznie po weryfikacji i uzgodnieniu umownym.",
   "sup.trade.card4.title": "Kontrolowana dokumentacja",
@@ -84,7 +84,7 @@
   "sup.trade.cta.rfq": "Wyślij RFQ",
 
   "trust.title": "Realizacja z siedzibą w UE.",
-  "trust.text": "LC at sight • Niezależna inspekcja (SGS/Intertek/BV) • COA dla konkretnej dostawy • zweryfikowana dokumentacja.",
+"trust.text": "Preferowana struktura: nieodwołalna akredytywa płatna za okazaniem (Irrevocable LC at Sight) • Niezależna inspekcja (SGS/Intertek/BV) • COA właściwe dla danej wysyłki • Zweryfikowana dokumentacja",
 
   "cat.cta.rfq": "Wyślij RFQ",
   "cat.cta.specs": "Zobacz specyfikacje",
@@ -220,7 +220,7 @@
   "how.lead": "Euro Agri Trading s.r.o. działa jako niezależna firma z siedzibą w UE zajmująca się pozyskiwaniem i koordynacją transakcji. Łączymy zweryfikowanych dostawców z kwalifikowanymi kupującymi i wspieramy proces w sposób ustrukturyzowany i zgodny z wymogami.",
   "how.policyTitle": "Polityka transakcyjna (kontrola ryzyka)",
   "how.policyLead": "Aby chronić wszystkie strony i zapewnić profesjonalną realizację, stosujemy standardowe praktyki handlu międzynarodowego:",
-  "how.p1": "Preferowana płatność: akredytywa płatna za okazaniem (100%) — zależnie od uzgodnień kupujący/sprzedający",
+"how.p1": "Preferowane: nieodwołalna akredytywa płatna za okazaniem (Irrevocable LC at Sight) • Dopuszczalne również: D/P / CAD oraz SBLC / gwarancja bankowa, z zastrzeżeniem weryfikacji compliance i profilu transakcji",
   "how.p2": "Brak płatności z góry",
   "how.p3": "Niezależna inspekcja przy załadunku: SGS / Intertek / BV (zgodnie z ustaleniami)",
   "how.p4": "Dokumentacja dla konkretnej dostawy: COA/SGS dla dostawy; metale ciężkie (np. Cd) na życzenie lub wg wymagań rynku",
@@ -228,7 +228,7 @@
   "how.conf.title": "Poufność i ramy współpracy",
   "how.conf.text": "Stosujemy profesjonalną poufność przy kojarzeniu stron. Dane kontrahenta są udostępniane dopiero po otrzymaniu poważnego zapytania (RFQ/LOI), a ramy współpracy są potwierdzane na piśmie, aby zapewnić jasność, przejrzystość i ochronę wszystkich stron. Powtórne zamówienia lub transakcje z przedstawionymi stronami pozostają objęte ustalonym okresem ochronnym.",
   "how.noteTitle": "Ważna informacja",
-  "how.noteText": "Euro Agri Trading s.r.o. nie jest stroną umowy sprzedaży pomiędzy sprzedającym a kupującym. Umowa sprzedaży, warunki dostawy i obowiązki wykonawcze są uzgadniane bezpośrednio pomiędzy sprzedającym i kupującym, przy wsparciu warunków LC oraz niezależnej inspekcji strony trzeciej, jeśli dotyczy.",
+"how.noteText": "Euro Agri Trading s.r.o. nie jest stroną umowy sprzedaży pomiędzy sprzedającym a kupującym. Umowa sprzedaży, warunki dostawy oraz obowiązki wykonawcze są uzgadniane bezpośrednio między sprzedającym a kupującym, przy wsparciu warunków akredytywy i niezależnej inspekcji strony trzeciej, tam gdzie ma to zastosowanie.",
 
   "compliance.title": "Zgodność i weryfikacja",
   "compliance.lead": "Podane specyfikacje mają charakter orientacyjny i służą wyłącznie jako wskazówka handlowa. Końcowe parametry produktu są potwierdzane wyłącznie przez COA dla konkretnej dostawy oraz niezależne raporty z inspekcji, jeśli dotyczy.",
@@ -278,16 +278,23 @@
   "about.p3": "Spółka jest zarejestrowana w Republice Czeskiej i działa zgodnie z obowiązującymi ramami handlowymi i regulacyjnymi UE.",
   "about.note": "Euro Agri Trading s.r.o. nie jest stroną umowy sprzedaży pomiędzy sprzedającym a kupującym. Zobowiązania umowne są uzgadniane bezpośrednio pomiędzy stronami transakcji.",
 
-  "payment.title": "Ramy płatności i rozliczeń",
-  "payment.opt.lcSight": "Nieodwołalna akredytywa płatna za okazaniem (100%) — struktura podstawowa",
-  "payment.opt.lcUsance": "Akredytywa odroczona (usance) — zależnie od przeglądu zgodności i akceptacji",
-  "payment.opt.collection": "Inkaso dokumentowe (tylko D/P) — dla kwalifikowanych stałych kupujących",
-  "payment.opt.sblc": "SBLC / gwarancja bankowa — zgodnie z ustaleniami umownymi (jeśli wymagana)",
-  "payment.disclaimer": "Ostateczne warunki płatności są uzgadniane indywidualnie w zależności od zgodności, weryfikacji kontrahenta i struktury transakcji.",
-  "payment.lead": "Płatności i rozliczenia handlowe są realizowane bezpośrednio pomiędzy kupującym a sprzedającym. Euro Agri Trading s.r.o. działa jako niezależny partner z siedzibą w UE wspierający ustrukturyzowaną realizację transakcji.",
-  "payment.note": "Dane bankowe dostawcy są podawane w fakturze proforma (PI) po potwierdzeniu RFQ i weryfikacji kupującego.",
-  "payment.btn.request": "Poproś o proformę / strukturę płatności",
-  "payment.guard": "Brak płatności z góry. Niezależna inspekcja strony trzeciej przy załadunku może zostać zorganizowana zgodnie z ustaleniami.",
+  "payment.title": "Ramy płatności i rozliczenia",
+
+"payment.lead": "Płatności i rozliczenia handlowe są realizowane bezpośrednio między kupującym a dostawcą. Euro Agri Trading s.r.o. działa jako niezależny partner sourcingowo-koordynacyjny z siedzibą w UE, wspierający uporządkowaną realizację transakcji i uzgodnienie dokumentacji.",
+
+"payment.opt.lcSight": "Nieodwołalna akredytywa płatna za okazaniem (Irrevocable LC at Sight) — Preferowana struktura płatności",
+
+"payment.opt.collection": "D/P / CAD — Dopuszczalne również, z zastrzeżeniem weryfikacji compliance i profilu transakcji",
+
+"payment.opt.sblc": "SBLC / gwarancja bankowa — Dopuszczalne również, z zastrzeżeniem weryfikacji compliance i profilu transakcji",
+
+"payment.guard": "Brak płatności zaliczkowych. Niezależna inspekcja strony trzeciej przy załadunku (SGS / Intertek / BV) może zostać zorganizowana zgodnie z ustaleniami.",
+
+"payment.note": "Dane bankowe dostawcy są przekazywane w fakturze pro forma (PI) po potwierdzeniu RFQ i weryfikacji kupującego.",
+
+"payment.btn.request": "Poproś o pro formę / strukturę płatności",
+
+"payment.disclaimer": "Ostateczne warunki płatności są uzgadniane indywidualnie w oparciu o weryfikację compliance, weryfikację kontrahenta i strukturę transakcji.",
 
   "wise.note": "Dane bankowe są udostępniane wyłącznie po potwierdzeniu RFQ i weryfikacji kupującego.",
   "contact.title": "Skontaktuj się",
