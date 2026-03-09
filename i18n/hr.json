@@ -19,7 +19,7 @@
   "hero.specsNote": "Fosfatna stijena — opskrba iz više podrijetla uz COA specifičan za pošiljku.",
   "hero.productsLine": "Fosfatna stijena (glavni fokus)",
   "hero.productsOnRequest": "Dodatne linije opskrbe dostupne na zahtjev.",
-  "hero.tradeNote": "Okvir izvršenja: neopozivi akreditiv na viđenje • inspekcija SGS/Intertek/BV • dokumentacija specifična za pošiljku",
+"hero.tradeNote": "Preferirano: neopozivi akreditiv po viđenju (Irrevocable LC at Sight) • Također se razmatraju: D/P / CAD i SBLC / bankovna garancija • Uz provjeru usklađenosti i profil transakcije • Inspekcija SGS/Intertek/BV • Dokumentacija specifična za pošiljku",
   "hero.primaryFocus": "Glavni fokus: fosfatna stijena (18–34% P₂O₅) — validacija po pošiljci.",
 "sup.hero.cta.supplier": "Prijava dobavljača (KYC)",
 "sup.apply.title": "Postanite verificirani opskrbni partner",
@@ -74,7 +74,7 @@
   "sup.trade.card1.title": "Struktura provizije",
   "sup.trade.card1.text": "Uređeno pisanim ugovorom s definiranim opsegom i okidačima transakcije.",
   "sup.trade.card2.title": "Siguran model plaćanja",
-  "sup.trade.card2.text": "Preferirana struktura: neopozivi akreditiv na viđenje (uz ugovorno usklađenje).",
+"sup.trade.card2.text": "Preferirano: neopozivi akreditiv po viđenju (Irrevocable LC at Sight) (uz ugovorno usklađenje).",
   "sup.trade.card3.title": "Povjerljivost",
   "sup.trade.card3.text": "Izravni podaci o dobavljaču dijele se tek nakon provjere i ugovornog usklađenja.",
   "sup.trade.card4.title": "Kontrolirana dokumentacija",
@@ -83,7 +83,7 @@
   "sup.trade.cta.rfq": "Zatraži RFQ",
 
   "trust.title": "Izvršenje sa sjedištem u EU.",
-  "trust.text": "Akreditiv na viđenje • Neovisna inspekcija (SGS/Intertek/BV) • COA specifičan za pošiljku • Provjerena dokumentacija.",
+"trust.text": "Preferirana struktura: neopozivi akreditiv po viđenju (Irrevocable LC at Sight) • Neovisna inspekcija (SGS/Intertek/BV) • COA specifičan za pošiljku • Verificirana dokumentacija",
 
   "cat.cta.rfq": "Zatraži RFQ",
   "cat.cta.specs": "Pogledaj specifikacije",
@@ -219,7 +219,7 @@
   "how.lead": "Euro Agri Trading s.r.o. djeluje kao neovisna EU-bazirana tvrtka za nabavu i koordinaciju transakcija. Povezujemo provjerene dobavljače s kvalificiranim kupcima i podržavamo proces na strukturiran i usklađen način.",
   "how.policyTitle": "Politika transakcija (kontrola rizika)",
   "how.policyLead": "Radi zaštite svih strana i profesionalnog izvršenja, slijedimo standardne međunarodne trgovinske prakse:",
-  "how.p1": "Preferirano plaćanje: akreditiv na viđenje (100%) — uz dogovor kupca i prodavatelja",
+"how.p1": "Preferirano: neopozivi akreditiv po viđenju (Irrevocable LC at Sight) • Također se razmatraju: D/P / CAD i SBLC / bankovna garancija, uz provjeru usklađenosti i profil transakcije",
   "how.p2": "Bez avansnih uplata",
   "how.p3": "Neovisna inspekcija pri utovaru: SGS / Intertek / BV (prema dogovoru)",
   "how.p4": "Dokumentacija specifična za pošiljku: COA/SGS po pošiljci; teški metali (npr. Cd) na zahtjev ili prema zahtjevu tržišta",
@@ -227,7 +227,7 @@
   "how.conf.title": "Povjerljivost i okvir angažmana",
   "how.conf.text": "Primjenjujemo profesionalnu povjerljivost pri upoznavanju strana. Podaci o drugoj strani dijele se tek nakon ozbiljnog zahtjeva (RFQ/LOI) i pisane potvrde okvira angažmana kako bi se osigurala jasnoća, transparentnost i zaštita. Ponovljene narudžbe ili transakcije s uvedenim stranama ostaju pokrivene tijekom dogovorenog razdoblja zaštite.",
   "how.noteTitle": "Važna napomena",
-  "how.noteText": "Euro Agri Trading s.r.o. nije ugovorna strana u kupoprodajnom ugovoru između prodavatelja i kupca. Ugovor o prodaji, uvjeti isporuke i obveze izvedbe dogovaraju se izravno između transakcijskih strana, uz uvjete akreditiva i neovisnu inspekciju treće strane gdje je primjenjivo.",
+"how.noteText": "Euro Agri Trading s.r.o. nije ugovorna strana kupoprodajnog ugovora između prodavatelja i kupca. Kupoprodajni ugovor, uvjeti isporuke i obveze izvršenja dogovaraju se izravno između prodavatelja i kupca, uz potporu uvjeta akreditiva i neovisne inspekcije treće strane gdje je primjenjivo.",
 
   "compliance.title": "Usklađenost i verifikacija",
   "compliance.lead": "Prikazane specifikacije su indikativne i služe isključivo kao komercijalna smjernica. Konačni parametri proizvoda potvrđuju se isključivo COA-om specifičnim za pošiljku i neovisnim inspekcijskim izvješćima gdje je primjenjivo.",
@@ -278,15 +278,22 @@
   "about.note": "Euro Agri Trading s.r.o. nije ugovorna strana u kupoprodajnom ugovoru između prodavatelja i kupca. Ugovorne obveze dogovaraju se izravno između transakcijskih strana.",
 
   "payment.title": "Okvir plaćanja i namire",
-  "payment.opt.lcSight": "Neopozivi akreditiv na viđenje (100%) — primarna struktura",
-  "payment.opt.lcUsance": "Akreditiv s odgodom / usance — uz pregled usklađenosti i odobrenje",
-  "payment.opt.collection": "Dokumentarna naplata (samo D/P) — za kvalificirane kupce s ponavljanjem",
-  "payment.opt.sblc": "SBLC / bankovna garancija — prema ugovoru (ako je potrebno)",
-  "payment.disclaimer": "Konačni uvjeti plaćanja dogovaraju se od slučaja do slučaja ovisno o usklađenosti, provjeri druge strane i strukturi transakcije.",
-  "payment.lead": "Plaćanja i trgovačke namire provode se izravno između kupca i prodavatelja. Euro Agri Trading s.r.o. djeluje kao neovisni EU-bazirani partner za nabavu i koordinaciju, podržavajući strukturirano izvršenje transakcija.",
-  "payment.note": "Bankovni podaci dobavljača dostavljaju se u proforma fakturi (PI) nakon potvrde RFQ-a i provjere kupca.",
-  "payment.btn.request": "Zatraži proformu / strukturu plaćanja",
-  "payment.guard": "Bez avansnih uplata. Neovisna inspekcija treće strane pri utovaru može se organizirati prema dogovoru.",
+
+"payment.lead": "Plaćanja i trgovačke namire odvijaju se izravno između kupca i dobavljača. Euro Agri Trading s.r.o. djeluje kao neovisni partner sa sjedištem u EU za sourcing i koordinaciju, podržavajući strukturirano izvršenje transakcija i usklađivanje dokumentacije.",
+
+"payment.opt.lcSight": "Neopozivi akreditiv po viđenju (Irrevocable LC at Sight) — Preferirana struktura plaćanja",
+
+"payment.opt.collection": "D/P / CAD — Također se razmatraju, uz provjeru usklađenosti i profil transakcije",
+
+"payment.opt.sblc": "SBLC / bankovna garancija — Također se razmatraju, uz provjeru usklađenosti i profil transakcije",
+
+"payment.guard": "Bez avansnih plaćanja. Neovisna inspekcija treće strane pri utovaru (SGS / Intertek / BV) može se organizirati prema dogovoru.",
+
+"payment.note": "Bankovni podaci dobavljača dostavljaju se u profakturi (PI) nakon potvrde RFQ-a i verifikacije kupca.",
+
+"payment.btn.request": "Zatraži profakturu / strukturu plaćanja",
+
+"payment.disclaimer": "Konačni uvjeti plaćanja dogovaraju se od slučaja do slučaja na temelju provjere usklađenosti, provjere druge ugovorne strane i strukture transakcije.",
 
   "wise.note": "Bankovni podaci dijele se tek nakon potvrde RFQ-a i provjere kupca.",
 
