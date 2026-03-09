@@ -19,7 +19,7 @@
   "hero.specsNote": "Fosfat de rocă — aprovizionare multi-origine cu COA specific transportului.",
   "hero.productsLine": "Fosfat de rocă (focus principal)",
   "hero.productsOnRequest": "Linii suplimentare de aprovizionare disponibile la cerere.",
-  "hero.tradeNote": "Cadru de execuție: LC la vedere • inspecție SGS/Intertek/BV • documentație specifică transportului",
+"hero.tradeNote": "Preferat: acreditiv irevocabil la vedere (Irrevocable LC at Sight) • De asemenea pot fi luate în considerare: D/P / CAD și SBLC / garanție bancară • Sub rezerva revizuirii de conformitate și a profilului tranzacției • Inspecție SGS/Intertek/BV • Documentație specifică fiecărei livrări",
   "hero.primaryFocus": "Focus principal: Fosfat de rocă (18–34% P₂O₅) — validare specifică transportului.",
 
 "sup.hero.cta.supplier": "Aplicare Furnizor (KYC)",
@@ -75,7 +75,7 @@
   "sup.trade.card1.title": "Structură de comision",
   "sup.trade.card1.text": "Guvernată de acord scris, cu domeniu definit și declanșatori de tranzacție.",
   "sup.trade.card2.title": "Model de plată securizat",
-  "sup.trade.card2.text": "Structură preferată: LC irevocabil la vedere (sub rezerva alinierii contractuale).",
+"sup.trade.card2.text": "Preferat: acreditiv irevocabil la vedere (Irrevocable LC at Sight) (sub rezerva alinierii contractuale).",
   "sup.trade.card3.title": "Confidențialitate",
   "sup.trade.card3.text": "Detaliile directe ale furnizorilor sunt partajate doar după verificare și aliniere contractuală.",
   "sup.trade.card4.title": "Documentație controlată",
@@ -84,7 +84,7 @@
   "sup.trade.cta.rfq": "Solicită RFQ",
 
   "trust.title": "Execuție bazată în UE.",
-  "trust.text": "LC la vedere • Inspecție independentă (SGS/Intertek/BV) • COA specific transportului • documentație verificată.",
+"trust.text": "Structură preferată: acreditiv irevocabil la vedere (Irrevocable LC at Sight) • Inspecție independentă (SGS/Intertek/BV) • COA specific fiecărei livrări • Documentație verificată",
 
   "cat.cta.rfq": "Solicită RFQ",
   "cat.cta.specs": "Vezi specificațiile",
@@ -220,7 +220,7 @@
   "how.lead": "Euro Agri Trading s.r.o. operează ca o companie independentă din UE pentru aprovizionare și coordonare de tranzacții. Conectăm furnizori verificați cu cumpărători calificați și susținem procesul într-un mod structurat și conform.",
   "how.policyTitle": "Politică de tranzacționare (controlul riscului)",
   "how.policyLead": "Pentru a proteja toate părțile și a asigura o execuție profesionistă, urmăm practicile standard ale comerțului internațional:",
-  "how.p1": "Plată preferată: LC la vedere (100%) — sub rezerva acordului cumpărător/vânzător",
+"how.p1": "Preferat: acreditiv irevocabil la vedere (Irrevocable LC at Sight) • De asemenea pot fi luate în considerare: D/P / CAD și SBLC / garanție bancară, sub rezerva revizuirii de conformitate și a profilului tranzacției",
   "how.p2": "Fără plăți în avans",
   "how.p3": "Inspecție independentă la încărcare: SGS / Intertek / BV (conform acordului)",
   "how.p4": "Documentație specifică transportului: COA/SGS per transport; metale grele (de ex., Cd) furnizate la cerere sau în funcție de cerințele pieței",
@@ -228,7 +228,7 @@
   "how.conf.title": "Confidențialitate & cadru de angajament",
   "how.conf.text": "Aplicăm confidențialitate profesională atunci când introducem părțile. Detaliile contrapărții sunt partajate doar după primirea unei solicitări serioase (RFQ/LOI), iar cadrul de angajament este confirmat în scris pentru a asigura claritate, transparență și protecție pentru toate părțile. Repetarea comenzilor sau tranzacțiilor cu părțile introduse rămâne acoperită în termenul de protecție agreat.",
   "how.noteTitle": "Notă importantă",
-  "how.noteText": "Euro Agri Trading s.r.o. nu este parte contractantă la contractul de vânzare dintre vânzător și cumpărător. Contractul de vânzare, termenii de livrare și obligațiile de performanță sunt agreate direct între părțile tranzacționante, susținute de condițiile LC și de inspecția terță independentă, unde este cazul.",
+"how.noteText": "Euro Agri Trading s.r.o. nu este parte contractuală în contractul de vânzare dintre vânzător și cumpărător. Contractul de vânzare, condițiile de livrare și obligațiile de executare sunt convenite direct între vânzător și cumpărător, cu sprijinul condițiilor LC și al unei inspecții independente efectuate de o terță parte, acolo unde este aplicabil.",
 
   "compliance.title": "Conformitate & verificare",
   "compliance.lead": "Specificațiile afișate sunt orientative și furnizate doar ca ghid comercial. Parametrii finali ai produsului sunt confirmați exclusiv prin COA specific transportului și rapoarte de inspecție independentă, unde este cazul.",
@@ -278,16 +278,25 @@
   "about.p3": "Compania este înregistrată în Republica Cehă și operează în aliniere cu cadrele comerciale și de reglementare aplicabile în UE.",
   "about.note": "Euro Agri Trading s.r.o. nu este parte contractantă la contractul de vânzare dintre vânzător și cumpărător. Obligațiile contractuale sunt agreate direct între părțile tranzacționante.",
 
-  "payment.title": "Cadru de plată & decontare",
-  "payment.opt.lcSight": "LC irevocabil la vedere (100%) — structură principală",
-  "payment.opt.lcUsance": "LC la termen / amânat — sub rezerva evaluării de conformitate și aprobării",
-  "payment.opt.collection": "Încasare documentară (doar D/P) — pentru cumpărători recurenți calificați",
-  "payment.opt.sblc": "SBLC / garanție bancară — conform acordului contractual (dacă este necesar)",
-  "payment.disclaimer": "Termenii finali de plată sunt agreați caz cu caz, în funcție de conformitate, verificarea contrapărții și structura tranzacției.",
-  "payment.lead": "Plățile și decontările comerciale sunt gestionate direct între cumpărător și vânzător. Euro Agri Trading s.r.o. operează ca partener independent din UE pentru aprovizionare și coordonare, susținând execuția structurată a tranzacțiilor.",
-  "payment.note": "Detaliile bancare ale furnizorului sunt furnizate în Proforma Invoice (PI) după confirmarea RFQ și verificarea cumpărătorului.",
-  "payment.btn.request": "Solicită proformă / structură de plată",
-  "payment.guard": "Fără plăți în avans. Inspecția terță independentă la încărcare poate fi organizată conform acordului.",
+  "how.noteText": "Euro Agri Trading s.r.o. nu este parte contractuală în contractul de vânzare dintre vânzător și cumpărător. Contractul de vânzare, condițiile de livrare și obligațiile de executare sunt convenite direct între vânzător și cumpărător, cu sprijinul condițiilor LC și al unei inspecții independente efectuate de o terță parte, acolo unde este aplicabil.",
+
+"payment.title": "Cadru de plată și decontare",
+
+"payment.lead": "Plățile și decontările comerciale sunt gestionate direct între cumpărător și furnizor. Euro Agri Trading s.r.o. acționează ca partener independent de sourcing și coordonare cu sediul în UE, susținând execuția structurată a tranzacțiilor și alinierea documentației.",
+
+"payment.opt.lcSight": "Acreditiv irevocabil la vedere (Irrevocable LC at Sight) — Structură de plată preferată",
+
+"payment.opt.collection": "D/P / CAD — De asemenea pot fi luate în considerare, sub rezerva revizuirii de conformitate și a profilului tranzacției",
+
+"payment.opt.sblc": "SBLC / garanție bancară — De asemenea pot fi luate în considerare, sub rezerva revizuirii de conformitate și a profilului tranzacției",
+
+"payment.guard": "Fără plăți în avans. O inspecție independentă efectuată de o terță parte la încărcare (SGS / Intertek / BV) poate fi organizată conform acordului.",
+
+"payment.note": "Datele bancare ale furnizorului sunt furnizate în factura proformă (PI) după confirmarea RFQ și verificarea cumpărătorului.",
+
+"payment.btn.request": "Solicită proformă / structură de plată",
+
+"payment.disclaimer": "Condițiile finale de plată sunt convenite de la caz la caz, pe baza revizuirii de conformitate, a verificării contrapărții și a structurii tranzacției.",
 
   "wise.note": "Detaliile bancare sunt partajate doar după confirmarea RFQ și verificarea cumpărătorului.",
   "contact.title": "Contactează-ne",
