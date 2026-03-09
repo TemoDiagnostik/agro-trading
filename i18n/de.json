@@ -46,7 +46,7 @@
   "products.secondaryLead": "Koordiniert nach bestätigter Nachfrage, Ursprungsallokation und sendungsbezogener Dokumentation.",
 
   "sup.hero.title": "Verifiziertes Lieferantennetzwerk — Rohphosphat & Spezialdünger",
-  "sup.hero.subtitle": "Sendungsgeprüfte Compliance • Strukturierte Dokumentation • Multi-Origin-Koordination gemäß EU-Importstandards.",
+"sup.hero.trustline": "RFQ-Antworten innerhalb von 24–48 Stunden • Sendungsspezifische Dokumentation wird nach Verifizierung des Käufers bereitgestellt",
   "sup.hero.desc": "Primärer Beschaffungsfokus: Rohphosphat (18–34% P₂O₅). Zusätzliche Spezialdünger werden auf strukturierte Anfrage koordiniert. Lieferantenidentitäten werden nur unter NDA und nach Käuferverifizierung offengelegt.",
   "sup.hero.trustline": "RFQ-Antworten innerhalb von 24–48 Stunden • Dokumentation nach Käuferverifizierung",
   "sup.hero.cta.rfq": "RFQ anfordern",
@@ -77,7 +77,7 @@
   "sup.verify.step3.text": "Unabhängige Inspektion über SGS / Intertek / BV (nach Vereinbarung).",
   "sup.verify.step4.title": "Dokumentationsabgleich",
   "sup.verify.step4.text": "COA, BL, CI/PL, COO werden vor der Abwicklung abgeglichen.",
-  "sup.verify.note": "Lieferantenidentitäten und Versanddokumente werden erst nach RFQ-Bestätigung, Käuferverifizierung und NDA (wo zutreffend) offengelegt.",
+"sup.verify.note": "Lieferantenidentitäten und sendungsspezifische Dokumente werden erst nach RFQ-Bestätigung, Verifizierung des Käufers und NDA offengelegt, soweit anwendbar.",
   "sup.trade.title": "Strukturiertes Handelsframework",
   "sup.trade.text": "Euro Agri Trading s.r.o. agiert als EU-basierter Partner für Beschaffung und Transaktionskoordination. Die Abwicklung erfolgt strukturiert unter dokumentierten Engagement-Bedingungen und im Einklang mit internationaler Handelspraxis.",
   "sup.trade.card1.title": "Provisionsstruktur",
