@@ -29,7 +29,7 @@
   "hero.specsNote": "Råfosfat — multi-origin forsyning med forsendelsesspecifik COA.",
   "hero.productsLine": "Råfosfat (primært fokus)",
   "hero.productsOnRequest": "Yderligere forsyningslinjer kan koordineres efter anmodning.",
-  "hero.tradeNote": "Eksekveringsramme: LC at sight • SGS/Intertek/BV-inspektion • forsendelsesspecifik dokumentation",
+"hero.tradeNote": "Foretrukket: uigenkaldelig remburs ved sigt (Irrevocable LC at Sight) • Også muligt: D/P / CAD og SBLC / bankgaranti • Underlagt compliance-gennemgang og transaktionsprofil • SGS/Intertek/BV-inspektion • Forsendelsesspecifik dokumentation",
   "hero.primaryFocus": "Primært fokus: Råfosfat (18–34% P₂O₅) — forsendelsesspecifik validering.",
 "sup.hero.cta.supplier": "Leverandøransøgning (KYC)",
 "sup.apply.title": "Bliv en verificeret leverandørpartner",
@@ -83,7 +83,7 @@
   "sup.trade.card1.title": "Kommissionsstruktur",
   "sup.trade.card1.text": "Reguleret af skriftlig aftale med defineret scope og transaktionsudløsere.",
   "sup.trade.card2.title": "Sikker betalingsmodel",
-  "sup.trade.card2.text": "Foretrukken struktur: uigenkaldelig LC at sight (afhængigt af kontraktmæssig afstemning).",
+"sup.trade.card2.text": "Foretrukket: uigenkaldelig remburs ved sigt (Irrevocable LC at Sight) (under forudsætning af kontraktmæssig tilpasning).",
   "sup.trade.card3.title": "Fortrolighed",
   "sup.trade.card3.text": "Direkte leverandøroplysninger deles kun efter verifikation og kontraktmæssig afstemning.",
   "sup.trade.card4.title": "Kontrolleret dokumentation",
@@ -92,7 +92,7 @@
   "sup.trade.cta.rfq": "Anmod om RFQ",
 
   "trust.title": "EU-baseret eksekvering.",
-  "trust.text": "LC at sight • Uafhængig inspektion (SGS/Intertek/BV) • forsendelsesspecifik COA • verificeret dokumentation.",
+"trust.text": "Foretrukken struktur: uigenkaldelig remburs ved sigt (Irrevocable LC at Sight) • Uafhængig inspektion (SGS/Intertek/BV) • Forsendelsesspecifik COA • Verificeret dokumentation",
 
   "cat.cta.rfq": "Anmod om RFQ",
   "cat.cta.specs": "Se specifikationer",
@@ -221,7 +221,7 @@
   "how.lead": "Euro Agri Trading s.r.o. fungerer som en uafhængig EU-baseret sourcing- og transaktionskoordineringsvirksomhed. Vi forbinder verificerede leverandører med kvalificerede købere og understøtter processen på en struktureret og compliant måde.",
   "how.policyTitle": "Transaktionspolitik (risikokontrol)",
   "how.policyLead": "For at beskytte alle parter og sikre professionel eksekvering følger vi standard international handelspraksis:",
-  "how.p1": "Foretrukken betaling: LC at sight (100%) — afhængigt af køber/sælger-aftale",
+"how.p1": "Foretrukket: uigenkaldelig remburs ved sigt (Irrevocable LC at Sight) • Også muligt: D/P / CAD og SBLC / bankgaranti, underlagt compliance-gennemgang og transaktionsprofil",
   "how.p2": "Ingen forudbetalinger",
   "how.p3": "Uafhængig inspektion ved lastning: SGS / Intertek / BV (som aftalt)",
   "how.p4": "Forsendelsesspecifik dokumentation: COA/SGS pr. forsendelse; tungmetaller (fx Cd) leveres efter anmodning eller markedskrav",
@@ -229,7 +229,7 @@
   "how.conf.title": "Fortrolighed & engagementramme",
   "how.conf.text": "Vi anvender professionel fortrolighed ved introduktion af parter. Modpartsoplysninger deles først efter modtagelse af en seriøs anmodning (RFQ/LOI), og engagementrammen bekræftes skriftligt for at sikre klarhed, transparens og beskyttelse for alle parter. Gentagne ordrer eller transaktioner med introducerede parter forbliver dækket inden for den aftalte beskyttelsesperiode.",
   "how.noteTitle": "Vigtig note",
-  "how.noteText": "Euro Agri Trading s.r.o. er ikke kontraktpart i salgsaftalen mellem sælger og køber. Salgsaftale, leveringsvilkår og opfyldelsesforpligtelser aftales direkte mellem sælger og køber, understøttet af LC-betingelser og uafhængig tredjepartsinspektion, hvor relevant.",
+"how.noteText": "Euro Agri Trading s.r.o. er ikke kontraktpart i salgsaftalen mellem sælger og køber. Salgsaftalen, leveringsvilkårene og opfyldelsesforpligtelserne aftales direkte mellem sælger og køber, understøttet af rembursvilkår og uafhængig tredjepartsinspektion, hvor det er relevant.",
 
   "compliance.title": "Compliance & verifikation",
   "compliance.lead": "De viste specifikationer er vejledende og kun til kommerciel reference. Endelige produktparametre bekræftes udelukkende via forsendelsesspecifik COA og uafhængige inspektionsrapporter, hvor relevant.",
@@ -279,16 +279,23 @@
   "about.p3": "Virksomheden er registreret i Tjekkiet og opererer i overensstemmelse med gældende EU-handels- og regulatoriske rammer.",
   "about.note": "Euro Agri Trading s.r.o. er ikke kontraktpart i salgsaftalen mellem sælger og køber. Kontraktlige forpligtelser aftales direkte mellem de handlende parter.",
 
-  "payment.title": "Betalings- & afviklingsramme",
-  "payment.opt.lcSight": "Uigenkaldelig LC at sight (100%) — primær struktur",
-  "payment.opt.lcUsance": "Usance / udsat LC — afhængigt af compliance-gennemgang og godkendelse",
-  "payment.opt.collection": "Dokumentarinkasso (kun D/P) — for kvalificerede repeat-købere",
-  "payment.opt.sblc": "SBLC / bankgaranti — som aftalt kontraktligt (hvis påkrævet)",
-  "payment.disclaimer": "Endelige betalingsvilkår aftales fra sag til sag baseret på compliance, modpartsverifikation og transaktionsstruktur.",
-  "payment.lead": "Betalinger og trade settlement håndteres direkte mellem køber og sælger. Euro Agri Trading s.r.o. fungerer som en uafhængig EU-baseret sourcing- og koordineringspartner, der understøtter struktureret transaktionseksekvering.",
-  "payment.note": "Leverandørens bankoplysninger fremgår af proformafakturaen (PI) efter RFQ-bekræftelse og køberverifikation.",
-  "payment.btn.request": "Anmod om proforma / betalingsstruktur",
-"payment.guard": "Ingen forudbetalinger. Uafhængig tredjepartsinspektion ved lastning kan arrangeres efter aftale.",
+  "payment.title": "Betalings- og afviklingsramme",
+
+"payment.lead": "Betalinger og handelsafvikling håndteres direkte mellem køber og leverandør. Euro Agri Trading s.r.o. fungerer som en uafhængig EU-baseret sourcing- og koordineringspartner, der understøtter struktureret transaktionsgennemførelse og dokumentationsafstemning.",
+
+"payment.opt.lcSight": "Uigenkaldelig remburs ved sigt (Irrevocable LC at Sight) — Foretrukken betalingsstruktur",
+
+"payment.opt.collection": "D/P / CAD — Kan også overvejes, underlagt compliance-gennemgang og transaktionsprofil",
+
+"payment.opt.sblc": "SBLC / bankgaranti — Kan også overvejes, underlagt compliance-gennemgang og transaktionsprofil",
+
+"payment.guard": "Ingen forudbetalinger. Uafhængig tredjepartsinspektion ved lastning (SGS / Intertek / BV) kan arrangeres efter aftale.",
+
+"payment.note": "Leverandørens bankoplysninger fremsendes i proformafakturaen (PI) efter RFQ-bekræftelse og køberverifikation.",
+
+"payment.btn.request": "Anmod om proforma / betalingsstruktur",
+
+"payment.disclaimer": "Endelige betalingsvilkår aftales fra sag til sag på grundlag af compliance-gennemgang, modpartsverifikation og transaktionsstruktur.",
   
   "contact.title": "Kontakt os",
   "form.name": "Navn",
