@@ -19,7 +19,7 @@
   "hero.specsNote": "Fosfato Natural — fornecimento multi-origem com COA específico por embarque.",
   "hero.productsLine": "Fosfato Natural (Foco Principal)",
   "hero.productsOnRequest": "Linhas adicionais de fornecimento disponíveis mediante pedido.",
-  "hero.tradeNote": "Estrutura de execução: LC à vista • inspeção SGS/Intertek/BV • documentação específica por embarque",
+"hero.tradeNote": "Preferencial: crédito documentário irrevogável à vista (Irrevocable LC at Sight) • Também considerados: D/P / CAD e SBLC / garantia bancária • Sujeito à revisão de compliance e ao perfil da transação • Inspeção SGS/Intertek/BV • Documentação específica da remessa",
   "hero.primaryFocus": "Foco principal: Fosfato Natural (18–34% P₂O₅) — validação específica por embarque.",
 
 "sup.hero.cta.supplier": "Candidatura de Fornecedor (KYC)",
@@ -76,7 +76,7 @@
   "sup.trade.card1.title": "Estrutura de Comissão",
   "sup.trade.card1.text": "Regida por acordo escrito com âmbito definido e gatilhos de transação.",
   "sup.trade.card2.title": "Modelo de Pagamento Seguro",
-  "sup.trade.card2.text": "Estrutura preferida: LC irrevogável à vista (sujeito a alinhamento contratual).",
+"sup.trade.card2.text": "Preferencial: crédito documentário irrevogável à vista (Irrevocable LC at Sight) (sujeito a alinhamento contratual).",
   "sup.trade.card3.title": "Confidencialidade",
   "sup.trade.card3.text": "Detalhes diretos do fornecedor partilhados apenas após verificação e alinhamento contratual.",
   "sup.trade.card4.title": "Documentação Controlada",
@@ -85,7 +85,7 @@
   "sup.trade.cta.rfq": "Solicitar RFQ",
 
   "trust.title": "Execução com base na UE.",
-  "trust.text": "LC à vista • Inspeção independente (SGS/Intertek/BV) • COA específico por embarque • documentação verificada.",
+"trust.text": "Estrutura preferencial: crédito documentário irrevogável à vista (Irrevocable LC at Sight) • Inspeção independente (SGS/Intertek/BV) • COA específico da remessa • Documentação verificada",
 
   "cat.cta.rfq": "Solicitar RFQ",
   "cat.cta.specs": "Ver Especificações",
@@ -221,7 +221,7 @@
   "how.lead": "A Euro Agri Trading s.r.o. opera como uma empresa independente, com base na UE, de aquisição e coordenação de transações. Ligamos fornecedores verificados a compradores qualificados e apoiamos o processo de forma estruturada e conforme.",
   "how.policyTitle": "Política de Transação (Controlo de Risco)",
   "how.policyLead": "Para proteger todas as partes e garantir execução profissional, seguimos práticas padrão do comércio internacional:",
-  "how.p1": "Pagamento preferido: LC à vista (100%) — sujeito a acordo comprador/vendedor",
+"how.p1": "Preferencial: crédito documentário irrevogável à vista (Irrevocable LC at Sight) • Também considerados: D/P / CAD e SBLC / garantia bancária, sujeito à revisão de compliance e ao perfil da transação",
   "how.p2": "Sem pagamentos adiantados",
   "how.p3": "Inspeção independente no carregamento: SGS / Intertek / BV (conforme acordado)",
   "how.p4": "Documentação específica por embarque: COA/SGS por embarque; metais pesados (p. ex., Cd) fornecidos mediante pedido ou exigência do mercado",
@@ -229,7 +229,7 @@
   "how.conf.title": "Confidencialidade e Estrutura de Envolvimento",
   "how.conf.text": "Aplicamos confidencialidade profissional ao introduzir partes. Os detalhes da contraparte são partilhados apenas após receber um pedido sério (RFQ/LOI) e a estrutura de envolvimento é confirmada por escrito para garantir clareza, transparência e proteção para todas as partes. Pedidos repetidos ou transações com as partes apresentadas permanecem cobertos dentro do período de proteção acordado.",
   "how.noteTitle": "Nota Importante",
-  "how.noteText": "A Euro Agri Trading s.r.o. não é parte contratante no contrato de compra e venda entre vendedor e comprador. O contrato de venda, termos de entrega e obrigações de desempenho são acordados diretamente entre vendedor e comprador, suportados por condições do LC e inspeção independente por terceiros quando aplicável.",
+"how.noteText": "A Euro Agri Trading s.r.o. não é parte contratante do contrato de compra e venda entre vendedor e comprador. O contrato de compra e venda, os termos de entrega e as obrigações de execução são acordados diretamente entre vendedor e comprador, com suporte das condições do crédito documentário e de inspeção independente por terceiros, quando aplicável.",
 
   "compliance.title": "Conformidade e Verificação",
   "compliance.lead": "As especificações apresentadas são indicativas e fornecidas apenas para orientação comercial. Os parâmetros finais do produto são confirmados exclusivamente por COA específico por embarque e relatórios de inspeção independente quando aplicável.",
@@ -279,16 +279,23 @@
   "about.p3": "A empresa está registada na República Checa e opera em alinhamento com as estruturas comerciais e regulamentares aplicáveis da UE.",
   "about.note": "A Euro Agri Trading s.r.o. não é parte contratante no contrato de compra e venda entre vendedor e comprador. As obrigações contratuais são acordadas diretamente entre as partes transacionantes.",
 
-  "payment.title": "Estrutura de Pagamento e Liquidação",
-  "payment.opt.lcSight": "LC irrevogável à vista (100%) — Estrutura principal",
-  "payment.opt.lcUsance": "LC a prazo / diferido — sujeito a revisão de conformidade e aprovação",
-  "payment.opt.collection": "Cobrança Documentária (apenas D/P) — para compradores recorrentes qualificados",
-  "payment.opt.sblc": "SBLC / Garantia Bancária — conforme acordado contratualmente (se necessário)",
-  "payment.disclaimer": "Os termos finais de pagamento são acordados caso a caso com base na conformidade, verificação da contraparte e estrutura da transação.",
-  "payment.lead": "Os pagamentos e liquidações comerciais são tratados diretamente entre o comprador e o vendedor. A Euro Agri Trading s.r.o. opera como um parceiro independente, com base na UE, de aquisição e coordenação, apoiando a execução estruturada de transações.",
-  "payment.note": "Os dados bancários do fornecedor são fornecidos na Fatura Proforma (PI) após confirmação do RFQ e verificação do comprador.",
-  "payment.btn.request": "Solicitar Proforma / Estrutura de Pagamento",
-  "payment.guard": "Sem pagamentos adiantados. Inspeção independente por terceiros no carregamento pode ser organizada conforme acordado.",
+  "payment.title": "Estrutura de pagamento e liquidação",
+
+"payment.lead": "Os pagamentos e as liquidações comerciais são tratados diretamente entre o comprador e o fornecedor. A Euro Agri Trading s.r.o. atua como parceira independente de sourcing e coordenação sediada na UE, apoiando a execução estruturada das transações e o alinhamento documental.",
+
+"payment.opt.lcSight": "Crédito documentário irrevogável à vista (Irrevocable LC at Sight) — Estrutura de pagamento preferencial",
+
+"payment.opt.collection": "D/P / CAD — Também considerados, sujeito à revisão de compliance e ao perfil da transação",
+
+"payment.opt.sblc": "SBLC / garantia bancária — Também considerados, sujeito à revisão de compliance e ao perfil da transação",
+
+"payment.guard": "Sem pagamentos antecipados. Uma inspeção independente por terceiros no carregamento (SGS / Intertek / BV) pode ser organizada mediante acordo.",
+
+"payment.note": "Os dados bancários do fornecedor são fornecidos na fatura pro forma (PI) após a confirmação do RFQ e a verificação do comprador.",
+
+"payment.btn.request": "Solicitar pro forma / estrutura de pagamento",
+
+"payment.disclaimer": "As condições finais de pagamento são acordadas caso a caso com base na revisão de compliance, na verificação da contraparte e na estrutura da transação.",
 
   "wise.note": "Os dados bancários são partilhados apenas após confirmação do RFQ e verificação do comprador.",
   "contact.title": "Entre em contacto",
