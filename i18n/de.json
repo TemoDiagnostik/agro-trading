@@ -29,7 +29,7 @@
   "hero.specsNote": "Rohphosphat — Multi-Origin-Lieferung mit sendungsspezifischem COA.",
   "hero.productsLine": "Rohphosphat (Primärfokus)",
   "hero.productsOnRequest": "Weitere Lieferlinien auf Anfrage verfügbar.",
-  "hero.tradeNote": "Abwicklungsrahmen: Akkreditiv bei Sicht • SGS/Intertek/BV-Inspektion • sendungsspezifische Dokumentation",
+"hero.tradeNote": "Bevorzugt: unwiderrufliches Akkreditiv bei Sicht (Irrevocable LC at Sight) • Ebenfalls möglich: D/P / CAD sowie SBLC / Bankgarantie • Vorbehaltlich Compliance-Prüfung und Transaktionsprofil • SGS/Intertek/BV-Inspektion • Sendungsspezifische Dokumentation",
   "hero.primaryFocus": "Primärfokus: Rohphosphat (18–34% P₂O₅) — sendungsspezifische Validierung.",
 "sup.hero.cta.supplier": "Lieferantenantrag (KYC)",
 "sup.apply.title": "Werden Sie ein verifizierter Lieferpartner",
@@ -83,7 +83,7 @@
   "sup.trade.card1.title": "Provisionsstruktur",
   "sup.trade.card1.text": "Geregelt durch eine schriftliche Vereinbarung mit definiertem Umfang und Transaktionsauslösern.",
   "sup.trade.card2.title": "Sicheres Zahlungsmodell",
-  "sup.trade.card2.text": "Bevorzugte Struktur: Unwiderrufliches Akkreditiv bei Sicht (vorbehaltlich vertraglicher Abstimmung).",
+"sup.trade.card2.text": "Bevorzugt: unwiderrufliches Akkreditiv bei Sicht (Irrevocable LC at Sight) (vorbehaltlich vertraglicher Abstimmung).",
   "sup.trade.card3.title": "Vertraulichkeit",
   "sup.trade.card3.text": "Direkte Lieferantendetails werden nur nach Verifizierung und vertraglicher Abstimmung geteilt.",
   "sup.trade.card4.title": "Kontrollierte Dokumentation",
@@ -92,7 +92,7 @@
   "sup.trade.cta.rfq": "RFQ anfordern",
 
   "trust.title": "EU-basierte Abwicklung.",
-  "trust.text": "Akkreditiv bei Sicht • Unabhängige Inspektion (SGS/Intertek/BV) • sendungsspezifisches COA • verifizierte Dokumentation.",
+"trust.text": "Bevorzugte Struktur: unwiderrufliches Akkreditiv bei Sicht (Irrevocable LC at Sight) • Unabhängige Inspektion (SGS/Intertek/BV) • Sendungsspezifisches COA • Verifizierte Dokumentation",
 
   "cat.cta.rfq": "RFQ anfordern",
   "cat.cta.specs": "Spezifikationen ansehen",
@@ -221,7 +221,7 @@
   "how.lead": "Euro Agri Trading s.r.o. agiert als unabhängiges, EU-basiertes Unternehmen für Beschaffung und Transaktionskoordination. Wir verbinden verifizierte Lieferanten mit qualifizierten Käufern und unterstützen den Prozess strukturiert und compliant.",
   "how.policyTitle": "Transaktionspolitik (Risikokontrolle)",
   "how.policyLead": "Zum Schutz aller Parteien und zur Sicherstellung professioneller Abwicklung folgen wir standardmäßigen internationalen Handelspraktiken:",
-  "how.p1": "Bevorzugte Zahlung: Akkreditiv bei Sicht (100%) — vorbehaltlich Käufer/Verkäufer-Vereinbarung",
+"how.p1": "Bevorzugt: unwiderrufliches Akkreditiv bei Sicht (Irrevocable LC at Sight) • Ebenfalls möglich: D/P / CAD sowie SBLC / Bankgarantie, vorbehaltlich Compliance-Prüfung und Transaktionsprofil",
   "how.p2": "Keine Vorauszahlungen",
   "how.p3": "Unabhängige Inspektion bei Verladung: SGS / Intertek / BV (nach Vereinbarung)",
   "how.p4": "Sendungsspezifische Dokumentation: COA/SGS je Sendung; Schwermetalle (z. B. Cd) auf Anfrage oder nach Marktanforderung",
@@ -229,7 +229,7 @@
   "how.conf.title": "Vertraulichkeits- & Engagement-Rahmen",
   "how.conf.text": "Bei der Einführung von Parteien wenden wir professionelle Vertraulichkeit an. Gegenparteidaten werden erst nach Erhalt einer ernsthaften Anfrage (RFQ/LOI) geteilt, und der Engagement-Rahmen wird schriftlich bestätigt, um Klarheit, Transparenz und Schutz für alle Parteien sicherzustellen. Wiederholbestellungen oder Transaktionen mit eingeführten Parteien bleiben innerhalb der vereinbarten Schutzfrist abgedeckt.",
   "how.noteTitle": "Wichtiger Hinweis",
-  "how.noteText": "Euro Agri Trading s.r.o. ist keine Vertragspartei des Kaufvertrags zwischen Verkäufer und Käufer. Kaufvertrag, Lieferbedingungen und Leistungspflichten werden direkt zwischen Verkäufer und Käufer vereinbart, gestützt durch LC-Bedingungen und unabhängige Drittinspektion, wo zutreffend.",
+"how.noteText": "Euro Agri Trading s.r.o. ist keine Vertragspartei des Kaufvertrags zwischen Verkäufer und Käufer. Kaufvertrag, Lieferbedingungen und Leistungspflichten werden unmittelbar zwischen Verkäufer und Käufer vereinbart, gestützt auf Akkreditivbedingungen und unabhängige Drittinspektion, soweit anwendbar.",
 
   "compliance.title": "Compliance & Verifizierung",
   "compliance.lead": "Die gezeigten Spezifikationen sind indikativ und dienen nur der kommerziellen Orientierung. Endgültige Produktparameter werden ausschließlich durch sendungsspezifisches COA und ggf. unabhängige Inspektionsberichte bestätigt.",
@@ -279,16 +279,23 @@
   "about.p3": "Das Unternehmen ist in der Tschechischen Republik registriert und operiert im Einklang mit den anwendbaren EU-Handels- und regulatorischen Rahmenbedingungen.",
   "about.note": "Euro Agri Trading s.r.o. ist keine Vertragspartei des Kaufvertrags zwischen Verkäufer und Käufer. Vertragliche Verpflichtungen werden direkt zwischen den transaktierenden Parteien vereinbart.",
 
-  "payment.title": "Zahlungs- & Abwicklungsrahmen",
-  "payment.opt.lcSight": "Unwiderrufliches Akkreditiv bei Sicht (100%) — Primärstruktur",
-  "payment.opt.lcUsance": "Usance / gestundetes Akkreditiv — vorbehaltlich Compliance-Prüfung und Genehmigung",
-  "payment.opt.collection": "Dokumentarinkasso (nur D/P) — für qualifizierte Wiederholungskäufer",
-  "payment.opt.sblc": "SBLC / Bankgarantie — nach vertraglicher Vereinbarung (falls erforderlich)",
-  "payment.disclaimer": "Endgültige Zahlungsbedingungen werden fallweise auf Basis von Compliance, Gegenparteiverifizierung und Transaktionsstruktur vereinbart.",
-  "payment.lead": "Zahlungen und Handelsabwicklungen erfolgen direkt zwischen Käufer und Verkäufer. Euro Agri Trading s.r.o. agiert als unabhängiger, EU-basierter Beschaffungs- und Koordinationspartner zur Unterstützung strukturierter Transaktionsabwicklung.",
-  "payment.note": "Bankdetails des Lieferanten werden in der Proforma-Rechnung (PI) nach RFQ-Bestätigung und Käuferverifizierung bereitgestellt.",
-  "payment.btn.request": "Proforma / Zahlungsstruktur anfordern",
-"payment.guard": "Keine Vorauszahlungen. Eine unabhängige Drittparteieninspektion beim Verladen kann nach Vereinbarung organisiert werden.",
+  "payment.title": "Rahmen für Zahlung und Abwicklung",
+
+"payment.lead": "Zahlungen und handelsbezogene Abwicklungen erfolgen direkt zwischen Käufer und Lieferant. Euro Agri Trading s.r.o. agiert als unabhängiger, in der EU ansässiger Sourcing- und Koordinationspartner zur Unterstützung einer strukturierten Transaktionsabwicklung und abgestimmten Dokumentation.",
+
+"payment.opt.lcSight": "Unwiderrufliches Akkreditiv bei Sicht (Irrevocable LC at Sight) — Bevorzugte Zahlungsstruktur",
+
+"payment.opt.collection": "D/P / CAD — Ebenfalls möglich, vorbehaltlich Compliance-Prüfung und Transaktionsprofil",
+
+"payment.opt.sblc": "SBLC / Bankgarantie — Ebenfalls möglich, vorbehaltlich Compliance-Prüfung und Transaktionsprofil",
+
+"payment.guard": "Keine Vorauszahlungen. Eine unabhängige Drittinspektion bei Verladung (SGS / Intertek / BV) kann nach Vereinbarung organisiert werden.",
+
+"payment.note": "Die Bankdaten des Lieferanten werden in der Proforma-Rechnung (PI) nach Bestätigung der RFQ und Verifizierung des Käufers bereitgestellt.",
+
+"payment.btn.request": "Proforma / Zahlungsstruktur anfordern",
+
+"payment.disclaimer": "Endgültige Zahlungsbedingungen werden im Einzelfall auf Grundlage der Compliance-Prüfung, der Verifizierung der Gegenpartei und der Transaktionsstruktur vereinbart.",
 
   
   "contact.title": "Kontakt aufnehmen",
