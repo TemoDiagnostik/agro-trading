@@ -3531,3 +3531,52 @@ html[dir="rtl"] .lang{ gap:12px; }
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FINAL COOKIE BANNER MOBILE FIX */
+@media (max-width: 768px){
+  .cookie-banner{
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 14px;
+    border-radius: 14px;
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+
+  .cookie-text{
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .cookie-text strong{
+    font-size: 16px;
+  }
+
+  .cookie-actions{
+    gap: 8px;
+  }
+
+  .cookie-actions .btn{
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
