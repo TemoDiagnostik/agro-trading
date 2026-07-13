@@ -3580,3 +3580,82 @@ html[dir="rtl"] .lang{ gap:12px; }
     font-size: 14px;
   }
 }
+
+
+
+
+
+/* ===============================
+   FINAL FIX — COOKIE BANNER SIZE
+   =============================== */
+
+/* Desktop: smaller and cleaner */
+.cookie-banner{
+  max-width: 760px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: 18px;
+  padding: 14px;
+}
+
+.cookie-inner{
+  gap: 14px;
+}
+
+.cookie-text{
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.cookie-text strong{
+  font-size: 15px;
+}
+
+.cookie-actions .btn{
+  padding: 9px 14px;
+  font-size: 13px;
+}
+
+/* Mobile: reduce height and keep it usable */
+@media (max-width: 768px){
+  .cookie-banner{
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    max-width: none;
+    transform: none;
+    padding: 12px;
+    border-radius: 14px;
+    max-height: 45vh;
+    overflow-y: auto;
+  }
+
+  .cookie-inner{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .cookie-text{
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .cookie-text strong{
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+
+  .cookie-actions{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .cookie-actions .btn{
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
