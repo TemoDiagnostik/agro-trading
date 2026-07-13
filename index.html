@@ -1485,6 +1485,83 @@ document.addEventListener('DOMContentLoaded', function () {
 	"sameAs": []
 }
 
+			
 		</script>
+
+
+
+
+
+		<!-- Cookie / Analytics Consent Banner -->
+<div id="cookieBanner" class="cookie-banner" role="region" aria-label="Cookie consent">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong>Analytics Cookies</strong>
+      <span>
+        We use Google Analytics only to understand website traffic and improve our B2B services.
+        Analytics will run only if you accept.
+      </span>
+    </div>
+
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-outline" id="rejectAnalytics">
+        Reject
+      </button>
+
+      <button type="button" class="btn btn-primary" id="acceptAnalytics">
+        Accept Analytics
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('acceptAnalytics');
+  const rejectBtn = document.getElementById('rejectAnalytics');
+
+  if (!banner || !acceptBtn || !rejectBtn) return;
+
+  const consentKey = 'eat_analytics_consent';
+  const savedConsent = localStorage.getItem(consentKey);
+
+  function hideBanner(){
+    banner.classList.remove('is-visible');
+  }
+
+  function loadAnalytics(){
+    if (window.__eatAnalyticsLoaded) return;
+    window.__eatAnalyticsLoaded = true;
+
+    if (typeof window.enableAnalytics === 'function') {
+      window.enableAnalytics('G-6XRD7YWF4S');
+    }
+  }
+
+  if (savedConsent === 'accepted') {
+    loadAnalytics();
+    hideBanner();
+  } else if (savedConsent === 'rejected') {
+    hideBanner();
+  } else {
+    banner.classList.add('is-visible');
+  }
+
+  acceptBtn.addEventListener('click', function () {
+    localStorage.setItem(consentKey, 'accepted');
+    loadAnalytics();
+    hideBanner();
+  });
+
+  rejectBtn.addEventListener('click', function () {
+    localStorage.setItem(consentKey, 'rejected');
+    hideBanner();
+  });
+});
+</script>
+
+		
 	</body>
 </html>
