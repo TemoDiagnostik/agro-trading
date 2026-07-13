@@ -1918,13 +1918,7 @@ form label {
    ============================== */
 
 
-header{
-  position: relative !important;
-}
 
-body{
-  padding-top: 0 !important;
-}
 
 /* ولو تريدها فقط لصفحة الموردين (أكثر أماناً) */
 body.supplier-page{
