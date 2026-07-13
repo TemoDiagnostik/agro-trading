@@ -3659,3 +3659,102 @@ html[dir="rtl"] .lang{ gap:12px; }
     font-size: 14px;
   }
 }
+
+
+
+
+/* ===============================
+   FINAL FIX — MOBILE HEADER SIZE
+   =============================== */
+
+@media (max-width: 768px){
+  header .container.nav{
+    display: grid !important;
+    grid-template-columns: 1fr auto auto !important;
+    grid-template-areas:
+      "brand more lang"
+      "nav nav nav";
+    align-items: center !important;
+    gap: 6px 10px !important;
+    padding: 8px 12px !important;
+  }
+
+  header .brand-wrap{
+    grid-area: brand;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  header .brand img,
+  header .logo-img{
+    height: 34px !important;
+    width: auto !important;
+  }
+
+  header .brand-text{
+    min-width: 0;
+    max-width: 52vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  header .brand-name{
+    font-size: 17px !important;
+    line-height: 1.2;
+  }
+
+  header .brand-sep,
+  header .brand-tagline{
+    display: none !important;
+  }
+
+  header nav{
+    grid-area: nav;
+    min-width: 0;
+    width: 100%;
+  }
+
+  header .navbar-nav{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 12px !important;
+    padding: 4px 0 2px !important;
+    margin: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  header .navbar-nav::-webkit-scrollbar{
+    display: none;
+  }
+
+  header .navbar-nav a{
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 5px 2px !important;
+  }
+
+  header .nav-more{
+    grid-area: more;
+    justify-self: end;
+  }
+
+  header .more-trigger{
+    font-size: 14px !important;
+    padding: 4px 6px !important;
+  }
+
+  header .lang-flags{
+    grid-area: lang;
+    justify-self: end;
+  }
+
+  header .lang-btn{
+    font-size: 13px !important;
+    padding: 4px 6px !important;
+  }
+}
