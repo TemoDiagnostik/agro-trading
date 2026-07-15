@@ -402,12 +402,9 @@
  <script>
   (function () {
     const form = document.getElementById("supplierKycForm");
-    const frame = document.getElementById("supplierSubmitFrame");
     const productBoxes = Array.from(
       document.querySelectorAll('input[name="products"]')
     );
-
-    let submissionStarted = false;
 
     form.addEventListener("submit", function (event) {
       const selectedProducts = productBoxes.some(function (box) {
@@ -421,17 +418,15 @@
         return;
       }
 
-      submissionStarted = true;
-
       const button = form.querySelector('button[type="submit"]');
       button.disabled = true;
       button.textContent = "Submitting...";
-    });
 
-    frame.addEventListener("load", function () {
-      if (!submissionStarted) return;
-
-      window.location.href = "thankyou.html";
+      setTimeout(function () {
+        window.location.replace(
+          "https://euroagritrading.eu/thankyou.html"
+        );
+      }, 3000);
     });
   })();
 </script>
