@@ -6,228 +6,99 @@
   <title>Supplier Pre-Qualification (KYC) | Euro Agri Trading s.r.o.</title>
   <meta name="description" content="Supplier pre-qualification form for companies interested in structured cooperation with Euro Agri Trading s.r.o.">
   <link rel="icon" type="image/png" href="favicon.png">
-
-   <style>
+  <style>
     :root {
-      --green: #0a662f;
-      --green-dark: #075126;
-      --green-soft: #eaf6ef;
-      --gold: #c6a44b;
-      --border: #cddbd2;
-      --text: #1f2933;
-      --muted: #5f6b76;
-      --bg: #f4f7f5;
-      --white: #ffffff;
-      --danger: #a61b1b;
+      --green:#0a662f;
+      --green-dark:#075126;
+      --green-soft:#eaf6ef;
+      --gold:#c6a44b;
+      --border:#cddbd2;
+      --text:#1f2933;
+      --muted:#5f6b76;
+      --bg:#f4f7f5;
+      --white:#fff;
+      --danger:#a61b1b;
     }
-
-    * { box-sizing: border-box; }
-
+    * { box-sizing:border-box; }
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.5;
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
     }
-
-    .topbar {
-      background: var(--white);
-      border-bottom: 1px solid #e5e9e7;
-    }
-
+    .topbar { background:var(--white); border-bottom:1px solid #e5e9e7; }
     .topbar-inner {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      width:min(1120px,calc(100% - 32px));
+      margin:0 auto;
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      gap:16px;
     }
-
-    .logo {
-      width: 58px;
-      height: 58px;
-      object-fit: contain;
-    }
-
-    .brand {
-      font-weight: 700;
-      color: var(--green);
-      font-size: 1.2rem;
-    }
-
-    .tagline {
-      color: var(--muted);
-      font-size: 0.93rem;
-      margin-top: 2px;
-    }
-
-    main {
-      width: min(920px, calc(100% - 32px));
-      margin: 34px auto 60px;
-    }
-
+    .logo { width:58px; height:58px; object-fit:contain; }
+    .brand { font-weight:700; color:var(--green); font-size:1.2rem; }
+    .tagline { color:var(--muted); font-size:.93rem; margin-top:2px; }
+    main { width:min(920px,calc(100% - 32px)); margin:34px auto 60px; }
     .intro {
-      background: linear-gradient(135deg, var(--green-dark), var(--green));
-      color: var(--white);
-      padding: 30px;
-      border-radius: 14px 14px 0 0;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+      background:linear-gradient(135deg,var(--green-dark),var(--green));
+      color:var(--white);
+      padding:30px;
+      border-radius:14px 14px 0 0;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
     }
-
-    .intro h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.65rem, 3vw, 2.35rem);
-    }
-
-    .intro p {
-      margin: 6px 0;
-      max-width: 780px;
-    }
-
-    .required-note {
-      color: #ffe4a3;
-      font-weight: 700;
-      margin-top: 14px !important;
-    }
-
+    .intro h1 { margin:0 0 10px; font-size:clamp(1.65rem,3vw,2.35rem); }
+    .intro p { margin:6px 0; max-width:780px; }
+    .required-note { color:#ffe4a3; font-weight:700; margin-top:14px!important; }
     form {
-      background: var(--white);
-      padding: 30px;
-      border-radius: 0 0 14px 14px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+      background:var(--white);
+      padding:30px;
+      border-radius:0 0 14px 14px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
     }
-
-    fieldset {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      margin: 0 0 24px;
-      padding: 22px;
+    fieldset { border:1px solid var(--border); border-radius:12px; margin:0 0 24px; padding:22px; }
+    legend { padding:0 10px; color:var(--green); font-weight:700; font-size:1.05rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .field { display:flex; flex-direction:column; gap:7px; }
+    .field.full { grid-column:1/-1; }
+    label,.group-label { font-weight:700; font-size:.95rem; }
+    .required { color:var(--danger); }
+    input,textarea {
+      width:100%;
+      border:1px solid #b9c8bf;
+      border-radius:8px;
+      padding:12px 13px;
+      font:inherit;
+      color:var(--text);
+      background:#fff;
     }
-
-    legend {
-      padding: 0 10px;
-      color: var(--green);
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .field.full { grid-column: 1 / -1; }
-
-    label, .group-label {
-      font-weight: 700;
-      font-size: .95rem;
-    }
-
-    .required {
-      color: var(--danger);
-    }
-
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid #b9c8bf;
-      border-radius: 8px;
-      padding: 12px 13px;
-      font: inherit;
-      color: var(--text);
-      background: #fff;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: 3px solid rgba(10, 102, 47, .14);
-      border-color: var(--green);
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .help {
-      color: var(--muted);
-      font-size: .84rem;
-    }
-
-    .choices {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px 18px;
-      margin-top: 8px;
-    }
-
-    .choice {
-      display: flex;
-      align-items: flex-start;
-      gap: 9px;
-      font-weight: 400;
-    }
-
-    .choice input {
-      width: auto;
-      margin-top: 4px;
-      flex: 0 0 auto;
-    }
-
-    .policy-box {
-      background: var(--green-soft);
-      border: 1px solid #acd0ba;
-      border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 14px;
-    }
-
-    .actions {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
+    input:focus,textarea:focus { outline:3px solid rgba(10,102,47,.14); border-color:var(--green); }
+    textarea { min-height:100px; resize:vertical; }
+    .choices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 18px; margin-top:8px; }
+    .choice { display:flex; align-items:flex-start; gap:9px; font-weight:400; }
+    .choice input { width:auto; margin-top:4px; flex:0 0 auto; }
+    .policy-box { background:var(--green-soft); border:1px solid #acd0ba; border-radius:10px; padding:16px; margin-bottom:14px; }
+    .actions { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
     button {
-      border: 2px solid var(--gold);
-      background: var(--green);
-      color: white;
-      border-radius: 8px;
-      padding: 13px 26px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
+      border:2px solid var(--gold);
+      background:var(--green);
+      color:#fff;
+      border-radius:8px;
+      padding:13px 26px;
+      font-weight:700;
+      font-size:1rem;
+      cursor:pointer;
     }
-
-    button:hover { background: var(--green-dark); }
-
-    .security-note {
-      color: var(--muted);
-      font-size: .86rem;
-    }
-
-    .honeypot {
-      position: absolute !important;
-      left: -9999px !important;
-      width: 1px !important;
-      height: 1px !important;
-      overflow: hidden !important;
-    }
-
-    @media (max-width: 720px) {
-      .grid, .choices { grid-template-columns: 1fr; }
-      .intro, form { padding: 22px; }
-      fieldset { padding: 18px; }
-      .topbar-inner { min-height: 68px; }
-      .logo { width: 50px; height: 50px; }
+    button:hover { background:var(--green-dark); }
+    button:disabled { opacity:.75; cursor:wait; }
+    .security-note { color:var(--muted); font-size:.86rem; }
+    .honeypot { position:absolute!important; left:-9999px!important; width:1px!important; height:1px!important; overflow:hidden!important; }
+    @media (max-width:720px) {
+      .grid,.choices { grid-template-columns:1fr; }
+      .intro,form { padding:22px; }
+      fieldset { padding:18px; }
+      .topbar-inner { min-height:68px; }
+      .logo { width:50px; height:50px; }
     }
   </style>
 </head>
@@ -250,9 +121,7 @@
       <p class="required-note">Fields marked with * are required.</p>
     </section>
 
-    <iframe id="supplierSubmitFrame" name="supplierSubmitFrame" hidden></iframe>
-
-<form id="supplierKycForm" action="https://script.google.com/macros/s/AKfycbwR74_X8ph6vTFXa6Vqu0lDjg_y8-X4p55L7lmXf4nfDzNCwSzFjCZpbnMbUMuS2BUDTQ/exec" method="post" accept-charset="UTF-8" target="supplierSubmitFrame">
+    <form id="supplierKycForm" action="https://script.google.com/macros/s/AKfycbwR74_X8ph6vTFXa6Vqu0lDjg_y8-X4p55L7lmXf4nfDzNCwSzFjCZpbnMbUMuS2BUDTQ/exec" method="post" accept-charset="UTF-8">
       <input type="hidden" name="sourcePage" value="https://euroagritrading.eu/supplier-application.html">
 
       <div class="honeypot" aria-hidden="true">
@@ -267,27 +136,22 @@
             <label for="legalCompanyName">Legal Company Name <span class="required">*</span></label>
             <input id="legalCompanyName" name="legalCompanyName" type="text" maxlength="180" required autocomplete="organization">
           </div>
-
           <div class="field">
             <label for="countryOfRegistration">Country of Registration <span class="required">*</span></label>
             <input id="countryOfRegistration" name="countryOfRegistration" type="text" maxlength="100" required>
           </div>
-
           <div class="field">
             <label for="registrationNumber">Company Registration Number <span class="required">*</span></label>
             <input id="registrationNumber" name="registrationNumber" type="text" maxlength="100" required>
           </div>
-
           <div class="field">
             <label for="vatTaxId">VAT / Tax ID <span class="required">*</span></label>
             <input id="vatTaxId" name="vatTaxId" type="text" maxlength="100" required>
           </div>
-
           <div class="field">
             <label for="yearEstablished">Year of Establishment <span class="required">*</span></label>
             <input id="yearEstablished" name="yearEstablished" type="number" min="1800" max="2026" step="1" required inputmode="numeric">
           </div>
-
           <div class="field full">
             <label for="website">Website (if available)</label>
             <input id="website" name="website" type="url" maxlength="250" placeholder="https://example.com">
@@ -302,7 +166,6 @@
             <label for="exportPorts">Export Loading Port(s) <span class="required">*</span></label>
             <input id="exportPorts" name="exportPorts" type="text" maxlength="250" required placeholder="Example: Alexandria, Damietta">
           </div>
-
           <div class="field full">
             <div class="group-label">Primary Product(s) Offered <span class="required">*</span></div>
             <div class="choices">
@@ -319,27 +182,22 @@
               <label class="choice"><input type="checkbox" name="products" value="Other"> Other</label>
             </div>
           </div>
-
           <div class="field full">
             <label for="otherProduct">Other Product</label>
             <input id="otherProduct" name="otherProduct" type="text" maxlength="250" placeholder="Complete only when Other is selected">
           </div>
-
           <div class="field">
             <label for="monthlyCapacity">Monthly Export Capacity (MT) <span class="required">*</span></label>
             <input id="monthlyCapacity" name="monthlyCapacity" type="number" min="1" step="1" required inputmode="numeric">
           </div>
-
           <div class="field">
             <label for="moqMt">Minimum Order Quantity — MOQ (MT) <span class="required">*</span></label>
             <input id="moqMt" name="moqMt" type="number" min="1" step="1" required inputmode="numeric">
           </div>
-
           <div class="field full">
             <label for="exportMarkets">Main Export Markets <span class="required">*</span></label>
             <textarea id="exportMarkets" name="exportMarkets" maxlength="500" required placeholder="List the principal countries or regions you currently export to"></textarea>
           </div>
-
           <div class="field full">
             <div class="group-label">Supplier Type <span class="required">*</span></div>
             <div class="choices">
@@ -358,17 +216,14 @@
             <label for="contactName">Contact Name <span class="required">*</span></label>
             <input id="contactName" name="contactName" type="text" maxlength="140" required autocomplete="name">
           </div>
-
           <div class="field">
             <label for="position">Position / Title <span class="required">*</span></label>
             <input id="position" name="position" type="text" maxlength="140" required autocomplete="organization-title">
           </div>
-
           <div class="field">
             <label for="corporateEmail">Corporate Email <span class="required">*</span></label>
             <input id="corporateEmail" name="corporateEmail" type="email" maxlength="180" required autocomplete="email">
           </div>
-
           <div class="field">
             <label for="phone">Phone / WhatsApp</label>
             <input id="phone" name="phone" type="tel" maxlength="60" autocomplete="tel" placeholder="+420 732 133 919">
@@ -378,11 +233,9 @@
 
       <fieldset>
         <legend>4. Commercial Policy</legend>
-
         <div class="policy-box">
           <strong>Preferred payment model:</strong> Irrevocable LC at Sight. Other instruments such as D/P, CAD, SBLC, or Bank Guarantee may be considered subject to compliance review and the transaction profile.
         </div>
-
         <div class="field">
           <div class="group-label">Do you accept the company’s payment policy? <span class="required">*</span></div>
           <div class="choices">
@@ -400,43 +253,25 @@
   </main>
 
   <script>
-  (function () {
-    const form = document.getElementById("supplierKycForm");
-    const productBoxes = Array.from(
-      document.querySelectorAll('input[name="products"]')
-    );
+    (function () {
+      const form = document.getElementById('supplierKycForm');
+      const productBoxes = Array.from(document.querySelectorAll('input[name="products"]'));
 
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+      form.addEventListener('submit', function (event) {
+        const hasProduct = productBoxes.some(function (box) { return box.checked; });
 
-      const selectedProducts = productBoxes.some(function (box) {
-        return box.checked;
+        if (!hasProduct) {
+          event.preventDefault();
+          alert('Please select at least one product.');
+          productBoxes[0].focus();
+          return;
+        }
+
+        const button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        button.textContent = 'Submitting...';
       });
-
-      if (!selectedProducts) {
-        alert("Please select at least one product.");
-        productBoxes[0].focus();
-        return;
-      }
-
-      const button = form.querySelector('button[type="submit"]');
-      button.disabled = true;
-      button.textContent = "Submitting...";
-
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        mode: "no-cors",
-        keepalive: true
-      }).catch(function () {
-        // The request continues in the background.
-      });
-
-      window.location.assign(
-        "https://euroagritrading.eu/thankyou.html"
-      );
-    });
-  })();
-</script>
+    })();
+  </script>
 </body>
 </html>
