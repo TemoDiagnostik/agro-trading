@@ -399,22 +399,12 @@
     </form>
   </main>
 
-  
-<script>
+  <script>
   (function () {
     const form = document.getElementById("supplierKycForm");
     const productBoxes = Array.from(
       document.querySelectorAll('input[name="products"]')
     );
-
-    let redirected = false;
-
-    function goToThankYou() {
-      if (redirected) return;
-      redirected = true;
-      window.location.href =
-        "https://euroagritrading.eu/thankyou.html";
-    }
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -433,21 +423,18 @@
       button.disabled = true;
       button.textContent = "Submitting...";
 
-      const fallbackTimer = setTimeout(goToThankYou, 8000);
-
       fetch(form.action, {
         method: "POST",
         body: new FormData(form),
-        mode: "no-cors"
-      })
-      .then(function () {
-        clearTimeout(fallbackTimer);
-        goToThankYou();
-      })
-      .catch(function () {
-        clearTimeout(fallbackTimer);
-        goToThankYou();
+        mode: "no-cors",
+        keepalive: true
+      }).catch(function () {
+        // The request continues in the background.
       });
+
+      window.location.assign(
+        "https://euroagritrading.eu/thankyou.html"
+      );
     });
   })();
 </script>
