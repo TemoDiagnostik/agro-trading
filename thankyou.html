@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submission Received | Euro Agri Trading s.r.o.</title>
+  <meta name="description" content="Supplier KYC submission confirmation for Euro Agri Trading s.r.o.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=3GgdNxrDx350MTAxyQiY1NYECgIClA9c6RQ1pSRPyg3Wse3CKCpGA0tnz8DAuc0OPuTrsx5unTVMfmbGfclYXWinSMlw-HTzGMKvBtqPBHq6hlsuSFPzZHfJTNFyfPOEsC4foMiRoNZwbenvA1hNnzHfHWEMKccAYvgGwf0A9nETsJwDWUWY_gUOA8IoUDgrk9CnFYsdYAk3fLbeZh6h93Ob6fiFngRdcR4qIp1e8TJwocNSzUScDHgepAlmjVD5NjhK4ZHn2S8tImNdLAM_4pHyjAhxbF8LMU7IFC6cYURdytM9mPKXHy4FGYzsjPLb" charset="UTF-8"></script><style>
+    :root {
+      --green: #0a662f;
+      --green-dark: #075126;
+      --gold: #c6a44b;
+      --text: #1f2933;
+      --muted: #5f6b76;
+      --bg: #f4f7f5;
+      --white: #ffffff;
+      --border: #d6e1da;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 38px;
+      text-align: center;
+      box-shadow: 0 12px 34px rgba(0,0,0,.08);
+    }
+
+    .mark {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e8f5ed;
+      color: var(--green);
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .reference {
+      margin: 22px 0;
+      padding: 14px 16px;
+      border: 1px solid #b9d6c4;
+      border-radius: 10px;
+      background: #eef8f2;
+      word-break: break-word;
+    }
+
+    .reference strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--green-dark);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 13px 24px;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      color: #fff;
+      background: var(--green);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: var(--green-dark);
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">✓</div>
+
+    <h1>Supplier KYC Received</h1>
+
+    <p>
+      Thank you. Your supplier pre-qualification submission has been received
+      successfully by Euro Agri Trading s.r.o.
+    </p>
+
+    <p>
+      Our team will review the information and contact you if additional
+      corporate, product, or compliance documentation is required.
+    </p>
+
+    <div class="reference">
+      <strong>Submission Reference</strong>
+      <span id="submissionReference">Not available</span>
+    </div>
+
+    <p class="muted">
+      Please retain this reference for any future correspondence regarding your application.
+    </p>
+
+    <a class="button" href="supplier-network.html">Return to Supplier Network</a>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const submission = params.get("submission");
+
+    if (submission) {
+      document.getElementById("submissionReference").textContent = submission;
+    }
+  </script>
+</body>
+</html>
