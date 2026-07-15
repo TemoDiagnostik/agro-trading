@@ -399,26 +399,41 @@
     </form>
   </main>
 
-  <script>
-    (function () {
-      const form = document.querySelector("form");
-      const productBoxes = Array.from(document.querySelectorAll('input[name="products"]'));
+ <script>
+  (function () {
+    const form = document.getElementById("supplierKycForm");
+    const frame = document.getElementById("supplierSubmitFrame");
+    const productBoxes = Array.from(
+      document.querySelectorAll('input[name="products"]')
+    );
 
-      form.addEventListener("submit", function (event) {
-        const selectedProducts = productBoxes.some(box => box.checked);
+    let submissionStarted = false;
 
-        if (!selectedProducts) {
-          event.preventDefault();
-          alert("Please select at least one product.");
-          productBoxes[0].focus();
-          return;
-        }
-
-        const button = form.querySelector('button[type="submit"]');
-        button.disabled = true;
-        button.textContent = "Submitting...";
+    form.addEventListener("submit", function (event) {
+      const selectedProducts = productBoxes.some(function (box) {
+        return box.checked;
       });
-    })();
-  </script>
+
+      if (!selectedProducts) {
+        event.preventDefault();
+        alert("Please select at least one product.");
+        productBoxes[0].focus();
+        return;
+      }
+
+      submissionStarted = true;
+
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = "Submitting...";
+    });
+
+    frame.addEventListener("load", function () {
+      if (!submissionStarted) return;
+
+      window.location.href = "thankyou.html";
+    });
+  })();
+</script>
 </body>
 </html>
