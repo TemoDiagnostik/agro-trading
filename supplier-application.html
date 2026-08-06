@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Euro Agri Supplier KYC direct-submit build 20260806-2 -->
+<!-- Euro Agri Supplier KYC direct-submit build 20260806-3 -->
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
@@ -264,14 +264,6 @@
       font-size:.86rem;
     }
 
-    .honeypot {
-      position:absolute!important;
-      left:-9999px!important;
-      width:1px!important;
-      height:1px!important;
-      overflow:hidden!important;
-    }
-
     @media (max-width:720px) {
       .grid,
       .choices {
@@ -363,25 +355,8 @@
         <input
           type="hidden"
           name="formVersion"
-          value="20260806-2"
+          value="20260806-3"
         >
-
-        <div
-          class="honeypot"
-          aria-hidden="true"
-        >
-          <label for="companyFax">
-            Leave this field empty
-          </label>
-
-          <input
-            id="companyFax"
-            name="companyFax"
-            type="text"
-            tabindex="-1"
-            autocomplete="off"
-          >
-        </div>
 
         <fieldset>
           <legend>
