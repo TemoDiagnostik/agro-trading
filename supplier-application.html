@@ -435,12 +435,12 @@
               <input
                 id="yearEstablished"
                 name="yearEstablished"
-                type="number"
-                min="1800"
-                max="2026"
-                step="1"
-                required
+                type="text"
+                maxlength="4"
                 inputmode="numeric"
+                pattern="[0-9]{4}"
+                placeholder="Example: 2012"
+                required
               >
             </div>
 
