@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Euro Agri Supplier KYC direct-submit build 20260810-1 -->
+<!-- Euro Agri Supplier KYC direct-submit build 20260810-2 -->
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
@@ -72,10 +72,11 @@
         <input type="hidden" name="sourcePage" value="https://euroagritrading.eu/supplier-application.html">
         <input type="hidden" name="formVersion" value="20260806-3">
         <input type="hidden" id="formStartedAt" name="formStartedAt" value="">
+        <input type="hidden" id="companyWebsiteConfirm" name="companyWebsiteConfirm" value="">
 
         <div class="hp-field" aria-hidden="true">
-          <label for="companyWebsiteConfirm">Leave this field empty</label>
-          <input id="companyWebsiteConfirm" name="companyWebsiteConfirm" type="text" autocomplete="off" tabindex="-1">
+          <label for="kycExtraField">Leave this field empty</label>
+          <input id="kycExtraField" name="kycExtraField" type="text" autocomplete="new-password" tabindex="-1" data-lpignore="true" data-1p-ignore="true" data-bwignore="true">
         </div>
 
         <fieldset>
@@ -210,6 +211,8 @@
     (function(){
       const form=document.getElementById("supplierKycForm");
       const formStartedAt=document.getElementById("formStartedAt");
+      const serverHoneypot=document.getElementById("companyWebsiteConfirm");
+      const decoyHoneypot=document.getElementById("kycExtraField");
       const productBoxes=Array.from(document.querySelectorAll('input[name="products"]'));
       const submitButton=form.querySelector('button[type="submit"]');
       const submitStatus=document.getElementById("submitStatus");
@@ -217,10 +220,16 @@
       formStartedAt.value=String(Date.now());
 
       window.addEventListener("pageshow",function(event){
-        if(event.persisted){formStartedAt.value=String(Date.now());}
+        if(event.persisted){
+          formStartedAt.value=String(Date.now());
+          serverHoneypot.value="";
+          decoyHoneypot.value="";
+        }
       });
 
       form.addEventListener("submit",function(event){
+        serverHoneypot.value=String(decoyHoneypot.value||"").trim();
+
         const hasProduct=productBoxes.some(function(box){return box.checked;});
         if(!hasProduct){
           event.preventDefault();
