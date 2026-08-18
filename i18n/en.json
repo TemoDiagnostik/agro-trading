@@ -26,10 +26,27 @@
 
 "hero.productsLineSpecialty": "Rock Phosphate • Granular Urea 46% N • MAP • Selected Water-Soluble & Specialty Fertilizers",
 
-"products.specialtyTitle": "Water-Soluble & Specialty Fertilizers",
-"products.specialtyLead": "Euro Agri Trading offers selected water-soluble and specialty fertilizers through its international supplier network. Product availability, specifications, documentation, and commercial terms are confirmed per RFQ and per shipment.",
+"products.specialtyTitle": "Additional Fertilizer Supply Categories",
+"products.specialtyLead": "Additional fertilizer products are coordinated through qualified supply sources. Availability, origin, specifications, packing, documentation and commercial terms are confirmed per RFQ and per shipment.",
 "products.specialtyNote": "Additional products may be reviewed upon confirmed supplier availability.",
 
+
+  "cat.urea46.title": "Granular Urea 46% N",
+"cat.urea46.text": "Agricultural-grade granular urea coordinated through qualified European and international supply channels.",
+"cat.urea46.s1": "Grade: 46% N — agricultural grade",
+"cat.urea46.s2": "Packing: Big Bags / other packing subject to confirmed supply",
+"cat.urea46.s3": "Origin and availability: confirmed per RFQ",
+"cat.urea46.s4": "Documents and commercial terms: confirmed per shipment",
+
+"cat.map.title": "MAP / Granular Ammophos",
+"cat.map.text": "Granular phosphate fertilizer coordinated through qualified supply channels, with origin and availability confirmed per RFQ.",
+"cat.map.s1": "Typical grade: NP 10-46-0",
+"cat.map.s2": "Form: Granular",
+"cat.map.s3": "Packing: Big Bags / subject to confirmed supply",
+"cat.map.s4": "Final specification confirmed by shipment-specific COA",
+
+"cat.tags.qualifiedSupply": "Qualified supply channels",
+"cat.tags.rfqConfirmed": "Availability confirmed per RFQ",
 "cat.cta.requestSpecs": "Request Specifications",
 "cat.tags.selectedNetwork": "Selected supplier network",
 "cat.tags.docsRequest": "Documentation upon verified buyer request",
