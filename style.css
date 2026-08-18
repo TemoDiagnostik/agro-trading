@@ -3089,8 +3089,8 @@ nav{justify-self:center;min-width:0;}
   position:absolute;
   top:calc(100% + 10px);
   right:0;
-  width:240px;
-  max-height:340px;
+  width:min(260px, calc(100vw - 24px));
+  max-height:min(70vh, 420px);
   overflow:auto;
   background:rgba(255,255,255,.98) !important;
   border:1px solid rgba(31,42,55,.12);
@@ -3113,7 +3113,7 @@ nav{justify-self:center;min-width:0;}
 .lang-menu button{
   width:100%;
   display:block;
-  padding:10px;
+  padding:8px 10px;
   border-radius:10px;
   border:0;
   background:transparent;
@@ -3128,14 +3128,24 @@ nav{justify-self:center;min-width:0;}
 .lang-menu .lang-option{
   display:flex !important;
   align-items:center;
-  gap:10px;
+  column-gap:12px !important;
+  min-height:38px;
+  font-size:14px !important;
+  line-height:1.25 !important;
+}
+
+.lang-menu > li,
+.lang-secondary-list > li{
+  margin:0 !important;
+  padding:0 !important;
 }
 
 .lang-option-code{
   flex:0 0 28px;
+  margin-inline-end:2px;
   color:var(--brand-green);
   direction:ltr;
-  font-size:11px;
+  font-size:11px !important;
   font-weight:800;
   letter-spacing:.5px;
   text-align:left;
@@ -3143,6 +3153,9 @@ nav{justify-self:center;min-width:0;}
 
 .lang-option-name{
   flex:1 1 auto;
+  font-size:14px !important;
+  font-weight:600;
+  line-height:1.25;
   unicode-bidi:plaintext;
 }
 
@@ -3161,6 +3174,9 @@ nav{justify-self:center;min-width:0;}
   display:flex;
   align-items:center;
   justify-content:space-between;
+  min-height:38px;
+  font-size:14px !important;
+  line-height:1.25 !important;
   color:var(--brand-green) !important;
 }
 
@@ -3209,12 +3225,6 @@ html[dir="rtl"] .lang-option-code{
   text-align:right;
 }
 
-@media (max-width:768px){
-  .lang-menu{
-    width:min(280px, calc(100vw - 24px));
-    max-height:min(70vh, 420px);
-  }
-}
 html[dir="rtl"] .more-menu{left:auto; right:0;}
 html[dir="rtl"] .navbar-nav a::after{transform-origin:right;}
 
