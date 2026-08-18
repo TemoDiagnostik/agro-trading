@@ -1,6 +1,7 @@
 {
-  "site.name": "Euro Agri Trading s.r.o — EU-Based Rock Phosphate Sourcing",
-  "site.company": "Euro Agri Trading s.r.o.",
+  "site.name": "Euro Agri Trading s.r.o. | EU-Based Fertilizer Sourcing & Trade Coordination",
+"site.company": "Euro Agri Trading s.r.o.",
+"brand.tagline": "EU Fertilizer Sourcing & Trade Coordination",
 
   "nav.home": "Home",
   "nav.products": "Products",
@@ -12,17 +13,18 @@
   "nav.contact": "Contact",
 "nav.more": "More",
   
-  "hero.title": "EU-Based Rock Phosphate Sourcing & Structured Execution",
-  "hero.subtitle": "Shipment-verified compliance • Structured documentation • Multi-origin coordination",
-  "hero.desc": "We coordinate structured sourcing of rock phosphate between verified suppliers and qualified buyers, supported by shipment-specific third-party documentation and EU-aligned trade execution.",
-  "hero.specsTitle": "Flagship Focus",
-  "hero.specsNote": "Rock Phosphate — Multi-origin supply with shipment-specific COA.",
+  "hero.title": "EU-Based Fertilizer Sourcing & Trade Coordination",
+"hero.primaryFocus": "Multi-origin supply channels across Europe, Egypt, China and Azerbaijan — availability confirmed per RFQ.",
+"hero.subtitle": "Qualified supply. Clear documentation. Realistic logistics. Executable business.",
+"hero.desc": "We coordinate fertilizer sourcing for European buyers by matching product specifications, quantities and delivery requirements with qualified supply sources, then aligning documentation, Incoterms, logistics and inspection where required.",
+"hero.specsTitle": "Core Supply Categories",
+"hero.specsNote": "Availability, origin and commercial terms are confirmed per RFQ.",
   "hero.productsLine": "Rock Phosphate (Primary Focus)",
   "hero.productsOnRequest": "Additional supply lines available upon request.",
-"hero.tradeNote": "Preferred: Irrevocable LC at Sight • Also considered: D/P / CAD and SBLC / Bank Guarantee • Subject to compliance review and transaction profile • SGS/Intertek/BV inspection • shipment-specific documentation",
+"hero.tradeNote": "Commercial structure confirmed per transaction • LC at Sight preferred where feasible • third-party inspection when required • shipment-specific documentation",
   "sup.hero.cta.supplier": "Supplier Application (KYC)",
 
-"hero.productsLineSpecialty": "Rock Phosphate • Selected Water-Soluble & Specialty Fertilizers • Micronutrients",
+"hero.productsLineSpecialty": "Rock Phosphate • Granular Urea 46% N • MAP • Selected Water-Soluble & Specialty Fertilizers",
 
 "products.specialtyTitle": "Water-Soluble & Specialty Fertilizers",
 "products.specialtyLead": "Euro Agri Trading offers selected water-soluble and specialty fertilizers through its international supplier network. Product availability, specifications, documentation, and commercial terms are confirmed per RFQ and per shipment.",
