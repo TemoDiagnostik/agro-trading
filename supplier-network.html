@@ -335,245 +335,431 @@
 </section>
 
 
-  
-<!-- i18n + utilities (scripts) -->
+  <!-- i18n + Language UI -->
 <script type="module">
-  const SUPPORTED = ['en','ar','cs','de','fr','es','it','pl','nl','ro','el','pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'];
+  const SUPPORTED = [
+    'en','ar','cs','de','fr','es','it','pl','nl','ro','el',
+    'pt','bg','hu','da','sv','fi','sk','sl','hr','sr','tr'
+  ];
+
   const RTL = new Set(['ar']);
 
   const langSelect = document.getElementById('langSelect');
+  const langWrap   = document.querySelector('.lang-flags');
+  const langBtn    = langWrap?.querySelector('.lang-btn');
+  const langCode   = langWrap?.querySelector('.lang-code');
+  const langMenu   = langWrap?.querySelector('.lang-menu');
 
-  function normalizeLang(v){
-    return String(v || 'en').toLowerCase().split('-')[0];
+
+  /* =========================
+     LANGUAGE DETECTION
+  ========================= */
+
+  function normalizeLang(value) {
+    return String(value || '')
+      .trim()
+      .toLowerCase()
+      .split('-')[0];
   }
 
-  function detectLang(){
-    const url = normalizeLang(new URLSearchParams(location.search).get('lang'));
-    if (SUPPORTED.includes(url)) return url;
+  function detectLang() {
+    const urlLang = normalizeLang(
+      new URLSearchParams(location.search).get('lang')
+    );
 
-    const saved = normalizeLang(localStorage.getItem('lang'));
-    if (SUPPORTED.includes(saved)) return saved;
+    if (SUPPORTED.includes(urlLang)) {
+      return urlLang;
+    }
 
-    const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-    const guess = normalizeLang(nav);
-    return SUPPORTED.includes(guess) ? guess : 'en';
+    const savedLang = normalizeLang(
+      localStorage.getItem('lang')
+    );
+
+    if (SUPPORTED.includes(savedLang)) {
+      return savedLang;
+    }
+
+    const browserLang =
+      (navigator.languages && navigator.languages[0]) ||
+      navigator.language ||
+      'en';
+
+    const detected = normalizeLang(browserLang);
+
+    return SUPPORTED.includes(detected)
+      ? detected
+      : 'en';
   }
 
-  async function fetchJson(path){
-    try{
-      const res = await fetch(path, { cache: 'no-store' });
-      if(!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    }catch(err){
-      console.warn('i18n load failed:', path, err);
+
+  /* =========================
+     JSON LOADING
+  ========================= */
+
+  async function fetchJson(path) {
+    try {
+      const response = await fetch(path, {
+        cache: 'no-store'
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      return await response.json();
+
+    } catch (error) {
+      console.warn('i18n load failed:', path, error);
       return {};
     }
   }
 
-  async function loadDict(lang){
-    const base = await fetchJson('i18n/en.json');
-    if (lang === 'en') return base;
-    const loc  = await fetchJson(`i18n/${lang}.json`);
-    return { ...base, ...loc };
+
+  async function loadDict(lang) {
+    const english = await fetchJson('i18n/en.json');
+
+    if (lang === 'en') {
+      return english;
+    }
+
+    const translated = await fetchJson(`i18n/${lang}.json`);
+
+    /* English remains the fallback
+       for any missing translation key */
+    return {
+      ...english,
+      ...translated
+    };
   }
 
-  function applyI18n(dict, lang){
+
+  /* =========================
+     SUPPLIER APPLICATION LINKS
+  ========================= */
+
+  function syncSupplierApplicationLinks(lang) {
+    document
+      .querySelectorAll('a[href*="supplier-application.html"]')
+      .forEach(link => {
+
+        const url = new URL(
+          link.getAttribute('href'),
+          location.href
+        );
+
+        url.searchParams.set('lang', lang);
+
+        /* Keep the link relative */
+        const fileName = url.pathname.split('/').pop();
+
+        link.setAttribute(
+          'href',
+          `${fileName}${url.search}${url.hash}`
+        );
+      });
+  }
+
+
+  /* =========================
+     APPLY TRANSLATION
+  ========================= */
+
+  function applyI18n(dict, lang) {
+
     document.documentElement.lang = lang;
-    document.documentElement.dir  = RTL.has(lang) ? 'rtl' : 'ltr';
+    document.documentElement.dir =
+      RTL.has(lang) ? 'rtl' : 'ltr';
 
+
+    /* Arabic font */
     if (lang === 'ar') {
-      document.documentElement.style.fontFamily = "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
+      document.documentElement.style.fontFamily =
+        "'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif";
     } else {
-      document.documentElement.style.removeProperty('font-family');
+      document.documentElement.style.removeProperty(
+        'font-family'
+      );
     }
 
-    document.querySelectorAll('[data-i18n]').forEach(el=>{
-  const key = el.getAttribute('data-i18n');
-  if (key && dict[key] != null) {
-    el.textContent = dict[key];
-  }
-});
 
-document.querySelectorAll('[data-i18n-content]').forEach(el=>{
-  const key = el.getAttribute('data-i18n-content');
-  if (key && dict[key] != null) {
-    el.setAttribute('content', dict[key]);
-  }
-});
+    /* Visible text */
+    document
+      .querySelectorAll('[data-i18n]')
+      .forEach(element => {
 
-if (dict['sup.meta.title']) {
-  document.title = dict['sup.meta.title'];
-} else if (dict['site.name']) {
-  document.title = dict['site.name'];
-}
+        const key =
+          element.getAttribute('data-i18n');
 
-    // sync select + storage
-    if (langSelect) langSelect.value = lang;
-    localStorage.setItem('lang', lang);
-  }
+        if (key && dict[key] != null) {
+          element.textContent = dict[key];
+        }
+      });
 
-  async function setLang(lang){
-    lang = normalizeLang(lang);
-    if (!SUPPORTED.includes(lang)) lang = 'en';
 
-    const dict = await loadDict(lang);
-    applyI18n(dict, lang);
+    /* Meta description and other content attributes */
+    document
+      .querySelectorAll('[data-i18n-content]')
+      .forEach(element => {
 
-    // keep URL ?lang=
-    const u = new URL(location.href);
-    u.searchParams.set('lang', lang);
-    history.replaceState({}, '', u.toString());
-  }
+        const key =
+          element.getAttribute('data-i18n-content');
 
-  // init
-  await setLang(detectLang());
-function syncJoinBtnHref(){
-  const joinBtn = document.getElementById('supplierJoinBtn');
-  if (!joinBtn) return;
-  const lang = document.documentElement.lang || (langSelect?.value) || 'en';
-  joinBtn.href = `supplier-onboarding.html?lang=${lang}`;
-}
+        if (key && dict[key] != null) {
+          element.setAttribute(
+            'content',
+            dict[key]
+          );
+        }
+      });
 
-await setLang(detectLang());
-syncJoinBtnHref();
 
-// change handler (direct on select)
-if (langSelect){
-  langSelect.addEventListener('change', async ()=>{
-    await setLang(langSelect.value);
-    syncJoinBtnHref();
-  });
-}
-  // change handler (direct on select)
-  if (langSelect){
-    langSelect.addEventListener('change', async ()=>{
-      await setLang(langSelect.value);
-    });
-  }
-// keep lang when moving to supplier onboarding
-const joinBtn = document.getElementById('supplierJoinBtn');
-if (joinBtn){
-  const lang = document.documentElement.lang || 'en';
-  joinBtn.href = `supplier-onboarding.html?lang=${lang}`;
-}
-  // CSV export helper
-  window.exportSievingCSV = function(){
-    const table = document.querySelector("#sieving");
-    if (!table) return;
-    const rows = [...table.querySelectorAll("tr")].map(tr =>
-      [...tr.children].map(td => `"${td.textContent.replace(/"/g,'""')}"`).join(",")
+    /* Page title */
+    if (dict['sup.meta.title']) {
+      document.title =
+        dict['sup.meta.title'];
+
+    } else if (dict['site.name']) {
+      document.title =
+        dict['site.name'];
+    }
+
+
+    /* Synchronize hidden select */
+    if (langSelect) {
+      langSelect.value = lang;
+    }
+
+
+    /* Language indicator EN / DE / AR etc. */
+    if (langCode) {
+      langCode.textContent =
+        lang.toUpperCase();
+    }
+
+
+    /* Remember choice */
+    localStorage.setItem(
+      'lang',
+      lang
     );
-    const csv = rows.join("\n");
-    const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "sieving-analysis.csv";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  };
 
-  // إرسال عبر mailto
-  window.sendMailto = function(form){
-    const data = new FormData(form);
-    const to = "info@euroagritrading.eu";
-    const subject = encodeURIComponent("RFQ - Euro Agri Trading (info@euroagritrading.eu)");
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\nMessage:\n${data.get("message")}`
+
+    /* Preserve language when supplier
+       opens the KYC application */
+    syncSupplierApplicationLinks(lang);
+  }
+
+
+  /* =========================
+     CHANGE LANGUAGE
+  ========================= */
+
+  async function setLang(requestedLang) {
+
+    let lang =
+      normalizeLang(requestedLang);
+
+    if (!SUPPORTED.includes(lang)) {
+      lang = 'en';
+    }
+
+    const dict =
+      await loadDict(lang);
+
+    applyI18n(
+      dict,
+      lang
     );
-    location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    return false;
-  };
 
-  // تمرير سلس للروابط الداخلية
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener("click", e=>{
-      const id = a.getAttribute("href").slice(1);
-      const el = document.getElementById(id);
-      if(el){
-        e.preventDefault();
-        el.scrollIntoView({behavior:"smooth", block:"start"});
+
+    /* Keep ?lang= in current URL
+       without reloading the page */
+    const url =
+      new URL(location.href);
+
+    url.searchParams.set(
+      'lang',
+      lang
+    );
+
+    history.replaceState(
+      {},
+      '',
+      `${url.pathname}${url.search}${url.hash}`
+    );
+  }
+
+
+  /* =========================
+     LANGUAGE MENU
+  ========================= */
+
+  function buildLanguageMenu() {
+
+    if (!langMenu || !langSelect) {
+      return;
+    }
+
+    langMenu.innerHTML = '';
+
+    Array
+      .from(langSelect.options)
+      .forEach(option => {
+
+        const li =
+          document.createElement('li');
+
+        const button =
+          document.createElement('button');
+
+        button.type = 'button';
+        button.dataset.lang =
+          option.value;
+
+        button.textContent =
+          option.textContent;
+
+        li.appendChild(button);
+        langMenu.appendChild(li);
+      });
+  }
+
+
+  function openLanguageMenu() {
+
+    if (!langWrap || !langBtn) {
+      return;
+    }
+
+    langWrap.classList.add('open');
+
+    langBtn.setAttribute(
+      'aria-expanded',
+      'true'
+    );
+  }
+
+
+  function closeLanguageMenu() {
+
+    if (!langWrap || !langBtn) {
+      return;
+    }
+
+    langWrap.classList.remove('open');
+
+    langBtn.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+  }
+
+
+  buildLanguageMenu();
+
+
+  /* Language button */
+  if (langBtn) {
+
+    langBtn.addEventListener(
+      'click',
+      event => {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (langWrap.classList.contains('open')) {
+          closeLanguageMenu();
+        } else {
+          openLanguageMenu();
+        }
       }
-    });
-  });
+    );
+  }
 
-  // mobile menu hooks
-  document.addEventListener("DOMContentLoaded", ()=>{
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener("click", ()=> mainNav.classList.toggle("active"));
+
+  /* Choose language */
+  if (langMenu && langSelect) {
+
+    langMenu.addEventListener(
+      'click',
+      event => {
+
+        const button =
+          event.target.closest(
+            'button[data-lang]'
+          );
+
+        if (!button) {
+          return;
+        }
+
+        langSelect.value =
+          button.dataset.lang;
+
+        langSelect.dispatchEvent(
+          new Event(
+            'change',
+            { bubbles: true }
+          )
+        );
+
+        closeLanguageMenu();
+      }
+    );
+  }
+
+
+  /* One change listener only */
+  if (langSelect) {
+
+    langSelect.addEventListener(
+      'change',
+      async () => {
+
+        await setLang(
+          langSelect.value
+        );
+      }
+    );
+  }
+
+
+  /* Close menu outside */
+  document.addEventListener(
+    'click',
+    event => {
+
+      if (
+        langWrap &&
+        !langWrap.contains(event.target)
+      ) {
+        closeLanguageMenu();
+      }
     }
-  });
-</script>
+  );
 
-<!-- ===== Language (Letters UI) Script ===== -->
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  const wrap   = document.querySelector('.lang-flags');
-  const select = document.getElementById('langSelect');
-  if (!wrap || !select) return;
 
-  const btn    = wrap.querySelector('.lang-btn');
-  const codeEl = wrap.querySelector('.lang-code');
-  const menu   = wrap.querySelector('.lang-menu');
-  if (!btn || !codeEl || !menu) return;
+  /* Close menu with Escape */
+  document.addEventListener(
+    'keydown',
+    event => {
 
-  function buildMenu(){
-    menu.innerHTML = '';
-    Array.from(select.options).forEach(opt => {
-      const li = document.createElement('li');
-      const b  = document.createElement('button');
-      b.type = 'button';
-      b.dataset.lang = opt.value;
-      b.textContent  = opt.textContent;
-      li.appendChild(b);
-      menu.appendChild(li);
-    });
-  }
+      if (event.key === 'Escape') {
+        closeLanguageMenu();
+      }
+    }
+  );
 
-  function setCurrent(){
-    codeEl.textContent = (select.value || 'en').toUpperCase();
-  }
 
-  function openMenu(){
-    wrap.classList.add('open');
-    btn.setAttribute('aria-expanded','true');
-  }
+  /* =========================
+     INITIALIZE
+  ========================= */
 
-  function closeMenu(){
-    wrap.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-  }
+  await setLang(
+    detectLang()
+  );
 
-  buildMenu();
-  setCurrent();
-
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    wrap.classList.contains('open') ? closeMenu() : openMenu();
-  });
-
-  document.addEventListener('click', function(e){
-    if (!wrap.contains(e.target)) closeMenu();
-  });
-
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  menu.addEventListener('click', function(e){
-    const b = e.target.closest('button[data-lang]');
-    if (!b) return;
-    select.value = b.dataset.lang;
-    select.dispatchEvent(new Event('change',{bubbles:true}));
-    setCurrent();
-    closeMenu();
-  });
-
-  select.addEventListener('change', setCurrent);
-});
 </script>
 </body>
 </html>
