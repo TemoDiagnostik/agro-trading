@@ -289,7 +289,7 @@
   "payment.lead": "Commercial and payment terms depend on the transaction structure and are confirmed between the relevant contracting parties. Euro Agri Trading coordinates commercial alignment, documentation and risk-control steps according to the requirements of each deal.",
   "payment.opt.lcSight": "LC at Sight — Preferred where commercially feasible",
   "payment.opt.collection": "Documentary or bank-supported structures, including D/P, CAD, SBLC or Bank Guarantee — reviewed case-by-case",
-  "payment.opt.sblc": "Advance payment or other agreed structures — considered only after counterparty verification and transaction-specific risk review",
+  "payment.opt.sblc": "Other payment structures may be considered case-by-case following counterparty verification, commercial assessment and transaction-specific risk review",
   "payment.guard": "Independent third-party inspection at loading through SGS, Intertek or Bureau Veritas can be arranged when commercially or contractually required.",
   "payment.note": "Bank and payment details are exchanged only when required for a qualified transaction and through the relevant commercial documentation.",
   "payment.btn.request": "Discuss Commercial Structure",
