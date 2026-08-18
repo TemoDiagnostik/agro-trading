@@ -141,7 +141,7 @@
     name.className = 'lang-option-name';
     name.textContent = option.textContent;
 
-    button.append(code, name);
+    button.append(code, document.createTextNode(' '), name);
     item.appendChild(button);
     return item;
   }
