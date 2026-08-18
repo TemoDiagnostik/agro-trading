@@ -48,8 +48,8 @@
 "cat.tags.qualifiedSupply": "Qualified supply channels",
 "cat.tags.rfqConfirmed": "Availability confirmed per RFQ",
 "cat.cta.requestSpecs": "Request Specifications",
-"cat.tags.selectedNetwork": "Selected supplier network",
-"cat.tags.docsRequest": "Documentation upon verified buyer request",
+"cat.tags.selectedNetwork": "Qualified supply channels",
+"cat.tags.docsRequest": "Documentation confirmed per qualified RFQ",
 
 "cat.mkp.title": "MKP — Monopotassium Phosphate",
 "cat.mkp.text": "Water-soluble phosphorus and potassium source for fertigation and foliar nutrition.",
@@ -154,7 +154,7 @@
 "sup.trade.cta.rfq": "Request RFQ",
   
   "trust.title": "EU-based execution.",
-"trust.text": "Preferred LC at Sight structure • Independent inspection (SGS/Intertek/BV) • shipment-specific COA • verified documentation.",
+"trust.text": "Commercial structure confirmed per transaction • LC at Sight preferred where feasible • independent inspection when required • shipment-specific documentation.",
 
   "cat.cta.rfq": "Request RFQ",
   "cat.cta.specs": "View Specifications",
