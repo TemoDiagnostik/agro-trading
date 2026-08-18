@@ -196,6 +196,7 @@
     moreButton.setAttribute('aria-expanded', 'false');
 
     moreLabel.textContent = 'More languages';
+    moreLabel.setAttribute('data-i18n', 'lang.moreLanguages');
     moreCaret.className = 'lang-more-caret';
     moreCaret.setAttribute('aria-hidden', 'true');
     moreCaret.textContent = '▾';
@@ -222,7 +223,7 @@
     });
   }
 
-  function updateLanguageUi(language, select, button, codeElement, menu) {
+  function updateLanguageUi(language, dictionary, select, button, codeElement, menu) {
     const activeOption = Array.from(select.options)
       .find(option => option.value === language);
 
@@ -231,7 +232,8 @@
 
     const languageName = activeOption ? activeOption.textContent : language.toUpperCase();
     button.title = languageName;
-    button.setAttribute('aria-label', `Language: ${languageName}`);
+    const languageLabel = dictionary['lang.languageLabel'] || 'Language';
+    button.setAttribute('aria-label', `${languageLabel}: ${languageName}`);
 
     menu.querySelectorAll('button[data-lang]').forEach(optionButton => {
       const isCurrent = optionButton.dataset.lang === language;
@@ -287,7 +289,7 @@
 
       languageConfig.applyDocumentLanguage(language);
       applyTranslations(dictionary);
-      updateLanguageUi(language, select, button, codeElement, menu);
+      updateLanguageUi(language, dictionary, select, button, codeElement, menu);
       storeLanguage(language);
       updateCurrentUrl(language);
       syncInternalLinks(language);
