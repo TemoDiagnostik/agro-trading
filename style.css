@@ -718,6 +718,7 @@ html {
  grid-template-columns: repeat(3, 1fr);
  gap: 20px;
  justify-items: center;
+ margin-top: clamp(24px, 3vw, 36px);
 }
 
 @media (max-width: 1000px) {
@@ -1185,6 +1186,10 @@ form label {
 .info-section,
 .form-section {
  margin-bottom: 40px;
+}
+
+#contact .form-section {
+ padding-top: clamp(36px, 4vw, 52px);
 }
 
 
