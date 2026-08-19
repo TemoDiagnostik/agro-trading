@@ -2851,12 +2851,21 @@ body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
   flex-wrap: wrap;
 }
 
-/* EU flag size */
-.eu-flag-inline img{
+/* EU flag banner */
+.eu-flag-inline{
   width: 100%;
-  max-width: 360px;
-  height: auto;
-  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.eu-flag-inline img{
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: clamp(240px, 32vw, 430px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.12);
 }
 
 /* Text block */
@@ -2872,8 +2881,14 @@ body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
     align-items: center;
   }
 
+  .eu-flag-inline{
+    margin-bottom: 20px;
+  }
+
   .eu-flag-inline img{
-    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 14px;
   }
 }
 
