@@ -2851,21 +2851,25 @@ body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
   flex-wrap: wrap;
 }
 
-/* EU flag banner */
-.eu-flag-inline{
+/* European business presence visual */
+.contact-visual{
   width: 100%;
   margin-bottom: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 107, 74, 0.14);
+  border-radius: 18px;
+  background: #eef3f0;
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.09);
+  line-height: 0;
 }
 
-.eu-flag-inline img{
+.contact-visual img{
   display: block;
   width: 100%;
   max-width: none;
-  height: clamp(240px, 32vw, 430px);
+  height: clamp(190px, 20vw, 280px);
   object-fit: cover;
   object-position: center;
-  border-radius: 18px;
-  box-shadow: 0 14px 32px rgba(2, 6, 23, 0.12);
 }
 
 /* Text block */
@@ -2881,14 +2885,14 @@ body.supplier-onboarding .onb-check input[type="checkbox"]:checked::after{
     align-items: center;
   }
 
-  .eu-flag-inline{
+  .contact-visual{
     margin-bottom: 20px;
+    border-radius: 14px;
   }
 
-  .eu-flag-inline img{
-    height: auto;
-    aspect-ratio: 3 / 2;
-    border-radius: 14px;
+  .contact-visual img{
+    height: 160px;
+    object-position: center;
   }
 }
 
