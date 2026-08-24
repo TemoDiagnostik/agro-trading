@@ -266,7 +266,7 @@
 }
 .cp-field textarea{resize:vertical;min-height:132px;}
 .cp-field input:focus,.cp-field textarea:focus{outline:0;border-color:#0f764a;background:#fff;box-shadow:0 0 0 3px rgba(15,118,74,.12);}
-.cp-field input:invalid:not(:placeholder-shown),.cp-field textarea:invalid:not(:placeholder-shown){border-color:#a84b3f;}
+.cp-form.was-validated .cp-field input:invalid,.cp-form.was-validated .cp-field textarea:invalid{border-color:#a84b3f;}
 .cp-field small{color:#718078;font-size:.76rem;font-weight:500;line-height:1.5;}
 .cp-confirmations{display:grid;gap:15px;margin:26px 0 0;padding:23px;border:1px solid #d9e3dc;border-radius:12px;background:#f7faf8;}
 .cp-confirmations legend{padding:0 8px;color:#17382a;font-size:.88rem;font-weight:800;}
