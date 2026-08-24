@@ -114,6 +114,14 @@
       }
     });
 
+    document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+      const key = element.getAttribute('data-i18n-alt');
+
+      if (key && dictionary[key] != null) {
+        element.setAttribute('alt', dictionary[key]);
+      }
+    });
+
     const titleKey = document.documentElement.dataset.i18nTitle;
 
     if (titleKey && dictionary[titleKey] != null) {
