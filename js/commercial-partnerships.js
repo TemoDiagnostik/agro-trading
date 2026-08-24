@@ -161,29 +161,4 @@
     }
   });
 
-  const moreItem = document.querySelector('.nav-more');
-  const moreTrigger = document.querySelector('.more-trigger');
-
-  if (moreItem && moreTrigger) {
-    moreTrigger.addEventListener('click', event => {
-      event.preventDefault();
-      event.stopPropagation();
-      const isOpen = moreItem.classList.toggle('open');
-      moreTrigger.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    document.addEventListener('click', event => {
-      if (!moreItem.contains(event.target)) {
-        moreItem.classList.remove('open');
-        moreTrigger.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
-        moreItem.classList.remove('open');
-        moreTrigger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
 })();
