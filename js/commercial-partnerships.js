@@ -130,14 +130,10 @@
         .trim()
         .toLowerCase();
       const explicitFailure = successValue === false || normalizedSuccess === 'false';
-      const explicitSuccess = successValue === true || normalizedSuccess === 'true';
-      const confirmationResponse = !result && response.ok && (
-        !responseText ||
-        /submitted successfully|thank you|form was submitted/i.test(responseText)
-      );
-      const succeeded = response.ok && !explicitFailure && (
-        explicitSuccess || confirmationResponse
-      );
+      /* FormSubmit can return different successful payloads (JSON, HTML or an
+         empty body). The HTTP status is the stable acceptance signal; only an
+         explicit success:false response should override it. */
+      const succeeded = response.ok && !explicitFailure;
 
       if (!succeeded) {
         throw new Error((result && result.message) || `HTTP ${response.status}`);
