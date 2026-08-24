@@ -1147,7 +1147,8 @@ form label {
 }
 /* ===== ABOUT SECTION ===== */
 .about-bg {
-  background-image: url('about-desktop.png');
+  background-image: url('img/about-trade-coordination.webp');
+  background-color: #f5f3ed;
   background-size: cover;
   background-position: center 45%; /* ينزل الصورة لأسفل قليلاً */
   min-height: 650px;               /* هذا هو المفتاح */
@@ -1176,7 +1177,7 @@ form label {
 /* ???????? */
 @media (max-width: 768px) {
  .about-bg {
-   background-image: url('about-mobile.png');
+   background-image: url('img/about-trade-coordination-mobile.webp');
    padding: 60px 15px;
  }
  .content-box {
@@ -1530,7 +1531,7 @@ form label {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,.25);
+  background: rgba(255,255,255,.12);
   pointer-events: none;
 }
 
