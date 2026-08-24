@@ -116,11 +116,31 @@
         body: new FormData(form),
         headers: { Accept: 'application/json' }
       });
-      const result = await response.json();
-      const succeeded = response.ok && (result.success === true || result.success === 'true');
+      const responseText = await response.text();
+      let result = null;
+
+      try {
+        result = responseText ? JSON.parse(responseText) : null;
+      } catch (parseError) {
+        // FormSubmit may return an HTML confirmation even after accepting the email.
+      }
+
+      const successValue = result && result.success;
+      const normalizedSuccess = String(successValue == null ? '' : successValue)
+        .trim()
+        .toLowerCase();
+      const explicitFailure = successValue === false || normalizedSuccess === 'false';
+      const explicitSuccess = successValue === true || normalizedSuccess === 'true';
+      const confirmationResponse = !result && response.ok && (
+        !responseText ||
+        /submitted successfully|thank you|form was submitted/i.test(responseText)
+      );
+      const succeeded = response.ok && !explicitFailure && (
+        explicitSuccess || confirmationResponse
+      );
 
       if (!succeeded) {
-        throw new Error(result.message || `HTTP ${response.status}`);
+        throw new Error((result && result.message) || `HTTP ${response.status}`);
       }
 
       try {
