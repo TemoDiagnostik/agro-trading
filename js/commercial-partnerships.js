@@ -69,6 +69,7 @@
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    form.classList.add('was-validated');
     status.textContent = '';
     status.className = 'cp-form-status';
 
@@ -129,6 +130,7 @@
       }
 
       form.reset();
+      form.classList.remove('was-validated');
       challengeInput.value = '';
       showStatus('success', dictionaryValue('successMessage', 'Thank you. Your application has been received for confidential review.'));
     } catch (error) {
