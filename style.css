@@ -3986,14 +3986,18 @@ html[dir="rtl"] .lang{ gap:12px; }
 /* Product verification now sits with Specifications, not Logistics. */
 #certificates .compliance-block-specs{
   width: 100%;
+  max-width: none;
+  min-height: 0;
   margin: 24px 0 34px;
   padding: 18px;
+  align-items: stretch;
   overflow: hidden;
   border: 1px solid #e5e7eb;
   border-left: 4px solid rgba(230,193,109,.95);
   border-radius: var(--radius);
   background: #fff;
   box-shadow: 0 8px 24px rgba(2,6,23,.06);
+  text-align: left;
 }
 
 #certificates .compliance-block-specs .compliance-banner{
@@ -4007,7 +4011,13 @@ html[dir="rtl"] .lang{ gap:12px; }
 #certificates .compliance-block-specs .compliance-banner img{
   width: 100%;
   height: auto;
+  max-height: none;
   display: block;
+  margin: 0;
+  aspect-ratio: 5 / 1;
+  object-fit: cover;
+  border-radius: 0;
+  background: transparent;
 }
 
 #certificates .compliance-block-specs h3{
@@ -4016,6 +4026,17 @@ html[dir="rtl"] .lang{ gap:12px; }
 
 #certificates .compliance-block-specs .mini-specs{
   margin: 12px 0 0;
+  padding-left: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 28px;
+  text-align: left;
+}
+
+#certificates .compliance-block-specs .mini-specs li{
+  margin: 0;
+  padding-left: 2px;
+  line-height: 1.55;
 }
 
 /* Transaction flow: logistics appears late in the deal, after supply and documents. */
@@ -4062,6 +4083,13 @@ html[dir="rtl"] #logistics .logistics-network{
 html[dir="rtl"] #certificates .compliance-block-specs{
   border-right: 4px solid rgba(230,193,109,.95);
   border-left: 1px solid #e5e7eb;
+  text-align: right;
+}
+
+html[dir="rtl"] #certificates .compliance-block-specs .mini-specs{
+  padding-right: 22px;
+  padding-left: 0;
+  text-align: right;
 }
 
 @media (max-width: 980px){
@@ -4123,6 +4151,10 @@ html[dir="rtl"] #certificates .compliance-block-specs{
 
   #certificates .compliance-block-specs{
     margin: 20px 0 28px;
+  }
+
+  #certificates .compliance-block-specs .mini-specs{
+    grid-template-columns: 1fr;
   }
 }
 
