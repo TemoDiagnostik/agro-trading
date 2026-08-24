@@ -8,14 +8,49 @@
 
 .nav-all-visible .navbar-nav{
   justify-content:flex-end;
-  gap:10px;
+  gap:12px;
 }
 
-.nav-all-visible .navbar-nav a{font-size:11px;}
+.nav-all-visible .navbar-nav a{
+  color:#4b5563;
+  font-size:12px;
+  font-weight:600;
+  padding:8px 1px;
+}
 
-.commercial-partnerships-page .nav-all-visible .navbar-nav a.active{
+.nav-all-visible .navbar-nav a::after{
+  height:2px;
+  border-radius:999px;
+  opacity:0;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .18s ease, opacity .18s ease;
+}
+
+.nav-all-visible .navbar-nav a:hover,
+.nav-all-visible .navbar-nav a:focus-visible,
+.nav-all-visible .navbar-nav a.active,
+.nav-all-visible .navbar-nav a[aria-current="page"]{
   color:var(--brand-green);
+}
+
+.nav-all-visible .navbar-nav a:hover::after,
+.nav-all-visible .navbar-nav a:focus-visible::after,
+.nav-all-visible .navbar-nav a.active::after,
+.nav-all-visible .navbar-nav a[aria-current="page"]::after{
+  opacity:1;
+  transform:scaleX(1);
+}
+
+.nav-all-visible .navbar-nav a.active,
+.nav-all-visible .navbar-nav a[aria-current="page"]{
   font-weight:750;
+}
+
+.nav-all-visible .navbar-nav li:nth-child(5){
+  margin-inline-end:4px;
+  padding-inline-end:16px;
+  border-inline-end:1px solid rgba(31,42,55,.16);
 }
 
 @media (max-width:1280px) and (min-width:901px){
@@ -49,6 +84,11 @@
   .nav-all-visible nav{grid-column:1 / -1;grid-row:2;}
   .nav-all-visible .lang{grid-column:2;grid-row:3;justify-self:center;}
   .nav-all-visible .navbar-nav{justify-content:flex-start;}
+  .nav-all-visible .navbar-nav li:nth-child(5){
+    margin-inline-end:0;
+    padding-inline-end:0;
+    border-inline-end:0;
+  }
 }
 
 @media (max-width:768px){
