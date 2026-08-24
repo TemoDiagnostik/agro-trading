@@ -34,7 +34,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- ✅ Main stylesheet -->
-  <link rel="stylesheet" href="style.css?v=20260824.4">
+  <link rel="stylesheet" href="style.css?v=20260825.2">
+  <link rel="stylesheet" href="nav-visible.css?v=20260825.2">
 
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -132,7 +133,7 @@
 
 		<!-- قسم الرأس (الهيدر) -->
 <header>
-  <div class="container nav" role="navigation" aria-label="Primary">
+  <div class="container nav nav-all-visible" role="navigation" aria-label="Primary">
 
     <!-- Brand (Logo + Company name) -->
     <div class="brand-wrap">
@@ -157,19 +158,12 @@
     <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
     <li><a href="specifications.html" data-i18n="nav.coa">Specifications</a></li>
     <li><a href="#logistics" data-i18n="nav.logistics">Logistics</a></li>
-  </ul>
-</nav>
-
-<!-- More (separate) -->
-<div class="nav-more">
-  <a class="more-trigger" href="#" aria-haspopup="true" aria-expanded="false" data-i18n="nav.more">More</a>
-  <ul class="more-menu" aria-label="More">
-    <li><a href="commercial-partnerships.html" data-i18n="cp.nav">Commercial Partnerships</a></li>
     <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>
     <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="commercial-partnerships.html" data-i18n="cp.nav">Commercial Partnerships</a></li>
     <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
-</div> <!-- ✅ إغلاق More كان ناقص -->
+</nav>
 
 <div class="lang lang-flags" aria-label="Language selector">
   <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" title="Language">
@@ -1172,36 +1166,6 @@ document.addEventListener('click', function(e){
 
 		
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const moreItem = document.querySelector('.nav-more');
-  const trigger  = document.querySelector('.more-trigger');
-  if (!moreItem || !trigger) return;
-
-  function closeMore() {
-    moreItem.classList.remove('open');
-    trigger.setAttribute('aria-expanded', 'false');
-  }
-
-  trigger.addEventListener('click', function (e) {
-    e.preventDefault();      // يمنع jump بسبب href="#"
-    e.stopPropagation();     // يمنع قفله فورًا بسبب click خارج
-    const isOpen = moreItem.classList.toggle('open');
-    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  // اقفل لو ضغطت برا
-  document.addEventListener('click', function (e) {
-    if (!moreItem.contains(e.target)) closeMore();
-  });
-
-  // اقفل بزر Escape
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMore();
-  });
-});
-</script>		
-		
 		
 		
 		
