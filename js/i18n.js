@@ -9,6 +9,8 @@
   }
 
   const dictionaryCache = new Map();
+  const pageDictionaryCache = new Map();
+  const pageDictionaryRoot = document.documentElement.dataset.i18nPageRoot || '';
   let languageRequestId = 0;
   let secondaryList = null;
   let secondaryToggle = null;
@@ -37,15 +39,51 @@
     }
   }
 
-  async function loadDictionary(language) {
-    const english = await fetchDictionary('en');
-
-    if (language === 'en') {
-      return english;
+  async function fetchPageDictionary(language) {
+    if (!pageDictionaryRoot) {
+      return {};
     }
 
-    const translated = await fetchDictionary(language);
-    return { ...english, ...translated };
+    const cacheKey = `${pageDictionaryRoot}:${language}`;
+
+    if (pageDictionaryCache.has(cacheKey)) {
+      return pageDictionaryCache.get(cacheKey);
+    }
+
+    try {
+      const response = await fetch(`${pageDictionaryRoot}${language}.json`, {
+        cache: 'no-store'
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const dictionary = await response.json();
+      pageDictionaryCache.set(cacheKey, dictionary);
+      return dictionary;
+    } catch (error) {
+      console.warn(`Could not load ${pageDictionaryRoot}${language}.json`, error);
+      pageDictionaryCache.set(cacheKey, {});
+      return {};
+    }
+  }
+
+  async function loadDictionary(language) {
+    const [english, pageEnglish] = await Promise.all([
+      fetchDictionary('en'),
+      fetchPageDictionary('en')
+    ]);
+
+    if (language === 'en') {
+      return { ...english, ...pageEnglish };
+    }
+
+    const [translated, pageTranslated] = await Promise.all([
+      fetchDictionary(language),
+      fetchPageDictionary(language)
+    ]);
+    return { ...english, ...pageEnglish, ...translated, ...pageTranslated };
   }
 
   function storeLanguage(language) {
