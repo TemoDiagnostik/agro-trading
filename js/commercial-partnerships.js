@@ -67,7 +67,48 @@
 
   updateChallengeLabel();
 
-  form.addEventListener('submit', async event => {
+  const applicationFields = [
+    'Full Name',
+    'Company or Independent Status',
+    'Country',
+    'European Markets Covered',
+    'Email',
+    'LinkedIn Profile or Website',
+    'Years of Relevant Experience',
+    'Relevant Product Categories',
+    'Buyer Types Covered',
+    'Short Professional Summary',
+    'Relevant Transaction Experience',
+    'Commission-only independent cooperation accepted',
+    'Existing European market relationships confirmed',
+    'Privacy consent'
+  ];
+
+  function buildEmailBody() {
+    const lines = [
+      'COMMERCIAL PARTNERSHIP APPLICATION',
+      'Euro Agri Trading s.r.o.',
+      '',
+      'Application type: Independent Fertilizer Business Development Partner / Commercial Introducer',
+      ''
+    ];
+
+    applicationFields.forEach(fieldName => {
+      const field = form.elements.namedItem(fieldName);
+      const value = field && field.type === 'checkbox'
+        ? (field.checked ? 'Yes' : 'No')
+        : (field && field.value ? field.value.trim() : 'Not provided');
+
+      lines.push(`${fieldName}:`);
+      lines.push(value);
+      lines.push('');
+    });
+
+    lines.push('This application was prepared on euroagritrading.eu and sent directly from the applicant\'s email account.');
+    return lines.join('\r\n');
+  }
+
+  form.addEventListener('submit', event => {
     event.preventDefault();
     form.classList.add('was-validated');
     status.textContent = '';
@@ -75,8 +116,7 @@
 
     const honeypot = form.elements.namedItem('Website Confirmation');
     if (honeypot && honeypot.value) {
-      showStatus('success', dictionaryValue('successMessage', 'Thank you. Your application has been received for review.'));
-      form.reset();
+      showStatus('success', dictionaryValue('successMessage', 'Your email application is ready. Review it and press Send in your email app.'));
       return;
     }
 
@@ -97,64 +137,16 @@
       return;
     }
 
-    try {
-      const lastSubmission = Number(localStorage.getItem('eat_cp_last_submission') || 0);
-      if (lastSubmission && Date.now() - lastSubmission < 60000) {
-        showStatus('error', dictionaryValue('rateMessage', 'Please wait before submitting another application.'));
-        return;
-      }
-    } catch (error) {
-      // Continue if browser storage is unavailable.
-    }
-
     setSubmitting(true);
-    showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your application securely…'));
+    showStatus('sending', dictionaryValue('sendingMessage', 'Preparing your email application…'));
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-      const responseText = await response.text();
-      let result = null;
+    const subject = 'Commercial Partnership Application — Euro Agri Trading';
+    const body = buildEmailBody();
+    const mailtoLink = `mailto:info@euroagritrading.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      try {
-        result = responseText ? JSON.parse(responseText) : null;
-      } catch (parseError) {
-        // FormSubmit may return an HTML confirmation even after accepting the email.
-      }
-
-      const successValue = result && result.success;
-      const normalizedSuccess = String(successValue == null ? '' : successValue)
-        .trim()
-        .toLowerCase();
-      const explicitFailure = successValue === false || normalizedSuccess === 'false';
-      /* FormSubmit can return different successful payloads (JSON, HTML or an
-         empty body). The HTTP status is the stable acceptance signal; only an
-         explicit success:false response should override it. */
-      const succeeded = response.ok && !explicitFailure;
-
-      if (!succeeded) {
-        throw new Error((result && result.message) || `HTTP ${response.status}`);
-      }
-
-      try {
-        localStorage.setItem('eat_cp_last_submission', String(Date.now()));
-      } catch (error) {
-        // Submission is already complete.
-      }
-
-      form.reset();
-      form.classList.remove('was-validated');
-      challengeInput.value = '';
-      showStatus('success', dictionaryValue('successMessage', 'Thank you. Your application has been received for confidential review.'));
-    } catch (error) {
-      console.error('Commercial partnership form submission failed.', error);
-      showStatus('error', dictionaryValue('errorMessage', 'We could not submit the application. Please try again or contact info@euroagritrading.eu.'));
-    } finally {
-      setSubmitting(false);
-    }
+    showStatus('success', dictionaryValue('successMessage', 'Your email application is ready. Review it and press Send in your email app.'));
+    setSubmitting(false);
+    window.location.href = mailtoLink;
   });
 
 })();

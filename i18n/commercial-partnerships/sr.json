@@ -9,5 +9,8 @@
   "cp.form.eyebrow": "Prijava",
   "cp.form.title": "Prijavite se kao komercijalni partner",
   "cp.form.submit": "Pošaljite prijavu komercijalnog partnera",
-  "cp.meta.title": "Komercijalna partnerstva | Euro Agri Trading"
+  "cp.meta.title": "Komercijalna partnerstva | Euro Agri Trading",
+  "cp.form.sending": "Preparing your email application…",
+  "cp.form.success": "Your email application is ready. Review it and press Send in your email app.",
+  "cp.form.directEmailNote": "Your application is prepared in your own email app and sent directly to Euro Agri Trading. No third-party form service is used."
 }
