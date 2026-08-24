@@ -57,16 +57,18 @@
   border-inline-end:1px solid rgba(31,42,55,.16);
 }
 
-@media (max-width:1650px) and (min-width:769px){
+@media (max-width:1380px) and (min-width:769px){
   .container.nav.nav-all-visible{
     height:auto;
-    min-height:82px;
-    padding-top:8px;
-    padding-bottom:8px;
+    min-height:78px;
+    padding-top:6px;
+    padding-bottom:6px;
     grid-template-columns:auto 1fr auto;
     grid-template-rows:auto auto;
     row-gap:4px;
   }
+  .nav-all-visible .logo-img{height:58px;}
+  .nav-all-visible .brand-name{font-size:17px;}
   .nav-all-visible .brand-wrap{grid-column:1 / 3;grid-row:1;}
   .nav-all-visible .lang{grid-column:3;grid-row:1;}
   .nav-all-visible .lang-flags{grid-column:3;grid-row:1;justify-self:end;}
