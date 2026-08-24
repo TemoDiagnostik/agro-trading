@@ -213,10 +213,7 @@
           <div class="cp-form-privacy-note" data-i18n="cp.form.confidentiality">Applications are reviewed privately and are not displayed publicly.</div>
         </div>
 
-        <form id="commercialPartnerForm" class="cp-form" action="https://formsubmit.co/ajax/info@euroagritrading.eu" method="post" novalidate>
-          <input type="hidden" name="_subject" value="Commercial Partnership Application — Euro Agri Trading">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+        <form id="commercialPartnerForm" class="cp-form" novalidate>
           <input type="hidden" name="Application Type" value="Independent Fertilizer Business Development Partner / Commercial Introducer">
           <input type="hidden" id="cpStartedAt" name="Form Started At" value="">
           <div class="cp-honeypot" aria-hidden="true">
@@ -246,7 +243,8 @@
           </fieldset>
 
           <div class="cp-form-actions">
-            <button class="btn btn-primary" type="submit" data-i18n="cp.form.submit">Submit Commercial Partner Application</button>
+            <p class="cp-direct-email-note" data-i18n="cp.form.directEmailNote">Your application is prepared in your own email app and sent directly to Euro Agri Trading. No third-party form service is used.</p>
+            <button class="btn btn-primary" type="submit" data-i18n="cp.form.submit">Prepare Email Application</button>
             <p id="cpFormStatus" class="cp-form-status" role="status" aria-live="polite"></p>
           </div>
         </form>
@@ -267,7 +265,7 @@
   </footer>
 
   <script src="js/i18n.js?v=20260824.2"></script>
-  <script src="js/commercial-partnerships.js?v=20260825.3"></script>
+  <script src="js/commercial-partnerships.js?v=20260825.4"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -274,6 +274,7 @@
 .cp-confirmations input{width:17px;height:17px;margin-top:3px;accent-color:#0a6b3b;}
 .cp-confirmations a{color:#0a6b3b;font-weight:700;}
 .cp-form-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:26px;}
+.cp-direct-email-note{flex:1 0 100%;margin:0;padding:12px 14px;border-inline-start:3px solid #1b7b4c;background:#f3f8f5;color:#40544a;font-size:.84rem;line-height:1.55;}
 .cp-form-actions button:disabled{opacity:.62;cursor:wait;}
 .cp-form-status{flex:1 1 280px;margin:0;font-size:.86rem;font-weight:650;line-height:1.55;}
 .cp-form-status.is-success{color:#0a6b3b;}

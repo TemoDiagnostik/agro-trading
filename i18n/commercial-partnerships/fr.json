@@ -8,6 +8,9 @@
   "cp.model.notjob": "Il s’agit d’une coopération commerciale indépendante et non d’un emploi salarié.",
   "cp.form.eyebrow": "Candidature",
   "cp.form.title": "Postuler comme partenaire commercial",
-  "cp.form.submit": "Envoyer la candidature de partenaire commercial",
-  "cp.meta.title": "Partenariats commerciaux | Euro Agri Trading"
+  "cp.form.submit": "Préparer la candidature par e-mail",
+  "cp.meta.title": "Partenariats commerciaux | Euro Agri Trading",
+  "cp.form.sending": "Préparation de votre candidature par e-mail…",
+  "cp.form.success": "Votre candidature par e-mail est prête. Vérifiez-la puis cliquez sur Envoyer dans votre messagerie.",
+  "cp.form.directEmailNote": "Votre candidature est préparée dans votre propre messagerie et envoyée directement à Euro Agri Trading. Aucun service de formulaire tiers n’est utilisé."
 }
