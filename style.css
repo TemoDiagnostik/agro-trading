@@ -268,6 +268,8 @@
 .cp-field input:focus,.cp-field textarea:focus{outline:0;border-color:#0f764a;background:#fff;box-shadow:0 0 0 3px rgba(15,118,74,.12);}
 .cp-form.was-validated .cp-field input:invalid,.cp-form.was-validated .cp-field textarea:invalid{border-color:#a84b3f;}
 .cp-field small{color:#718078;font-size:.76rem;font-weight:500;line-height:1.5;}
+.cp-field .cp-character-counter{margin-top:-3px;color:#8a6422;font-weight:700;}
+.cp-field .cp-character-counter.is-complete{color:#0a6b3b;}
 .cp-confirmations{display:grid;gap:15px;margin:26px 0 0;padding:23px;border:1px solid #d9e3dc;border-radius:12px;background:#f7faf8;}
 .cp-confirmations legend{padding:0 8px;color:#17382a;font-size:.88rem;font-weight:800;}
 .cp-confirmations label{display:grid;grid-template-columns:20px 1fr;gap:11px;align-items:start;color:#45564d;font-size:.84rem;line-height:1.6;}

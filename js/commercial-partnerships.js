@@ -7,6 +7,8 @@
   const challengeLabel = document.getElementById('cpChallengeLabel');
   const languageInput = document.getElementById('cpLanguage');
   const status = document.getElementById('cpFormStatus');
+  const professionalSummary = document.getElementById('cpProfessionalSummary');
+  const summaryCounter = document.getElementById('cpSummaryCounter');
 
   if (!form || !startedAt || !challengeInput || !challengeLabel || !languageInput || !status) {
     return;
@@ -29,6 +31,30 @@
     challengeLabel.textContent = `${prompt}: ${firstNumber} + ${secondNumber} =`;
   }
 
+  function updateSummaryCounter() {
+    if (!professionalSummary || !summaryCounter) {
+      return;
+    }
+
+    const minimum = Number(professionalSummary.minLength) || 40;
+    const maximum = Number(professionalSummary.maxLength) || 1600;
+    const current = professionalSummary.value.length;
+    const remaining = Math.max(0, minimum - current);
+
+    if (remaining > 0) {
+      const template = dictionaryValue('summaryRemaining', '{count} more characters required.');
+      summaryCounter.textContent = template.replace('{count}', String(remaining));
+      summaryCounter.classList.remove('is-complete');
+      return;
+    }
+
+    const template = dictionaryValue('summaryComplete', 'Minimum met · {current}/{maximum} characters.');
+    summaryCounter.textContent = template
+      .replace('{current}', String(current))
+      .replace('{maximum}', maximum.toLocaleString(document.documentElement.lang || 'en'));
+    summaryCounter.classList.add('is-complete');
+  }
+
   function showStatus(type, message) {
     status.className = `cp-form-status is-${type}`;
     status.textContent = message;
@@ -47,7 +73,12 @@
   }
 
   form.querySelectorAll('input, textarea').forEach(field => {
-    field.addEventListener('input', () => field.setCustomValidity(''));
+    field.addEventListener('input', () => {
+      field.setCustomValidity('');
+      if (field === professionalSummary) {
+        updateSummaryCounter();
+      }
+    });
     field.addEventListener('change', () => field.setCustomValidity(''));
   });
 
@@ -62,13 +93,17 @@
       form.dataset.sendingMessage = dictionary['cp.form.sending'] || '';
       form.dataset.successMessage = dictionary['cp.form.success'] || '';
       form.dataset.errorMessage = dictionary['cp.form.error'] || '';
+      form.dataset.summaryRemaining = dictionary['cp.form.summaryCounterRemaining'] || '';
+      form.dataset.summaryComplete = dictionary['cp.form.summaryCounterComplete'] || '';
     }
 
     languageInput.value = document.documentElement.lang || 'en';
     updateChallengeLabel();
+    updateSummaryCounter();
   });
 
   updateChallengeLabel();
+  updateSummaryCounter();
 
   form.addEventListener('submit', event => {
     event.preventDefault();
