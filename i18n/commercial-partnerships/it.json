@@ -10,7 +10,7 @@
   "cp.form.title": "Candidati come partner commerciale",
   "cp.form.submit": "Invia la candidatura come partner commerciale",
   "cp.meta.title": "Partnership commerciali | Euro Agri Trading",
-  "cp.form.sending": "Preparing your email application…",
-  "cp.form.success": "Your email application is ready. Review it and press Send in your email app.",
-  "cp.form.directEmailNote": "Your application is prepared in your own email app and sent directly to Euro Agri Trading. No third-party form service is used."
+  "cp.form.sending": "Submitting your application securely…",
+  "cp.form.success": "Thank you. Your application has been received for confidential review.",
+  "cp.form.directEmailNote": "Your application is submitted directly to Euro Agri Trading. No email login or third-party form service is required."
 }

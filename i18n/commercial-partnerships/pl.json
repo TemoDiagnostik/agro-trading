@@ -8,9 +8,9 @@
   "cp.model.notjob": "Jest to niezależna współpraca handlowa, a nie zatrudnienie na etacie.",
   "cp.form.eyebrow": "Zgłoszenie",
   "cp.form.title": "Zgłoś się jako partner handlowy",
-  "cp.form.submit": "Przygotuj zgłoszenie e-mail",
+  "cp.form.submit": "Wyślij zgłoszenie partnera handlowego",
   "cp.meta.title": "Partnerstwa handlowe | Euro Agri Trading",
-  "cp.form.sending": "Przygotowywanie zgłoszenia e-mail…",
-  "cp.form.success": "Twoje zgłoszenie e-mail jest gotowe. Sprawdź je i kliknij Wyślij w programie pocztowym.",
-  "cp.form.directEmailNote": "Zgłoszenie jest przygotowywane w Twoim programie pocztowym i wysyłane bezpośrednio do Euro Agri Trading. Nie korzystamy z zewnętrznej usługi formularzy."
+  "cp.form.sending": "Bezpieczne wysyłanie zgłoszenia…",
+  "cp.form.success": "Dziękujemy. Zgłoszenie zostało przyjęte do poufnej oceny.",
+  "cp.form.directEmailNote": "Zgłoszenie jest wysyłane bezpośrednio do Euro Agri Trading. Logowanie do poczty ani zewnętrzna usługa formularzy nie są wymagane."
 }

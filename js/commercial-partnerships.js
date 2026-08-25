@@ -5,9 +5,10 @@
   const startedAt = document.getElementById('cpStartedAt');
   const challengeInput = document.getElementById('cpChallenge');
   const challengeLabel = document.getElementById('cpChallengeLabel');
+  const languageInput = document.getElementById('cpLanguage');
   const status = document.getElementById('cpFormStatus');
 
-  if (!form || !startedAt || !challengeInput || !challengeLabel || !status) {
+  if (!form || !startedAt || !challengeInput || !challengeLabel || !languageInput || !status) {
     return;
   }
 
@@ -15,7 +16,8 @@
   const secondNumber = Math.floor(Math.random() * 5) + 2;
   const expectedAnswer = firstNumber + secondNumber;
   const openedAt = Date.now();
-  startedAt.value = new Date(openedAt).toISOString();
+  startedAt.value = String(openedAt);
+  languageInput.value = document.documentElement.lang || 'en';
 
   function dictionaryValue(key, fallback) {
     return form.dataset[key] || fallback;
@@ -62,51 +64,11 @@
       form.dataset.errorMessage = dictionary['cp.form.error'] || '';
     }
 
+    languageInput.value = document.documentElement.lang || 'en';
     updateChallengeLabel();
   });
 
   updateChallengeLabel();
-
-  const applicationFields = [
-    'Full Name',
-    'Company or Independent Status',
-    'Country',
-    'European Markets Covered',
-    'Email',
-    'LinkedIn Profile or Website',
-    'Years of Relevant Experience',
-    'Relevant Product Categories',
-    'Buyer Types Covered',
-    'Short Professional Summary',
-    'Relevant Transaction Experience',
-    'Commission-only independent cooperation accepted',
-    'Existing European market relationships confirmed',
-    'Privacy consent'
-  ];
-
-  function buildEmailBody() {
-    const lines = [
-      'COMMERCIAL PARTNERSHIP APPLICATION',
-      'Euro Agri Trading s.r.o.',
-      '',
-      'Application type: Independent Fertilizer Business Development Partner / Commercial Introducer',
-      ''
-    ];
-
-    applicationFields.forEach(fieldName => {
-      const field = form.elements.namedItem(fieldName);
-      const value = field && field.type === 'checkbox'
-        ? (field.checked ? 'Yes' : 'No')
-        : (field && field.value ? field.value.trim() : 'Not provided');
-
-      lines.push(`${fieldName}:`);
-      lines.push(value);
-      lines.push('');
-    });
-
-    lines.push('This application was prepared on euroagritrading.eu and sent directly from the applicant\'s email account.');
-    return lines.join('\r\n');
-  }
 
   form.addEventListener('submit', event => {
     event.preventDefault();
@@ -138,15 +100,17 @@
     }
 
     setSubmitting(true);
-    showStatus('sending', dictionaryValue('sendingMessage', 'Preparing your email application…'));
+    showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your application securely…'));
+    languageInput.value = document.documentElement.lang || 'en';
 
-    const subject = 'Commercial Partnership Application — Euro Agri Trading';
-    const body = buildEmailBody();
-    const mailtoLink = `mailto:info@euroagritrading.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.setTimeout(() => {
+      if (document.visibilityState === 'visible') {
+        setSubmitting(false);
+        showStatus('error', dictionaryValue('errorMessage', 'The submission was not confirmed. Please try again or contact info@euroagritrading.eu.'));
+      }
+    }, 15000);
 
-    showStatus('success', dictionaryValue('successMessage', 'Your email application is ready. Review it and press Send in your email app.'));
-    setSubmitting(false);
-    window.location.href = mailtoLink;
+    form.submit();
   });
 
 })();

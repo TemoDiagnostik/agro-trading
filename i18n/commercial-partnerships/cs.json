@@ -8,9 +8,9 @@
   "cp.model.notjob": "Jedná se o příležitost k nezávislé obchodní spolupráci, nikoli o zaměstnání za mzdu.",
   "cp.form.eyebrow": "Přihláška",
   "cp.form.title": "Přihlásit se jako obchodní partner",
-  "cp.form.submit": "Připravit žádost v e-mailu",
+  "cp.form.submit": "Odeslat žádost obchodního partnera",
   "cp.meta.title": "Obchodní partnerství | Euro Agri Trading",
-  "cp.form.sending": "Připravujeme vaši e-mailovou žádost…",
-  "cp.form.success": "Vaše e-mailová žádost je připravena. Zkontrolujte ji a v e-mailové aplikaci stiskněte Odeslat.",
-  "cp.form.directEmailNote": "Žádost se připraví ve vaší e-mailové aplikaci a odešle přímo společnosti Euro Agri Trading. Nepoužíváme žádnou externí formulářovou službu."
+  "cp.form.sending": "Vaše žádost se bezpečně odesílá…",
+  "cp.form.success": "Děkujeme. Vaše žádost byla přijata k důvěrnému posouzení.",
+  "cp.form.directEmailNote": "Žádost je odeslána přímo společnosti Euro Agri Trading. Není nutné přihlášení k e-mailu ani externí formulářová služba."
 }
