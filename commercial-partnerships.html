@@ -213,7 +213,10 @@
           <div class="cp-form-privacy-note" data-i18n="cp.form.confidentiality">Applications are reviewed privately and are not displayed publicly.</div>
         </div>
 
-        <form id="commercialPartnerForm" class="cp-form" novalidate>
+        <form id="commercialPartnerForm" class="cp-form" action="https://script.google.com/macros/s/AKfycbyzkYJpO5Lr1obdAEeugDfkbAEr53d_Y8g-0onlxyIyRFRVO3CT8Znag1QhbV-2Oojdsg/exec" method="post" accept-charset="UTF-8" novalidate>
+          <input type="hidden" name="formType" value="commercial-partnership">
+          <input type="hidden" name="Source Page" value="https://euroagritrading.eu/commercial-partnerships.html">
+          <input type="hidden" id="cpLanguage" name="Language" value="en">
           <input type="hidden" name="Application Type" value="Independent Fertilizer Business Development Partner / Commercial Introducer">
           <input type="hidden" id="cpStartedAt" name="Form Started At" value="">
           <div class="cp-honeypot" aria-hidden="true">
@@ -243,8 +246,8 @@
           </fieldset>
 
           <div class="cp-form-actions">
-            <p class="cp-direct-email-note" data-i18n="cp.form.directEmailNote">Your application is prepared in your own email app and sent directly to Euro Agri Trading. No third-party form service is used.</p>
-            <button class="btn btn-primary" type="submit" data-i18n="cp.form.submit">Prepare Email Application</button>
+            <p class="cp-direct-email-note" data-i18n="cp.form.directEmailNote">Your application is submitted directly to Euro Agri Trading. No email login or third-party form service is required.</p>
+            <button class="btn btn-primary" type="submit" data-i18n="cp.form.submit">Submit Commercial Partner Application</button>
             <p id="cpFormStatus" class="cp-form-status" role="status" aria-live="polite"></p>
           </div>
         </form>
@@ -265,7 +268,7 @@
   </footer>
 
   <script src="js/i18n.js?v=20260824.2"></script>
-  <script src="js/commercial-partnerships.js?v=20260825.4"></script>
+  <script src="js/commercial-partnerships.js?v=20260825.5"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -8,9 +8,9 @@
   "cp.model.notjob": "Dies ist eine unabhängige kommerzielle Zusammenarbeit und keine Festanstellung.",
   "cp.form.eyebrow": "Bewerbung",
   "cp.form.title": "Als Handelspartner bewerben",
-  "cp.form.submit": "E-Mail-Bewerbung vorbereiten",
+  "cp.form.submit": "Bewerbung als Handelspartner absenden",
   "cp.meta.title": "Handelspartnerschaften | Euro Agri Trading",
-  "cp.form.sending": "Ihre E-Mail-Bewerbung wird vorbereitet…",
-  "cp.form.success": "Ihre E-Mail-Bewerbung ist vorbereitet. Bitte prüfen Sie sie und klicken Sie in Ihrem E-Mail-Programm auf Senden.",
-  "cp.form.directEmailNote": "Ihre Bewerbung wird in Ihrem eigenen E-Mail-Programm vorbereitet und direkt an Euro Agri Trading gesendet. Es wird kein externer Formulardienst verwendet."
+  "cp.form.sending": "Ihre Bewerbung wird sicher übermittelt…",
+  "cp.form.success": "Vielen Dank. Ihre Bewerbung ist zur vertraulichen Prüfung eingegangen.",
+  "cp.form.directEmailNote": "Ihre Bewerbung wird direkt an Euro Agri Trading übermittelt. Eine E-Mail-Anmeldung oder ein externer Formulardienst ist nicht erforderlich."
 }

@@ -75,14 +75,14 @@
   "cp.form.relationshipConfirm": "I confirm that I have existing professional relationships in the European fertilizer or agricultural-input market.",
   "cp.form.privacyBefore": "I agree to the processing of my application data in accordance with the",
   "cp.form.privacyLink": "Privacy Policy",
-  "cp.form.submit": "Prepare Email Application",
+  "cp.form.submit": "Submit Commercial Partner Application",
   "cp.form.validation.required": "Please complete this required field.",
   "cp.form.validation.challenge": "Please enter the correct security-check answer.",
   "cp.form.validation.fast": "Please review the form before submitting.",
   "cp.form.validation.rate": "Please wait before submitting another application.",
-  "cp.form.sending": "Preparing your email application…",
-  "cp.form.success": "Your email application is ready. Review it and press Send in your email app.",
+  "cp.form.sending": "Submitting your application securely…",
+  "cp.form.success": "Thank you. Your application has been received for confidential review.",
   "cp.form.error": "We could not submit the application. Please try again or contact info@euroagritrading.eu.",
   "cp.footer.note": "Commercial partnerships are independent, non-exclusive and subject to written agreement and opportunity qualification.",
-  "cp.form.directEmailNote": "Your application is prepared in your own email app and sent directly to Euro Agri Trading. No third-party form service is used."
+  "cp.form.directEmailNote": "Your application is submitted directly to Euro Agri Trading. No email login or third-party form service is required."
 }
