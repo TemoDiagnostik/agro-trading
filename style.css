@@ -4416,6 +4416,10 @@ html[dir="rtl"] .lang{ gap:12px; }
   align-items:center;
 }
 
+.spec-hero-copy{
+  min-width:0;
+}
+
 .spec-eyebrow{
   display:inline-flex;
   align-items:center;
@@ -4436,12 +4440,17 @@ html[dir="rtl"] .lang{ gap:12px; }
 }
 
 .spec-hero-copy h1{
+  width:100%;
   max-width:720px;
   margin:14px 0 20px;
   color:#12251e;
-  font-size:clamp(2.25rem,4.5vw,4.25rem);
+  font-size:clamp(2.25rem,3.8vw,4rem);
   line-height:1.06;
   letter-spacing:-.035em;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  hyphens:auto;
+  text-wrap:balance;
 }
 
 .spec-hero-lead{
