@@ -160,10 +160,94 @@
       }
     });
 
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+      const key = element.getAttribute('data-i18n-aria-label');
+
+      if (key && dictionary[key] != null) {
+        element.setAttribute('aria-label', dictionary[key]);
+      }
+    });
+
     const titleKey = document.documentElement.dataset.i18nTitle;
 
     if (titleKey && dictionary[titleKey] != null) {
       document.title = dictionary[titleKey];
+    }
+  }
+
+  function initializeMobileNavigation() {
+    const container = document.querySelector('header .container.nav.nav-all-visible');
+
+    if (!container || container.querySelector('.mobile-nav-toggle')) {
+      return;
+    }
+
+    const navigation = container.querySelector('nav');
+
+    if (!navigation) {
+      return;
+    }
+
+    if (!navigation.id) {
+      navigation.id = 'primary-navigation';
+    }
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'mobile-nav-toggle';
+    toggle.setAttribute('aria-controls', navigation.id);
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Menu');
+    toggle.setAttribute('data-i18n-aria-label', 'nav.menu');
+    toggle.innerHTML = '<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>';
+
+    container.appendChild(toggle);
+    container.classList.add('mobile-nav-ready');
+
+    function setExpanded(expanded, returnFocus) {
+      navigation.classList.toggle('is-open', expanded);
+      toggle.classList.toggle('is-open', expanded);
+      toggle.setAttribute('aria-expanded', String(expanded));
+
+      if (returnFocus) {
+        toggle.focus();
+      }
+    }
+
+    toggle.addEventListener('click', event => {
+      event.stopPropagation();
+      setExpanded(toggle.getAttribute('aria-expanded') !== 'true', false);
+    });
+
+    navigation.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        setExpanded(false, false);
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!container.contains(event.target)) {
+        setExpanded(false, false);
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setExpanded(false, true);
+      }
+    });
+
+    const desktopQuery = window.matchMedia('(min-width: 769px)');
+    const closeForDesktop = event => {
+      if (event.matches) {
+        setExpanded(false, false);
+      }
+    };
+
+    if (desktopQuery.addEventListener) {
+      desktopQuery.addEventListener('change', closeForDesktop);
+    } else {
+      desktopQuery.addListener(closeForDesktop);
     }
   }
 
@@ -296,6 +380,8 @@
   }
 
   async function initialize() {
+    initializeMobileNavigation();
+
     const select = document.getElementById('langSelect');
     const wrapper = document.querySelector('.lang-flags');
 
@@ -335,6 +421,7 @@
 
       languageConfig.applyDocumentLanguage(language);
       applyTranslations(dictionary);
+      window.EuroAgriCurrentDictionary = dictionary;
       updateLanguageUi(language, dictionary, select, button, codeElement, menu);
       storeLanguage(language);
       updateCurrentUrl(language);

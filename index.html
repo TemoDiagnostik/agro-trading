@@ -34,8 +34,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- ✅ Main stylesheet -->
-  <link rel="stylesheet" href="style.css?v=20260831.1">
-  <link rel="stylesheet" href="nav-visible.css?v=20260825.6">
+  <link rel="stylesheet" href="style.css?v=20260831.2">
+  <link rel="stylesheet" href="nav-visible.css?v=20260831.2">
 
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -1120,41 +1120,128 @@
 </div>
 				</div>
 
-				<div class="form-section" id="contactFormBox">
-  <h2 class="contact-heading" data-i18n="contact.title">Get in Touch</h2>
+				<div class="form-section buyer-rfq-section" id="contactFormBox">
+  <div class="buyer-rfq-intro">
+    <span class="buyer-rfq-eyebrow" data-i18n="rfq.eyebrow">Buyer enquiry</span>
+    <h2 class="contact-heading" data-i18n="rfq.title">Submit a Buyer RFQ</h2>
+    <p data-i18n="rfq.intro">Provide the core commercial requirement so we can assess current supply, documentation and route feasibility.</p>
+    <p class="buyer-rfq-required" data-i18n="rfq.requiredNote">Fields marked * are required. Other details may be confirmed during qualification.</p>
+  </div>
 
-  <form id="contactForm" onsubmit="return sendMailto(this)">
-    <!-- ✅ موضوع/سياق الرسالة (يتعبّى تلقائياً من أزرار الطلب) -->
-    <input type="hidden" name="topic" value="">
+  <form id="contactForm"
+        class="buyer-rfq-form"
+        action="https://script.google.com/macros/s/AKfycbyzkYJpO5Lr1obdAEeugDfkbAEr53d_Y8g-0onlxyIyRFRVO3CT8Znag1QhbV-2Oojdsg/exec"
+        method="post"
+        accept-charset="UTF-8"
+        novalidate>
+    <input type="hidden" name="formType" value="buyer-rfq">
+    <input type="hidden" name="Source Page" value="https://euroagritrading.eu/#contactFormBox">
+    <input type="hidden" name="Form Version" value="20260831-1">
+    <input type="hidden" id="rfqLanguage" name="Language" value="en">
+    <input type="hidden" id="rfqStartedAt" name="Form Started At" value="">
+    <input type="hidden" id="rfqRequestType" name="Request Type" value="Buyer Commercial RFQ">
+    <input type="hidden" id="rfqSelectedContext" name="Selected Formulation or Product Context" value="">
 
-    <label>
-      <span data-i18n="form.name">Full Name</span><br>
-      <input name="name" required placeholder="Full Name">
-    </label><br><br>
+    <div class="buyer-rfq-honeypot" aria-hidden="true">
+      <label>Website confirmation<input type="text" name="Website Confirmation" tabindex="-1" autocomplete="off"></label>
+    </div>
 
-    <label>
-      <span data-i18n="form.email">Email</span><br>
-      <input name="email" type="email" required placeholder="you@example.com">
-    </label><br><br>
+    <div class="buyer-rfq-grid">
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.company">Company</span> <b aria-hidden="true">*</b></span>
+        <input type="text" name="Company" autocomplete="organization" maxlength="180" required>
+      </label>
 
-    <label>
-      <span data-i18n="form.message">Message</span><br>
-      <textarea id="rfqMessage"
-                name="message"
-                rows="6"
-                required
-                placeholder="Required: product / grade / quantity / port / terms"></textarea>
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.contactPerson">Contact person</span> <b aria-hidden="true">*</b></span>
+        <input type="text" name="Contact Person" autocomplete="name" maxlength="120" required>
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.businessEmail">Business email</span> <b aria-hidden="true">*</b></span>
+        <input type="email" name="Business Email" autocomplete="email" maxlength="160" required>
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.product">Product</span> <b aria-hidden="true">*</b></span>
+        <select id="rfqProduct" name="Product" required>
+          <option value="" data-i18n="rfq.selectProduct">Select a product</option>
+          <option value="Rock Phosphate">Rock Phosphate</option>
+          <option value="Granular Urea 46% N">Granular Urea 46-0-0</option>
+          <option value="MAP / Granular Ammophos">MAP / NP Fertilizers</option>
+          <option value="MKP — Monopotassium Phosphate">MKP 0-52-34</option>
+          <option value="UP — Urea Phosphate">Urea Phosphate 17-44-0</option>
+          <option value="Potassium Nitrate / NOP">Potassium Nitrate 13-0-46</option>
+          <option value="Magnesium Nitrate Hexahydrate">Magnesium Nitrate</option>
+          <option value="Water-Soluble Fertilizers (WSF)">Water-Soluble Fertilizers</option>
+          <option value="Micronutrients / Selected Specialty Fertilizers">Micronutrients / Selected Specialty Fertilizers</option>
+        </select>
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span data-i18n="rfq.grade">Grade / specification</span>
+        <input id="rfqGrade" type="text" name="Grade or Specification" maxlength="220">
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.quantity">Quantity</span> <b aria-hidden="true">*</b></span>
+        <input type="text" name="Quantity" maxlength="100" required>
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span data-i18n="rfq.packaging">Packaging</span>
+        <input id="rfqPackaging" type="text" name="Packaging" maxlength="180">
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.destination">Destination / discharge port</span> <b aria-hidden="true">*</b></span>
+        <input type="text" name="Destination or Discharge Port" maxlength="180" required>
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span data-i18n="rfq.incoterm">Incoterm</span>
+        <select name="Incoterm">
+          <option value="">—</option>
+          <option value="EXW">EXW</option>
+          <option value="FCA">FCA</option>
+          <option value="FOB">FOB</option>
+          <option value="CFR">CFR</option>
+          <option value="CIF">CIF</option>
+          <option value="DAP">DAP</option>
+          <option value="DDP">DDP</option>
+        </select>
+      </label>
+
+      <label class="buyer-rfq-field">
+        <span><span data-i18n="rfq.deliveryWindow">Required delivery window</span> <b aria-hidden="true">*</b></span>
+        <input type="text" name="Required Delivery Window" maxlength="140" required>
+      </label>
+
+      <label class="buyer-rfq-field buyer-rfq-wide">
+        <span data-i18n="rfq.payment">Preferred payment structure</span>
+        <input type="text" name="Preferred Payment Structure" maxlength="220">
+      </label>
+
+      <label class="buyer-rfq-field buyer-rfq-wide">
+        <span data-i18n="rfq.technical">Additional technical requirements</span>
+        <textarea id="rfqTechnical" name="Additional Technical Requirements" rows="5" maxlength="1800"></textarea>
+      </label>
+    </div>
+
+    <label class="buyer-rfq-consent">
+      <input type="checkbox" name="Privacy Consent" value="Yes" required>
+      <span><span data-i18n="rfq.privacyBefore">I agree to the processing of this RFQ data in accordance with the</span> <a href="privacy.html" target="_blank" rel="noopener" data-i18n="footer.links.privacy">Privacy Policy</a>.</span>
     </label>
 
-    <div class="cta">
-      <button class="btn btn-primary" type="submit" data-i18n="form.send">Send</button>
-
-      <!-- ✅ wa.me لازم رقم بدون + أو 00 -->
+    <div class="buyer-rfq-actions">
+      <p class="buyer-rfq-direct-note" data-i18n="rfq.directNote">This RFQ is submitted directly to Euro Agri Trading. Detailed technical documents remain controlled and are provided only against qualified requirements.</p>
+      <button class="btn btn-primary" type="submit" data-i18n="rfq.submit">Submit Buyer RFQ</button>
       <a class="btn btn-outline"
          href="https://wa.me/420732133919"
          target="_blank"
          rel="noopener"
          data-i18n="contact.whatsapp">WhatsApp</a>
+      <p id="rfqFormStatus" class="buyer-rfq-status" role="status" aria-live="polite"></p>
     </div>
   </form>
 </div>
@@ -1212,71 +1299,8 @@
 
 
 
-// RFQ auto-fill from product/specification buttons
-document.addEventListener('click', function(e){
-  const btn = e.target.closest('[data-rfq-topic]');
-  if (!btn) return;
-
-  const form = document.getElementById('contactForm');
-  const msg  = document.getElementById('rfqMessage');
-  if (!form || !msg) return;
-
-  const topic   = btn.dataset.rfqTopic || 'General fertilizer RFQ';
-  const grade   = btn.dataset.rfqGrade || 'To be confirmed';
-  const docs    = btn.dataset.rfqDocs || 'COA per shipment and supporting documentation';
-  const packing = btn.dataset.rfqPacking || 'To be confirmed';
-
-  const topicInput = form.querySelector('input[name="topic"]');
-  if (topicInput) topicInput.value = topic;
-
-  msg.value = [
-    'Hello Euro Agri Trading,',
-    '',
-    `We would like to request specifications and commercial terms for: ${topic}.`,
-    `Formula / Grade: ${grade}`,
-    `Requested documents: ${docs}`,
-    `Packing preference: ${packing}`,
-    '',
-    'Required quantity:',
-    'Destination port / delivery place:',
-    'Preferred Incoterm:',
-    'Payment structure: LC at sight / other:',
-    'Inspection requirement: SGS / Intertek / BV / not required:',
-    '',
-    'Please confirm availability, shipment-specific COA, documentation, inspection options, and current price upon RFQ.'
-  ].join('\n');
-});
-
-
-
-
-
-
-
-			
-			
-			// إرسال عبر mailto
-			window.sendMailto = function(form){
-  const data = new FormData(form);
-  const to = "info@euroagritrading.eu";
-  const topic = String(data.get("topic") || "General RFQ").trim();
-
-  const subject = encodeURIComponent(`RFQ - ${topic} - Euro Agri Trading`);
-
-  const body = encodeURIComponent(
-    `Name: ${data.get("name")}\n` +
-    `Email: ${data.get("email")}\n` +
-    `Topic / Product: ${topic}\n\n` +
-    `Message:\n${data.get("message")}`
-  );
-
-  location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  return false;
-};
 			// تمرير سلس للروابط الداخلية
 			document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener("click", e=>{ const id = a.getAttribute("href").slice(1); const el = document.getElementById(id); if(el){ e.preventDefault(); el.scrollIntoView({behavior:"smooth", block:"start"}); } }); });
-			// mobile menu hooks (إن وُجدت الماركب)
-			document.addEventListener("DOMContentLoaded", ()=>{ const menuToggle = document.querySelector(".menu-toggle"); const mainNav = document.querySelector(".main-nav"); if (menuToggle && mainNav) { menuToggle.addEventListener("click", ()=> mainNav.classList.toggle("active")); } });
 		</script>
 		<script>
 			// تبديل صنف عند التمرير (للهيدر الظل/التأثير)
@@ -1289,7 +1313,8 @@ document.addEventListener('click', function(e){
 
 
 <!-- Shared i18n and language selector -->
-<script src="js/i18n.js?v=20260824.2"></script>
+<script src="js/i18n.js?v=20260831.2"></script>
+<script src="js/buyer-rfq.js?v=20260831.1"></script>
 
 
 
