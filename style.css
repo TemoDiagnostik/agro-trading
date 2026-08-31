@@ -4907,3 +4907,503 @@ html[dir="rtl"] #logistics .logistics-heading,
 html[dir="rtl"] #logistics .logistics-disclaimer{
   text-align: right;
 }
+
+/* ==================================================
+   HOMEPAGE COMMERCIAL FUNNEL — PHASE 1
+   Existing routes and functions are preserved.
+   Palette: white, charcoal and Euro Agri green only.
+   ================================================== */
+
+.home-page [hidden]{
+  display:none !important;
+}
+
+.home-page .hero-bleed{
+  min-height:640px;
+  padding-block:72px;
+}
+
+.home-page .hero-left{
+  max-width:760px;
+}
+
+.home-page .hero-title{
+  max-width:760px;
+  font-size:clamp(2.25rem,4.8vw,4.35rem);
+  letter-spacing:-.035em;
+}
+
+.home-page .hero-subtitle{
+  max-width:720px;
+  margin-top:22px;
+  font-size:clamp(1.05rem,1.7vw,1.3rem);
+  font-weight:700;
+}
+
+.home-page .hero-desc{
+  max-width:700px;
+  font-size:1rem;
+}
+
+.home-page .hero-products-line{
+  max-width:700px;
+  margin:22px 0 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.36);
+  font-size:.94rem;
+  font-weight:750;
+  line-height:1.65;
+}
+
+.home-page .hero-bleed .trade-note{
+  max-width:700px;
+  margin-top:10px;
+  color:rgba(255,255,255,.84);
+  font-size:.82rem;
+  line-height:1.6;
+}
+
+.home-page .hero-bleed .btn-outline{
+  max-width:360px;
+  border-color:rgba(255,255,255,.76);
+  background:rgba(17,24,39,.18);
+  color:#fff;
+}
+
+.home-page .hero-bleed .btn-outline:hover,
+.home-page .hero-bleed .btn-outline:focus-visible{
+  border-color:#fff;
+  background:rgba(255,255,255,.12);
+}
+
+.home-section-heading{
+  max-width:850px;
+  margin:0 auto 38px;
+  text-align:center;
+}
+
+.home-section-heading-left{
+  margin-inline:0;
+  text-align:start;
+}
+
+.home-section-heading h2{
+  margin:0;
+  color:#111827;
+  font-size:clamp(2rem,3.4vw,3.15rem);
+  line-height:1.12;
+  letter-spacing:-.025em;
+}
+
+.home-section-heading p{
+  margin:15px 0 0;
+  color:#52606d;
+  font-size:1.02rem;
+  line-height:1.72;
+}
+
+.home-routes{
+  padding:clamp(68px,8vw,104px) 0;
+  border-bottom:1px solid #e5e7eb;
+  background:#fff;
+}
+
+.home-route-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+
+.home-route-card{
+  position:relative;
+  min-height:350px;
+  display:flex;
+  flex-direction:column;
+  padding:30px;
+  overflow:hidden;
+  border:1px solid #dbe2de;
+  border-top:4px solid #0a662f;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 16px 40px rgba(17,24,39,.07);
+}
+
+.home-route-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:34px;
+  border-radius:999px;
+  background:#eaf3ed;
+  color:#0a662f;
+  font-size:.76rem;
+  font-weight:850;
+  letter-spacing:.1em;
+}
+
+.home-route-card h3{
+  margin:34px 0 13px;
+  color:#17211c;
+  font-size:1.35rem;
+  line-height:1.3;
+}
+
+.home-route-card p{
+  margin:0;
+  color:#5c6872;
+  font-size:.94rem;
+  line-height:1.7;
+}
+
+.home-route-link{
+  margin-top:auto;
+  padding-top:28px;
+  color:#0a662f;
+  font-size:.92rem;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.home-route-link::after{
+  content:" →";
+}
+
+html[dir="rtl"] .home-route-link::after{
+  content:" ←";
+}
+
+.home-route-link:hover,
+.home-route-link:focus-visible{
+  color:#064d24;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+
+.home-page #products.home-products{
+  padding:clamp(72px,8vw,112px) 0;
+  background:#f4f6f5;
+}
+
+.home-product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+
+.home-product-card{
+  min-height:250px;
+  display:flex;
+  flex-direction:column;
+  padding:23px;
+  border:1px solid #dce3df;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(17,24,39,.045);
+}
+
+.home-product-type{
+  width:max-content;
+  min-width:38px;
+  padding:6px 9px;
+  border-radius:6px;
+  background:#e9f2ec;
+  color:#0a662f;
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.07em;
+  text-align:center;
+}
+
+.home-product-card h3{
+  margin:22px 0 9px;
+  color:#1c2923;
+  font-size:1.03rem;
+  line-height:1.4;
+}
+
+.home-product-card p{
+  margin:0;
+  color:#637068;
+  font-size:.85rem;
+  line-height:1.62;
+}
+
+.home-product-card a{
+  margin-top:auto;
+  padding-top:20px;
+  color:#0a662f;
+  font-size:.82rem;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.home-product-card a:hover,
+.home-product-card a:focus-visible{
+  color:#064d24;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+
+.home-product-note{
+  display:grid;
+  grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);
+  gap:24px;
+  margin-top:24px;
+  padding:22px 24px;
+  border-inline-start:4px solid #0a662f;
+  border-radius:0 10px 10px 0;
+  background:#e8eeea;
+  color:#34443c;
+  font-size:.88rem;
+  line-height:1.65;
+}
+
+html[dir="rtl"] .home-product-note{
+  border-radius:10px 0 0 10px;
+}
+
+.home-page #how-we-work.home-execution{
+  padding:clamp(72px,8vw,112px) 0;
+  background:#14251e;
+}
+
+.home-page #how-we-work.home-execution h2,
+.home-page #how-we-work.home-execution > .container > h2{
+  max-width:900px;
+  margin:0 auto;
+  color:#fff;
+  text-align:center;
+  font-size:clamp(2rem,3.4vw,3.1rem);
+  line-height:1.15;
+}
+
+.home-page #how-we-work.home-execution > .container > .muted{
+  max-width:860px;
+  margin:18px auto 0;
+  color:rgba(255,255,255,.74);
+  text-align:center;
+  line-height:1.75;
+}
+
+.home-page #how-we-work .home-execution-flow{
+  margin-top:44px;
+}
+
+.home-page #how-we-work .execution-flow li{
+  border-color:rgba(255,255,255,.16);
+  background:rgba(255,255,255,.055);
+  color:#f6f8f7;
+}
+
+.home-page #how-we-work .flow-number{
+  color:#8dcaa6;
+}
+
+.home-control-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:18px;
+}
+
+.home-control-grid article{
+  min-height:175px;
+  padding:22px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:rgba(255,255,255,.045);
+}
+
+.home-control-grid span{
+  color:#8dcaa6;
+  font-size:.72rem;
+  font-weight:850;
+  letter-spacing:.1em;
+}
+
+.home-control-grid p{
+  margin:28px 0 0;
+  color:rgba(255,255,255,.84);
+  font-size:.88rem;
+  line-height:1.65;
+}
+
+.home-commercial-structure{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:36px 48px;
+  align-items:start;
+  margin-top:22px;
+  padding:clamp(26px,4vw,42px);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:16px;
+  background:#fff;
+}
+
+.home-commercial-structure h3{
+  margin:0 0 12px;
+  color:#17211c;
+  font-size:1.35rem;
+}
+
+.home-commercial-structure p,
+.home-commercial-structure li{
+  color:#56645d;
+  font-size:.9rem;
+  line-height:1.7;
+}
+
+.home-commercial-structure p{
+  margin:0;
+}
+
+.home-commercial-structure ul{
+  display:grid;
+  gap:10px;
+  margin:0;
+  padding-inline-start:20px;
+}
+
+.home-commercial-structure .btn{
+  width:max-content;
+  max-width:100%;
+  grid-column:1 / -1;
+  border-color:#0a662f;
+  background:#fff;
+  color:#0a662f;
+}
+
+.home-page #logistics{
+  padding-block:clamp(68px,7vw,96px);
+}
+
+.home-page #logistics .logistics-hero img{
+  aspect-ratio:2.35 / 1;
+}
+
+.home-page #about.home-about{
+  padding:clamp(68px,7vw,96px) 0;
+  background:#fff;
+}
+
+.home-page #about .about-bg{
+  min-height:0;
+  padding:0;
+  background:#fff;
+}
+
+.home-page #about .about-card{
+  width:auto;
+  max-width:none;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.home-page #about .about-card > .container{
+  max-width:920px;
+  padding:0 20px;
+}
+
+.home-page #about h2{
+  margin:0 0 24px;
+  color:#17211c;
+  font-size:clamp(2rem,3vw,2.8rem);
+}
+
+.home-page #about p{
+  color:#4d5a53;
+  font-size:.98rem;
+  line-height:1.75;
+}
+
+.home-page #about p[data-i18n="about.note"]{
+  margin-top:24px;
+  padding:18px 20px;
+  border-inline-start:4px solid #0a662f;
+  background:#f1f4f2;
+  color:#46534c;
+}
+
+@media (max-width:980px){
+  .home-route-grid,
+  .home-product-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .home-route-card{
+    min-height:310px;
+  }
+
+  .home-control-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:680px){
+  .home-page .hero-bleed{
+    min-height:0;
+    padding:48px 16px 58px;
+  }
+
+  .home-page .hero-title{
+    font-size:clamp(2rem,10vw,3rem);
+  }
+
+  .home-page .hero-subtitle{
+    margin-top:18px;
+  }
+
+  .home-page .hero-products-line{
+    margin-top:18px;
+  }
+
+  .home-page .hero-bleed .btn-outline{
+    max-width:none;
+  }
+
+  .home-route-grid,
+  .home-product-grid,
+  .home-control-grid,
+  .home-commercial-structure,
+  .home-product-note{
+    grid-template-columns:1fr;
+  }
+
+  .home-route-card,
+  .home-product-card,
+  .home-control-grid article{
+    min-height:0;
+  }
+
+  .home-route-card{
+    padding:24px;
+  }
+
+  .home-route-card h3{
+    margin-top:24px;
+  }
+
+  .home-route-link{
+    margin-top:28px;
+  }
+
+  .home-product-card a{
+    margin-top:20px;
+  }
+
+  .home-commercial-structure{
+    gap:24px;
+  }
+
+  .home-page #logistics .logistics-heading{
+    text-align:start;
+  }
+
+  .home-page #logistics .logistics-hero img{
+    aspect-ratio:16 / 10;
+  }
+}

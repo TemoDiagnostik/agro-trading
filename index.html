@@ -34,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- ✅ Main stylesheet -->
-  <link rel="stylesheet" href="style.css?v=20260825.2">
+  <link rel="stylesheet" href="style.css?v=20260831.1">
   <link rel="stylesheet" href="nav-visible.css?v=20260825.6">
 
   <!-- ✅ Favicon -->
@@ -128,7 +128,7 @@
 </style>
 </head>
 	
-	<body>
+	<body class="home-page">
 
 
 		<!-- قسم الرأس (الهيدر) -->
@@ -231,26 +231,14 @@
   transport planning and delivery coordination where required.
 </p>
 
-<div class="hero-specs-box" role="region" aria-label="Key products and compliance">
-  <p class="hero-specs-title">
-    <strong data-i18n="hero.specsTitle">Core Supply Categories</strong>
+<p class="hero-products-line" data-i18n="hero.productsLineSpecialty">
+  Rock Phosphate • Granular Urea 46% N • MAP • Selected Water-Soluble &amp; Specialty Fertilizers
+</p>
 
-    <span class="hero-specs-note" data-i18n="hero.specsNote">
-      Availability, origin and commercial terms are confirmed per RFQ.
-    </span>
-  </p>
-
-  <ul class="hero-specs-list">
-    <li data-i18n="hero.productsLineSpecialty">
-      Rock Phosphate • Granular Urea 46% N • MAP • Selected Water-Soluble &amp; Specialty Fertilizers
-    </li>
-  </ul>
-
-  <p class="trade-note" data-i18n="hero.tradeNote">
-    Commercial structure confirmed per transaction • LC at Sight preferred where feasible •
-    third-party inspection when required • shipment-specific documentation
-  </p>
-</div>
+<p class="trade-note" data-i18n="hero.tradeNote">
+  Commercial structure confirmed per transaction • LC at Sight preferred where feasible •
+  third-party inspection when required • shipment-specific documentation
+</p>
 
 <!-- ✅ HERO CTA — One Primary Only -->
 <div class="cta-row">
@@ -260,14 +248,8 @@
   Request RFQ
 </a>
 
-  <a href="specifications.html" class="btn btn-outline" data-i18n="nav.coa">
-    Specifications
-  </a>
-</div>
-
-<div class="cta-row cta-row-secondary">
-  <a href="supplier-network.html" class="btn btn-outline" data-i18n="nav.suppliers">
-    Supplier Network
+  <a href="#commercial-paths" class="btn btn-outline" data-i18n="services.title">
+    Sourcing, Verification &amp; Trade Coordination
   </a>
 </div>
 
@@ -275,15 +257,128 @@
   </div>
 </section>
 
+<!-- Three clear commercial routes -->
+<section id="commercial-paths" class="home-routes" aria-labelledby="commercial-paths-title">
+  <div class="container">
+    <div class="home-section-heading">
+      <h2 id="commercial-paths-title" data-i18n="home.routes.title">Choose Your Commercial Route</h2>
+    </div>
+
+    <div class="home-route-grid">
+      <article class="home-route-card home-route-buyer">
+        <span class="home-route-number" aria-hidden="true">01</span>
+        <h3 data-i18n="services.cta.rfq">Submit RFQ</h3>
+        <p data-i18n="services.agro.text">
+          We match qualified buyer requirements with suitable fertilizer supply channels based on product specification, quantity, current availability, commercial terms, logistics and delivery timeframe.
+        </p>
+        <a class="home-route-link" href="#contactFormBox" data-i18n="cat.cta.rfq">Request RFQ</a>
+      </article>
+
+      <article class="home-route-card home-route-supplier">
+        <span class="home-route-number" aria-hidden="true">02</span>
+        <h3 data-i18n="sup.apply.title">Apply to Join Our Supplier Network</h3>
+        <p data-i18n="sup.verify.text">
+          Verification is proportionate to the stage of the transaction, focusing first on commercial feasibility and then on deeper counterparty and shipment checks as required.
+        </p>
+        <a class="home-route-link" href="supplier-network.html" data-i18n="sup.apply.button">Start Supplier Pre-Qualification</a>
+      </article>
+
+      <article class="home-route-card home-route-partner">
+        <span class="home-route-number" aria-hidden="true">03</span>
+        <h3 data-i18n="cp.nav">Commercial Partnerships</h3>
+        <p data-i18n="cp.hero.lead">
+          We welcome experienced fertilizer business developers and commercial introducers who bring credible market knowledge and established buyer relationships.
+        </p>
+        <a class="home-route-link" href="commercial-partnerships.html#apply" data-i18n="cp.hero.cta">Apply as a Commercial Partner</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 
 <!-- 🌍 Products Section (Core product first, then secondary categories TEXT-ONLY) -->
-<section id="products">
+<section id="products" class="home-products">
   <div class="container">
-    <h2 data-i18n="products.all">Product Categories</h2>
+    <div class="home-section-heading home-section-heading-left">
+      <h2 data-i18n="products.title">Fertilizer Supply Categories</h2>
+      <p data-i18n="products.lead">
+        Multi-origin fertilizer supply coordinated according to current availability, specification, quantity, packing, logistics and shipment requirements.
+      </p>
+    </div>
+
+    <div class="home-product-grid">
+      <article class="home-product-card">
+        <span class="home-product-type">P</span>
+        <h3 data-i18n="cat.rp.title">Rock Phosphate</h3>
+        <p data-i18n="cat.rp.text">Multi-origin rock phosphate sourcing with final grade and heavy-metals parameters confirmed by shipment-specific COA and independent inspection where required.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Rock Phosphate" data-rfq-grade="Grade and form to be confirmed per RFQ" data-rfq-docs="Shipment-specific COA and heavy-metals analysis where relevant" data-rfq-packing="Bulk / Big Bags / as agreed">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">N</span>
+        <h3 data-i18n="cat.urea46.title">Granular Urea 46% N</h3>
+        <p data-i18n="cat.urea46.text">Agricultural-grade granular urea coordinated through qualified European and international supply channels.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Granular Urea 46% N" data-rfq-grade="Agricultural-grade Granular Urea 46% N" data-rfq-docs="Shipment-specific COA and supporting commercial/export documentation" data-rfq-packing="Big Bags / packing subject to confirmed supply">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">NP</span>
+        <h3 data-i18n="cat.map.title">MAP / Granular Ammophos</h3>
+        <p data-i18n="cat.map.text">Granular phosphate fertilizer coordinated through qualified supply channels, with origin and current availability confirmed per RFQ.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="MAP / Granular Ammophos" data-rfq-grade="NP 10-46-0 / final specification confirmed per shipment" data-rfq-docs="Shipment-specific COA and supporting documentation" data-rfq-packing="Big Bags / subject to confirmed supply">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">PK</span>
+        <h3 data-i18n="cat.mkp.title">MKP — Monopotassium Phosphate</h3>
+        <p data-i18n="cat.mkp.text">Water-soluble phosphorus and potassium source for fertigation and foliar nutrition.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="MKP — Monopotassium Phosphate" data-rfq-grade="0-52-34" data-rfq-docs="COA, TDS, MSDS; REACH where applicable" data-rfq-packing="25kg bags / Big Bags / customised packing">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">NP</span>
+        <h3 data-i18n="cat.up.title">UP — Urea Phosphate</h3>
+        <p data-i18n="cat.up.text">Acidic water-soluble fertilizer, suitable for fertigation and phosphorus/nitrogen supply.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="UP — Urea Phosphate" data-rfq-grade="17-44-0" data-rfq-docs="COA, TDS, MSDS; additional test reports where applicable" data-rfq-packing="25kg bags / Big Bags">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">NK</span>
+        <h3 data-i18n="cat.nop.title">Potassium Nitrate / NOP</h3>
+        <p data-i18n="cat.nop.text">Chloride-free potassium and nitrate nitrogen source for high-value crops.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Potassium Nitrate / NOP" data-rfq-grade="13-0-46" data-rfq-docs="COA, TDS, MSDS; REACH where applicable" data-rfq-packing="25kg bags / Big Bags">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">Mg</span>
+        <h3 data-i18n="cat.mgno3.title">Magnesium Nitrate Hexahydrate</h3>
+        <p data-i18n="cat.mgno3.text">Water-soluble magnesium and nitrogen source for fertigation and specialty nutrition.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Magnesium Nitrate Hexahydrate" data-rfq-grade="Final specification confirmed by shipment-specific COA" data-rfq-docs="COA, TDS, MSDS; REACH / heavy-metals analysis where applicable" data-rfq-packing="25kg bags / Big Bags">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">WSF</span>
+        <h3 data-i18n="cat.wsf.title">Water-Soluble Fertilizers (WSF)</h3>
+        <p data-i18n="cat.wsf.text.short">Water-soluble fertilizer grades coordinated upon qualified demand and current supply confirmation.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Water-Soluble Fertilizers (WSF)" data-rfq-grade="Selected formulation to be confirmed" data-rfq-docs="Product-specific COA, TDS and MSDS against qualified requirements" data-rfq-packing="Packing to be confirmed">Request RFQ</a>
+      </article>
+
+      <article class="home-product-card">
+        <span class="home-product-type">TE</span>
+        <h3 data-i18n="cat.micro.title">Micronutrients</h3>
+        <p data-i18n="cat.micro.text.short">Selected micronutrients coordinated upon qualified demand with product-specific documentation.</p>
+        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Micronutrients / Selected Specialty Fertilizers" data-rfq-grade="Product and formulation to be confirmed" data-rfq-docs="Product-specific documentation against qualified requirements" data-rfq-packing="Packing to be confirmed">Request RFQ</a>
+      </article>
+    </div>
+
+    <div class="home-product-note" role="note">
+      <strong data-i18n="hero.specsNote">Current availability, origin options and commercial terms are confirmed per RFQ.</strong>
+      <span data-i18n="compliance.lead">Product specifications shown on the website are for commercial guidance. Final parameters, packing, documentation and inspection requirements are confirmed according to the selected supply source and shipment.</span>
+    </div>
 
    
     <!-- 🔷 Core Product — Rock Phosphate -->
-    <div class="core-product">
+    <div class="core-product" hidden>
       <div class="card core-card">
         <div class="core-layout">
 
@@ -329,7 +424,7 @@
     </div>
 
     <!-- TRUST BANNER -->
-    <div class="trust-banner" role="region" aria-label="Trust & compliance">
+    <div class="trust-banner" role="region" aria-label="Trust & compliance" hidden>
       <p>
         <strong data-i18n="trust.title">EU-based execution.</strong>
         <span data-i18n="trust.text">
@@ -339,17 +434,17 @@
     </div>
 
     <!-- Selected WSF & Specialty Fertilizers -->
-    <h3 class="subhead" data-i18n="products.specialtyTitle">
+    <h3 class="subhead" data-i18n="products.specialtyTitle" hidden>
   Additional Fertilizer Supply Categories
 </h3>
 
-<p class="muted products-sublead" data-i18n="products.specialtyLead">
+<p class="muted products-sublead" data-i18n="products.specialtyLead" hidden>
   Additional fertilizer products are coordinated through qualified supply sources.
   Availability, origin, specifications, packing, documentation and commercial terms
   are confirmed per RFQ and per shipment.
 </p>
 
-    <div class="grid cols-3">
+    <div class="grid cols-3" hidden>
 <!-- Granular Urea 46% N -->
 <div class="card product-text-card">
   <h3 data-i18n="cat.urea46.title">Granular Urea 46% N</h3>
@@ -586,7 +681,7 @@
 
     </div>
 
-    <p class="products-note" data-i18n="products.specialtyNote">
+    <p class="products-note" data-i18n="products.specialtyNote" hidden>
       Additional products may be reviewed upon confirmed supplier availability.
     </p>
 
@@ -594,7 +689,7 @@
 </section>
 		
 <!-- 🌟 Services Section -->
-<section id="services">
+<section id="services" hidden>
   <div class="container">
     <h2 data-i18n="services.title">Our Services</h2>
 
@@ -602,7 +697,7 @@
 
       <!-- 1) Structured Sourcing Support -->
       <div class="service">
-        <img src="service-agro.png" alt="Structured Fertilizer Sourcing" data-i18n-alt="services.agro.alt">
+        <img src="service-agro.png" alt="Structured Fertilizer Sourcing" data-i18n-alt="services.agro.alt" loading="lazy" decoding="async">
 
         <div class="service-text">
           <h3 data-i18n="services.agro">Structured Fertilizer Sourcing</h3>
@@ -622,7 +717,7 @@
 
       <!-- 2) Inspection Coordination -->
       <div class="service">
-        <img src="service-quality.png" alt="Inspection Coordination" data-i18n-alt="services.quality.alt">
+        <img src="service-quality.png" alt="Inspection Coordination" data-i18n-alt="services.quality.alt" loading="lazy" decoding="async">
 
         <div class="service-text">
           <h3 data-i18n="services.quality">Inspection Coordination</h3>
@@ -641,7 +736,7 @@
 
       <!-- 3) Documentation Control & EU Alignment -->
       <div class="service">
-        <img src="service-lab.png" alt="Documentation & EU Compliance" data-i18n-alt="services.analysis.alt">
+        <img src="service-lab.png" alt="Documentation & EU Compliance" data-i18n-alt="services.analysis.alt" loading="lazy" decoding="async">
 
         <div class="service-text">
           <h3 data-i18n="services.analysis">Documentation Control & EU Alignment</h3>
@@ -661,7 +756,7 @@
 
       <!-- 4) Shipping & Transport Coordination -->
       <div class="service">
-        <img src="logistics1.png" alt="Road and maritime transport coordination" data-i18n-alt="services.logistics.alt">
+        <img src="logistics1.png" alt="Road and maritime transport coordination" data-i18n-alt="services.logistics.alt" loading="lazy" decoding="async">
 
         <div class="service-text">
           <h3 data-i18n="services.logistics">Shipping &amp; Transport Coordination</h3>
@@ -700,7 +795,7 @@
         quantity, route, Incoterm, delivery window and operational availability.
       </p>
 
-      <p class="logistics-network" data-i18n="log.network">
+      <p class="logistics-network" data-i18n="log.network" hidden>
         Through a developing network of independent logistics and transport providers across
         Europe and selected maritime routes.
       </p>
@@ -760,7 +855,7 @@
 
 		
 <!-- 🧭 How We Work (EU Sourcing & Risk-Control) -->
-<section id="how-we-work">
+<section id="how-we-work" class="home-execution">
   <div class="container">
     <h2 data-i18n="how.title">How We Work (EU Sourcing & Risk-Control)</h2>
 
@@ -777,7 +872,7 @@
       <li><span class="flow-number" aria-hidden="true">05</span><span data-i18n="how.step5">Delivery Coordination</span></li>
     </ol>
 
-    <div class="grid cols-2">
+    <div class="grid cols-2" hidden>
       <!-- Policy card -->
       <div class="card how-card">
         <h3 data-i18n="how.policyTitle">Transaction Policy (Risk-Control)</h3>
@@ -810,6 +905,40 @@
 </p>
       </div>
     </div>
+
+    <div class="home-control-grid">
+      <article>
+        <span aria-hidden="true">01</span>
+        <p data-i18n="how.p1">Current availability, quantity, commercial basis and delivery feasibility are assessed first</p>
+      </article>
+      <article>
+        <span aria-hidden="true">02</span>
+        <p data-i18n="how.p2">Counterparty, product and payment verification are expanded as the transaction advances</p>
+      </article>
+      <article>
+        <span aria-hidden="true">03</span>
+        <p data-i18n="how.p3">Independent inspection at loading: SGS / Intertek / Bureau Veritas when required or agreed</p>
+      </article>
+      <article>
+        <span aria-hidden="true">04</span>
+        <p data-i18n="how.p4">Shipment-specific documentation is aligned according to the product, destination and contractual requirements</p>
+      </article>
+    </div>
+
+    <div id="payment-note" class="home-commercial-structure">
+      <div>
+        <h3 data-i18n="payment.title">Commercial &amp; Payment Structure</h3>
+        <p data-i18n="payment.lead">
+          Commercial and payment terms depend on the transaction structure and are confirmed between the relevant contracting parties. Euro Agri Trading coordinates commercial alignment, documentation and risk-control steps according to the requirements of each deal.
+        </p>
+      </div>
+      <ul>
+        <li data-i18n="payment.opt.lcSight">LC at Sight — Preferred where commercially feasible</li>
+        <li data-i18n="payment.guard">Independent third-party inspection at loading through SGS, Intertek or Bureau Veritas can be arranged when commercially or contractually required.</li>
+        <li data-i18n="how.p5">Sensitive counterparty and shipment information is shared according to transaction stage and business need</li>
+      </ul>
+      <a class="btn btn-outline" href="specifications.html" data-i18n="nav.coa">Specifications</a>
+    </div>
   </div>
 </section>
 
@@ -818,7 +947,7 @@
 
 		
 		<!-- 💳 Payment & Settlement (Trade Terms) -->
-<section id="payment-note" class="payment-section">
+<section id="payment-note-legacy" class="payment-section" hidden>
   <div class="container">
 
     <h3 class="payment-title" data-i18n="payment.title">
@@ -866,7 +995,7 @@
 
 		
 		<!-- 🏢 About Section -->
-<section id="about">
+<section id="about" class="home-about">
   <div class="about-bg">
     <div class="content-box about-card">
       <div class="container">
@@ -877,7 +1006,7 @@
           Euro Agri Trading s.r.o. is an EU-based sourcing and coordination company connecting qualified buyers with verified suppliers across multiple origins.
         </p>
 
-        <p data-i18n="about.pricing">
+        <p data-i18n="about.pricing" hidden>
           We support structured transaction execution with transparent coordination and competitive terms based on verified sourcing and shipment-specific documentation.
         </p>
 
@@ -889,7 +1018,7 @@
           The company is registered in the Czech Republic and operates in alignment with applicable EU trade, customs, and regulatory frameworks.
         </p>
 
-        <p data-i18n="about.logistics">
+        <p data-i18n="about.logistics" hidden>
           Where a transaction requires transport support, Euro Agri may coordinate road,
           maritime or specialised logistics through independent providers, subject to route,
           cargo, timing and availability.
