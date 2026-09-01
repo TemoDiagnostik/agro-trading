@@ -76,7 +76,8 @@ header .container.nav{
   min-height:90px;
 }
 
-header .brand-name{
+header .brand-name,
+header .nav-all-visible .brand-name{
   color:var(--vr-accent-dark);
   font-size:clamp(1.22rem,1.35vw,1.48rem);
   font-weight:820;
@@ -585,6 +586,7 @@ header .lang-menu{
 
 .home-page #about .about-industrial-visual{
   position:relative;
+  align-self:stretch;
   min-height:460px;
   margin:0;
   overflow:hidden;
