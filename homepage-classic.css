@@ -1,0 +1,457 @@
+/* Homepage reference restoration — 2026-09-01
+   Reinstates the approved Phase 1 composition while retaining the current
+   Buyer RFQ fields, direct submission, translations and mobile navigation. */
+
+body.home-page header .container.nav{
+  min-height:100px;
+}
+
+body.home-page header .nav-all-visible .logo-img{
+  height:76px;
+}
+
+body.home-page header .brand-name,
+body.home-page header .nav-all-visible .brand-name{
+  color:#1f7a4d;
+  font-size:clamp(1.22rem,1.45vw,1.55rem);
+  font-weight:850;
+}
+
+/* Hero — restore the spacious port composition shown in the approved reference. */
+.home-page .hero-bleed{
+  min-height:max(640px,calc(100svh - 100px));
+  padding-block:72px;
+  background-image:url("img/hero-port-desktop.webp");
+  background-position:center 55%;
+}
+
+.home-page .hero-bleed::after{
+  background:
+    linear-gradient(90deg,rgba(24,27,27,.66) 0%,rgba(35,38,37,.50) 47%,rgba(35,38,37,.11) 79%,rgba(35,38,37,.04) 100%),
+    linear-gradient(0deg,rgba(30,32,31,.16),transparent 46%);
+}
+
+.home-page .hero-left{
+  max-width:760px;
+}
+
+.home-page .hero-title{
+  max-width:760px;
+  margin-bottom:20px;
+  font-size:clamp(2.7rem,4.8vw,4.75rem);
+  line-height:1.04;
+  letter-spacing:-.045em;
+}
+
+.home-page .hero-subtitle{
+  max-width:720px;
+  margin-top:22px;
+  font-size:clamp(1.05rem,1.7vw,1.3rem);
+  font-weight:700;
+}
+
+.home-page .hero-desc,
+.home-page .hero-products-line,
+.home-page .hero-bleed .trade-note{
+  max-width:700px;
+}
+
+/* Logistics — full-width image followed by three independent scope cards. */
+.home-page #logistics{
+  padding-block:clamp(68px,7vw,96px);
+  background:
+    radial-gradient(circle at 88% 6%,rgba(10,102,47,.08),transparent 30%),
+    linear-gradient(180deg,#f8fafc 0%,#f3f6f4 100%);
+}
+
+.home-page #logistics > .container{
+  display:block;
+}
+
+.home-page #logistics .logistics-heading{
+  max-width:980px;
+  margin:0 auto 28px;
+  text-align:center;
+}
+
+.home-page #logistics .logistics-lead{
+  font-size:1.04rem;
+  line-height:1.75;
+}
+
+.home-page #logistics .logistics-hero{
+  position:relative;
+  margin:0 0 30px;
+  overflow:hidden;
+  border:1px solid rgba(15,23,42,.12);
+  border-radius:18px;
+  background:#dfe7e3;
+  box-shadow:0 18px 45px rgba(15,23,42,.12);
+}
+
+.home-page #logistics .logistics-hero::after{
+  display:none;
+}
+
+.home-page #logistics .logistics-hero img{
+  width:100%;
+  aspect-ratio:2.35 / 1;
+  object-fit:cover;
+  object-position:center;
+  filter:none;
+}
+
+.home-page #logistics .logistics-scope-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  overflow:visible;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.home-page #logistics .logistics-scope-card{
+  min-height:245px;
+  padding:24px;
+  border:1px solid #e0e6e2;
+  border-top:4px solid rgba(10,102,47,.76);
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 10px 28px rgba(15,23,42,.07);
+}
+
+.home-page #logistics .logistics-scope-card:last-child{
+  border-inline-end:1px solid #e0e6e2;
+}
+
+.home-page #logistics .logistics-card-number{
+  width:38px;
+  height:30px;
+  padding:0;
+  border-radius:999px;
+  background:rgba(10,102,47,.09);
+  color:#0a662f;
+}
+
+.home-page #logistics .logistics-disclaimer{
+  max-width:980px;
+  margin:26px auto 0;
+  padding-top:18px;
+  border-top:1px solid rgba(15,23,42,.13);
+  color:#64748b;
+  text-align:center;
+}
+
+/* Execution — restore the deep Euro Agri green and separate panels. */
+.home-page #how-we-work.home-execution{
+  padding:clamp(72px,8vw,112px) 0;
+  background:#14251e;
+}
+
+.home-page #how-we-work .execution-flow{
+  gap:12px;
+  overflow:visible;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+
+.home-page #how-we-work .execution-flow li{
+  min-height:128px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:12px;
+  background:rgba(255,255,255,.055);
+}
+
+.home-page #how-we-work .execution-flow li:last-child{
+  border-inline-end:1px solid rgba(255,255,255,.16);
+}
+
+.home-control-grid{
+  gap:12px;
+  overflow:visible;
+  border:0;
+  border-radius:0;
+}
+
+.home-control-grid article{
+  min-height:175px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:rgba(255,255,255,.045);
+}
+
+.home-control-grid article:last-child{
+  border-inline-end:1px solid rgba(255,255,255,.12);
+}
+
+.home-commercial-structure{
+  border:1px solid rgba(255,255,255,.13);
+  background:#fff;
+}
+
+.home-commercial-structure h3{
+  color:#17211c;
+}
+
+.home-commercial-structure p,
+.home-commercial-structure li{
+  color:#56645d;
+}
+
+.home-commercial-structure .btn{
+  border-color:#0a662f;
+  background:#fff;
+  color:#0a662f;
+}
+
+/* About — exact open, centred editorial presentation from the reference. */
+.home-page #about.home-about{
+  padding:clamp(68px,7vw,96px) 0;
+  background:#fff;
+}
+
+.home-page #about .about-bg{
+  display:block;
+  width:100%;
+  min-height:0;
+  margin:0;
+  padding:0;
+  border:0;
+  background:#fff;
+  box-shadow:none;
+}
+
+.home-page #about .about-bg::before{
+  display:none;
+}
+
+.home-page #about .about-card{
+  width:auto;
+  max-width:none;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  text-align:center;
+}
+
+.home-page #about .about-card > .container{
+  max-width:920px;
+  padding:0 20px;
+}
+
+.home-page #about h2{
+  margin:0 0 24px;
+  color:#17211c;
+  font-size:clamp(2rem,3vw,2.8rem);
+}
+
+.home-page #about p{
+  color:#4d5a53;
+  font-size:.98rem;
+  line-height:1.75;
+}
+
+.home-page #about p[data-i18n="about.note"]{
+  margin-top:24px;
+  padding:18px 20px;
+  border-inline-start:4px solid #0a662f;
+  background:#f1f4f2;
+  color:#46534c;
+}
+
+/* Contact/RFQ — restore the open vertical composition, retain the direct RFQ. */
+.home-page #contact{
+  padding:clamp(68px,7vw,96px) 0;
+  background:#f3f7f7;
+}
+
+.home-page #contact > .container{
+  display:block;
+  max-width:1180px;
+}
+
+.home-page #contact .info-section{
+  position:static;
+  margin:0;
+  padding:0;
+  border-radius:0;
+  background:transparent;
+  color:#17211c;
+  box-shadow:none;
+}
+
+.home-page #contact .info-section .contact-heading,
+.home-page #contact .buyer-rfq-intro .contact-heading{
+  margin:0 0 22px;
+  padding:0;
+  padding-inline-start:12px;
+  border:0;
+  border-inline-start:4px solid #16945d;
+  color:#176b4a;
+  font-size:1.35rem;
+  line-height:1.3;
+}
+
+.home-page #contact .contact-visual{
+  display:block;
+  margin:0 0 28px;
+  overflow:hidden;
+  border:1px solid #dce4e0;
+  border-radius:16px;
+  background:#e7ece9;
+  box-shadow:0 14px 34px rgba(17,24,39,.08);
+}
+
+.home-page #contact .contact-visual img{
+  width:100%;
+  aspect-ratio:3 / 1;
+  object-fit:cover;
+}
+
+.home-page #contact .contact-details-block{
+  max-width:760px;
+  color:#17211c;
+}
+
+.home-page #contact .info-section strong,
+.home-page #contact .info-section .muted,
+.home-page #contact .contact-line,
+.home-page #contact .contact-item,
+.home-page #contact .verify-link{
+  color:#26352e;
+}
+
+.home-page #contact .contact-item:hover,
+.home-page #contact .contact-item:focus-visible,
+.home-page #contact .verify-link:hover,
+.home-page #contact .verify-link:focus-visible{
+  color:#0a662f;
+}
+
+.home-page #contact .icon-loc{color:#10b981;}
+.home-page #contact .icon-ico{color:#6b7280;}
+.home-page #contact .contact-item.wa .icon{color:#25d366;}
+.home-page #contact .contact-item.mail .icon{color:#6b7280;}
+.home-page #contact .contact-item.li .icon{color:#0a66c2;}
+
+.home-page #contact .kbd{
+  border-color:#dce4e0;
+  background:#eaf0ed;
+  color:#30433a;
+}
+
+.home-page #contact .buyer-rfq-section{
+  margin-top:58px;
+}
+
+.home-page #contact .buyer-rfq-eyebrow{
+  color:#0a662f;
+}
+
+.home-page #contact .buyer-rfq-intro{
+  max-width:900px;
+  margin-bottom:24px;
+}
+
+.home-page #contact .buyer-rfq-intro p{
+  color:#56645d;
+}
+
+.home-page #contact .buyer-rfq-form{
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+
+.home-page #contact .buyer-rfq-form input,
+.home-page #contact .buyer-rfq-form select,
+.home-page #contact .buyer-rfq-form textarea{
+  border-color:#bbc6c0;
+  background:#fff;
+  box-shadow:none;
+}
+
+.home-page #contact .buyer-rfq-direct-note{
+  border-inline-start:4px solid #0a662f;
+  background:#e8eeea;
+  color:#405048;
+}
+
+@media (max-width:980px){
+  body.home-page header .container.nav{
+    min-height:82px;
+  }
+
+  body.home-page header .nav-all-visible .logo-img{
+    height:62px;
+  }
+
+  .home-page #logistics .logistics-scope-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-page #logistics .logistics-scope-card{
+    min-height:0;
+    border-inline-end:1px solid #e0e6e2;
+    border-bottom:1px solid #e0e6e2;
+  }
+}
+
+@media (max-width:768px){
+  body.home-page header .brand-name,
+  body.home-page header .nav-all-visible .brand-name{
+    font-size:1rem;
+  }
+
+  body.home-page header .nav-all-visible .logo-img{
+    height:54px;
+  }
+
+  .home-page .hero-bleed{
+    min-height:0;
+    padding:50px 16px 58px;
+    background-image:url("img/hero-port-mobile.webp");
+    background-position:center 60%;
+  }
+
+  .home-page .hero-title{
+    font-size:clamp(2rem,10vw,3rem);
+  }
+
+  .home-page #logistics .logistics-heading{
+    text-align:start;
+  }
+
+  .home-page #logistics .logistics-hero img{
+    aspect-ratio:16 / 10;
+  }
+
+  .home-page #how-we-work .execution-flow,
+  .home-control-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-page #how-we-work .execution-flow li,
+  .home-control-grid article{
+    min-height:0;
+  }
+
+  .home-page #contact .contact-visual img{
+    aspect-ratio:16 / 8;
+  }
+
+  .home-page #contact .buyer-rfq-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-page #contact .buyer-rfq-wide{
+    grid-column:auto;
+  }
+}
