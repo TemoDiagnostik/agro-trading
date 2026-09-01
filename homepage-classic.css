@@ -12,7 +12,7 @@ body.home-page header .nav-all-visible .logo-img{
 
 body.home-page header .brand-name,
 body.home-page header .nav-all-visible .brand-name{
-  color:#1f7a4d;
+  color:var(--vr-accent);
   font-size:clamp(1.22rem,1.45vw,1.55rem);
   font-weight:850;
 }
@@ -27,8 +27,8 @@ body.home-page header .nav-all-visible .brand-name{
 
 .home-page .hero-bleed::after{
   background:
-    linear-gradient(90deg,rgba(24,27,27,.66) 0%,rgba(35,38,37,.50) 47%,rgba(35,38,37,.11) 79%,rgba(35,38,37,.04) 100%),
-    linear-gradient(0deg,rgba(30,32,31,.16),transparent 46%);
+    linear-gradient(90deg,rgba(17,31,35,.72) 0%,rgba(23,52,58,.51) 47%,rgba(23,52,58,.14) 79%,rgba(23,52,58,.06) 100%),
+    linear-gradient(0deg,rgba(18,42,47,.18),transparent 46%);
 }
 
 .home-page .hero-left{
@@ -60,8 +60,8 @@ body.home-page header .nav-all-visible .brand-name{
 .home-page #logistics{
   padding-block:clamp(68px,7vw,96px);
   background:
-    radial-gradient(circle at 88% 6%,rgba(10,102,47,.08),transparent 30%),
-    linear-gradient(180deg,#f8fafc 0%,#f3f6f4 100%);
+    radial-gradient(circle at 88% 6%,rgba(35,71,78,.055),transparent 32%),
+    linear-gradient(180deg,var(--vr-paper) 0%,var(--vr-ivory) 100%);
 }
 
 .home-page #logistics > .container{
@@ -83,10 +83,10 @@ body.home-page header .nav-all-visible .brand-name{
   position:relative;
   margin:0 0 30px;
   overflow:hidden;
-  border:1px solid rgba(15,23,42,.12);
+  border:1px solid var(--vr-line);
   border-radius:18px;
-  background:#dfe7e3;
-  box-shadow:0 18px 45px rgba(15,23,42,.12);
+  background:var(--vr-stone);
+  box-shadow:var(--vr-shadow);
 }
 
 .home-page #logistics .logistics-hero::after{
@@ -115,15 +115,15 @@ body.home-page header .nav-all-visible .brand-name{
 .home-page #logistics .logistics-scope-card{
   min-height:245px;
   padding:24px;
-  border:1px solid #e0e6e2;
-  border-top:4px solid rgba(10,102,47,.76);
+  border:1px solid var(--vr-line);
+  border-top:4px solid var(--vr-accent);
   border-radius:14px;
-  background:#fff;
-  box-shadow:0 10px 28px rgba(15,23,42,.07);
+  background:var(--vr-paper);
+  box-shadow:var(--vr-shadow-soft);
 }
 
 .home-page #logistics .logistics-scope-card:last-child{
-  border-inline-end:1px solid #e0e6e2;
+  border-inline-end:1px solid var(--vr-line);
 }
 
 .home-page #logistics .logistics-card-number{
@@ -131,23 +131,23 @@ body.home-page header .nav-all-visible .brand-name{
   height:30px;
   padding:0;
   border-radius:999px;
-  background:rgba(10,102,47,.09);
-  color:#0a662f;
+  background:rgba(20,122,76,.10);
+  color:var(--vr-accent-dark);
 }
 
 .home-page #logistics .logistics-disclaimer{
   max-width:980px;
   margin:26px auto 0;
   padding-top:18px;
-  border-top:1px solid rgba(15,23,42,.13);
-  color:#64748b;
+  border-top:1px solid var(--vr-line);
+  color:var(--vr-slate);
   text-align:center;
 }
 
-/* Execution — restore the deep Euro Agri green and separate panels. */
+/* Execution — use the shared petroleum family; green remains an accent. */
 .home-page #how-we-work.home-execution{
   padding:clamp(72px,8vw,112px) 0;
-  background:#14251e;
+  background:linear-gradient(145deg,#142a30 0%,var(--vr-petroleum) 58%,#203940 100%);
 }
 
 .home-page #how-we-work .execution-flow{
@@ -189,28 +189,28 @@ body.home-page header .nav-all-visible .brand-name{
 
 .home-commercial-structure{
   border:1px solid rgba(255,255,255,.13);
-  background:#fff;
+  background:var(--vr-paper);
 }
 
 .home-commercial-structure h3{
-  color:#17211c;
+  color:var(--vr-graphite);
 }
 
 .home-commercial-structure p,
 .home-commercial-structure li{
-  color:#56645d;
+  color:var(--vr-slate);
 }
 
 .home-commercial-structure .btn{
-  border-color:#0a662f;
-  background:#fff;
-  color:#0a662f;
+  border-color:var(--vr-accent);
+  background:var(--vr-paper);
+  color:var(--vr-accent-dark);
 }
 
 /* About — exact open, centred editorial presentation from the reference. */
 .home-page #about.home-about{
   padding:clamp(68px,7vw,96px) 0;
-  background:#fff;
+  background:var(--vr-paper);
 }
 
 .home-page #about .about-bg{
@@ -220,7 +220,7 @@ body.home-page header .nav-all-visible .brand-name{
   margin:0;
   padding:0;
   border:0;
-  background:#fff;
+  background:transparent;
   box-shadow:none;
 }
 
@@ -246,12 +246,12 @@ body.home-page header .nav-all-visible .brand-name{
 
 .home-page #about h2{
   margin:0 0 24px;
-  color:#17211c;
+  color:var(--vr-graphite);
   font-size:clamp(2rem,3vw,2.8rem);
 }
 
 .home-page #about p{
-  color:#4d5a53;
+  color:var(--vr-slate);
   font-size:.98rem;
   line-height:1.75;
 }
@@ -259,15 +259,15 @@ body.home-page header .nav-all-visible .brand-name{
 .home-page #about p[data-i18n="about.note"]{
   margin-top:24px;
   padding:18px 20px;
-  border-inline-start:4px solid #0a662f;
-  background:#f1f4f2;
-  color:#46534c;
+  border-inline-start:4px solid var(--vr-accent);
+  background:#eeece6;
+  color:#4f5f5d;
 }
 
 /* Contact/RFQ — restore the open vertical composition, retain the direct RFQ. */
 .home-page #contact{
   padding:clamp(68px,7vw,96px) 0;
-  background:#f3f7f7;
+  background:var(--vr-ivory);
 }
 
 .home-page #contact > .container{
@@ -281,7 +281,7 @@ body.home-page header .nav-all-visible .brand-name{
   padding:0;
   border-radius:0;
   background:transparent;
-  color:#17211c;
+  color:var(--vr-graphite);
   box-shadow:none;
 }
 
@@ -291,8 +291,8 @@ body.home-page header .nav-all-visible .brand-name{
   padding:0;
   padding-inline-start:12px;
   border:0;
-  border-inline-start:4px solid #16945d;
-  color:#176b4a;
+  border-inline-start:4px solid var(--vr-accent);
+  color:var(--vr-accent-dark);
   font-size:1.35rem;
   line-height:1.3;
 }
@@ -301,10 +301,10 @@ body.home-page header .nav-all-visible .brand-name{
   display:block;
   margin:0 0 28px;
   overflow:hidden;
-  border:1px solid #dce4e0;
+  border:1px solid var(--vr-line);
   border-radius:16px;
-  background:#e7ece9;
-  box-shadow:0 14px 34px rgba(17,24,39,.08);
+  background:var(--vr-stone);
+  box-shadow:var(--vr-shadow-soft);
 }
 
 .home-page #contact .contact-visual img{
@@ -315,7 +315,7 @@ body.home-page header .nav-all-visible .brand-name{
 
 .home-page #contact .contact-details-block{
   max-width:760px;
-  color:#17211c;
+  color:var(--vr-graphite);
 }
 
 .home-page #contact .info-section strong,
@@ -323,14 +323,14 @@ body.home-page header .nav-all-visible .brand-name{
 .home-page #contact .contact-line,
 .home-page #contact .contact-item,
 .home-page #contact .verify-link{
-  color:#26352e;
+  color:var(--vr-charcoal);
 }
 
 .home-page #contact .contact-item:hover,
 .home-page #contact .contact-item:focus-visible,
 .home-page #contact .verify-link:hover,
 .home-page #contact .verify-link:focus-visible{
-  color:#0a662f;
+  color:var(--vr-accent-dark);
 }
 
 .home-page #contact .icon-loc{color:#10b981;}
@@ -340,9 +340,9 @@ body.home-page header .nav-all-visible .brand-name{
 .home-page #contact .contact-item.li .icon{color:#0a66c2;}
 
 .home-page #contact .kbd{
-  border-color:#dce4e0;
-  background:#eaf0ed;
-  color:#30433a;
+  border-color:var(--vr-line);
+  background:#eeece6;
+  color:var(--vr-charcoal);
 }
 
 .home-page #contact .buyer-rfq-section{
@@ -350,7 +350,7 @@ body.home-page header .nav-all-visible .brand-name{
 }
 
 .home-page #contact .buyer-rfq-eyebrow{
-  color:#0a662f;
+  color:var(--vr-accent-dark);
 }
 
 .home-page #contact .buyer-rfq-intro{
@@ -359,7 +359,7 @@ body.home-page header .nav-all-visible .brand-name{
 }
 
 .home-page #contact .buyer-rfq-intro p{
-  color:#56645d;
+  color:var(--vr-slate);
 }
 
 .home-page #contact .buyer-rfq-form{
@@ -373,15 +373,15 @@ body.home-page header .nav-all-visible .brand-name{
 .home-page #contact .buyer-rfq-form input,
 .home-page #contact .buyer-rfq-form select,
 .home-page #contact .buyer-rfq-form textarea{
-  border-color:#bbc6c0;
+  border-color:#c7cecc;
   background:#fff;
   box-shadow:none;
 }
 
 .home-page #contact .buyer-rfq-direct-note{
-  border-inline-start:4px solid #0a662f;
-  background:#e8eeea;
-  color:#405048;
+  border-inline-start:4px solid var(--vr-accent);
+  background:#eeece6;
+  color:#4f5f5d;
 }
 
 @media (max-width:980px){
@@ -399,8 +399,8 @@ body.home-page header .nav-all-visible .brand-name{
 
   .home-page #logistics .logistics-scope-card{
     min-height:0;
-    border-inline-end:1px solid #e0e6e2;
-    border-bottom:1px solid #e0e6e2;
+    border-inline-end:1px solid var(--vr-line);
+    border-bottom:1px solid var(--vr-line);
   }
 }
 
