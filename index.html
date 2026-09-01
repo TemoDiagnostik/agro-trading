@@ -36,12 +36,13 @@
   <!-- ✅ Main stylesheet -->
   <link rel="stylesheet" href="style.css?v=20260831.2">
   <link rel="stylesheet" href="nav-visible.css?v=20260831.2">
+  <link rel="stylesheet" href="visual-refinement.css?v=20260901.1">
 
   <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
-  <meta name="theme-color" content="#0a662f">
+  <meta name="theme-color" content="#17343a">
 
   <!-- Set lang/dir before rendering to avoid a direction flash -->
   <script src="js/language-init.js?v=20260818.2"></script>
@@ -99,33 +100,8 @@
   <link rel="alternate" href="?lang=tr" hreflang="tr" />
 
   <!-- ✅ Preload hero image -->
-  <link rel="preload" as="image" href="hero-bg-desktop.png" imagesrcset="hero-bg-desktop.png">
+  <link rel="preload" as="image" href="img/hero-port-desktop.webp" imagesrcset="img/hero-port-desktop.webp">
 
-  
-
-  <style>
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      word-break: break-word;
-    }
-
-    .hero-content p,
-    .hero-specs-box li {
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .hero-content {
-      padding: 1.5rem 1rem 4rem;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-    }
-
-    /* ✅ احذف قواعد .navbar-nav من هنا */
-  }
-</style>
 </head>
 	
 	<body class="home-page">
@@ -360,14 +336,14 @@
         <span class="home-product-type">WSF</span>
         <h3 data-i18n="cat.wsf.title">Water-Soluble Fertilizers (WSF)</h3>
         <p data-i18n="cat.wsf.text.short">Water-soluble fertilizer grades coordinated upon qualified demand and current supply confirmation.</p>
-        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Water-Soluble Fertilizers (WSF)" data-rfq-grade="Selected formulation to be confirmed" data-rfq-docs="Product-specific COA, TDS and MSDS against qualified requirements" data-rfq-packing="Packing to be confirmed">Request RFQ</a>
+        <a href="specialty-fertilizers.html" data-i18n="wsf.hero.cta">View Commercial Selection</a>
       </article>
 
       <article class="home-product-card">
         <span class="home-product-type">TE</span>
         <h3 data-i18n="cat.micro.title">Micronutrients</h3>
         <p data-i18n="cat.micro.text.short">Selected micronutrients coordinated upon qualified demand with product-specific documentation.</p>
-        <a href="#contactFormBox" data-i18n="cat.cta.rfq" data-rfq-topic="Micronutrients / Selected Specialty Fertilizers" data-rfq-grade="Product and formulation to be confirmed" data-rfq-docs="Product-specific documentation against qualified requirements" data-rfq-packing="Packing to be confirmed">Request RFQ</a>
+        <a href="specialty-fertilizers.html#commercial-selection" data-i18n="wsf.hero.cta">View Commercial Selection</a>
       </article>
     </div>
 
@@ -997,6 +973,14 @@
 		<!-- 🏢 About Section -->
 <section id="about" class="home-about">
   <div class="about-bg">
+    <figure class="about-industrial-visual" aria-hidden="true">
+      <img src="img/warehouse-big-bags.webp"
+           alt=""
+           width="600"
+           height="400"
+           loading="lazy"
+           decoding="async">
+    </figure>
     <div class="content-box about-card">
       <div class="container">
 
