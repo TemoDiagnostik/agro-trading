@@ -57,6 +57,10 @@
   border-inline-end:1px solid rgba(31,42,55,.16);
 }
 
+.mobile-nav-toggle{
+  display:none;
+}
+
 @media (max-width:1380px) and (min-width:769px){
   .container.nav.nav-all-visible{
     height:auto;
@@ -94,12 +98,95 @@
 
 @media (max-width:768px){
   header .container.nav.nav-all-visible{
-    grid-template-columns:1fr auto !important;
-    grid-template-areas:"brand lang" "nav nav" !important;
+    min-height:68px;
+    padding:8px 12px !important;
+    grid-template-columns:minmax(0,1fr) auto auto !important;
+    grid-template-areas:"brand lang toggle" "nav nav nav" !important;
+    gap:8px 10px !important;
   }
   header .nav-all-visible .brand-wrap{grid-area:brand;}
-  header .nav-all-visible nav{grid-area:nav;}
-  header .nav-all-visible .lang-flags{grid-area:lang;}
+  header .nav-all-visible .brand-wrap{
+    min-width:0;
+    justify-content:flex-start;
+  }
+  header .nav-all-visible .brand-text{
+    max-width:min(48vw,230px);
+  }
+  header .nav-all-visible nav{
+    grid-area:nav;
+    width:100%;
+    border-top:1px solid rgba(31,42,55,.1);
+    background:#fff;
+  }
+  header .nav-all-visible .lang-flags{
+    grid-area:lang;
+    justify-self:end;
+  }
+  header .nav-all-visible.mobile-nav-ready nav{
+    display:none;
+  }
+  header .nav-all-visible.mobile-nav-ready nav.is-open{
+    display:block;
+  }
+  header .nav-all-visible .navbar-nav{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:0 !important;
+    width:100%;
+    padding:8px 0 2px !important;
+    overflow:visible !important;
+  }
+  header .nav-all-visible .navbar-nav li,
+  header .nav-all-visible .navbar-nav li:last-child,
+  header .nav-all-visible .navbar-nav li:nth-child(5){
+    width:100%;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+  }
+  header .nav-all-visible .navbar-nav a{
+    display:block;
+    width:100%;
+    padding:11px 8px !important;
+    border-bottom:1px solid rgba(31,42,55,.07);
+    font-size:13px !important;
+    text-align:start;
+  }
+  header .nav-all-visible .navbar-nav a::after{
+    display:none;
+  }
+  header .nav-all-visible nav::after{
+    display:none !important;
+  }
+  .mobile-nav-toggle{
+    grid-area:toggle;
+    display:grid;
+    place-content:center;
+    gap:4px;
+    width:42px;
+    height:42px;
+    padding:0;
+    border:1px solid rgba(31,42,55,.18);
+    border-radius:8px;
+    background:#fff;
+    color:var(--brand-green);
+    cursor:pointer;
+  }
+  .mobile-nav-toggle span{
+    display:block;
+    width:20px;
+    height:2px;
+    border-radius:999px;
+    background:currentColor;
+    transition:transform .18s ease,opacity .18s ease;
+  }
+  .mobile-nav-toggle.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .mobile-nav-toggle.is-open span:nth-child(2){opacity:0;}
+  .mobile-nav-toggle.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .mobile-nav-toggle:focus-visible{
+    outline:3px solid rgba(15,118,74,.22);
+    outline-offset:2px;
+  }
 }
 
 /* Supplier page previously had a separate header system. Keep it aligned with
@@ -167,12 +254,13 @@
 @media (max-width:768px){
   body.supplier-page header .container.nav.nav-all-visible{
     display:grid !important;
-    grid-template-columns:1fr auto !important;
-    grid-template-areas:"brand lang" "nav nav" !important;
+    grid-template-columns:minmax(0,1fr) auto auto !important;
+    grid-template-areas:"brand lang toggle" "nav nav nav" !important;
     gap:6px 10px !important;
     padding:8px 12px !important;
   }
   body.supplier-page header .brand-wrap{grid-area:brand !important;min-width:0 !important;}
   body.supplier-page header nav{grid-area:nav !important;width:100% !important;}
   body.supplier-page header .lang-flags{grid-area:lang !important;margin-left:0 !important;}
+  body.supplier-page header .mobile-nav-toggle{grid-area:toggle !important;}
 }
