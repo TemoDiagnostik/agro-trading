@@ -615,9 +615,12 @@
         class="buyer-rfq-form"
         action="https://script.google.com/macros/s/AKfycbyzkYJpO5Lr1obdAEeugDfkbAEr53d_Y8g-0onlxyIyRFRVO3CT8Znag1QhbV-2Oojdsg/exec"
         method="post"
+        target="buyerSubmitFrame"
         accept-charset="UTF-8"
         novalidate>
     <input type="hidden" name="formType" value="buyer-rfq">
+    <input type="hidden" name="responseMode" value="postmessage">
+    <input type="hidden" id="rfqResponseToken" name="responseToken" value="">
     <input type="hidden" name="Source Page" value="https://euroagritrading.eu/#contactFormBox">
     <input type="hidden" name="Form Version" value="20260902-1">
     <input type="hidden" id="rfqLanguage" name="Language" value="en">
@@ -727,6 +730,7 @@
       <p id="rfqFormStatus" class="buyer-rfq-status" role="status" aria-live="polite"></p>
     </div>
   </form>
+  <iframe id="buyerSubmitFrame" name="buyerSubmitFrame" title="Buyer RFQ submission response" hidden></iframe>
 </div>
 			</div>
 		</section>
@@ -797,7 +801,7 @@
 
 <!-- Shared i18n and language selector -->
 <script src="js/i18n.js?v=20260831.2"></script>
-<script src="js/buyer-rfq.js?v=20260902.2"></script>
+<script src="js/buyer-rfq.js?v=20260902.3"></script>
 
 
 

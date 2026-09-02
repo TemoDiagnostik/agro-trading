@@ -71,12 +71,14 @@
         <p class="required-note">Fields marked with * are required.</p>
       </section>
 
-      <form id="supplierKycForm" action="https://script.google.com/macros/s/AKfycbyzkYJpO5Lr1obdAEeugDfkbAEr53d_Y8g-0onlxyIyRFRVO3CT8Znag1QhbV-2Oojdsg/exec" method="post" accept-charset="UTF-8">
+      <form id="supplierKycForm" action="https://script.google.com/macros/s/AKfycbyzkYJpO5Lr1obdAEeugDfkbAEr53d_Y8g-0onlxyIyRFRVO3CT8Znag1QhbV-2Oojdsg/exec" method="post" target="supplierSubmitFrame" accept-charset="UTF-8">
         <input type="hidden" name="sourcePage" value="https://euroagritrading.eu/supplier-application.html">
         <input type="hidden" name="formType" value="supplier-qualification">
+        <input type="hidden" name="responseMode" value="postmessage">
+        <input type="hidden" id="supplierResponseToken" name="responseToken" value="">
         <input type="hidden" name="qualificationStage" value="Initial Availability and Commercial Feasibility">
         <input type="hidden" name="formVersion" value="20260901-1">
-        <input type="hidden" name="Language" value="en">
+        <input type="hidden" id="supplierLanguage" name="Language" value="en">
         <input type="hidden" id="formStartedAt" name="formStartedAt" value="">
         <input type="hidden" id="companyWebsiteConfirm" name="companyWebsiteConfirm" value="">
 
@@ -204,6 +206,7 @@
           <span id="submitStatus" class="security-note" role="status" aria-live="polite">Your initial qualification will be sent directly to Euro Agri Trading’s controlled supplier register.</span>
         </div>
       </form>
+      <iframe id="supplierSubmitFrame" name="supplierSubmitFrame" title="Supplier qualification submission response" hidden></iframe>
     </div>
   </main>
 
@@ -211,44 +214,104 @@
     (function(){
       const form=document.getElementById("supplierKycForm");
       const formStartedAt=document.getElementById("formStartedAt");
+      const languageInput=document.getElementById("supplierLanguage");
+      const responseToken=document.getElementById("supplierResponseToken");
       const serverHoneypot=document.getElementById("companyWebsiteConfirm");
       const decoyHoneypot=document.getElementById("kycExtraField");
       const productBoxes=Array.from(document.querySelectorAll('input[name="products"]'));
       const submitButton=form.querySelector('button[type="submit"]');
       const submitStatus=document.getElementById("submitStatus");
+      let confirmationTimer=0;
+
+      const requestedLanguage=(new URLSearchParams(window.location.search).get("lang")||"en").toLowerCase();
+      languageInput.value=/^[a-z]{2}$/.test(requestedLanguage)?requestedLanguage:"en";
 
       formStartedAt.value=String(Date.now());
+
+      function createResponseToken(){
+        if(window.crypto&&typeof window.crypto.randomUUID==="function"){
+          return window.crypto.randomUUID();
+        }
+
+        const values=new Uint32Array(4);
+        window.crypto.getRandomValues(values);
+        return Array.from(values,function(value){return value.toString(16).padStart(8,"0");}).join("-");
+      }
+
+      function isAppsScriptOrigin(origin){
+        if(origin==="null"||origin==="https://script.google.com")return true;
+
+        try{
+          const hostname=new URL(origin).hostname;
+          return hostname==="script.googleusercontent.com"||hostname.endsWith("-script.googleusercontent.com");
+        }catch(error){
+          return false;
+        }
+      }
+
+      function parseSubmissionMessage(value){
+        if(typeof value==="string"){
+          try{return JSON.parse(value);}catch(error){return null;}
+        }
+
+        return value&&typeof value==="object"?value:null;
+      }
+
+      function finishWithError(){
+        window.clearTimeout(confirmationTimer);
+        submitButton.disabled=false;
+        submitButton.textContent="Submit Supplier Qualification";
+        submitStatus.textContent="The submission was not confirmed. Please try again or contact info@euroagritrading.eu.";
+      }
+
+      window.addEventListener("message",function(event){
+        if(!isAppsScriptOrigin(event.origin))return;
+
+        const result=parseSubmissionMessage(event.data);
+        if(!result||result.type!=="euro-agri-form-result"||result.formType!=="supplier-qualification"||result.responseToken!==responseToken.value)return;
+
+        if(result.ok!==true||!/^EAT-(KYC|SUP)-[A-Z0-9-]+$/i.test(result.submission||"")){
+          finishWithError();
+          return;
+        }
+
+        window.clearTimeout(confirmationTimer);
+        const confirmationUrl=new URL("thankyou.html",window.location.href);
+        confirmationUrl.searchParams.set("submission",result.submission);
+        confirmationUrl.searchParams.set("lang",languageInput.value||"en");
+        window.location.assign(confirmationUrl.href);
+      });
 
       window.addEventListener("pageshow",function(event){
         if(event.persisted){
           formStartedAt.value=String(Date.now());
           serverHoneypot.value="";
           decoyHoneypot.value="";
+          responseToken.value="";
         }
       });
 
       form.addEventListener("submit",function(event){
+        event.preventDefault();
         serverHoneypot.value=String(decoyHoneypot.value||"").trim();
 
         const hasProduct=productBoxes.some(function(box){return box.checked;});
         if(!hasProduct){
-          event.preventDefault();
           alert("Please select at least one product.");
           productBoxes[0].focus();
           return;
         }
 
+        if(!form.reportValidity())return;
+
         submitButton.disabled=true;
         submitButton.textContent="Submitting...";
         submitStatus.textContent="Sending the form securely. Please wait...";
+        responseToken.value=createResponseToken();
 
-        window.setTimeout(function(){
-          if(document.visibilityState==="visible"){
-            submitButton.disabled=false;
-            submitButton.textContent="Submit Supplier Qualification";
-            submitStatus.textContent="The submission was not confirmed. Please try again or contact info@euroagritrading.eu.";
-          }
-        },15000);
+        window.clearTimeout(confirmationTimer);
+        confirmationTimer=window.setTimeout(finishWithError,30000);
+        form.submit();
       });
     })();
   </script>

@@ -7,14 +7,17 @@
   const startedAt = document.getElementById('rfqStartedAt');
   const requestType = document.getElementById('rfqRequestType');
   const selectedContext = document.getElementById('rfqSelectedContext');
+  const responseToken = document.getElementById('rfqResponseToken');
   const product = document.getElementById('rfqProduct');
   const grade = document.getElementById('rfqGrade');
   const packaging = document.getElementById('rfqPackaging');
   const technical = document.getElementById('rfqTechnical');
 
-  if (!form || !status || !languageInput || !startedAt || !requestType || !selectedContext || !product) {
+  if (!form || !status || !languageInput || !startedAt || !requestType || !selectedContext || !responseToken || !product) {
     return;
   }
+
+  let confirmationTimer = 0;
 
   startedAt.value = String(Date.now());
   languageInput.value = document.documentElement.lang || 'en';
@@ -44,6 +47,70 @@
     button.disabled = isSubmitting;
     button.setAttribute('aria-busy', String(isSubmitting));
   }
+
+  function createResponseToken() {
+    if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+      return window.crypto.randomUUID();
+    }
+
+    const values = new Uint32Array(4);
+    window.crypto.getRandomValues(values);
+    return Array.from(values, value => value.toString(16).padStart(8, '0')).join('-');
+  }
+
+  function isAppsScriptOrigin(origin) {
+    if (origin === 'null' || origin === 'https://script.google.com') {
+      return true;
+    }
+
+    try {
+      const hostname = new URL(origin).hostname;
+      return hostname === 'script.googleusercontent.com' || hostname.endsWith('-script.googleusercontent.com');
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function parseSubmissionMessage(value) {
+    if (typeof value === 'string') {
+      try {
+        return JSON.parse(value);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    return value && typeof value === 'object' ? value : null;
+  }
+
+  function finishWithError() {
+    window.clearTimeout(confirmationTimer);
+    setSubmitting(false);
+    showStatus('error', dictionaryValue('errorMessage', 'The submission was not confirmed. Please try again or contact info@euroagritrading.eu.'));
+  }
+
+  window.addEventListener('message', event => {
+    if (!isAppsScriptOrigin(event.origin)) {
+      return;
+    }
+
+    const result = parseSubmissionMessage(event.data);
+
+    if (!result || result.type !== 'euro-agri-form-result' || result.formType !== 'buyer-rfq' || result.responseToken !== responseToken.value) {
+      return;
+    }
+
+    if (result.ok !== true || !/^EAT-RFQ-[A-Z0-9-]+$/i.test(result.submission || '')) {
+      finishWithError();
+      return;
+    }
+
+    window.clearTimeout(confirmationTimer);
+    const confirmationUrl = new URL('buyer-rfq-thankyou.html', location.href);
+    confirmationUrl.searchParams.set('submission', result.submission);
+    confirmationUrl.searchParams.set('lang', document.documentElement.lang || 'en');
+    location.assign(confirmationUrl.href);
+  });
 
   function setRequiredMessages() {
     form.querySelectorAll('[required]').forEach(field => {
@@ -183,9 +250,13 @@
     setSubmitting(true);
     showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your RFQ securely…'));
     languageInput.value = document.documentElement.lang || 'en';
+    responseToken.value = createResponseToken();
 
-    // Use the browser's normal form navigation so the Apps Script response is
-    // visible and a success state is never inferred from an opaque no-cors request.
+    window.clearTimeout(confirmationTimer);
+    confirmationTimer = window.setTimeout(finishWithError, 30000);
+
+    // The response is loaded in a hidden frame. Apps Script confirms the saved
+    // row and returns the reference through a token-bound postMessage response.
     form.submit();
   });
 })();

@@ -6,11 +6,12 @@
   const challengeInput = document.getElementById('cpChallenge');
   const challengeLabel = document.getElementById('cpChallengeLabel');
   const languageInput = document.getElementById('cpLanguage');
+  const responseToken = document.getElementById('cpResponseToken');
   const status = document.getElementById('cpFormStatus');
   const professionalSummary = document.getElementById('cpProfessionalSummary');
   const summaryCounter = document.getElementById('cpSummaryCounter');
 
-  if (!form || !startedAt || !challengeInput || !challengeLabel || !languageInput || !status) {
+  if (!form || !startedAt || !challengeInput || !challengeLabel || !languageInput || !responseToken || !status) {
     return;
   }
 
@@ -18,6 +19,7 @@
   const secondNumber = Math.floor(Math.random() * 5) + 2;
   const expectedAnswer = firstNumber + secondNumber;
   const openedAt = Date.now();
+  let confirmationTimer = 0;
   startedAt.value = String(openedAt);
   languageInput.value = document.documentElement.lang || 'en';
 
@@ -66,6 +68,70 @@
     button.setAttribute('aria-busy', String(isSubmitting));
   }
 
+  function createResponseToken() {
+    if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+      return window.crypto.randomUUID();
+    }
+
+    const values = new Uint32Array(4);
+    window.crypto.getRandomValues(values);
+    return Array.from(values, value => value.toString(16).padStart(8, '0')).join('-');
+  }
+
+  function isAppsScriptOrigin(origin) {
+    if (origin === 'null' || origin === 'https://script.google.com') {
+      return true;
+    }
+
+    try {
+      const hostname = new URL(origin).hostname;
+      return hostname === 'script.googleusercontent.com' || hostname.endsWith('-script.googleusercontent.com');
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function parseSubmissionMessage(value) {
+    if (typeof value === 'string') {
+      try {
+        return JSON.parse(value);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    return value && typeof value === 'object' ? value : null;
+  }
+
+  function finishWithError() {
+    window.clearTimeout(confirmationTimer);
+    setSubmitting(false);
+    showStatus('error', dictionaryValue('errorMessage', 'The submission was not confirmed. Please try again or contact info@euroagritrading.eu.'));
+  }
+
+  window.addEventListener('message', event => {
+    if (!isAppsScriptOrigin(event.origin)) {
+      return;
+    }
+
+    const result = parseSubmissionMessage(event.data);
+
+    if (!result || result.type !== 'euro-agri-form-result' || result.formType !== 'commercial-partnership' || result.responseToken !== responseToken.value) {
+      return;
+    }
+
+    if (result.ok !== true || !/^EAT-CP-[A-Z0-9-]+$/i.test(result.submission || '')) {
+      finishWithError();
+      return;
+    }
+
+    window.clearTimeout(confirmationTimer);
+    const confirmationUrl = new URL('commercial-partnership-thankyou.html', location.href);
+    confirmationUrl.searchParams.set('submission', result.submission);
+    confirmationUrl.searchParams.set('lang', document.documentElement.lang || 'en');
+    location.assign(confirmationUrl.href);
+  });
+
   function setValidationMessage(field, key, fallback) {
     if (!field.validity.valid) {
       field.setCustomValidity(dictionaryValue(key, fallback));
@@ -113,7 +179,7 @@
 
     const honeypot = form.elements.namedItem('Website Confirmation');
     if (honeypot && honeypot.value) {
-      showStatus('success', dictionaryValue('successMessage', 'Your email application is ready. Review it and press Send in your email app.'));
+      showStatus('error', dictionaryValue('errorMessage', 'The submission could not be completed. Please try again or contact info@euroagritrading.eu.'));
       return;
     }
 
@@ -137,13 +203,10 @@
     setSubmitting(true);
     showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your application securely…'));
     languageInput.value = document.documentElement.lang || 'en';
+    responseToken.value = createResponseToken();
 
-    window.setTimeout(() => {
-      if (document.visibilityState === 'visible') {
-        setSubmitting(false);
-        showStatus('error', dictionaryValue('errorMessage', 'The submission was not confirmed. Please try again or contact info@euroagritrading.eu.'));
-      }
-    }, 15000);
+    window.clearTimeout(confirmationTimer);
+    confirmationTimer = window.setTimeout(finishWithError, 30000);
 
     form.submit();
   });
