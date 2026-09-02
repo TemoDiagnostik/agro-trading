@@ -110,8 +110,10 @@
       return;
     }
 
-    const message = dictionaryValue('successMessage', 'Thank you. Your buyer RFQ has been received for commercial review.');
-    showStatus('success', `${message} Reference: ${submissionId}`);
+    const confirmationUrl = new URL('buyer-rfq-thankyou.html', location.href);
+    confirmationUrl.searchParams.set('submission', submissionId);
+    confirmationUrl.searchParams.set('lang', params.get('lang') || document.documentElement.lang || 'en');
+    location.replace(confirmationUrl.href);
   }
 
   form.querySelectorAll('input, select, textarea').forEach(field => {
