@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buyer RFQ Received | Euro Agri Trading s.r.o.</title>
+  <meta name="description" content="Buyer RFQ submission confirmation for Euro Agri Trading s.r.o.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="js/language-init.js?v=20260818.2"></script>
+  <style>
+    :root {
+      --green: #147a4c;
+      --green-dark: #0f5d3a;
+      --petroleum: #17343a;
+      --text: #253137;
+      --muted: #5f6b76;
+      --bg: #f4f1eb;
+      --white: #fbfaf7;
+      --border: #d2d7d6;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI Variable", "Aptos", "Segoe UI", Arial, sans-serif;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      padding: 38px;
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 24px 70px rgba(18, 34, 40, .10);
+    }
+
+    .mark {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      color: var(--petroleum);
+      background: #e8f5ed;
+      border-radius: 50%;
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      color: var(--petroleum);
+      font-size: clamp(1.75rem, 4vw, 2.4rem);
+      line-height: 1.2;
+    }
+
+    .reference {
+      margin: 24px 0;
+      padding: 16px;
+      background: #eef8f2;
+      border: 1px solid #b9d6c4;
+      border-radius: 10px;
+      word-break: break-word;
+    }
+
+    .reference strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--green-dark);
+    }
+
+    .reference span {
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .muted {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 13px 24px;
+      color: #fff;
+      background: var(--green);
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(20, 122, 76, .2);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .button:hover { background: var(--green-dark); }
+
+    [dir="rtl"] body {
+      font-family: "Tajawal", "Noto Sans Arabic", Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">✓</div>
+    <h1 id="confirmationTitle">Thank you. Your buyer RFQ has been received for commercial review.</h1>
+    <div class="reference">
+      <strong id="referenceLabel">RFQ Reference</strong>
+      <span id="submissionReference">Not available</span>
+    </div>
+    <p class="muted" id="retainMessage">Please retain this reference for future correspondence regarding your RFQ.</p>
+    <a class="button" id="returnLink" href="index.html#contactFormBox">Return to Home</a>
+  </main>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const params = new URLSearchParams(location.search);
+      const submission = params.get('submission') || '';
+      const language = window.EuroAgriLanguage.detect();
+      const reference = document.getElementById('submissionReference');
+
+      window.EuroAgriLanguage.applyDocumentLanguage(language);
+
+      if (/^EAT-RFQ-[A-Z0-9-]+$/i.test(submission)) {
+        reference.textContent = submission;
+      }
+
+      fetch(`i18n/${language}.json`, { cache: 'no-store' })
+        .then(response => response.ok ? response.json() : Promise.reject(new Error(String(response.status))))
+        .then(dictionary => {
+          document.getElementById('confirmationTitle').textContent = dictionary['rfq.success'] || document.getElementById('confirmationTitle').textContent;
+          document.getElementById('referenceLabel').textContent = dictionary['rfq.confirmation.reference'] || document.getElementById('referenceLabel').textContent;
+          document.getElementById('retainMessage').textContent = dictionary['rfq.confirmation.retain'] || document.getElementById('retainMessage').textContent;
+          document.getElementById('returnLink').textContent = dictionary['nav.home'] || document.getElementById('returnLink').textContent;
+        })
+        .catch(() => {});
+
+      const returnUrl = new URL('index.html', location.href);
+      returnUrl.searchParams.set('lang', language);
+      returnUrl.hash = 'contactFormBox';
+      document.getElementById('returnLink').href = `${returnUrl.pathname}${returnUrl.search}${returnUrl.hash}`;
+    })();
+  </script>
+</body>
+</html>

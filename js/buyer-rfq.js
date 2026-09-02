@@ -102,6 +102,18 @@
     }
   }
 
+  function applyConfirmedSubmission() {
+    const params = new URLSearchParams(location.search);
+    const submissionId = params.get('submission') || '';
+
+    if (params.get('rfq') !== 'received' || !/^EAT-RFQ-[A-Z0-9-]+$/i.test(submissionId)) {
+      return;
+    }
+
+    const message = dictionaryValue('successMessage', 'Thank you. Your buyer RFQ has been received for commercial review.');
+    showStatus('success', `${message} Reference: ${submissionId}`);
+  }
+
   form.querySelectorAll('input, select, textarea').forEach(field => {
     field.addEventListener('input', () => field.setCustomValidity(''));
     field.addEventListener('change', () => field.setCustomValidity(''));
@@ -145,8 +157,9 @@
 
   updateDictionary(window.EuroAgriCurrentDictionary);
   applyQueryPrefill();
+  applyConfirmedSubmission();
 
-  form.addEventListener('submit', async event => {
+  form.addEventListener('submit', event => {
     event.preventDefault();
     form.classList.add('was-validated');
     status.textContent = '';
@@ -155,7 +168,7 @@
     const honeypot = form.elements.namedItem('Website Confirmation');
 
     if (honeypot && honeypot.value) {
-      showStatus('success', dictionaryValue('successMessage', 'Thank you. Your buyer RFQ has been received for commercial review.'));
+      showStatus('error', dictionaryValue('errorMessage', 'The submission could not be completed. Please try again or contact info@euroagritrading.eu.'));
       return;
     }
 
@@ -169,26 +182,8 @@
     showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your RFQ securely…'));
     languageInput.value = document.documentElement.lang || 'en';
 
-    try {
-      await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        mode: 'no-cors',
-        credentials: 'omit',
-        referrerPolicy: 'strict-origin-when-cross-origin'
-      });
-
-      form.reset();
-      form.classList.remove('was-validated');
-      startedAt.value = String(Date.now());
-      languageInput.value = document.documentElement.lang || 'en';
-      requestType.value = 'Buyer Commercial RFQ';
-      selectedContext.value = '';
-      showStatus('success', dictionaryValue('successMessage', 'Thank you. Your buyer RFQ has been received for commercial review.'));
-    } catch (error) {
-      showStatus('error', dictionaryValue('errorMessage', 'The submission could not be completed. Please try again or contact info@euroagritrading.eu.'));
-    } finally {
-      setSubmitting(false);
-    }
+    // Use the browser's normal form navigation so the Apps Script response is
+    // visible and a success state is never inferred from an opaque no-cors request.
+    form.submit();
   });
 })();
