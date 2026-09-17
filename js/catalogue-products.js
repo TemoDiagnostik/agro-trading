@@ -44,6 +44,7 @@
 
   filters.forEach(button => button.addEventListener('click', () => {
     family = button.dataset.filter;
+    search.value = '';
     const url = new URL(location.href);
     url.hash = family === 'all' ? '' : family;
     history.replaceState({}, '', url.pathname + url.search + url.hash);

@@ -552,5 +552,9 @@
   "catalogue.filter.try": "Try another product name or grade, or send us your requirement.",
   "catalogue.page.download": "Download our catalogue",
   "catalogue.page.image": "Compound fertilizer granules · reference photograph",
-  "catalogue.filter.count": "products and formulations"
+  "catalogue.filter.count": "products and formulations",
+  "catalogue.photos.materials": "Product reference photographs",
+  "log.photo.sea": "Sea freight & port coordination",
+  "log.photo.heavy": "Heavy road freight across Europe",
+  "log.photo.light": "Light transport & regional delivery"
 }

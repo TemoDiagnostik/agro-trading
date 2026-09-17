@@ -8,3 +8,11 @@ These source photographs are reused unchanged; CSS crops them for layout. They a
 - **Monopotassium phosphate crystals** — Bahmtec. [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). [Original photograph](https://commons.wikimedia.org/wiki/File:Kaliumdihydrogenphosphat.jpg).
 - **Greenhouse cultivation** — wei. [Unsplash License](https://unsplash.com/license). [Original photograph](https://unsplash.com/photos/eoj6t-cMtNs).
 - **Laboratory setting** — Ousa Chea. [Unsplash License](https://unsplash.com/license). [Original photograph](https://unsplash.com/photos/gKUC4TMhOiY).
+
+## Large photography preview, September 2026
+
+- **Urea granules** — LHcheM. [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). [Original photograph](https://commons.wikimedia.org/wiki/File:Sample_of_Urea.jpg). The Wikimedia 1280px rendition is used unchanged; CSS crops the display.
+- **European heavy road transport** — Wolfgang Hasselmann. [Unsplash License](https://unsplash.com/license). [Original photograph](https://unsplash.com/photos/nbRgZltoOck). File: `europe-heavy-transport.jpg`.
+- **Light commercial transport** — Jan Kopřiva. [Unsplash License](https://unsplash.com/license). [Original photograph](https://unsplash.com/photos/b6fns2kOFsk). File: `europe-light-transport.jpg`.
+
+Required attribution is available through the existing Legal Notice footer link, in `legal.html#photography`. The separate expandable photography button has been removed from the homepage and product catalogue. Transport images illustrate coordination through independent providers, not a Euro Agri owned fleet.

@@ -546,5 +546,9 @@
   "catalogue.product.manganese.grade": "Mn",
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
-  "catalogue.product.molybdenum.grade": "Mo"
+  "catalogue.product.molybdenum.grade": "Mo",
+  "catalogue.photos.materials": "Termékek referenciafotói",
+  "log.photo.sea": "Tengeri szállítás és kikötői koordináció",
+  "log.photo.heavy": "Nehéz közúti áruszállítás Európában",
+  "log.photo.light": "Kisteherautós szállítás és regionális kézbesítés"
 }

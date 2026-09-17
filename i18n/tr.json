@@ -546,5 +546,9 @@
   "catalogue.product.manganese.grade": "Mn",
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
-  "catalogue.product.molybdenum.grade": "Mo"
+  "catalogue.product.molybdenum.grade": "Mo",
+  "catalogue.photos.materials": "Ürün referans fotoğrafları",
+  "log.photo.sea": "Deniz taşımacılığı ve liman koordinasyonu",
+  "log.photo.heavy": "Avrupa genelinde ağır karayolu taşımacılığı",
+  "log.photo.light": "Hafif taşımacılık ve bölgesel teslimat"
 }
