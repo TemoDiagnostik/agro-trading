@@ -1,0 +1,59 @@
+/* Readable navigation that uses the full available header width. */
+@media (min-width: 769px) {
+  body header .container.nav.nav-all-visible {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) auto !important;
+    grid-template-rows: auto !important;
+    grid-template-areas: "brand nav lang" !important;
+    width: calc(100% - 48px) !important;
+    max-width: 2200px !important;
+    min-height: 104px;
+    height: auto !important;
+    gap: 28px !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+  }
+  body header .container.nav.nav-all-visible .brand-wrap {
+    grid-area: brand !important; min-width: 0 !important; margin: 0;
+  }
+  body header .container.nav.nav-all-visible nav {
+    grid-area: nav !important; width: 100% !important; min-width: 0;
+    margin: 0 !important; overflow: visible !important; justify-self: stretch;
+  }
+  body header .container.nav.nav-all-visible .lang-flags {
+    grid-area: lang !important; margin: 0 !important; justify-self: end;
+  }
+  body header .container.nav.nav-all-visible .navbar-nav {
+    display: flex !important; width: 100% !important; max-width: none !important;
+    justify-content: space-between !important; align-items: center;
+    flex-wrap: wrap !important; gap: 8px 15px !important;
+    margin: 0 !important; padding: 0 !important; overflow: visible !important;
+  }
+  body header .container.nav.nav-all-visible .navbar-nav li {
+    flex: 0 1 auto; margin: 0 !important; padding: 0 !important; border: 0 !important;
+  }
+  body header .container.nav.nav-all-visible .navbar-nav a {
+    display: block; font-size: 16px !important; font-weight: 700;
+    line-height: 1.35; white-space: normal !important; text-align: center;
+    padding: 12px 0 !important; color: #52616a;
+  }
+  body header .container.nav.nav-all-visible .navbar-nav a.active,
+  body header .container.nav.nav-all-visible .navbar-nav a:hover { color: #147a4c; }
+  body header .container.nav.nav-all-visible nav::after { display: none !important; }
+}
+@media (min-width: 769px) and (max-width: 1650px) {
+  body header .container.nav.nav-all-visible {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto !important;
+    grid-template-areas: "brand lang" "nav nav" !important;
+    gap: 5px 22px !important;
+  }
+  body header .container.nav.nav-all-visible .logo-img { width: 58px; height: 58px; }
+  body header .container.nav.nav-all-visible .brand-name { font-size: 23px; }
+  body header .container.nav.nav-all-visible nav { border-top: 1px solid #d0c9bb; }
+  body header .container.nav.nav-all-visible .navbar-nav { gap: 4px 18px !important; }
+  html { scroll-padding-top: 160px; }
+}
+@media (max-width: 768px) {
+  body header .container.nav.nav-all-visible .navbar-nav a { font-size: 16px !important; padding: 13px 10px !important; }
+}
