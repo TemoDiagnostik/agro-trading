@@ -5,6 +5,7 @@
   const sections = Array.from(document.querySelectorAll('[data-family]'));
   const filters = Array.from(document.querySelectorAll('[data-filter]'));
   const status = document.getElementById('productResultStatus');
+  const rangeTitle = document.getElementById('currentProductRange');
   const empty = document.getElementById('noProductResults');
   const browser = document.querySelector('.range-browser');
   const allGallery = document.getElementById('allProductsGallery');
@@ -32,6 +33,10 @@
     if (browser) browser.dataset.activeFamily = family;
     if (allGallery) allGallery.hidden = family !== 'all' || terms.length > 0;
     const dictionary = window.EuroAgriCurrentDictionary || {};
+    if (rangeTitle) {
+      const key = family === 'all' ? 'catalogue.filter.all' : `catalogue.family.${family}`;
+      rangeTitle.textContent = dictionary[key] || filters.find(filter => filter.dataset.filter === family)?.textContent.trim() || 'All products';
+    }
     search.placeholder = dictionary['catalogue.filter.placeholder'] || 'e.g. MAP, 20-20-20, iron';
     status.textContent = `${count} ${dictionary['catalogue.filter.count'] || 'products and formulations'}`;
     empty.hidden = count > 0;
@@ -49,6 +54,7 @@
   }
 
   filters.forEach(button => button.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     family = button.dataset.filter;
     search.value = '';
@@ -56,9 +62,13 @@
     url.hash = family === 'all' ? '' : family;
     history.replaceState({}, '', url.pathname + url.search + url.hash);
     render();
-    if (family !== 'all') {
-      requestAnimationFrame(() => document.getElementById(family)?.scrollIntoView({ block: 'start' }));
-    }
+    const target = family === 'all' ? browser : document.getElementById(family);
+    requestAnimationFrame(() => {
+      if (!target) return;
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ block: 'start' });
+    });
   }));
   search.addEventListener('input', render);
   document.addEventListener('euroagri:languagechange', render);
