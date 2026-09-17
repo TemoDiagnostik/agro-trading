@@ -106,9 +106,9 @@
   <!-- ✅ Preload hero image -->
   
 
-  <link rel="stylesheet" href="catalogue-navigation.css?v=20260918.4">
-  <script src="js/products-navigation.js?v=20260918.4" defer></script>
-  <link rel="stylesheet" href="catalogue-photography.css?v=20260918.4">
+  <link rel="stylesheet" href="catalogue-navigation.css?v=20260918.5">
+  <link rel="stylesheet" href="catalogue-photography.css?v=20260918.5">
+  <link rel="stylesheet" href="catalogue-categories.css?v=20260918.5">
 </head>
 <body class="catalogue-products"><a class="skip-link" href="#main-content">Skip to content</a><header>
   <div class="container nav nav-all-visible" role="navigation" aria-label="Primary">
@@ -132,19 +132,7 @@
 <nav aria-label="Primary Navigation">
   <ul class="navbar-nav">
     <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
-    <li class="products-nav-item">
-      <button type="button" class="products-nav-toggle active" aria-expanded="false" aria-controls="products-nav-menu">
-        <span data-i18n="nav.products">Products</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <ul id="products-nav-menu" class="products-nav-menu" hidden>
-        <li class="products-nav-all"><a href="products.html" data-filter="all"><span data-i18n="catalogue.filter.all">All products</span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="products.html#phosphates" data-filter="phosphates"><img src="img/catalogue/phosphorite.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.phosphates">Phosphate materials</span></a></li>
-        <li><a href="products.html#processed" data-filter="processed"><img src="img/catalogue/npk.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.processed">Processed &amp; compound fertilizers</span></a></li>
-        <li><a href="products.html#nitrogen" data-filter="nitrogen"><img src="img/catalogue/urea.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.nitrogen">Nitrogen fertilizers</span></a></li>
-        <li><a href="products.html#water-soluble" data-filter="water-soluble"><img src="img/catalogue/mkp.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.water-soluble">Water-soluble fertilizers</span></a></li>
-        <li><a href="products.html#micronutrients" data-filter="micronutrients"><img src="img/catalogue/lab.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.micronutrients">Micronutrients &amp; specialty inputs</span></a></li>
-      </ul>
-    </li>
+    <li><a href="products.html" class="active" aria-current="page" data-i18n="nav.products">Products</a></li>
     <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
     <li><a href="specifications.html" data-i18n="nav.coa">Specifications</a></li>
     <li><a href="index.html#logistics" data-i18n="nav.logistics">Logistics</a></li>
@@ -203,16 +191,24 @@
   <figcaption data-i18n="catalogue.photos.materials">Product reference photographs</figcaption>
  </figure></div>
  </div></section>
+<nav class="catalogue-category-nav" aria-label="Product categories"><div class="container"><ul>
+  <li><a href="products.html" data-filter="all" data-i18n="catalogue.filter.all">All products</a></li>
+  <li><a href="products.html#phosphates" data-filter="phosphates" data-i18n="catalogue.family.phosphates">Phosphate materials</a></li>
+  <li><a href="products.html#processed" data-filter="processed" data-i18n="catalogue.family.processed">Processed &amp; compound fertilizers</a></li>
+  <li><a href="products.html#nitrogen" data-filter="nitrogen" data-i18n="catalogue.family.nitrogen">Nitrogen fertilizers</a></li>
+  <li><a href="products.html#water-soluble" data-filter="water-soluble" data-i18n="catalogue.family.water-soluble">Water-soluble fertilizers</a></li>
+  <li><a href="products.html#micronutrients" data-filter="micronutrients" data-i18n="catalogue.family.micronutrients">Micronutrients &amp; specialty inputs</a></li>
+</ul></div></nav>
  <section class="range-browser container" aria-label="Browse products"><div class="range-tools"><div class="range-tools-heading"><h2 id="currentProductRange">All products</h2><p id="productResultStatus" class="product-result-status" role="status" aria-live="polite"></p></div>
  <label class="product-search"><span data-i18n="catalogue.filter.search">Search products or grades</span><input type="search" id="productSearch" placeholder="e.g. MAP, 20-20-20, iron" data-i18n-placeholder="catalogue.filter.placeholder" autocomplete="off" aria-controls="productResults"></label>
  </div><div class="range-note" data-i18n="catalogue.range.note">Current availability, grade, packing and documentation are confirmed for each request and shipment.</div>
 
  <div id="allProductsGallery" class="all-products-gallery" aria-label="Product family reference photographs">
-  <figure><img src="img/catalogue/phosphorite.jpg" alt="Phosphate rock specimen" width="1344" height="799" loading="lazy"><figcaption data-i18n="catalogue.family.phosphates">Phosphate materials</figcaption></figure>
-  <figure><img src="img/catalogue/npk.jpg" alt="Compound fertilizer granules" width="2790" height="2093" loading="lazy"><figcaption data-i18n="catalogue.family.processed">Processed &amp; compound fertilizers</figcaption></figure>
-  <figure><img src="img/catalogue/urea.jpg" alt="Urea granules" width="1280" height="1452" loading="lazy"><figcaption data-i18n="catalogue.family.nitrogen">Nitrogen fertilizers</figcaption></figure>
-  <figure><img src="img/catalogue/mkp.jpg" alt="Monopotassium phosphate crystals" width="2560" height="1920" loading="lazy"><figcaption data-i18n="catalogue.family.water-soluble">Water-soluble fertilizers</figcaption></figure>
-  <figure><img src="img/catalogue/lab.jpg" alt="Laboratory quality-control context" width="2400" height="1600" loading="lazy"><figcaption data-i18n="catalogue.family.micronutrients">Micronutrients &amp; specialty inputs</figcaption></figure>
+  <a href="products.html#phosphates" data-filter="phosphates"><figure><img src="img/catalogue/phosphorite.jpg" alt="Phosphate rock specimen" width="1344" height="799" loading="lazy"><figcaption data-i18n="catalogue.family.phosphates">Phosphate materials</figcaption></figure></a>
+  <a href="products.html#processed" data-filter="processed"><figure><img src="img/catalogue/npk.jpg" alt="Compound fertilizer granules" width="2790" height="2093" loading="lazy"><figcaption data-i18n="catalogue.family.processed">Processed &amp; compound fertilizers</figcaption></figure></a>
+  <a href="products.html#nitrogen" data-filter="nitrogen"><figure><img src="img/catalogue/urea.jpg" alt="Urea granules" width="1280" height="1452" loading="lazy"><figcaption data-i18n="catalogue.family.nitrogen">Nitrogen fertilizers</figcaption></figure></a>
+  <a href="products.html#water-soluble" data-filter="water-soluble"><figure><img src="img/catalogue/mkp.jpg" alt="Monopotassium phosphate crystals" width="2560" height="1920" loading="lazy"><figcaption data-i18n="catalogue.family.water-soluble">Water-soluble fertilizers</figcaption></figure></a>
+  <a href="products.html#micronutrients" data-filter="micronutrients"><figure><img src="img/catalogue/lab.jpg" alt="Laboratory quality-control context" width="2400" height="1600" loading="lazy"><figcaption data-i18n="catalogue.family.micronutrients">Micronutrients &amp; specialty inputs</figcaption></figure></a>
  </div>
  <div id="productResults"><section id="phosphates" class="product-family" data-family="phosphates" aria-labelledby="heading-phosphates">
  <div class="product-family-heading"><div><span class="eyebrow">01 / <span data-i18n="catalogue.range.label" >PRODUCT RANGE</span></span><h2 data-i18n="catalogue.family.phosphates" id="heading-phosphates">Phosphate materials</h2><p data-i18n="catalogue.family.phosphates.desc" >Raw phosphate in powder, granular and selected low-cadmium grades.</p></div><img src="img/catalogue/phosphorite.jpg" alt="Phosphate rock specimen" loading="lazy" width="280" height="160"></div><div class="product-grid"><article id="erp" class="product-card" data-product-id="erp" data-product-family="phosphates">
@@ -371,7 +367,7 @@
 
 <script>
   document.getElementById('currentYear').textContent = new Date().getFullYear();
-</script><script src="js/i18n.js?v=20260918.3"></script><script src="js/catalogue-products.js?v=20260918.4"></script><div id="cookieBanner" class="cookie-banner" role="region" aria-label="Cookie consent">
+</script><script src="js/i18n.js?v=20260918.3"></script><script src="js/catalogue-products.js?v=20260918.5"></script><div id="cookieBanner" class="cookie-banner" role="region" aria-label="Cookie consent">
   <div class="cookie-inner">
     <div class="cookie-text">
       <strong>Analytics Cookies</strong>
