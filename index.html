@@ -107,7 +107,7 @@
   <link rel="preload" as="image" href="img/hero-port-desktop.webp" media="(min-width: 769px)">
   <link rel="preload" as="image" href="img/hero-port-mobile.webp" media="(max-width: 768px)">
 
-  <link rel="stylesheet" href="catalogue-navigation.css?v=20260918.5">
+  <link rel="stylesheet" href="catalogue-navigation.css?v=20260918.7">
   <link rel="stylesheet" href="catalogue-photography.css?v=20260918.6">
   <link rel="stylesheet" href="catalogue-categories.css?v=20260918.6">
 </head>
@@ -138,15 +138,15 @@
 <!-- Navigation -->
 <nav aria-label="Primary Navigation">
   <ul class="navbar-nav">
-    <li><a class="active" href="#home" aria-current="page" data-i18n="nav.home">Home</a></li>
-    <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+    <li><a class="active" href="#home" aria-current="location" data-home-section="home" data-i18n="nav.home">Home</a></li>
+    <li><a href="products.html" data-home-section="products" data-i18n="nav.products">Products</a></li>
     <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
     <li><a href="specifications.html" data-i18n="nav.coa">Specifications</a></li>
-    <li><a href="#logistics" data-i18n="nav.logistics">Logistics</a></li>
-    <li><a href="#how-we-work" data-i18n="nav.how">How We Work</a></li>
-    <li><a href="#about" data-i18n="nav.about">About</a></li>
-    <li><a href="commercial-partnerships.html" data-i18n="cp.nav">Commercial Partnerships</a></li>
-    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="#logistics" data-home-section="logistics" data-i18n="nav.logistics">Logistics</a></li>
+    <li><a href="#how-we-work" data-home-section="how-we-work" data-i18n="nav.how">How We Work</a></li>
+    <li><a href="#about" data-home-section="about" data-i18n="nav.about">About</a></li>
+    <li><a href="commercial-partnerships.html" data-home-section="commercial-paths" data-i18n="cp.nav">Commercial Partnerships</a></li>
+    <li><a href="#contact" data-home-section="contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -760,6 +760,7 @@
 <!-- Shared i18n and language selector -->
 <script src="js/i18n.js?v=20260918.3"></script>
 <script src="js/buyer-rfq.js?v=20260902.2"></script>
+<script src="js/home-navigation.js?v=20260918.7" defer></script>
 
 
 
