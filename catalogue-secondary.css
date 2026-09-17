@@ -1,0 +1,84 @@
+/* Shared catalogue palette for established content and application pages. */
+:root {
+  --vr-ivory:#eee9df;
+  --vr-paper:#f6f3ed;
+  --vr-white:#f6f3ed;
+  --vr-stone:#e4ded2;
+  --vr-soft-gray:#d0c9bb;
+  --vr-slate:#5b6058;
+  --vr-graphite:#343a38;
+  --vr-charcoal:#284237;
+  --vr-petroleum:#184c3b;
+  --vr-petroleum-2:#254f41;
+  --vr-line:#d0c9bb;
+  --vr-radius:4px;
+  --vr-shadow:0 8px 24px rgba(36,44,35,.045);
+  --vr-shadow-soft:0 4px 16px rgba(36,44,35,.035);
+  --bg:#eee9df;
+  --white:#f6f3ed;
+  --border:#d0c9bb;
+  --petroleum:#184c3b;
+  --graphite:#343a38;
+  --muted:#5b6058;
+  --green-soft:#e4ded2;
+}
+body { font-family:Arial,Helvetica,sans-serif; }
+html[lang=ar] body { font-family:Tajawal,Arial,sans-serif; }
+header { background:#fbfaf6; box-shadow:none; backdrop-filter:none; }
+header .brand-name,
+header .nav-all-visible .brand-name { color:#147a4c; }
+header .nav-all-visible .brand-tagline { color:#63747a; }
+header .nav-all-visible .logo-img { height:76px; }
+header .container.nav { min-height:100px; }
+h1,h2,h3,h4 { color:#184c3b; }
+.btn { border-radius:4px; box-shadow:none; }
+.specifications-page .spec-page-hero,
+.wsf-hero { background:#eee9df; }
+.specifications-page .spec-scope-section,
+.wsf-selection-section,
+.wsf-controlled-docs,
+body.supplier-page .supplier-application { background:#eee9df; }
+.specifications-page .spec-service-grid,
+.wsf-product-grid,
+.wsf-demand-options,
+body.supplier-page .supplier-grid-2 { background:transparent; border:0; box-shadow:none; gap:20px; overflow:visible; }
+.specifications-page .spec-service-card,
+.wsf-product-card,
+.wsf-demand-options article,
+body.supplier-page .supplier-panel,
+body.supplier-page .supplier-card { background:#f6f3ed; border:1px solid #d0c9bb; border-radius:4px; box-shadow:none; }
+.specifications-page .spec-hero-panel,
+.specifications-page .spec-request-panel,
+.wsf-controlled-panel,
+.wsf-hero-visual,
+.commercial-partnerships-page .cp-form,
+.legal-page > .container { border-radius:4px; box-shadow:none; }
+.specifications-page .spec-assurance-row span { background:#f6f3ed; }
+.specifications-page .spec-verification-list span,
+.specifications-page .spec-icon { background:#e4ded2; }
+.wsf-hero-visual img { display:block; width:100%; height:100%; object-fit:cover; }
+.wsf-product-card .product-card-actions { display:flex; justify-content:space-between; gap:15px; margin-top:22px; padding-top:16px; border-top:1px solid #d0c9bb; }
+.wsf-product-card .product-card-actions a { font-size:13px; font-weight:700; color:#184c3b; }
+.wsf-product-card .product-grade { color:#184c3b; font-size:26px; font-weight:700; }
+.wsf-product-card .product-description { flex:1; }
+.wsf-product-card { display:flex; flex-direction:column; }
+.wsf-distributors { background:#e4ded2; }
+.commercial-partnerships-page .cp-hero { background:linear-gradient(145deg,#183d30,#254f41); }
+.commercial-partnerships-page .cp-intro,
+.commercial-partnerships-page section.cp-section:not(.cp-soft-section):not(.cp-dark-section):not(.cp-application-section):not(.cp-protection-section) { background:#eee9df; }
+.commercial-partnerships-page .cp-soft-section,
+.commercial-partnerships-page .cp-protection-section { background:#e4ded2; }
+.commercial-partnerships-page .cp-field input,
+.commercial-partnerships-page .cp-field textarea { background:#f6f3ed; }
+.intro { background:#184c3b; }
+.intro h1 { color:#fff; }
+.topbar { background:#fbfaf6; box-shadow:none; }
+.card, form, fieldset { border-radius:4px; }
+.reference, .mark { background:#e4ded2; border-color:#d0c9bb; }
+@media(max-width:1380px) and (min-width:769px) {
+  header .nav-all-visible .logo-img { height:58px; }
+}
+@media(max-width:768px) {
+  header .nav-all-visible .logo-img { height:50px; }
+  .wsf-product-card .product-card-actions { flex-wrap:wrap; }
+}
