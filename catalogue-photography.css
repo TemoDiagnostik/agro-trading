@@ -6,8 +6,6 @@
 .range-gallery .gallery-photo:first-child img { object-fit: contain; background: #f6f3ed; }
 .range-hero .range-gallery figcaption { padding: 35px 20px 15px; font-size: 12px; }
 .range-tools { display: grid; grid-template-columns: 1fr; gap: 24px; }
-.family-filters { width: 100%; max-width: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
-.family-filter { font-size: 13px; min-height: 50px; padding: 10px 12px; font-weight: 700; }
 .product-search { width: 370px; max-width: 100%; min-width: 0; justify-self: end; }
 .product-search > span { font-size: 13px; }
 .all-products-gallery { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 10px; margin: 24px 0 6px; }
@@ -39,7 +37,6 @@
 @media (max-width: 1000px) {
   .range-hero-grid { grid-template-columns: .85fr 1.15fr; gap: 30px; }
   .range-hero .range-gallery { height: 300px; }
-  .family-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .all-products-gallery { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .all-products-gallery figure { height: 145px; }
   .product-family-heading { grid-template-columns: minmax(0,1fr) minmax(260px,340px); gap: 28px; }
@@ -49,8 +46,6 @@
 @media (max-width: 768px) {
   .range-hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .range-hero .range-gallery { height: 280px; gap: 6px; }
-  .family-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .family-filter { font-size: 13px; min-height: 48px; }
   .product-search { width: 100%; }
   .product-family-heading { grid-template-columns: 1fr; gap: 22px; }
   .all-products-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }

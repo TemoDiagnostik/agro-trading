@@ -25,7 +25,9 @@
     filters.forEach(button => {
       const active = button.dataset.filter === family;
       button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
+      if (button.tagName === 'BUTTON') button.setAttribute('aria-pressed', String(active));
+      else if (active) button.setAttribute('aria-current', 'true');
+      else button.removeAttribute('aria-current');
     });
     if (browser) browser.dataset.activeFamily = family;
     if (allGallery) allGallery.hidden = family !== 'all' || terms.length > 0;
@@ -46,13 +48,17 @@
     if (targetCard || targetFamily) requestAnimationFrame(() => (targetCard || targetFamily).scrollIntoView({ block: 'start' }));
   }
 
-  filters.forEach(button => button.addEventListener('click', () => {
+  filters.forEach(button => button.addEventListener('click', event => {
+    event.preventDefault();
     family = button.dataset.filter;
     search.value = '';
     const url = new URL(location.href);
     url.hash = family === 'all' ? '' : family;
     history.replaceState({}, '', url.pathname + url.search + url.hash);
     render();
+    if (family !== 'all') {
+      requestAnimationFrame(() => document.getElementById(family)?.scrollIntoView({ block: 'start' }));
+    }
   }));
   search.addEventListener('input', render);
   document.addEventListener('euroagri:languagechange', render);
