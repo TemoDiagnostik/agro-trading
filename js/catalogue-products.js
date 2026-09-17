@@ -6,6 +6,8 @@
   const filters = Array.from(document.querySelectorAll('[data-filter]'));
   const status = document.getElementById('productResultStatus');
   const empty = document.getElementById('noProductResults');
+  const browser = document.querySelector('.range-browser');
+  const allGallery = document.getElementById('allProductsGallery');
   if (!search || !cards.length || !status || !empty) return;
   let family = 'all';
   const normalize = value => String(value).normalize('NFKC').toLowerCase().replace(/[–—]/g, '-').trim();
@@ -25,6 +27,8 @@
       button.classList.toggle('is-active', active);
       button.setAttribute('aria-pressed', String(active));
     });
+    if (browser) browser.dataset.activeFamily = family;
+    if (allGallery) allGallery.hidden = family !== 'all' || terms.length > 0;
     const dictionary = window.EuroAgriCurrentDictionary || {};
     search.placeholder = dictionary['catalogue.filter.placeholder'] || 'e.g. MAP, 20-20-20, iron';
     status.textContent = `${count} ${dictionary['catalogue.filter.count'] || 'products and formulations'}`;
