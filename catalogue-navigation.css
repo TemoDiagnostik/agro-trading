@@ -32,6 +32,9 @@
   body header .container.nav.nav-all-visible .navbar-nav li {
     flex: 0 1 auto; margin: 0 !important; padding: 0 !important; border: 0 !important;
   }
+  body header .container.nav.nav-all-visible .navbar-nav .products-nav-item {
+    position: relative;
+  }
   body header .container.nav.nav-all-visible .navbar-nav a {
     display: block; font-size: 16px !important; font-weight: 700;
     line-height: 1.35; white-space: normal !important; text-align: center;
@@ -39,7 +42,57 @@
   }
   body header .container.nav.nav-all-visible .navbar-nav a.active,
   body header .container.nav.nav-all-visible .navbar-nav a:hover { color: #147a4c; }
+  body header .products-nav-link::before {
+    content: "▾";
+    display: inline-block;
+    margin-right: 6px;
+    color: #a07836;
+    font-size: 11px;
+  }
   body header .container.nav.nav-all-visible nav::after { display: none !important; }
+  body header .products-nav-menu {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 50%;
+    z-index: 2200;
+    width: min(980px, calc(100vw - 48px));
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 12px;
+    list-style: none;
+    background: #f7f3e9;
+    border: 1px solid #d6cdbc;
+    box-shadow: 0 18px 38px rgba(20, 45, 37, .18);
+    transform: translate(-50%, 10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+  }
+  body header .products-nav-item:hover .products-nav-menu,
+  body header .products-nav-item:focus-within .products-nav-menu {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  body header .container.nav.nav-all-visible .products-nav-menu li { min-width: 0; }
+  body header .container.nav.nav-all-visible .products-nav-menu a {
+    height: 100%;
+    padding: 13px 16px !important;
+    color: #2e4f43;
+    font-size: 14px !important;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 1px solid rgba(166, 148, 112, .28);
+  }
+  body header .container.nav.nav-all-visible .products-nav-menu a:hover,
+  body header .container.nav.nav-all-visible .products-nav-menu a.is-active {
+    color: #fff;
+    background: #147a4c;
+  }
 }
 @media (min-width: 769px) and (max-width: 1650px) {
   body header .container.nav.nav-all-visible {
@@ -52,8 +105,30 @@
   body header .container.nav.nav-all-visible .brand-name { font-size: 23px; }
   body header .container.nav.nav-all-visible nav { border-top: 1px solid #d0c9bb; }
   body header .container.nav.nav-all-visible .navbar-nav { gap: 4px 18px !important; }
+  body header .products-nav-menu {
+    left: 0;
+    transform: translate(0, 10px);
+  }
+  body header .products-nav-item:hover .products-nav-menu,
+  body header .products-nav-item:focus-within .products-nav-menu { transform: translate(0, 0); }
   html { scroll-padding-top: 160px; }
 }
 @media (max-width: 768px) {
   body header .container.nav.nav-all-visible .navbar-nav a { font-size: 16px !important; padding: 13px 10px !important; }
+  body header .products-nav-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin: 0 10px 10px;
+    padding: 8px 0 8px 14px;
+    list-style: none;
+    border-left: 2px solid #d1b987;
+  }
+  body header .products-nav-menu a {
+    display: block;
+    color: #31584a;
+    font-size: 14px !important;
+    line-height: 1.35;
+    padding: 9px 10px !important;
+  }
 }
