@@ -21,7 +21,7 @@
 .catalogue-category-nav a:focus-visible { outline: 2px solid #a07836; outline-offset: 2px; }
 .all-products-gallery > a { display: block; min-width: 0; border-radius: 3px; text-decoration: none; }
 .all-products-gallery > a:hover { outline: 2px solid #a07836; outline-offset: 3px; }
-.all-products-gallery > a figure { height: 150px; }
+.all-products-gallery > a figure { height: 200px; }
 .catalogue-products[data-view=family] .range-browser { padding-top: 24px; }
 .catalogue-products[data-view=family] .range-tools { padding-bottom: 16px; }
 .catalogue-products[data-view=family] .range-tools-heading h2 { display: none; }
@@ -45,7 +45,7 @@
 @media (max-width: 1000px) {
   .catalogue-category-nav ul { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 8px; }
   .catalogue-category-nav a { min-height: 50px; }
-  .all-products-gallery > a figure { height: 145px; }
+  .all-products-gallery > a figure { height: 190px; }
 }
 @media (max-width: 768px) {
   .catalogue-category-nav ul { padding-block: 10px; gap: 4px; }
@@ -56,6 +56,6 @@
   .catalogue-products[data-view=family] .product-family-heading { gap: 16px; }
   .catalogue-products[data-view=family] .product-family-heading img { height: 145px; order: 0; }
   .catalogue-products[data-view=family] .product-family-heading h2 { font-size: 30px; }
-  .all-products-gallery > a figure { height: 125px; }
+  .all-products-gallery > a figure { height: 180px; }
   .all-products-gallery > a:last-child { grid-column: 1 / -1; }
 }

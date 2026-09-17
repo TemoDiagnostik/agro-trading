@@ -547,8 +547,9 @@
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
   "catalogue.product.molybdenum.grade": "Mo",
-  "catalogue.photos.materials": "Photographies de référence des produits",
+  "catalogue.photos.materials": "Illustrations des produits",
   "log.photo.sea": "Fret maritime et coordination portuaire",
   "log.photo.heavy": "Transport routier lourd en Europe",
-  "log.photo.light": "Transport léger et livraison régionale"
+  "log.photo.light": "Transport léger et livraison régionale",
+  "catalogue.photos.generated": "Les cinq images des catégories de produits sont des illustrations générées par IA. Elles ne représentent pas des stocks réels, des lots livrés ou des installations de l’entreprise."
 }

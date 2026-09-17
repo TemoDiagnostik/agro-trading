@@ -547,8 +547,9 @@
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
   "catalogue.product.molybdenum.grade": "Mo",
-  "catalogue.photos.materials": "Referenčne fotografije izdelkov",
+  "catalogue.photos.materials": "Ilustracije izdelkov",
   "log.photo.sea": "Pomorski prevoz in pristaniška koordinacija",
   "log.photo.heavy": "Težki cestni prevoz po Evropi",
-  "log.photo.light": "Lahki prevoz in regionalna dostava"
+  "log.photo.light": "Lahki prevoz in regionalna dostava",
+  "catalogue.photos.generated": "Pet slik kategorij izdelkov so ilustracije, ustvarjene z umetno inteligenco. Ne prikazujejo dejanskih zalog, dobavljenih serij ali objektov podjetja."
 }
