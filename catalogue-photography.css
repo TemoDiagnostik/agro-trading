@@ -1,21 +1,29 @@
 /* Large reference photographs in the product and transport sections. */
 .range-hero-grid { grid-template-columns: .9fr 1.25fr; gap: 48px; }
-.range-hero .range-gallery { height: 460px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; overflow: hidden; background: var(--soft); }
+.range-hero .range-gallery { height: 330px; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; overflow: hidden; background: var(--soft); }
 .range-gallery .gallery-photo { min-width: 0; min-height: 0; overflow: hidden; }
 .range-hero .range-gallery img { width: 100%; height: 100%; object-fit: cover; }
 .range-gallery .gallery-photo:first-child img { object-fit: contain; background: #f6f3ed; }
 .range-hero .range-gallery figcaption { padding: 35px 20px 15px; font-size: 12px; }
 .range-tools { display: grid; grid-template-columns: 1fr; gap: 24px; }
 .family-filters { width: 100%; max-width: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
-.family-filter { font-size: 15px; min-height: 66px; padding: 12px; font-weight: 700; }
+.family-filter { font-size: 13px; min-height: 50px; padding: 10px 12px; font-weight: 700; }
 .product-search { width: 370px; max-width: 100%; min-width: 0; justify-self: end; }
 .product-search > span { font-size: 13px; }
-.product-family-heading { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 45px; padding-bottom: 28px; margin-bottom: 28px; }
-.product-family-heading img { width: 100%; height: 390px; object-fit: cover; border-radius: 4px; }
-.product-family-heading h2 { font-size: clamp(32px, 3vw, 43px); }
+.all-products-gallery { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 10px; margin: 24px 0 6px; }
+.all-products-gallery[hidden] { display: none; }
+.all-products-gallery figure { position: relative; height: 150px; overflow: hidden; border-radius: 3px; background: var(--soft); }
+.all-products-gallery img { width: 100%; height: 100%; object-fit: cover; }
+.all-products-gallery figure:first-child img { object-fit: contain; background: #f6f3ed; }
+.all-products-gallery figcaption { position: absolute; inset-inline: 0; bottom: 0; padding: 34px 10px 10px; color: #fff; background: linear-gradient(transparent,rgba(12,30,27,.82)); font-size: 12px; font-weight: 700; line-height: 1.25; }
+.product-family-heading { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,420px); align-items: center; gap: 35px; padding-bottom: 24px; margin-bottom: 24px; }
+.product-family-heading img { width: 100%; height: 220px; object-fit: cover; border-radius: 3px; }
+.product-family-heading h2 { font-size: clamp(28px, 2.2vw, 34px); }
 .product-family-heading p { font-size: 15px; line-height: 1.8; }
 #phosphates .product-family-heading img { object-fit: contain; background: #f6f3ed; }
 #nitrogen .product-family-heading img { object-position: center 55%; }
+.range-browser[data-active-family="all"] .product-family-heading { display: block; }
+.range-browser[data-active-family="all"] .product-family-heading img { display: none; }
 .family-image { height: 280px; }
 .family-card:nth-child(n+4) .family-image { height: 330px; }
 .family-card[href$="#phosphates"] .family-image img { object-fit: contain; }
@@ -30,21 +38,26 @@
 .transport-photo figcaption { position: absolute; bottom: 0; inset-inline: 0; background: linear-gradient(transparent,rgba(12,30,27,.85)); padding: 55px 28px 24px; color: #fff; font-size: 22px; font-weight: 700; line-height: 1.4; }
 @media (max-width: 1000px) {
   .range-hero-grid { grid-template-columns: .85fr 1.15fr; gap: 30px; }
-  .range-hero .range-gallery { height: 400px; }
+  .range-hero .range-gallery { height: 300px; }
   .family-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .product-family-heading { grid-template-columns: 1fr 1.2fr; gap: 28px; }
-  .product-family-heading img { height: 330px; }
+  .all-products-gallery { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .all-products-gallery figure { height: 145px; }
+  .product-family-heading { grid-template-columns: minmax(0,1fr) minmax(260px,340px); gap: 28px; }
+  .product-family-heading img { height: 200px; }
   .transport-photo { height: 320px; }
 }
 @media (max-width: 768px) {
   .range-hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .range-hero .range-gallery { height: 370px; gap: 6px; }
+  .range-hero .range-gallery { height: 280px; gap: 6px; }
   .family-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .family-filter { font-size: 14px; min-height: 62px; }
+  .family-filter { font-size: 13px; min-height: 48px; }
   .product-search { width: 100%; }
   .product-family-heading { grid-template-columns: 1fr; gap: 22px; }
-  .product-family-heading img { height: 300px; order: -1; }
-  .product-family-heading h2 { font-size: 32px; }
+  .all-products-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .all-products-gallery figure { height: 125px; }
+  .all-products-gallery figure:last-child { grid-column: 1 / -1; }
+  .product-family-heading img { height: 190px; order: -1; }
+  .product-family-heading h2 { font-size: 28px; }
   .product-family-heading p { font-size: 14px; }
   .family-image, .family-card:nth-child(n+4) .family-image { height: 270px; }
   .publication { gap: 18px; }
