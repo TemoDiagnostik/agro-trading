@@ -237,7 +237,7 @@
       }
     });
 
-    const desktopQuery = window.matchMedia('(min-width: 769px)');
+    const desktopQuery = window.matchMedia('(min-width: 1101px)');
     const closeForDesktop = event => {
       if (event.matches) {
         setExpanded(false, false);
