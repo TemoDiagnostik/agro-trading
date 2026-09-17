@@ -553,8 +553,9 @@
   "catalogue.page.download": "تنزيل الكتالوج",
   "catalogue.page.image": "حبيبات أسمدة مركبة · صورة مرجعية",
   "catalogue.filter.count": "منتجًا وتركيبة",
-  "catalogue.photos.materials": "صور مرجعية للمنتجات",
+  "catalogue.photos.materials": "صور توضيحية للمنتجات",
   "log.photo.sea": "الشحن البحري وتنسيق الموانئ",
   "log.photo.heavy": "النقل البري الثقيل عبر أوروبا",
-  "log.photo.light": "النقل الخفيف والتوصيل الإقليمي"
+  "log.photo.light": "النقل الخفيف والتوصيل الإقليمي",
+  "catalogue.photos.generated": "صور فئات المنتجات الخمس مولّدة بالذكاء الاصطناعي لأغراض توضيحية، ولا تعرض مخزونًا فعليًا أو شحنات مورّدة أو منشآت تابعة للشركة."
 }

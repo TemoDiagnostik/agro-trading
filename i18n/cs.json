@@ -547,8 +547,9 @@
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
   "catalogue.product.molybdenum.grade": "Mo",
-  "catalogue.photos.materials": "Referenční fotografie produktů",
+  "catalogue.photos.materials": "Ilustrace produktů",
   "log.photo.sea": "Námořní přeprava a koordinace přístavů",
   "log.photo.heavy": "Těžká silniční přeprava po Evropě",
-  "log.photo.light": "Lehká přeprava a regionální doručení"
+  "log.photo.light": "Lehká přeprava a regionální doručení",
+  "catalogue.photos.generated": "Pět obrázků produktových kategorií jsou ilustrace vytvořené umělou inteligencí. Nezobrazují skutečné zásoby, dodané šarže ani firemní provozy."
 }

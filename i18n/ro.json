@@ -547,8 +547,9 @@
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
   "catalogue.product.molybdenum.grade": "Mo",
-  "catalogue.photos.materials": "Fotografii de referință ale produselor",
+  "catalogue.photos.materials": "Ilustrații ale produselor",
   "log.photo.sea": "Transport maritim și coordonare portuară",
   "log.photo.heavy": "Transport rutier greu în Europa",
-  "log.photo.light": "Transport ușor și livrări regionale"
+  "log.photo.light": "Transport ușor și livrări regionale",
+  "catalogue.photos.generated": "Cele cinci imagini ale categoriilor de produse sunt ilustrații generate de IA. Nu prezintă stocuri reale, loturi livrate sau unități ale companiei."
 }

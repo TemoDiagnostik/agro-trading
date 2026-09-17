@@ -553,8 +553,9 @@
   "catalogue.page.download": "Download our catalogue",
   "catalogue.page.image": "Compound fertilizer granules · reference photograph",
   "catalogue.filter.count": "products and formulations",
-  "catalogue.photos.materials": "Product reference photographs",
+  "catalogue.photos.materials": "Product illustrations",
   "log.photo.sea": "Sea freight & port coordination",
   "log.photo.heavy": "Heavy road freight across Europe",
-  "log.photo.light": "Light transport & regional delivery"
+  "log.photo.light": "Light transport & regional delivery",
+  "catalogue.photos.generated": "The five product-category images are AI-generated illustrations. They do not depict actual stock, supplied batches or company facilities."
 }

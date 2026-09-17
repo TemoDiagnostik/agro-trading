@@ -547,8 +547,9 @@
   "catalogue.product.boron.grade": "B",
   "catalogue.product.copper.grade": "Cu",
   "catalogue.product.molybdenum.grade": "Mo",
-  "catalogue.photos.materials": "Ενδεικτικές φωτογραφίες προϊόντων",
+  "catalogue.photos.materials": "Εικονογραφήσεις προϊόντων",
   "log.photo.sea": "Θαλάσσιες μεταφορές και συντονισμός λιμένων",
   "log.photo.heavy": "Βαριές οδικές μεταφορές στην Ευρώπη",
-  "log.photo.light": "Ελαφρές μεταφορές και περιφερειακές παραδόσεις"
+  "log.photo.light": "Ελαφρές μεταφορές και περιφερειακές παραδόσεις",
+  "catalogue.photos.generated": "Οι πέντε εικόνες των κατηγοριών προϊόντων είναι εικονογραφήσεις που δημιουργήθηκαν με τεχνητή νοημοσύνη. Δεν απεικονίζουν πραγματικά αποθέματα, παραδοθείσες παρτίδες ή εγκαταστάσεις της εταιρείας."
 }
