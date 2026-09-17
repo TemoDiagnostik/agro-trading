@@ -1,0 +1,157 @@
+/* Approved port opening with the light catalogue sections below. */
+header {
+  background: #fbfaf6;
+}
+header .container.nav {
+  width: min(1900px, calc(100% - 40px));
+  min-height: 100px;
+  gap: 24px;
+}
+header .logo-img {
+  width: 76px;
+  height: 76px;
+}
+header .brand-wrap { gap: 13px; }
+header .brand-name {
+  color: #147a4c;
+  font-size: clamp(20px, 1.45vw, 27px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+header .brand-tagline {
+  color: #63747a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  margin-top: 0;
+}
+header .navbar-nav { gap: 13px; }
+header .navbar-nav a {
+  color: #52616a;
+  font-size: 11px;
+  font-weight: 700;
+  padding-block: 9px;
+}
+header .navbar-nav a:hover,
+header .navbar-nav a.active { color: #147a4c; }
+header .navbar-nav a.active { box-shadow: inset 0 -2px #147a4c; }
+header nav { min-width:0; }
+header .navbar-nav { flex-wrap:wrap; }
+header .navbar-nav li:nth-child(5) {
+  padding-inline-end: 18px;
+  margin-inline-end: 4px;
+  border-inline-end: 1px solid var(--line);
+}
+
+.port-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(600px, calc(100svh - 100px), 830px);
+  padding-block: 74px;
+  background: #37443f;
+  color: #fff;
+}
+.port-hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.port-hero-backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+.port-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(17,31,35,.8) 0%, rgba(23,44,44,.65) 40%, rgba(23,44,44,.22) 74%, rgba(23,44,44,.06) 100%),
+    linear-gradient(0deg, rgba(18,42,47,.16), transparent 46%);
+}
+.port-hero-copy { max-width: 680px; }
+.port-hero h1 {
+  color: #fff;
+  font-size: clamp(43px, 4.2vw, 64px);
+  font-weight: 750;
+  line-height: 1.07;
+  letter-spacing: -.04em;
+  margin-bottom: 25px;
+  text-wrap: balance;
+}
+.port-hero-lead {
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #f1f3f0;
+  margin-bottom: 27px;
+}
+.port-hero-range {
+  max-width: 660px;
+  border-top: 1px solid rgba(255,255,255,.3);
+  padding-top: 21px;
+  color: #e3e7df;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.9;
+  margin-bottom: 0;
+}
+.port-hero .cta-row { margin-top: 30px; }
+.port-hero .btn { border-radius: 7px; }
+.port-hero .btn-primary { background: #147a4c; border-color: #147a4c; }
+.port-hero .btn-primary:hover { background: #10643e; border-color: #10643e; }
+.port-hero .btn-outline { color: #fff; border-color: #cbd2cb; background: rgba(255,255,255,.04); }
+.port-hero .btn-outline:hover { background: #fff; color: #184c3b; }
+.port-hero :focus-visible { outline-color: #fff; }
+html[dir=rtl] .port-hero::after {
+  background: linear-gradient(270deg, rgba(17,31,35,.86) 0%, rgba(23,44,44,.72) 44%, rgba(23,44,44,.18) 84%);
+}
+html[dir=rtl] .port-hero h1 { letter-spacing: 0; line-height: 1.3; }
+.port-hero h1 { overflow-wrap:anywhere; hyphens:auto; }
+
+@media (min-width: 769px) and (max-width: 1380px) {
+  header .container.nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 2px 18px;
+    min-height: 118px;
+    padding-block: 8px;
+  }
+  header .brand-wrap { grid-column: 1; grid-row: 1; }
+  header .logo-img { width: 58px; height: 58px; }
+  header .brand-name { font-size: 22px; }
+  header .lang-flags { grid-column: 2; grid-row: 1; margin: 0; }
+  header nav { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+  header .navbar-nav { justify-content: center; flex-wrap: wrap; gap: 2px 16px; }
+  html { scroll-padding-top: 145px; }
+}
+@media (max-width: 768px) {
+  header .container.nav { width: calc(100% - 28px); min-height: 82px; gap: 10px; }
+  header .logo-img { width: 50px; height: 50px; }
+  header .brand-wrap { gap: 8px; min-width: 0; flex-shrink: 1; }
+  header .brand-text { min-width: 0; }
+  header .brand-name { font-size: clamp(12px, 3.5vw, 18px); white-space: nowrap; }
+  header .brand-tagline { font-size: 7px; letter-spacing: .035em; line-height: 1.5; max-width: 215px; }
+  header .lang-flags { margin-inline-start: auto; }
+  header .mobile-nav-toggle { flex-shrink: 0; }
+  header .navbar-nav a { font-size: 13px; padding: 12px 8px; }
+  header .navbar-nav li:nth-child(5) { padding: 0; margin: 0; border: 0; }
+  header nav { max-height: calc(100svh - 90px); overflow: auto; }
+  .port-hero { min-height: 590px; padding-block: 54px; }
+  .port-hero-backdrop img { object-position: center 60%; }
+  .port-hero::after,
+  html[dir=rtl] .port-hero::after {
+    background: linear-gradient(180deg, rgba(17,31,35,.8), rgba(23,44,44,.68) 68%, rgba(23,44,44,.38));
+  }
+  .port-hero h1 { font-size: clamp(34px, 9.8vw, 49px); line-height: 1.12; margin-bottom: 23px; }
+  html[dir=rtl] .port-hero h1 { font-size: clamp(31px, 9vw, 43px); }
+  .port-hero-lead { font-size: 15px; line-height: 1.75; margin-bottom: 24px; }
+  .port-hero-range { font-size: 12px; padding-top: 19px; }
+  .port-hero .cta-row { gap: 10px; }
+  .port-hero .btn { padding: 13px 17px; }
+}
