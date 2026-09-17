@@ -1,0 +1,135 @@
+/* Shared component colors, loaded after each page's layout styles.
+   Explicit color overrides take precedence over legacy page-specific rules. */
+:root {
+  --eat-forest: #184c3b;
+  --eat-forest-hover: #103c2c;
+  --eat-paper: #f6f3ed;
+  --eat-stone: #e4ded2;
+  --eat-gold: #785d32;
+  --eat-line: #d0c9bb;
+}
+
+/* Headings retain their light treatment on dark surfaces and photographs. */
+body :is(h1, h2, h3, h4) {
+  color: var(--eat-forest) !important;
+}
+
+:is(.port-hero, .supplier-hero, .supplier-secondary-products, .cp-hero,
+    .cp-dark-section, .spec-request-panel, .wsf-controlled-panel, .intro)
+    :is(h1, h2, h3, h4) {
+  color: #fff !important;
+}
+
+/* Language controls use the same green names and gold option codes. */
+header .lang-btn,
+header .lang-btn .lang-code,
+header .lang-btn:is(:hover, :focus-visible),
+header .lang-btn:is(:hover, :focus-visible) .lang-code,
+header .lang-btn .chev,
+header .lang-menu button,
+header .lang-menu .lang-option-name,
+header .lang-menu .lang-more-toggle {
+  color: var(--eat-forest) !important;
+}
+
+header .lang-menu .lang-option-code {
+  color: var(--eat-gold) !important;
+}
+
+header .lang-menu {
+  background: var(--eat-paper) !important;
+  border-color: var(--eat-line) !important;
+}
+
+header .lang-menu .lang-option:is(:hover, :focus-visible, .is-current),
+header .lang-menu .lang-more-toggle:is(:hover, :focus-visible) {
+  color: var(--eat-forest) !important;
+  background: var(--eat-stone) !important;
+}
+
+/* Primary actions, including the standalone application and receipt pages. */
+body .btn-primary,
+body a.button,
+#supplierKycForm button[type="submit"] {
+  color: #fff !important;
+  background: var(--eat-forest) !important;
+  border-color: var(--eat-forest) !important;
+  box-shadow: none !important;
+}
+
+body .btn-primary:is(:hover, :focus-visible),
+body a.button:is(:hover, :focus-visible),
+#supplierKycForm button[type="submit"]:is(:hover, :focus-visible) {
+  background: var(--eat-forest-hover) !important;
+  border-color: var(--eat-forest-hover) !important;
+}
+
+body .btn-outline {
+  color: var(--eat-forest) !important;
+  background: transparent !important;
+  border-color: var(--eat-forest) !important;
+}
+
+body .btn-outline:is(:hover, :focus-visible) {
+  color: var(--eat-forest) !important;
+  background: var(--eat-stone) !important;
+}
+
+body .btn-light {
+  color: var(--eat-forest) !important;
+  background: var(--eat-paper) !important;
+  border-color: var(--eat-paper) !important;
+}
+
+body .btn-light:is(:hover, :focus-visible) {
+  background: var(--eat-stone) !important;
+  border-color: var(--eat-stone) !important;
+}
+
+/* Keep action boundaries and text clear against the dark section colors. */
+body :is(.port-hero, .supplier-hero, .cp-hero, .cp-dark-section,
+         .spec-request-panel, .wsf-controlled-panel) .btn-primary {
+  border-color: rgba(255, 255, 255, .65) !important;
+}
+
+body :is(.port-hero, .supplier-hero, .cp-hero, .cp-dark-section,
+         .spec-request-panel, .wsf-controlled-panel) .btn-outline {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, .75) !important;
+}
+
+body :is(.port-hero, .supplier-hero, .cp-hero, .cp-dark-section,
+         .spec-request-panel, .wsf-controlled-panel)
+         .btn-outline:is(:hover, :focus-visible) {
+  color: var(--eat-forest) !important;
+  background: var(--eat-paper) !important;
+  border-color: var(--eat-paper) !important;
+}
+
+body :is(.btn, a.button, .lang-btn, .lang-menu button):focus-visible,
+#supplierKycForm button[type="submit"]:focus-visible {
+  outline-color: var(--eat-gold);
+}
+
+body :is(.port-hero, .supplier-hero, .cp-hero, .cp-dark-section,
+         .spec-request-panel, .wsf-controlled-panel) .btn:focus-visible {
+  outline-color: #fff;
+}
+
+/* Footer colors match the homepage, including readable secondary text. */
+body .footer-legal {
+  background: var(--eat-forest) !important;
+  color: #e7eee6 !important;
+}
+
+body .footer-legal .footer-links a {
+  color: #e7eee6 !important;
+}
+
+body .footer-legal .footer-links a:is(:hover, :focus-visible) {
+  color: #fff !important;
+}
+
+body .footer-legal .footer-company {
+  color: #cbd7cc !important;
+}
