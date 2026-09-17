@@ -34,7 +34,8 @@
   <link rel="stylesheet" href="visual-refinement.css?v=20260901.4" />
   <script src="js/language-init.js?v=20260818.2"></script>
   <link rel="stylesheet" href="catalogue-secondary.css?v=20260917.1">
-  <link rel="stylesheet" href="catalogue-navigation.css?v=20260918.3">
+  <link rel="stylesheet" href="catalogue-navigation.css?v=20260918.4">
+  <script src="js/products-navigation.js?v=20260918.4" defer></script>
 </head>
 
 <body class="legal-doc">
@@ -52,7 +53,19 @@
     <nav aria-label="Primary Navigation">
       <ul class="navbar-nav">
         <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
-        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li class="products-nav-item">
+      <button type="button" class="products-nav-toggle" aria-expanded="false" aria-controls="products-nav-menu">
+        <span data-i18n="nav.products">Products</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul id="products-nav-menu" class="products-nav-menu" hidden>
+        <li class="products-nav-all"><a href="products.html" data-filter="all"><span data-i18n="catalogue.filter.all">All products</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="products.html#phosphates" data-filter="phosphates"><img src="img/catalogue/phosphorite.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.phosphates">Phosphate materials</span></a></li>
+        <li><a href="products.html#processed" data-filter="processed"><img src="img/catalogue/npk.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.processed">Processed &amp; compound fertilizers</span></a></li>
+        <li><a href="products.html#nitrogen" data-filter="nitrogen"><img src="img/catalogue/urea.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.nitrogen">Nitrogen fertilizers</span></a></li>
+        <li><a href="products.html#water-soluble" data-filter="water-soluble"><img src="img/catalogue/mkp.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.water-soluble">Water-soluble fertilizers</span></a></li>
+        <li><a href="products.html#micronutrients" data-filter="micronutrients"><img src="img/catalogue/lab.jpg" width="240" height="150" alt="" loading="lazy" decoding="async"><span data-i18n="catalogue.family.micronutrients">Micronutrients &amp; specialty inputs</span></a></li>
+      </ul>
+    </li>
         <li><a href="supplier-network.html" data-i18n="nav.suppliers">Supplier Network</a></li>
         <li><a href="specifications.html" data-i18n="nav.coa">Specifications</a></li>
         <li><a href="index.html#logistics" data-i18n="nav.logistics">Logistics</a></li>
