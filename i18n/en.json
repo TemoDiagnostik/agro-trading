@@ -474,7 +474,7 @@
   "catalogue.product.low-cadmium.grade": "Lot-specific analysis",
   "catalogue.product.low-cadmium.desc": "Selected grades reviewed against shipment-specific cadmium and heavy-metals data.",
   "catalogue.range.label": "PRODUCT RANGE",
-  "catalogue.product.ssp.name": "SSP / GSSP",
+  "catalogue.product.ssp.name": "SSP",
   "catalogue.product.ssp.grade": "17%",
   "catalogue.product.ssp.desc": "Granular material with supplier-specific parameters. Final nutrient declaration confirmed per shipment.",
   "catalogue.product.gsp.name": "GSP",
