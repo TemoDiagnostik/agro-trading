@@ -8,9 +8,14 @@
   const rangeTitle = document.getElementById('currentProductRange');
   const empty = document.getElementById('noProductResults');
   const browser = document.querySelector('.range-browser');
+  const hero = document.querySelector('.range-hero');
   const allGallery = document.getElementById('allProductsGallery');
+  const note = document.querySelector('.range-note');
   if (!search || !cards.length || !status || !empty) return;
   let family = 'all';
+  let targetCard = null;
+  let pendingAlignment = true;
+  let alignmentFrame;
   const normalize = value => String(value).normalize('NFKC').toLowerCase().replace(/[–—]/g, '-').trim();
 
   function render() {
@@ -22,56 +27,89 @@
       card.hidden = !matches;
       if (matches) count += 1;
     });
-    sections.forEach(section => { section.hidden = !Array.from(section.querySelectorAll('[data-product-id]')).some(card => !card.hidden); });
-    filters.forEach(button => {
-      const active = button.dataset.filter === family;
-      button.classList.toggle('is-active', active);
-      if (button.tagName === 'BUTTON') button.setAttribute('aria-pressed', String(active));
-      else if (active) button.setAttribute('aria-current', 'true');
-      else button.removeAttribute('aria-current');
+    sections.forEach(section => {
+      section.hidden = !Array.from(section.querySelectorAll('[data-product-id]')).some(card => !card.hidden);
+      const heading = section.querySelector('h2');
+      if (family !== 'all' && section.id === family) {
+        heading.setAttribute('role', 'heading');
+        heading.setAttribute('aria-level', '1');
+      } else {
+        heading.removeAttribute('role');
+        heading.removeAttribute('aria-level');
+      }
     });
-    if (browser) browser.dataset.activeFamily = family;
+    filters.forEach(link => {
+      const active = link.dataset.filter === family;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+    document.body.dataset.view = family === 'all' ? 'all' : 'family';
+    browser.dataset.activeFamily = family;
+    hero.hidden = family !== 'all';
     if (allGallery) allGallery.hidden = family !== 'all' || terms.length > 0;
-    const dictionary = window.EuroAgriCurrentDictionary || {};
-    if (rangeTitle) {
-      const key = family === 'all' ? 'catalogue.filter.all' : `catalogue.family.${family}`;
-      rangeTitle.textContent = dictionary[key] || filters.find(filter => filter.dataset.filter === family)?.textContent.trim() || 'All products';
+    if (note) {
+      if (family === 'all') document.querySelector('.range-tools').after(note);
+      else browser.append(note);
     }
+    const dictionary = window.EuroAgriCurrentDictionary || {};
+    const key = family === 'all' ? 'catalogue.filter.all' : `catalogue.family.${family}`;
+    const title = dictionary[key] || filters.find(link => link.dataset.filter === family)?.textContent.trim() || 'All products';
+    if (rangeTitle) rangeTitle.textContent = title;
+    document.title = `${title} | Euro Agri Trading s.r.o.`;
     search.placeholder = dictionary['catalogue.filter.placeholder'] || 'e.g. MAP, 20-20-20, iron';
     status.textContent = `${count} ${dictionary['catalogue.filter.count'] || 'products and formulations'}`;
     empty.hidden = count > 0;
   }
 
-  function applyHash() {
+  function alignView() {
+    cancelAnimationFrame(alignmentFrame);
+    alignmentFrame = requestAnimationFrame(() => {
+      alignmentFrame = requestAnimationFrame(() => {
+        if (!pendingAlignment) return;
+        // Category links open a complete category view at the top. Individual
+        // product links use one measured header offset, without stacking CSS offsets.
+        const headerHeight = document.querySelector('header').getBoundingClientRect().height;
+        const top = targetCard ? targetCard.getBoundingClientRect().top + scrollY - headerHeight - 20 : 0;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+      });
+    });
+  }
+
+  function applyLocation(moveFocus = false) {
     const id = location.hash.slice(1);
-    const targetCard = cards.find(card => card.id === id);
+    targetCard = cards.find(card => card.id === id) || null;
     const targetFamily = sections.find(section => section.id === id);
     family = targetCard ? targetCard.dataset.productFamily : targetFamily ? targetFamily.id : 'all';
     search.value = '';
+    pendingAlignment = true;
     render();
-    // Unhide the target before scrolling, including links to individual formulas.
-    if (targetCard || targetFamily) requestAnimationFrame(() => (targetCard || targetFamily).scrollIntoView({ block: 'start' }));
-  }
-
-  filters.forEach(button => button.addEventListener('click', event => {
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    family = button.dataset.filter;
-    search.value = '';
-    const url = new URL(location.href);
-    url.hash = family === 'all' ? '' : family;
-    history.replaceState({}, '', url.pathname + url.search + url.hash);
-    render();
-    const target = family === 'all' ? browser : document.getElementById(family);
-    requestAnimationFrame(() => {
-      if (!target) return;
+    if (moveFocus) {
+      const target = targetCard || (family === 'all' ? hero.querySelector('h1') : document.getElementById(`heading-${family}`));
       target.setAttribute('tabindex', '-1');
       target.focus({ preventScroll: true });
-      target.scrollIntoView({ block: 'start' });
-    });
+    }
+    alignView();
+  }
+
+  filters.forEach(link => link.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const url = new URL(location.href);
+    url.hash = link.dataset.filter === 'all' ? '' : link.dataset.filter;
+    if (url.href !== location.href) history.pushState({}, '', url.pathname + url.search + url.hash);
+    applyLocation(true);
   }));
-  search.addEventListener('input', render);
-  document.addEventListener('euroagri:languagechange', render);
-  window.addEventListener('hashchange', applyHash);
-  applyHash();
+  search.addEventListener('input', () => { pendingAlignment = false; render(); });
+  document.addEventListener('euroagri:languagechange', () => { render(); alignView(); });
+  window.addEventListener('hashchange', () => applyLocation());
+  window.addEventListener('popstate', () => applyLocation());
+  // Translation, fonts and initial resource loading can change the target's position.
+  // Re-align while opening a route, but never pull the visitor back after interaction.
+  window.addEventListener('load', alignView, { once: true });
+  document.fonts?.ready.then(alignView);
+  ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(type =>
+    window.addEventListener(type, () => { pendingAlignment = false; }, { passive: true })
+  );
+  applyLocation();
 })();
