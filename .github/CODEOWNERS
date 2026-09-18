@@ -1,0 +1,5 @@
+# Request owner review for changes. Enforcement is configured in repository rules.
+* @TemoDiagnostik
+
+# In a single-owner repository, do not require a second independent reviewer
+# unless that reviewer actually exists. Require the security-baseline check instead.

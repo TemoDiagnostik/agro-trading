@@ -1,0 +1,32 @@
+name: Security baseline
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# This workflow never deploys the site and never receives account secrets.
+permissions:
+  contents: read
+
+concurrency:
+  group: security-baseline-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  security-baseline:
+    name: security-baseline
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the reviewed revision
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Test the security checks
+        run: python3 -m unittest discover -s .github/scripts -p 'test_*.py' -v
+      - name: Check tracked source and public data boundaries
+        run: python3 .github/scripts/security_check.py
