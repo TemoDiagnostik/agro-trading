@@ -562,5 +562,19 @@
   "sp.offer": "Anmod om et handelstilbud",
   "sp.range": "Se produktsortiment",
   "sp.range.linkNote": "De eksisterende produktsider beskriver Euro Agris bredere sourcingmuligheder. De kvaliteter, der er angivet her, definerer samarbejdsområdet med AL AHRAM.",
-  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S)-logo"
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S)-logo",
+  "sp.title": "Leverings- og eksportpartnere",
+  "sp.role": "Egypten | Kommerciel leverings- og eksportpartner",
+  "sp.main": "Euro Agri Trading samarbejder med AL AHRAM FOR TRADE & SHIPPING (AT&S) om egyptisk råfosfat og udvalgte fosfatgødninger. Euro Agri koordinerer køberforespørgsler og kommerciel opfølgning, mens AL AHRAM koordinerer sourcing, levering og eksport.",
+  "sp.benefit.title": "Præferencepriser og kommercielle vilkår gennem Euro Agri",
+  "sp.benefit.text": "Kunder, der køber gennem Euro Agri Trading, kan via vores samarbejde med AL AHRAM få adgang til præferencepriser og tilpassede kommercielle vilkår. De aftales for hver forespørgsel ud fra produkt, mængde, tilgængelighed, destination og betalingsbetingelser.",
+  "sp.qualifier": "Endelige specifikationer, tilgængelighed og kommercielle vilkår bekræftes i det enkelte tilbud.",
+  "sp.offer": "Anmod om et kommercielt tilbud",
+  "sp.range": "Se produktsortiment",
+  "sp.range.erp": "Råfosfat — egyptisk oprindelse",
+  "sp.range.npk": "Granuleret NPK — formuleringer efter forespørgsel",
+  "sp.range.up": "Ureafosfat",
+  "sp.range.request": "Anmod om denne kvalitet gennem Euro Agri",
+  "sp.range.linkNote": "De eksisterende produktsider viser Euro Agris bredere sourcingmuligheder. Produkterne her definerer samarbejdsområdet med AL AHRAM.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logo"
 }
