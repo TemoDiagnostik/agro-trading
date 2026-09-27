@@ -562,5 +562,19 @@
   "sp.offer": "Ticari Teklif Talep Et",
   "sp.range": "Ürün Yelpazesini Gör",
   "sp.range.linkNote": "Mevcut ürün sayfaları Euro Agri’nin daha geniş tedarik seçeneklerini açıklar. Burada listelenen kaliteler AL AHRAM ile iş birliği kapsamını tanımlar.",
-  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logosu"
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logosu",
+  "sp.title": "Tedarik ve İhracat Ortakları",
+  "sp.role": "Mısır | Ticari Tedarik ve İhracat Ortağı",
+  "sp.main": "Euro Agri Trading, Mısır menşeli fosfat kayası ve seçilmiş fosfatlı gübreler için AL AHRAM FOR TRADE & SHIPPING (AT&S) ile çalışır. Euro Agri alıcı taleplerini ve ticari takibi koordine ederken, AL AHRAM kaynak bulma, tedarik ve ihracat düzenlemelerini koordine eder.",
+  "sp.benefit.title": "Euro Agri üzerinden avantajlı fiyatlar ve ticari şartlar",
+  "sp.benefit.text": "Euro Agri Trading üzerinden tedarik yapan müşteriler, AL AHRAM ile iş birliğimiz sayesinde avantajlı fiyatlardan ve talebe özel ticari şartlardan yararlanabilir. Bunlar her talep için ürün, miktar, bulunabilirlik, varış noktası ve ödeme koşullarına göre belirlenir.",
+  "sp.qualifier": "Nihai teknik özellikler, bulunabilirlik ve ticari şartlar her teklif için ayrıca teyit edilir.",
+  "sp.offer": "Ticari Teklif İsteyin",
+  "sp.range": "Ürün Yelpazesini Görün",
+  "sp.range.linkNote": "Mevcut ürün sayfaları Euro Agri’nin daha geniş tedarik seçeneklerini gösterir. Burada listelenen ürünler AL AHRAM ile iş birliği kapsamını tanımlar.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logosu",
+  "sp.range.erp": "Fosfat kayası — Mısır menşeli",
+  "sp.range.npk": "Granül NPK — talebe göre formülasyonlar",
+  "sp.range.up": "Üre Fosfat",
+  "sp.range.request": "Bu kaliteyi Euro Agri üzerinden talep edin"
 }
