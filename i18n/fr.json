@@ -552,5 +552,15 @@
   "log.photo.heavy": "Transport routier lourd en Europe",
   "log.photo.light": "Transport léger et livraison régionale",
   "catalogue.photos.generated": "Les cinq images des catégories de produits sont des illustrations générées par IA. Elles ne représentent pas des stocks réels, des lots livrés ou des installations de l’entreprise.",
-  "how.cta": "Demander un devis"
+  "how.cta": "Demander un devis",
+  "sp.title": "Partenaires d’approvisionnement et d’exportation",
+  "sp.role": "Égypte | Partenaire commercial d’approvisionnement et d’exportation",
+  "sp.main": "Euro Agri Trading travaille avec AL AHRAM FOR TRADE & SHIPPING (AT&S) sur le phosphate naturel égyptien et une sélection d’engrais phosphatés. Euro Agri coordonne les demandes des acheteurs et le suivi commercial, tandis qu’AL AHRAM coordonne le sourcing, l’approvisionnement et les opérations d’exportation.",
+  "sp.benefit.title": "Tarifs préférentiels et conditions commerciales via Euro Agri",
+  "sp.benefit.text": "Les clients qui s’approvisionnent via Euro Agri Trading peuvent bénéficier de tarifs préférentiels et de conditions commerciales adaptées grâce à notre coopération avec AL AHRAM. Elles sont convenues pour chaque demande selon le produit, la quantité, la disponibilité, la destination et les conditions de paiement.",
+  "sp.qualifier": "Les spécifications finales, la disponibilité et les conditions commerciales sont confirmées dans l’offre individuelle.",
+  "sp.offer": "Demander une offre commerciale",
+  "sp.range": "Voir la gamme de produits",
+  "sp.range.linkNote": "Les pages produits existantes présentent les options d’approvisionnement plus larges d’Euro Agri. Les qualités indiquées ici définissent le périmètre de coopération avec AL AHRAM.",
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)"
 }

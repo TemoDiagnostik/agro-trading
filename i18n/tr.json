@@ -552,5 +552,15 @@
   "log.photo.heavy": "Avrupa genelinde ağır karayolu taşımacılığı",
   "log.photo.light": "Hafif taşımacılık ve bölgesel teslimat",
   "catalogue.photos.generated": "Beş ürün kategorisi görseli yapay zekâ ile oluşturulmuş illüstrasyonlardır. Gerçek stokları, tedarik edilen partileri veya şirket tesislerini göstermez.",
-  "how.cta": "Fiyat Teklifi İsteyin"
+  "how.cta": "Fiyat Teklifi İsteyin",
+  "sp.title": "Tedarik ve İhracat Ortakları",
+  "sp.role": "Mısır | Ticari Tedarik ve İhracat Ortağı",
+  "sp.main": "Euro Agri Trading, Mısır kaya fosfatı ve seçili fosfatlı gübrelerde AL AHRAM FOR TRADE & SHIPPING (AT&S) ile çalışır. Euro Agri alıcı taleplerini ve ticari takibi koordine ederken, AL AHRAM kaynak bulma, tedarik ve ihracat düzenlemelerini koordine eder.",
+  "sp.benefit.title": "Euro Agri üzerinden tercihli fiyatlar ve ticari koşullar",
+  "sp.benefit.text": "Euro Agri Trading üzerinden tedarik yapan müşteriler, AL AHRAM ile iş birliğimiz kapsamında tercihli fiyatlardan ve ihtiyaca göre uyarlanmış ticari koşullardan yararlanabilir. Bunlar her talep için ürün, miktar, bulunabilirlik, varış noktası ve ödeme koşullarına göre kararlaştırılır.",
+  "sp.qualifier": "Nihai spesifikasyonlar, bulunabilirlik ve ticari koşullar ilgili teklifte teyit edilir.",
+  "sp.offer": "Ticari Teklif Talep Et",
+  "sp.range": "Ürün Yelpazesini Gör",
+  "sp.range.linkNote": "Mevcut ürün sayfaları Euro Agri’nin daha geniş tedarik seçeneklerini açıklar. Burada listelenen kaliteler AL AHRAM ile iş birliği kapsamını tanımlar.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logosu"
 }

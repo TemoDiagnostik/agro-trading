@@ -552,5 +552,15 @@
   "log.photo.heavy": "Nehéz közúti áruszállítás Európában",
   "log.photo.light": "Kisteherautós szállítás és regionális kézbesítés",
   "catalogue.photos.generated": "Az öt termékkategória képei mesterséges intelligenciával készült illusztrációk. Nem mutatnak tényleges készleteket, szállított tételeket vagy vállalati létesítményeket.",
-  "how.cta": "Ajánlatkérés"
+  "how.cta": "Ajánlatkérés",
+  "sp.title": "Beszerzési és exportpartnerek",
+  "sp.role": "Egyiptom | Kereskedelmi beszerzési és exportpartner",
+  "sp.main": "A Euro Agri Trading az AL AHRAM FOR TRADE & SHIPPING (AT&S) vállalattal együttműködve egyiptomi nyersfoszfátot és kiválasztott foszfátműtrágyákat kínál. A Euro Agri koordinálja a vevői megkereséseket és a kereskedelmi utánkövetést, míg az AL AHRAM a beszerzést, az ellátást és az exportfolyamatokat koordinálja.",
+  "sp.benefit.title": "Preferenciális árak és kereskedelmi feltételek a Euro Agrin keresztül",
+  "sp.benefit.text": "A Euro Agri Tradingen keresztül beszerző ügyfelek az AL AHRAM-mal való együttműködésünk révén preferenciális árakban és egyedi kereskedelmi feltételekben részesülhetnek. Ezeket minden megkeresésnél a termék, a mennyiség, a rendelkezésre állás, a célállomás és a fizetési feltételek alapján egyeztetjük.",
+  "sp.qualifier": "A végleges specifikációkat, rendelkezésre állást és kereskedelmi feltételeket az egyedi ajánlat erősíti meg.",
+  "sp.offer": "Kereskedelmi ajánlat kérése",
+  "sp.range": "Termékkínálat megtekintése",
+  "sp.range.linkNote": "A meglévő termékoldalak a Euro Agri szélesebb beszerzési lehetőségeit mutatják be. Az itt felsorolt minőségek az AL AHRAM-mal való együttműködés körét határozzák meg.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logó"
 }

@@ -552,5 +552,15 @@
   "log.photo.heavy": "Ciężki transport drogowy w Europie",
   "log.photo.light": "Lekki transport i dostawy regionalne",
   "catalogue.photos.generated": "Pięć obrazów kategorii produktów to ilustracje wygenerowane przez AI. Nie przedstawiają rzeczywistych zapasów, dostarczonych partii ani obiektów firmy.",
-  "how.cta": "Poproś o ofertę"
+  "how.cta": "Poproś o ofertę",
+  "sp.title": "Partnerzy dostaw i eksportu",
+  "sp.role": "Egipt | Partner handlowy ds. dostaw i eksportu",
+  "sp.main": "Euro Agri Trading współpracuje z AL AHRAM FOR TRADE & SHIPPING (AT&S) w zakresie egipskiego fosforytu oraz wybranych nawozów fosforowych. Euro Agri koordynuje zapytania kupujących i działania handlowe, a AL AHRAM koordynuje sourcing, dostawy i organizację eksportu.",
+  "sp.benefit.title": "Preferencyjne ceny i warunki handlowe za pośrednictwem Euro Agri",
+  "sp.benefit.text": "Klienci zaopatrujący się za pośrednictwem Euro Agri Trading mogą korzystać z preferencyjnych cen i dopasowanych warunków handlowych dzięki naszej współpracy z AL AHRAM. Są one uzgadniane dla każdego zapytania zależnie od produktu, ilości, dostępności, miejsca dostawy i warunków płatności.",
+  "sp.qualifier": "Ostateczne specyfikacje, dostępność i warunki handlowe są potwierdzane w indywidualnej ofercie.",
+  "sp.offer": "Poproś o ofertę handlową",
+  "sp.range": "Zobacz zakres produktów",
+  "sp.range.linkNote": "Istniejące strony produktów opisują szersze możliwości sourcingu Euro Agri. Wymienione tutaj klasy określają zakres współpracy z AL AHRAM.",
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)"
 }

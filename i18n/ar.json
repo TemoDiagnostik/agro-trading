@@ -435,7 +435,7 @@
   "catalogue.family.phosphates.desc": "فوسفات خام في صورة مسحوق أو حبيبات ودرجات مختارة منخفضة الكادميوم.",
   "catalogue.family.view": "تصفح هذه المجموعة",
   "catalogue.family.processed": "الأسمدة المعالجة والمركبة",
-  "catalogue.family.processed.desc": "SSP وGSP وDSP وTSP وDAP وMAP بدرجة \u206610-46-0\u2069 وNPK المحبب.",
+  "catalogue.family.processed.desc": "SSP وGSP وDSP وTSP وDAP وMAP بدرجة ⁦10-46-0⁩ وNPK المحبب.",
   "catalogue.family.nitrogen": "الأسمدة النيتروجينية",
   "catalogue.family.nitrogen.desc": "يوريا محببة 46% نيتروجين، بمواصفات خاصة بالشحنة.",
   "catalogue.family.water-soluble": "الأسمدة الذائبة في الماء",
@@ -558,5 +558,15 @@
   "log.photo.heavy": "النقل البري الثقيل عبر أوروبا",
   "log.photo.light": "النقل الخفيف والتوصيل الإقليمي",
   "catalogue.photos.generated": "صور فئات المنتجات الخمس مولّدة بالذكاء الاصطناعي لأغراض توضيحية، ولا تعرض مخزونًا فعليًا أو شحنات مورّدة أو منشآت تابعة للشركة.",
-  "how.cta": "أرسل طلب عرض سعر"
+  "how.cta": "أرسل طلب عرض سعر",
+  "sp.title": "شركاء التوريد والتصدير",
+  "sp.role": "مصر | شريك تجاري للتوريد والتصدير",
+  "sp.main": "تتعاون Euro Agri Trading مع AL AHRAM FOR TRADE & SHIPPING (AT&S) في الفوسفات الصخري المصري ومنتجات مختارة من الأسمدة الفوسفاتية. تتولى Euro Agri تنسيق استفسارات المشترين والمتابعة التجارية، بينما تتولى AL AHRAM تنسيق مصادر التوريد والإمداد وترتيبات التصدير.",
+  "sp.benefit.title": "أسعار وشروط تجارية تفضيلية عبر Euro Agri",
+  "sp.benefit.text": "قد يستفيد العملاء الذين تتم إدارة طلباتهم عبر Euro Agri Trading من أسعار تفضيلية وشروط تجارية مصممة بحسب احتياجاتهم من خلال تعاوننا مع AL AHRAM. وتُحدد هذه المزايا لكل طلب وفق المنتج والكمية والتوفر والوجهة وشروط الدفع.",
+  "sp.qualifier": "تُؤكد المواصفات النهائية والتوفر والشروط التجارية في العرض الخاص بكل طلب.",
+  "sp.offer": "طلب عرض تجاري",
+  "sp.range": "استعراض المنتجات",
+  "sp.range.linkNote": "تعرض صفحات المنتجات الحالية خيارات التوريد الأوسع لدى Euro Agri، بينما تحدد الدرجات المدرجة هنا نطاق التعاون مع AL AHRAM.",
+  "sp.logo.alt": "شعار AL AHRAM FOR TRADE & SHIPPING (AT&S)"
 }
