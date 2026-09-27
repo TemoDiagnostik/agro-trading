@@ -577,10 +577,10 @@
   "sp.qualifier": "تُؤكد المواصفات النهائية والتوفر والشروط التجارية في العرض الخاص بكل طلب.",
   "sp.offer": "طلب عرض تجاري",
   "sp.range": "استعراض المنتجات",
+  "sp.range.linkNote": "تعرض صفحات المنتجات الحالية خيارات التوريد الأوسع لدى Euro Agri، بينما تحدد الدرجات المدرجة هنا نطاق التعاون مع AL AHRAM.",
+  "sp.logo.alt": "شعار AL AHRAM FOR TRADE & SHIPPING (AT&S)",
   "sp.range.erp": "الفوسفات الصخري — منشأ مصري",
   "sp.range.npk": "أسمدة NPK المحببة — التركيبات بحسب الطلب",
   "sp.range.up": "فوسفات اليوريا",
-  "sp.range.request": "طلب هذه الدرجة عبر Euro Agri",
-  "sp.range.linkNote": "تعرض صفحات المنتجات الحالية خيارات التوريد الأوسع لدى Euro Agri، بينما تحدد الدرجات المدرجة هنا نطاق التعاون مع AL AHRAM.",
-  "sp.logo.alt": "شعار AL AHRAM FOR TRADE & SHIPPING (AT&S)"
+  "sp.range.request": "طلب هذه الدرجة عبر Euro Agri"
 }
