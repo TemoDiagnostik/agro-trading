@@ -562,5 +562,19 @@
   "sp.offer": "Pyydä kaupallinen tarjous",
   "sp.range": "Näytä tuotevalikoima",
   "sp.range.linkNote": "Nykyiset tuotesivut kuvaavat Euro Agrin laajempia hankintavaihtoehtoja. Tässä luetellut laadut määrittävät yhteistyön laajuuden AL AHRAMin kanssa.",
-  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) -logo"
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) -logo",
+  "sp.title": "Toimitus- ja vientikumppanit",
+  "sp.role": "Egypti | Kaupallinen toimitus- ja vientikumppani",
+  "sp.main": "Euro Agri Trading tekee yhteistyötä AL AHRAM FOR TRADE & SHIPPING (AT&S) -yhtiön kanssa egyptiläisen raakafosfaatin ja valittujen fosfaattilannoitteiden osalta. Euro Agri koordinoi ostajakyselyt ja kaupallisen seurannan, kun taas AL AHRAM koordinoi hankinnan, toimitukset ja vientijärjestelyt.",
+  "sp.benefit.title": "Etuhinnoittelu ja kaupalliset ehdot Euro Agrin kautta",
+  "sp.benefit.text": "Euro Agri Tradingin kautta hankkivat asiakkaat voivat hyötyä etuhinnoittelusta ja räätälöidyistä kaupallisista ehdoista yhteistyömme kautta AL AHRAMin kanssa. Ehdot sovitaan jokaiselle kyselylle tuotteen, määrän, saatavuuden, määränpään ja maksuehtojen perusteella.",
+  "sp.qualifier": "Lopulliset tekniset tiedot, saatavuus ja kaupalliset ehdot vahvistetaan tapauskohtaisessa tarjouksessa.",
+  "sp.offer": "Pyydä kaupallinen tarjous",
+  "sp.range": "Katso tuotevalikoima",
+  "sp.range.linkNote": "Nykyiset tuotesivut kuvaavat Euro Agrin laajempia hankintavaihtoehtoja. Tässä luetellut tuotteet määrittävät yhteistyön laajuuden AL AHRAMin kanssa.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) -logo",
+  "sp.range.erp": "Raakafosfaatti — egyptiläinen alkuperä",
+  "sp.range.npk": "Rakeinen NPK — koostumukset pyynnöstä",
+  "sp.range.up": "Ureafosfaatti",
+  "sp.range.request": "Pyydä tätä laatua Euro Agrin kautta"
 }
