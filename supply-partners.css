@@ -17,8 +17,6 @@
 #supply-export-partners .sp-company { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; margin-bottom: 25px; }
 #supply-export-partners .sp-company > div { min-width: 0; }
 #supply-export-partners .sp-logo { display:block; width:min(430px,100%); height:auto; flex:none; object-fit:contain; border-radius:0; }
-#supply-export-partners .sp-logo-tiles { display:flex; direction:ltr; unicode-bidi:isolate; aspect-ratio:2 / 1; overflow:hidden; line-height:0; background:transparent; }
-#supply-export-partners .sp-logo-tiles img { display:block; flex:0 0 12.5%; width:12.5%; height:100%; min-width:0; object-fit:fill; margin:0; padding:0; border:0; }
 #supply-export-partners .sp-partner-name { display:flex; flex-wrap:wrap; align-items:baseline; gap:.35em .55em; }
 #supply-export-partners .sp-short-name { font-size:.62em; font-weight:700; color:var(--sp-gold); letter-spacing:.02em; white-space:nowrap; }
 #supply-export-partners h3 { font-size: clamp(21px, 2vw, 27px); line-height: 1.2; letter-spacing: -.02em; color: var(--sp-forest); margin: 0 0 10px; overflow-wrap: anywhere; }
