@@ -552,5 +552,15 @@
   "log.photo.heavy": "Transporte pesado por carretera en Europa",
   "log.photo.light": "Transporte ligero y reparto regional",
   "catalogue.photos.generated": "Las cinco imágenes de las categorías de productos son ilustraciones generadas por IA. No representan existencias reales, lotes suministrados ni instalaciones de la empresa.",
-  "how.cta": "Solicitar una oferta"
+  "how.cta": "Solicitar una oferta",
+  "sp.title": "Socios de suministro y exportación",
+  "sp.role": "Egipto | Socio comercial de suministro y exportación",
+  "sp.main": "Euro Agri Trading trabaja con AL AHRAM FOR TRADE & SHIPPING (AT&S) en fosfato de roca egipcio y determinados fertilizantes fosfatados. Euro Agri coordina las consultas de los compradores y el seguimiento comercial, mientras AL AHRAM coordina el abastecimiento, el suministro y los arreglos de exportación.",
+  "sp.benefit.title": "Precios preferentes y condiciones comerciales a través de Euro Agri",
+  "sp.benefit.text": "Los clientes que compran a través de Euro Agri Trading pueden beneficiarse de precios preferentes y condiciones comerciales adaptadas mediante nuestra cooperación con AL AHRAM. Se acuerdan para cada consulta según el producto, la cantidad, la disponibilidad, el destino y las condiciones de pago.",
+  "sp.qualifier": "Las especificaciones finales, la disponibilidad y las condiciones comerciales se confirman en la oferta individual.",
+  "sp.offer": "Solicitar una oferta comercial",
+  "sp.range": "Ver gama de productos",
+  "sp.range.linkNote": "Las páginas de productos existentes describen las opciones de suministro más amplias de Euro Agri. Los grados indicados aquí definen el alcance de la cooperación con AL AHRAM.",
+  "sp.logo.alt": "Logotipo de AL AHRAM FOR TRADE & SHIPPING (AT&S)"
 }
