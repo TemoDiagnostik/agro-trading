@@ -562,5 +562,9 @@
   "sp.offer": "Pyydä kaupallinen tarjous",
   "sp.range": "Näytä tuotevalikoima",
   "sp.range.linkNote": "Nykyiset tuotesivut kuvaavat Euro Agrin laajempia hankintavaihtoehtoja. Tässä luetellut laadut määrittävät yhteistyön laajuuden AL AHRAMin kanssa.",
-  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) -logo"
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) -logo",
+  "sp.range.erp": "Raakafosfaatti — egyptiläinen alkuperä",
+  "sp.range.npk": "Rakeinen NPK — koostumukset pyynnöstä",
+  "sp.range.up": "Ureafosfaatti",
+  "sp.range.request": "Pyydä tätä laatua Euro Agrin kautta"
 }

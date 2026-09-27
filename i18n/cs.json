@@ -562,5 +562,9 @@
   "sp.offer": "Vyžádat obchodní nabídku",
   "sp.range": "Zobrazit sortiment",
   "sp.range.linkNote": "Stávající produktové stránky popisují širší možnosti sourcingu Euro Agri. Zde uvedené stupně vymezují rozsah spolupráce s AL AHRAM.",
-  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)"
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)",
+  "sp.range.erp": "Fosfátová hornina — egyptský původ",
+  "sp.range.npk": "Granulované NPK — složení na vyžádání",
+  "sp.range.up": "Močovinový fosfát",
+  "sp.range.request": "Vyžádat tuto třídu přes Euro Agri"
 }

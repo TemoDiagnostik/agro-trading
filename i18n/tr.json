@@ -562,5 +562,9 @@
   "sp.offer": "Ticari Teklif Talep Et",
   "sp.range": "Ürün Yelpazesini Gör",
   "sp.range.linkNote": "Mevcut ürün sayfaları Euro Agri’nin daha geniş tedarik seçeneklerini açıklar. Burada listelenen kaliteler AL AHRAM ile iş birliği kapsamını tanımlar.",
-  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logosu"
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logosu",
+  "sp.range.erp": "Fosfat kayası — Mısır menşeli",
+  "sp.range.npk": "Granül NPK — talebe göre formülasyonlar",
+  "sp.range.up": "Üre Fosfat",
+  "sp.range.request": "Bu kaliteyi Euro Agri üzerinden talep edin"
 }

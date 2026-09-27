@@ -562,5 +562,9 @@
   "sp.offer": "Solicitar una oferta comercial",
   "sp.range": "Ver gama de productos",
   "sp.range.linkNote": "Las páginas de productos existentes describen las opciones de suministro más amplias de Euro Agri. Los grados indicados aquí definen el alcance de la cooperación con AL AHRAM.",
-  "sp.logo.alt": "Logotipo de AL AHRAM FOR TRADE & SHIPPING (AT&S)"
+  "sp.logo.alt": "Logotipo de AL AHRAM FOR TRADE & SHIPPING (AT&S)",
+  "sp.range.erp": "Roca fosfórica — origen egipcio",
+  "sp.range.npk": "NPK granulado — formulaciones a solicitud",
+  "sp.range.up": "Fosfato de urea",
+  "sp.range.request": "Solicitar este grado a través de Euro Agri"
 }

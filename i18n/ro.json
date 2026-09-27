@@ -562,5 +562,9 @@
   "sp.offer": "Solicită o ofertă comercială",
   "sp.range": "Vezi gama de produse",
   "sp.range.linkNote": "Paginile de produse existente descriu opțiunile mai largi de aprovizionare ale Euro Agri. Clasele listate aici definesc domeniul cooperării cu AL AHRAM.",
-  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)"
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)",
+  "sp.range.erp": "Rocă fosfatică — origine egipteană",
+  "sp.range.npk": "NPK granulat — formule la cerere",
+  "sp.range.up": "Fosfat de uree",
+  "sp.range.request": "Solicită acest grad prin Euro Agri"
 }

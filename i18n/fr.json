@@ -562,5 +562,9 @@
   "sp.offer": "Demander une offre commerciale",
   "sp.range": "Voir la gamme de produits",
   "sp.range.linkNote": "Les pages produits existantes présentent les options d’approvisionnement plus larges d’Euro Agri. Les qualités indiquées ici définissent le périmètre de coopération avec AL AHRAM.",
-  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)"
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)",
+  "sp.range.erp": "Phosphate naturel — origine Égypte",
+  "sp.range.npk": "NPK granulé — formulations sur demande",
+  "sp.range.up": "Phosphate d’urée",
+  "sp.range.request": "Demander ce grade via Euro Agri"
 }
