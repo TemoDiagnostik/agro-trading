@@ -562,5 +562,19 @@
   "sp.offer": "Demander une offre commerciale",
   "sp.range": "Voir la gamme de produits",
   "sp.range.linkNote": "Les pages produits existantes présentent les options d’approvisionnement plus larges d’Euro Agri. Les qualités indiquées ici définissent le périmètre de coopération avec AL AHRAM.",
-  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)"
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)",
+  "sp.title": "Partenaires d’approvisionnement et d’exportation",
+  "sp.role": "Égypte | Partenaire commercial d’approvisionnement et d’exportation",
+  "sp.main": "Euro Agri Trading travaille avec AL AHRAM FOR TRADE & SHIPPING (AT&S) sur le phosphate naturel égyptien et certains engrais phosphatés. Euro Agri coordonne les demandes des acheteurs et le suivi commercial, tandis qu’AL AHRAM coordonne le sourcing, l’approvisionnement et les opérations d’exportation.",
+  "sp.benefit.title": "Tarifs préférentiels et conditions commerciales via Euro Agri",
+  "sp.benefit.text": "Les clients qui s’approvisionnent via Euro Agri Trading peuvent bénéficier de tarifs préférentiels et de conditions commerciales adaptées grâce à notre coopération avec AL AHRAM. Elles sont convenues pour chaque demande selon le produit, la quantité, la disponibilité, la destination et les conditions de paiement.",
+  "sp.qualifier": "Les spécifications finales, la disponibilité et les conditions commerciales sont confirmées dans l’offre individuelle.",
+  "sp.offer": "Demander une offre commerciale",
+  "sp.range": "Voir la gamme de produits",
+  "sp.range.linkNote": "Les pages produits existantes présentent les options d’approvisionnement plus larges d’Euro Agri. Les produits indiqués ici définissent le périmètre de coopération avec AL AHRAM.",
+  "sp.logo.alt": "Logo AL AHRAM FOR TRADE & SHIPPING (AT&S)",
+  "sp.range.erp": "Phosphate naturel — origine Égypte",
+  "sp.range.npk": "NPK granulé — formulations sur demande",
+  "sp.range.up": "Phosphate d’urée",
+  "sp.range.request": "Demander ce grade via Euro Agri"
 }
