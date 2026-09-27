@@ -552,5 +552,15 @@
   "log.photo.heavy": "Tunga vägtransporter i Europa",
   "log.photo.light": "Lätta transporter och regional leverans",
   "catalogue.photos.generated": "De fem bilderna för produktkategorierna är AI-genererade illustrationer. De visar inte faktiska lager, levererade partier eller företagets anläggningar.",
-  "how.cta": "Begär en offert"
+  "how.cta": "Begär en offert",
+  "sp.title": "Leverans- och exportpartners",
+  "sp.role": "Egypten | Kommersiell leverans- och exportpartner",
+  "sp.main": "Euro Agri Trading samarbetar med AL AHRAM FOR TRADE & SHIPPING (AT&S) kring egyptiskt bergfosfat och utvalda fosfatgödselmedel. Euro Agri samordnar köparförfrågningar och kommersiell uppföljning, medan AL AHRAM samordnar sourcing, leverans och exportarrangemang.",
+  "sp.benefit.title": "Förmånliga priser och kommersiella villkor genom Euro Agri",
+  "sp.benefit.text": "Kunder som köper genom Euro Agri Trading kan dra nytta av förmånliga priser och anpassade kommersiella villkor genom vårt samarbete med AL AHRAM. Dessa avtalas för varje förfrågan utifrån produkt, kvantitet, tillgänglighet, destination och betalningsvillkor.",
+  "sp.qualifier": "Slutliga specifikationer, tillgänglighet och kommersiella villkor bekräftas i det individuella erbjudandet.",
+  "sp.offer": "Begär ett kommersiellt erbjudande",
+  "sp.range": "Visa produktsortiment",
+  "sp.range.linkNote": "De befintliga produktsidorna beskriver Euro Agris bredare sourcingalternativ. Kvaliteterna som listas här definierar samarbetets omfattning med AL AHRAM.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S)-logotyp"
 }
