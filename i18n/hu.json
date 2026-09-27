@@ -562,5 +562,19 @@
   "sp.offer": "Kereskedelmi ajánlat kérése",
   "sp.range": "Termékkínálat megtekintése",
   "sp.range.linkNote": "A meglévő termékoldalak a Euro Agri szélesebb beszerzési lehetőségeit mutatják be. Az itt felsorolt minőségek az AL AHRAM-mal való együttműködés körét határozzák meg.",
-  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logó"
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logó",
+  "sp.title": "Beszerzési és exportpartnerek",
+  "sp.role": "Egyiptom | Kereskedelmi beszerzési és exportpartner",
+  "sp.main": "A Euro Agri Trading az AL AHRAM FOR TRADE & SHIPPING (AT&S) vállalattal működik együtt egyiptomi foszfátkőzet és kiválasztott foszfátműtrágyák terén. A Euro Agri koordinálja a vevői megkereséseket és a kereskedelmi utánkövetést, míg az AL AHRAM a beszerzést, ellátást és exportfolyamatokat koordinálja.",
+  "sp.benefit.title": "Kedvezményes árak és kereskedelmi feltételek a Euro Agri-n keresztül",
+  "sp.benefit.text": "A Euro Agri Tradingon keresztül beszerző ügyfelek az AL AHRAM-mal való együttműködésünk révén kedvezményes árakból és egyedi kereskedelmi feltételekből részesülhetnek. Ezeket minden megkereséshez külön, a termék, mennyiség, elérhetőség, rendeltetési hely és fizetési feltételek alapján állapítjuk meg.",
+  "sp.qualifier": "A végleges specifikációkat, elérhetőséget és kereskedelmi feltételeket az egyedi ajánlat erősíti meg.",
+  "sp.offer": "Kereskedelmi ajánlat kérése",
+  "sp.range": "Termékkör megtekintése",
+  "sp.range.linkNote": "A meglévő termékoldalak a Euro Agri szélesebb beszerzési lehetőségeit mutatják be. Az itt felsorolt termékek az AL AHRAM-mal való együttműködés körét határozzák meg.",
+  "sp.logo.alt": "AL AHRAM FOR TRADE & SHIPPING (AT&S) logó",
+  "sp.range.erp": "Foszfátkőzet — egyiptomi eredet",
+  "sp.range.npk": "Granulált NPK — összetételek kérésre",
+  "sp.range.up": "Karbamid-foszfát",
+  "sp.range.request": "Ennek a minőségnek a kérése a Euro Agri-n keresztül"
 }
