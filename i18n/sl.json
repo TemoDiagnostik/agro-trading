@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Neodvisni pregled (SGS / Intertek / BV)",
   "sup.pill.docs": "Kontrola dokumentacije usklajena z EU",
   "sup.secondary.title": "Kategorije gnojil v naši mreži",
-  "sup.secondary.text": "Vodotopna gnojila, kalcijev nitrat, mikrohranila in izbrane specialne formulacije lahko uskladimo prek uveljavljenih kanalov glede na razpoložljivost in zahteve RFQ.",
-  "sup.secondary.text.specialty": "Naša mreža vključuje kanale za izbrana vodotopna, specialna in mikrohranilna gnojila. Razpoložljivost, specifikacije in dokumentacija pošiljke se potrdijo za vsak kvalificiran RFQ.",
+  "sup.secondary.text": "Fosfatne surovine · Predelani fosfati in sestavljena gnojila · Dušikova gnojila · V vodi topna gnojila (WSF) · Mikrohranila in posebni izdelki · Surovine in dodatki za gnojila. Trenutna razpoložljivost, možnosti porekla in komercialni pogoji se potrdijo za vsak RFQ.",
+  "sup.secondary.text.specialty": "Fosfatne surovine · Predelani fosfati in sestavljena gnojila · Dušikova gnojila · V vodi topna gnojila (WSF) · Mikrohranila in posebni izdelki · Surovine in dodatki za gnojila. Trenutna razpoložljivost, možnosti porekla in komercialni pogoji se potrdijo za vsak RFQ.",
   "sup.origin.title": "Pokritost več izvorov",
   "sup.origin.text": "Strukturirana dobava usklajena z uvoznimi tokovi EU. Izvori se potrdijo za vsako transakcijo glede na razred, alokacijo in pripravljenost pošiljke.",
   "sup.origin.eu.title": "Evropa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Vrste dokumentov",
   "nav.docs.factory": "Pregled tovarn in izdelkov",
   "nav.docs.origins": "Izvor fosfatov",
-  "nav.docs.guidance": "Tehnično in komercialno svetovanje"
+  "nav.docs.guidance": "Tehnično in komercialno svetovanje",
+  "cp.nav": "Poslovna partnerstva",
+  "cp.hero.cta": "Prijavite se kot poslovni partner",
+  "footer.facebook": "Facebook"
 }

@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Inspección independiente (SGS / Intertek / BV)",
   "sup.pill.docs": "Control documental alineado con la UE",
   "sup.secondary.title": "Categorías de fertilizantes de nuestra red",
-  "sup.secondary.text": "Los fertilizantes hidrosolubles, el nitrato de calcio, los micronutrientes y determinadas formulaciones especiales pueden coordinarse a través de canales consolidados, sujeto a la disponibilidad actual y a los requisitos de la RFQ.",
-  "sup.secondary.text.specialty": "Nuestra red incluye canales de suministro para determinados fertilizantes hidrosolubles, especiales y micronutrientes. Para cada RFQ cualificada se confirman la disponibilidad actual, las especificaciones y la documentación del envío.",
+  "sup.secondary.text": "Materias fosfatadas · Fosfatos procesados y fertilizantes compuestos · Fertilizantes nitrogenados · Fertilizantes solubles en agua (WSF) · Micronutrientes y productos especializados · Materias primas y aditivos para fertilizantes. La disponibilidad actual, las opciones de origen y las condiciones comerciales se confirman para cada RFQ.",
+  "sup.secondary.text.specialty": "Materias fosfatadas · Fosfatos procesados y fertilizantes compuestos · Fertilizantes nitrogenados · Fertilizantes solubles en agua (WSF) · Micronutrientes y productos especializados · Materias primas y aditivos para fertilizantes. La disponibilidad actual, las opciones de origen y las condiciones comerciales se confirman para cada RFQ.",
   "sup.origin.title": "Cobertura multiorigen",
   "sup.origin.text": "Abastecimiento estructurado alineado con los flujos de importación de la UE. Los orígenes se confirman por transacción según grado, asignación y preparación del envío.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Tipos de documentos",
   "nav.docs.factory": "Evaluación de fábricas y productos",
   "nav.docs.origins": "Origen de los fosfatos",
-  "nav.docs.guidance": "Orientación técnica y comercial"
+  "nav.docs.guidance": "Orientación técnica y comercial",
+  "cp.nav": "Alianzas comerciales",
+  "cp.hero.cta": "Solicitar ser socio comercial",
+  "footer.facebook": "Facebook"
 }

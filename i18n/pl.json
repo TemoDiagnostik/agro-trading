@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Niezależna inspekcja (SGS / Intertek / BV)",
   "sup.pill.docs": "Kontrola dokumentacji zgodna z UE",
   "sup.secondary.title": "Kategorie nawozów w naszej sieci",
-  "sup.secondary.text": "Nawozy rozpuszczalne w wodzie, saletra wapniowa, mikroelementy i wybrane formulacje specjalistyczne mogą być koordynowane przez ugruntowane kanały, zależnie od bieżącej dostępności i wymagań RFQ.",
-  "sup.secondary.text.specialty": "Nasza sieć obejmuje kanały dostaw wybranych nawozów rozpuszczalnych w wodzie, specjalistycznych i mikroelementowych. Bieżąca dostępność, specyfikacje i dokumentacja wysyłkowa są potwierdzane dla każdego kwalifikowanego RFQ.",
+  "sup.secondary.text": "Surowce fosforanowe · Przetworzone fosforany i nawozy wieloskładnikowe · Nawozy azotowe · Nawozy rozpuszczalne w wodzie (WSF) · Mikroelementy i produkty specjalistyczne · Surowce i dodatki do nawozów. Bieżąca dostępność, opcje pochodzenia i warunki handlowe są potwierdzane dla każdego RFQ.",
+  "sup.secondary.text.specialty": "Surowce fosforanowe · Przetworzone fosforany i nawozy wieloskładnikowe · Nawozy azotowe · Nawozy rozpuszczalne w wodzie (WSF) · Mikroelementy i produkty specjalistyczne · Surowce i dodatki do nawozów. Bieżąca dostępność, opcje pochodzenia i warunki handlowe są potwierdzane dla każdego RFQ.",
   "sup.origin.title": "Zasięg wielu źródeł pochodzenia",
   "sup.origin.text": "Ustrukturyzowane pozyskiwanie zgodne z procesami importu do UE. Pochodzenie jest potwierdzane dla każdej transakcji na podstawie klasy, alokacji i gotowości dostawy.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Rodzaje dokumentów",
   "nav.docs.factory": "Ocena zakładów i produktów",
   "nav.docs.origins": "Pochodzenie fosforanów",
-  "nav.docs.guidance": "Doradztwo techniczne i handlowe"
+  "nav.docs.guidance": "Doradztwo techniczne i handlowe",
+  "cp.nav": "Partnerstwa handlowe",
+  "cp.hero.cta": "Zgłoś się jako partner handlowy",
+  "footer.facebook": "Facebook"
 }
