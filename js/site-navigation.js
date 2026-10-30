@@ -9,6 +9,17 @@
     trigger.setAttribute('aria-expanded', String(open));
     panel.hidden = !open;
     group.classList.toggle('is-open', open);
+    if (open && window.matchMedia('(min-width: 1101px)').matches) {
+      const container = group.closest('.container.nav');
+      const bounds = container.getBoundingClientRect();
+      const anchor = trigger.getBoundingClientRect();
+      const rtl = getComputedStyle(trigger).direction === 'rtl';
+      const desired = rtl ? anchor.right - bounds.left - panel.offsetWidth : anchor.left - bounds.left;
+      const left = Math.max(0, Math.min(desired, bounds.width - panel.offsetWidth));
+      panel.style.left = `${left}px`;
+    } else {
+      panel.style.removeProperty('left');
+    }
     if (focusTrigger) trigger.focus();
   }
 
@@ -57,4 +68,5 @@
   }, true);
   window.addEventListener('pageshow', () => closeAll());
   window.addEventListener('hashchange', () => closeAll());
+  window.addEventListener('resize', () => closeAll());
 })();

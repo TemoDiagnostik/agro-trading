@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Inspecție independentă (SGS / Intertek / BV)",
   "sup.pill.docs": "Control documentar aliniat UE",
   "sup.secondary.title": "Categorii de îngrășăminte din rețeaua noastră",
-  "sup.secondary.text": "Îngrășămintele hidrosolubile, azotatul de calciu, micronutrienții și anumite formule speciale pot fi coordonate prin canale consacrate, în funcție de disponibilitatea curentă și cerințele RFQ.",
-  "sup.secondary.text.specialty": "Rețeaua noastră include canale pentru îngrășăminte hidrosolubile, speciale și cu micronutrienți selectate. Disponibilitatea, specificațiile și documentația lotului sunt confirmate pentru fiecare RFQ calificat.",
+  "sup.secondary.text": "Materii fosfatice · Fosfați procesați și îngrășăminte complexe · Îngrășăminte azotate · Îngrășăminte solubile în apă (WSF) · Micronutrienți și produse speciale · Materii prime și aditivi pentru îngrășăminte. Disponibilitatea curentă, opțiunile de origine și condițiile comerciale se confirmă pentru fiecare RFQ.",
+  "sup.secondary.text.specialty": "Materii fosfatice · Fosfați procesați și îngrășăminte complexe · Îngrășăminte azotate · Îngrășăminte solubile în apă (WSF) · Micronutrienți și produse speciale · Materii prime și aditivi pentru îngrășăminte. Disponibilitatea curentă, opțiunile de origine și condițiile comerciale se confirmă pentru fiecare RFQ.",
   "sup.origin.title": "Acoperire multi-origine",
   "sup.origin.text": "Aprovizionare structurată aliniată fluxurilor de import UE. Originile sunt confirmate per tranzacție în funcție de grad, alocare și disponibilitatea transportului.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Tipuri de documente",
   "nav.docs.factory": "Evaluarea fabricilor și produselor",
   "nav.docs.origins": "Originea fosfaților",
-  "nav.docs.guidance": "Îndrumare tehnică și comercială"
+  "nav.docs.guidance": "Îndrumare tehnică și comercială",
+  "cp.nav": "Parteneriate comerciale",
+  "cp.hero.cta": "Aplicați ca partener comercial",
+  "footer.facebook": "Facebook"
 }

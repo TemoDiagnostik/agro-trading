@@ -125,24 +125,24 @@ body.catalogue-home header .container.nav.nav-all-visible .navbar-nav a.active {
   body header .container.nav.nav-all-visible .navbar-nav a { font-size: 15px !important; padding: 11px 10px !important; text-align: start; white-space: normal; }
 }
 
-/* Click disclosures share the header's width and scroll within short windows. */
+/* Compact disclosures align with their trigger and stay inside the header. */
 body header .container.nav.nav-all-visible .nav-dropdown { position: static; }
 body header .container.nav.nav-all-visible .nav-dropdown-trigger::before {
   content: '\25BE'; display: inline-block; margin-inline-end: 5px; font-size: .8em;
 }
 body header .container.nav.nav-all-visible .is-open > .nav-dropdown-trigger::before { transform: rotate(180deg); }
 body header .container.nav.nav-all-visible .nav-dropdown-panel {
-  position: absolute; top: 100%; right: 0; left: auto; z-index: 120;
-  width: min(980px, calc(100vw - 36px)); max-height: calc(100dvh - 112px);
+  position: absolute; top: 100%; right: auto; left: 0; z-index: 120;
+  width: min(320px, calc(100vw - 36px)); max-height: calc(100dvh - 112px);
   box-sizing: border-box; overflow: auto; overscroll-behavior: contain;
   background: #fffdf7; border: 1px solid #d7c59c; border-top: 3px solid #b58c31;
   border-radius: 0 0 6px 6px; box-shadow: 0 14px 30px #0b3b2c26;
-  padding: 18px 22px; text-align: start;
+  padding: 12px 14px; text-align: start;
 }
 body header .container.nav.nav-all-visible .nav-dropdown-panel[hidden] { display: none !important; }
-body header .container.nav.nav-all-visible .nav-documents-panel { width: min(430px, calc(100vw - 36px)); }
+body header .container.nav.nav-all-visible .nav-products-panel { width: min(620px, calc(100vw - 36px)); }
 body header .container.nav.nav-all-visible .nav-product-groups {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px;
 }
 body header .container.nav.nav-all-visible .nav-product-group { min-width: 0; margin: 0; padding: 0; }
 body header .container.nav.nav-all-visible .nav-dropdown-panel ul {
@@ -166,6 +166,8 @@ body header .container.nav.nav-all-visible .nav-dropdown-panel .nav-overview-lin
   font-weight: 700; margin-bottom: 12px; padding-bottom: 12px !important; border-bottom: 1px solid #d7c59c;
 }
 body header .container.nav.nav-all-visible .nav-dropdown-panel small { font-size: 11px; color: #6f5826; flex-shrink: 0; }
+body header .container.nav.nav-all-visible .nav-products-panel a { font-size: 12px !important; padding: 6px 5px !important; }
+body header .container.nav.nav-all-visible .nav-products-panel small { font-size: 10px; }
 @media (max-width: 1100px) {
   body header .container.nav.nav-all-visible .nav-dropdown-panel {
     position: static; width: 100%; max-height: none; box-shadow: none;
@@ -173,4 +175,5 @@ body header .container.nav.nav-all-visible .nav-dropdown-panel small { font-size
   }
   body header .container.nav.nav-all-visible .nav-product-groups { grid-template-columns: 1fr; gap: 18px; }
   body header .container.nav.nav-all-visible .nav-dropdown-panel a { padding: 10px 6px !important; font-size: 14px !important; }
+  body header .container.nav.nav-all-visible .nav-products-panel a { font-size: 13px !important; }
 }

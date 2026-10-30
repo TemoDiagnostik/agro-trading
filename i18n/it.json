@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Ispezione indipendente (SGS / Intertek / BV)",
   "sup.pill.docs": "Controllo documentale allineato UE",
   "sup.secondary.title": "Categorie di fertilizzanti nella nostra rete",
-  "sup.secondary.text": "Fertilizzanti idrosolubili, nitrato di calcio, micronutrienti e formulazioni speciali selezionate possono essere coordinati tramite canali consolidati, in base alla disponibilità attuale e ai requisiti della RFQ.",
-  "sup.secondary.text.specialty": "La nostra rete comprende canali per fertilizzanti idrosolubili, speciali e micronutrienti selezionati. Disponibilità attuale, specifiche e documentazione di spedizione sono confermate per ogni RFQ qualificata.",
+  "sup.secondary.text": "Materie fosfatiche · Fosfati lavorati e concimi composti · Concimi azotati · Fertilizzanti idrosolubili (WSF) · Microelementi e prodotti speciali · Materie prime e additivi per fertilizzanti. Disponibilità attuale, opzioni di origine e condizioni commerciali sono confermate per ogni RFQ.",
+  "sup.secondary.text.specialty": "Materie fosfatiche · Fosfati lavorati e concimi composti · Concimi azotati · Fertilizzanti idrosolubili (WSF) · Microelementi e prodotti speciali · Materie prime e additivi per fertilizzanti. Disponibilità attuale, opzioni di origine e condizioni commerciali sono confermate per ogni RFQ.",
   "sup.origin.title": "Copertura multi-origine",
   "sup.origin.text": "Approvvigionamento strutturato allineato ai flussi di import UE. Le origini sono confermate per transazione in base a grado, allocazione e prontezza della spedizione.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Tipi di documenti",
   "nav.docs.factory": "Valutazione di stabilimenti e prodotti",
   "nav.docs.origins": "Origine dei fosfati",
-  "nav.docs.guidance": "Consulenza tecnica e commerciale"
+  "nav.docs.guidance": "Consulenza tecnica e commerciale",
+  "cp.nav": "Partnership commerciali",
+  "cp.hero.cta": "Candidati come partner commerciale",
+  "footer.facebook": "Facebook"
 }

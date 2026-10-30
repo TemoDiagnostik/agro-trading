@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Unabhängige Inspektion (SGS / Intertek / BV)",
   "sup.pill.docs": "EU-konforme Dokumentationskontrolle",
   "sup.secondary.title": "Düngemittel-Lieferkategorien in unserem Netzwerk",
-  "sup.secondary.text": "Wasserlösliche Dünger, Calciumnitrat, Mikronährstoffe und ausgewählte Spezialformulierungen können über etablierte Lieferkanäle koordiniert werden, vorbehaltlich aktueller Verfügbarkeit und RFQ-Anforderungen.",
-  "sup.secondary.text.specialty": "Unser Netzwerk umfasst Lieferkanäle für ausgewählte wasserlösliche Dünger, Spezialdünger und Mikronährstoffe. Aktuelle Verfügbarkeit, Produktspezifikationen und Versanddokumentation werden für jede qualifizierte RFQ bestätigt.",
+  "sup.secondary.text": "Phosphatprodukte · Aufbereitete Phosphate & Mehrnährstoffdünger · Stickstoffdünger · Wasserlösliche Düngemittel (WSF) · Spurennährstoffe & Spezialprodukte · Rohstoffe und Düngemittelzusätze. Aktuelle Verfügbarkeit, Ursprungsoptionen und Handelsbedingungen werden je RFQ bestätigt.",
+  "sup.secondary.text.specialty": "Phosphatprodukte · Aufbereitete Phosphate & Mehrnährstoffdünger · Stickstoffdünger · Wasserlösliche Düngemittel (WSF) · Spurennährstoffe & Spezialprodukte · Rohstoffe und Düngemittelzusätze. Aktuelle Verfügbarkeit, Ursprungsoptionen und Handelsbedingungen werden je RFQ bestätigt.",
   "sup.origin.title": "Multi-Origin-Abdeckung",
   "sup.origin.text": "Strukturierte Beschaffung im Einklang mit EU-Importprozessen. Ursprünge werden pro Transaktion anhand von Qualität, Allokation und Versandbereitschaft bestätigt.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Dokumentarten",
   "nav.docs.factory": "Prüfung von Werken und Produkten",
   "nav.docs.origins": "Phosphat-Herkunftsländer",
-  "nav.docs.guidance": "Technische und kaufmännische Beratung"
+  "nav.docs.guidance": "Technische und kaufmännische Beratung",
+  "cp.nav": "Handelspartnerschaften",
+  "cp.hero.cta": "Als Handelspartner bewerben",
+  "footer.facebook": "Facebook"
 }

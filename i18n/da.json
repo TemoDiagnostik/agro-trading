@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Uafhængig inspektion (SGS / Intertek / BV)",
   "sup.pill.docs": "EU-tilpasset dokumentationskontrol",
   "sup.secondary.title": "Gødningskategorier i vores netværk",
-  "sup.secondary.text": "Vandopløselige gødninger, calciumnitrat, mikronæringsstoffer og udvalgte specialformuleringer kan koordineres gennem etablerede kanaler afhængigt af tilgængelighed og RFQ-krav.",
-  "sup.secondary.text.specialty": "Vores netværk omfatter kanaler for udvalgte vandopløselige gødninger, specialgødninger og mikronæringsstoffer. Tilgængelighed, specifikationer og forsendelsesdokumentation bekræftes for hver kvalificeret RFQ.",
+  "sup.secondary.text": "Fosfatråvarer · Forarbejdede fosfater og sammensat gødning · Kvælstofgødning · Vandopløselig gødning (WSF) · Mikronæringsstoffer og specialprodukter · Råvarer og gødningstilsætningsstoffer. Aktuel tilgængelighed, oprindelsesmuligheder og handelsvilkår bekræftes pr. RFQ.",
+  "sup.secondary.text.specialty": "Fosfatråvarer · Forarbejdede fosfater og sammensat gødning · Kvælstofgødning · Vandopløselig gødning (WSF) · Mikronæringsstoffer og specialprodukter · Råvarer og gødningstilsætningsstoffer. Aktuel tilgængelighed, oprindelsesmuligheder og handelsvilkår bekræftes pr. RFQ.",
   "sup.origin.title": "Dækning på tværs af flere oprindelser",
   "sup.origin.text": "Struktureret sourcing tilpasset EU’s importworkflows. Oprindelser bekræftes pr. transaktion baseret på kvalitet, allokering og forsendelsesparathed.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Dokumenttyper",
   "nav.docs.factory": "Vurdering af fabrikker og produkter",
   "nav.docs.origins": "Fosfaters oprindelse",
-  "nav.docs.guidance": "Teknisk og kommerciel vejledning"
+  "nav.docs.guidance": "Teknisk og kommerciel vejledning",
+  "cp.nav": "Kommercielle partnerskaber",
+  "cp.hero.cta": "Ansøg som kommerciel partner",
+  "footer.facebook": "Facebook"
 }

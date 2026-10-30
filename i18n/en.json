@@ -298,9 +298,9 @@
   "sup.pill.coa": "Product & Shipment Evidence",
   "sup.pill.inspect": "Independent Inspection When Required",
   "sup.pill.docs": "Documentation & Transaction Alignment",
-  "sup.secondary.title": "Fertilizer Supply Categories Across Our Network",
-  "sup.secondary.text": "Water-soluble fertilizers, calcium nitrate, micronutrients and selected specialty formulations may be coordinated through established supply channels, subject to current availability and RFQ requirements.",
-  "sup.secondary.text.specialty": "Our network includes supply channels for selected water-soluble, specialty and micronutrient fertilizers. Current availability, product specifications and shipment documentation are confirmed for each qualified RFQ.",
+  "sup.secondary.title": "Fertilizer, Raw Material & Additive Sourcing",
+  "sup.secondary.text": "Our sourcing range covers phosphate materials and phosphatic, nitrogen, granular and compound fertilizers, alongside water-soluble fertilizers, micronutrients, raw materials and fertilizer additives. Availability, specifications and shipment documents are confirmed for each enquiry.",
+  "sup.secondary.text.specialty": "Our sourcing range covers phosphate materials and phosphatic, nitrogen, granular and compound fertilizers, alongside water-soluble fertilizers, micronutrients, raw materials and fertilizer additives. Availability, specifications and shipment documents are confirmed for each enquiry.",
   "sup.origin.title": "Multi-Origin Coverage",
   "sup.origin.text": "Supply origins are evaluated per transaction based on product, current availability, quantity, specification, logistics, commercial feasibility and shipment readiness.",
   "sup.origin.eu.title": "Europe",
@@ -615,5 +615,8 @@
   "docs.product.text": "The specification sets the agreed product limits and test methods. The certificate of analysis records results for an identified sample or shipment batch.",
   "docs.reference.title": "Public product references",
   "docs.reference.text": "Use the public catalogue to identify the product range. Final specifications, certificates and shipment records are confirmed for the selected supply source and transaction.",
-  "docs.request.text": "Identify the product, origin, destination and documents required. We will review the request and confirm the available records and any additional inspection or testing scope."
+  "docs.request.text": "Identify the product, origin, destination and documents required. We will review the request and confirm the available records and any additional inspection or testing scope.",
+  "cp.nav": "Commercial Partnerships",
+  "cp.hero.cta": "Apply as a Commercial Partner",
+  "footer.facebook": "Facebook"
 }

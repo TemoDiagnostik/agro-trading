@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Nezavisna inspekcija (SGS / Intertek / BV)",
   "sup.pill.docs": "Kontrola dokumentacije usklađena sa EU",
   "sup.secondary.title": "Kategorije đubriva u našoj mreži",
-  "sup.secondary.text": "Vodorastvorljiva đubriva, kalcijum-nitrat, mikrohraniva i odabrane specijalne formulacije mogu se koordinirati preko uspostavljenih kanala, u zavisnosti od dostupnosti i zahteva RFQ-a.",
-  "sup.secondary.text.specialty": "Naša mreža obuhvata kanale za odabrana vodorastvorljiva, specijalna i mikrohraniva đubriva. Dostupnost, specifikacije i dokumentacija pošiljke potvrđuju se za svaki kvalifikovani RFQ.",
+  "sup.secondary.text": "Fosfatne sirovine · Prerađeni fosfati i složena đubriva · Azotna đubriva · Vodotopiva đubriva (WSF) · Mikroelementi i specijalni proizvodi · Сировине и додаци за ђубрива. Trenutna dostupnost, opcije porekla i komercijalni uslovi potvrđuju se za svaki RFQ.",
+  "sup.secondary.text.specialty": "Fosfatne sirovine · Prerađeni fosfati i složena đubriva · Azotna đubriva · Vodotopiva đubriva (WSF) · Mikroelementi i specijalni proizvodi · Сировине и додаци за ђубрива. Trenutna dostupnost, opcije porekla i komercijalni uslovi potvrđuju se za svaki RFQ.",
   "sup.origin.title": "Pokrivenost više porekla",
   "sup.origin.text": "Strukturisana nabavka usklađena sa uvoznim tokovima EU. Porekla se potvrđuju po transakciji na osnovu gradacije, alokacije i spremnosti pošiljke.",
   "sup.origin.eu.title": "Evropa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Vrste dokumenata",
   "nav.docs.factory": "Procena fabrika i proizvoda",
   "nav.docs.origins": "Poreklo fosfata",
-  "nav.docs.guidance": "Tehničko i komercijalno savetovanje"
+  "nav.docs.guidance": "Tehničko i komercijalno savetovanje",
+  "cp.nav": "Komercijalna partnerstva",
+  "cp.hero.cta": "Prijavite se kao komercijalni partner",
+  "footer.facebook": "Facebook"
 }

@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Riippumaton tarkastus (SGS / Intertek / BV)",
   "sup.pill.docs": "EU-linjattu dokumenttihallinta",
   "sup.secondary.title": "Verkostomme lannoiteluokat",
-  "sup.secondary.text": "Vesiliukoisia lannoitteita, kalsiumnitraattia, hivenravinteita ja valikoituja erikoisvalmisteita voidaan koordinoida vakiintuneiden kanavien kautta saatavuuden ja RFQ-vaatimusten mukaan.",
-  "sup.secondary.text.specialty": "Verkostomme kattaa valikoitujen vesiliukoisten, erikois- ja hivenravinnelannoitteiden toimituskanavia. Saatavuus, erittelyt ja lähetysasiakirjat vahvistetaan jokaiselle hyväksytylle RFQ:lle.",
+  "sup.secondary.text": "Fosfaattiraaka-aineet · Jalostetut fosfaatit ja moniravinnelannoitteet · Typpilannoitteet · Vesiliukoiset lannoitteet (WSF) · Hivenravinteet ja erikoistuotteet · Raaka-aineet ja lannoitteiden lisäaineet. Ajantasainen saatavuus, alkuperävaihtoehdot ja kaupalliset ehdot vahvistetaan RFQ-kohtaisesti.",
+  "sup.secondary.text.specialty": "Fosfaattiraaka-aineet · Jalostetut fosfaatit ja moniravinnelannoitteet · Typpilannoitteet · Vesiliukoiset lannoitteet (WSF) · Hivenravinteet ja erikoistuotteet · Raaka-aineet ja lannoitteiden lisäaineet. Ajantasainen saatavuus, alkuperävaihtoehdot ja kaupalliset ehdot vahvistetaan RFQ-kohtaisesti.",
   "sup.origin.title": "Monialkuperäinen kattavuus",
   "sup.origin.text": "Strukturoitu hankinta EU-tuontiprosessien mukaisesti. Alkuperät vahvistetaan transaktiokohtaisesti laadun, allokaation ja lähetysvalmiuden perusteella.",
   "sup.origin.eu.title": "Eurooppa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Asiakirjatyypit",
   "nav.docs.factory": "Tehtaiden ja tuotteiden arviointi",
   "nav.docs.origins": "Fosfaattien alkuperä",
-  "nav.docs.guidance": "Tekninen ja kaupallinen neuvonta"
+  "nav.docs.guidance": "Tekninen ja kaupallinen neuvonta",
+  "cp.nav": "Kaupalliset kumppanuudet",
+  "cp.hero.cta": "Hae kaupalliseksi kumppaniksi",
+  "footer.facebook": "Facebook"
 }

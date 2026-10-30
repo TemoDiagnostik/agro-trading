@@ -1,4 +1,4 @@
-"""Build the shared product and documentation disclosures from the public range."""
+"""Build all shared navigation disclosures from existing page sections."""
 from pathlib import Path
 import html
 import json
@@ -26,14 +26,29 @@ def documents_panel():
                ('factory-review', 'nav.docs.factory'), ('phosphate-origins', 'nav.docs.origins'), ('technical-guidance', 'nav.docs.guidance')]
     return '<ul class="nav-document-list">'+''.join(f'<li><a href="specifications.html{("#"+target) if target else ""}">{label(key)}</a></li>' for target,key in targets)+'</ul>'
 
+def section_panel(targets):
+    return '<ul class="nav-section-list">'+''.join(f'<li><a href="{html.escape(target, quote=True)}">{label(key)}</a></li>' for target,key in targets)+'</ul>'
+
+SECTIONS = [
+    ('nav.home', 'home', [('index.html#home','nav.home'), ('index.html#commercial-paths','home.routes.title'), ('index.html#farm-procurement','farm.title')]),
+    ('nav.suppliers', 'suppliers', [('supplier-network.html#supplier-home','nav.suppliers'), ('supplier-network.html#supply-range','sup.secondary.title'), ('supplier-network.html#supply-origins','sup.origin.title'), ('supplier-network.html#supplier-review','sup.verify.title'), ('supplier-network.html#product-registration','sup.register.title')]),
+    ('nav.logistics', 'logistics', [('index.html#logistics','log.title'), ('index.html#road-freight','log.road.h'), ('index.html#sea-freight','log.maritime.h'), ('index.html#delivery-coordination','log.delivery.h')]),
+    ('nav.how', 'how', [('index.html#how-we-work','how.title'), ('index.html#trade-checks','how.step3'), ('index.html#payment-note','payment.title')]),
+    ('nav.about', 'about', [('index.html#about','about.title'), ('index.html#company-profile','catalogue.publications.profile'), ('index.html#product-catalogue','catalogue.publications.catalogue')]),
+    ('cp.nav', 'partnerships', [('commercial-partnerships.html','cp.nav'), ('commercial-partnerships.html#partnership-process','how.title'), ('commercial-partnerships.html#partnership-terms','sup.trade.card1.title'), ('commercial-partnerships.html#apply','cp.hero.cta')]),
+    ('nav.contact', 'contact', [('index.html#contact','contact.details'), ('index.html#contactFormBox','rfq.title'), ('index.html#farm-procurement','farm.title')]),
+]
+
 def build():
     count = 0
     for path in ROOT.glob('*.html'):
         source = path.read_text()
         if 'navbar-nav' not in source: continue
         # Rebuilding is safe: remove only the generated panel following its trigger.
-        source = re.sub(r'<!-- shared-dropdown:(products|documents):start -->[\s\S]*?<!-- shared-dropdown:\1:end -->', lambda m: '', source)
-        for key,kind,panel in [('nav.products','products',product_panel()),('nav.coa','documents',documents_panel())]:
+        source = re.sub(r'<!-- shared-dropdown:([a-z-]+):start -->[\s\S]*?<!-- shared-dropdown:\1:end -->', lambda m: '', source)
+        menus = [('nav.products','products',product_panel()),('nav.coa','documents',documents_panel())]
+        menus += [(key,kind,section_panel(targets)) for key,kind,targets in SECTIONS]
+        for key,kind,panel in menus:
             pattern = r'<li(?:\s[^>]*)?>\s*(<a\b[^>]*data-i18n="'+re.escape(key)+r'"[^>]*>[\s\S]*?</a>)\s*</li>'
             def replace(match):
                 trigger=match[1]
@@ -46,9 +61,11 @@ def build():
             source,changed=re.subn(pattern,replace,source,count=1)
             if changed != 1: raise ValueError(f'Missing {key} trigger in {path.name}')
         if 'js/site-navigation.js' not in source:
-            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261030.2" defer></script>\n</body>')
+            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261030.3" defer></script>\n</body>')
+        else:
+            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261030.3',source)
         path.write_text(source)
         count+=1
-    print(f'Built product/document menus on {count} pages ({len(PRODUCTS)} products)')
+    print(f'Built nine section menus on {count} pages ({len(PRODUCTS)} products)')
 
 if __name__ == '__main__': build()

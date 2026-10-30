@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Inspeção Independente (SGS / Intertek / BV)",
   "sup.pill.docs": "Controlo de documentação alinhado com a UE",
   "sup.secondary.title": "Categorias de fertilizantes na nossa rede",
-  "sup.secondary.text": "Fertilizantes hidrossolúveis, nitrato de cálcio, micronutrientes e formulações especiais selecionadas podem ser coordenados através de canais estabelecidos, sujeitos à disponibilidade e aos requisitos do RFQ.",
-  "sup.secondary.text.specialty": "A nossa rede inclui canais para fertilizantes hidrossolúveis, especiais e com micronutrientes selecionados. A disponibilidade, as especificações e a documentação da remessa são confirmadas para cada RFQ qualificado.",
+  "sup.secondary.text": "Matérias fosfatadas · Fosfatos processados e fertilizantes compostos · Fertilizantes azotados · Fertilizantes Solúveis em Água (WSF) · Micronutrientes e produtos especializados · Matérias-primas e aditivos para fertilizantes. A disponibilidade atual, as opções de origem e as condições comerciais são confirmadas para cada RFQ.",
+  "sup.secondary.text.specialty": "Matérias fosfatadas · Fosfatos processados e fertilizantes compostos · Fertilizantes azotados · Fertilizantes Solúveis em Água (WSF) · Micronutrientes e produtos especializados · Matérias-primas e aditivos para fertilizantes. A disponibilidade atual, as opções de origem e as condições comerciais são confirmadas para cada RFQ.",
   "sup.origin.title": "Cobertura Multi-Origem",
   "sup.origin.text": "Aquisição estruturada alinhada com os fluxos de importação da UE. As origens são confirmadas por transação com base no teor, alocação e prontidão do embarque.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Tipos de documentos",
   "nav.docs.factory": "Avaliação de fábricas e produtos",
   "nav.docs.origins": "Origem dos fosfatos",
-  "nav.docs.guidance": "Orientação técnica e comercial"
+  "nav.docs.guidance": "Orientação técnica e comercial",
+  "cp.nav": "Parcerias comerciais",
+  "cp.hero.cta": "Candidate-se como parceiro comercial",
+  "footer.facebook": "Facebook"
 }

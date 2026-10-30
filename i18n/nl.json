@@ -296,8 +296,8 @@
   "sup.pill.inspect": "Onafhankelijke inspectie (SGS / Intertek / BV)",
   "sup.pill.docs": "EU-afgestemde documentcontrole",
   "sup.secondary.title": "Categorieën meststoffen binnen ons netwerk",
-  "sup.secondary.text": "Wateroplosbare meststoffen, calciumnitraat, micronutriënten en geselecteerde speciale formuleringen kunnen via gevestigde kanalen worden gecoördineerd, afhankelijk van actuele beschikbaarheid en RFQ-vereisten.",
-  "sup.secondary.text.specialty": "Ons netwerk omvat kanalen voor geselecteerde wateroplosbare, speciale en micronutriëntenmeststoffen. Actuele beschikbaarheid, productspecificaties en verzenddocumentatie worden voor elke gekwalificeerde RFQ bevestigd.",
+  "sup.secondary.text": "Fosfaatgrondstoffen · Verwerkte fosfaten en samengestelde meststoffen · Stikstofmeststoffen · Wateroplosbare meststoffen (WSF) · Micronutriënten en speciale producten · Grondstoffen en meststofadditieven. Actuele beschikbaarheid, oorsprongsopties en handelsvoorwaarden worden per RFQ bevestigd.",
+  "sup.secondary.text.specialty": "Fosfaatgrondstoffen · Verwerkte fosfaten en samengestelde meststoffen · Stikstofmeststoffen · Wateroplosbare meststoffen (WSF) · Micronutriënten en speciale producten · Grondstoffen en meststofadditieven. Actuele beschikbaarheid, oorsprongsopties en handelsvoorwaarden worden per RFQ bevestigd.",
   "sup.origin.title": "Dekking van meerdere herkomsten",
   "sup.origin.text": "Gestructureerde sourcing afgestemd op EU-importworkflows. Herkomsten worden per transactie bevestigd op basis van graad, allocatie en zendinggereedheid.",
   "sup.origin.eu.title": "Europa",
@@ -571,5 +571,8 @@
   "nav.docs.types": "Documenttypen",
   "nav.docs.factory": "Beoordeling van fabrieken en producten",
   "nav.docs.origins": "Herkomst van fosfaten",
-  "nav.docs.guidance": "Technisch en commercieel advies"
+  "nav.docs.guidance": "Technisch en commercieel advies",
+  "cp.nav": "Commerciële partnerschappen",
+  "cp.hero.cta": "Meld u aan als commerciële partner",
+  "footer.facebook": "Facebook"
 }
