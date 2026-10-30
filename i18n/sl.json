@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfatne surovine · Predelani fosfati in sestavljena gnojila · Dušikova gnojila · V vodi topna gnojila (WSF) · Mikrohranila in posebni izdelki · Surovine in dodatki za gnojila. Trenutna razpoložljivost, možnosti porekla in komercialni pogoji se potrdijo za vsak RFQ.",
   "sup.origin.title": "Pokritost več izvorov",
   "sup.origin.text": "Strukturirana dobava usklajena z uvoznimi tokovi EU. Izvori se potrdijo za vsako transakcijo glede na razred, alokacijo in pripravljenost pošiljke.",
-  "sup.origin.eu.title": "Evropa",
-  "sup.origin.eu.text": "Proizvajalci in distributerji usklajeni z EU.",
-  "sup.origin.na.title": "Severna Afrika",
-  "sup.origin.na.text": "Dobava fosfatne kamnine in mineralov z dokumentacijo, pripravljeno za izvoz.",
-  "sup.origin.me.title": "Bližnji vzhod",
-  "sup.origin.me.text": "Partnerji za dobavo gnojil in mineralov.",
-  "sup.origin.asia.title": "Azija",
-  "sup.origin.asia.text": "Proizvodna mreža za v vodi topna in specialna gnojila.",
   "sup.verify.title": "Postopno preverjanje dobaviteljev in transakcij",
   "sup.verify.text": "Obseg preverjanja je sorazmeren fazi transakcije: najprej se oceni komercialna izvedljivost, nato pa se po potrebi poglobijo preverjanja nasprotne stranke in pošiljke.",
   "sup.verify.step1.title": "Verifikacija subjekta in izvozne sposobnosti",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Tehnično in komercialno svetovanje",
   "cp.nav": "Poslovna partnerstva",
   "cp.hero.cta": "Prijavite se kot poslovni partner",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Kitajska",
+  "sup.country.egypt": "Egipt",
+  "sup.country.morocco": "Maroko",
+  "sup.country.jordan": "Jordanija",
+  "sup.country.turkey": "Turčija"
 }

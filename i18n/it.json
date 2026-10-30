@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Materie fosfatiche · Fosfati lavorati e concimi composti · Concimi azotati · Fertilizzanti idrosolubili (WSF) · Microelementi e prodotti speciali · Materie prime e additivi per fertilizzanti. Disponibilità attuale, opzioni di origine e condizioni commerciali sono confermate per ogni RFQ.",
   "sup.origin.title": "Copertura multi-origine",
   "sup.origin.text": "Approvvigionamento strutturato allineato ai flussi di import UE. Le origini sono confermate per transazione in base a grado, allocazione e prontezza della spedizione.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "Produttori e distributori allineati UE.",
-  "sup.origin.na.title": "Nord Africa",
-  "sup.origin.na.text": "Fornitura di roccia fosfatica e minerali con documentazione pronta per l’export.",
-  "sup.origin.me.title": "Medio Oriente",
-  "sup.origin.me.text": "Partner di approvvigionamento per fertilizzanti e minerali.",
-  "sup.origin.asia.title": "Asia",
-  "sup.origin.asia.text": "Rete di produzione di fertilizzanti idrosolubili e speciali.",
   "sup.verify.title": "Verifica progressiva di fornitori e operazioni",
   "sup.verify.text": "La verifica è proporzionata alla fase dell’operazione: prima si valuta la fattibilità commerciale, poi si approfondiscono, ove necessario, i controlli sulla controparte e sulla spedizione.",
   "sup.verify.step1.title": "Validazione dell’entità e dell’export",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Consulenza tecnica e commerciale",
   "cp.nav": "Partnership commerciali",
   "cp.hero.cta": "Candidati come partner commerciale",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Cina",
+  "sup.country.egypt": "Egitto",
+  "sup.country.morocco": "Marocco",
+  "sup.country.jordan": "Giordania",
+  "sup.country.turkey": "Turchia"
 }

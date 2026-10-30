@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Foszfátalapanyagok · Feldolgozott foszfátok és összetett műtrágyák · Nitrogénműtrágyák · Vízoldható műtrágyák (WSF) · Mikroelemek és speciális termékek · Nyersanyagok és műtrágya-adalékok. Az aktuális elérhetőséget, a származási lehetőségeket és a kereskedelmi feltételeket RFQ-nként igazoljuk.",
   "sup.origin.title": "Több eredetű lefedettség",
   "sup.origin.text": "Strukturált beszerzés az EU importfolyamataihoz igazítva. Az eredet tranzakciónként kerül megerősítésre a minőség, allokáció és a szállítmány-készültség alapján.",
-  "sup.origin.eu.title": "Európa",
-  "sup.origin.eu.text": "EU-elvekhez igazodó gyártók és forgalmazók.",
-  "sup.origin.na.title": "Észak-Afrika",
-  "sup.origin.na.text": "Foszfátkő és ásványi ellátás exportkész dokumentációval.",
-  "sup.origin.me.title": "Közel-Kelet",
-  "sup.origin.me.text": "Műtrágya- és ásványianyag-beszerzési partnerek.",
-  "sup.origin.asia.title": "Ázsia",
-  "sup.origin.asia.text": "Vízoldható és speciális műtrágyagyártói hálózat.",
   "sup.verify.title": "Fokozatos beszállítói és tranzakciós ellenőrzés",
   "sup.verify.text": "Az ellenőrzés mértéke az ügylet szakaszához igazodik: először a kereskedelmi megvalósíthatóságot értékeljük, majd szükség szerint mélyítjük a partner- és szállítási ellenőrzéseket.",
   "sup.verify.step1.title": "Entitás- és exportvalidálás",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Műszaki és kereskedelmi tanácsadás",
   "cp.nav": "Kereskedelmi partnerségek",
   "cp.hero.cta": "Jelentkezés kereskedelmi partnerként",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Kína",
+  "sup.country.egypt": "Egyiptom",
+  "sup.country.morocco": "Marokkó",
+  "sup.country.jordan": "Jordánia",
+  "sup.country.turkey": "Törökország"
 }

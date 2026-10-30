@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfaattiraaka-aineet · Jalostetut fosfaatit ja moniravinnelannoitteet · Typpilannoitteet · Vesiliukoiset lannoitteet (WSF) · Hivenravinteet ja erikoistuotteet · Raaka-aineet ja lannoitteiden lisäaineet. Ajantasainen saatavuus, alkuperävaihtoehdot ja kaupalliset ehdot vahvistetaan RFQ-kohtaisesti.",
   "sup.origin.title": "Monialkuperäinen kattavuus",
   "sup.origin.text": "Strukturoitu hankinta EU-tuontiprosessien mukaisesti. Alkuperät vahvistetaan transaktiokohtaisesti laadun, allokaation ja lähetysvalmiuden perusteella.",
-  "sup.origin.eu.title": "Eurooppa",
-  "sup.origin.eu.text": "EU-vaatimuksiin linjatut tuottajat ja jakelijat.",
-  "sup.origin.na.title": "Pohjois-Afrikka",
-  "sup.origin.na.text": "Fosfaattikiven ja mineraalien toimitus vientivalmiilla dokumentaatiolla.",
-  "sup.origin.me.title": "Lähi-itä",
-  "sup.origin.me.text": "Lannoite- ja mineraalihankinnan kumppanit.",
-  "sup.origin.asia.title": "Aasia",
-  "sup.origin.asia.text": "Vesiliukoisten ja erikoislannoitteiden valmistusverkosto.",
   "sup.verify.title": "Vaiheittainen toimittaja- ja transaktiovarmennus",
   "sup.verify.text": "Varmennus suhteutetaan transaktion vaiheeseen: kaupallinen toteuttamiskelpoisuus arvioidaan ensin, ja vastapuoli- sekä lähetysselvityksiä syvennetään tarvittaessa.",
   "sup.verify.step1.title": "Yritys- ja vientivalidointi",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Tekninen ja kaupallinen neuvonta",
   "cp.nav": "Kaupalliset kumppanuudet",
   "cp.hero.cta": "Hae kaupalliseksi kumppaniksi",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Kiina",
+  "sup.country.egypt": "Egypti",
+  "sup.country.morocco": "Marokko",
+  "sup.country.jordan": "Jordania",
+  "sup.country.turkey": "Turkki"
 }
