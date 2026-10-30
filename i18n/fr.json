@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "La vérification des fournisseurs fait partie de notre processus d’approvisionnement. Nous effectuons nos propres contrôles de leur identité, de leur habilitation à fournir les produits et des documents pertinents, avec une vérification par un tiers indépendant si nécessaire. Nous ne poursuivons pas les démarches avec des fournisseurs dont les informations ne peuvent être vérifiées ou pour lesquels des doutes importants restent non résolus.",
   "catalogue.range.note": "La disponibilité, l'origine, la spécification, la documentation, le conditionnement et les conditions commerciales sont confirmés pour chaque RFQ qualifiée et chaque expédition.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Détails du produit"
+  "catalogue.cta.details": "Détails du produit",
+  "about.network": "Notre réseau commercial compte plus de 60 partenaires indépendants dans le monde. Chaque source d’approvisionnement est évaluée pour la transaction concernée.",
+  "rfq.requestType": "Type de demande"
 }

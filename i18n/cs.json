@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Prověřování dodavatelů je součástí našeho procesu zajišťování dodávek. Sami ověřujeme totožnost dodavatele, jeho oprávnění k dodávkám a příslušnou dokumentaci; v případě potřeby využíváme nezávislé ověření třetí stranou. Ve spolupráci nepokračujeme, pokud nelze údaje dodavatele ověřit nebo přetrvávají nevyřešené závažné pochybnosti.",
   "catalogue.range.note": "Dostupnost, původ, specifikace, dokumentace, balení a obchodní podmínky se potvrzují pro každé kvalifikované RFQ a každou zásilku.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Podrobnosti o produktu"
+  "catalogue.cta.details": "Podrobnosti o produktu",
+  "about.network": "Naše obchodní síť zahrnuje více než 60 nezávislých partnerů po celém světě. Každý zdroj dodávek posuzujeme pro konkrétní obchod.",
+  "rfq.requestType": "Typ poptávky"
 }

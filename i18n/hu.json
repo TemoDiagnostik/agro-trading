@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "A beszállítók ellenőrzése beszerzési folyamatunk része. Saját ellenőrzéseket végzünk a beszállító személyazonosságára, szállítási jogosultságára és a vonatkozó dokumentációra vonatkozóan, szükség esetén független harmadik fél bevonásával. Nem folytatjuk az együttműködést olyan beszállítókkal, akiknek az adatai nem ellenőrizhetők, vagy akikkel kapcsolatban lényeges kétségek maradnak tisztázatlanul.",
   "catalogue.range.note": "A rendelkezésre állást, eredetet, specifikációt, dokumentációt, csomagolást és kereskedelmi feltételeket minden minősített RFQ és szállítmány esetében külön erősítjük meg.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Termékadatok"
+  "catalogue.cta.details": "Termékadatok",
+  "about.network": "Kereskedelmi hálózatunk világszerte több mint 60 független partnerből áll. Minden beszerzési forrást az adott ügylet szempontjából értékelünk.",
+  "rfq.requestType": "Megkeresés típusa"
 }

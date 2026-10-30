@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Leverantörskontroll är en del av vår inköpsprocess. Vi gör egna kontroller av leverantörens identitet, behörighet att leverera och relevant dokumentation, med verifiering av oberoende tredje part vid behov. Vi går inte vidare med leverantörer vars uppgifter inte kan verifieras eller där väsentliga tveksamheter kvarstår.",
   "catalogue.range.note": "Tillgänglighet, ursprung, specifikation, dokumentation, förpackning och kommersiella villkor bekräftas för varje kvalificerad RFQ och leverans.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Produktinformation"
+  "catalogue.cta.details": "Produktinformation",
+  "about.network": "Vårt handelsnätverk omfattar över 60 oberoende partner världen över. Varje leveranskälla bedöms för den aktuella affären.",
+  "rfq.requestType": "Typ av förfrågan"
 }

@@ -260,7 +260,7 @@
   </div></a></div>
  <div class="selected-range"><div><h3 data-i18n="catalogue.selected.title" >Selected specialty nutrition</h3>
  <p data-i18n="catalogue.selected.desc" >Water-soluble NPK with trace elements, plus selected iron and zinc chelates.</p></div>
- <div class="formula-links"><a href="products.html#npk-202020">20-20-20 + TE</a><a href="products.html#npk-105210">10-52-10 + TE</a><a href="products.html#npk-150530">15-05-30 + TE</a><a href="products.html#iron">Fe 6% EDDHA</a><a href="products.html#zinc">Zn 15% EDTA</a></div></div>
+ <div class="formula-links"><a href="products.html#npk-202020">20-20-20 + TE</a><a href="products.html#npk-105210">10-52-10 + TE</a><a href="products.html#npk-150530">15-5-30 + TE</a><a href="products.html#iron">Fe 6% EDDHA</a><a href="products.html#zinc">Zn 15% EDTA</a></div></div>
  <p class="home-product-note" data-i18n="catalogue.range.note">Listed grades describe our sourcing range. Availability, packing and guaranteed values are confirmed per offer. Total, available and water-soluble phosphorus must be declared separately; N-P-K grades express N, P₂O₅ and K₂O.</p>
  <a class="text-link" href="products.html" data-i18n="catalogue.cta.all">View the full product range</a>
  </div></section>
@@ -406,6 +406,8 @@
         <h2 data-i18n="about.title">About Euro Agri Trading</h2>
 
         <p data-i18n="about.p1">Euro Agri Trading s.r.o. is a Czech Republic-registered fertilizer sourcing and trade coordination company serving importers, distributors and industrial buyers through a multi-origin supply network.</p>
+
+        <p data-i18n="about.network">Our commercial network includes more than 60 independent partners worldwide. Each supply source is assessed for the specific transaction.</p>
 
         <p data-i18n="about.p2">We assess product availability and commercial feasibility, compare supplier offers and coordinate the documents and logistics needed for each transaction. Price, specification, delivery route and payment terms are reviewed together.</p>
 
@@ -565,10 +567,9 @@
         novalidate>
     <input type="hidden" name="formType" value="buyer-rfq">
     <input type="hidden" name="Source Page" value="https://euroagritrading.eu/#contactFormBox">
-    <input type="hidden" name="Form Version" value="20260902-1">
+    <input type="hidden" name="Form Version" value="20261030-2">
     <input type="hidden" id="rfqLanguage" name="Language" value="en">
     <input type="hidden" id="rfqStartedAt" name="Form Started At" value="">
-    <input type="hidden" id="rfqRequestType" name="Request Type" value="Buyer Commercial RFQ">
     <input type="hidden" id="rfqSelectedContext" name="Selected Formulation or Product Context" value="">
 
     <div class="buyer-rfq-honeypot" aria-hidden="true">
@@ -576,6 +577,14 @@
     </div>
 
     <div class="buyer-rfq-grid">
+      <label class="buyer-rfq-field buyer-rfq-wide">
+        <span data-i18n="rfq.requestType">Enquiry type</span>
+        <select id="rfqRequestType" name="Request Type">
+          <option value="Buyer Commercial RFQ" data-i18n="catalogue.cta.offer">Request a quote</option>
+          <option value="Product Specification Request" data-i18n="catalogue.cta.specs">Request specifications</option>
+          <option value="Shipment Documentation Request" data-i18n="cert.request">Request Shipment-Specific Documents</option>
+        </select>
+      </label>
       <label class="buyer-rfq-field">
         <span><span data-i18n="rfq.company">Company</span> <b aria-hidden="true">*</b></span>
         <input type="text" name="Company" autocomplete="organization" maxlength="180" required>
@@ -595,31 +604,33 @@
         <span><span data-i18n="rfq.product">Product</span> <b aria-hidden="true">*</b></span>
         <select id="rfqProduct" name="Product" required>
           <option value="" data-i18n="rfq.selectProduct">Select a product</option>
-          <option value="Rock Phosphate">Rock Phosphate</option>
-          <option value="Granular Urea 46% N">Granular Urea 46% N</option>
-          <option value="MAP / Granular Ammophos">MAP / Granular Ammophos 10-46-0</option>
-          <option value="MKP — Monopotassium Phosphate">MKP 0-52-34</option>
-          <option value="UP — Urea Phosphate">Urea Phosphate 17-44-0</option>
-          <option value="Potassium Nitrate / NOP">Potassium Nitrate 13-0-46</option>
-          <option value="Magnesium Nitrate Hexahydrate">Magnesium Nitrate Hexahydrate</option>
-          <option value="Water-Soluble Fertilizers (WSF)">Water-Soluble Fertilizers</option>
-          <option value="Micronutrients / Selected Specialty Fertilizers">Micronutrients / Selected Specialty Fertilizers</option>
-                  <option value="Granular Rock Phosphate / GRP">Granular Rock Phosphate / GRP</option>
-          <option value="GRP + Sulfur / Additives">GRP + Sulfur / Additives</option>
-          <option value="Low-Cadmium Rock Phosphate">Low-Cadmium Rock Phosphate</option>
-          <option value="SSP">GSSP — 17% / 19% P₂O₅</option>
-          <option value="GSP">GSP — 20% P₂O₅</option>
-          <option value="DSP">DSP — 36% P₂O₅</option>
-          <option value="TSP">TSP — 0-46-0</option>
-          <option value="DAP">DAP — 18-46-0</option>
-          <option value="Granular NPK">Granular NPK</option>
+          <option value="Rock Phosphate" data-i18n="catalogue.product.erp.name" data-grades="">Rock phosphate powder</option>
+          <option value="Granular Urea 46% N" data-i18n="catalogue.product.urea.name" data-grades="46% N">Granular urea</option>
+          <option value="MAP / Granular Ammophos" data-i18n="catalogue.product.map.name" data-grades="10-46-0">MAP / Granular ammophos</option>
+          <option value="MKP — Monopotassium Phosphate" data-i18n="catalogue.product.mkp.name" data-grades="0-52-34">Monopotassium phosphate / MKP</option>
+          <option value="UP — Urea Phosphate" data-i18n="catalogue.product.up.name" data-grades="17-44-0">Urea phosphate / UP</option>
+          <option value="Potassium Nitrate / NOP" data-i18n="catalogue.product.nop.name" data-grades="13-0-46">Potassium nitrate / NOP</option>
+          <option value="Magnesium Nitrate Hexahydrate" data-i18n="catalogue.product.magnesium.name" data-grades="">Magnesium nitrate hexahydrate</option>
+          <option value="Water-Soluble Fertilizers (WSF)" data-i18n="catalogue.family.water-soluble" data-grades="20-20-20 + TE|10-52-10 + TE|15-5-30 + TE">Water-soluble fertilizers</option>
+          <option value="Micronutrients / Selected Specialty Fertilizers" data-i18n="catalogue.family.micronutrients" data-grades="">Micronutrients &amp; specialty inputs</option>
+                  <option value="Granular Rock Phosphate / GRP" data-i18n="catalogue.product.grp.name" data-grades="">Granular rock phosphate / GRP</option>
+          <option value="GRP + Sulfur / Additives" data-i18n="catalogue.product.grp-s.name" data-grades="">GRP + sulfur / additives</option>
+          <option value="Low-Cadmium Rock Phosphate" data-i18n="catalogue.product.low-cadmium.name" data-grades="">Low-cadmium phosphate grades</option>
+          <option value="SSP" data-i18n="catalogue.product.ssp.name" data-grades="17% P₂O₅|19% P₂O₅">Granular single superphosphate / GSSP</option>
+          <option value="GSP" data-i18n="catalogue.product.gsp.name" data-grades="20% P₂O₅">GSP</option>
+          <option value="DSP" data-i18n="catalogue.product.dsp.name" data-grades="36% P₂O₅">DSP</option>
+          <option value="TSP" data-i18n="catalogue.product.tsp.name" data-grades="0-46-0">Triple superphosphate / TSP</option>
+          <option value="DAP" data-i18n="catalogue.product.dap.name" data-grades="18-46-0">Diammonium phosphate / DAP</option>
+          <option value="Granular NPK" data-i18n="catalogue.product.npk-granular.name" data-grades="">Granular NPK</option>
 </select>
       </label>
 
       <label class="buyer-rfq-field">
         <span data-i18n="rfq.grade">Grade / specification</span>
-        <input id="rfqGrade" type="text" name="Grade or Specification" maxlength="220">
+        <input id="rfqGrade" type="text" dir="ltr" list="rfqGradeOptions" name="Grade or Specification" maxlength="220">
       </label>
+
+      <datalist id="rfqGradeOptions"></datalist>
 
       <label class="buyer-rfq-field">
         <span><span data-i18n="rfq.quantity">Quantity</span> <b aria-hidden="true">*</b></span>
@@ -753,7 +764,7 @@
 
 <!-- Shared i18n and language selector -->
 <script src="js/i18n.js?v=20260918.3"></script>
-<script src="js/buyer-rfq.js?v=20260902.2"></script>
+<script src="js/buyer-rfq.js?v=20261030.3"></script>
 <script src="js/home-navigation.js?v=20260918.7" defer></script>
 
 
@@ -774,39 +785,41 @@
 		<!-- JSON-LD (محفوظ كما هو) -->
 		<script type="application/ld+json">
 {
-	"@context": "https://schema.org",
-	"@type": "Organization",
-	"name": "Euro Agri Trading s.r.o.",
-	"url": "https://info@euroagritrading.eu",
-	"email": "info@euroagritrading.eu",
-	"telephone": "+420 732 133 919",
-	"address": {
-		"@type": "PostalAddress",
-		"streetAddress": "Malenovice č.ev. 48",
-		"addressLocality": "Frýdlant nad Ostravicí",
-		"postalCode": "739 11",
-		"addressCountry": "CZ"
-	},
-	"contactPoint": {
-		"@type": "ContactPoint",
-		"contactType": "sales",
-		"email": "info@euroagritrading.eu",
-		"telephone": "+420 732 133 919",
-		"areaServed": "EU"
-	},
-	"identifier": [
-		{"@type":"PropertyValue","name":"IČO","value":"24481912"},
-		{"@type":"PropertyValue","name":"DIČ","value":" CZ24481912"}
-	],
-	"additionalProperty": [
-		{"@type":"PropertyValue","name":"Bank IBAN","value":"CZ00 0000 0000 0000 0000 0000"},
-		{"@type":"PropertyValue","name":"SWIFT","value":"XXXXXXXX"}
-	],
-	"sameAs": []
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Euro Agri Trading s.r.o.",
+  "url": "https://euroagritrading.eu/",
+  "email": "info@euroagritrading.eu",
+  "telephone": "+420 732 133 919",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malenovice č.ev. 48",
+    "addressLocality": "Frýdlant nad Ostravicí",
+    "postalCode": "739 11",
+    "addressCountry": "CZ"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@euroagritrading.eu",
+    "telephone": "+420 732 133 919",
+    "areaServed": "EU"
+  },
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "name": "IČO",
+      "value": "24481912"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "DIČ",
+      "value": " CZ24481912"
+    }
+  ],
+  "sameAs": []
 }
-
-			
-		</script>
+</script>
 
 
 

@@ -11,6 +11,8 @@
   const grade = document.getElementById('rfqGrade');
   const packaging = document.getElementById('rfqPackaging');
   const technical = document.getElementById('rfqTechnical');
+  const gradeOptions = document.getElementById('rfqGradeOptions');
+  const prefilled = new Map();
 
   if (!form || !status || !languageInput || !startedAt || !requestType || !selectedContext || !product) {
     return;
@@ -55,51 +57,64 @@
     });
   }
 
-  function chooseProduct(topic) {
-    const exactOption = Array.from(product.options).find(option => option.value === topic);
-
-    if (exactOption) {
-      product.value = exactOption.value;
-      return;
-    }
-
-    const normalizedTopic = String(topic || '').toLowerCase();
-    const matchingOption = Array.from(product.options).find(option => {
-      const normalizedValue = option.value.toLowerCase();
-      return normalizedValue && (
-        normalizedTopic.includes(normalizedValue) ||
-        normalizedValue.includes(normalizedTopic)
-      );
+  function updateGradeOptions() {
+    if (!gradeOptions) return;
+    gradeOptions.replaceChildren();
+    const option = product.options[product.selectedIndex];
+    (option?.dataset.grades || '').split('|').filter(Boolean).forEach(value => {
+      const suggestion = document.createElement('option');
+      suggestion.value = value;
+      gradeOptions.append(suggestion);
     });
+  }
 
-    if (matchingOption) {
-      product.value = matchingOption.value;
+  function chooseProduct(topic) {
+    const normalize = value => String(value || '').normalize('NFKC').toLowerCase().trim();
+    // Never use substring matching: urea phosphate and granular urea are different products.
+    const matchingOption = Array.from(product.options).find(option =>
+      option.value && normalize(option.value) === normalize(topic)
+    );
+    product.value = matchingOption ? matchingOption.value : '';
+    updateGradeOptions();
+  }
+
+  function clearPrefilledDetails() {
+    prefilled.forEach((value, field) => {
+      if (field.value === value) field.value = '';
+    });
+    prefilled.clear();
+    // A grade belongs to the selected product, even if the visitor edited it.
+    if (grade) grade.value = '';
+  }
+
+  function fill(field, value) {
+    if (field && value) {
+      field.value = value.slice(0, field.maxLength > 0 ? field.maxLength : 1800);
+      prefilled.set(field, field.value);
     }
+  }
+
+  function applyContext(context) {
+    clearPrefilledDetails();
+    selectedContext.value = String(context.topic || '').slice(0, 220);
+    chooseProduct(context.category || context.topic);
+    requestType.value = ['Product Specification Request', 'Shipment Documentation Request'].includes(context.request)
+      ? context.request : 'Buyer Commercial RFQ';
+    fill(grade, context.grade);
+    fill(packaging, context.packaging);
+    fill(technical, context.technical);
   }
 
   function applyQueryPrefill() {
     const params = new URLSearchParams(location.search);
     const topic = params.get('rfqProduct') || '';
 
-    if (!topic) {
+    if (!topic && !params.get('rfqRequest')) {
       return;
     }
 
-    selectedContext.value = topic;
-    chooseProduct(params.get('rfqCategory') || topic);
-    requestType.value = params.get('rfqRequest') || 'Buyer Commercial RFQ';
-
-    if (grade && params.get('rfqGrade')) {
-      grade.value = params.get('rfqGrade');
-    }
-
-    if (packaging && params.get('rfqPackaging')) {
-      packaging.value = params.get('rfqPackaging');
-    }
-
-    if (technical && params.get('rfqTechnical')) {
-      technical.value = params.get('rfqTechnical');
-    }
+    applyContext({topic, category: params.get('rfqCategory'), request: params.get('rfqRequest'),
+      grade: params.get('rfqGrade'), packaging: params.get('rfqPackaging'), technical: params.get('rfqTechnical')});
   }
 
   function applyConfirmedSubmission() {
@@ -122,7 +137,23 @@
   });
 
   product.addEventListener('change', () => {
+    clearPrefilledDetails();
     selectedContext.value = product.value;
+    updateGradeOptions();
+    const values = (product.options[product.selectedIndex]?.dataset.grades || '').split('|').filter(Boolean);
+    if (values.length === 1) fill(grade, values[0]);
+    // Do not restore an earlier product if the visitor later reloads this URL.
+    const url = new URL(location.href);
+    ['rfqProduct', 'rfqCategory', 'rfqGrade', 'rfqPackaging', 'rfqTechnical'].forEach(key => url.searchParams.delete(key));
+    history.replaceState({}, '', url.pathname + url.search + url.hash);
+  });
+
+  requestType.addEventListener('change', () => {
+    const url = new URL(location.href);
+    if (url.searchParams.has('rfqRequest')) {
+      url.searchParams.set('rfqRequest', requestType.value);
+      history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
   });
 
   document.addEventListener('click', event => {
@@ -132,23 +163,9 @@
       return;
     }
 
-    const topic = button.dataset.rfqTopic || '';
-    selectedContext.value = topic;
-    chooseProduct(button.dataset.rfqCategory || topic);
-
-    if (grade && button.dataset.rfqGrade) {
-      grade.value = button.dataset.rfqGrade;
-    }
-
-    if (packaging && button.dataset.rfqPacking) {
-      packaging.value = button.dataset.rfqPacking;
-    }
-
-    if (technical && button.dataset.rfqDocs) {
-      technical.value = button.dataset.rfqDocs;
-    }
-
-    requestType.value = button.dataset.rfqRequest || 'Buyer Commercial RFQ';
+    applyContext({topic: button.dataset.rfqTopic, category: button.dataset.rfqCategory,
+      request: button.dataset.rfqRequest, grade: button.dataset.rfqGrade,
+      packaging: button.dataset.rfqPacking, technical: button.dataset.rfqDocs});
   });
 
   document.addEventListener('euroagri:languagechange', event => {
