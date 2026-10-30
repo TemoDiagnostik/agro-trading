@@ -61,9 +61,9 @@ def build():
             source,changed=re.subn(pattern,replace,source,count=1)
             if changed != 1: raise ValueError(f'Missing {key} trigger in {path.name}')
         if 'js/site-navigation.js' not in source:
-            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261030.3" defer></script>\n</body>')
+            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.1" defer></script>\n</body>')
         else:
-            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261030.3',source)
+            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.1',source)
         path.write_text(source)
         count+=1
     print(f'Built nine section menus on {count} pages ({len(PRODUCTS)} products)')

@@ -2,8 +2,16 @@
   'use strict';
   const groups = Array.from(document.querySelectorAll('header [data-nav-dropdown]'));
   if (!groups.length) return;
+  const hoverMedia = window.matchMedia('(min-width: 1101px) and (any-hover: hover) and (any-pointer: fine)');
+  const closeTimers = new Map();
+
+  function cancelClose(group) {
+    window.clearTimeout(closeTimers.get(group));
+    closeTimers.delete(group);
+  }
 
   function setOpen(group, open, focusTrigger = false) {
+    cancelClose(group);
     const trigger = group.querySelector('.nav-dropdown-trigger');
     const panel = group.querySelector('.nav-dropdown-panel');
     trigger.setAttribute('aria-expanded', String(open));
@@ -32,10 +40,26 @@
     const panel = group.querySelector('.nav-dropdown-panel');
     // Without JavaScript the link still opens the overview page.
     trigger.setAttribute('role', 'button');
+    group.addEventListener('pointerenter', event => {
+      if (!hoverMedia.matches || event.pointerType !== 'mouse') return;
+      closeAll(group);
+      setOpen(group, true);
+    });
+    group.addEventListener('pointerleave', event => {
+      if (!hoverMedia.matches || event.pointerType !== 'mouse') return;
+      cancelClose(group);
+      // Allow time to cross the space between the trigger and its panel.
+      closeTimers.set(group, window.setTimeout(() => {
+        closeTimers.delete(group);
+        if (!panel.contains(document.activeElement)) setOpen(group, false);
+      }, 300));
+    });
     trigger.addEventListener('click', event => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
-      const open = trigger.getAttribute('aria-expanded') !== 'true';
+      const mouseActivation = hoverMedia.matches && event.detail > 0 &&
+        (!event.pointerType || event.pointerType === 'mouse');
+      const open = mouseActivation || trigger.getAttribute('aria-expanded') !== 'true';
       closeAll(group);
       setOpen(group, open);
     });
@@ -69,4 +93,5 @@
   window.addEventListener('pageshow', () => closeAll());
   window.addEventListener('hashchange', () => closeAll());
   window.addEventListener('resize', () => closeAll());
+  hoverMedia.addEventListener('change', () => closeAll());
 })();
