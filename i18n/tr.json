@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Ürün ayrıntıları",
   "about.network": "Ticari ağımız dünya çapında 60’tan fazla bağımsız iş ortağını kapsar. Her tedarik kaynağı ilgili işlem özelinde değerlendirilir.",
-  "rfq.requestType": "Talep türü"
+  "rfq.requestType": "Talep türü",
+  "catalogue.family.raw-materials": "Hammaddeler ve gübre katkıları",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Talep üzerine spesifikasyon",
+  "catalogue.product.calcium-carbonate.name": "Kalsiyum karbonat",
+  "catalogue.product.calcium-carbonate.grade": "Talep üzerine spesifikasyon",
+  "catalogue.product.phosphoric-acid.name": "Fosforik asit",
+  "catalogue.product.phosphoric-acid.grade": "Talep üzerine spesifikasyon",
+  "catalogue.product.potassium-chloride.name": "Potasyum klorür / MOP",
+  "catalogue.product.potassium-chloride.grade": "Talep üzerine spesifikasyon",
+  "catalogue.product.fertilizer-additives.name": "Gübre katkıları ve topaklanma önleyiciler",
+  "catalogue.product.fertilizer-additives.grade": "Talep üzerine spesifikasyon"
 }

@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Szczegóły produktu",
   "about.network": "Nasza sieć handlowa obejmuje ponad 60 niezależnych partnerów na całym świecie. Każde źródło dostaw oceniamy pod kątem konkretnej transakcji.",
-  "rfq.requestType": "Rodzaj zapytania"
+  "rfq.requestType": "Rodzaj zapytania",
+  "catalogue.family.raw-materials": "Surowce i dodatki do nawozów",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Specyfikacja na zapytanie",
+  "catalogue.product.calcium-carbonate.name": "Węglan wapnia",
+  "catalogue.product.calcium-carbonate.grade": "Specyfikacja na zapytanie",
+  "catalogue.product.phosphoric-acid.name": "Kwas fosforowy",
+  "catalogue.product.phosphoric-acid.grade": "Specyfikacja na zapytanie",
+  "catalogue.product.potassium-chloride.name": "Chlorek potasu / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specyfikacja na zapytanie",
+  "catalogue.product.fertilizer-additives.name": "Dodatki do nawozów i środki przeciwzbrylające",
+  "catalogue.product.fertilizer-additives.grade": "Specyfikacja na zapytanie"
 }

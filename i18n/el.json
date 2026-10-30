@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Λεπτομέρειες προϊόντος",
   "about.network": "Το εμπορικό μας δίκτυο περιλαμβάνει περισσότερους από 60 ανεξάρτητους συνεργάτες παγκοσμίως. Κάθε πηγή προμήθειας αξιολογείται για τη συγκεκριμένη συναλλαγή.",
-  "rfq.requestType": "Τύπος αιτήματος"
+  "rfq.requestType": "Τύπος αιτήματος",
+  "catalogue.family.raw-materials": "Πρώτες ύλες και πρόσθετα λιπασμάτων",
+  "catalogue.product.dolomite.name": "Δολομίτης",
+  "catalogue.product.dolomite.grade": "Προδιαγραφές κατόπιν αιτήματος",
+  "catalogue.product.calcium-carbonate.name": "Ανθρακικό ασβέστιο",
+  "catalogue.product.calcium-carbonate.grade": "Προδιαγραφές κατόπιν αιτήματος",
+  "catalogue.product.phosphoric-acid.name": "Φωσφορικό οξύ",
+  "catalogue.product.phosphoric-acid.grade": "Προδιαγραφές κατόπιν αιτήματος",
+  "catalogue.product.potassium-chloride.name": "Χλωριούχο κάλιο / MOP",
+  "catalogue.product.potassium-chloride.grade": "Προδιαγραφές κατόπιν αιτήματος",
+  "catalogue.product.fertilizer-additives.name": "Πρόσθετα λιπασμάτων και αντισυσσωματικά",
+  "catalogue.product.fertilizer-additives.grade": "Προδιαγραφές κατόπιν αιτήματος"
 }

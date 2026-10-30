@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Détails du produit",
   "about.network": "Notre réseau commercial compte plus de 60 partenaires indépendants dans le monde. Chaque source d’approvisionnement est évaluée pour la transaction concernée.",
-  "rfq.requestType": "Type de demande"
+  "rfq.requestType": "Type de demande",
+  "catalogue.family.raw-materials": "Matières premières et additifs pour engrais",
+  "catalogue.product.dolomite.name": "Dolomite",
+  "catalogue.product.dolomite.grade": "Spécification sur demande",
+  "catalogue.product.calcium-carbonate.name": "Carbonate de calcium",
+  "catalogue.product.calcium-carbonate.grade": "Spécification sur demande",
+  "catalogue.product.phosphoric-acid.name": "Acide phosphorique",
+  "catalogue.product.phosphoric-acid.grade": "Spécification sur demande",
+  "catalogue.product.potassium-chloride.name": "Chlorure de potassium / MOP",
+  "catalogue.product.potassium-chloride.grade": "Spécification sur demande",
+  "catalogue.product.fertilizer-additives.name": "Additifs pour engrais et antiagglomérants",
+  "catalogue.product.fertilizer-additives.grade": "Spécification sur demande"
 }

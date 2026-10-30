@@ -52,7 +52,7 @@
   </style>
   <link rel="stylesheet" href="catalogue-secondary.css?v=20260917.1">
   <link rel="stylesheet" href="site-palette.css?v=20260918.10">
-<link rel="stylesheet" href="catalogue-identity.css?v=20261030.1">
+<link rel="stylesheet" href="catalogue-identity.css?v=20261030.4">
 </head>
 <body>
   <header class="topbar">
@@ -68,9 +68,10 @@
   <main>
     <div id="formSection">
       <section class="intro">
-        <h1>Supplier Qualification</h1>
+        <h1>Company &amp; Product Registration</h1>
         <p>This initial step focuses on product availability and commercial feasibility for structured cooperation with Euro Agri Trading s.r.o.</p>
         <p>Product evidence, company verification and payment checks are requested progressively only when a commercially relevant opportunity advances.</p>
+        <p>Submit products for private review against qualified international enquiries. Registration does not guarantee approval, public listing, sales or access to a market.</p>
         <p class="required-note">Fields marked with * are required.</p>
       </section>
 
@@ -78,7 +79,7 @@
         <input type="hidden" name="sourcePage" value="https://euroagritrading.eu/supplier-application.html">
         <input type="hidden" name="formType" value="supplier-qualification">
         <input type="hidden" name="qualificationStage" value="Initial Availability and Commercial Feasibility">
-        <input type="hidden" name="formVersion" value="20260901-1">
+        <input type="hidden" name="formVersion" value="20261030-3">
         <input type="hidden" name="Language" value="en">
         <input type="hidden" id="formStartedAt" name="formStartedAt" value="">
         <input type="hidden" id="companyWebsiteConfirm" name="companyWebsiteConfirm" value="">
@@ -138,13 +139,13 @@
                 <label class="choice"><input type="checkbox" name="products" value="Magnesium Nitrate">Magnesium Nitrate</label>
                 <label class="choice"><input type="checkbox" name="products" value="Water-Soluble Fertilizers (WSF)">Water-Soluble Fertilizers (WSF)</label>
                 <label class="choice"><input type="checkbox" name="products" value="Micronutrients / Trace Elements">Micronutrients / Trace Elements</label>
-                <label class="choice"><input type="checkbox" name="products" value="Other">Other</label>
+                <label class="choice"><input type="checkbox" name="products" value="Other">Other fertilizers, raw materials or additives</label>
               </div>
             </div>
 
             <div class="field full">
-              <label for="otherProduct">Other Product</label>
-              <input id="otherProduct" name="otherProduct" type="text" maxlength="250" placeholder="Complete only when Other is selected">
+              <label for="otherProduct">Exact Product, Grade &amp; Origin <span class="required">*</span></label>
+              <input id="otherProduct" name="otherProduct" type="text" maxlength="250" required placeholder="Commercial name, grade, origin and form; indicate what is not yet confirmed">
             </div>
 
             <div class="field">
@@ -171,6 +172,7 @@
               </div>
             </div>
           </div>
+        <p class="security-note">For dolomite, calcium carbonate, phosphoric acid, potassium chloride or fertilizer additives, select Other and specify the exact product above. Technical sheets and sample analyses are requested at the relevant review stage.</p>
         </fieldset>
 
         <fieldset>
