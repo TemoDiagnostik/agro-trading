@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Tuotetiedot",
   "about.network": "Kaupallinen verkostomme käsittää yli 60 itsenäistä kumppania eri puolilla maailmaa. Jokainen hankintalähde arvioidaan kyseistä kauppaa varten.",
-  "rfq.requestType": "Tiedustelun tyyppi"
+  "rfq.requestType": "Tiedustelun tyyppi",
+  "catalogue.family.raw-materials": "Raaka-aineet ja lannoitteiden lisäaineet",
+  "catalogue.product.dolomite.name": "Dolomiitti",
+  "catalogue.product.dolomite.grade": "Tuotetiedot pyynnöstä",
+  "catalogue.product.calcium-carbonate.name": "Kalsiumkarbonaatti",
+  "catalogue.product.calcium-carbonate.grade": "Tuotetiedot pyynnöstä",
+  "catalogue.product.phosphoric-acid.name": "Fosforihappo",
+  "catalogue.product.phosphoric-acid.grade": "Tuotetiedot pyynnöstä",
+  "catalogue.product.potassium-chloride.name": "Kaliumkloridi / MOP",
+  "catalogue.product.potassium-chloride.grade": "Tuotetiedot pyynnöstä",
+  "catalogue.product.fertilizer-additives.name": "Lannoitteiden lisäaineet ja paakkuuntumisenestoaineet",
+  "catalogue.product.fertilizer-additives.grade": "Tuotetiedot pyynnöstä"
 }

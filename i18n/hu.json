@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Termékadatok",
   "about.network": "Kereskedelmi hálózatunk világszerte több mint 60 független partnerből áll. Minden beszerzési forrást az adott ügylet szempontjából értékelünk.",
-  "rfq.requestType": "Megkeresés típusa"
+  "rfq.requestType": "Megkeresés típusa",
+  "catalogue.family.raw-materials": "Nyersanyagok és műtrágya-adalékok",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Specifikáció kérésre",
+  "catalogue.product.calcium-carbonate.name": "Kalcium-karbonát",
+  "catalogue.product.calcium-carbonate.grade": "Specifikáció kérésre",
+  "catalogue.product.phosphoric-acid.name": "Foszforsav",
+  "catalogue.product.phosphoric-acid.grade": "Specifikáció kérésre",
+  "catalogue.product.potassium-chloride.name": "Kálium-klorid / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specifikáció kérésre",
+  "catalogue.product.fertilizer-additives.name": "Műtrágya-adalékok és csomósodásgátlók",
+  "catalogue.product.fertilizer-additives.grade": "Specifikáció kérésre"
 }

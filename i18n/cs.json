@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Podrobnosti o produktu",
   "about.network": "Naše obchodní síť zahrnuje více než 60 nezávislých partnerů po celém světě. Každý zdroj dodávek posuzujeme pro konkrétní obchod.",
-  "rfq.requestType": "Typ poptávky"
+  "rfq.requestType": "Typ poptávky",
+  "catalogue.family.raw-materials": "Suroviny a přísady do hnojiv",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Specifikace na vyžádání",
+  "catalogue.product.calcium-carbonate.name": "Uhličitan vápenatý",
+  "catalogue.product.calcium-carbonate.grade": "Specifikace na vyžádání",
+  "catalogue.product.phosphoric-acid.name": "Kyselina fosforečná",
+  "catalogue.product.phosphoric-acid.grade": "Specifikace na vyžádání",
+  "catalogue.product.potassium-chloride.name": "Chlorid draselný / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specifikace na vyžádání",
+  "catalogue.product.fertilizer-additives.name": "Přísady do hnojiv a protispékavé látky",
+  "catalogue.product.fertilizer-additives.grade": "Specifikace na vyžádání"
 }

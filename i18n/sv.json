@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Produktinformation",
   "about.network": "Vårt handelsnätverk omfattar över 60 oberoende partner världen över. Varje leveranskälla bedöms för den aktuella affären.",
-  "rfq.requestType": "Typ av förfrågan"
+  "rfq.requestType": "Typ av förfrågan",
+  "catalogue.family.raw-materials": "Råvaror och gödseltillsatser",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Specifikation på begäran",
+  "catalogue.product.calcium-carbonate.name": "Kalciumkarbonat",
+  "catalogue.product.calcium-carbonate.grade": "Specifikation på begäran",
+  "catalogue.product.phosphoric-acid.name": "Fosforsyra",
+  "catalogue.product.phosphoric-acid.grade": "Specifikation på begäran",
+  "catalogue.product.potassium-chloride.name": "Kaliumklorid / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specifikation på begäran",
+  "catalogue.product.fertilizer-additives.name": "Gödseltillsatser och klumpförebyggande medel",
+  "catalogue.product.fertilizer-additives.grade": "Specifikation på begäran"
 }

@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Detalii produs",
   "about.network": "Rețeaua noastră comercială include peste 60 de parteneri independenți din întreaga lume. Fiecare sursă de aprovizionare este evaluată pentru tranzacția respectivă.",
-  "rfq.requestType": "Tipul solicitării"
+  "rfq.requestType": "Tipul solicitării",
+  "catalogue.family.raw-materials": "Materii prime și aditivi pentru îngrășăminte",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Specificații la cerere",
+  "catalogue.product.calcium-carbonate.name": "Carbonat de calciu",
+  "catalogue.product.calcium-carbonate.grade": "Specificații la cerere",
+  "catalogue.product.phosphoric-acid.name": "Acid fosforic",
+  "catalogue.product.phosphoric-acid.grade": "Specificații la cerere",
+  "catalogue.product.potassium-chloride.name": "Clorură de potasiu / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specificații la cerere",
+  "catalogue.product.fertilizer-additives.name": "Aditivi pentru îngrășăminte și agenți antiaglomeranți",
+  "catalogue.product.fertilizer-additives.grade": "Specificații la cerere"
 }

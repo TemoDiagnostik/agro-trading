@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Productdetails",
   "about.network": "Ons handelsnetwerk omvat meer dan 60 onafhankelijke partners wereldwijd. Elke leveringsbron wordt voor de specifieke transactie beoordeeld.",
-  "rfq.requestType": "Type aanvraag"
+  "rfq.requestType": "Type aanvraag",
+  "catalogue.family.raw-materials": "Grondstoffen en meststofadditieven",
+  "catalogue.product.dolomite.name": "Dolomiet",
+  "catalogue.product.dolomite.grade": "Specificatie op aanvraag",
+  "catalogue.product.calcium-carbonate.name": "Calciumcarbonaat",
+  "catalogue.product.calcium-carbonate.grade": "Specificatie op aanvraag",
+  "catalogue.product.phosphoric-acid.name": "Fosforzuur",
+  "catalogue.product.phosphoric-acid.grade": "Specificatie op aanvraag",
+  "catalogue.product.potassium-chloride.name": "Kaliumchloride / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specificatie op aanvraag",
+  "catalogue.product.fertilizer-additives.name": "Meststofadditieven en antiklontermiddelen",
+  "catalogue.product.fertilizer-additives.grade": "Specificatie op aanvraag"
 }

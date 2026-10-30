@@ -214,5 +214,45 @@
     "grade": "Requirement-led",
     "url": "index.html?rfqProduct=Selected+specialty+formulations&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Requirement-led&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
     "desc": "Specialty nutrition reviewed against the required formulation, destination and supply capability."
+  },
+  {
+    "id": "dolomite",
+    "family": "raw-materials",
+    "name": "Dolomite",
+    "grade": "Specification on request",
+    "url": "index.html?rfqProduct=Dolomite&rfqRequest=Buyer+Commercial+RFQ&rfqCategory=Dolomite#contactFormBox",
+    "desc": "Mineral composition, calcium and magnesium basis, fineness and intended use are confirmed against the selected source."
+  },
+  {
+    "id": "calcium-carbonate",
+    "family": "raw-materials",
+    "name": "Calcium carbonate",
+    "grade": "Specification on request",
+    "url": "index.html?rfqProduct=Calcium+carbonate&rfqRequest=Buyer+Commercial+RFQ&rfqCategory=Calcium+carbonate#contactFormBox",
+    "desc": "Source, purity, particle size and intended industrial or agricultural use are specified for each enquiry."
+  },
+  {
+    "id": "phosphoric-acid",
+    "family": "raw-materials",
+    "name": "Phosphoric acid",
+    "grade": "Specification on request",
+    "url": "index.html?rfqProduct=Phosphoric+acid&rfqRequest=Buyer+Commercial+RFQ&rfqCategory=Phosphoric+acid#contactFormBox",
+    "desc": "Concentration basis, impurity limits, end use and compatible delivery arrangements are confirmed per enquiry."
+  },
+  {
+    "id": "potassium-chloride",
+    "family": "raw-materials",
+    "name": "Potassium chloride / MOP",
+    "grade": "Specification on request",
+    "url": "index.html?rfqProduct=Potassium+chloride+%2F+MOP&rfqRequest=Buyer+Commercial+RFQ&rfqCategory=Potassium+chloride+%2F+MOP#contactFormBox",
+    "desc": "Potassium grade, chloride content, product form and intended use are reviewed before quotation."
+  },
+  {
+    "id": "fertilizer-additives",
+    "family": "raw-materials",
+    "name": "Fertilizer additives & anti-caking agents",
+    "grade": "Specification on request",
+    "url": "index.html?rfqProduct=Fertilizer+additives+%26+anti-caking+agents&rfqRequest=Buyer+Commercial+RFQ&rfqCategory=Fertilizer+additives+%26+anti-caking+agents#contactFormBox",
+    "desc": "Coatings and conditioning additives are evaluated for the named fertilizer, handling conditions and required performance."
   }
 ]

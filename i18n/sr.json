@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Detalji proizvoda",
   "about.network": "Naša poslovna mreža obuhvata više od 60 nezavisnih partnera širom sveta. Svaki izvor snabdevanja procenjujemo za konkretnu transakciju.",
-  "rfq.requestType": "Vrsta upita"
+  "rfq.requestType": "Vrsta upita",
+  "catalogue.family.raw-materials": "Сировине и додаци за ђубрива",
+  "catalogue.product.dolomite.name": "Доломит",
+  "catalogue.product.dolomite.grade": "Спецификација на захтев",
+  "catalogue.product.calcium-carbonate.name": "Калцијум-карбонат",
+  "catalogue.product.calcium-carbonate.grade": "Спецификација на захтев",
+  "catalogue.product.phosphoric-acid.name": "Фосфорна киселина",
+  "catalogue.product.phosphoric-acid.grade": "Спецификација на захтев",
+  "catalogue.product.potassium-chloride.name": "Калијум-хлорид / MOP",
+  "catalogue.product.potassium-chloride.grade": "Спецификација на захтев",
+  "catalogue.product.fertilizer-additives.name": "Додаци за ђубрива и средства против згрудњавања",
+  "catalogue.product.fertilizer-additives.grade": "Спецификација на захтев"
 }

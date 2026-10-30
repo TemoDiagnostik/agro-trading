@@ -556,5 +556,16 @@
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
   "catalogue.cta.details": "Podrobnosti o izdelku",
   "about.network": "Naša poslovna mreža vključuje več kot 60 neodvisnih partnerjev po vsem svetu. Vsak vir dobave ocenimo za posamezen posel.",
-  "rfq.requestType": "Vrsta povpraševanja"
+  "rfq.requestType": "Vrsta povpraševanja",
+  "catalogue.family.raw-materials": "Surovine in dodatki za gnojila",
+  "catalogue.product.dolomite.name": "Dolomit",
+  "catalogue.product.dolomite.grade": "Specifikacija na zahtevo",
+  "catalogue.product.calcium-carbonate.name": "Kalcijev karbonat",
+  "catalogue.product.calcium-carbonate.grade": "Specifikacija na zahtevo",
+  "catalogue.product.phosphoric-acid.name": "Fosforna kislina",
+  "catalogue.product.phosphoric-acid.grade": "Specifikacija na zahtevo",
+  "catalogue.product.potassium-chloride.name": "Kalijev klorid / MOP",
+  "catalogue.product.potassium-chloride.grade": "Specifikacija na zahtevo",
+  "catalogue.product.fertilizer-additives.name": "Dodatki za gnojila in sredstva proti sprijemanju",
+  "catalogue.product.fertilizer-additives.grade": "Specifikacija na zahtevo"
 }
