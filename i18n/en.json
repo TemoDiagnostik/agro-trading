@@ -517,7 +517,7 @@
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
   "catalogue.product.npk-105210.desc": "High-phosphorus NPK formulation with trace elements. Final specification confirmed per request.",
   "catalogue.product.npk-150530.name": "Water-soluble NPK + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.npk-150530.desc": "Potassium-focused NPK formulation with trace elements, subject to current supply confirmation.",
   "catalogue.product.iron.name": "Iron chelate",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
@@ -540,7 +540,7 @@
   "catalogue.product.specialty.name": "Selected specialty formulations",
   "catalogue.product.specialty.grade": "Requirement-led",
   "catalogue.product.specialty.desc": "Specialty nutrition reviewed against the required formulation, destination and supply capability.",
-  "catalogue.cta.specs": "Specifications",
+  "catalogue.cta.specs": "Request specifications",
   "catalogue.page.title": "Fertilizers & plant nutrition.",
   "catalogue.page.lead": "A clear view of our sourcing range, from phosphate materials and granular fertilizers to water-soluble formulations and micronutrients.",
   "catalogue.bottom.title": "Have a specific requirement?",
@@ -562,5 +562,7 @@
   "catalogue.product.ssp19.name": "Granular single superphosphate / GSSP",
   "catalogue.product.ssp19.grade": "19% P₂O₅",
   "catalogue.product.ssp19.desc": "Granular phosphate grade. Nutrient declaration basis and current supply are confirmed in the selected supplier specification.",
-  "catalogue.cta.details": "Product details"
+  "catalogue.cta.details": "Product details",
+  "about.network": "Our commercial network includes more than 60 independent partners worldwide. Each supply source is assessed for the specific transaction.",
+  "rfq.requestType": "Enquiry type"
 }

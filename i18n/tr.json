@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Tedarikçi doğrulaması, tedarik sürecimizin bir parçasıdır. Tedarikçinin kimliğini, tedarik yetkisini ve ilgili belgeleri kendimiz kontrol ediyor, gerektiğinde bağımsız üçüncü taraf doğrulamasına başvuruyoruz. Bilgileri doğrulanamayan veya haklarında önemli şüpheler giderilemeyen tedarikçilerle ilerlemiyoruz.",
   "catalogue.range.note": "Mevcudiyet, menşe, spesifikasyon, dokümantasyon, ambalaj ve ticari koşullar her nitelikli RFQ ve sevkiyat için teyit edilir.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Ürün ayrıntıları"
+  "catalogue.cta.details": "Ürün ayrıntıları",
+  "about.network": "Ticari ağımız dünya çapında 60’tan fazla bağımsız iş ortağını kapsar. Her tedarik kaynağı ilgili işlem özelinde değerlendirilir.",
+  "rfq.requestType": "Talep türü"
 }

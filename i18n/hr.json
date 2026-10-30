@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Provjera dobavljača dio je našeg procesa nabave. Sami provjeravamo identitet dobavljača, njegovo ovlaštenje za isporuku i relevantnu dokumentaciju, uz provjeru neovisne treće strane prema potrebi. Ne nastavljamo suradnju s dobavljačima čije podatke nije moguće provjeriti ili kod kojih ostaju nerazjašnjene bitne sumnje.",
   "catalogue.range.note": "Dostupnost, podrijetlo, specifikacija, dokumentacija, pakiranje i komercijalni uvjeti potvrđuju se za svaki kvalificirani RFQ i svaku pošiljku.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Detalji proizvoda"
+  "catalogue.cta.details": "Detalji proizvoda",
+  "about.network": "Naša poslovna mreža uključuje više od 60 neovisnih partnera diljem svijeta. Svaki izvor opskrbe procjenjujemo za konkretnu transakciju.",
+  "rfq.requestType": "Vrsta upita"
 }

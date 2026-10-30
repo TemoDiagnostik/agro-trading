@@ -1,6 +1,7 @@
 """Build product detail pages from the public range and reviewed bilingual text."""
 from pathlib import Path
 import json,re,html
+from urllib.parse import urlsplit, parse_qsl, urlencode, urlunsplit
 ROOT=Path(__file__).resolve().parent.parent
 def read(p):return (ROOT/p).read_text()
 def write(p,t): (ROOT/p).parent.mkdir(parents=True,exist_ok=True);(ROOT/p).write_text("\n".join(line.rstrip() for line in t.splitlines())+"\n")
@@ -83,6 +84,10 @@ formula={'mkp':'KH₂PO₄','up':'CO(NH₂)₂ · H₃PO₄','dap':'(NH₄)₂HP
 cards=json.loads(read('product-range.json'))
 for p in cards:
  id=p['id'];family=p['family'];path='product-'+id+'.html';url=html.escape(p['url']);name=html.escape(p['name'])
+ parts=urlsplit(p['url']);query=dict(parse_qsl(parts.query))
+ query['rfqRequest']='Product Specification Request'
+ query['rfqTechnical']='Please provide the relevant product specification, TDS, SDS and representative COA where available.'
+ specs_url=html.escape(urlunsplit((parts.scheme,parts.netloc,parts.path,urlencode(query),parts.fragment)))
  h=re.sub(r'<title>.*?</title>','<title>'+name+' | Euro Agri Trading</title>',head,flags=re.S)
  h=re.sub(r'data-i18n-title="[^"]*"','',h);h=re.sub(r'data-i18n-page-root="[^"]*"','data-i18n-page-root="i18n/product-details/"',h)
  if 'data-i18n-page-root' not in h:h=h.replace('<html ','<html data-i18n-page-root="i18n/product-details/" ')
@@ -100,7 +105,7 @@ for p in cards:
 <div class="container detail-body">{t('basis','p','class="detail-summary"')}<nav class="detail-nav" aria-label="Product sections"><a href="#specification">{t('specs')}</a><a href="#applications">{t('uses')}</a><a href="#packing">{t('packing')}</a><a href="#documents">{t('documents')}</a></nav>
 <section id="specification">{t('specs','h2')}<table class="detail-specs"><thead><tr>{t('parameter','th','scope="col"')}{t('confirmation','th','scope="col"')}</tr></thead><tbody>{rows}</tbody></table></section>
 <div class="detail-columns"><section class="detail-panel" id="applications">{t('uses','h2')}{t('use.'+family,'p')}</section><section class="detail-panel" id="packing">{t('packing','h2')}{t('packingText','p')}</section></div>
-<section class="detail-documents" id="documents">{t('documents','h2')}{t('docsText','p')}{t('complianceText','p')}</section><section class="detail-cta">{t('ctaText','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></section></div></main>{footer}'''
+<section class="detail-documents" id="documents">{t('documents','h2')}{t('docsText','p')}{t('complianceText','p')}<a class="btn btn-outline" data-i18n="catalogue.cta.specs" href="{specs_url}">Request specifications</a></section><section class="detail-cta">{t('ctaText','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></section></div></main>{footer}'''
  write(path,h+content)
 s=read('sitemap.xml');s=re.sub(r'\s*<url>\s*<loc>https://euroagritrading.eu/product-[\s\S]*?</url>','',s)
 s=s.replace('</urlset>',''.join('<url><loc>https://euroagritrading.eu/product-'+p['id']+'.html</loc></url>\n' for p in cards)+'</urlset>');write('sitemap.xml',s)

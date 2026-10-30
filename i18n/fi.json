@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Toimittajien tarkistaminen on osa hankintaprosessiamme. Tarkistamme itse toimittajan henkilöllisyyden ja yritystiedot, oikeuden toimittaa tuotteet sekä olennaiset asiakirjat ja käytämme tarvittaessa riippumatonta kolmatta osapuolta tietojen varmentamiseen. Emme jatka yhteistyötä toimittajien kanssa, jos heidän tietojaan ei voida varmentaa tai olennaiset epäilykset jäävät ratkaisematta.",
   "catalogue.range.note": "Saatavuus, alkuperä, eritelmä, dokumentaatio, pakkaus ja kaupalliset ehdot vahvistetaan jokaiselle hyväksytylle tarjouspyynnölle ja lähetykselle.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Tuotetiedot"
+  "catalogue.cta.details": "Tuotetiedot",
+  "about.network": "Kaupallinen verkostomme käsittää yli 60 itsenäistä kumppania eri puolilla maailmaa. Jokainen hankintalähde arvioidaan kyseistä kauppaa varten.",
+  "rfq.requestType": "Tiedustelun tyyppi"
 }

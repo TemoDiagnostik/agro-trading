@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Die Überprüfung von Lieferanten ist Teil unseres Beschaffungsprozesses. Wir prüfen selbst die Identität der Lieferanten, ihre Lieferberechtigung und die relevanten Unterlagen und ziehen bei Bedarf unabhängige Dritte hinzu. Wir arbeiten nicht mit Lieferanten weiter, deren Angaben nicht verifiziert werden können oder bei denen wesentliche Bedenken ungeklärt bleiben.",
   "catalogue.range.note": "Verfügbarkeit, Ursprung, Spezifikation, Dokumentation, Verpackung und kommerzielle Bedingungen werden für jede qualifizierte RFQ und jede Lieferung bestätigt.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Produktdetails"
+  "catalogue.cta.details": "Produktdetails",
+  "about.network": "Unser Handelsnetzwerk umfasst mehr als 60 unabhängige Partner weltweit. Jede Bezugsquelle wird für die jeweilige Transaktion geprüft.",
+  "rfq.requestType": "Art der Anfrage"
 }

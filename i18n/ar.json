@@ -517,7 +517,7 @@
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
   "catalogue.product.npk-105210.desc": "تركيبة NPK مرتفعة الفوسفور مع عناصر صغرى؛ تؤكد المواصفات النهائية لكل طلب.",
   "catalogue.product.npk-150530.name": "سماد NPK ذائب مع عناصر صغرى",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.npk-150530.desc": "تركيبة NPK مرتفعة البوتاسيوم مع عناصر صغرى، حسب تأكيد التوريد الحالي.",
   "catalogue.product.iron.name": "الحديد المخلّب",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
@@ -540,7 +540,7 @@
   "catalogue.product.specialty.name": "تركيبات تخصصية مختارة",
   "catalogue.product.specialty.grade": "حسب متطلبات الطلب",
   "catalogue.product.specialty.desc": "تغذية متخصصة تتم مراجعتها وفق التركيبة والوجهة وقدرة التوريد المطلوبة.",
-  "catalogue.cta.specs": "المواصفات",
+  "catalogue.cta.specs": "طلب المواصفات",
   "catalogue.page.title": "الأسمدة والتغذية النباتية.",
   "catalogue.page.lead": "عرض واضح لمجموعة منتجات التوريد، من مواد الفوسفات والأسمدة المحببة إلى التركيبات الذائبة والعناصر الصغرى.",
   "catalogue.bottom.title": "لديك متطلبات محددة؟",
@@ -562,5 +562,7 @@
   "catalogue.product.ssp19.name": "السوبرفوسفات الأحادي المحبب / GSSP",
   "catalogue.product.ssp19.grade": "19% P₂O₅",
   "catalogue.product.ssp19.desc": "درجة فوسفات محببة؛ يُؤكد أساس إعلان العناصر الغذائية والتوفر الحالي في مواصفة المورد المحدد.",
-  "catalogue.cta.details": "تفاصيل المنتج"
+  "catalogue.cta.details": "تفاصيل المنتج",
+  "about.network": "تضم شبكتنا التجارية أكثر من 60 شريكًا مستقلًا حول العالم. ويُقيَّم كل مصدر توريد وفق متطلبات المعاملة المحددة.",
+  "rfq.requestType": "نوع الطلب"
 }

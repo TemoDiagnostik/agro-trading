@@ -534,7 +534,7 @@
   "catalogue.product.magnesium.grade": "Mg + N",
   "catalogue.product.npk-202020.grade": "20-20-20 + TE",
   "catalogue.product.npk-105210.grade": "10-52-10 + TE",
-  "catalogue.product.npk-150530.grade": "15-05-30 + TE",
+  "catalogue.product.npk-150530.grade": "15-5-30 + TE",
   "catalogue.product.iron.grade": "Fe 6% EDDHA",
   "catalogue.product.zinc.grade": "Zn 15% EDTA",
   "catalogue.product.manganese.grade": "Mn",
@@ -554,5 +554,7 @@
   "about.p3": "Verificarea furnizorilor face parte din procesul nostru de aprovizionare. Efectuăm propriile verificări privind identitatea furnizorului, dreptul său de a furniza produsele și documentația relevantă, apelând la verificarea de către terți independenți atunci când este necesar. Nu continuăm colaborarea cu furnizori ale căror date nu pot fi verificate sau în cazul cărora persistă îndoieli semnificative nerezolvate.",
   "catalogue.range.note": "Disponibilitatea, originea, specificația, documentația, ambalarea și condițiile comerciale sunt confirmate pentru fiecare RFQ calificat și fiecare expediere.",
   "catalogue.family.processed.desc": "GSSP 17% / 19% · GSP 20% · DSP 36% · TSP · DAP · MAP 10-46-0 · NPK",
-  "catalogue.cta.details": "Detalii produs"
+  "catalogue.cta.details": "Detalii produs",
+  "about.network": "Rețeaua noastră comercială include peste 60 de parteneri independenți din întreaga lume. Fiecare sursă de aprovizionare este evaluată pentru tranzacția respectivă.",
+  "rfq.requestType": "Tipul solicitării"
 }
