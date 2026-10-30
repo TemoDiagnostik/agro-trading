@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfatne sirovine · Prerađeni fosfati i složena đubriva · Azotna đubriva · Vodotopiva đubriva (WSF) · Mikroelementi i specijalni proizvodi · Сировине и додаци за ђубрива. Trenutna dostupnost, opcije porekla i komercijalni uslovi potvrđuju se za svaki RFQ.",
   "sup.origin.title": "Pokrivenost više porekla",
   "sup.origin.text": "Strukturisana nabavka usklađena sa uvoznim tokovima EU. Porekla se potvrđuju po transakciji na osnovu gradacije, alokacije i spremnosti pošiljke.",
-  "sup.origin.eu.title": "Evropa",
-  "sup.origin.eu.text": "Proizvođači i distributeri usklađeni sa EU.",
-  "sup.origin.na.title": "Severna Afrika",
-  "sup.origin.na.text": "Fosfatna stena i minerali uz izvozno spremnu dokumentaciju.",
-  "sup.origin.me.title": "Bliski istok",
-  "sup.origin.me.text": "Partneri za nabavku đubriva i minerala.",
-  "sup.origin.asia.title": "Azija",
-  "sup.origin.asia.text": "Mreža proizvođača vodotopivih i specijalnih đubriva.",
   "sup.verify.title": "Postepena provera dobavljača i transakcija",
   "sup.verify.text": "Obim provere prilagođen je fazi transakcije: najpre se procenjuje komercijalna izvodljivost, a zatim se po potrebi produbljuju provere ugovorne strane i pošiljke.",
   "sup.verify.step1.title": "Verifikacija subjekta i izvoza",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Tehničko i komercijalno savetovanje",
   "cp.nav": "Komercijalna partnerstva",
   "cp.hero.cta": "Prijavite se kao komercijalni partner",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Кина",
+  "sup.country.egypt": "Египат",
+  "sup.country.morocco": "Мароко",
+  "sup.country.jordan": "Јордан",
+  "sup.country.turkey": "Турска"
 }

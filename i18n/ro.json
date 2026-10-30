@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Materii fosfatice · Fosfați procesați și îngrășăminte complexe · Îngrășăminte azotate · Îngrășăminte solubile în apă (WSF) · Micronutrienți și produse speciale · Materii prime și aditivi pentru îngrășăminte. Disponibilitatea curentă, opțiunile de origine și condițiile comerciale se confirmă pentru fiecare RFQ.",
   "sup.origin.title": "Acoperire multi-origine",
   "sup.origin.text": "Aprovizionare structurată aliniată fluxurilor de import UE. Originile sunt confirmate per tranzacție în funcție de grad, alocare și disponibilitatea transportului.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "Producători și distribuitori aliniați UE.",
-  "sup.origin.na.title": "Africa de Nord",
-  "sup.origin.na.text": "Fosfat de rocă și minerale cu documentație pregătită pentru export.",
-  "sup.origin.me.title": "Orientul Mijlociu",
-  "sup.origin.me.text": "Parteneri de aprovizionare pentru îngrășăminte și minerale.",
-  "sup.origin.asia.title": "Asia",
-  "sup.origin.asia.text": "Rețea de producție pentru îngrășăminte solubile în apă și îngrășăminte speciale.",
   "sup.verify.title": "Verificare progresivă a furnizorilor și tranzacțiilor",
   "sup.verify.text": "Verificarea este proporțională cu etapa tranzacției: întâi evaluăm fezabilitatea comercială, apoi aprofundăm, după caz, verificările contrapărții și lotului.",
   "sup.verify.step1.title": "Validare entitate & export",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Îndrumare tehnică și comercială",
   "cp.nav": "Parteneriate comerciale",
   "cp.hero.cta": "Aplicați ca partener comercial",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "China",
+  "sup.country.egypt": "Egipt",
+  "sup.country.morocco": "Maroc",
+  "sup.country.jordan": "Iordania",
+  "sup.country.turkey": "Turcia"
 }

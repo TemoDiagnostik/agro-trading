@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfátové suroviny · Zpracované fosfáty a vícesložková hnojiva · Dusíkatá hnojiva · Vodou rozpustná hnojiva (WSF) · Mikroživiny a speciální produkty · Suroviny a přísady do hnojiv. Aktuální dostupnost, možnosti původu a obchodní podmínky se potvrzují pro každou RFQ.",
   "sup.origin.title": "Pokrytí více původů",
   "sup.origin.text": "Strukturované zajištění dodávek v souladu s dovozními postupy EU. Původ je potvrzen pro každou transakci dle stupně, alokace a připravenosti zásilky.",
-  "sup.origin.eu.title": "Evropa",
-  "sup.origin.eu.text": "Výrobci a distributoři v souladu s EU.",
-  "sup.origin.na.title": "Severní Afrika",
-  "sup.origin.na.text": "Dodávky fosfátové horniny a minerálů s exportně připravenou dokumentací.",
-  "sup.origin.me.title": "Blízký východ",
-  "sup.origin.me.text": "Partneři pro zajištění dodávek hnojiv a minerálů.",
-  "sup.origin.asia.title": "Asie",
-  "sup.origin.asia.text": "Výrobní síť vodou rozpustných a specializovaných hnojiv.",
   "sup.verify.title": "Postupné prověřování dodavatelů a transakcí",
   "sup.verify.text": "Rozsah prověřování odpovídá fázi transakce: nejprve se posuzuje obchodní proveditelnost a poté se podle potřeby rozšiřují kontroly protistrany a zásilky.",
   "sup.verify.step1.title": "Ověření subjektu a exportu",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Technické a obchodní poradenství",
   "cp.nav": "Obchodní partnerství",
   "cp.hero.cta": "Přihlásit se jako obchodní partner",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Čína",
+  "sup.country.egypt": "Egypt",
+  "sup.country.morocco": "Maroko",
+  "sup.country.jordan": "Jordánsko",
+  "sup.country.turkey": "Turecko"
 }

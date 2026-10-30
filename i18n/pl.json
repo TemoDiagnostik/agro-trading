@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Surowce fosforanowe · Przetworzone fosforany i nawozy wieloskładnikowe · Nawozy azotowe · Nawozy rozpuszczalne w wodzie (WSF) · Mikroelementy i produkty specjalistyczne · Surowce i dodatki do nawozów. Bieżąca dostępność, opcje pochodzenia i warunki handlowe są potwierdzane dla każdego RFQ.",
   "sup.origin.title": "Zasięg wielu źródeł pochodzenia",
   "sup.origin.text": "Ustrukturyzowane pozyskiwanie zgodne z procesami importu do UE. Pochodzenie jest potwierdzane dla każdej transakcji na podstawie klasy, alokacji i gotowości dostawy.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "Producenci i dystrybutorzy zgodni ze standardami UE.",
-  "sup.origin.na.title": "Afryka Północna",
-  "sup.origin.na.text": "Fosforyty i surowce mineralne z dokumentacją gotową do eksportu.",
-  "sup.origin.me.title": "Bliski Wschód",
-  "sup.origin.me.text": "Partnerzy w zakresie pozyskiwania nawozów i surowców mineralnych.",
-  "sup.origin.asia.title": "Azja",
-  "sup.origin.asia.text": "Sieć produkcyjna nawozów rozpuszczalnych w wodzie i nawozów specjalistycznych.",
   "sup.verify.title": "Etapowa weryfikacja dostawców i transakcji",
   "sup.verify.text": "Zakres weryfikacji jest proporcjonalny do etapu transakcji: najpierw oceniamy wykonalność handlową, a następnie, w razie potrzeby, rozszerzamy kontrolę kontrahenta i wysyłki.",
   "sup.verify.step1.title": "Weryfikacja podmiotu i uprawnień eksportowych",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Doradztwo techniczne i handlowe",
   "cp.nav": "Partnerstwa handlowe",
   "cp.hero.cta": "Zgłoś się jako partner handlowy",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Chiny",
+  "sup.country.egypt": "Egipt",
+  "sup.country.morocco": "Maroko",
+  "sup.country.jordan": "Jordania",
+  "sup.country.turkey": "Turcja"
 }

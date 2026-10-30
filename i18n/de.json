@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Phosphatprodukte · Aufbereitete Phosphate & Mehrnährstoffdünger · Stickstoffdünger · Wasserlösliche Düngemittel (WSF) · Spurennährstoffe & Spezialprodukte · Rohstoffe und Düngemittelzusätze. Aktuelle Verfügbarkeit, Ursprungsoptionen und Handelsbedingungen werden je RFQ bestätigt.",
   "sup.origin.title": "Multi-Origin-Abdeckung",
   "sup.origin.text": "Strukturierte Beschaffung im Einklang mit EU-Importprozessen. Ursprünge werden pro Transaktion anhand von Qualität, Allokation und Versandbereitschaft bestätigt.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "EU-konforme Produzenten und Distributoren.",
-  "sup.origin.na.title": "Nordafrika",
-  "sup.origin.na.text": "Rohphosphat- und Mineralversorgung mit exportfertiger Dokumentation.",
-  "sup.origin.me.title": "Naher Osten",
-  "sup.origin.me.text": "Partner für Dünger- und Mineralbeschaffung.",
-  "sup.origin.asia.title": "Asien",
-  "sup.origin.asia.text": "Herstellernetzwerk für wasserlösliche und Spezialdünger.",
   "sup.verify.title": "Stufenweise Lieferanten- & Transaktionsprüfung",
   "sup.verify.text": "Der Prüfumfang richtet sich nach der Transaktionsphase: Zunächst stehen kommerzielle Machbarkeit und Verfügbarkeit im Vordergrund; vertiefte Gegenpartei- und Versandprüfungen folgen bei Bedarf.",
   "sup.verify.step1.title": "Unternehmens- & Exportvalidierung",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Technische und kaufmännische Beratung",
   "cp.nav": "Handelspartnerschaften",
   "cp.hero.cta": "Als Handelspartner bewerben",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "China",
+  "sup.country.egypt": "Ägypten",
+  "sup.country.morocco": "Marokko",
+  "sup.country.jordan": "Jordanien",
+  "sup.country.turkey": "Türkei"
 }

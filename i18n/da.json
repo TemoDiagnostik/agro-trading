@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfatråvarer · Forarbejdede fosfater og sammensat gødning · Kvælstofgødning · Vandopløselig gødning (WSF) · Mikronæringsstoffer og specialprodukter · Råvarer og gødningstilsætningsstoffer. Aktuel tilgængelighed, oprindelsesmuligheder og handelsvilkår bekræftes pr. RFQ.",
   "sup.origin.title": "Dækning på tværs af flere oprindelser",
   "sup.origin.text": "Struktureret sourcing tilpasset EU’s importworkflows. Oprindelser bekræftes pr. transaktion baseret på kvalitet, allokering og forsendelsesparathed.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "EU-tilpassede producenter og distributører.",
-  "sup.origin.na.title": "Nordafrika",
-  "sup.origin.na.text": "Råfosfat og mineralsk forsyning med eksportklar dokumentation.",
-  "sup.origin.me.title": "Mellemøsten",
-  "sup.origin.me.text": "Sourcingpartnere inden for gødning og mineraler.",
-  "sup.origin.asia.title": "Asien",
-  "sup.origin.asia.text": "Produktionsnetværk for vandopløselige og specialgødninger.",
   "sup.verify.title": "Trinvis leverandør- og transaktionsverifikation",
   "sup.verify.text": "Verifikationen tilpasses transaktionens fase: først vurderes den kommercielle gennemførlighed, hvorefter kontrol af modpart og forsendelse udvides efter behov.",
   "sup.verify.step1.title": "Validering af enhed & eksport",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Teknisk og kommerciel vejledning",
   "cp.nav": "Kommercielle partnerskaber",
   "cp.hero.cta": "Ansøg som kommerciel partner",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Kina",
+  "sup.country.egypt": "Egypten",
+  "sup.country.morocco": "Marokko",
+  "sup.country.jordan": "Jordan",
+  "sup.country.turkey": "Tyrkiet"
 }

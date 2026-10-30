@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfaatgrondstoffen · Verwerkte fosfaten en samengestelde meststoffen · Stikstofmeststoffen · Wateroplosbare meststoffen (WSF) · Micronutriënten en speciale producten · Grondstoffen en meststofadditieven. Actuele beschikbaarheid, oorsprongsopties en handelsvoorwaarden worden per RFQ bevestigd.",
   "sup.origin.title": "Dekking van meerdere herkomsten",
   "sup.origin.text": "Gestructureerde sourcing afgestemd op EU-importworkflows. Herkomsten worden per transactie bevestigd op basis van graad, allocatie en zendinggereedheid.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "EU-afgestemde producenten en distributeurs.",
-  "sup.origin.na.title": "Noord-Afrika",
-  "sup.origin.na.text": "Fosfaatgesteente en mineralen met exportklare documentatie.",
-  "sup.origin.me.title": "Midden-Oosten",
-  "sup.origin.me.text": "Partners voor sourcing van meststoffen en mineralen.",
-  "sup.origin.asia.title": "Azië",
-  "sup.origin.asia.text": "Productienetwerk voor wateroplosbare en speciale meststoffen.",
   "sup.verify.title": "Stapsgewijze leveranciers- & transactieverificatie",
   "sup.verify.text": "De verificatie is afgestemd op de transactiefase: eerst wordt de commerciële haalbaarheid beoordeeld, waarna controles van tegenpartij en zending waar nodig worden verdiept.",
   "sup.verify.step1.title": "Entiteits- & exportvalidatie",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Technisch en commercieel advies",
   "cp.nav": "Commerciële partnerschappen",
   "cp.hero.cta": "Meld u aan als commerciële partner",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "China",
+  "sup.country.egypt": "Egypte",
+  "sup.country.morocco": "Marokko",
+  "sup.country.jordan": "Jordanië",
+  "sup.country.turkey": "Turkije"
 }

@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfat hammaddeleri · İşlenmiş fosfatlar ve kompoze gübreler · Azotlu gübreler · Suda Çözünür Gübreler (WSF) · Mikro besinler ve özel ürünler · Hammaddeler ve gübre katkıları. Güncel bulunabilirlik, menşe seçenekleri ve ticari şartlar her RFQ için teyit edilir.",
   "sup.origin.title": "Çoklu Menşe Kapsamı",
   "sup.origin.text": "AB ithalat iş akışlarıyla uyumlu yapılandırılmış tedarik. Menşeler, kalite, tahsis ve sevkiyat hazırlığına göre işlem bazında doğrulanır.",
-  "sup.origin.eu.title": "Avrupa",
-  "sup.origin.eu.text": "AB uyumlu üreticiler ve distribütörler.",
-  "sup.origin.na.title": "Kuzey Afrika",
-  "sup.origin.na.text": "İhracata hazır dokümantasyonla fosfat kayası ve mineral tedariki.",
-  "sup.origin.me.title": "Orta Doğu",
-  "sup.origin.me.text": "Gübre ve mineral tedarik ortakları.",
-  "sup.origin.asia.title": "Asya",
-  "sup.origin.asia.text": "Suda çözünür ve özel gübre üretim ağı.",
   "sup.verify.title": "Aşamalı tedarikçi ve işlem doğrulaması",
   "sup.verify.text": "Doğrulama kapsamı işlemin aşamasına göre belirlenir: önce ticari uygulanabilirlik değerlendirilir, ardından gerektiğinde karşı taraf ve sevkiyat kontrolleri derinleştirilir.",
   "sup.verify.step1.title": "Kuruluş ve İhracat Doğrulaması",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Teknik ve ticari danışmanlık",
   "cp.nav": "Ticari Ortaklıklar",
   "cp.hero.cta": "Ticari ortak olarak başvurun",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Çin",
+  "sup.country.egypt": "Mısır",
+  "sup.country.morocco": "Fas",
+  "sup.country.jordan": "Ürdün",
+  "sup.country.turkey": "Türkiye"
 }

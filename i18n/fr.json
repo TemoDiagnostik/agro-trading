@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Matières phosphatées · Phosphates transformés et engrais composés · Engrais azotés · Engrais hydrosolubles (WSF) · Oligoéléments et produits spécialisés · Matières premières et additifs pour engrais. La disponibilité actuelle, les options d’origine et les conditions commerciales sont confirmées pour chaque RFQ.",
   "sup.origin.title": "Couverture multi-origines",
   "sup.origin.text": "Approvisionnement structuré aligné sur les flux d’importation UE. Les origines sont confirmées par transaction selon le grade, l’allocation et l’état de préparation de l’expédition.",
-  "sup.origin.eu.title": "Europe",
-  "sup.origin.eu.text": "Producteurs et distributeurs alignés UE.",
-  "sup.origin.na.title": "Afrique du Nord",
-  "sup.origin.na.text": "Phosphate naturel et minéraux avec documentation prête à l’export.",
-  "sup.origin.me.title": "Moyen-Orient",
-  "sup.origin.me.text": "Partenaires d’approvisionnement en engrais et minéraux.",
-  "sup.origin.asia.title": "Asie",
-  "sup.origin.asia.text": "Réseau de fabrication d’engrais hydrosolubles et spécialisés.",
   "sup.verify.title": "Vérification progressive des fournisseurs & des opérations",
   "sup.verify.text": "La vérification est proportionnée à l’étape de l’opération : la faisabilité commerciale est examinée en premier, puis les contrôles de contrepartie et d’expédition sont approfondis si nécessaire.",
   "sup.verify.step1.title": "Vérification de l’entité & de la capacité d’export",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Conseils techniques et commerciaux",
   "cp.nav": "Partenariats commerciaux",
   "cp.hero.cta": "Postuler comme partenaire commercial",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Chine",
+  "sup.country.egypt": "Égypte",
+  "sup.country.morocco": "Maroc",
+  "sup.country.jordan": "Jordanie",
+  "sup.country.turkey": "Turquie"
 }

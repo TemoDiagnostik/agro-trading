@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Fosfatne sirovine · Prerađeni fosfati i složena gnojiva · Dušična gnojiva · Vodotopiva gnojiva (WSF) · Mikroelementi i posebni proizvodi · Sirovine i dodaci gnojivima. Trenutačna dostupnost, opcije podrijetla i komercijalni uvjeti potvrđuju se za svaki RFQ.",
   "sup.origin.title": "Pokrivenost više podrijetla",
   "sup.origin.text": "Strukturirana nabava usklađena s uvoznim procesima EU. Podrijetla se potvrđuju po transakciji prema razredu, alokaciji i spremnosti pošiljke.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "Proizvođači i distributeri usklađeni s EU.",
-  "sup.origin.na.title": "Sjeverna Afrika",
-  "sup.origin.na.text": "Fosfatna stijena i mineralna opskrba s izvozno spremnom dokumentacijom.",
-  "sup.origin.me.title": "Bliski istok",
-  "sup.origin.me.text": "Partneri za nabavu gnojiva i minerala.",
-  "sup.origin.asia.title": "Azija",
-  "sup.origin.asia.text": "Proizvodna mreža vodotopivih i specijalnih gnojiva.",
   "sup.verify.title": "Postupna provjera dobavljača i transakcija",
   "sup.verify.text": "Opseg provjere prilagođen je fazi transakcije: najprije se procjenjuje komercijalna izvedivost, a zatim se prema potrebi produbljuju provjere ugovorne strane i pošiljke.",
   "sup.verify.step1.title": "Validacija subjekta i izvoza",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Tehničko i komercijalno savjetovanje",
   "cp.nav": "Komercijalna partnerstva",
   "cp.hero.cta": "Prijavite se kao komercijalni partner",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "Kina",
+  "sup.country.egypt": "Egipat",
+  "sup.country.morocco": "Maroko",
+  "sup.country.jordan": "Jordan",
+  "sup.country.turkey": "Turska"
 }

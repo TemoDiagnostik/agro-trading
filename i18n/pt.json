@@ -300,14 +300,6 @@
   "sup.secondary.text.specialty": "Matérias fosfatadas · Fosfatos processados e fertilizantes compostos · Fertilizantes azotados · Fertilizantes Solúveis em Água (WSF) · Micronutrientes e produtos especializados · Matérias-primas e aditivos para fertilizantes. A disponibilidade atual, as opções de origem e as condições comerciais são confirmadas para cada RFQ.",
   "sup.origin.title": "Cobertura Multi-Origem",
   "sup.origin.text": "Aquisição estruturada alinhada com os fluxos de importação da UE. As origens são confirmadas por transação com base no teor, alocação e prontidão do embarque.",
-  "sup.origin.eu.title": "Europa",
-  "sup.origin.eu.text": "Produtores e distribuidores alinhados com a UE.",
-  "sup.origin.na.title": "Norte de África",
-  "sup.origin.na.text": "Fornecimento de fosfato natural e minerais com documentação pronta para exportação.",
-  "sup.origin.me.title": "Médio Oriente",
-  "sup.origin.me.text": "Parceiros de aquisição de fertilizantes e minerais.",
-  "sup.origin.asia.title": "Ásia",
-  "sup.origin.asia.text": "Rede de fabrico de fertilizantes solúveis em água e fertilizantes especiais.",
   "sup.verify.title": "Verificação progressiva de fornecedores e transações",
   "sup.verify.text": "A verificação é proporcional à fase da transação: primeiro avaliamos a viabilidade comercial e depois aprofundamos, quando necessário, as verificações da contraparte e da remessa.",
   "sup.verify.step1.title": "Validação da Entidade e da Capacidade de Exportação",
@@ -574,5 +566,10 @@
   "nav.docs.guidance": "Orientação técnica e comercial",
   "cp.nav": "Parcerias comerciais",
   "cp.hero.cta": "Candidate-se como parceiro comercial",
-  "footer.facebook": "Facebook"
+  "footer.facebook": "Facebook",
+  "sup.country.china": "China",
+  "sup.country.egypt": "Egito",
+  "sup.country.morocco": "Marrocos",
+  "sup.country.jordan": "Jordânia",
+  "sup.country.turkey": "Turquia"
 }
