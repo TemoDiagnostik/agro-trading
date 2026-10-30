@@ -12,7 +12,7 @@
 
   function setOpen(group, open, focusTrigger = false) {
     cancelClose(group);
-    const trigger = group.querySelector('.nav-dropdown-trigger');
+    const trigger = group.querySelector('.nav-dropdown-toggle');
     const panel = group.querySelector('.nav-dropdown-panel');
     trigger.setAttribute('aria-expanded', String(open));
     panel.hidden = !open;
@@ -20,7 +20,7 @@
     if (open && window.matchMedia('(min-width: 1101px)').matches) {
       const container = group.closest('.container.nav');
       const bounds = container.getBoundingClientRect();
-      const anchor = trigger.getBoundingClientRect();
+      const anchor = group.getBoundingClientRect();
       const rtl = getComputedStyle(trigger).direction === 'rtl';
       const desired = rtl ? anchor.right - bounds.left - panel.offsetWidth : anchor.left - bounds.left;
       const left = Math.max(0, Math.min(desired, bounds.width - panel.offsetWidth));
@@ -36,10 +36,10 @@
   }
 
   groups.forEach(group => {
-    const trigger = group.querySelector('.nav-dropdown-trigger');
+    const link = group.querySelector('.nav-dropdown-trigger');
+    const trigger = group.querySelector('.nav-dropdown-toggle');
     const panel = group.querySelector('.nav-dropdown-panel');
-    // Without JavaScript the link still opens the overview page.
-    trigger.setAttribute('role', 'button');
+    trigger.hidden = false;
     group.addEventListener('pointerenter', event => {
       if (!hoverMedia.matches || event.pointerType !== 'mouse') return;
       closeAll(group);
@@ -55,22 +55,21 @@
       }, 300));
     });
     trigger.addEventListener('click', event => {
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      const mouseActivation = hoverMedia.matches && event.detail > 0 &&
-        (!event.pointerType || event.pointerType === 'mouse');
-      const open = mouseActivation || trigger.getAttribute('aria-expanded') !== 'true';
+      const open = trigger.getAttribute('aria-expanded') !== 'true';
       closeAll(group);
       setOpen(group, open);
     });
-    trigger.addEventListener('keydown', event => {
-      if (event.key !== ' ' && event.key !== 'ArrowDown') return;
+    function openWithKeyboard(event) {
+      if (event.key !== 'ArrowDown') return;
       event.preventDefault();
       closeAll(group);
       setOpen(group, true);
       panel.querySelector('a')?.focus();
-    });
-    panel.addEventListener('click', event => {
+    }
+    link.addEventListener('keydown', openWithKeyboard);
+    trigger.addEventListener('keydown', openWithKeyboard);
+    // Keep native link navigation, including Enter and modifier-clicks.
+    group.addEventListener('click', event => {
       if (event.target.closest('a')) closeAll();
     });
     group.addEventListener('focusout', event => {

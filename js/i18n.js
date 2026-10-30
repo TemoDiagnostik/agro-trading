@@ -220,7 +220,7 @@
     });
 
     navigation.addEventListener('click', event => {
-      if (event.target.closest('a') && !event.target.closest('.nav-dropdown-trigger')) {
+      if (event.target.closest('a')) {
         setExpanded(false, false);
       }
     });
@@ -474,7 +474,17 @@
       }
     });
 
+    const initialHash = window.location.hash;
     await setLanguage(languageConfig.detect());
+    // Translated text and fonts can move a homepage section after native navigation.
+    if (initialHash && document.body.classList.contains('catalogue-home')) {
+      const loaded = document.readyState === 'complete' ? Promise.resolve()
+        : new Promise(resolve => window.addEventListener('load', resolve, { once: true }));
+      await Promise.all([loaded, document.fonts?.ready]);
+      if (window.location.hash === initialHash) {
+        document.getElementById(initialHash.slice(1))?.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }
   }
 
   if (document.readyState === 'loading') {
