@@ -45,12 +45,16 @@
 
   document.addEventListener('click', event => {
     if (!event.target.closest('[data-nav-dropdown]')) closeAll();
-  });
+  }, true);
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
     const open = groups.find(group => group.classList.contains('is-open'));
-    if (open) { event.preventDefault(); setOpen(open, false, true); }
-  });
+    if (open) {
+      event.preventDefault();
+      event.stopPropagation();
+      setOpen(open, false, true);
+    }
+  }, true);
   window.addEventListener('pageshow', () => closeAll());
   window.addEventListener('hashchange', () => closeAll());
 })();
