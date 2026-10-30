@@ -86,5 +86,5 @@
   "cp.form.success": "Teşekkürler. Başvurunuz gizli inceleme için alındı.",
   "cp.form.error": "Başvuruyu gönderemedik. Lütfen tekrar deneyin veya info@euroagritrading.eu ile iletişime geçin.",
   "cp.footer.note": "Ticari ortaklıklar bağımsızdır, münhasır değildir ve yazılı anlaşmaya ve fırsat yeterliliğine tabidir.",
-  "cp.form.directEmailNote": "Başvurunuz doğrudan Euro Agri Trading'e gönderilir. E-posta girişi veya üçüncü taraf form hizmeti gerekmez."
+  "cp.form.directEmailNote": "Başvurular özel olarak incelenir ve herkese açık olarak görüntülenmez."
 }

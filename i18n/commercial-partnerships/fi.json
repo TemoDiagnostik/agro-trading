@@ -86,5 +86,5 @@
   "cp.form.success": "Kiitos. Hakemuksesi on vastaanotettu luottamuksellista tarkistusta varten.",
   "cp.form.error": "Emme voineet lähettää hakemusta. Yritä uudelleen tai ota yhteyttä info@euroagritrading.eu.",
   "cp.footer.note": "Kaupalliset kumppanuudet ovat riippumattomia, ei-yksinoikeudellisia ja edellyttävät kirjallista sopimusta ja mahdollisuutta.",
-  "cp.form.directEmailNote": "Hakemuksesi lähetetään suoraan osoitteeseen Euro Agri Trading. Sähköpostiosoitetta tai kolmannen osapuolen lomakepalvelua ei tarvita."
+  "cp.form.directEmailNote": "Hakemukset tarkistetaan yksityisesti, eikä niitä näytetä julkisesti."
 }

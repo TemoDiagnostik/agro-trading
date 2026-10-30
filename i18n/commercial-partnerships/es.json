@@ -86,5 +86,5 @@
   "cp.form.success": "Gracias. Su solicitud ha sido recibida para su revisión confidencial.",
   "cp.form.error": "No pudimos enviar la solicitud. Inténtelo de nuevo o póngase en contacto con info@euroagritrading.eu.",
   "cp.footer.note": "Las asociaciones comerciales son independientes, no exclusivas y están sujetas a acuerdo escrito y calificación de oportunidad.",
-  "cp.form.directEmailNote": "Su solicitud se envía directamente a Euro Agri Trading. No se requiere iniciar sesión por correo electrónico ni utilizar un formulario de terceros."
+  "cp.form.directEmailNote": "Las solicitudes se revisan de forma privada y no se muestran públicamente."
 }
