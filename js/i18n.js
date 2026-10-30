@@ -220,7 +220,7 @@
     });
 
     navigation.addEventListener('click', event => {
-      if (event.target.closest('a')) {
+      if (event.target.closest('a') && !event.target.closest('.nav-dropdown-trigger')) {
         setExpanded(false, false);
       }
     });
@@ -232,7 +232,7 @@
     });
 
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true' && !navigation.querySelector('[data-nav-dropdown].is-open')) {
         setExpanded(false, true);
       }
     });

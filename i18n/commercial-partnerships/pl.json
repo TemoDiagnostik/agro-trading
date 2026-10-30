@@ -86,5 +86,5 @@
   "cp.form.success": "Dziękujemy. Zgłoszenie zostało przyjęte do poufnej oceny.",
   "cp.form.error": "Nie mogliśmy złożyć wniosku. Spróbuj ponownie lub napisz na adres info@euroagritrading.eu.",
   "cp.footer.note": "Spółki handlowe są niezależne, niewyłączne i podlegają pisemnej umowie oraz zastrzeżeniu możliwości.",
-  "cp.form.directEmailNote": "Zgłoszenie jest wysyłane bezpośrednio do Euro Agri Trading. Logowanie do poczty ani zewnętrzna usługa formularzy nie są wymagane."
+  "cp.form.directEmailNote": "Zgłoszenia są przeglądane prywatnie i nie są wyświetlane publicznie."
 }

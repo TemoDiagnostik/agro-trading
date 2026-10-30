@@ -1,4 +1,17 @@
 /* Mark the homepage section currently being read at every screen size. */
+body header { overflow: visible !important; height: auto !important; }
+body header .container.nav.nav-all-visible .brand-wrap { display: flex !important; align-items: center !important; }
+body header .container.nav.nav-all-visible .brand { flex-shrink: 0; }
+body header .container.nav.nav-all-visible .brand-text {
+  display: flex !important; flex-direction: column !important; align-items: stretch !important;
+  flex: 1; gap: 2px; min-width: 0; max-width: none !important;
+  white-space: normal !important; overflow: visible !important;
+}
+body header .container.nav.nav-all-visible .brand-name {
+  width: 100%; white-space: normal !important; overflow-wrap: normal; line-height: 1.25 !important;
+}
+body header .container.nav.nav-all-visible .brand-tagline { width: 100%; margin: 0; }
+body header .container.nav.nav-all-visible .navbar-nav > li > a::after { display: none !important; }
 body.catalogue-home header .container.nav.nav-all-visible .navbar-nav a.active {
   color: #147a4c;
   box-shadow: inset 0 -2px #147a4c;
@@ -110,4 +123,54 @@ body.catalogue-home header .container.nav.nav-all-visible .navbar-nav a.active {
   }
   body header .container.nav.nav-all-visible .navbar-nav > li { width: 100%; margin: 0 !important; padding: 0 !important; border: 0 !important; }
   body header .container.nav.nav-all-visible .navbar-nav a { font-size: 15px !important; padding: 11px 10px !important; text-align: start; white-space: normal; }
+}
+
+/* Click disclosures share the header's width and scroll within short windows. */
+body header .container.nav.nav-all-visible .nav-dropdown { position: static; }
+body header .container.nav.nav-all-visible .nav-dropdown-trigger::before {
+  content: '\25BE'; display: inline-block; margin-inline-end: 5px; font-size: .8em;
+}
+body header .container.nav.nav-all-visible .is-open > .nav-dropdown-trigger::before { transform: rotate(180deg); }
+body header .container.nav.nav-all-visible .nav-dropdown-panel {
+  position: absolute; top: 100%; right: 0; left: auto; z-index: 120;
+  width: min(980px, calc(100vw - 36px)); max-height: calc(100dvh - 112px);
+  box-sizing: border-box; overflow: auto; overscroll-behavior: contain;
+  background: #fffdf7; border: 1px solid #d7c59c; border-top: 3px solid #b58c31;
+  border-radius: 0 0 6px 6px; box-shadow: 0 14px 30px #0b3b2c26;
+  padding: 18px 22px; text-align: start;
+}
+body header .container.nav.nav-all-visible .nav-dropdown-panel[hidden] { display: none !important; }
+body header .container.nav.nav-all-visible .nav-documents-panel { width: min(430px, calc(100vw - 36px)); }
+body header .container.nav.nav-all-visible .nav-product-groups {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px;
+}
+body header .container.nav.nav-all-visible .nav-product-group { min-width: 0; margin: 0; padding: 0; }
+body header .container.nav.nav-all-visible .nav-dropdown-panel ul {
+  display: block; list-style: none; margin: 0; padding: 0; width: 100%; background: none;
+}
+body header .container.nav.nav-all-visible .nav-dropdown-panel li { display: block; margin: 0; padding: 0; width: 100%; border: 0; }
+body header .container.nav.nav-all-visible .nav-dropdown-panel a {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  padding: 8px 7px !important; color: #284c3e !important; font-size: 13px !important;
+  font-weight: 400; line-height: 1.5; text-align: start; white-space: normal !important;
+  text-decoration: none; box-shadow: none; border: 0; border-radius: 3px;
+}
+body header .container.nav.nav-all-visible .nav-dropdown-panel a::after { display: none !important; }
+body header .container.nav.nav-all-visible .nav-dropdown-panel a:hover,
+body header .container.nav.nav-all-visible .nav-dropdown-panel a:focus-visible { background: #f1ead9; color: #0b3b2c !important; }
+body header .container.nav.nav-all-visible .nav-dropdown-panel a:focus-visible { outline: 2px solid #785d32; outline-offset: 1px; }
+body header .container.nav.nav-all-visible .nav-dropdown-panel .nav-family-link {
+  font-weight: 700; border-bottom: 1px solid #e5d7b6; border-radius: 0; margin-bottom: 5px;
+}
+body header .container.nav.nav-all-visible .nav-dropdown-panel .nav-overview-link {
+  font-weight: 700; margin-bottom: 12px; padding-bottom: 12px !important; border-bottom: 1px solid #d7c59c;
+}
+body header .container.nav.nav-all-visible .nav-dropdown-panel small { font-size: 11px; color: #6f5826; flex-shrink: 0; }
+@media (max-width: 1100px) {
+  body header .container.nav.nav-all-visible .nav-dropdown-panel {
+    position: static; width: 100%; max-height: none; box-shadow: none;
+    padding: 12px 8px; margin-bottom: 8px; border-top-width: 2px;
+  }
+  body header .container.nav.nav-all-visible .nav-product-groups { grid-template-columns: 1fr; gap: 18px; }
+  body header .container.nav.nav-all-visible .nav-dropdown-panel a { padding: 10px 6px !important; font-size: 14px !important; }
 }
