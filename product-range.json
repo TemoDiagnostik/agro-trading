@@ -1,0 +1,218 @@
+[
+  {
+    "id": "erp",
+    "family": "phosphates",
+    "name": "Rock phosphate powder",
+    "grade": "18-34% P₂O₅",
+    "url": "index.html?rfqProduct=Rock+phosphate+powder&rfqCategory=Rock+Phosphate&rfqGrade=18-34%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Powder and fine-powder options. Grade, origin and allocation confirmed per request."
+  },
+  {
+    "id": "grp",
+    "family": "phosphates",
+    "name": "Granular rock phosphate / GRP",
+    "grade": "Grade on request",
+    "url": "index.html?rfqProduct=Granular+rock+phosphate+%2F+GRP&rfqCategory=Granular+Rock+Phosphate+%2F+GRP&rfqGrade=Grade+on+request&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Granular phosphate matched to the required nutrient grade and physical specification."
+  },
+  {
+    "id": "grp-s",
+    "family": "phosphates",
+    "name": "GRP + sulfur / additives",
+    "grade": "Composition on request",
+    "url": "index.html?rfqProduct=GRP+%2B+sulfur+%2F+additives&rfqCategory=GRP+%2B+Sulfur+%2F+Additives&rfqGrade=Composition+on+request&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Sulfur and additive formulations, with composition and documents confirmed by the supplier."
+  },
+  {
+    "id": "low-cadmium",
+    "family": "phosphates",
+    "name": "Low-cadmium phosphate grades",
+    "grade": "Lot-specific analysis",
+    "url": "index.html?rfqProduct=Low-cadmium+phosphate+grades&rfqCategory=Low-Cadmium+Rock+Phosphate&rfqGrade=Lot-specific+analysis&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected grades reviewed against shipment-specific cadmium and heavy-metals data."
+  },
+  {
+    "id": "ssp",
+    "family": "processed",
+    "name": "Granular single superphosphate / GSSP",
+    "grade": "17% P₂O₅",
+    "url": "index.html?rfqProduct=Granular+single+superphosphate+%2F+GSSP&rfqCategory=SSP&rfqGrade=17%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Granular material with supplier-specific parameters. Final nutrient declaration confirmed per shipment."
+  },
+  {
+    "id": "ssp19",
+    "family": "processed",
+    "name": "Granular single superphosphate / GSSP",
+    "grade": "19% P₂O₅",
+    "url": "index.html?rfqProduct=Granular+single+superphosphate+%2F+GSSP&rfqCategory=SSP&rfqGrade=19%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Granular phosphate grade. Nutrient declaration basis and current supply are confirmed in the selected supplier specification."
+  },
+  {
+    "id": "gsp",
+    "family": "processed",
+    "name": "GSP",
+    "grade": "20% P₂O₅",
+    "url": "index.html?rfqProduct=GSP&rfqCategory=GSP&rfqGrade=20%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected processed phosphate grade, subject to current supplier confirmation."
+  },
+  {
+    "id": "dsp",
+    "family": "processed",
+    "name": "DSP",
+    "grade": "36% P₂O₅",
+    "url": "index.html?rfqProduct=DSP&rfqCategory=DSP&rfqGrade=36%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected processed phosphate grade. Specification and documentation confirmed per request."
+  },
+  {
+    "id": "tsp",
+    "family": "processed",
+    "name": "Triple superphosphate / TSP",
+    "grade": "0-46-0",
+    "url": "index.html?rfqProduct=Triple+superphosphate+%2F+TSP&rfqCategory=TSP&rfqGrade=0-46-0&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Grade, packing and current supply options confirmed against the buyer specification."
+  },
+  {
+    "id": "dap",
+    "family": "processed",
+    "name": "Diammonium phosphate / DAP",
+    "grade": "18-46-0",
+    "url": "index.html?rfqProduct=Diammonium+phosphate+%2F+DAP&rfqCategory=DAP&rfqGrade=18-46-0&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Phosphate fertilizer with product documentation reviewed for the selected supply channel."
+  },
+  {
+    "id": "map",
+    "family": "processed",
+    "name": "MAP / Granular ammophos",
+    "grade": "10-46-0",
+    "url": "index.html?rfqProduct=MAP+%2F+Granular+ammophos&rfqCategory=MAP+%2F+Granular+Ammophos&rfqGrade=10-46-0&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Granular nitrogen and phosphorus fertilizer. Agreed supplier specifications define the limits; the shipment COA reports the tested results."
+  },
+  {
+    "id": "npk-granular",
+    "family": "processed",
+    "name": "Granular NPK",
+    "grade": "Various formulas",
+    "url": "index.html?rfqProduct=Granular+NPK&rfqCategory=Granular+NPK&rfqGrade=Various+formulas&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Compound fertilizers sourced to the required formula, physical form and destination."
+  },
+  {
+    "id": "urea",
+    "family": "nitrogen",
+    "name": "Granular urea",
+    "grade": "46% N",
+    "url": "index.html?rfqProduct=Granular+urea&rfqCategory=Granular+Urea+46%25+N&rfqGrade=46%25+N&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Nitrogen fertilizer. Particle size, biuret and moisture parameters confirmed per shipment."
+  },
+  {
+    "id": "mkp",
+    "family": "water-soluble",
+    "name": "Monopotassium phosphate / MKP",
+    "grade": "0-52-34",
+    "url": "index.html?rfqProduct=Monopotassium+phosphate+%2F+MKP&rfqCategory=MKP+%E2%80%94+Monopotassium+Phosphate&rfqGrade=0-52-34&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Water-soluble phosphorus and potassium source for fertigation and foliar nutrition."
+  },
+  {
+    "id": "up",
+    "family": "water-soluble",
+    "name": "Urea phosphate / UP",
+    "grade": "17-44-0",
+    "url": "index.html?rfqProduct=Urea+phosphate+%2F+UP&rfqCategory=UP+%E2%80%94+Urea+Phosphate&rfqGrade=17-44-0&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Acidic water-soluble fertilizer for fertigation and nitrogen / phosphorus supply."
+  },
+  {
+    "id": "nop",
+    "family": "water-soluble",
+    "name": "Potassium nitrate / NOP",
+    "grade": "13-0-46",
+    "url": "index.html?rfqProduct=Potassium+nitrate+%2F+NOP&rfqCategory=Potassium+Nitrate+%2F+NOP&rfqGrade=13-0-46&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Potassium and nitrate nitrogen source for fertigation and specialty nutrition."
+  },
+  {
+    "id": "magnesium",
+    "family": "water-soluble",
+    "name": "Magnesium nitrate hexahydrate",
+    "grade": "Mg + N",
+    "url": "index.html?rfqProduct=Magnesium+nitrate+hexahydrate&rfqCategory=Magnesium+Nitrate+Hexahydrate&rfqGrade=Mg+%2B+N&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Water-soluble magnesium and nitrogen. Shipment-specific parameters and documentation."
+  },
+  {
+    "id": "npk-202020",
+    "family": "water-soluble",
+    "name": "Water-soluble NPK + TE",
+    "grade": "20-20-20 + TE",
+    "url": "index.html?rfqProduct=Water-soluble+NPK+%2B+TE&rfqCategory=Water-Soluble+Fertilizers+%28WSF%29&rfqGrade=20-20-20+%2B+TE&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Balanced NPK formulation with trace elements. Product specification and supply confirmed per request."
+  },
+  {
+    "id": "npk-105210",
+    "family": "water-soluble",
+    "name": "Water-soluble NPK + TE",
+    "grade": "10-52-10 + TE",
+    "url": "index.html?rfqProduct=Water-soluble+NPK+%2B+TE&rfqCategory=Water-Soluble+Fertilizers+%28WSF%29&rfqGrade=10-52-10+%2B+TE&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "High-phosphorus NPK formulation with trace elements. Final specification confirmed per request."
+  },
+  {
+    "id": "npk-150530",
+    "family": "water-soluble",
+    "name": "Water-soluble NPK + TE",
+    "grade": "15-05-30 + TE",
+    "url": "index.html?rfqProduct=Water-soluble+NPK+%2B+TE&rfqCategory=Water-Soluble+Fertilizers+%28WSF%29&rfqGrade=15-05-30+%2B+TE&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Potassium-focused NPK formulation with trace elements, subject to current supply confirmation."
+  },
+  {
+    "id": "iron",
+    "family": "micronutrients",
+    "name": "Iron chelate",
+    "grade": "Fe 6% EDDHA",
+    "url": "index.html?rfqProduct=Iron+chelate&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Fe+6%25+EDDHA&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected chelated iron formulation. Specification, packing and availability confirmed per request."
+  },
+  {
+    "id": "zinc",
+    "family": "micronutrients",
+    "name": "Zinc chelate",
+    "grade": "Zn 15% EDTA",
+    "url": "index.html?rfqProduct=Zinc+chelate&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Zn+15%25+EDTA&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected chelated zinc formulation, with product-specific technical documentation."
+  },
+  {
+    "id": "manganese",
+    "family": "micronutrients",
+    "name": "Manganese",
+    "grade": "Mn",
+    "url": "index.html?rfqProduct=Manganese&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Mn&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Form and concentration matched to the buyer requirement and current supplier availability."
+  },
+  {
+    "id": "boron",
+    "family": "micronutrients",
+    "name": "Boron",
+    "grade": "B",
+    "url": "index.html?rfqProduct=Boron&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=B&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected boron formulations, with grade and documentation confirmed per request."
+  },
+  {
+    "id": "copper",
+    "family": "micronutrients",
+    "name": "Copper",
+    "grade": "Cu",
+    "url": "index.html?rfqProduct=Copper&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Cu&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected copper nutrition products. Form, grade and intended use confirmed per request."
+  },
+  {
+    "id": "molybdenum",
+    "family": "micronutrients",
+    "name": "Molybdenum",
+    "grade": "Mo",
+    "url": "index.html?rfqProduct=Molybdenum&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Mo&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Selected molybdenum formulations, subject to product-specific supplier confirmation."
+  },
+  {
+    "id": "specialty",
+    "family": "micronutrients",
+    "name": "Selected specialty formulations",
+    "grade": "Requirement-led",
+    "url": "index.html?rfqProduct=Selected+specialty+formulations&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Requirement-led&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "desc": "Specialty nutrition reviewed against the required formulation, destination and supply capability."
+  }
+]
