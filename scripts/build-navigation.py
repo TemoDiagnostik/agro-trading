@@ -52,18 +52,19 @@ def build():
             pattern = r'<li(?:\s[^>]*)?>\s*(<a\b[^>]*data-i18n="'+re.escape(key)+r'"[^>]*>[\s\S]*?</a>)\s*</li>'
             def replace(match):
                 trigger=match[1]
-                trigger=re.sub(r'\s(?:aria-controls|aria-expanded)="[^"]*"','',trigger)
+                trigger=re.sub(r'\s(?:id|role|aria-controls|aria-expanded)="[^"]*"','',trigger)
                 if 'class="' in trigger:
                     trigger=re.sub(r'class="([^"]*)"', lambda m: 'class="'+' '.join(['nav-dropdown-trigger']+[c for c in m[1].split() if c != 'nav-dropdown-trigger'])+'"',trigger,count=1)
                 else: trigger=trigger.replace('<a ','<a class="nav-dropdown-trigger" ',1)
-                trigger=trigger.replace('<a ',f'<a aria-controls="{kind}-dropdown" aria-expanded="false" ',1)
-                return f'<li class="nav-dropdown" data-nav-dropdown="{kind}">{trigger}<!-- shared-dropdown:{kind}:start --><div class="nav-dropdown-panel nav-{kind}-panel" id="{kind}-dropdown" hidden>{panel}</div><!-- shared-dropdown:{kind}:end --></li>'
+                trigger=trigger.replace('<a ',f'<a id="{kind}-nav-link" ',1)
+                toggle=f'<button type="button" class="nav-dropdown-toggle" aria-controls="{kind}-dropdown" aria-expanded="false" aria-labelledby="{kind}-nav-link {kind}-menu-label" hidden><span class="nav-menu-label" id="{kind}-menu-label" data-i18n="nav.menu">{html.escape(EN["nav.menu"])}</span><span aria-hidden="true">▾</span></button>'
+                return f'<li class="nav-dropdown" data-nav-dropdown="{kind}">{trigger}<!-- shared-dropdown:{kind}:start -->{toggle}<div class="nav-dropdown-panel nav-{kind}-panel" id="{kind}-dropdown" hidden>{panel}</div><!-- shared-dropdown:{kind}:end --></li>'
             source,changed=re.subn(pattern,replace,source,count=1)
             if changed != 1: raise ValueError(f'Missing {key} trigger in {path.name}')
         if 'js/site-navigation.js' not in source:
-            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.1" defer></script>\n</body>')
+            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.2" defer></script>\n</body>')
         else:
-            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.1',source)
+            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.2',source)
         path.write_text(source)
         count+=1
     print(f'Built nine section menus on {count} pages ({len(PRODUCTS)} products)')
