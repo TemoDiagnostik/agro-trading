@@ -32,6 +32,14 @@
 }
 .catalogue-products[data-view=family] .product-family-heading img { height: 185px; }
 .catalogue-products[data-view=family] .range-note { margin: 30px 0 0; }
+/* Put matching cards directly below the search tools, without category artwork. */
+.range-browser[data-searching="true"] .product-family { padding-top: 20px; }
+.range-browser[data-searching="true"] .product-family-heading { display: none; }
+.range-browser[data-searching="true"] .range-tools-heading h2 { display: block; font-size: 22px; }
+.range-browser[data-searching="true"] .product-result-status {
+  color: var(--forest); font-size: 14px; font-weight: 700;
+}
+.range-browser[data-searching="true"] .no-results { padding: 24px 0; }
 .catalogue-products .product-family:focus,
 .catalogue-products .range-browser:focus { outline: none; }
 /* Keep the accessibility shortcut offscreen until keyboard focus. */

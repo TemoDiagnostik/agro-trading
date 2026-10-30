@@ -46,10 +46,11 @@
     });
     document.body.dataset.view = family === 'all' ? 'all' : 'family';
     browser.dataset.activeFamily = family;
+    browser.dataset.searching = String(terms.length > 0);
     hero.hidden = family !== 'all';
     if (allGallery) allGallery.hidden = family !== 'all' || terms.length > 0;
     if (note) {
-      if (family === 'all') document.querySelector('.range-tools').after(note);
+      if (family === 'all' && !terms.length) document.querySelector('.range-tools').after(note);
       else browser.append(note);
     }
     const dictionary = window.EuroAgriCurrentDictionary || {};
