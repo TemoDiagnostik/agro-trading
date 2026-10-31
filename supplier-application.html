@@ -212,7 +212,6 @@
     </div>
   </main>
 
-  <script src="js/form-confirmation.js?v=20261031.3"></script>
   <script>
     (function(){
       const form=document.getElementById("supplierKycForm");
@@ -234,7 +233,6 @@
       });
 
       form.addEventListener("submit",function(event){
-        event.preventDefault();
         serverHoneypot.value=String(decoyHoneypot.value||"").trim();
 
         const hasProduct=productBoxes.some(function(box){return box.checked;});
@@ -249,15 +247,13 @@
         submitButton.textContent="Submitting...";
         submitStatus.textContent="Sending the form securely. Please wait...";
 
-        window.EuroAgriSubmission.submit(form,function(){
-          submitButton.setAttribute('aria-busy','false');
-          submitStatus.textContent="Receipt has not been confirmed yet. Please contact info@euroagritrading.eu before resubmitting to avoid a duplicate application.";
-        });
-      });
-      form.addEventListener('euroagri:submission-restored',function(){
-        submitButton.disabled=false;
-        submitButton.textContent="Submit Supplier Qualification";
-        submitStatus.textContent="";
+        window.setTimeout(function(){
+          if(document.visibilityState==="visible"){
+            submitButton.disabled=false;
+            submitButton.textContent="Submit Supplier Qualification";
+            submitStatus.textContent="The submission was not confirmed. Please try again or contact info@euroagritrading.eu.";
+          }
+        },15000);
       });
     })();
   </script>
