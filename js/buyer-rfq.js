@@ -178,7 +178,7 @@
   applyQueryPrefill();
   applyConfirmedSubmission();
 
-  form.addEventListener('submit', event => {
+  form.addEventListener('submit', async event => {
     event.preventDefault();
     form.classList.add('was-validated');
     status.textContent = '';
@@ -201,8 +201,11 @@
     showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your RFQ securely…'));
     languageInput.value = document.documentElement.lang || 'en';
 
-    // Use the browser's normal form navigation so the Apps Script response is
-    // visible and a success state is never inferred from an opaque no-cors request.
-    form.submit();
+    try {
+      await window.EuroAgriSubmitForm(form);
+    } catch (error) {
+      setSubmitting(false);
+      showStatus('error', dictionaryValue('errorMessage', 'Receipt could not be confirmed. Please contact info@euroagritrading.eu before submitting again.'));
+    }
   });
 })();

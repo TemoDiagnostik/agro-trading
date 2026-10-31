@@ -105,7 +105,7 @@
   updateChallengeLabel();
   updateSummaryCounter();
 
-  form.addEventListener('submit', event => {
+  form.addEventListener('submit', async event => {
     event.preventDefault();
     form.classList.add('was-validated');
     status.textContent = '';
@@ -138,14 +138,12 @@
     showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your application securely…'));
     languageInput.value = document.documentElement.lang || 'en';
 
-    window.setTimeout(() => {
-      if (document.visibilityState === 'visible') {
-        setSubmitting(false);
-        showStatus('error', dictionaryValue('errorMessage', 'The submission was not confirmed. Please try again or contact info@euroagritrading.eu.'));
-      }
-    }, 15000);
-
-    form.submit();
+    try {
+      await window.EuroAgriSubmitForm(form);
+    } catch (error) {
+      setSubmitting(false);
+      showStatus('error', dictionaryValue('errorMessage', 'Receipt could not be confirmed. Please contact info@euroagritrading.eu before submitting again.'));
+    }
   });
 
 })();
