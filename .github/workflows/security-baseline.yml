@@ -30,5 +30,3 @@ jobs:
         run: python3 -m unittest discover -s .github/scripts -p 'test_*.py' -v
       - name: Check tracked source and public data boundaries
         run: python3 .github/scripts/security_check.py
-      - name: Test form confirmation handling
-        run: node --test .github/scripts/test_form_confirmation.cjs

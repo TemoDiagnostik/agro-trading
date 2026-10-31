@@ -138,18 +138,14 @@
     showStatus('sending', dictionaryValue('sendingMessage', 'Submitting your application securely…'));
     languageInput.value = document.documentElement.lang || 'en';
 
-    window.EuroAgriSubmission.submit(form, () => {
-      form.querySelector('button[type="submit"]').setAttribute('aria-busy', 'false');
-      showStatus('error', document.documentElement.lang === 'ar'
-        ? 'لم يصل تأكيد الاستلام بعد. يرجى التواصل عبر info@euroagritrading.eu قبل إعادة الإرسال لتجنب تكرار الطلب.'
-        : 'Receipt has not been confirmed yet. Please contact info@euroagritrading.eu before resubmitting to avoid a duplicate application.');
-    });
-  });
+    window.setTimeout(() => {
+      if (document.visibilityState === 'visible') {
+        setSubmitting(false);
+        showStatus('error', dictionaryValue('errorMessage', 'The submission was not confirmed. Please try again or contact info@euroagritrading.eu.'));
+      }
+    }, 15000);
 
-  form.addEventListener('euroagri:submission-restored', () => {
-    setSubmitting(false);
-    status.textContent = '';
-    startedAt.value = String(Date.now());
+    form.submit();
   });
 
 })();
