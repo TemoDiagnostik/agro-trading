@@ -35,6 +35,23 @@
     groups.forEach(group => { if (group !== except) setOpen(group, false); });
   }
 
+  // Group the translated labels in DOM order, so keyboard and visual order agree.
+  const menu = groups[0].parentElement;
+  const groupBreak = menu.querySelector('.nav-group-break') || document.createElement('li');
+  groupBreak.className = 'nav-group-break';
+  groupBreak.setAttribute('aria-hidden', 'true');
+  function arrangeLabels() {
+    closeAll();
+    const short = [], long = [];
+    groups.forEach(group => {
+      const label = group.querySelector('.nav-dropdown-trigger').textContent.trim();
+      (/\s/.test(label) ? long : short).push(group);
+    });
+    menu.append(...short, groupBreak, ...long);
+  }
+  arrangeLabels();
+  document.addEventListener('euroagri:languagechange', arrangeLabels);
+
   groups.forEach(group => {
     const link = group.querySelector('.nav-dropdown-trigger');
     const trigger = group.querySelector('.nav-dropdown-toggle');
