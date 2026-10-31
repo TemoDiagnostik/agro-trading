@@ -89,6 +89,16 @@ A.update({
 'performance':'إثبات الأداء','performanceText':'تُتفق معايير قابلة للقياس للتكتل أو الغبار أو المناولة وظروف التجربة. نتائج سماد أو بيئة تخزين معينة لا تثبت الأداء في غيرها.',
 'packingRaw':'يُؤكد الشكل الفيزيائي والتعبئة المتوافقة أو ترتيبات النقل السائب وحجم العبوة والعلامات ومتطلبات المناولة والحد الأدنى للطلب والتوقيت مع المصدر المختار. تتطلب المواد السائلة والصلبة ترتيبات خاصة بالمنتج.',
 'use.raw-materials':'تُقيَّم الخامات المعدنية والكيميائية ومدخلات التركيبات وفق الاستخدام الذي يحدده المشتري. الدرجات الصناعية والزراعية ليست بدائل تلقائية؛ وتحتاج الملاءمة وأي تطبيق زراعي إلى مستندات المنتج والإرشاد المؤهل.'})
+technical_review=json.loads(read('product-technical-review.json'))
+E['scientificIdentity']='Scientific & commercial identity'
+A['scientificIdentity']='الهوية العلمية والتجارية'
+for id,entry in technical_review.items():
+ E['identity.'+id]=entry['en']
+ A['identity.'+id]=entry['ar']
+# Isolate Latin chemical notation and grades inside RTL prose so 0-52-34
+# and parenthesised formulae retain their scientific reading order.
+technical_token = re.compile(r'[A-Za-z0-9(][A-Za-z0-9₀-₉()%·/+\-]*[A-Za-z0-9₀-₉%)]|[A-Za-z0-9]')
+A = {key: technical_token.sub(lambda m: '\u2066'+m.group()+'\u2069', value) for key,value in A.items()}
 for lang,d in [('en',E),('ar',A)]:write('i18n/product-details/'+lang+'.json',json.dumps({**{'detail.'+k:v for k,v in d.items()},'cp.nav':json.loads(read('i18n/commercial-partnerships/'+lang+'.json'))['cp.nav']},ensure_ascii=False,indent=2)+'\n')
 # Other language selectors keep existing navigation and product translations;
 # shared new technical paragraphs use the reviewed English fallback.
@@ -115,8 +125,11 @@ params.update({
  'potassium-chloride':['rawComposition','potassium','chloride','physical','rawImpurities'],
  'fertilizer-additives':['rawComposition','compatibility','dose','performance','liquid']})
 cards=json.loads(read('product-range.json'))
+base_labels=json.loads(read('i18n/en.json'))
+assert {p['id'] for p in cards} == set(technical_review), 'Every product requires a technical identity review'
 for p in cards:
  id=p['id'];family=p['family'];path='product-'+id+'.html';url=html.escape(p['url']);name=html.escape(p['name'])
+ family_name=html.escape(base_labels['catalogue.family.'+family])
  parts=urlsplit(p['url']);query=dict(parse_qsl(parts.query))
  query['rfqRequest']='Product Specification Request'
  query['rfqTechnical']='Please provide the relevant product specification, TDS, SDS and representative COA where available.'
@@ -129,14 +142,15 @@ for p in cards:
  h=re.sub(r'<meta property="og:(title|url|description)"[^>]+>','',h)
  h=re.sub(r'<link rel="alternate"[^>]+>','',h)
  ps=params.get(id,['grade','composition','nitrogen','phosphorus','potassium','trace','soluble'] if id.startswith('npk') else ['grade','composition','trace','soluble'])
- rows=''.join('<tr>'+t(k,'td')+t(k+'Text','td')+'</tr>' for k in ps)
+ rows='<tr>'+t('scientificIdentity','td')+t('identity.'+id,'td')+'</tr>'
+ rows+=''.join('<tr>'+t(k,'td')+t(k+'Text','td')+'</tr>' for k in ps)
  chem=f'<p class="detail-chem" dir="ltr">{formula[id]}</p>' if id in formula else ''
  picture=f'<figure class="detail-image"><img src="img/catalogue/{images[family]}" width="1536" height="1024" alt="Illustrative fertilizer material" decoding="async">{t("image","figcaption")}</figure>' if family in images else ''
  basis='rawBasis' if family=='raw-materials' else 'basis'
  packing='packingRaw' if family=='raw-materials' else 'packingText'
  content=f'''<body class="product-detail-page"><a class="skip-link" href="#main-content">Skip to content</a>{header}<main id="main-content">
-<section class="detail-hero"><div class="container"><nav class="detail-crumb" aria-label="Breadcrumb"><a href="products.html" data-i18n="nav.products">Products</a><span>/</span><a href="products.html#{family}" data-i18n="catalogue.family.{family}">{family}</a></nav>
-<div class="detail-hero-grid"><div><span class="eyebrow" data-i18n="catalogue.family.{family}">{family}</span>{product(p,'name','h1')}{chem}{product(p,'desc','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></div><div class="detail-grade">{t('reference')}{product(p,'grade','strong','dir="ltr"')}</div></div></div></section>
+<section class="detail-hero"><div class="container"><nav class="detail-crumb" aria-label="Breadcrumb"><a href="products.html" data-i18n="nav.products">Products</a><span>/</span><a href="products.html#{family}" data-i18n="catalogue.family.{family}">{family_name}</a></nav>
+<div class="detail-hero-grid"><div><span class="eyebrow" data-i18n="catalogue.family.{family}">{family_name}</span>{product(p,'name','h1')}{chem}{product(p,'desc','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></div><div class="detail-grade">{t('reference')}{product(p,'grade','strong','dir="ltr"')}</div></div></div></section>
 {picture}
 <div class="container detail-body">{t(basis,'p','class="detail-summary"')}<nav class="detail-nav" aria-label="Product sections"><a href="#specification">{t('specs')}</a><a href="#applications">{t('uses')}</a><a href="#packing">{t('packing')}</a><a href="#documents">{t('documents')}</a></nav>
 <section id="specification">{t('specs','h2')}<table class="detail-specs"><thead><tr>{t('parameter','th','scope="col"')}{t('confirmation','th','scope="col"')}</tr></thead><tbody>{rows}</tbody></table></section>

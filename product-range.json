@@ -53,14 +53,14 @@
     "name": "GSP",
     "grade": "20% P₂O₅",
     "url": "index.html?rfqProduct=GSP&rfqCategory=GSP&rfqGrade=20%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
-    "desc": "Selected processed phosphate grade, subject to current supplier confirmation."
+    "desc": "Granular phosphatic fertilizer, listed at 20% P₂O₅. Full product identity and phosphorus fractions require manufacturer confirmation."
   },
   {
     "id": "dsp",
     "family": "processed",
-    "name": "DSP",
+    "name": "Double superphosphate / DSP",
     "grade": "36% P₂O₅",
-    "url": "index.html?rfqProduct=DSP&rfqCategory=DSP&rfqGrade=36%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "url": "index.html?rfqProduct=Double+superphosphate+%2F+DSP&rfqCategory=DSP&rfqGrade=36%25+P%E2%82%82O%E2%82%85&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
     "desc": "Selected processed phosphate grade. Specification and documentation confirmed per request."
   },
   {
@@ -85,7 +85,7 @@
     "name": "MAP / Granular ammophos",
     "grade": "10-46-0",
     "url": "index.html?rfqProduct=MAP+%2F+Granular+ammophos&rfqCategory=MAP+%2F+Granular+Ammophos&rfqGrade=10-46-0&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
-    "desc": "Granular nitrogen and phosphorus fertilizer. Agreed supplier specifications define the limits; the shipment COA reports the tested results."
+    "desc": "Granular ammonium-phosphate fertilizer, listed at 10-46-0. Composition, nutrient declaration and acceptance limits follow the selected manufacturer specification."
   },
   {
     "id": "npk-granular",
@@ -93,7 +93,7 @@
     "name": "Granular NPK",
     "grade": "Various formulas",
     "url": "index.html?rfqProduct=Granular+NPK&rfqCategory=Granular+NPK&rfqGrade=Various+formulas&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
-    "desc": "Compound fertilizers sourced to the required formula, physical form and destination."
+    "desc": "Granular NPK grades matched to the required nutrient formula. Compound or bulk-blend manufacture is confirmed for the selected product."
   },
   {
     "id": "urea",
@@ -163,16 +163,16 @@
     "id": "iron",
     "family": "micronutrients",
     "name": "Iron chelate",
-    "grade": "Fe 6% EDDHA",
-    "url": "index.html?rfqProduct=Iron+chelate&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Fe+6%25+EDDHA&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "grade": "6% Fe · EDDHA",
+    "url": "index.html?rfqProduct=Iron+chelate&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=6%25+Fe+%C2%B7+EDDHA&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
     "desc": "Selected chelated iron formulation. Specification, packing and availability confirmed per request."
   },
   {
     "id": "zinc",
     "family": "micronutrients",
     "name": "Zinc chelate",
-    "grade": "Zn 15% EDTA",
-    "url": "index.html?rfqProduct=Zinc+chelate&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=Zn+15%25+EDTA&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
+    "grade": "15% Zn · EDTA",
+    "url": "index.html?rfqProduct=Zinc+chelate&rfqCategory=Micronutrients+%2F+Selected+Specialty+Fertilizers&rfqGrade=15%25+Zn+%C2%B7+EDTA&rfqRequest=Buyer+Commercial+RFQ#contactFormBox",
     "desc": "Selected chelated zinc formulation, with product-specific technical documentation."
   },
   {
