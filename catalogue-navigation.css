@@ -65,7 +65,7 @@ body.catalogue-home header .container.nav.nav-all-visible .navbar-nav a.active {
   body header .container.nav.nav-all-visible .navbar-nav {
     display: flex !important; width: 100% !important; max-width: none !important;
     justify-content: space-between !important; align-items: center;
-    flex-wrap: wrap !important; gap: 0 clamp(7px, .7vw, 15px) !important;
+    flex-wrap: nowrap !important; gap: clamp(7px, .7vw, 15px) !important;
     margin: 0 !important; padding: 0 !important; overflow: visible !important;
   }
   body header .container.nav.nav-all-visible .navbar-nav > li {
@@ -83,19 +83,16 @@ body.catalogue-home header .container.nav.nav-all-visible .navbar-nav a.active {
 
 }
 
-/* Keep whole labels on one line. At laptop widths, group single-word labels
-   on one row and multi-word labels on the next instead of squeezing the brand. */
-body header .container.nav.nav-all-visible .navbar-nav > .nav-group-break { display: none; }
+/* Every section stays beside its neighbours. Equal-height labels keep the
+   active underline aligned when a longer title wraps within its own item. */
 @media (min-width: 1101px) {
   body header .container.nav.nav-all-visible .navbar-nav > .nav-dropdown > a {
-    white-space: nowrap !important; min-height: 44px; display: flex;
+    height: 58px; box-sizing: border-box; padding-block: 8px !important;
+    white-space: normal !important; text-wrap: balance; display: flex;
     align-items: center; justify-content: center;
   }
-}
-@media (min-width: 1101px) and (max-width: 1799px) {
-  body header .container.nav.nav-all-visible .navbar-nav { justify-content: center !important; }
-  body header .container.nav.nav-all-visible .navbar-nav > .nav-group-break {
-    display: block; flex: 0 0 100%; min-width: 0; height: 0;
+  body header .container.nav.nav-all-visible .navbar-nav > .nav-dropdown[data-label-length="long"] > a {
+    max-width: 12ch;
   }
 }
 /* Small screens use a menu button in that same row, never a second bar. */
