@@ -30,6 +30,8 @@ class ProductTechnicalReview(unittest.TestCase):
         d=json.loads((ROOT/'i18n/product-details/ar.json').read_text())
         for product,token in [('mkp','0-52-34'),('map','10-46-0'),('dap','(NH₄)₂HPO₄'),('dolomite','CaMg(CO₃)₂')]:
             self.assertIn('\u2066'+token+'\u2069',d['detail.identity.'+product])
+        catalogue=json.loads((ROOT/'i18n/ar.json').read_text())
+        self.assertIn('\u206610-46-0\u2069',catalogue['catalogue.product.map.desc'])
 
     def test_agreed_grades_remain_separate(self):
         grades={p['id']:p['grade'] for p in self.products}

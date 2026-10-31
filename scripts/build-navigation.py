@@ -61,10 +61,20 @@ def build():
                 return f'<li class="nav-dropdown" data-nav-dropdown="{kind}">{trigger}<!-- shared-dropdown:{kind}:start -->{toggle}<div class="nav-dropdown-panel nav-{kind}-panel" id="{kind}-dropdown" hidden>{panel}</div><!-- shared-dropdown:{kind}:end --></li>'
             source,changed=re.subn(pattern,replace,source,count=1)
             if changed != 1: raise ValueError(f'Missing {key} trigger in {path.name}')
+        def order_labels(match):
+            items = re.findall(r'<li class="nav-dropdown"[\s\S]*?<!-- shared-dropdown:[a-z-]+:end --></li>', match[2])
+            if len(items) != 9: raise ValueError(f'Expected nine navigation items in {path.name}')
+            short, long = [], []
+            for item in items:
+                key = re.search(r'data-i18n="([^"]+)"', item)[1]
+                (long if re.search(r'\s', EN[key]) else short).append(item)
+            return match[1]+'\n    '+'\n    '.join(short+['<li class="nav-group-break" aria-hidden="true"></li>']+long)+match[3]
+        source = re.sub(r'(<ul class="navbar-nav">)([\s\S]*?)(\n\s*</ul>\s*</nav>)', order_labels, source, count=1)
+        source = re.sub(r'catalogue-navigation\.css\?v=[^"\s>]+', 'catalogue-navigation.css?v=20261031.3', source)
         if 'js/site-navigation.js' not in source:
-            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.2" defer></script>\n</body>')
+            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.3" defer></script>\n</body>')
         else:
-            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.2',source)
+            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.3',source)
         path.write_text(source)
         count+=1
     print(f'Built nine section menus on {count} pages ({len(PRODUCTS)} products)')
