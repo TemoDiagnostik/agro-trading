@@ -64,6 +64,9 @@ def build():
         def order_labels(match):
             items = re.findall(r'<li class="nav-dropdown"[\s\S]*?<!-- shared-dropdown:[a-z-]+:end --></li>', match[2])
             if len(items) != 9: raise ValueError(f'Expected nine navigation items in {path.name}')
+            how = next(item for item in items if 'data-nav-dropdown="how"' in item)
+            items.remove(how)
+            items.insert(next(i for i, item in enumerate(items) if 'data-nav-dropdown="suppliers"' in item), how)
             short, long = [], []
             for item in items:
                 key = re.search(r'data-i18n="([^"]+)"', item)[1]
