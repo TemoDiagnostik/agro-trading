@@ -37,17 +37,16 @@
 
   // Group the translated labels in DOM order, so keyboard and visual order agree.
   const menu = groups[0].parentElement;
-  const groupBreak = menu.querySelector('.nav-group-break') || document.createElement('li');
-  groupBreak.className = 'nav-group-break';
-  groupBreak.setAttribute('aria-hidden', 'true');
   function arrangeLabels() {
     closeAll();
     const short = [], long = [];
     groups.forEach(group => {
       const label = group.querySelector('.nav-dropdown-trigger').textContent.trim();
-      (/\s/.test(label) ? long : short).push(group);
+      const isLong = /\s/.test(label);
+      group.dataset.labelLength = isLong ? 'long' : 'short';
+      (isLong ? long : short).push(group);
     });
-    menu.append(...short, groupBreak, ...long);
+    menu.append(...short, ...long);
   }
   arrangeLabels();
   document.addEventListener('euroagri:languagechange', arrangeLabels);

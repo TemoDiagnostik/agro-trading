@@ -68,13 +68,13 @@ def build():
             for item in items:
                 key = re.search(r'data-i18n="([^"]+)"', item)[1]
                 (long if re.search(r'\s', EN[key]) else short).append(item)
-            return match[1]+'\n    '+'\n    '.join(short+['<li class="nav-group-break" aria-hidden="true"></li>']+long)+match[3]
+            return match[1]+'\n    '+'\n    '.join(short+long)+match[3]
         source = re.sub(r'(<ul class="navbar-nav">)([\s\S]*?)(\n\s*</ul>\s*</nav>)', order_labels, source, count=1)
-        source = re.sub(r'catalogue-navigation\.css\?v=[^"\s>]+', 'catalogue-navigation.css?v=20261031.3', source)
+        source = re.sub(r'catalogue-navigation\.css\?v=[^"\s>]+', 'catalogue-navigation.css?v=20261031.4', source)
         if 'js/site-navigation.js' not in source:
-            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.3" defer></script>\n</body>')
+            source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.4" defer></script>\n</body>')
         else:
-            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.3',source)
+            source=re.sub(r'js/site-navigation\.js\?v=[^"\s>]+','js/site-navigation.js?v=20261031.4',source)
         path.write_text(source)
         count+=1
     print(f'Built nine section menus on {count} pages ({len(PRODUCTS)} products)')
