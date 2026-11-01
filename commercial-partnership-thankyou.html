@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-i18n-title="confirmation.cpTitle">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,33 +24,23 @@
   <link rel="stylesheet" href="catalogue-secondary.css?v=20260917.1">
   <link rel="stylesheet" href="site-palette.css?v=20260918.10">
 <link rel="stylesheet" href="catalogue-identity.css?v=20261030.6">
+  <script src="js/language-init.js?v=20261101.1"></script>
 </head>
 <body>
   <main class="card">
     <div class="mark" aria-hidden="true">✓</div>
-    <h1 id="title">Application Received</h1>
-    <p id="message">Thank you. Your commercial partnership application has been received successfully by Euro Agri Trading s.r.o.</p>
-    <p id="review">The information will be reviewed confidentially. We will contact you if the profile matches a relevant cooperation opportunity.</p>
-    <div class="reference"><strong id="referenceLabel">Application Reference</strong><span id="submissionReference">Not available</span></div>
-    <p class="muted" id="retain">Please retain this reference for future correspondence regarding your application.</p>
-    <a class="button" id="returnLink" href="commercial-partnerships.html">Return to Commercial Partnerships</a>
+    <h1 id="title" data-i18n="confirmation.cpTitle">Application Received</h1>
+    <p id="message" data-i18n="confirmation.cpMessage">Thank you. Your commercial partnership application has been received successfully by Euro Agri Trading s.r.o.</p>
+    <p id="review" data-i18n="confirmation.cpReview">The information will be reviewed confidentially. We will contact you if the profile matches a relevant cooperation opportunity.</p>
+    <div class="reference"><strong id="referenceLabel" data-i18n="confirmation.cpReference">Application Reference</strong><span id="submissionReference">Not available</span></div>
+    <p class="muted" id="retain" data-i18n="confirmation.cpRetain">Please retain this reference for future correspondence regarding your application.</p>
+    <a class="button" id="returnLink" data-i18n="confirmation.cpReturn" href="commercial-partnerships.html">Return to Commercial Partnerships</a>
   </main>
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const submission = params.get('submission');
-    const language = params.get('lang') || localStorage.getItem('siteLanguage') || 'en';
-    const copy = {
-      ar:{title:'تم استلام الطلب',message:'شكرًا لك. تم استلام طلب الشراكة التجارية بنجاح لدى Euro Agri Trading s.r.o.',review:'ستتم مراجعة المعلومات بسرية، وسنتواصل معك إذا كان الملف مناسبًا لفرصة تعاون ذات صلة.',referenceLabel:'مرجع الطلب',retain:'يرجى الاحتفاظ بهذا المرجع لأي مراسلات مستقبلية تتعلق بطلبك.',returnLink:'العودة إلى الشراكات التجارية'},
-      de:{title:'Bewerbung erhalten',message:'Vielen Dank. Ihre Bewerbung für eine Handelspartnerschaft ist bei Euro Agri Trading s.r.o. eingegangen.',review:'Die Angaben werden vertraulich geprüft. Wir kontaktieren Sie, wenn Ihr Profil zu einer passenden Kooperationsmöglichkeit passt.',referenceLabel:'Bewerbungsreferenz',retain:'Bitte bewahren Sie diese Referenz für zukünftige Korrespondenz auf.',returnLink:'Zurück zu Handelspartnerschaften'},
-      cs:{title:'Žádost přijata',message:'Děkujeme. Vaše žádost o obchodní spolupráci byla úspěšně přijata společností Euro Agri Trading s.r.o.',review:'Informace budou posouzeny důvěrně. Ozveme se, pokud profil odpovídá vhodné příležitosti ke spolupráci.',referenceLabel:'Referenční číslo žádosti',retain:'Toto referenční číslo si uschovejte pro budoucí komunikaci.',returnLink:'Zpět na obchodní partnerství'}
-    };
-    if(copy[language]){
-      const text=copy[language];
-      Object.keys(text).forEach(id=>{document.getElementById(id).textContent=text[id]});
-      document.documentElement.lang=language;
-      if(language==='ar')document.documentElement.dir='rtl';
-    }
-    if(submission)document.getElementById('submissionReference').textContent=submission;
+    const submission = new URLSearchParams(location.search).get('submission');
+    if (!submission) document.getElementById('submissionReference').setAttribute('data-i18n', 'confirmation.unavailable');
+    if (submission) document.getElementById('submissionReference').textContent = submission;
   </script>
+  <script src="js/i18n.js?v=20261101.1"></script>
 </body>
 </html>

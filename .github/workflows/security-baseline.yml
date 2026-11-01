@@ -30,3 +30,7 @@ jobs:
         run: python3 -m unittest discover -s .github/scripts -p 'test_*.py' -v
       - name: Check tracked source and public data boundaries
         run: python3 .github/scripts/security_check.py
+      - name: Check language coverage and form navigation
+        run: |
+          python3 tests/language-coverage.test.py
+          node --test tests/language-runtime.test.cjs tests/form-receipt.test.cjs

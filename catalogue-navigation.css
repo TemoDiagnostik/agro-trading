@@ -95,6 +95,15 @@ body.catalogue-home header .container.nav.nav-all-visible .navbar-nav a.active {
     max-width: 12ch;
   }
 }
+/* Russian labels need a little more room on narrow desktop screens. */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  html[lang="ru"] body header .container.nav.nav-all-visible .navbar-nav {
+    gap: 4px !important;
+  }
+  html[lang="ru"] body header .container.nav.nav-all-visible .navbar-nav a {
+    font-size: 11px !important;
+  }
+}
 /* Small screens use a menu button in that same row, never a second bar. */
 @media (max-width: 1100px) {
   html { scroll-padding-top: 86px; }

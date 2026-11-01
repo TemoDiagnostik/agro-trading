@@ -614,5 +614,11 @@
   "sup.country.egypt": "مصر",
   "sup.country.morocco": "المغرب",
   "sup.country.jordan": "الأردن",
-  "sup.country.turkey": "تركيا"
+  "sup.country.turkey": "تركيا",
+  "confirmation.cpTitle": "تم استلام الطلب",
+  "confirmation.cpMessage": "شكرًا لك. تم استلام طلب الشراكة التجارية بنجاح لدى Euro Agri Trading s.r.o.",
+  "confirmation.cpReview": "ستتم مراجعة المعلومات بسرية، وسنتواصل معك إذا كان الملف مناسبًا لفرصة تعاون ذات صلة.",
+  "confirmation.cpReference": "مرجع الطلب",
+  "confirmation.cpRetain": "يرجى الاحتفاظ بهذا المرجع لأي مراسلات مستقبلية تتعلق بطلبك.",
+  "confirmation.cpReturn": "العودة إلى الشراكات التجارية"
 }

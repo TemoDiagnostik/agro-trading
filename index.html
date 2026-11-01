@@ -48,7 +48,7 @@
   <meta name="theme-color" content="#faf7f0">
 
   <!-- Set lang/dir before rendering to avoid a direction flash -->
-  <script src="js/language-init.js?v=20260818.2"></script>
+  <script src="js/language-init.js?v=20261101.1"></script>
 <!-- Google Analytics (GA4) - loads only after consent -->
 <script>
   // default: deny analytics until user accepts
@@ -106,7 +106,7 @@
   <!-- ✅ Preload hero image -->
   <link rel="preload" as="image" href="img/hero-port-desktop.webp">
 
-  <link rel="stylesheet" href="catalogue-navigation.css?v=20261031.4">
+  <link rel="stylesheet" href="catalogue-navigation.css?v=20261101.1">
   <link rel="stylesheet" href="catalogue-photography.css?v=20260918.8">
   <link rel="stylesheet" href="catalogue-categories.css?v=20260918.6">
   <link rel="stylesheet" href="site-palette.css?v=20260918.10">
@@ -183,7 +183,8 @@
     <option value="hr">Hrvatski</option>
     <option value="sr">Srpski</option>
     <option value="tr">Türkçe</option>
-  </select>
+  <option value="ru">Русский</option><option value="zh">简体中文</option>
+</select>
 </div>
   </div>
 </header>
@@ -749,7 +750,7 @@
 
 
 <!-- Shared i18n and language selector -->
-<script src="js/i18n.js?v=20261031.2"></script>
+<script src="js/i18n.js?v=20261101.1"></script>
 <script src="js/form-receipt.js?v=20261031.1"></script>
 <script src="js/buyer-rfq.js?v=20261031.1"></script>
 <script src="js/home-navigation.js?v=20260918.7" defer></script>
@@ -816,21 +817,15 @@
 <div id="cookieBanner" class="cookie-banner" role="region" aria-label="Cookie consent">
   <div class="cookie-inner">
     <div class="cookie-text">
-      <strong>Analytics Cookies</strong>
-      <span>
-        We use Google Analytics only to understand website traffic and improve our B2B services.
-        Analytics will run only if you accept.
-      </span>
+      <strong><span data-i18n="consent.title">Analytics Cookies</span></strong>
+      <span><span data-i18n="consent.text">We use Google Analytics only to understand website traffic and improve our B2B services.
+        Analytics will run only if you accept.</span></span>
     </div>
 
     <div class="cookie-actions">
-      <button type="button" class="btn btn-outline" id="rejectAnalytics">
-        Reject
-      </button>
+      <button type="button" class="btn btn-outline" id="rejectAnalytics"><span data-i18n="consent.reject">Reject</span></button>
 
-      <button type="button" class="btn btn-primary" id="acceptAnalytics">
-        Accept Analytics
-      </button>
+      <button type="button" class="btn btn-primary" id="acceptAnalytics"><span data-i18n="consent.accept">Accept Analytics</span></button>
     </div>
   </div>
 </div>

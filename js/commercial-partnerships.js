@@ -27,7 +27,8 @@
 
   function updateChallengeLabel() {
     const language = document.documentElement.lang || 'en';
-    const prompt = language === 'ar' ? 'فحص أمني' : 'Security check';
+    const prompt = language === 'ar' ? 'فحص أمني'
+      : dictionaryValue('challengeLabel', 'Security check');
     challengeLabel.textContent = `${prompt}: ${firstNumber} + ${secondNumber} =`;
   }
 
@@ -86,6 +87,7 @@
     const dictionary = event.detail && event.detail.dictionary;
 
     if (dictionary) {
+      form.dataset.challengeLabel = dictionary['cp.form.challengeLabel'] || '';
       form.dataset.requiredMessage = dictionary['cp.form.validation.required'] || '';
       form.dataset.challengeMessage = dictionary['cp.form.validation.challenge'] || '';
       form.dataset.fastMessage = dictionary['cp.form.validation.fast'] || '';
