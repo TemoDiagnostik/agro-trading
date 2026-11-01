@@ -2,7 +2,7 @@
   'use strict';
 
   const PRIMARY_LANGUAGES = Object.freeze([
-    'en', 'de', 'cs', 'pl', 'fr', 'es', 'it', 'ar'
+    'en', 'de', 'cs', 'pl', 'fr', 'es', 'it', 'ar', 'ru', 'zh'
   ]);
 
   const SECONDARY_LANGUAGES = Object.freeze([

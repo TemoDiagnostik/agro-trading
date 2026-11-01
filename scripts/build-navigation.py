@@ -73,7 +73,7 @@ def build():
                 (long if re.search(r'\s', EN[key]) else short).append(item)
             return match[1]+'\n    '+'\n    '.join(short+long)+match[3]
         source = re.sub(r'(<ul class="navbar-nav">)([\s\S]*?)(\n\s*</ul>\s*</nav>)', order_labels, source, count=1)
-        source = re.sub(r'catalogue-navigation\.css\?v=[^"\s>]+', 'catalogue-navigation.css?v=20261031.4', source)
+        source = re.sub(r'catalogue-navigation\.css\?v=[^"\s>]+', 'catalogue-navigation.css?v=20261101.1', source)
         if 'js/site-navigation.js' not in source:
             source=source.replace('</body>','<script src="js/site-navigation.js?v=20261031.4" defer></script>\n</body>')
         else:

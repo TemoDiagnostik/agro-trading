@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="js/language-init.js?v=20260818.2"></script>
+  <script src="js/language-init.js?v=20261101.1"></script>
   <style>
     :root {
       --green: #147a4c;
@@ -147,6 +147,8 @@
       fetch(`i18n/${language}.json`, { cache: 'no-store' })
         .then(response => response.ok ? response.json() : Promise.reject(new Error(String(response.status))))
         .then(dictionary => {
+          document.title = dictionary['confirmation.buyerTitle'] || document.title;
+          if (!/^EAT-RFQ-[A-Z0-9-]+$/i.test(submission)) reference.textContent = dictionary['confirmation.unavailable'] || reference.textContent;
           document.getElementById('confirmationTitle').textContent = dictionary['rfq.success'] || document.getElementById('confirmationTitle').textContent;
           document.getElementById('referenceLabel').textContent = dictionary['rfq.confirmation.reference'] || document.getElementById('referenceLabel').textContent;
           document.getElementById('retainMessage').textContent = dictionary['rfq.confirmation.retain'] || document.getElementById('retainMessage').textContent;

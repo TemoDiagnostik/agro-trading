@@ -571,5 +571,11 @@
   "sup.country.egypt": "Ägypten",
   "sup.country.morocco": "Marokko",
   "sup.country.jordan": "Jordanien",
-  "sup.country.turkey": "Türkei"
+  "sup.country.turkey": "Türkei",
+  "confirmation.cpTitle": "Bewerbung erhalten",
+  "confirmation.cpMessage": "Vielen Dank. Ihre Bewerbung für eine Handelspartnerschaft ist bei Euro Agri Trading s.r.o. eingegangen.",
+  "confirmation.cpReview": "Die Angaben werden vertraulich geprüft. Wir kontaktieren Sie, wenn Ihr Profil zu einer passenden Kooperationsmöglichkeit passt.",
+  "confirmation.cpReference": "Bewerbungsreferenz",
+  "confirmation.cpRetain": "Bitte bewahren Sie diese Referenz für zukünftige Korrespondenz auf.",
+  "confirmation.cpReturn": "Zurück zu Handelspartnerschaften"
 }

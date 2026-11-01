@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Euro Agri progressive supplier qualification build 20260901-1 -->
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-i18n-title="supplier.meta.title">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Supplier Qualification | Euro Agri Trading s.r.o.</title>
-  <meta name="description" content="Initial supplier qualification for commercially viable fertilizer supply opportunities with Euro Agri Trading s.r.o.">
+  <meta data-i18n-content="supplier.meta.description" name="description" content="Initial supplier qualification for commercially viable fertilizer supply opportunities with Euro Agri Trading s.r.o.">
   <link rel="canonical" href="https://euroagritrading.eu/supplier-application.html">
   <link rel="alternate" href="https://euroagritrading.eu/supplier-application.html" hreflang="en">
   <link rel="alternate" href="https://euroagritrading.eu/supplier-application.html" hreflang="x-default">
@@ -53,6 +53,7 @@
   <link rel="stylesheet" href="catalogue-secondary.css?v=20260917.1">
   <link rel="stylesheet" href="site-palette.css?v=20260918.10">
 <link rel="stylesheet" href="catalogue-identity.css?v=20261030.6">
+  <script src="js/language-init.js?v=20261101.1"></script>
 </head>
 <body>
   <header class="topbar">
@@ -60,7 +61,7 @@
       <img class="logo" src="logo-email.png" alt="Euro Agri Trading logo">
       <div>
         <div class="brand">Euro Agri Trading s.r.o.</div>
-        <div class="tagline">EU-Based Fertilizer Sourcing &amp; Trade Coordination</div>
+        <div class="tagline"><span data-i18n="supplier.tagline">EU-Based Fertilizer Sourcing &amp; Trade Coordination</span></div>
       </div>
     </div>
   </header>
@@ -68,11 +69,11 @@
   <main>
     <div id="formSection">
       <section class="intro">
-        <h1>Company &amp; Product Registration</h1>
-        <p>This initial step focuses on product availability and commercial feasibility for structured cooperation with Euro Agri Trading s.r.o.</p>
-        <p>Product evidence, company verification and payment checks are requested progressively only when a commercially relevant opportunity advances.</p>
-        <p>Submit products for private review against qualified international enquiries. Registration does not guarantee approval, public listing, sales or access to a market.</p>
-        <p class="required-note">Fields marked with * are required.</p>
+        <h1><span data-i18n="supplier.title">Company &amp; Product Registration</span></h1>
+        <p><span data-i18n="supplier.intro">This initial step focuses on product availability and commercial feasibility for structured cooperation with Euro Agri Trading s.r.o.</span></p>
+        <p><span data-i18n="supplier.progressive">Product evidence, company verification and payment checks are requested progressively only when a commercially relevant opportunity advances.</span></p>
+        <p><span data-i18n="supplier.registrationNote">Submit products for private review against qualified international enquiries. Registration does not guarantee approval, public listing, sales or access to a market.</span></p>
+        <p class="required-note"><span data-i18n="supplier.required">Fields marked with * are required.</span></p>
       </section>
 
       <form id="supplierKycForm" action="https://script.google.com/macros/s/AKfycbyzkYJpO5Lr1obdAEeugDfkbAEr53d_Y8g-0onlxyIyRFRVO3CT8Znag1QhbV-2Oojdsg/exec" method="post" accept-charset="UTF-8">
@@ -90,128 +91,129 @@
         </div>
 
         <fieldset>
-          <legend>1. Company Information</legend>
+          <legend><span data-i18n="supplier.companySection">1. Company Information</span></legend>
           <div class="grid">
             <div class="field full">
-              <label for="legalCompanyName">Legal Company Name <span class="required">*</span></label>
+              <label for="legalCompanyName"><span data-i18n="supplier.company">Legal Company Name</span><span class="required">*</span></label>
               <input id="legalCompanyName" name="legalCompanyName" type="text" maxlength="180" required autocomplete="organization">
             </div>
             <div class="field">
-              <label for="countryOfRegistration">Country of Registration <span class="required">*</span></label>
+              <label for="countryOfRegistration"><span data-i18n="supplier.country">Country of Registration</span><span class="required">*</span></label>
               <input id="countryOfRegistration" name="countryOfRegistration" type="text" maxlength="100" required>
             </div>
             <div class="field">
-              <label for="registrationNumber">Company Registration Number</label>
+              <label for="registrationNumber"><span data-i18n="supplier.registration">Company Registration Number</span></label>
               <input id="registrationNumber" name="registrationNumber" type="text" maxlength="100">
             </div>
             <div class="field">
-              <label for="vatTaxId">VAT / Tax ID</label>
+              <label for="vatTaxId"><span data-i18n="supplier.tax">VAT / Tax ID</span></label>
               <input id="vatTaxId" name="vatTaxId" type="text" maxlength="100">
             </div>
             <div class="field">
-              <label for="yearEstablished">Year of Establishment</label>
-              <input id="yearEstablished" name="yearEstablished" type="text" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" placeholder="Example: 2012">
+              <label for="yearEstablished"><span data-i18n="supplier.year">Year of Establishment</span></label>
+              <input id="yearEstablished" name="yearEstablished" type="text" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" data-i18n-placeholder="supplier.placeholder.year" placeholder="Example: 2012">
             </div>
             <div class="field full">
-              <label for="website">Website (if available)</label>
+              <label for="website"><span data-i18n="supplier.website">Website (if available)</span></label>
               <input id="website" name="website" type="url" maxlength="250" placeholder="https://example.com">
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>2. Supply &amp; Export Information</legend>
+          <legend><span data-i18n="supplier.supplySection">2. Supply &amp; Export Information</span></legend>
           <div class="grid">
             <div class="field full">
-              <label for="exportPorts">Loading Point(s) / Export Port(s) <span class="required">*</span></label>
-              <input id="exportPorts" name="exportPorts" type="text" maxlength="250" required placeholder="Example: warehouse city, rail terminal or export port">
+              <label for="exportPorts"><span data-i18n="supplier.ports">Loading Point(s) / Export Port(s)</span><span class="required">*</span></label>
+              <input id="exportPorts" name="exportPorts" type="text" maxlength="250" required data-i18n-placeholder="supplier.placeholder.ports" placeholder="Example: warehouse city, rail terminal or export port">
             </div>
 
             <div class="field full">
-              <div class="group-label">Primary Product(s) Offered <span class="required">*</span></div>
+              <div class="group-label"><span data-i18n="supplier.products">Primary Product(s) Offered</span><span class="required">*</span></div>
               <div class="choices">
-                <label class="choice"><input type="checkbox" name="products" value="Rock Phosphate">Rock Phosphate</label>
-                <label class="choice"><input type="checkbox" name="products" value="Granular Urea 46-0-0">Granular Urea 46-0-0</label>
-                <label class="choice"><input type="checkbox" name="products" value="MAP / Granular Ammophos">MAP / Granular Ammophos</label>
-                <label class="choice"><input type="checkbox" name="products" value="MKP 0-52-34">MKP 0-52-34</label>
-                <label class="choice"><input type="checkbox" name="products" value="Urea Phosphate 17-44-0">Urea Phosphate 17-44-0</label>
-                <label class="choice"><input type="checkbox" name="products" value="Potassium Nitrate 13-0-46">Potassium Nitrate 13-0-46</label>
-                <label class="choice"><input type="checkbox" name="products" value="Magnesium Nitrate">Magnesium Nitrate</label>
-                <label class="choice"><input type="checkbox" name="products" value="Water-Soluble Fertilizers (WSF)">Water-Soluble Fertilizers (WSF)</label>
-                <label class="choice"><input type="checkbox" name="products" value="Micronutrients / Trace Elements">Micronutrients / Trace Elements</label>
-                <label class="choice"><input type="checkbox" name="products" value="Other">Other fertilizers, raw materials or additives</label>
+                <label class="choice"><input type="checkbox" name="products" value="Rock Phosphate"><span data-i18n="supplier.rock">Rock Phosphate</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Granular Urea 46-0-0"><span data-i18n="supplier.urea">Granular Urea 46-0-0</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="MAP / Granular Ammophos"><span data-i18n="supplier.map">MAP / Granular Ammophos</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="MKP 0-52-34"><span data-i18n="supplier.mkp">MKP 0-52-34</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Urea Phosphate 17-44-0"><span data-i18n="supplier.up">Urea Phosphate 17-44-0</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Potassium Nitrate 13-0-46"><span data-i18n="supplier.nop">Potassium Nitrate 13-0-46</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Magnesium Nitrate"><span data-i18n="supplier.magnesium">Magnesium Nitrate</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Water-Soluble Fertilizers (WSF)"><span data-i18n="supplier.wsf">Water-Soluble Fertilizers (WSF)</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Micronutrients / Trace Elements"><span data-i18n="supplier.micro">Micronutrients / Trace Elements</span></label>
+                <label class="choice"><input type="checkbox" name="products" value="Other"><span data-i18n="supplier.other">Other fertilizers, raw materials or additives</span></label>
               </div>
             </div>
 
             <div class="field full">
-              <label for="otherProduct">Exact Product, Grade &amp; Origin <span class="required">*</span></label>
-              <input id="otherProduct" name="otherProduct" type="text" maxlength="250" required placeholder="Commercial name, grade, origin and form; indicate what is not yet confirmed">
+              <label for="otherProduct"><span data-i18n="supplier.exact">Exact Product, Grade &amp; Origin</span><span class="required">*</span></label>
+              <input id="otherProduct" name="otherProduct" type="text" maxlength="250" required data-i18n-placeholder="supplier.placeholder.exact" placeholder="Commercial name, grade, origin and form; indicate what is not yet confirmed">
             </div>
 
             <div class="field">
-              <label for="monthlyCapacity">Indicative Available Quantity (MT) <span class="required">*</span></label>
-              <input id="monthlyCapacity" name="availableQuantityMt" type="text" maxlength="9" inputmode="numeric" pattern="[0-9]{1,9}" placeholder="Example: 1000" required>
+              <label for="monthlyCapacity"><span data-i18n="supplier.quantity">Indicative Available Quantity (MT)</span><span class="required">*</span></label>
+              <input id="monthlyCapacity" name="availableQuantityMt" type="text" maxlength="9" inputmode="numeric" pattern="[0-9]{1,9}" data-i18n-placeholder="supplier.placeholder.quantity" placeholder="Example: 1000" required>
             </div>
 
             <div class="field">
-              <label for="moqMt">Minimum Order Quantity — MOQ (MT)</label>
-              <input id="moqMt" name="moqMt" type="text" maxlength="9" inputmode="numeric" pattern="[0-9]{1,9}" placeholder="Example: 25">
+              <label for="moqMt"><span data-i18n="supplier.moq">Minimum Order Quantity — MOQ (MT)</span></label>
+              <input id="moqMt" name="moqMt" type="text" maxlength="9" inputmode="numeric" pattern="[0-9]{1,9}" data-i18n-placeholder="supplier.placeholder.moq" placeholder="Example: 25">
             </div>
 
             <div class="field full">
-              <label for="exportMarkets">Current Export Markets</label>
-              <textarea id="exportMarkets" name="exportMarkets" maxlength="500" placeholder="List the principal countries or regions you currently serve"></textarea>
+              <label for="exportMarkets"><span data-i18n="supplier.markets">Current Export Markets</span></label>
+              <textarea id="exportMarkets" name="exportMarkets" maxlength="500" data-i18n-placeholder="supplier.placeholder.markets" placeholder="List the principal countries or regions you currently serve"></textarea>
             </div>
 
             <div class="field full">
-              <div class="group-label">Supplier Type <span class="required">*</span></div>
+              <div class="group-label"><span data-i18n="supplier.type">Supplier Type</span><span class="required">*</span></div>
               <div class="choices">
-                <label class="choice"><input type="radio" name="supplierType" value="Manufacturer" required>Manufacturer</label>
-                <label class="choice"><input type="radio" name="supplierType" value="Export Trader" required>Export Trader</label>
-                <label class="choice"><input type="radio" name="supplierType" value="Distributor" required>Distributor</label>
+                <label class="choice"><input type="radio" name="supplierType" value="Manufacturer" required><span data-i18n="supplier.manufacturer">Manufacturer</span></label>
+                <label class="choice"><input type="radio" name="supplierType" value="Export Trader" required><span data-i18n="supplier.trader">Export Trader</span></label>
+                <label class="choice"><input type="radio" name="supplierType" value="Distributor" required><span data-i18n="supplier.distributor">Distributor</span></label>
               </div>
             </div>
           </div>
-        <p class="security-note">For dolomite, calcium carbonate, phosphoric acid, potassium chloride or fertilizer additives, select Other and specify the exact product above. Technical sheets and sample analyses are requested at the relevant review stage.</p>
+        <p class="security-note"><span data-i18n="supplier.otherHelp">For dolomite, calcium carbonate, phosphoric acid, potassium chloride or fertilizer additives, select Other and specify the exact product above. Technical sheets and sample analyses are requested at the relevant review stage.</span></p>
         </fieldset>
 
         <fieldset>
-          <legend>3. Contact Information</legend>
+          <legend><span data-i18n="supplier.contactSection">3. Contact Information</span></legend>
           <div class="grid">
             <div class="field">
-              <label for="contactName">Contact Name <span class="required">*</span></label>
+              <label for="contactName"><span data-i18n="supplier.name">Contact Name</span><span class="required">*</span></label>
               <input id="contactName" name="contactName" type="text" maxlength="140" required autocomplete="name">
             </div>
             <div class="field">
-              <label for="position">Position / Title <span class="required">*</span></label>
+              <label for="position"><span data-i18n="supplier.position">Position / Title</span><span class="required">*</span></label>
               <input id="position" name="position" type="text" maxlength="140" required autocomplete="organization-title">
             </div>
             <div class="field">
-              <label for="corporateEmail">Corporate Email <span class="required">*</span></label>
+              <label for="corporateEmail"><span data-i18n="supplier.email">Corporate Email</span><span class="required">*</span></label>
               <input id="corporateEmail" name="corporateEmail" type="email" maxlength="180" required autocomplete="email">
             </div>
             <div class="field">
-              <label for="phone">Phone / WhatsApp</label>
+              <label for="phone"><span data-i18n="supplier.phone">Phone / WhatsApp</span></label>
               <input id="phone" name="phone" type="tel" maxlength="60" autocomplete="tel" placeholder="+420 732 133 919">
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>4. Progressive Verification</legend>
-          <div class="policy-box"><strong>Qualification sequence:</strong> Availability → Commercial Feasibility → Product / COA / Stock Proof → Counterparty &amp; Payment Verification.</div>
-          <div class="security-note">Do not send bank details or sensitive counterparty documents at this stage. We will request only the evidence required if a commercially relevant opportunity advances.</div>
+          <legend><span data-i18n="supplier.verificationSection">4. Progressive Verification</span></legend>
+          <div class="policy-box"><strong><span data-i18n="supplier.sequenceTitle">Qualification sequence:</span></strong> <span data-i18n="supplier.sequence">Availability → Commercial Feasibility → Product / COA / Stock Proof → Counterparty &amp; Payment Verification.</span></div>
+          <div class="security-note"><span data-i18n="supplier.sensitive">Do not send bank details or sensitive counterparty documents at this stage. We will request only the evidence required if a commercially relevant opportunity advances.</span></div>
         </fieldset>
 
         <div class="actions">
-          <p class="security-note">By submitting, you acknowledge the processing described in our <a href="privacy.html?lang=en" target="_blank" rel="noopener">Privacy Policy</a>.</p>
-          <button type="submit">Submit Supplier Qualification</button>
-          <span id="submitStatus" class="security-note" role="status" aria-live="polite">Your initial qualification will be sent directly to Euro Agri Trading’s controlled supplier register.</span>
+          <p class="security-note"><span data-i18n="supplier.privacyBefore">By submitting, you acknowledge the processing described in our</span> <a href="privacy.html?lang=en" target="_blank" rel="noopener"><span data-i18n="supplier.privacyLink">Privacy Policy</span></a>.</p>
+          <button type="submit"><span data-i18n="supplier.submit">Submit Supplier Qualification</span></button>
+          <span id="submitStatus" class="security-note" role="status" aria-live="polite"><span data-i18n="supplier.directNote">Your initial qualification will be sent directly to Euro Agri Trading’s controlled supplier register.</span></span>
         </div>
       </form>
     </div>
   </main>
 
+  <script src="js/i18n.js?v=20261101.1"></script>
   <script src="js/form-receipt.js?v=20261031.1"></script>
   <script>
     (function(){
@@ -223,6 +225,10 @@
       const submitButton=form.querySelector('button[type="submit"]');
       const submitStatus=document.getElementById("submitStatus");
 
+      const translate=(key,fallback)=>(window.EuroAgriCurrentDictionary||{})[key]||fallback;
+      const updateLanguage=()=>{form.elements.namedItem("Language").value=document.documentElement.lang||"en";};
+      document.addEventListener("euroagri:languagechange",updateLanguage);
+      updateLanguage();
       formStartedAt.value=String(Date.now());
 
       window.addEventListener("pageshow",function(event){
@@ -240,21 +246,21 @@
         const hasProduct=productBoxes.some(function(box){return box.checked;});
         if(!hasProduct){
           event.preventDefault();
-          alert("Please select at least one product.");
+          alert(translate("supplier.selectProduct","Please select at least one product."));
           productBoxes[0].focus();
           return;
         }
 
         submitButton.disabled=true;
-        submitButton.textContent="Submitting...";
-        submitStatus.textContent="Sending the form securely. Please wait...";
+        submitButton.textContent=translate("supplier.submitting","Submitting...");
+        submitStatus.textContent=translate("supplier.sending","Sending the form securely. Please wait...");
 
         try {
           await window.EuroAgriSubmitForm(form);
         } catch (error) {
           submitButton.disabled=false;
-          submitButton.textContent="Submit Supplier Qualification";
-          submitStatus.textContent="Receipt could not be confirmed. Please contact info@euroagritrading.eu before submitting again.";
+          submitButton.textContent=translate("supplier.submit","Submit Supplier Qualification");
+          submitStatus.textContent=translate("supplier.error","Receipt could not be confirmed. Please contact info@euroagritrading.eu before submitting again.");
         }
       });
     })();

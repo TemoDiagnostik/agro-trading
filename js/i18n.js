@@ -136,6 +136,12 @@
   }
 
   function applyTranslations(dictionary) {
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+      const key = element.getAttribute('data-i18n-placeholder');
+      if (key && dictionary[key] != null) {
+        element.setAttribute('placeholder', dictionary[key]);
+      }
+    });
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
 
@@ -386,6 +392,15 @@
     const wrapper = document.querySelector('.lang-flags');
 
     if (!select || !wrapper) {
+      // Forms and receipt pages share translations without a navigation menu.
+      const language = languageConfig.applyDocumentLanguage(languageConfig.detect());
+      const dictionary = await loadDictionary(language);
+      applyTranslations(dictionary);
+      window.EuroAgriCurrentDictionary = dictionary;
+      syncInternalLinks(language);
+      document.dispatchEvent(new CustomEvent('euroagri:languagechange', {
+        detail: { language, dictionary }
+      }));
       return;
     }
 

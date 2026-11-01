@@ -103,7 +103,11 @@ for lang,d in [('en',E),('ar',A)]:write('i18n/product-details/'+lang+'.json',jso
 # Other language selectors keep existing navigation and product translations;
 # shared new technical paragraphs use the reviewed English fallback.
 for p in (ROOT/'i18n').glob('*.json'):
- if p.stem not in ['en','ar']:write('i18n/product-details/'+p.name,json.dumps({'cp.nav':json.loads(read('i18n/commercial-partnerships/'+p.name))['cp.nav']},ensure_ascii=False)+'\n')
+ if p.stem not in ['en','ar']:
+  detail_path='i18n/product-details/'+p.name
+  translated=json.loads(read(detail_path)) if (ROOT/detail_path).exists() else {}
+  translated['cp.nav']=json.loads(read('i18n/commercial-partnerships/'+p.name))['cp.nav']
+  write(detail_path,json.dumps(translated,ensure_ascii=False,indent=2)+'\n')
 def t(k,tag='span',attrs=''):return f'<{tag} data-i18n="detail.{k}" {attrs}>{html.escape(E[k])}</{tag}>'
 def product(p,field,tag='span',attrs=''):return f'<{tag} data-i18n="catalogue.product.{p["id"]}.{field}" {attrs}>{html.escape(p[field])}</{tag}>'
 base=read('products.html');head=base[:base.index('<body')];header=re.search(r'<header>[\s\S]*?</header>',base)[0]

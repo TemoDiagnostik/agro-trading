@@ -571,5 +571,11 @@
   "sup.country.egypt": "Egypt",
   "sup.country.morocco": "Maroko",
   "sup.country.jordan": "Jordánsko",
-  "sup.country.turkey": "Turecko"
+  "sup.country.turkey": "Turecko",
+  "confirmation.cpTitle": "Žádost přijata",
+  "confirmation.cpMessage": "Děkujeme. Vaše žádost o obchodní spolupráci byla úspěšně přijata společností Euro Agri Trading s.r.o.",
+  "confirmation.cpReview": "Informace budou posouzeny důvěrně. Ozveme se, pokud profil odpovídá vhodné příležitosti ke spolupráci.",
+  "confirmation.cpReference": "Referenční číslo žádosti",
+  "confirmation.cpRetain": "Toto referenční číslo si uschovejte pro budoucí komunikaci.",
+  "confirmation.cpReturn": "Zpět na obchodní partnerství"
 }
