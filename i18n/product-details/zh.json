@@ -102,5 +102,7 @@
   "detail.identity.phosphoric-acid": "正磷酸，H₃PO₄。以 H₃PO₄ 表示的浓度与 P₂O₅ 当量不同。须注明质量百分比及酸品级；密度、固体物、氟化物和相关金属须有具体产品的限值及检测条件。",
   "detail.identity.potassium-chloride": "氯化钾，KCl，在肥料贸易中通常称 MOP。K₂O 当量是养分报告惯例，并非 KCl 纯度。该材料的组成含氯，不是硝酸钾（NOP）或硫酸钾（SOP）。",
   "detail.identity.fertilizer-additives": "肥料添加剂及防结块剂属于具体产品配方，并非单一化学品或养分品级。须明确组成、载体、兼容肥料、施用条件及可测性能；不暗示通用剂量或效果。",
-  "cp.nav": "商务合作"
+  "cp.nav": "商务合作",
+  "detail.erpEnquiry": "Euro Agri Trading s.r.o. 总部位于捷克，接受 P₂O₅ 含量为 28% 的磷矿粉采购询价。请提供所需数量和目的港，以便我们向供应商核实供货情况、粉体粒径及散装运输方案。",
+  "detail.erpGradesPdf": "磷矿石品位说明（英文 PDF）"
 }

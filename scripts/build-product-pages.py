@@ -15,6 +15,8 @@ E={
 'docsText':'The document set is agreed for the product and destination: technical data sheet (TDS), safety data sheet (SDS) where applicable, and certificate of analysis (COA) for the actual shipment. Representative analyses are identified as such. Inspection by an independent provider may be coordinated when agreed.',
 'complianceText':'Applicable EU and destination-market requirements are assessed for the selected product and supply route. REACH status, CE marking or any other compliance claim is supported by the relevant product documents before it is made.',
 'ctaText':'Send the quantity, destination, preferred packing and delivery window. The product and grade will be carried into your enquiry.',
+'erpEnquiry':'Euro Agri Trading s.r.o., based in Czechia, accepts sourcing enquiries for rock phosphate powder with 28% P₂O₅. Send your quantity and destination port so we can check availability, particle size and bulk shipping options with suppliers.',
+'erpGradesPdf':'Rock phosphate grades (PDF, English)',
 'grade':'Grade & declaration','gradeText':'Confirm the exact product identity, nutrient minima and test methods in the supplier TDS. The shipment COA reports results against the agreed limits.',
 'phosphorus':'Phosphorus fractions','phosphorusText':'State total, available and water-soluble P₂O₅ separately, including extraction method and reporting basis. These values are not interchangeable.',
 'nitrogen':'Nitrogen','nitrogenText':'Confirm total nitrogen and the relevant forms; distinguish nitrate, ammoniacal and urea nitrogen where applicable.',
@@ -44,6 +46,7 @@ A={
 'docsText':'تُحدد المستندات بحسب المنتج والوجهة: ورقة المواصفات الفنية ونشرة بيانات السلامة عند انطباقها وشهادة تحليل الشحنة الفعلية. تُميز التحاليل التمثيلية بوضوح. يمكن تنسيق فحص مستقل عند الاتفاق.',
 'complianceText':'تُراجع المتطلبات الأوروبية ومتطلبات بلد الوجهة بحسب المنتج ومسار التوريد. يُستند إلى مستندات المنتج لإثبات حالة REACH أو علامة CE أو أي ادعاء امتثال قبل تقديمه.',
 'ctaText':'أرسل الكمية والوجهة والتعبئة المفضلة وموعد التسليم. سيُضاف المنتج والدرجة إلى نموذج استفسارك.',
+'erpGradesPdf':'درجات الفوسفات الصخري (ملف PDF بالإنجليزية)',
 'grade':'الدرجة وإعلان العناصر','gradeText':'تُؤكد هوية المنتج وحدود العناصر وطرق القياس في مواصفة المورد. تعرض شهادة تحليل الشحنة النتائج مقارنة بالحدود المتفق عليها.',
 'phosphorus':'صور الفوسفور','phosphorusText':'تُذكر نسب P₂O₅ الكلي والمتاح والذائب في الماء منفصلة، مع طريقة الاستخلاص وأساس التقرير. لا يجوز اعتبار هذه القيم متكافئة.',
 'nitrogen':'النيتروجين','nitrogenText':'تُؤكد نسبة النيتروجين الكلي وصوره؛ مع التمييز بين النتراتي والأمونيومي واليوريا عند انطباقها.',
@@ -100,6 +103,7 @@ for id,entry in technical_review.items():
 # and parenthesised formulae retain their scientific reading order.
 technical_token = re.compile(r'[A-Za-z0-9(][A-Za-z0-9₀-₉()%·/+\-]*[A-Za-z0-9₀-₉%)]|[A-Za-z0-9]')
 A = {key: technical_token.sub(lambda m: '\u2066'+m.group()+'\u2069', value) for key,value in A.items()}
+A['erpEnquiry'] = 'تستقبل شركة \u2066Euro Agri Trading s.r.o.\u2069، ومقرها التشيك، طلبات توريد مسحوق الفوسفات الصخري بتركيز \u206628% P₂O₅\u2069. أرسل الكمية المطلوبة وميناء الوصول لنتحقق مع الموردين من التوفر وحجم الحبيبات وخيارات الشحن السائب.'
 for lang,d in [('en',E),('ar',A)]:write('i18n/product-details/'+lang+'.json',json.dumps({**{'detail.'+k:v for k,v in d.items()},'cp.nav':json.loads(read('i18n/commercial-partnerships/'+lang+'.json'))['cp.nav']},ensure_ascii=False,indent=2)+'\n')
 # Other language selectors keep existing navigation and product translations;
 # shared new technical paragraphs use the reviewed English fallback.
@@ -160,8 +164,10 @@ for p in cards:
   alternate_paths = [('en', path), ('pl', 'product-erp-pl.html'), ('x-default', path)]
   alternates = '\n'.join(f'  <link rel="alternate" href="https://euroagritrading.eu/{target}" hreflang="{language}" />' for language, target in alternate_paths)
   h = re.sub(r'(<link rel="canonical"[^>]+>)', lambda m: m[1] + '\n' + alternates, h)
- if name_counts[p['name']] > 1:
-  description = f'{page_name}. {html.escape(p["desc"])}'
+ if name_counts[p['name']] > 1 or id == 'erp':
+  description = ('Source rock phosphate powder in the 18–34% P₂O₅ range through Euro Agri Trading s.r.o. '
+                 'Enquire about 28% P₂O₅, particle size and bulk shipping to your port.'
+                 if id == 'erp' else f'{page_name}. {html.escape(p["desc"])}')
   h = re.sub(r'<meta name="description"[^>]+>', f'<meta name="description" content="{description}">', h)
   social = (f'  <meta property="og:title" content="{title}">\n'
             f'  <meta property="og:description" content="{description}">\n'
@@ -176,6 +182,15 @@ for p in cards:
  picture=f'<figure class="detail-image"><img src="img/catalogue/{images[family]}" width="1536" height="1024" alt="Illustrative fertilizer material" decoding="async">{t("image","figcaption")}</figure>' if family in images else ''
  basis='rawBasis' if family=='raw-materials' else 'basis'
  packing='packingRaw' if family=='raw-materials' else 'packingText'
+ cta_text, cta_url = 'ctaText', url
+ grade_document = ''
+ if id == 'erp':
+  cta_text = 'erpEnquiry'
+  grade_query = dict(parse_qsl(parts.query))
+  grade_query['rfqGrade'] = '28% P₂O₅'
+  cta_url = html.escape(parts._replace(query=urlencode(grade_query)).geturl())
+  pdf_link = t('erpGradesPdf', 'a', 'href="grades_summary_rock_phosphate_18-30.pdf"')
+  grade_document = f'<p>{pdf_link}</p>'
  content=f'''<body class="product-detail-page"><a class="skip-link" href="#main-content">Skip to content</a>{header}<main id="main-content">
 <section class="detail-hero"><div class="container"><nav class="detail-crumb" aria-label="Breadcrumb"><a href="products.html" data-i18n="nav.products">Products</a><span>/</span><a href="products.html#{family}" data-i18n="catalogue.family.{family}">{family_name}</a></nav>
 <div class="detail-hero-grid"><div><span class="eyebrow" data-i18n="catalogue.family.{family}">{family_name}</span>{heading}{chem}{product(p,'desc','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></div><div class="detail-grade">{t('reference')}{product(p,'grade','strong','dir="ltr"')}</div></div></div></section>
@@ -183,7 +198,7 @@ for p in cards:
 <div class="container detail-body">{t(basis,'p','class="detail-summary"')}<nav class="detail-nav" aria-label="Product sections"><a href="#specification">{t('specs')}</a><a href="#applications">{t('uses')}</a><a href="#packing">{t('packing')}</a><a href="#documents">{t('documents')}</a></nav>
 <section id="specification">{t('specs','h2')}<table class="detail-specs"><thead><tr>{t('parameter','th','scope="col"')}{t('confirmation','th','scope="col"')}</tr></thead><tbody>{rows}</tbody></table></section>
 <div class="detail-columns"><section class="detail-panel" id="applications">{t('uses','h2')}{t('use.'+family,'p')}</section><section class="detail-panel" id="packing">{t('packing','h2')}{t(packing,'p')}</section></div>
-<section class="detail-documents" id="documents">{t('documents','h2')}{t('docsText','p')}{t('complianceText','p')}<a class="btn btn-outline" data-i18n="catalogue.cta.specs" href="{specs_url}">Request specifications</a></section><section class="detail-cta">{t('ctaText','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></section></div></main>{footer}'''
+<section class="detail-documents" id="documents">{t('documents','h2')}{t('docsText','p')}{t('complianceText','p')}{grade_document}<a class="btn btn-outline" data-i18n="catalogue.cta.specs" href="{specs_url}">Request specifications</a></section><section class="detail-cta">{t(cta_text,'p')}<a class="btn btn-primary" href="{cta_url}">{t('quote')}</a></section></div></main>{footer}'''
  write(path,h+content)
 sitemap = read('sitemap.xml')
 listed_urls = set(re.findall(r'<loc>([^<]+)</loc>', sitemap))
