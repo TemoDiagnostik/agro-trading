@@ -43,7 +43,7 @@ def build():
     count = 0
     for path in ROOT.glob('*.html'):
         source = path.read_text()
-        if 'navbar-nav' not in source: continue
+        if 'navbar-nav' not in source or 'data-static-language="pl"' in source: continue
         # Rebuilding is safe: remove only the generated panel following its trigger.
         source = re.sub(r'<!-- shared-dropdown:([a-z-]+):start -->[\s\S]*?<!-- shared-dropdown:\1:end -->', lambda m: '', source)
         menus = [('nav.products','products',product_panel()),('nav.coa','documents',documents_panel())]

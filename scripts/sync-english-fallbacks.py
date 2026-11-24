@@ -13,6 +13,8 @@ BASE = json.loads((ROOT / 'i18n/en.json').read_text())
 
 def sync(path):
     source = path.read_text()
+    if 'data-static-language="pl"' in source:
+        return  # Rebuilt from this English source by build-polish-pages.py.
     dictionary = dict(BASE)
     page_root = re.search(r'data-i18n-page-root="([^"]+)"', source)
     if page_root:

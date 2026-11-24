@@ -94,10 +94,25 @@
     }
   }
 
+  // These two pages have Polish HTML at their own URLs on the static host.
+  function localizeUrl(url, language) {
+    const page = /\/(products|product-erp)(?:-pl)?\.html$/.exec(url.pathname);
+    if (page) {
+      url.pathname = url.pathname.slice(0, -page[0].length) +
+        '/' + page[1] + (language === 'pl' ? '-pl.html' : '.html');
+    }
+    if (page && language === 'pl') {
+      url.searchParams.delete('lang');
+    } else {
+      url.searchParams.set('lang', language);
+    }
+    return url;
+  }
+
   function updateCurrentUrl(language) {
     try {
       const url = new URL(location.href);
-      url.searchParams.set('lang', language);
+      localizeUrl(url, language);
       history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
     } catch (error) {
       // Ignore environments where history replacement is unavailable.
@@ -124,11 +139,10 @@
           return;
         }
 
-        url.searchParams.set('lang', language);
-
-        const path = href.split(/[?#]/, 1)[0];
-        const query = url.searchParams.toString();
-        link.setAttribute('href', `${path}?${query}${url.hash}`);
+        const originalPath = url.pathname;
+        localizeUrl(url, language);
+        const path = originalPath === url.pathname ? href.split(/[?#]/, 1)[0] : url.pathname;
+        link.setAttribute('href', `${path}${url.search}${url.hash}`);
       } catch (error) {
         // Leave malformed or unsupported links unchanged.
       }
@@ -178,6 +192,13 @@
 
     if (titleKey && dictionary[titleKey] != null) {
       document.title = dictionary[titleKey];
+    }
+    const gradedHeading = document.querySelector('h1[data-product-grade-heading]');
+    if (gradedHeading) {
+      document.title = gradedHeading.textContent.trim() + ' | Euro Agri Trading';
+      document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(meta => {
+        meta.content = document.title;
+      });
     }
   }
 
@@ -422,12 +443,19 @@
       button.setAttribute('aria-expanded', 'false');
     }
 
-    async function setLanguage(requestedLanguage) {
+    async function setLanguage(requestedLanguage, initial = false) {
       const requestId = ++languageRequestId;
       const normalized = languageConfig.normalize(requestedLanguage);
       const language = languageConfig.supported.includes(normalized)
         ? normalized
         : 'en';
+      const destination = localizeUrl(new URL(location.href), language);
+      if (destination.pathname !== location.pathname) {
+        storeLanguage(language);
+        if (initial) location.replace(destination.href);
+        else location.assign(destination.href);
+        return;
+      }
       const dictionary = await loadDictionary(language);
 
       if (requestId !== languageRequestId) {
@@ -490,7 +518,7 @@
     });
 
     const initialHash = window.location.hash;
-    await setLanguage(languageConfig.detect());
+    await setLanguage(languageConfig.detect(), true);
     // Translated text and fonts can move a homepage section after native navigation.
     if (initialHash && document.body.classList.contains('catalogue-home')) {
       const loaded = document.readyState === 'complete' ? Promise.resolve()
