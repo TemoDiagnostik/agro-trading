@@ -11,6 +11,7 @@
   const hero = document.querySelector('.range-hero');
   const allGallery = document.getElementById('allProductsGallery');
   const note = document.querySelector('.range-note');
+  const catalogueTitle = document.title;
   if (!search || !cards.length || !status || !empty) return;
   let family = 'all';
   let targetCard = null;
@@ -57,7 +58,8 @@
     const key = family === 'all' ? 'catalogue.filter.all' : `catalogue.family.${family}`;
     const title = dictionary[key] || filters.find(link => link.dataset.filter === family)?.textContent.trim() || 'All products';
     if (rangeTitle) rangeTitle.textContent = title;
-    document.title = `${title} | Euro Agri Trading s.r.o.`;
+    const useCatalogueTitle = family === 'all' && ['en', 'pl'].includes(document.documentElement.lang);
+    document.title = useCatalogueTitle ? catalogueTitle : `${title} | Euro Agri Trading s.r.o.`;
     search.placeholder = dictionary['catalogue.filter.placeholder'] || 'e.g. MAP, 20-20-20, iron';
     status.textContent = `${count} ${dictionary['catalogue.filter.count'] || 'products and formulations'}`;
     empty.hidden = count > 0;

@@ -36,6 +36,7 @@
   function detectLanguage() {
     const candidates = [
       new URLSearchParams(location.search).get('lang'),
+      document.documentElement.dataset.staticLanguage,
       getStoredLanguage(),
       (navigator.languages && navigator.languages[0]) || navigator.language,
       'en'

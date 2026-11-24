@@ -1,5 +1,6 @@
 """Build product detail pages from the public range and reviewed bilingual text."""
 from pathlib import Path
+from collections import Counter
 import json,re,html
 from urllib.parse import urlsplit, parse_qsl, urlencode, urlunsplit
 ROOT=Path(__file__).resolve().parent.parent
@@ -129,6 +130,7 @@ params.update({
  'potassium-chloride':['rawComposition','potassium','chloride','physical','rawImpurities'],
  'fertilizer-additives':['rawComposition','compatibility','dose','performance','liquid']})
 cards=json.loads(read('product-range.json'))
+name_counts = Counter(p['name'] for p in cards)
 base_labels=json.loads(read('i18n/en.json'))
 assert {p['id'] for p in cards} == set(technical_review), 'Every product requires a technical identity review'
 for p in cards:
@@ -138,13 +140,35 @@ for p in cards:
  query['rfqRequest']='Product Specification Request'
  query['rfqTechnical']='Please provide the relevant product specification, TDS, SDS and representative COA where available.'
  specs_url=html.escape(urlunsplit((parts.scheme,parts.netloc,parts.path,urlencode(query),parts.fragment)))
- h=re.sub(r'<title>.*?</title>','<title>'+name+' | Euro Agri Trading</title>',head,flags=re.S)
+ heading = product(p, 'name', 'h1')
+ page_name = name
+ if name_counts[p['name']] > 1:
+  # The NPK name already includes the trace-element qualifier.
+  grade = p['grade'].removesuffix(' + TE') if p['name'].endswith(' + TE') else p['grade']
+  grade = html.escape(grade)
+  page_name = f'{name} · {grade}'
+  heading = f'<h1 data-product-grade-heading>{product(p, "name")} · <bdi dir="ltr">{grade}</bdi></h1>'
+ title = page_name + ' | Euro Agri Trading'
+ h=re.sub(r'<title>.*?</title>','<title>'+title+'</title>',head,flags=re.S)
  h=re.sub(r'data-i18n-title="[^"]*"','',h);h=re.sub(r'data-i18n-page-root="[^"]*"','data-i18n-page-root="i18n/product-details/"',h)
  if 'data-i18n-page-root' not in h:h=h.replace('<html ','<html data-i18n-page-root="i18n/product-details/" ')
  h=re.sub(r'<link rel="canonical"[^>]+>','<link rel="canonical" href="https://euroagritrading.eu/'+path+'">',h)
  h=re.sub(r'<meta name="description"[^>]+>','<meta name="description" content="'+html.escape(p['name']+' '+p['grade']+'. Product details, specification requirements and quotation requests from Euro Agri Trading.')+'">',h)
  h=re.sub(r'<meta property="og:(title|url|description)"[^>]+>','',h)
  h=re.sub(r'<link rel="alternate"[^>]+>','',h)
+ if id == 'erp':
+  alternate_paths = [('en', path), ('pl', 'product-erp-pl.html'), ('x-default', path)]
+  alternates = '\n'.join(f'  <link rel="alternate" href="https://euroagritrading.eu/{target}" hreflang="{language}" />' for language, target in alternate_paths)
+  h = re.sub(r'(<link rel="canonical"[^>]+>)', lambda m: m[1] + '\n' + alternates, h)
+ if name_counts[p['name']] > 1:
+  description = f'{page_name}. {html.escape(p["desc"])}'
+  h = re.sub(r'<meta name="description"[^>]+>', f'<meta name="description" content="{description}">', h)
+  social = (f'  <meta property="og:title" content="{title}">\n'
+            f'  <meta property="og:description" content="{description}">\n'
+            f'  <meta property="og:url" content="https://euroagritrading.eu/{path}">')
+  h = h.replace('<meta property="og:type" content="website">', '<meta property="og:type" content="website">\n' + social)
+  h = re.sub(r'<meta name="twitter:title"[^>]+>', f'<meta name="twitter:title" content="{title}">', h)
+  h = re.sub(r'<meta name="twitter:description"[^>]+>', f'<meta name="twitter:description" content="{description}">', h)
  ps=params.get(id,['grade','composition','nitrogen','phosphorus','potassium','trace','soluble'] if id.startswith('npk') else ['grade','composition','trace','soluble'])
  rows='<tr>'+t('scientificIdentity','td')+t('identity.'+id,'td')+'</tr>'
  rows+=''.join('<tr>'+t(k,'td')+t(k+'Text','td')+'</tr>' for k in ps)
@@ -154,13 +178,20 @@ for p in cards:
  packing='packingRaw' if family=='raw-materials' else 'packingText'
  content=f'''<body class="product-detail-page"><a class="skip-link" href="#main-content">Skip to content</a>{header}<main id="main-content">
 <section class="detail-hero"><div class="container"><nav class="detail-crumb" aria-label="Breadcrumb"><a href="products.html" data-i18n="nav.products">Products</a><span>/</span><a href="products.html#{family}" data-i18n="catalogue.family.{family}">{family_name}</a></nav>
-<div class="detail-hero-grid"><div><span class="eyebrow" data-i18n="catalogue.family.{family}">{family_name}</span>{product(p,'name','h1')}{chem}{product(p,'desc','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></div><div class="detail-grade">{t('reference')}{product(p,'grade','strong','dir="ltr"')}</div></div></div></section>
+<div class="detail-hero-grid"><div><span class="eyebrow" data-i18n="catalogue.family.{family}">{family_name}</span>{heading}{chem}{product(p,'desc','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></div><div class="detail-grade">{t('reference')}{product(p,'grade','strong','dir="ltr"')}</div></div></div></section>
 {picture}
 <div class="container detail-body">{t(basis,'p','class="detail-summary"')}<nav class="detail-nav" aria-label="Product sections"><a href="#specification">{t('specs')}</a><a href="#applications">{t('uses')}</a><a href="#packing">{t('packing')}</a><a href="#documents">{t('documents')}</a></nav>
 <section id="specification">{t('specs','h2')}<table class="detail-specs"><thead><tr>{t('parameter','th','scope="col"')}{t('confirmation','th','scope="col"')}</tr></thead><tbody>{rows}</tbody></table></section>
 <div class="detail-columns"><section class="detail-panel" id="applications">{t('uses','h2')}{t('use.'+family,'p')}</section><section class="detail-panel" id="packing">{t('packing','h2')}{t(packing,'p')}</section></div>
 <section class="detail-documents" id="documents">{t('documents','h2')}{t('docsText','p')}{t('complianceText','p')}<a class="btn btn-outline" data-i18n="catalogue.cta.specs" href="{specs_url}">Request specifications</a></section><section class="detail-cta">{t('ctaText','p')}<a class="btn btn-primary" href="{url}">{t('quote')}</a></section></div></main>{footer}'''
  write(path,h+content)
-s=read('sitemap.xml');s=re.sub(r'\s*<url>\s*<loc>https://euroagritrading.eu/product-[\s\S]*?</url>','',s)
-s=s.replace('</urlset>',''.join('<url><loc>https://euroagritrading.eu/product-'+p['id']+'.html</loc></url>\n' for p in cards)+'</urlset>');write('sitemap.xml',s)
+sitemap = read('sitemap.xml')
+listed_urls = set(re.findall(r'<loc>([^<]+)</loc>', sitemap))
+product_urls = [f'https://euroagritrading.eu/product-{p["id"]}.html' for p in cards]
+language_suffixes = tuple(f'-{path.stem}.html' for path in (ROOT / 'i18n').glob('*.json'))
+for url in listed_urls.difference(product_urls):
+ if url.startswith('https://euroagritrading.eu/product-') and not url.endswith(language_suffixes):
+  sitemap = re.sub(r'\s*<url>\s*<loc>' + re.escape(url) + r'</loc>[\s\S]*?</url>', '', sitemap)
+new_entries = ''.join(f'<url><loc>{url}</loc></url>\n' for url in product_urls if url not in listed_urls)
+write('sitemap.xml', sitemap.replace('</urlset>', new_entries + '</urlset>'))
 print('Built',len(cards),'product pages')
