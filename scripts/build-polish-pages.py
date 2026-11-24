@@ -18,7 +18,7 @@ PAGES = {
     ),
     'product-erp.html': (
         'Mielony fosforyt 18–34% P₂O₅ | Euro Agri Trading',
-        'Mielony fosforyt w zakresie 18–34% P₂O₅. Sprawdź parametry i wymagane dokumenty. Poproś o wycenę dla wskazanej ilości, granulacji i portu docelowego.',
+        'Euro Agri Trading s.r.o. przyjmuje zapytania o mielony fosforyt 18–34% P₂O₅. Zapytaj o gatunek 28% P₂O₅, uziarnienie i dostawę luzem do wskazanego portu.',
     ),
 }
 

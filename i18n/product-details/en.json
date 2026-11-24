@@ -13,6 +13,8 @@
   "detail.docsText": "The document set is agreed for the product and destination: technical data sheet (TDS), safety data sheet (SDS) where applicable, and certificate of analysis (COA) for the actual shipment. Representative analyses are identified as such. Inspection by an independent provider may be coordinated when agreed.",
   "detail.complianceText": "Applicable EU and destination-market requirements are assessed for the selected product and supply route. REACH status, CE marking or any other compliance claim is supported by the relevant product documents before it is made.",
   "detail.ctaText": "Send the quantity, destination, preferred packing and delivery window. The product and grade will be carried into your enquiry.",
+  "detail.erpEnquiry": "Euro Agri Trading s.r.o., based in Czechia, accepts sourcing enquiries for rock phosphate powder with 28% P₂O₅. Send your quantity and destination port so we can check availability, particle size and bulk shipping options with suppliers.",
+  "detail.erpGradesPdf": "Rock phosphate grades (PDF, English)",
   "detail.grade": "Grade & declaration",
   "detail.gradeText": "Confirm the exact product identity, nutrient minima and test methods in the supplier TDS. The shipment COA reports results against the agreed limits.",
   "detail.phosphorus": "Phosphorus fractions",

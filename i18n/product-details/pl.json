@@ -24,5 +24,7 @@
   "detail.packingText": "Podaj preferowane opakowanie i wymagania przeładunkowe. Przed wyceną potwierdzamy z dostawcą dostępne masy worków, możliwość dostawy w big-bagach lub luzem, oznakowanie, minimalną ilość zamówienia i termin dostawy.",
   "detail.docsText": "Zakres dokumentacji ustala się według produktu i miejsca dostawy. Może obejmować kartę techniczną (TDS), kartę charakterystyki (SDS), jeśli jest wymagana, oraz świadectwo analizy (COA) dla konkretnej dostawy. Analizy reprezentatywne oznaczamy jako przykładowe. Po uzgodnieniu można zorganizować niezależną inspekcję.",
   "detail.complianceText": "Dla wybranego produktu i kierunku dostawy oceniamy właściwe wymagania UE i rynku docelowego. Przed zadeklarowaniem statusu REACH, oznakowania CE lub zgodności z innym wymaganiem sprawdzamy dokumentację produktu.",
-  "detail.ctaText": "Podaj ilość, miejsce dostawy, preferowane opakowanie i oczekiwany termin dostawy. Nazwa produktu i jego parametry zostaną przeniesione do formularza zapytania."
+  "detail.ctaText": "Podaj ilość, miejsce dostawy, preferowane opakowanie i oczekiwany termin dostawy. Nazwa produktu i jego parametry zostaną przeniesione do formularza zapytania.",
+  "detail.erpEnquiry": "Euro Agri Trading s.r.o. z siedzibą w Czechach przyjmuje zapytania o dostawy mielonego fosforytu o zawartości 28% P₂O₅. Prosimy o podanie ilości i portu docelowego, abyśmy mogli sprawdzić u dostawców dostępność, uziarnienie i możliwości transportu luzem.",
+  "detail.erpGradesPdf": "Klasy fosforytu według zawartości P₂O₅ (PDF w języku angielskim)"
 }
